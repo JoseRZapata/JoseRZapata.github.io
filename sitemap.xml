@@ -32,7 +32,36 @@
     
     <url>
     
+      <loc>https://joserzapata.github.io/cv/</loc>
+      <lastmod>2017-09-03T00:00:00-05:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://joserzapata.github.io/tags/academic/</loc>
+      <lastmod>2017-09-03T00:00:00-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://joserzapata.github.io/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://joserzapata.github.io/tags/hugo/</loc>
+      <lastmod>2017-09-03T00:00:00-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -61,6 +90,7 @@
     <url>
     
       <loc>https://joserzapata.github.io/tags/</loc>
+      <lastmod>2017-09-03T00:00:00-05:00</lastmod>
       <priority>0</priority>
     </url>
     
