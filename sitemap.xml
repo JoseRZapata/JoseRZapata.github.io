@@ -5,6 +5,15 @@
     
     <url>
     
+      <loc>https://joserzapata.github.io/content/prueba/</loc>
+      <lastmod>2018-01-03T18:03:41-05:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://joserzapata.github.io/post/</loc>
       <lastmod>2017-01-01T00:00:00-05:00</lastmod>
     </url>
@@ -109,6 +118,16 @@
     <url>
     
       <loc>https://joserzapata.github.io/categories/</loc>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://joserzapata.github.io/content/</loc>
+      <lastmod>2018-01-03T18:03:41-05:00</lastmod>
       <priority>0</priority>
     </url>
     
