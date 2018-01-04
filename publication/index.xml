@@ -20,6 +20,24 @@
     </item>
     
     <item>
+      <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
+      <link>https://joserzapata.github.io/publication/essentiaismir/</link>
+      <pubDate>Sun, 03 Nov 2013 23:32:53 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/essentiaismir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: an open-source library for sound and music analysis</title>
+      <link>https://joserzapata.github.io/publication/essentiaacm/</link>
+      <pubDate>Mon, 21 Oct 2013 00:11:35 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/essentiaacm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Using voice suppression algorithms to improve beat tracking in the presence of highly predominant vocals</title>
       <link>https://joserzapata.github.io/publication/voicesupressionbeat/</link>
       <pubDate>Sun, 26 May 2013 12:42:45 -0500</pubDate>
@@ -47,6 +65,15 @@
     </item>
     
     <item>
+      <title>Improving Beat Tracking in the presence of highly predominant vocals using source separation techniques: Preliminary study</title>
+      <link>https://joserzapata.github.io/publication/improvingbeat/</link>
+      <pubDate>Thu, 28 Jun 2012 22:17:42 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/improvingbeat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>On the automatic identification of difficult examples for beat tracking: towards building new evaluation datasets</title>
       <link>https://joserzapata.github.io/publication/automaticidentification/</link>
       <pubDate>Sun, 25 Mar 2012 19:44:33 -0500</pubDate>
@@ -61,6 +88,15 @@
       <pubDate>Fri, 22 Jul 2011 12:33:35 -0500</pubDate>
       
       <guid>https://joserzapata.github.io/publication/comparativetempo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Efficient Detection of Exact Redundancies in Audio Signals</title>
+      <link>https://joserzapata.github.io/publication/efficientdetection/</link>
+      <pubDate>Wed, 01 Oct 2008 22:34:53 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/efficientdetection/</guid>
       <description></description>
     </item>
     
