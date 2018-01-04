@@ -38,6 +38,24 @@
     </item>
     
     <item>
+      <title>Assigning a confidence threshold on automatic beat annotation in large datasets</title>
+      <link>https://joserzapata.github.io/publication/assigningconfidence/</link>
+      <pubDate>Mon, 08 Oct 2012 19:38:56 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/assigningconfidence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On the automatic identification of difficult examples for beat tracking: towards building new evaluation datasets</title>
+      <link>https://joserzapata.github.io/publication/automaticidentification/</link>
+      <pubDate>Sun, 25 Mar 2012 19:44:33 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/automaticidentification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Comparative Evaluation and Combination of Audio Tempo Estimation Approaches</title>
       <link>https://joserzapata.github.io/publication/comparativetempo/</link>
       <pubDate>Fri, 22 Jul 2011 12:33:35 -0500</pubDate>
