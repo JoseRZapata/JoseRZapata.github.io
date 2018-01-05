@@ -32,8 +32,26 @@
     
     <url>
     
+      <loc>https://joserzapata.github.io/project/pydafx/</loc>
+      <lastmod>2016-11-07T23:20:38-05:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://joserzapata.github.io/publication/multifeaturebeattracker/</loc>
       <lastmod>2014-04-03T11:52:17-05:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://joserzapata.github.io/project/multifeaturebeattracker/</loc>
+      <lastmod>2014-01-04T23:00:38-05:00</lastmod>
     </url>
     
   
@@ -152,6 +170,16 @@
     
     <url>
     
+      <loc>https://joserzapata.github.io/tags/audio-signal-processing/</loc>
+      <lastmod>2016-11-07T23:20:38-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://joserzapata.github.io/tags/beat-tracking/</loc>
       <lastmod>2014-04-03T11:52:17-05:00</lastmod>
       <priority>0</priority>
@@ -181,6 +209,26 @@
     
     <url>
     
+      <loc>https://joserzapata.github.io/tags/music-information-retrieval/</loc>
+      <lastmod>2013-11-03T23:32:53-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <loc>https://joserzapata.github.io/project/</loc>
+      <lastmod>2016-11-07T23:20:38-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://joserzapata.github.io/publication_types/</loc>
       <lastmod>2013-05-26T12:42:45-05:00</lastmod>
       <priority>0</priority>
@@ -191,8 +239,18 @@
     
     <url>
     
+      <loc>https://joserzapata.github.io/tags/python/</loc>
+      <lastmod>2016-11-07T23:20:38-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <loc>https://joserzapata.github.io/tags/</loc>
-      <lastmod>2014-04-03T11:52:17-05:00</lastmod>
+      <lastmod>2016-11-07T23:20:38-05:00</lastmod>
       <priority>0</priority>
     </url>
     
