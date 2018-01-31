@@ -10,6 +10,15 @@
     <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Tempo Estimation</title>
+      <link>https://joserzapata.github.io/publication/tempochapter/</link>
+      <pubDate>Thu, 17 Nov 2016 18:14:05 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/tempochapter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>PyDAFX</title>
       <link>https://joserzapata.github.io/project/pydafx/</link>
       <pubDate>Mon, 07 Nov 2016 23:20:38 -0500</pubDate>

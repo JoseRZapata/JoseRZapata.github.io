@@ -17,6 +17,18 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication/tempochapter/" hreflang="es"/>
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/publication/tempochapter/" hreflang="en"/>
+    
+      <loc>https://joserzapata.github.io/es/publication/tempochapter/</loc>
+      <lastmod>2016-11-17T18:14:05-05:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/project/pydafx/" hreflang="es"/>
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/project/pydafx/" hreflang="en"/>
     
@@ -161,19 +173,6 @@
     
     <url>
     
-      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication_types/0/" hreflang="es"/>
-      <xhtml:link rel="alternate" href="https://joserzapata.github.io/publication_types/0/" hreflang="en"/>
-    
-      <loc>https://joserzapata.github.io/es/publication_types/0/</loc>
-      <lastmod>2013-05-26T12:42:45-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    
-    <url>
-    
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication_types/1/" hreflang="es"/>
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/publication_types/1/" hreflang="en"/>
     
@@ -192,6 +191,19 @@
     
       <loc>https://joserzapata.github.io/es/publication_types/2/</loc>
       <lastmod>2014-04-03T11:52:17-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication_types/6/" hreflang="es"/>
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/publication_types/6/" hreflang="en"/>
+    
+      <loc>https://joserzapata.github.io/es/publication_types/6/</loc>
+      <lastmod>2016-11-17T18:14:05-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -449,7 +461,7 @@
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/publication_types/" hreflang="en"/>
     
       <loc>https://joserzapata.github.io/es/publication_types/</loc>
-      <lastmod>2013-05-26T12:42:45-05:00</lastmod>
+      <lastmod>2013-11-03T23:32:53-05:00</lastmod>
       <priority>0</priority>
     </url>
     
