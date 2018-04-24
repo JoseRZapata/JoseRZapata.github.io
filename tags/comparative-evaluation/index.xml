@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Comparative evaluation on Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/tags/comparative-evaluation/</link>
+    <description>Recent content in Comparative evaluation on Jose Ricardo Zapata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Thu, 04 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joserzapata.github.io/tags/comparative-evaluation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Phd Thesis</title>
+      <link>https://joserzapata.github.io/home/phdthesis/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/home/phdthesis/</guid>
+      <description>Comparative evaluation and combination of automatic rhythm description systems Zapata, Jose R. (2013). Comparative evaluation and combination of automatic rhythm description systems. Ph.D. thesis, Universitat Pompeu Fabra, Barcelona, Spain, 2013.
+ [TDX.cat] [PDF] [MTG] [Slides]  Thesis advisor  Dr. Emilia Gómez, Universitat Pompeu Fabra (MTG, UPF)  Defense board  Dr. Xavier Serra, Universitat Pompeu Fabra (MTG, UPF) Dr. Fabien Gouyon, Institute for Systems and Computer Engineering of Porto (SMC, INESC Porto) Dr.</description>
+    </item>
+    
+    <item>
+      <title>Comparative Evaluation and Combination of Audio Tempo Estimation Approaches</title>
+      <link>https://joserzapata.github.io/publication/comparativetempo/</link>
+      <pubDate>Fri, 22 Jul 2011 12:33:35 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/comparativetempo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
