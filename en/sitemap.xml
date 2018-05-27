@@ -83,6 +83,18 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/project/essentia/" hreflang="en"/>
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/project/essentia/" hreflang="es"/>
+    
+      <loc>https://joserzapata.github.io/project/essentia/</loc>
+      <lastmod>2013-11-23T07:45:12-05:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/publication/essentiaismir/" hreflang="en"/>
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication/essentiaismir/" hreflang="es"/>
     
@@ -441,6 +453,19 @@
     
       <loc>https://joserzapata.github.io/tags/music-information-retrieval/</loc>
       <lastmod>2013-11-03T23:32:53-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/tags/open-source/" hreflang="en"/>
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/open-source/" hreflang="es"/>
+    
+      <loc>https://joserzapata.github.io/tags/open-source/</loc>
+      <lastmod>2013-11-23T07:45:12-05:00</lastmod>
       <priority>0</priority>
     </url>
     
