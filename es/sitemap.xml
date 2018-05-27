@@ -149,6 +149,18 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/project/smcbeatdataset/" hreflang="es"/>
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/project/smcbeatdataset/" hreflang="en"/>
+    
+      <loc>https://joserzapata.github.io/es/project/smcbeatdataset/</loc>
+      <lastmod>2012-05-27T13:30:13-05:00</lastmod>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication/automaticidentification/" hreflang="es"/>
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/publication/automaticidentification/" hreflang="en"/>
     
@@ -340,6 +352,19 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/dataset/" hreflang="es"/>
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/tags/dataset/" hreflang="en"/>
+    
+      <loc>https://joserzapata.github.io/es/tags/dataset/</loc>
+      <lastmod>2012-05-27T13:30:13-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/en/" hreflang="es"/>
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/en/" hreflang="en"/>
     
@@ -422,6 +447,19 @@
     
       <loc>https://joserzapata.github.io/es/tags/matlab/</loc>
       <lastmod>2014-01-04T23:00:38-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/mirex/" hreflang="es"/>
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/tags/mirex/" hreflang="en"/>
+    
+      <loc>https://joserzapata.github.io/es/tags/mirex/</loc>
+      <lastmod>2012-05-27T13:30:13-05:00</lastmod>
       <priority>0</priority>
     </url>
     

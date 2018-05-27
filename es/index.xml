@@ -109,6 +109,25 @@
     </item>
     
     <item>
+      <title>SMC Beat tracking Dataset</title>
+      <link>https://joserzapata.github.io/es/project/smcbeatdataset/</link>
+      <pubDate>Sun, 27 May 2012 13:30:13 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/es/project/smcbeatdataset/</guid>
+      <description>&lt;p&gt;This dataset contains 217 excerpts around 40s each, of which 19 are &amp;ldquo;easy&amp;rdquo; and the remaining 198 are &amp;ldquo;hard&amp;rdquo;. The harder excerpts were drawn from the following musical styles: Romantic music, ﬁlm soundtracks, blues, chanson and solo guitar.&lt;/p&gt;
+
+&lt;p&gt;This dataset has been designed for radically new techniques which can contend with challenging beat tracking situations like: quiet accompaniment, expressive timing, changes in time signature, slow tempo, poor sound quality etc. So, if your beat tracker likes a &lt;sup&gt;4&lt;/sup&gt;&amp;frasl;&lt;sub&gt;4&lt;/sub&gt; time-signature with a steady tempo and needs clear percussive onsets, don&amp;rsquo;t expect it to do very well! But don&amp;rsquo;t be deterred, this is for the good of beat tracking.&lt;/p&gt;
+
+&lt;p&gt;This dataset includes:&lt;/p&gt;
+
+&lt;p&gt;Beat annotations and supporting meta-data
+Audio excerpts&lt;/p&gt;
+
+&lt;p&gt;Update 5th August 2014: please note the annotations for excerpts 056, 137, 153, 203 and 257 have been updated to remove the final beat annotations which were out of range. Thanks to Andy Lambert for pointing this out. Please see sub-folder SMC_MIREX_Annotations_05_08_2014 in the .zip file for the latest version of the annotations.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>On the automatic identification of difficult examples for beat tracking: towards building new evaluation datasets</title>
       <link>https://joserzapata.github.io/es/publication/automaticidentification/</link>
       <pubDate>Sun, 25 Mar 2012 19:44:33 -0500</pubDate>
