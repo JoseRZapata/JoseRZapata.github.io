@@ -1,22 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Open source on Jose Ricardo Zapata</title>
+    <title>Open Source on Jose Ricardo Zapata</title>
     <link>https://joserzapata.github.io/es/tags/open-source/</link>
-    <description>Recent content in Open source on Jose Ricardo Zapata</description>
+    <description>Recent content in Open Source on Jose Ricardo Zapata</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 03 Nov 2013 23:32:53 -0500</lastBuildDate>
+    <lastBuildDate>Mon, 27 May 2013 07:45:12 -0500</lastBuildDate>
     
 	<atom:link href="https://joserzapata.github.io/es/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
-      <link>https://joserzapata.github.io/es/publication/essentiaismir/</link>
-      <pubDate>Sun, 03 Nov 2013 23:32:53 -0500</pubDate>
+      <title>Essentia</title>
+      <link>https://joserzapata.github.io/es/project/essentia/</link>
+      <pubDate>Mon, 27 May 2013 07:45:12 -0500</pubDate>
       
-      <guid>https://joserzapata.github.io/es/publication/essentiaismir/</guid>
+      <guid>https://joserzapata.github.io/es/project/essentia/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>/guid>
       <description></description>
     </item>
     
