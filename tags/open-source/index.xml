@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Open source on Jose Ricardo Zapata</title>
+    <title>Open-source on Jose Ricardo Zapata</title>
     <link>https://joserzapata.github.io/tags/open-source/</link>
-    <description>Recent content in Open source on Jose Ricardo Zapata</description>
+    <description>Recent content in Open-source on Jose Ricardo Zapata</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 03 Nov 2013 23:32:53 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 23 Nov 2013 07:45:12 -0500</lastBuildDate>
     
 	<atom:link href="https://joserzapata.github.io/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Essentia</title>
+      <link>https://joserzapata.github.io/project/essentia/</link>
+      <pubDate>Sat, 23 Nov 2013 07:45:12 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/project/essentia/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
@@ -27,6 +36,16 @@
       
       <guid>https://joserzapata.github.io/publication/essentiaacm/</guid>
       <description></description>
+    </item>
+    
+    <item>
+      <title>SMC Beat tracking Dataset</title>
+      <link>https://joserzapata.github.io/project/smcbeatdataset/</link>
+      <pubDate>Sun, 27 May 2012 13:30:13 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/project/smcbeatdataset/</guid>
+      <description>This dataset contains 217 excerpts around 40s each, of which 19 are &amp;ldquo;easy&amp;rdquo; and the remaining 198 are &amp;ldquo;hard&amp;rdquo;. The harder excerpts were drawn from the following musical styles: Romantic music, ﬁlm soundtracks, blues, chanson and solo guitar.
+This dataset has been designed for radically new techniques which can contend with challenging beat tracking situations like: quiet accompaniment, expressive timing, changes in time signature, slow tempo, poor sound quality etc. So, if your beat tracker likes a 4&amp;frasl;4 time-signature with a steady tempo and needs clear percussive onsets, don&amp;rsquo;t expect it to do very well!</description>
     </item>
     
   </channel>
