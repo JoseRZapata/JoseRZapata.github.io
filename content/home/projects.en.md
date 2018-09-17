@@ -2,7 +2,7 @@
 # Projects widget.
 widget = "projects"
 active = true
-date = 2016-04-20T00:00:00
+date = 2018-01-17T15:00:00
 
 title = "Projects"
 subtitle = ""
@@ -42,4 +42,3 @@ filter_default = 0
 #   tag = "Demo"
 
 +++
-
