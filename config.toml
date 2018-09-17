@@ -6,10 +6,10 @@
 
 # The URL of your website.
 # End your URL with a `/` trailing slash, e.g. `https://example.com/`.
-baseurl = "/"
+baseurl = "https://joserzapata.github.io/"
 
 # Title of your site
-title = "Academic"
+title = "Jose Ricardo Zapata"
 
 # Your copyright notice - appears in site footer.
 # To display a copyright symbol, type `&copy;`.
@@ -26,7 +26,7 @@ paginate = 10
 disqusShortname = ""
 
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
+googleAnalytics = "UA-112535090-1"
 
 # Default language to use (if you setup multilingual support)
 defaultContentLanguage = "en"
@@ -57,21 +57,21 @@ enableGitInfo = false
   font = "default"
 
   # Your details.
-  name = "Lena Smith"
-  role = "Professor of Artificial Intelligence"
+  name = "Jose R. Zapata"
+  role = "PhD in Information and Communication Technologies (Sound and Music Computing), Professor at Faculty TIC"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
-  organizations = [ { name = "Stanford University", url = "" } ]
+  organizations = [ { name = "Universidad Pontificia Bolivariana", url = "https://www.upb.edu.co" } ]
 
   gravatar = false  # Get your avatar from Gravatar.com? (true/false)
   avatar = "portrait.jpg"  # Specify an avatar image (in `static/img/` folder) or delete value to disable avatar.
   email = "test@example.org"
   address = "Building 1 Room 1, Stanford University, California, 90210, USA"
   office_hours = "Monday 10:00 to 13:00 or email for appointment"
-  phone = "888 888 88 88"
-  skype = "echo123"
-  telegram = ""
+  #phone = "888 888 88 88"
+  #skype = "echo123"
+  #telegram = ""
 
   # Enable Keybase in Contact widget by entering your keybase.io username.
   keybase = ""
@@ -225,24 +225,29 @@ enableGitInfo = false
   #   Full list: https://jpswalsh.github.io/academicons/
 
   [[params.social]]
-    icon = "envelope"
-    icon_pack = "fas"
-    link = "mailto:test@example.org"
-
-  [[params.social]]
-    icon = "twitter"
-    icon_pack = "fab"
-    link = "//twitter.com/GeorgeCushen"
-
-  [[params.social]]
     icon = "google-scholar"
     icon_pack = "ai"
-    link = "https://scholar.google.co.uk/citations?user=sIwtMXoAAAAJ"
+    link = "https://scholar.google.com/citations?user=9TnO1tMAAAAJ"
 
   [[params.social]]
     icon = "github"
     icon_pack = "fab"
-    link = "//github.com/gcushen"
+    link = "//github.com/JoseRZapata"
+
+  [[params.social]]
+    icon = "orcid"
+    icon_pack = "ai"
+    link = "https://orcid.org/0000-0003-1484-5816"
+
+  [[params.social]]
+    icon = "twitter"
+    icon_pack = "fab"
+    link = "//twitter.com/joserzapata"
+
+  [[params.social]]
+    icon = "linkedin"
+    icon_pack = "fab"
+    link = "https://www.linkedin.com/in/jose-ricardo-zapata-gonzalez-2259aa85/"
 
   # Link to a PDF of your resume/CV from the About widget.
   # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
@@ -269,10 +274,10 @@ enableGitInfo = false
   url = "#publications_selected"
   weight = 2
 
-[[menu.main]]
-  name = "Posts"
-  url = "#posts"
-  weight = 3
+#[[menu.main]]
+#  name = "Posts"
+#  url = "#posts"
+#  weight = 3
 
 [[menu.main]]
   name = "Projects"
@@ -284,9 +289,14 @@ enableGitInfo = false
   url = "#teaching"
   weight = 5
 
+#[[menu.main]]
+#  name = "Contact"
+#  url = "#contact"
+#  weight = 6
+
 [[menu.main]]
-  name = "Contact"
-  url = "#contact"
+  name = "Phd Thesis"
+  url = "#phdthesis"
   weight = 6
 
 # Link to a PDF of your resume/CV from the menu.
@@ -326,9 +336,9 @@ enableGitInfo = false
 [languages.en]
   languageCode = "en-us"
 
-# Uncomment the lines below to configure your website in a second language.
-#[languages.zh]
-#  languageCode = "zh-Hans"
+# Spanish
+[languages.es]
+  languageCode = "es"
 #  title = "Chinese website title..."
 #  [languages.zh.params]
 #    name = "Your name in Chinese..."
@@ -337,3 +347,37 @@ enableGitInfo = false
 #    name = "Wo"
 #    url = "#about"
 #    weight = 1
+
+  [languages.es.params]
+    name = "Jose R. Zapata"
+    role = "PhD in Information and Communication Technologies (Sound and Music Computing), Profesor Titular en la Facultad TIC"
+
+[[languages.es.menu.main]]
+  name = "Inicio"
+  url = "#about"
+  weight = 1
+
+[[languages.es.menu.main]]
+  name = "Publicaciones"
+  url = "#publications_selected"
+  weight = 2
+
+#[[languages.es.menu.main]]
+#  name = "Posts"
+#  url = "#posts"
+#  weight = 3
+
+[[languages.es.menu.main]]
+  name = "Proyectos"
+  url = "#projects"
+  weight = 4
+
+[[languages.es.menu.main]]
+  name = "Cursos"
+  url = "#teaching"
+  weight = 5
+
+[[languages.es.menu.main]]
+  name = "Phd Tesis"
+  url = "#phdthesis"
+  weight = 6
