@@ -4,7 +4,7 @@
 # `selected = true` in their `+++` front matter.
 widget = "publications_selected"
 active = true
-date = 2016-04-20T00:00:00
+date = 2018-09-17T17:14:00
 
 title = "Selected Publications"
 subtitle = ""
@@ -30,4 +30,3 @@ list_format = 1
 #  6: Book chapter
 publication_type = "-1"
 +++
-
