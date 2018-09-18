@@ -1,24 +1,24 @@
 +++
-title = "{{ replace .TranslationBaseName "-" " " | title }}"
-date = {{ .Date }}
+title = "Improving Beat Tracking in the presence of highly predominant vocals using source separation techniques: Preliminary study"
+date = 2012-06-28T22:17:42-05:00
 draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = [""]
+authors = ["Jose R. Zapata", "Emilia Gómez"]
 
 # Publication type.
 # Legend:
 # 0 = Uncategorized
-# 1 = Conference paper
-# 2 = Journal article
-# 3 = Manuscript
-# 4 = Report
+# 1 = Conference proceedings
+# 2 = Journal
+# 3 = Work in progress
+# 4 = Technical report
 # 5 = Book
-# 6 = Book section
-publication_types = ["0"]
+# 6 = Book chapter
+publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-publication = ""
+publication = "The 9th International Symposium on Computer Music Modeling and Retrieval (CMMR 2012), London, UK"
 publication_short = ""
 
 # Abstract and optional shortened version.
@@ -33,17 +33,16 @@ selected = false
 
 # Projects (optional).
 #   Associate this publication with one or more of your projects.
-#   Simply enter your project's filename without extension.
+#   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
 #   E.g. `projects = ["deep-learning"]` references `content/project/deep-learning.md`.
-#   Otherwise, set `projects = []`.
 projects = []
 
 # Tags (optional).
 #   Set `tags = []` for no tags, or use the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = []
+tags = ["Beat-tracking","Source-separation","CMMR"]
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "http://www.cmmr2012.eecs.qmul.ac.uk/sites/cmmr2012.eecs.qmul.ac.uk/files/pdf/papers/cmmr2012_submission_75.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
@@ -55,10 +54,7 @@ url_source = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# url_custom = [{name = "Custom Link", url = "http://example.org"}]
-
-# Digital Object Identifier (DOI)
-doi = ""
+url_custom = [{name = "Conference", url = "http://www.cmmr2012.eecs.qmul.ac.uk/"}]
 
 # Digital Object Identifier (DOI)
 doi = ""

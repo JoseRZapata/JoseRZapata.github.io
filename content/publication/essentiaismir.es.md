@@ -1,24 +1,24 @@
 +++
-title = "{{ replace .TranslationBaseName "-" " " | title }}"
-date = {{ .Date }}
+title = "Essentia: An Audio Analysis Library for Music Information Retrieval"
+date = 2013-11-03T23:32:53-05:00
 draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = [""]
+authors = ["Dmitry Bogdanov","Nicolas Wack", "Emilia Gómez", "Sankalp Gulati", "Perfecto Herrera", "Oscar Mayor", "Gerard Roma", "Justin Salamon", "Jose R. Zapata", "Xavier Serra"]
 
 # Publication type.
 # Legend:
 # 0 = Uncategorized
-# 1 = Conference paper
-# 2 = Journal article
-# 3 = Manuscript
-# 4 = Report
+# 1 = Conference proceedings
+# 2 = Journal
+# 3 = Work in progress
+# 4 = Technical report
 # 5 = Book
-# 6 = Book section
-publication_types = ["0"]
+# 6 = Book chapter
+publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-publication = ""
+publication = "14th International Society for Music Information Retrieval Conference (ISMIR 2013), P. 493-498, Curitiba, Brazil "
 publication_short = ""
 
 # Abstract and optional shortened version.
@@ -29,36 +29,32 @@ abstract_short = ""
 image_preview = ""
 
 # Is this a selected publication? (true/false)
-selected = false
+selected = true
 
 # Projects (optional).
 #   Associate this publication with one or more of your projects.
-#   Simply enter your project's filename without extension.
+#   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
 #   E.g. `projects = ["deep-learning"]` references `content/project/deep-learning.md`.
-#   Otherwise, set `projects = []`.
 projects = []
 
 # Tags (optional).
 #   Set `tags = []` for no tags, or use the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = []
+tags = ["Essentia","Beat-tracking","Music-information-retrieval","Python","ISMIR","Open-source"]
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "http://ismir2013.ismir.net/wp-content/uploads/2013/09/177_Paper.pdf"
 url_preprint = ""
-url_code = ""
+url_code = "https://github.com/MTG/essentia"
 url_dataset = ""
-url_project = ""
+url_project = "http://essentia.upf.edu/documentation/"
 url_slides = ""
 url_video = ""
 url_poster = ""
-url_source = ""
+url_source = "http://essentia.upf.edu/documentation/reference/std_BeatTrackerMultiFeature.html"
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# url_custom = [{name = "Custom Link", url = "http://example.org"}]
-
-# Digital Object Identifier (DOI)
-doi = ""
+url_custom = [{name = "Conference", url = "http://ismir2013.ismir.net/"}]
 
 # Digital Object Identifier (DOI)
 doi = ""

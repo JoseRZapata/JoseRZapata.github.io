@@ -60,6 +60,9 @@ url_source = ""
 # Digital Object Identifier (DOI)
 doi = ""
 
+# Digital Object Identifier (DOI)
+doi = ""
+
 # Does this page contain LaTeX math? (true/false)
 math = true
 

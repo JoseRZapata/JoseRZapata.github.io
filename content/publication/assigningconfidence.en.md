@@ -1,24 +1,24 @@
 +++
-title = "{{ replace .TranslationBaseName "-" " " | title }}"
-date = {{ .Date }}
+title = "Assigning a confidence threshold on automatic beat annotation in large datasets"
+date = 2012-10-08T19:38:56-05:00
 draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = [""]
+authors = ["Jose R Zapata", "Matthew EP Davies", "Andre Holzapfel", "João Lobato Oliveira", "Fabien Gouyon"]
 
 # Publication type.
 # Legend:
 # 0 = Uncategorized
-# 1 = Conference paper
-# 2 = Journal article
-# 3 = Manuscript
-# 4 = Report
+# 1 = Conference proceedings
+# 2 = Journal
+# 3 = Work in progress
+# 4 = Technical report
 # 5 = Book
-# 6 = Book section
-publication_types = ["0"]
+# 6 = Book chapter
+publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-publication = ""
+publication = "13th International Society for Music Information Retrieval Conference (ISMIR 2012), P.157-162, Porto, Portugal"
 publication_short = ""
 
 # Abstract and optional shortened version.
@@ -33,32 +33,28 @@ selected = false
 
 # Projects (optional).
 #   Associate this publication with one or more of your projects.
-#   Simply enter your project's filename without extension.
+#   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
 #   E.g. `projects = ["deep-learning"]` references `content/project/deep-learning.md`.
-#   Otherwise, set `projects = []`.
 projects = []
 
 # Tags (optional).
 #   Set `tags = []` for no tags, or use the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = []
+tags = ["Beat-tracking","Confidence-measure","ISMIR"]
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "http://www.ismir2012.ismir.net/event/papers/157_ISMIR_2012.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
 url_project = ""
-url_slides = ""
+url_slides = "https://www.dropbox.com/s/awdjjw9kha2jks9/ISMIR2012_JoseRZapata_Presentation.pdf?dl=0"
 url_video = ""
 url_poster = ""
 url_source = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# url_custom = [{name = "Custom Link", url = "http://example.org"}]
-
-# Digital Object Identifier (DOI)
-doi = ""
+url_custom = [{name = "Conference", url = "http://ismir2012.ismir.net/"}]
 
 # Digital Object Identifier (DOI)
 doi = ""

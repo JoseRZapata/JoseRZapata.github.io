@@ -1,24 +1,24 @@
 +++
-title = "{{ replace .TranslationBaseName "-" " " | title }}"
-date = {{ .Date }}
+title = "Multi-Feature Beat Tracking"
+date = 2014-04-03T11:52:17-05:00
 draft = false
 
 # Authors. Comma separated list, e.g. `["Bob Smith", "David Jones"]`.
-authors = [""]
+authors = ["Jose R. Zapata", "Matthew E.P. Davies", "Emilia Gómez"]
 
 # Publication type.
 # Legend:
 # 0 = Uncategorized
-# 1 = Conference paper
-# 2 = Journal article
-# 3 = Manuscript
-# 4 = Report
+# 1 = Conference proceedings
+# 2 = Journal
+# 3 = Work in progress
+# 4 = Technical report
 # 5 = Book
-# 6 = Book section
-publication_types = ["0"]
+# 6 = Book chapter
+publication_types = ["2"]
 
 # Publication name and optional abbreviated version.
-publication = ""
+publication = "IEEE/ACM Transactions on Audio, Speech, and Language Processing, Vol. 22, No. 4, P. 816-825"
 publication_short = ""
 
 # Abstract and optional shortened version.
@@ -29,23 +29,22 @@ abstract_short = ""
 image_preview = ""
 
 # Is this a selected publication? (true/false)
-selected = false
+selected = true
 
 # Projects (optional).
 #   Associate this publication with one or more of your projects.
-#   Simply enter your project's filename without extension.
+#   Simply enter the filename (excluding '.md') of your project file in `content/project/`.
 #   E.g. `projects = ["deep-learning"]` references `content/project/deep-learning.md`.
-#   Otherwise, set `projects = []`.
 projects = []
 
 # Tags (optional).
 #   Set `tags = []` for no tags, or use the form `tags = ["A Tag", "Another Tag"]` for one or more tags.
-tags = []
+tags = ["Beat-tracking","Confidence-measure","IEEE"]
 
 # Links (optional).
-url_pdf = ""
+url_pdf = "http://telecom.inesctec.pt/~mdavies/pdfs/ZapataEtAl14taslp.pdf"
 url_preprint = ""
-url_code = ""
+url_code = "https://github.com/JoseRZapata/MultiFeatureBeatTracking"
 url_dataset = ""
 url_project = ""
 url_slides = ""
@@ -55,10 +54,7 @@ url_source = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-# url_custom = [{name = "Custom Link", url = "http://example.org"}]
-
-# Digital Object Identifier (DOI)
-doi = ""
+url_custom = [{name = "DOI", url = "https://doi.org/10.1109/TASLP.2014.2305252"}]
 
 # Digital Object Identifier (DOI)
 doi = ""
