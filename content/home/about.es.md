@@ -16,25 +16,25 @@ weight = 5
   "Python"
   ]
 
-  # List your qualifications (such as academic degrees).
-  [[education.courses]]
+# List your qualifications (such as academic degrees).
+[[education.courses]]
     course = "PhD in Tecnologías de la información y las Comunicaciones (Sound and Music Computing)"
     institution = "Universitat Pompeu Fabra (UPF), España"
     year = 2013
 
-  [[education.courses]]
+[[education.courses]]
     course = "MEng in Telecommunications"
     institution = "Universidad Pontificia Bolivariana (UPB), Colombia"
     year = 2008
 
-  [[education.courses]]
+[[education.courses]]
     course = "BSc in Electronic Engineering"
     institution = "Universidad Pontificia Bolivariana (UPB), Colombia"
     year = 2002
 
-  +++
++++
 
-  # Biografía
-  Soy Profesor Titular de la facultad de tecnologías de la información y comunicación (TIC), en la [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) y investigador en [GIDATI](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
+# Biografía
+Soy Profesor Titular de la facultad de tecnologías de la información y comunicación (TIC), en la [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) y investigador en [GIDATI](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
 
   Mis intereses de investigación son en el área de tecnologías de la información en sonido y musica, que incluye temas como Extracción automática de información, **Ciencia de datos (Data science)** y procesamiento digital de señales, con aplicaciones en **Music information retrieval**, **Mineria de Datos** y Análisis de audio.
