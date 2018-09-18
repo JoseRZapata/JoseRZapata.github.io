@@ -54,10 +54,10 @@ url_source = "http://essentia.upf.edu/documentation/reference/std_BeatTrackerMul
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name = "DOI", url = "https://doi.org/10.1145/2502081.2502229"},{name = "Conference", url = "http://acmmm13.org/"}]
+url_custom = [{name = "Conference", url = "http://acmmm13.org/"}]
 
 # Digital Object Identifier (DOI)
-doi = ""
+doi = "10.1145/2502081.2502229"
 
 # Does this page contain LaTeX math? (true/false)
 math = false

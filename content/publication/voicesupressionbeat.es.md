@@ -54,10 +54,10 @@ url_source = ""
 
 # Custom links (optional).
 #   Uncomment line below to enable. For multiple links, use the form `[{...}, {...}, {...}]`.
-url_custom = [{name = "DOI", url = "https://doi.org/10.1109/ICASSP.2013.6637607"},{name = "Conference", url="https://www2.securecms.com/ICASSP2013/"}]
+url_custom = [{name = "Conference", url="https://www2.securecms.com/ICASSP2013/"}]
 
 # Digital Object Identifier (DOI)
-doi = ""
+doi = "10.1109/ICASSP.2013.6637607"
 
 # Does this page contain LaTeX math? (true/false)
 math = false
