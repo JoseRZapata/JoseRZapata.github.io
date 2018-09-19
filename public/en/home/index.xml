@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/en/home/</link>
+    <description>Recent content in Homes on Jose Ricardo Zapata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Tue, 02 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joserzapata.github.io/en/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://joserzapata.github.io/en/home/about/</link>
+      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/en/home/about/</guid>
+      <description>Biography I&amp;rsquo;m a Professor at the Faculty of Information and Communication Technologies (TIC), Universidad Pontificia Bolivariana (UPB) and researcher of the Grupo de Investigación Desarrollo y Aplicación en Telecomunicaciones e Informática (GIDATI)
+My research interests are based around sound and music information technologies, which includes information retrieval, data science and digital signal processing, with applications to music information retrieval, audio analysis and data mining.</description>
+    </item>
+    
+    <item>
+      <title>Selected Publications</title>
+      <link>https://joserzapata.github.io/en/home/publications_selected/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/en/home/publications_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publications</title>
+      <link>https://joserzapata.github.io/en/home/publications/</link>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/en/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent &amp; Upcoming Talks</title>
+      <link>https://joserzapata.github.io/en/home/talks/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/en/home/talks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Recent Posts</title>
+      <link>https://joserzapata.github.io/en/home/posts/</link>
+      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/en/home/posts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Projects</title>
+      <link>https://joserzapata.github.io/en/home/projects/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/en/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Teaching</title>
+      <link>https://joserzapata.github.io/en/home/teaching/</link>
+      <pubDate>Mon, 15 Jan 2018 10:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/en/home/teaching/</guid>
+      <description>Current and past, postgraduate and undergraduate courses at the Universidad Pontificia Bolivariana (UPB)
+   Postgraduate Courses Level &amp;#124; UnderGraduate Courses Level     Audio Processing Ph.D &amp;#124; Signal Processing B.Sc   Principles of Image Processing Ph.D &amp;#124; Principles of Audio B.Sc   Audio and Image Data Mining M.Sc &amp;#124; Data Mining B.Sc   Signal Processing M.Sc &amp;#124; Audio Applications B.Sc   Telecommunications Principles M.</description>
+    </item>
+    
+    <item>
+      <title>Phd Thesis</title>
+      <link>https://joserzapata.github.io/en/home/phdthesis/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/en/home/phdthesis/</guid>
+      <description>Comparative evaluation and combination of automatic rhythm description systems Zapata, Jose R. (2013). Comparative evaluation and combination of automatic rhythm description systems. Ph.D. thesis, Universitat Pompeu Fabra, Barcelona, Spain, 2013.
+ [TDX.cat] [PDF] [MTG] [Slides]  Thesis advisor  Dr. Emilia Gómez, Universitat Pompeu Fabra (MTG, UPF)  Defense board  Dr. Xavier Serra, Universitat Pompeu Fabra (MTG, UPF) Dr. Fabien Gouyon, Institute for Systems and Computer Engineering of Porto (SMC, INESC Porto) Dr.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://joserzapata.github.io/en/home/contact/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/en/home/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>https://joserzapata.github.io/en/home/tags/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/en/home/tags/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
