@@ -19,10 +19,11 @@ if [[ $(git status -s) ]]; then
     exit 1;
 fi
 
-msg "Removing the old website"
-pushd public
-git rm -rf *
-popd
+#msg "Removing the old website"
+#pushd public
+#cd public
+#git rm -rf *
+#popd
 
 msg "Building the website"
 hugo
