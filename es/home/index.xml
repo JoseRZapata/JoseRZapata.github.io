@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homes on Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/home/</link>
+    <description>Recent content in Homes on Jose Ricardo Zapata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Wed, 17 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joserzapata.github.io/es/home/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>https://joserzapata.github.io/es/home/about/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/es/home/about/</guid>
+      <description>Biografía Soy Profesor Titular de la facultad de tecnologías de la información y comunicación (TIC), en la Universidad Pontificia Bolivariana (UPB) y investigador en GIDATI
+Mis intereses de investigación son en el área de tecnologías de la información en sonido y musica, que incluye temas como Extracción automática de información, Ciencia de datos (Data science) y procesamiento digital de señales, con aplicaciones en Music information retrieval, Mineria de Datos y Análisis de audio.</description>
+    </item>
+    
+    <item>
+      <title>Publicaciones Relevantes</title>
+      <link>https://joserzapata.github.io/es/home/publications_selected/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/es/home/publications_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Publicaciones</title>
+      <link>https://joserzapata.github.io/es/home/publications/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/es/home/publications/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Proyectos</title>
+      <link>https://joserzapata.github.io/es/home/projects/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/es/home/projects/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Cursos</title>
+      <link>https://joserzapata.github.io/es/home/teaching/</link>
+      <pubDate>Wed, 17 Jan 2018 10:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/es/home/teaching/</guid>
+      <description>Cursos pasados y presentes dictados en postgrado y pregrado en la Universidad Pontificia Bolivariana (UPB)
+   Cursos de Postgrado Nivel &amp;#124; Cursos Pregrado Nivel     Procesamiento de Audio Ph.D &amp;#124; Procesamiento de señales B.Sc   Principios de procesamiento de imagenes Ph.D &amp;#124; Principios de Audio B.Sc   Mineria de Audio e Imagenes  M.Sc &amp;#124; Minería de datos B.Sc   Python y R para analisis de datos M.</description>
+    </item>
+    
+    <item>
+      <title>Phd Tesis</title>
+      <link>https://joserzapata.github.io/es/home/phdthesis/</link>
+      <pubDate>Wed, 17 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/es/home/phdthesis/</guid>
+      <description>Comparative evaluation and combination of automatic rhythm description systems Zapata, Jose R. (2013). Comparative evaluation and combination of automatic rhythm description systems. Ph.D. thesis (Information and Communication Technologies), Universitat Pompeu Fabra, Barcelona, Spain, 2013.
+ [TDX.cat] [PDF] [MTG] [Presentacion]  Director de Tesis  Dr. Emilia Gómez, Universitat Pompeu Fabra (MTG, UPF)  Jurado de Defensa  Dr. Xavier Serra, Universitat Pompeu Fabra (MTG, UPF) Dr. Fabien Gouyon, Institute for Systems and Computer Engineering of Porto (SMC, INESC Porto) Dr.</description>
+    </item>
+    
+    <item>
+      <title>Tags</title>
+      <link>https://joserzapata.github.io/es/home/tags/</link>
+      <pubDate>Wed, 10 Jan 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/es/home/tags/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
