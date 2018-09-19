@@ -37,4 +37,4 @@ weight = 5
 
 I'm a Professor at the Faculty of Information and Communication Technologies (TIC), [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) and researcher at [GIDATI](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
 
-My research interests are based around **Data science** and sound and music information technologies, which includes information retrieval, **data mining** and digital signal processing, with applications to **music information retrieval**, audio analysis and **data analysis**.
+My research interests are based around **Data science** and **Sound and music information technologies**, which includes **Music information retrieval**, **Data mining**, **Audio analysis** and **Data analysis**.
