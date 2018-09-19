@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>CMMR on Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/tags/cmmr/</link>
+    <description>Recent content in CMMR on Jose Ricardo Zapata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Thu, 28 Jun 2012 22:17:42 -0500</lastBuildDate>
+    
+	<atom:link href="https://joserzapata.github.io/es/tags/cmmr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Improving Beat Tracking in the presence of highly predominant vocals using source separation techniques: Preliminary study</title>
+      <link>https://joserzapata.github.io/es/publication/improvingbeat/</link>
+      <pubDate>Thu, 28 Jun 2012 22:17:42 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/es/publication/improvingbeat/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

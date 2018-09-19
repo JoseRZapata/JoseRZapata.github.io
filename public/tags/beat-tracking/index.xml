@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Beat-tracking on Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/tags/beat-tracking/</link>
+    <description>Recent content in Beat-tracking on Jose Ricardo Zapata</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018</copyright>
+    <lastBuildDate>Thu, 04 Jan 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://joserzapata.github.io/tags/beat-tracking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Phd Thesis</title>
+      <link>https://joserzapata.github.io/home/phdthesis/</link>
+      <pubDate>Thu, 04 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://joserzapata.github.io/home/phdthesis/</guid>
+      <description>Comparative evaluation and combination of automatic rhythm description systems Zapata, Jose R. (2013). Comparative evaluation and combination of automatic rhythm description systems. Ph.D. thesis (Information and Communication Technologies), Universitat Pompeu Fabra, Barcelona, Spain, 2013.
+ [TDX.cat] [PDF] [MTG] [Slides]  Thesis advisor  Dr. Emilia Gómez, Universitat Pompeu Fabra (MTG, UPF)  Defense board  Dr. Xavier Serra, Universitat Pompeu Fabra (MTG, UPF) Dr. Fabien Gouyon, Institute for Systems and Computer Engineering of Porto (SMC, INESC Porto) Dr.</description>
+    </item>
+    
+    <item>
+      <title>Multi-Feature Beat Tracking</title>
+      <link>https://joserzapata.github.io/publication/multifeaturebeattracker/</link>
+      <pubDate>Thu, 03 Apr 2014 11:52:17 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/multifeaturebeattracker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multifeature Beat tracker</title>
+      <link>https://joserzapata.github.io/project/multifeaturebeattracker/</link>
+      <pubDate>Sat, 04 Jan 2014 23:00:38 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/project/multifeaturebeattracker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia</title>
+      <link>https://joserzapata.github.io/project/essentia/</link>
+      <pubDate>Sat, 23 Nov 2013 07:45:12 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/project/essentia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
+      <link>https://joserzapata.github.io/publication/essentiaismir/</link>
+      <pubDate>Sun, 03 Nov 2013 23:32:53 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/essentiaismir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: an open-source library for sound and music analysis</title>
+      <link>https://joserzapata.github.io/publication/essentiaacm/</link>
+      <pubDate>Mon, 21 Oct 2013 00:11:35 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/essentiaacm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Using voice suppression algorithms to improve beat tracking in the presence of highly predominant vocals</title>
+      <link>https://joserzapata.github.io/publication/voicesupressionbeat/</link>
+      <pubDate>Sun, 26 May 2013 12:42:45 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/voicesupressionbeat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selective Sampling for Beat Tracking Evaluation</title>
+      <link>https://joserzapata.github.io/publication/selectivesampling/</link>
+      <pubDate>Sat, 03 Nov 2012 12:16:05 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/selectivesampling/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assigning a confidence threshold on automatic beat annotation in large datasets</title>
+      <link>https://joserzapata.github.io/publication/assigningconfidence/</link>
+      <pubDate>Mon, 08 Oct 2012 19:38:56 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/assigningconfidence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Improving Beat Tracking in the presence of highly predominant vocals using source separation techniques: Preliminary study</title>
+      <link>https://joserzapata.github.io/publication/improvingbeat/</link>
+      <pubDate>Thu, 28 Jun 2012 22:17:42 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/improvingbeat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SMC Beat tracking Dataset</title>
+      <link>https://joserzapata.github.io/project/smcbeatdataset/</link>
+      <pubDate>Sun, 27 May 2012 13:30:13 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/project/smcbeatdataset/</guid>
+      <description>This dataset contains 217 excerpts around 40s each, of which 19 are &amp;ldquo;easy&amp;rdquo; and the remaining 198 are &amp;ldquo;hard&amp;rdquo;. The harder excerpts were drawn from the following musical styles: Romantic music, ﬁlm soundtracks, blues, chanson and solo guitar.
+This dataset has been designed for radically new techniques which can contend with challenging beat tracking situations like: quiet accompaniment, expressive timing, changes in time signature, slow tempo, poor sound quality etc. So, if your beat tracker likes a 4&amp;frasl;4 time-signature with a steady tempo and needs clear percussive onsets, don&amp;rsquo;t expect it to do very well!</description>
+    </item>
+    
+    <item>
+      <title>On the automatic identification of difficult examples for beat tracking: towards building new evaluation datasets</title>
+      <link>https://joserzapata.github.io/publication/automaticidentification/</link>
+      <pubDate>Sun, 25 Mar 2012 19:44:33 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/publication/automaticidentification/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
