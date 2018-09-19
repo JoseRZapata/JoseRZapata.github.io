@@ -3,36 +3,33 @@
 # This script allows you to easily and quickly generate and deploy your website
 # using Hugo to your personal GitHub Pages repository. This script requires a
 # certain configuration, run the `setup.sh` script to configure this. See
-# https://hjdskes.github.io/blog/deploying-hugo-on-personal-github-pages/index.html
+# https://hjdskes.github.io/blog/update-deploying-hugo-on-personal-github-pages/
 # for more information.
 
-# File copied from https://proquestionasker.github.io/blog/Making_Site/ tutorial
-# on creating websites with blogdown, Hugo, and GitHub.
 
-# Set the English locale for the `date` command.
-
-# GitHub username.
-USERNAME=JoseRZapata
-# Name of the branch containing the Hugo source files.
-SOURCE=source
 # The commit message.
+MESSAGE="Site rebuild $(date)"
 
 msg() {
     printf "\033[1;32m :: %s\n\033[0m" "$1"
 }
 
-msg "Pulling down the \`master\` branch into \`public\` to help avoid merge conflicts"
-git subtree pull --prefix=public \
-    https://github.com/$USERNAME/$USERNAME.github.io.git origin master -m "Merge origin master"
+if [[ $(git status -s) ]]; then
+    msg "The working directory is dirty, please commit or stash any pending changes"
+    exit 1;
+fi
+
+msg "Removing the old website"
+pushd public
+git rm -rf *
+popd
 
 msg "Building the website"
 hugo
 
-msg "Pushing the updated \`public\` folder to the \`$SOURCE\` branch"
-git add public
-git commit -m "$MESSAGE"
-git push origin "$SOURCE"
-
 msg "Pushing the updated \`public\` folder to the \`master\` branch"
-git subtree push --prefix=public \
-    https://github.com/$USERNAME/$USERNAME.github.io.git master
+pushd public
+git add *
+git commit -m "$MESSAGE"
+popd
+git push origin master
