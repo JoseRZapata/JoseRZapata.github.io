@@ -271,21 +271,31 @@ enableGitInfo = false
 
 [[menu.main]]
   name = "Publications"
+  pre = "<i class='fa fa-book'></i>"
   url = "#publications_selected"
   weight = 2
 
 #[[menu.main]]
 #  name = "Posts"
+#  pre = "<i class='fa  fa-comment'></i>"
 #  url = "#posts"
 #  weight = 3
-
+# pre = "<i class='fa fa-volume-up'></i>"  talks icon
 [[menu.main]]
   name = "Projects"
+  pre = "<i class='fa fa-file-text-o'></i>"
   url = "#projects"
   weight = 4
 
+#  [[menu.main]]
+# name = "Talks"
+#  pre = "<i class='fa fa-volume-up'></i>"
+# url = "#talks"
+#  weight = 5
+
 [[menu.main]]
   name = "Teaching"
+  pre = "<i class='fa fa-leanpub'></i>"
   url = "#teaching"
   weight = 5
 
@@ -296,6 +306,7 @@ enableGitInfo = false
 
 [[menu.main]]
   name = "Phd Thesis"
+  pre = "<i class='fa fa-file'></i>"
   url = "#phdthesis"
   weight = 6
 
@@ -303,6 +314,7 @@ enableGitInfo = false
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # [[menu.main]]
 #    name = "CV"
+#    pre = "<i class='fa fa-file'></i>"
 #    url = "files/cv.pdf"
 #    weight = 7
 
