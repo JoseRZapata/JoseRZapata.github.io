@@ -266,12 +266,13 @@ enableGitInfo = false
 
 [[menu.main]]
   name = "Home"
+  #pre = "<i class='fa fa-address-card'></i>"
   url = "#about"
   weight = 1
 
 [[menu.main]]
   name = "Publications"
-  pre = "<i class='fa fa-book'></i>"
+  #pre = "<i class='fa fa-book'></i>"
   url = "#publications_selected"
   weight = 2
 
@@ -281,9 +282,10 @@ enableGitInfo = false
 #  url = "#posts"
 #  weight = 3
 # pre = "<i class='fa fa-volume-up'></i>"  talks icon
+
 [[menu.main]]
   name = "Projects"
-  pre = "<i class='fa fa-file-text-o'></i>"
+  #pre = "<i class='fa fa-file-text-o'></i>"
   url = "#projects"
   weight = 4
 
@@ -295,7 +297,7 @@ enableGitInfo = false
 
 [[menu.main]]
   name = "Teaching"
-  pre = "<i class='fa fa-leanpub'></i>"
+  #pre = "<i class='fa fa-leanpub'></i>"
   url = "#teaching"
   weight = 5
 
@@ -306,7 +308,7 @@ enableGitInfo = false
 
 [[menu.main]]
   name = "Phd Thesis"
-  pre = "<i class='fa fa-file'></i>"
+  #pre = "<i class='fa fa-file'></i>"
   url = "#phdthesis"
   weight = 6
 
