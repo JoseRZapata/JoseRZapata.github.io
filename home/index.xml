@@ -5,26 +5,36 @@
     <link>https://joserzapata.github.io/home/</link>
     <description>Recent content in Homes on Jose Ricardo Zapata</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
     <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Tue, 02 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 15 Oct 2017 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="https://joserzapata.github.io/home/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
+      <link>https://joserzapata.github.io/home/hero_carousel/</link>
+      <pubDate>Sun, 15 Oct 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/home/hero_carousel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://joserzapata.github.io/home/about/</link>
-      <pubDate>Tue, 02 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 17 Sep 2018 00:00:00 -0500</pubDate>
       
       <guid>https://joserzapata.github.io/home/about/</guid>
       <description>Biography I&amp;rsquo;m a Professor at the Faculty of Information and Communication Technologies (TIC), Universidad Pontificia Bolivariana (UPB) and researcher at GIDATI
-My research interests are based around sound and music information technologies, which includes information retrieval, data mining and digital signal processing, with applications to music information retrieval, audio analysis and data science.</description>
+My research interests are based around Data science and sound and music information technologies, which includes information retrieval, data mining and digital signal processing, with applications to music information retrieval, audio analysis and data analysis.</description>
     </item>
     
     <item>
       <title>Selected Publications</title>
       <link>https://joserzapata.github.io/home/publications_selected/</link>
-      <pubDate>Thu, 04 Jan 2018 00:00:00 -0500</pubDate>
+      <pubDate>Mon, 17 Sep 2018 17:14:00 -0500</pubDate>
       
       <guid>https://joserzapata.github.io/home/publications_selected/</guid>
       <description></description>
@@ -33,16 +43,34 @@ My research interests are based around sound and music information technologies,
     <item>
       <title>Publications</title>
       <link>https://joserzapata.github.io/home/publications/</link>
-      <pubDate>Wed, 03 Jan 2018 00:00:00 -0500</pubDate>
+      <pubDate>Mon, 17 Sep 2018 17:09:00 -0500</pubDate>
       
       <guid>https://joserzapata.github.io/home/publications/</guid>
       <description></description>
     </item>
     
     <item>
+      <title></title>
+      <link>https://joserzapata.github.io/home/skills/</link>
+      <pubDate>Wed, 20 Sep 2017 00:00:00 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/home/skills/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selected Talks</title>
+      <link>https://joserzapata.github.io/home/talks_selected/</link>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/home/talks_selected/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Recent &amp; Upcoming Talks</title>
       <link>https://joserzapata.github.io/home/talks/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0500</pubDate>
       
       <guid>https://joserzapata.github.io/home/talks/</guid>
       <description></description>
@@ -51,7 +79,7 @@ My research interests are based around sound and music information technologies,
     <item>
       <title>Recent Posts</title>
       <link>https://joserzapata.github.io/home/posts/</link>
-      <pubDate>Wed, 03 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0500</pubDate>
       
       <guid>https://joserzapata.github.io/home/posts/</guid>
       <description></description>
@@ -60,7 +88,7 @@ My research interests are based around sound and music information technologies,
     <item>
       <title>Projects</title>
       <link>https://joserzapata.github.io/home/projects/</link>
-      <pubDate>Wed, 10 Jan 2018 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 17 Jan 2018 15:00:00 -0500</pubDate>
       
       <guid>https://joserzapata.github.io/home/projects/</guid>
       <description></description>
@@ -69,7 +97,7 @@ My research interests are based around sound and music information technologies,
     <item>
       <title>Teaching</title>
       <link>https://joserzapata.github.io/home/teaching/</link>
-      <pubDate>Mon, 15 Jan 2018 10:00:00 +0000</pubDate>
+      <pubDate>Mon, 17 Sep 2018 17:21:00 -0500</pubDate>
       
       <guid>https://joserzapata.github.io/home/teaching/</guid>
       <description>Current and past, postgraduate and undergraduate courses at the Universidad Pontificia Bolivariana (UPB)
@@ -89,16 +117,25 @@ My research interests are based around sound and music information technologies,
     <item>
       <title>Contact</title>
       <link>https://joserzapata.github.io/home/contact/</link>
-      <pubDate>Wed, 20 Apr 2016 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 20 Apr 2016 00:00:00 -0500</pubDate>
       
       <guid>https://joserzapata.github.io/home/contact/</guid>
       <description></description>
     </item>
     
     <item>
+      <title>Search</title>
+      <link>https://joserzapata.github.io/home/search/</link>
+      <pubDate>Mon, 23 Jul 2018 00:00:00 -0500</pubDate>
+      
+      <guid>https://joserzapata.github.io/home/search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Tags</title>
       <link>https://joserzapata.github.io/home/tags/</link>
-      <pubDate>Wed, 10 Jan 2018 00:00:00 -0500</pubDate>
+      <pubDate>Mon, 17 Sep 2018 17:18:00 -0500</pubDate>
       
       <guid>https://joserzapata.github.io/home/tags/</guid>
       <description></description>

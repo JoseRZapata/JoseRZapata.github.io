@@ -2,7 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication/" hreflang="es"/>
@@ -13,7 +12,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -26,7 +24,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/project/pydafx/" hreflang="es"/>
@@ -37,7 +34,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -50,7 +46,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/project/multifeaturebeattracker/" hreflang="es"/>
@@ -61,7 +56,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -74,7 +68,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication/essentiaacm/" hreflang="es"/>
@@ -85,7 +78,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -98,7 +90,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication/voicesupressionbeat/" hreflang="es"/>
@@ -109,7 +100,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -122,7 +112,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication/assigningconfidence/" hreflang="es"/>
@@ -133,7 +122,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -146,7 +134,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/project/smcbeatdataset/" hreflang="es"/>
@@ -157,7 +144,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -170,7 +156,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication/comparativetempo/" hreflang="es"/>
@@ -182,7 +167,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication/efficientdetection/" hreflang="es"/>
@@ -193,7 +177,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -207,7 +190,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication_types/2/" hreflang="es"/>
@@ -219,7 +201,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -233,7 +214,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/acm/" hreflang="es"/>
@@ -245,7 +225,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -259,7 +238,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/audio-redundancy/" hreflang="es"/>
@@ -271,7 +249,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -285,7 +262,6 @@
     
   
     
-    
     <url>
     
       <loc>https://joserzapata.github.io/es/tags/beat-tracking/</loc>
@@ -294,7 +270,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -308,7 +283,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/cmmr/" hreflang="es"/>
@@ -321,7 +295,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/categories/" hreflang="es"/>
@@ -332,7 +305,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -346,7 +318,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/confidence-measure/" hreflang="es"/>
@@ -358,7 +329,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -372,7 +342,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/dataset/" hreflang="es"/>
@@ -384,19 +353,6 @@
     </url>
     
   
-    
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/en/" hreflang="es"/>
-      <xhtml:link rel="alternate" href="https://joserzapata.github.io/en/" hreflang="en"/>
-    
-      <loc>https://joserzapata.github.io/es/en/</loc>
-      <priority>0</priority>
-    </url>
-    
-  
-    
     
     <url>
     
@@ -410,7 +366,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/icassp/" hreflang="es"/>
@@ -422,7 +377,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -436,7 +390,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/ismir/" hreflang="es"/>
@@ -449,19 +402,17 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/" hreflang="es"/>
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/" hreflang="en"/>
     
       <loc>https://joserzapata.github.io/es/</loc>
-      <lastmod>2018-01-17T00:00:00+00:00</lastmod>
+      <lastmod>2018-09-17T00:00:00-05:00</lastmod>
       <priority>0</priority>
     </url>
     
   
-    
     
     <url>
     
@@ -475,7 +426,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/mirex/" hreflang="es"/>
@@ -487,7 +437,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -501,7 +450,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/open-source/" hreflang="es"/>
@@ -513,7 +461,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -527,7 +474,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication_types/" hreflang="es"/>
@@ -539,7 +485,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -553,7 +498,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/selective-sampling/" hreflang="es"/>
@@ -565,7 +509,6 @@
     </url>
     
   
-    
     
     <url>
     
@@ -579,7 +522,6 @@
     
   
     
-    
     <url>
     
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/" hreflang="es"/>
@@ -591,7 +533,6 @@
     </url>
     
   
-    
     
     <url>
     
