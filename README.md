@@ -1,6 +1,6 @@
 # Personal Website
 
-My personal Website (https://joserzapata.github.io/)[https://joserzapata.github.io/]
+My personal Website [https://joserzapata.github.io/](https://joserzapata.github.io/)
 
 Using the [Hugo Academic Theme](https://themes.gohugo.io/theme/academic/)
 
