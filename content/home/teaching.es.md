@@ -20,7 +20,7 @@ Cursos pasados y <span style="color:#328cc1">presentes</span> dictados en postgr
 | Procesamiento de Audio      |   Ph.D  | &#124; | Procesamiento de señales      |   B.Sc  |
 | Principios de procesamiento de imagenes | Ph.D |&#124; | <span style="color:#328cc1">Principios de Audio</span> |   B.Sc  |
 |<span style="color:#328cc1"> Mineria de Audio e Imagenes </span>|  M.Sc  |&#124; | <span style="color:#328cc1">Minería de datos</span>   |   B.Sc  |
-| <span style="color:#328cc1"> Python y R para analisis de datos</span>  | M.Sc  | &#124; | Aplicaciones de Audio | B.Sc |
+| <span style="color:#328cc1"> Python y R para analisis de datos y ML</span>  | M.Sc  | &#124; | Aplicaciones de Audio | B.Sc |
 | Procesamiento de señales       | M.Sc    |&#124; | Teoría de Telecomunicaciones  |   B.Sc  |
 | Principios de telecomunicaciones | M.Sc |&#124; | Lineas de TX y Antenas | B.Sc |
 | Matlab                   | M.Sc    |&#124; | Lab. Teoria de Telecomunicaciones | B.Sc |
