@@ -57,7 +57,7 @@ url_source = ""
 url_custom = [{name = "Conference", url = "http://ismir2012.ismir.net/"}]
 
 # Digital Object Identifier (DOI)
-doi = "https://doi.org/10.5281/zenodo.1415080"
+doi = "10.5281/zenodo.1415080"
 
 # Does this page contain LaTeX math? (true/false)
 math = false
