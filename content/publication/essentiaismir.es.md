@@ -57,7 +57,7 @@ url_source = "http://essentia.upf.edu/documentation/reference/std_BeatTrackerMul
 url_custom = [{name = "Conference", url = "http://ismir2013.ismir.net/"}]
 
 # Digital Object Identifier (DOI)
-doi = ""
+doi = "https://doi.org/10.5281/zenodo.1415016"
 
 # Does this page contain LaTeX math? (true/false)
 math = false
