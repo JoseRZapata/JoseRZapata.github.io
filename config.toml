@@ -58,7 +58,7 @@ enableGitInfo = false
 
   # Your details.
   name = "Jose R. Zapata"
-  role = "PhD in Information and Communication Technologies (Sound and Music Computing), Professor at Faculty TIC"
+  role = "PhD in Information and Communication Technologies (Sound and Music Computing)"
 
   # Organizations/Affiliations.
   #   Separate multiple entries with a comma, using the form: `[ {name="Org1", url=""}, {name="Org2", url=""} ]`.
@@ -364,7 +364,7 @@ enableGitInfo = false
 
   [languages.es.params]
     name = "Jose R. Zapata"
-    role = "PhD in Information and Communication Technologies (Sound and Music Computing), Profesor Titular en la Facultad TIC"
+    role = "PhD in Information and Communication Technologies (Sound and Music Computing)"
 
 [[languages.es.menu.main]]
   name = "Inicio"
