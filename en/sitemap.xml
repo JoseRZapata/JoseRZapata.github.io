@@ -42,17 +42,6 @@
     
     <url>
     
-      <xhtml:link rel="alternate" href="https://joserzapata.github.io/project/pydafx/" hreflang="en"/>
-      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/project/pydafx/" hreflang="es"/>
-    
-      <loc>https://joserzapata.github.io/project/pydafx/</loc>
-      <lastmod>2016-11-07T23:20:38-05:00</lastmod>
-    </url>
-    
-  
-    
-    <url>
-    
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/publication/multifeaturebeattracker/" hreflang="en"/>
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication/multifeaturebeattracker/" hreflang="es"/>
     
@@ -268,18 +257,6 @@
     
     <url>
     
-      <xhtml:link rel="alternate" href="https://joserzapata.github.io/tags/audio-signal-processing/" hreflang="en"/>
-      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/audio-signal-processing/" hreflang="es"/>
-    
-      <loc>https://joserzapata.github.io/tags/audio-signal-processing/</loc>
-      <lastmod>2016-11-07T23:20:38-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/tags/beat-tracking/" hreflang="en"/>
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/beat-tracking/" hreflang="es"/>
     
@@ -332,18 +309,6 @@
     
       <loc>https://joserzapata.github.io/tags/confidence-measure/</loc>
       <lastmod>2014-04-03T11:52:17-05:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
-  
-    
-    <url>
-    
-      <xhtml:link rel="alternate" href="https://joserzapata.github.io/tags/dafx/" hreflang="en"/>
-      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/dafx/" hreflang="es"/>
-    
-      <loc>https://joserzapata.github.io/tags/dafx/</loc>
-      <lastmod>2016-11-07T23:20:38-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -475,7 +440,7 @@
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/project/" hreflang="es"/>
     
       <loc>https://joserzapata.github.io/project/</loc>
-      <lastmod>2016-11-07T23:20:38-05:00</lastmod>
+      <lastmod>2014-01-04T23:00:38-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -499,7 +464,7 @@
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/python/" hreflang="es"/>
     
       <loc>https://joserzapata.github.io/tags/python/</loc>
-      <lastmod>2016-11-07T23:20:38-05:00</lastmod>
+      <lastmod>2013-11-03T23:32:53-05:00</lastmod>
       <priority>0</priority>
     </url>
     
