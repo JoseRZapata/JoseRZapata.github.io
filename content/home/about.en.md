@@ -30,11 +30,11 @@ weight = 5
 [[education.courses]]
   course = "BSc in Electronic Engineering"
   institution = "Universidad Pontificia Bolivariana (UPB), Colombia"
-  year = 2002 
+  year = 2002
 +++
 
 # Biography
 
-I'm a Professor at the Faculty of Information and Communication Technologies (TIC), [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) and researcher at [GIDATI](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
+I'm a Professor at the Faculty of Information and Communication Technologies (TIC), [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) and researcher at [GIDATIC](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
 
 My research interests are based around **Data science** and **Sound and music information technologies**, which includes **Music information retrieval**, **Data mining**, **Audio analysis** and **Data analysis**.

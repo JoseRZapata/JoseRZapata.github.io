@@ -21,7 +21,7 @@ weight = 60
 | Audio Processing      |   Ph.D  | &#124; | Signal Processing  |   B.Sc  |
 | Principles of Image Processing | Ph.D |&#124; |<span style="color:#328cc1"> Principles of Audio</span> |   B.Sc  |
 | <span style="color:#328cc1">Audio and Image Data Mining</span>   |   M.Sc  |&#124; | <span style="color:#328cc1">Data Mining</span>   |   B.Sc  |
-| <span style="color:#328cc1">Python and R for data analysis & ML</span>  | M.Sc  | &#124;  | Audio Applications   |  B.Sc   |
+| <span style="color:#328cc1">Python and R for Data Science</span>  | M.Sc  | &#124;  | Audio Applications   |  B.Sc   |
 | Signal Processing   | M.Sc    |&#124; |Telecommunications theory   |  B.Sc   |
 | Telecommunications Principles | M.Sc |&#124; | Tx Lines and antennas | B.Sc   |
 | Matlab  | M.Sc    |&#124; | Telecommunications Lab  |B.Sc |

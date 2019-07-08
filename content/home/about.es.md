@@ -35,6 +35,6 @@ weight = 5
 +++
 
 # Biografía
-Soy Profesor Titular de la facultad de tecnologías de la información y comunicación (TIC), en la [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) y investigador en [GIDATI](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
+Soy Profesor Titular de la facultad de tecnologías de la información y comunicación (TIC), en la [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) y investigador en [GIDATIC](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
 
 Mis intereses de investigación son en el área de **Ciencia de Datos** y **tecnologías de la información en sonido y musica**, que incluye temas como **Music information retrieval**, **Mineria de Datos**, **Análisis de audio** y **Análisis de datos**.
