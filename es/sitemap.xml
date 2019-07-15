@@ -4,6 +4,17 @@
     
     <url>
     
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/project/acmus/" hreflang="es"/>
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/project/acmus/" hreflang="en"/>
+    
+      <loc>https://joserzapata.github.io/es/project/acmus/</loc>
+      <lastmod>2019-07-15T15:01:09-05:00</lastmod>
+    </url>
+    
+  
+    
+    <url>
+    
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/publication/" hreflang="es"/>
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/publication/" hreflang="en"/>
     
@@ -409,7 +420,19 @@
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/tags/music-information-retrieval/" hreflang="en"/>
     
       <loc>https://joserzapata.github.io/es/tags/music-information-retrieval/</loc>
-      <lastmod>2013-11-03T23:32:53-05:00</lastmod>
+      <lastmod>2019-07-15T15:01:09-05:00</lastmod>
+      <priority>0</priority>
+    </url>
+    
+  
+    
+    <url>
+    
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/es/tags/musicology/" hreflang="es"/>
+      <xhtml:link rel="alternate" href="https://joserzapata.github.io/tags/musicology/" hreflang="en"/>
+    
+      <loc>https://joserzapata.github.io/es/tags/musicology/</loc>
+      <lastmod>2019-07-15T15:01:09-05:00</lastmod>
       <priority>0</priority>
     </url>
     
@@ -433,7 +456,7 @@
       <xhtml:link rel="alternate" href="https://joserzapata.github.io/project/" hreflang="en"/>
     
       <loc>https://joserzapata.github.io/es/project/</loc>
-      <lastmod>2014-01-04T23:00:38-05:00</lastmod>
+      <lastmod>2019-07-15T15:01:09-05:00</lastmod>
       <priority>0</priority>
     </url>
     
