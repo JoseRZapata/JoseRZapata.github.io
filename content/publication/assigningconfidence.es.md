@@ -42,7 +42,7 @@ projects = []
 tags = ["Beat-tracking","Confidence-measure","ISMIR"]
 
 # Links (optional).
-url_pdf = "http://www.ismir2012.ismir.net/event/papers/157_ISMIR_2012.pdf"
+url_pdf = "http://ismir2012.ismir.net/event/papers/157_ISMIR_2012.pdf"
 url_preprint = ""
 url_code = ""
 url_dataset = ""
