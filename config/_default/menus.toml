@@ -8,10 +8,10 @@
   url = "#about"
   weight = 10
 
-[[main]]
-  name = "Posts"
-  url = "#posts"
-  weight = 20
+#[[main]]
+#  name = "Posts"
+#  url = "#posts"
+#  weight = 20
 
 [[main]]
   name = "Projects"
@@ -24,9 +24,19 @@
   weight = 40
 
 [[main]]
-  name = "Contact"
-  url = "#contact"
-  weight = 60
+  name = "Teaching"
+  url = "#teaching"
+  weight = 50
+
+[[main]]
+  name = "Phd Thesis"
+  url = "#phdthesis"
+  weight = 55
+
+#[[main]]
+#  name = "Contact"
+#  url = "#contact"
+#  weight = 60
 
 # Link to a PDF of your resume/CV from the menu.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
