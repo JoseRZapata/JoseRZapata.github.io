@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Source-separation on Jose Ricardo Zapata</title>
+    <title>Source-separation | Jose Ricardo Zapata</title>
     <link>https://joserzapata.github.io/tags/source-separation/</link>
-    <description>Recent content in Source-separation on Jose Ricardo Zapata</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 26 May 2013 12:42:45 -0500</lastBuildDate>
-    
-	<atom:link href="https://joserzapata.github.io/tags/source-separation/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://joserzapata.github.io/tags/source-separation/index.xml" rel="self" type="application/rss+xml" />
+    <description>Source-separation</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Sun, 26 May 2013 12:42:45 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Source-separation</title>
+      <link>https://joserzapata.github.io/tags/source-separation/</link>
+    </image>
     
     <item>
       <title>Using voice suppression algorithms to improve beat tracking in the presence of highly predominant vocals</title>
-      <link>https://joserzapata.github.io/publication/voicesupressionbeat/</link>
+      <link>https://joserzapata.github.io/publication/voice-suppression-improve-beat-tracking/</link>
       <pubDate>Sun, 26 May 2013 12:42:45 -0500</pubDate>
-      
-      <guid>https://joserzapata.github.io/publication/voicesupressionbeat/</guid>
+      <guid>https://joserzapata.github.io/publication/voice-suppression-improve-beat-tracking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Improving Beat Tracking in the presence of highly predominant vocals using source separation techniques: Preliminary study</title>
-      <link>https://joserzapata.github.io/publication/improvingbeat/</link>
+      <link>https://joserzapata.github.io/publication/improving-beat-tracking/</link>
       <pubDate>Thu, 28 Jun 2012 22:17:42 -0500</pubDate>
-      
-      <guid>https://joserzapata.github.io/publication/improvingbeat/</guid>
+      <guid>https://joserzapata.github.io/publication/improving-beat-tracking/</guid>
       <description></description>
     </item>
     

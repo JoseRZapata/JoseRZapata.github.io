@@ -1,41 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Music-information-retrieval on Jose Ricardo Zapata</title>
+    <title>Music-information-retrieval | Jose Ricardo Zapata</title>
     <link>https://joserzapata.github.io/es/tags/music-information-retrieval/</link>
-    <description>Recent content in Music-information-retrieval on Jose Ricardo Zapata</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Mon, 15 Jul 2019 15:01:09 -0500</lastBuildDate>
-    
-	<atom:link href="https://joserzapata.github.io/es/tags/music-information-retrieval/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://joserzapata.github.io/es/tags/music-information-retrieval/index.xml" rel="self" type="application/rss+xml" />
+    <description>Music-information-retrieval</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Mon, 15 Jul 2019 15:01:09 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Music-information-retrieval</title>
+      <link>https://joserzapata.github.io/es/tags/music-information-retrieval/</link>
+    </image>
     
     <item>
       <title>Acmus</title>
       <link>https://joserzapata.github.io/es/project/acmus/</link>
       <pubDate>Mon, 15 Jul 2019 15:01:09 -0500</pubDate>
-      
       <guid>https://joserzapata.github.io/es/project/acmus/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
-      <link>https://joserzapata.github.io/es/publication/essentiaismir/</link>
+      <link>https://joserzapata.github.io/es/publication/essentia-ismir/</link>
       <pubDate>Sun, 03 Nov 2013 23:32:53 -0500</pubDate>
-      
-      <guid>https://joserzapata.github.io/es/publication/essentiaismir/</guid>
+      <guid>https://joserzapata.github.io/es/publication/essentia-ismir/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Essentia: an open-source library for sound and music analysis</title>
-      <link>https://joserzapata.github.io/es/publication/essentiaacm/</link>
+      <link>https://joserzapata.github.io/es/publication/essentia-acm/</link>
       <pubDate>Mon, 21 Oct 2013 00:11:35 -0500</pubDate>
-      
-      <guid>https://joserzapata.github.io/es/publication/essentiaacm/</guid>
+      <guid>https://joserzapata.github.io/es/publication/essentia-acm/</guid>
       <description></description>
     </item>
     

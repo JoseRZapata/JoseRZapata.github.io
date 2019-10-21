@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ICASSP on Jose Ricardo Zapata</title>
+    <title>ICASSP | Jose Ricardo Zapata</title>
     <link>https://joserzapata.github.io/tags/icassp/</link>
-    <description>Recent content in ICASSP on Jose Ricardo Zapata</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sun, 26 May 2013 12:42:45 -0500</lastBuildDate>
-    
-	<atom:link href="https://joserzapata.github.io/tags/icassp/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://joserzapata.github.io/tags/icassp/index.xml" rel="self" type="application/rss+xml" />
+    <description>ICASSP</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Sun, 26 May 2013 12:42:45 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>ICASSP</title>
+      <link>https://joserzapata.github.io/tags/icassp/</link>
+    </image>
     
     <item>
       <title>Using voice suppression algorithms to improve beat tracking in the presence of highly predominant vocals</title>
-      <link>https://joserzapata.github.io/publication/voicesupressionbeat/</link>
+      <link>https://joserzapata.github.io/publication/voice-suppression-improve-beat-tracking/</link>
       <pubDate>Sun, 26 May 2013 12:42:45 -0500</pubDate>
-      
-      <guid>https://joserzapata.github.io/publication/voicesupressionbeat/</guid>
+      <guid>https://joserzapata.github.io/publication/voice-suppression-improve-beat-tracking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>On the automatic identification of difficult examples for beat tracking: towards building new evaluation datasets</title>
-      <link>https://joserzapata.github.io/publication/automaticidentification/</link>
+      <link>https://joserzapata.github.io/publication/automatic-identification/</link>
       <pubDate>Sun, 25 Mar 2012 19:44:33 -0500</pubDate>
-      
-      <guid>https://joserzapata.github.io/publication/automaticidentification/</guid>
+      <guid>https://joserzapata.github.io/publication/automatic-identification/</guid>
       <description></description>
     </item>
     

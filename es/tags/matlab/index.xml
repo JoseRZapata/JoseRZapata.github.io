@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Matlab on Jose Ricardo Zapata</title>
+    <title>Matlab | Jose Ricardo Zapata</title>
     <link>https://joserzapata.github.io/es/tags/matlab/</link>
-    <description>Recent content in Matlab on Jose Ricardo Zapata</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Sat, 04 Jan 2014 23:00:38 -0500</lastBuildDate>
-    
-	<atom:link href="https://joserzapata.github.io/es/tags/matlab/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://joserzapata.github.io/es/tags/matlab/index.xml" rel="self" type="application/rss+xml" />
+    <description>Matlab</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Sat, 04 Jan 2014 23:00:38 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Matlab</title>
+      <link>https://joserzapata.github.io/es/tags/matlab/</link>
+    </image>
     
     <item>
       <title>Multifeature Beat tracker</title>
-      <link>https://joserzapata.github.io/es/project/multifeaturebeattracker/</link>
+      <link>https://joserzapata.github.io/es/project/multifeature-beat-tracker/</link>
       <pubDate>Sat, 04 Jan 2014 23:00:38 -0500</pubDate>
-      
-      <guid>https://joserzapata.github.io/es/project/multifeaturebeattracker/</guid>
+      <guid>https://joserzapata.github.io/es/project/multifeature-beat-tracker/</guid>
       <description></description>
     </item>
     

@@ -1,32 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Confidence-measure on Jose Ricardo Zapata</title>
+    <title>Confidence-measure | Jose Ricardo Zapata</title>
     <link>https://joserzapata.github.io/es/tags/confidence-measure/</link>
-    <description>Recent content in Confidence-measure on Jose Ricardo Zapata</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>es</language>
-    <copyright>&amp;copy; 2018</copyright>
-    <lastBuildDate>Thu, 03 Apr 2014 11:52:17 -0500</lastBuildDate>
-    
-	<atom:link href="https://joserzapata.github.io/es/tags/confidence-measure/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://joserzapata.github.io/es/tags/confidence-measure/index.xml" rel="self" type="application/rss+xml" />
+    <description>Confidence-measure</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Thu, 03 Apr 2014 11:52:17 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Confidence-measure</title>
+      <link>https://joserzapata.github.io/es/tags/confidence-measure/</link>
+    </image>
     
     <item>
       <title>Multi-Feature Beat Tracking</title>
-      <link>https://joserzapata.github.io/es/publication/multifeaturebeattracker/</link>
+      <link>https://joserzapata.github.io/es/publication/multifeature-beattracker/</link>
       <pubDate>Thu, 03 Apr 2014 11:52:17 -0500</pubDate>
-      
-      <guid>https://joserzapata.github.io/es/publication/multifeaturebeattracker/</guid>
+      <guid>https://joserzapata.github.io/es/publication/multifeature-beattracker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Assigning a confidence threshold on automatic beat annotation in large datasets</title>
-      <link>https://joserzapata.github.io/es/publication/assigningconfidence/</link>
+      <link>https://joserzapata.github.io/es/publication/assigning-confidence/</link>
       <pubDate>Mon, 08 Oct 2012 19:38:56 -0500</pubDate>
-      
-      <guid>https://joserzapata.github.io/es/publication/assigningconfidence/</guid>
+      <guid>https://joserzapata.github.io/es/publication/assigning-confidence/</guid>
       <description></description>
     </item>
     
