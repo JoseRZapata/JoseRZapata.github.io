@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Python | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/tags/python/</link>
+      <atom:link href="https://joserzapata.github.io/es/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <description>Python</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Sat, 23 Nov 2013 07:45:12 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Python</title>
+      <link>https://joserzapata.github.io/es/tags/python/</link>
+    </image>
+    
+    <item>
+      <title>Essentia</title>
+      <link>https://joserzapata.github.io/es/project/essentia/</link>
+      <pubDate>Sat, 23 Nov 2013 07:45:12 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/project/essentia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-ismir/</link>
+      <pubDate>Sun, 03 Nov 2013 23:32:53 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-ismir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: an open-source library for sound and music analysis</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-acm/</link>
+      <pubDate>Mon, 21 Oct 2013 00:11:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-acm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comparative Evaluation and Combination of Audio Tempo Estimation Approaches</title>
+      <link>https://joserzapata.github.io/es/publication/comparative-tempo/</link>
+      <pubDate>Fri, 22 Jul 2011 12:33:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/comparative-tempo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

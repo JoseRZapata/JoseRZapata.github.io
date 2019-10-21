@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Beat-tracking | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/tags/beat-tracking/</link>
+      <atom:link href="https://joserzapata.github.io/es/tags/beat-tracking/index.xml" rel="self" type="application/rss+xml" />
+    <description>Beat-tracking</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Mon, 15 Jul 2019 15:01:09 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Beat-tracking</title>
+      <link>https://joserzapata.github.io/es/tags/beat-tracking/</link>
+    </image>
+    
+    <item>
+      <title>Acmus</title>
+      <link>https://joserzapata.github.io/es/project/acmus/</link>
+      <pubDate>Mon, 15 Jul 2019 15:01:09 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/project/acmus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multi-Feature Beat Tracking</title>
+      <link>https://joserzapata.github.io/es/publication/multifeature-beattracker/</link>
+      <pubDate>Thu, 03 Apr 2014 11:52:17 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/multifeature-beattracker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multifeature Beat tracker</title>
+      <link>https://joserzapata.github.io/es/project/multifeature-beat-tracker/</link>
+      <pubDate>Sat, 04 Jan 2014 23:00:38 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/project/multifeature-beat-tracker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia</title>
+      <link>https://joserzapata.github.io/es/project/essentia/</link>
+      <pubDate>Sat, 23 Nov 2013 07:45:12 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/project/essentia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-ismir/</link>
+      <pubDate>Sun, 03 Nov 2013 23:32:53 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-ismir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: an open-source library for sound and music analysis</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-acm/</link>
+      <pubDate>Mon, 21 Oct 2013 00:11:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-acm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Using voice suppression algorithms to improve beat tracking in the presence of highly predominant vocals</title>
+      <link>https://joserzapata.github.io/es/publication/voice-suppression-improve-beat-tracking/</link>
+      <pubDate>Sun, 26 May 2013 12:42:45 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/voice-suppression-improve-beat-tracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selective Sampling for Beat Tracking Evaluation</title>
+      <link>https://joserzapata.github.io/es/publication/selective-sampling-beat-tracking/</link>
+      <pubDate>Sat, 03 Nov 2012 12:16:05 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/selective-sampling-beat-tracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assigning a confidence threshold on automatic beat annotation in large datasets</title>
+      <link>https://joserzapata.github.io/es/publication/assigning-confidence/</link>
+      <pubDate>Mon, 08 Oct 2012 19:38:56 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/assigning-confidence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Improving Beat Tracking in the presence of highly predominant vocals using source separation techniques: Preliminary study</title>
+      <link>https://joserzapata.github.io/es/publication/improving-beat-tracking/</link>
+      <pubDate>Thu, 28 Jun 2012 22:17:42 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/improving-beat-tracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SMC Beat tracking Dataset</title>
+      <link>https://joserzapata.github.io/es/project/smc-beat-tracker-dataset/</link>
+      <pubDate>Sun, 27 May 2012 13:30:13 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/project/smc-beat-tracker-dataset/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On the automatic identification of difficult examples for beat tracking: towards building new evaluation datasets</title>
+      <link>https://joserzapata.github.io/es/publication/automatic-identification/</link>
+      <pubDate>Sun, 25 Mar 2012 19:44:33 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/automatic-identification/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

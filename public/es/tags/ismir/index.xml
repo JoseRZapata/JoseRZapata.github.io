@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ISMIR | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/tags/ismir/</link>
+      <atom:link href="https://joserzapata.github.io/es/tags/ismir/index.xml" rel="self" type="application/rss+xml" />
+    <description>ISMIR</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Sun, 03 Nov 2013 23:32:53 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>ISMIR</title>
+      <link>https://joserzapata.github.io/es/tags/ismir/</link>
+    </image>
+    
+    <item>
+      <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-ismir/</link>
+      <pubDate>Sun, 03 Nov 2013 23:32:53 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-ismir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assigning a confidence threshold on automatic beat annotation in large datasets</title>
+      <link>https://joserzapata.github.io/es/publication/assigning-confidence/</link>
+      <pubDate>Mon, 08 Oct 2012 19:38:56 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/assigning-confidence/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

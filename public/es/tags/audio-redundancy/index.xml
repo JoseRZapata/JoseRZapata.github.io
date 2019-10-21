@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Audio-redundancy | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/tags/audio-redundancy/</link>
+      <atom:link href="https://joserzapata.github.io/es/tags/audio-redundancy/index.xml" rel="self" type="application/rss+xml" />
+    <description>Audio-redundancy</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Wed, 01 Oct 2008 22:34:53 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Audio-redundancy</title>
+      <link>https://joserzapata.github.io/es/tags/audio-redundancy/</link>
+    </image>
+    
+    <item>
+      <title>Efficient Detection of Exact Redundancies in Audio Signals</title>
+      <link>https://joserzapata.github.io/es/publication/efficient-detection/</link>
+      <pubDate>Wed, 01 Oct 2008 22:34:53 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/efficient-detection/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
