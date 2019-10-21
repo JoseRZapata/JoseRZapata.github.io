@@ -1,19 +1,10 @@
-{{ if .Params.widgets }}
+{{- define "main" -}}
 
-{{ partial "widget_page.html" . }}
-
-{{ else }}
-
-{{ partial "header.html" . }}
-{{ partial "navbar.html" . }}
-
-{{ partial "header_image.html" . }}
+{{ partial "page_header.html" . }}
 
 <div class="universal-wrapper">
-  {{ with .Title }}<h1>{{ . }}</h1>{{ end }}
-
   {{ with .Content }}
-  <div class="article-style" itemprop="articleBody">{{ . }}</div>
+  <div class="article-style">{{ . }}</div>
   {{ end }}
 
   {{ $paginator := .Paginate .Data.Pages }}
@@ -34,7 +25,5 @@
 
   {{ partial "pagination" . }}
 </div>
-{{ partial "footer_container.html" . }}
-{{ partial "footer.html" . }}
 
-{{ end }}
+{{- end -}}
