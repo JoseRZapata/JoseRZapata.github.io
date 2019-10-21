@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tempo | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/tags/tempo/</link>
+      <atom:link href="https://joserzapata.github.io/es/tags/tempo/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tempo</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Thu, 17 Nov 2016 18:14:05 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Tempo</title>
+      <link>https://joserzapata.github.io/es/tags/tempo/</link>
+    </image>
+    
+    <item>
+      <title>Tempo Estimation</title>
+      <link>https://joserzapata.github.io/es/publication/tempo-estimation/</link>
+      <pubDate>Thu, 17 Nov 2016 18:14:05 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/tempo-estimation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comparative Evaluation and Combination of Audio Tempo Estimation Approaches</title>
+      <link>https://joserzapata.github.io/es/publication/comparative-tempo/</link>
+      <pubDate>Fri, 22 Jul 2011 12:33:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/comparative-tempo/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

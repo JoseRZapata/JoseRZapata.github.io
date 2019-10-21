@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ricardo A. Garcia | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/authors/ricardo-a.-garcia/</link>
+      <atom:link href="https://joserzapata.github.io/authors/ricardo-a.-garcia/index.xml" rel="self" type="application/rss+xml" />
+    <description>Ricardo A. Garcia</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Wed, 01 Oct 2008 22:34:53 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Ricardo A. Garcia</title>
+      <link>https://joserzapata.github.io/authors/ricardo-a.-garcia/</link>
+    </image>
+    
+    <item>
+      <title>Efficient Detection of Exact Redundancies in Audio Signals</title>
+      <link>https://joserzapata.github.io/publication/efficient-detection/</link>
+      <pubDate>Wed, 01 Oct 2008 22:34:53 -0500</pubDate>
+      <guid>https://joserzapata.github.io/publication/efficient-detection/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

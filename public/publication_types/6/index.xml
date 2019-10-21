@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>6 | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/publication_types/6/</link>
+      <atom:link href="https://joserzapata.github.io/publication_types/6/index.xml" rel="self" type="application/rss+xml" />
+    <description>6</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Thu, 17 Nov 2016 18:14:05 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>6</title>
+      <link>https://joserzapata.github.io/publication_types/6/</link>
+    </image>
+    
+    <item>
+      <title>Tempo Estimation</title>
+      <link>https://joserzapata.github.io/publication/tempo-estimation/</link>
+      <pubDate>Thu, 17 Nov 2016 18:14:05 -0500</pubDate>
+      <guid>https://joserzapata.github.io/publication/tempo-estimation/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
