@@ -16,7 +16,7 @@ publishDate: 2019-11-14T13:40:24-05:00
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: " 3ra Conferencia Iberoamericana en Sistemas, Cibernética e Informática CISCI 2004"
+publication: " 3ra Conferencia Iberoamericana en Sistemas, Cibernética e Informática CISCI 2004, Orlando, EE.UU"
 publication_short: ""
 
 abstract: ""

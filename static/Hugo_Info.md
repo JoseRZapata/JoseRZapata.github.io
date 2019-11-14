@@ -7,8 +7,12 @@
 
 ## Create New Blog Post
 
-hugo new  --kind post post/my-article-name
+hugo new --kind post post/my-article-name
 
 ## Create New Project
 
-hugo new  --kind project project/my-project-name
+hugo new --kind project project/my-project-name
+
+## Create New Publication
+
+hugo new --kind publication publication/<my-publication>
