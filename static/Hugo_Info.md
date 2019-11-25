@@ -16,3 +16,8 @@ hugo new --kind project project/my-project-name
 ## Create New Publication
 
 hugo new --kind publication publication/<my-publication>
+
+## Create New Talk
+
+hugo new  --kind talk talk/my-talk-name
+
