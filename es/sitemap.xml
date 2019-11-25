@@ -108,23 +108,23 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/es/publication_types/6/</loc>
-    <lastmod>2016-11-17T18:14:05-05:00</lastmod>
+    <loc>https://joserzapata.github.io/es/talk/pycon2018/</loc>
+    <lastmod>2018-02-09T11:40:35-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://joserzapata.github.io/publication_types/6/"
+                href="https://joserzapata.github.io/talk/pycon2018/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://joserzapata.github.io/es/publication_types/6/"
+                href="https://joserzapata.github.io/es/talk/pycon2018/"
                 />
   </url>
   
   <url>
     <loc>https://joserzapata.github.io/es/authors/</loc>
-    <lastmod>2016-11-17T18:14:05-05:00</lastmod>
+    <lastmod>2018-02-09T11:40:35-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -139,7 +139,7 @@
   
   <url>
     <loc>https://joserzapata.github.io/es/authors/jose-r.-zapata/</loc>
-    <lastmod>2016-11-17T18:14:05-05:00</lastmod>
+    <lastmod>2018-02-09T11:40:35-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -149,6 +149,51 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/authors/jose-r.-zapata/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/tags/python/</loc>
+    <lastmod>2018-02-09T11:40:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/python/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/talk/</loc>
+    <lastmod>2018-02-09T11:40:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/talk/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/talk/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/publication_types/6/</loc>
+    <lastmod>2016-11-17T18:14:05-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/publication_types/6/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/publication_types/6/"
                 />
   </url>
   
@@ -389,21 +434,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/tags/open-source/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/es/tags/python/</loc>
-    <lastmod>2013-11-23T07:45:12-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/python/"
                 />
   </url>
   
@@ -674,21 +704,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/authors/fabien-gouyon/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/es/authors/jose-r-zapata/</loc>
-    <lastmod>2012-11-03T12:16:05-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/jose-r-zapata/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/jose-r-zapata/"
                 />
   </url>
   
@@ -1031,20 +1046,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/post/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/es/talk/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/talk/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/talk/"
                 />
   </url>
   

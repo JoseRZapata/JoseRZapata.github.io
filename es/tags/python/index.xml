@@ -5,12 +5,20 @@
     <link>https://joserzapata.github.io/es/tags/python/</link>
       <atom:link href="https://joserzapata.github.io/es/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <description>Python</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Sat, 23 Nov 2013 07:45:12 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Fri, 09 Feb 2018 11:40:35 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Python</title>
       <link>https://joserzapata.github.io/es/tags/python/</link>
     </image>
+    
+    <item>
+      <title>Analisis de Señales de Audio con Python</title>
+      <link>https://joserzapata.github.io/es/talk/pycon2018/</link>
+      <pubDate>Fri, 09 Feb 2018 11:40:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/talk/pycon2018/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Essentia</title>
