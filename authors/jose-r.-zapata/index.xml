@@ -5,12 +5,20 @@
     <link>https://joserzapata.github.io/authors/jose-r.-zapata/</link>
       <atom:link href="https://joserzapata.github.io/authors/jose-r.-zapata/index.xml" rel="self" type="application/rss+xml" />
     <description>Jose R. Zapata</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Fri, 09 Feb 2018 11:40:35 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Tue, 02 Oct 2018 18:00:00 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Jose R. Zapata</title>
       <link>https://joserzapata.github.io/authors/jose-r.-zapata/</link>
     </image>
+    
+    <item>
+      <title>Aplicaciones de Audio con Machine Learning</title>
+      <link>https://joserzapata.github.io/talk/meetup_2018/</link>
+      <pubDate>Tue, 02 Oct 2018 18:00:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/talk/meetup_2018/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Audio signal analysis with python</title>
@@ -25,6 +33,14 @@
       <link>https://joserzapata.github.io/publication/tempo-estimation/</link>
       <pubDate>Thu, 17 Nov 2016 18:14:05 -0500</pubDate>
       <guid>https://joserzapata.github.io/publication/tempo-estimation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sistemas Automaticos para Extraccion de Información Musical (Generalidades y Aplicaciones)</title>
+      <link>https://joserzapata.github.io/talk/aes2016/</link>
+      <pubDate>Fri, 22 Jul 2016 14:00:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/talk/aes2016/</guid>
       <description></description>
     </item>
     

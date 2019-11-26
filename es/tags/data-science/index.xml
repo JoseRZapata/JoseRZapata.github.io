@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data-science | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/tags/data-science/</link>
+      <atom:link href="https://joserzapata.github.io/es/tags/data-science/index.xml" rel="self" type="application/rss+xml" />
+    <description>Data-science</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Tue, 02 Oct 2018 18:00:00 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Data-science</title>
+      <link>https://joserzapata.github.io/es/tags/data-science/</link>
+    </image>
+    
+    <item>
+      <title>Aplicaciones de Audio con Machine Learning</title>
+      <link>https://joserzapata.github.io/es/talk/meetup_2018/</link>
+      <pubDate>Tue, 02 Oct 2018 18:00:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/talk/meetup_2018/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

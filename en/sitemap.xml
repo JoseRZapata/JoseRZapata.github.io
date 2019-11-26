@@ -108,23 +108,23 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/talk/pycon2018/</loc>
-    <lastmod>2018-02-09T11:40:35-05:00</lastmod>
+    <loc>https://joserzapata.github.io/talk/meetup_2018/</loc>
+    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://joserzapata.github.io/es/talk/pycon2018/"
+                href="https://joserzapata.github.io/es/talk/meetup_2018/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://joserzapata.github.io/talk/pycon2018/"
+                href="https://joserzapata.github.io/talk/meetup_2018/"
                 />
   </url>
   
   <url>
     <loc>https://joserzapata.github.io/authors/</loc>
-    <lastmod>2018-02-09T11:40:35-05:00</lastmod>
+    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -138,8 +138,23 @@
   </url>
   
   <url>
+    <loc>https://joserzapata.github.io/tags/data-science/</loc>
+    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/data-science/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/data-science/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joserzapata.github.io/authors/jose-r.-zapata/</loc>
-    <lastmod>2018-02-09T11:40:35-05:00</lastmod>
+    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -153,8 +168,23 @@
   </url>
   
   <url>
+    <loc>https://joserzapata.github.io/tags/machine-learning/</loc>
+    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/machine-learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/machine-learning/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joserzapata.github.io/tags/python/</loc>
-    <lastmod>2018-02-09T11:40:35-05:00</lastmod>
+    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -169,7 +199,7 @@
   
   <url>
     <loc>https://joserzapata.github.io/talk/</loc>
-    <lastmod>2018-02-09T11:40:35-05:00</lastmod>
+    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -179,6 +209,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/talk/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/talk/pycon2018/</loc>
+    <lastmod>2018-02-09T11:40:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/talk/pycon2018/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/talk/pycon2018/"
                 />
   </url>
   
@@ -254,6 +299,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/publication/tempo-estimation/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/talk/aes2016/</loc>
+    <lastmod>2016-07-22T14:00:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/talk/aes2016/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/talk/aes2016/"
                 />
   </url>
   

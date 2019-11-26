@@ -5,7 +5,7 @@
     <link>https://joserzapata.github.io/es/talk/</link>
       <atom:link href="https://joserzapata.github.io/es/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Talks</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Fri, 09 Feb 2018 11:40:35 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Tue, 02 Oct 2018 18:00:00 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Talks</title>
@@ -13,10 +13,26 @@
     </image>
     
     <item>
+      <title>Aplicaciones de Audio con Machine Learning</title>
+      <link>https://joserzapata.github.io/es/talk/meetup_2018/</link>
+      <pubDate>Tue, 02 Oct 2018 18:00:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/talk/meetup_2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Analisis de Señales de Audio con Python</title>
       <link>https://joserzapata.github.io/es/talk/pycon2018/</link>
       <pubDate>Fri, 09 Feb 2018 11:40:35 -0500</pubDate>
       <guid>https://joserzapata.github.io/es/talk/pycon2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sistemas Automaticos para Extraccion de Información Musical (Generalidades y Aplicaciones)</title>
+      <link>https://joserzapata.github.io/es/talk/aes2016/</link>
+      <pubDate>Fri, 22 Jul 2016 14:00:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/talk/aes2016/</guid>
       <description></description>
     </item>
     
