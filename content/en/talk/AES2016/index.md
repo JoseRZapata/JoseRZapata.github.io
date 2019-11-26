@@ -15,7 +15,10 @@ summary: "El Music Information Retrieval (MIR), que tiene como objetivo extraer,
 automaticamente la informacion musical en señales de audio para diferentes aplicaciones musicales e
 informaticas. Las principales tareas en MIR, son Beat tracking, deteccion de melodia, deteccion de
 acordes, fingerprinting, recomendacion de música, procesamiento de señales de audio, entre otras aplicaciones"
-abstract:
+abstract: "El Music Information Retrieval (MIR), que tiene como objetivo extraer, analizar y procesar
+automaticamente la informacion musical en señales de audio para diferentes aplicaciones musicales e
+informaticas. Las principales tareas en MIR, son Beat tracking, deteccion de melodia, deteccion de
+acordes, fingerprinting, recomendacion de música, procesamiento de señales de audio, entre otras aplicaciones"
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
@@ -27,7 +30,7 @@ all_day: false
 publishDate: 2019-11-25T21:42:28-05:00
 
 authors: ["Jose R. Zapata"]
-tags: []
+tags: ["Music-information-retrieval","Python"]
 
 # Is this a featured talk? (true/false)
 featured: false

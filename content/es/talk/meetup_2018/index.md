@@ -1,30 +1,38 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Audio signal analysis with python"
-event: "PyCon 2018 Colombia"
-event_url: "https://2018.pycon.co/speakers/jose-ricardo-zapata/"
-location: "Universidad Eafit"
+title: "Aplicaciones de Audio con Machine Learning"
+event: "Meetup Big Data"
+event_url: "https://www.meetup.com/es/bigdatacol/events/254853531/"
+location: 
 address:
   street:
   city: "Medellin"
   region:
   postcode:
   country: "Colombia"
-summary: "Using Python for Audio signal analysis and Music Information Retrieval applications."
-abstract: "Using Python for Audio signal analysis and Music Information Retrieval applications."
+summary: "Mediante la extraccion automatica del contenido de las señales de audio y Machine learning
+se tienen aplicaciones de predicción, clasificación y Agrupamiento, como:
+Deteccion de emociones en la voz (Speech Emotion), Reconocieminto de Voz (Speech-to-Text), 
+Deteccion y segmentacion de personas hablando(Speaker Diarization), 
+Music Information Retrieval (Extraccion Automatica de Informacion Musical), entre otros."
+abstract: "Mediante la extraccion automatica del contenido de las señales de audio y Machine learning
+se tienen aplicaciones de predicción, clasificación y Agrupamiento, como:
+Deteccion de emociones en la voz (Speech Emotion), Reconocieminto de Voz (Speech-to-Text), 
+Deteccion y segmentacion de personas hablando(Speaker Diarization), 
+Music Information Retrieval (Extraccion Automatica de Informacion Musical), entre otros."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2018-02-09T11:40:35-05:00
-date_end: 2018-02-09T17:12:30-05:00
+date: 2018-10-02T18:00:00-05:00
+date_end: 2018-10-02T19:00:00-05:00
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: 2019-11-25T17:09:35-05:00
+publishDate: 2019-11-25T22:07:22-05:00
 
 authors: ["Jose R. Zapata"]
-tags: ["Music-information-retrieval","Python"]
+tags: ["Python","Music-information-retrieval","Machine-learning","Data-science"]
 
 # Is this a featured talk? (true/false)
 featured: false
@@ -33,7 +41,7 @@ featured: false
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Pycon2018-Colombia"
+  caption: ""
   focal_point: ""
   preview_only: false
 
@@ -46,10 +54,11 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: "https://nbviewer.jupyter.org/github/JoseRZapata/Pycon2018Colombia/blob/master/Pycon2018-AudioAnalysis-en.ipynb"
-url_code: "https://github.com/JoseRZapata/Pycon2018Colombia"
+url_slides:
+
+url_code:
 url_pdf:
-url_video: "https://www.youtube.com/watch?v=zu63_q7x8b0"
+url_video:
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
