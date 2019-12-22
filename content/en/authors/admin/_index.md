@@ -58,7 +58,7 @@ social:
   link: 'https://orcid.org/0000-0003-1484-5816'
 - icon: linkedin
   icon_pack: fab
-  link: https://www.linkedin.com/in/jose-ricardo-zapata-gonzalez-2259aa85/
+  link: https://www.linkedin.com/in/jose-ricardo-zapata-gonzalez/
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 # - icon: cv
@@ -74,4 +74,4 @@ email: ""
 ---
 I'm a Professor at the Faculty of Information and Communication Technologies (TIC), [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) and researcher at [GIDATIC](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
 
-My research interests are based around **Data science** and **Sound and music information technologies**, which includes **Music information retrieval**, **Machine Learning**, **Audio analysis** and **Data analysis**. 
+My research interests are based around **Data science** and **Sound and music information technologies**, which includes **Music information retrieval**, **Machine Learning**, **Audio analysis** and **Data analysis**. [EN ESPAÑOL](https://joserzapata.github.io/es/)
