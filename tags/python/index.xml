@@ -5,12 +5,20 @@
     <link>https://joserzapata.github.io/tags/python/</link>
       <atom:link href="https://joserzapata.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <description>Python</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Tue, 02 Oct 2018 18:00:00 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2019</copyright><lastBuildDate>Fri, 07 Feb 2020 12:35:00 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Python</title>
       <link>https://joserzapata.github.io/tags/python/</link>
     </image>
+    
+    <item>
+      <title>Comprensión de la música con Python, una mirada desde la Física y la Matemática</title>
+      <link>https://joserzapata.github.io/talk/pycon2020/</link>
+      <pubDate>Fri, 07 Feb 2020 12:35:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/talk/pycon2020/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Aplicaciones de Audio con Machine Learning</title>

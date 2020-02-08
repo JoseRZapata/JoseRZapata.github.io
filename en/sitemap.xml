@@ -1,6 +1,156 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/</loc>
+    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/talk/pycon2020/</loc>
+    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/talk/pycon2020/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/talk/pycon2020/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/jose-r.-zapata/</loc>
+    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/jose-r.-zapata/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/jose-r.-zapata/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/</loc>
+    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/jupyter-notebook/</loc>
+    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/jupyter-notebook/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/jupyter-notebook/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/music/</loc>
+    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/music/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/music/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/python/</loc>
+    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/python/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/</loc>
+    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/talk/</loc>
+    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/talk/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/talk/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/waves/</loc>
+    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/waves/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/waves/"
+                />
+  </url>
   
   <url>
     <loc>https://joserzapata.github.io/project/acmus/</loc>
@@ -29,21 +179,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/tags/beat-tracking/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/</loc>
-    <lastmod>2019-07-15T15:01:09-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/"
                 />
   </url>
   
@@ -93,21 +228,6 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/tags/</loc>
-    <lastmod>2019-07-15T15:01:09-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/talk/meetup_2018/</loc>
     <lastmod>2018-10-02T18:00:00-05:00</lastmod>
     <xhtml:link
@@ -119,21 +239,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/talk/meetup_2018/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/authors/</loc>
-    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/"
                 />
   </url>
   
@@ -153,21 +258,6 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/authors/jose-r.-zapata/</loc>
-    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/jose-r.-zapata/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/jose-r.-zapata/"
-                />
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/tags/machine-learning/</loc>
     <lastmod>2018-10-02T18:00:00-05:00</lastmod>
     <xhtml:link
@@ -179,36 +269,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/tags/machine-learning/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/tags/python/</loc>
-    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/python/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/talk/</loc>
-    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/talk/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/talk/"
                 />
   </url>
   

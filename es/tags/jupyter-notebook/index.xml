@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jupyter-notebook | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/tags/jupyter-notebook/</link>
+      <atom:link href="https://joserzapata.github.io/es/tags/jupyter-notebook/index.xml" rel="self" type="application/rss+xml" />
+    <description>Jupyter-notebook</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Fri, 07 Feb 2020 12:35:00 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Jupyter-notebook</title>
+      <link>https://joserzapata.github.io/es/tags/jupyter-notebook/</link>
+    </image>
+    
+    <item>
+      <title>Comprensión de la música con Python, una mirada desde la Física y la Matemática</title>
+      <link>https://joserzapata.github.io/es/talk/pycon2020/</link>
+      <pubDate>Fri, 07 Feb 2020 12:35:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/talk/pycon2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

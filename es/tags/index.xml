@@ -5,12 +5,44 @@
     <link>https://joserzapata.github.io/es/tags/</link>
       <atom:link href="https://joserzapata.github.io/es/tags/index.xml" rel="self" type="application/rss+xml" />
     <description>Tags</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Mon, 15 Jul 2019 15:01:09 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Fri, 07 Feb 2020 12:35:00 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Tags</title>
       <link>https://joserzapata.github.io/es/tags/</link>
     </image>
+    
+    <item>
+      <title>Jupyter-notebook</title>
+      <link>https://joserzapata.github.io/es/tags/jupyter-notebook/</link>
+      <pubDate>Fri, 07 Feb 2020 12:35:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/tags/jupyter-notebook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Music</title>
+      <link>https://joserzapata.github.io/es/tags/music/</link>
+      <pubDate>Fri, 07 Feb 2020 12:35:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/tags/music/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://joserzapata.github.io/es/tags/python/</link>
+      <pubDate>Fri, 07 Feb 2020 12:35:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Waves</title>
+      <link>https://joserzapata.github.io/es/tags/waves/</link>
+      <pubDate>Fri, 07 Feb 2020 12:35:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/tags/waves/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Beat-tracking</title>
@@ -49,14 +81,6 @@
       <link>https://joserzapata.github.io/es/tags/machine-learning/</link>
       <pubDate>Tue, 02 Oct 2018 18:00:00 -0500</pubDate>
       <guid>https://joserzapata.github.io/es/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://joserzapata.github.io/es/tags/python/</link>
-      <pubDate>Tue, 02 Oct 2018 18:00:00 -0500</pubDate>
-      <guid>https://joserzapata.github.io/es/tags/python/</guid>
       <description></description>
     </item>
     

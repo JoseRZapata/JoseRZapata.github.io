@@ -5,12 +5,20 @@
     <link>https://joserzapata.github.io/es/</link>
       <atom:link href="https://joserzapata.github.io/es/index.xml" rel="self" type="application/rss+xml" />
     <description>Jose Ricardo Zapata</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Mon, 15 Jul 2019 15:01:09 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2019</copyright><lastBuildDate>Fri, 07 Feb 2020 12:35:00 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Jose Ricardo Zapata</title>
       <link>https://joserzapata.github.io/es/</link>
     </image>
+    
+    <item>
+      <title>Comprensión de la música con Python, una mirada desde la Física y la Matemática</title>
+      <link>https://joserzapata.github.io/es/talk/pycon2020/</link>
+      <pubDate>Fri, 07 Feb 2020 12:35:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/talk/pycon2020/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Acmus</title>
