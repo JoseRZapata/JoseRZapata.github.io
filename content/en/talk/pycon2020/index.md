@@ -1,9 +1,9 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Audio signal analysis with python"
-event: "PyCon 2018 Colombia"
-event_url: "https://2018.pycon.co/speakers/jose-ricardo-zapata/"
+title: "Comprensión de la música con Python, una mirada desde la Física y la Matemática"
+event: "PyCon 2020 Colombia"
+event_url:
 location: "Universidad Eafit"
 address:
   street:
@@ -11,20 +11,20 @@ address:
   region:
   postcode:
   country: "Colombia"
-summary: "Using Python for Audio signal analysis and Music Information Retrieval applications."
-abstract: "Using Python for Audio signal analysis and Music Information Retrieval applications."
+summary: "Python para demostrar y visualizar la naturaleza de las ondas del sonido, la relación entre diferentes notas y como se unen para crear la Armonía Musical desde la Física y la Matemática"
+abstract: "La Música es para todos, es una manifestación de la naturaleza. En esta charla entenderemos por que los sonidos son agradables o desagradables, y con el conocimiento básico todos podemos crear melodías y acordes comprendiendo como funciona la armonía musical básica desde la física y las matemáticas. Utilizaremos Python para demostrar y visualizar como es la naturaleza de las ondas del sonido, la relación entre diferentes notas y como se unen para crear la Armonía Musical."
 
 # Talk start and end times.
 #   End time can optionally be hidden by prefixing the line with `#`.
-date: 2018-02-09T11:40:35-05:00
-date_end: 2018-02-09T17:12:30-05:00
+date: 2020-02-07T12:35:00-05:00
+date_end: 2020-02-07T13:15:00-05:00
 all_day: false
 
 # Schedule page publish date (NOT talk date).
-publishDate: 2019-11-25T17:09:35-05:00
+publishDate: 2020-02-07T21:12:33-05:00
 
 authors: ["Jose R. Zapata"]
-tags: ["Music-information-retrieval","Python","Jupyter-notebook"]
+tags: ["Python","Jupyter-notebook","Music","Waves"]
 
 # Is this a featured talk? (true/false)
 featured: false
@@ -33,7 +33,7 @@ featured: false
 # To use, add an image named `featured.jpg/png` to your page's folder. 
 # Focal points: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight.
 image:
-  caption: "Pycon2018-Colombia"
+  caption: "Pycon2020-Colombia"
   focal_point: ""
   preview_only: false
 
@@ -46,10 +46,11 @@ image:
 #   icon: twitter
 
 # Optional filename of your slides within your talk's folder or a URL.
-url_slides: "https://nbviewer.jupyter.org/github/JoseRZapata/Pycon2018Colombia/blob/master/Pycon2018-AudioAnalysis-en.ipynb"
-url_code: "https://github.com/JoseRZapata/Pycon2018Colombia"
+url_slides: "http://nbviewer.jupyter.org/format/slides/github/JoseRZapata/Pycon2020Colombia/blob/master/Pycon2020_Musica_Python.ipynb"
+
+url_code: "https://github.com/JoseRZapata/Pycon2020Colombia"
 url_pdf:
-url_video: "https://www.youtube.com/watch?v=zu63_q7x8b0"
+url_video:
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.

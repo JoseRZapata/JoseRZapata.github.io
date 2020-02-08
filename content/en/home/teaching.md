@@ -52,12 +52,12 @@ subtitle = ""
 
 <span style="color:#328cc1">Current</span> and past, postgraduate and undergraduate courses at the [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/)
 
-| *Postgraduate Courses* |  *Level*  | &#124; | *UnderGraduate Courses* |  *Level*  |
-| -----------------------| :----- | --- | ---------------------- | :----- |
-| Audio Processing      |   Ph.D  | &#124; | <span style="color:#328cc1"> Signals and Systems</span>|   B.Sc  |
-| Principles of Image Processing | Ph.D |&#124; |<span style="color:#328cc1"> Principles of Audio</span> |   B.Sc  |
-| <span style="color:#328cc1">Audio and Image Data Mining</span>   |   M.Sc  |&#124; | <span style="color:#328cc1">Data Mining</span>   |   B.Sc  |
-| <span style="color:#328cc1">Python and R for Data Science</span>  | M.Sc  | &#124;  | Audio Applications   |  B.Sc   |
-| Signal Processing   | M.Sc    |&#124; |Telecommunications theory   |  B.Sc   |
-| Telecommunications Principles | M.Sc |&#124; | Tx Lines and antennas | B.Sc   |
-| Matlab  | M.Sc    |&#124; | Telecommunications Lab  |B.Sc |
+| *Postgraduate Courses* | &#124; | *UnderGraduate Courses* |
+| -----------------------| --- | ---------------------- | 
+| <span style="color:#328cc1">Python and R for Data Science</span>   | &#124; | [Signals and Systems](https://github.com/JoseRZapata/SyS)|
+| <span style="color:#328cc1">Audio and Image Data Mining</span> |&#124; |<span style="color:#328cc1"> Principles of Audio</span>   |
+| Principles of Image Processing |&#124; | <span style="color:#328cc1">Data Mining</span>     |
+| Audio Processing   | &#124;  | Audio Applications |
+| Signal Processing |&#124; |Telecommunications Theory      |
+| Telecommunications Principles |&#124; | Tx Lines and antennas    |
+| Matlab     |&#124; | Telecommunications Lab|
