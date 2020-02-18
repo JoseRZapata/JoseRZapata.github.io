@@ -55,8 +55,8 @@ subtitle = ""
 | *Postgraduate Courses* | &#124; | *UnderGraduate Courses* |
 | -----------------------| --- | ---------------------- | 
 | <span style="color:#328cc1">Python and R for Data Science</span>   | &#124; | [Signals and Systems](https://github.com/JoseRZapata/SyS)|
-| <span style="color:#328cc1">Audio and Image Data Mining</span> |&#124; |<span style="color:#328cc1"> Principles of Audio</span>   |
-| Principles of Image Processing |&#124; | <span style="color:#328cc1">Data Mining</span>     |
+| <span style="color:#328cc1">Audio and Image Data Mining</span> |&#124; |<span style="color:#328cc1">Data Mining</span>   |
+| Principles of Image Processing |&#124; | <span style="color:#328cc1">Principles of Audio</span>     |
 | Audio Processing   | &#124;  | Audio Applications |
 | Signal Processing |&#124; |Telecommunications Theory      |
 | Telecommunications Principles |&#124; | Tx Lines and antennas    |

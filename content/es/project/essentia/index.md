@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Essentia"
-summary: "Essentia es una libreria en C++ de código abierto para análisis de audio y recuperación de información de música basada en audio. Contiene una amplia colección de algoritmos reutilizables que implementan la funcionalidad de entrada / salida de audio, bloques de procesamiento de señal digital estándar, caracterización estadística de datos y un amplio conjunto de descriptores de música espectrales, temporales, tonales y de alto nivel. Más detalles en este [articulo](https://joserzapata.github.io/publication/essentiaismir/)"
+summary: "Essentia es una libreria en C++ de código abierto para análisis de audio y recuperación de información de música basada en audio. Contiene una amplia colección de algoritmos reutilizables que implementan la funcionalidad de entrada / salida de audio, bloques de procesamiento de señal digital estándar, caracterización estadística de datos y un amplio conjunto de descriptores de música espectrales, temporales, tonales y de alto nivel. Más detalles en este [articulo](https://joserzapata.github.io/publication/essentia-ismir/)"
 authors: []
 tags: ["Essentia","Beat-tracking","Python","Open-source"]
 categories: []

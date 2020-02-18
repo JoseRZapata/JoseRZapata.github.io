@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Essentia"
-summary: "Open-source C++ library for audio analysis and audio-based music information retrieval. It contains an extensive collection of reusable algorithms which implement audio input/output functionality, standard digital signal processing blocks, statistical characterization of data, and a large set of spectral, temporal, tonal and high-level music descriptors. More details in [Essentia: An Audio Analysis Library for Music Information Retrieval](https://joserzapata.github.io/publication/essentiaismir/)"
+summary: "Open-source C++ library for audio analysis and audio-based music information retrieval. It contains an extensive collection of reusable algorithms which implement audio input/output functionality, standard digital signal processing blocks, statistical characterization of data, and a large set of spectral, temporal, tonal and high-level music descriptors. More details in [Essentia: An Audio Analysis Library for Music Information Retrieval](https://joserzapata.github.io/publication/essentia-ismir)"
 authors: []
 tags: ["Essentia","Beat-tracking","Python","Open-source"]
 categories: []

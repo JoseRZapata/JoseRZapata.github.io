@@ -51,12 +51,12 @@ subtitle = ""
 +++
 Cursos pasados y <span style="color:#328cc1">presentes</span> dictados en postgrado y pregrado en la [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/)
 
-| *Cursos de Postgrado* |  *Nivel*  | &#124; | *Cursos Pregrado* |  *Nivel*  |
-| ------------------------| :----- | --- | ---------------------- | :----- |
-| Procesamiento de Audio      |   Ph.D  | &#124; | <span style="color:#328cc1">Sistemas y Señales</span>     |   B.Sc  |
-| Principios de procesamiento de imagenes | Ph.D |&#124; | <span style="color:#328cc1">Principios de Audio</span> |   B.Sc  |
-|<span style="color:#328cc1"> Mineria de Audio e Imagenes </span>|  M.Sc  |&#124; | <span style="color:#328cc1">Minería de datos</span>   |   B.Sc  |
-| <span style="color:#328cc1"> Python y R para Ciencia de Datos</span>  | M.Sc  | &#124; | Aplicaciones de Audio | B.Sc |
-| Procesamiento de señales       | M.Sc    |&#124; | Teoría de Telecomunicaciones  |   B.Sc  |
-| Principios de telecomunicaciones | M.Sc |&#124; | Lineas de TX y Antenas | B.Sc |
-| Matlab                   | M.Sc    |&#124; | Lab. Teoria de Telecomunicaciones | B.Sc |
+| *PostGrado* | &#124; | *Pregrado* |
+| -----------------------| --- | ---------------------- | 
+| <span style="color:#328cc1">Python y R para Ciencia de Datos</span>   | &#124; | [Sistemas y Señales](https://github.com/JoseRZapata/SyS)|
+| <span style="color:#328cc1">Mineria de Audio e Imagenes</span> |&#124; |<span style="color:#328cc1"> Minieria de Datos</span>   |
+| Principios de Procesamiento de Imagenes |&#124; | <span style="color:#328cc1">Principios Audio </span>     |
+| Procesamiento de Audio   | &#124;  | Aplicaciones de Audio |
+| Procesamiento de Señales |&#124; | Teoria de Comunicaciones|
+| Principios de Telecomunicaciones|&#124; | Antenas y Lineas de transmision    |
+| Matlab     |&#124; | Lab. Teoria de Comunicaciones |
