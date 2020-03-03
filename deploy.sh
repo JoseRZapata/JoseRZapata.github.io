@@ -26,7 +26,9 @@ fi
 #popd
 
 msg "Building the website"
-hugo
+#https://www.drydenwilliams.co.uk/code/2017/05/29/set-environment-variables-in-hugo/
+#hugo
+env HUGO_ENV="production" hugo
 
 msg "Pushing the updated \`public\` folder to the \`master\` branch"
 pushd public
