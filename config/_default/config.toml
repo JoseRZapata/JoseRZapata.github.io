@@ -66,3 +66,8 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
   category = "categories"
   publication_type = "publication_types"
   author = "authors"
+
+#analytics
+[marketing]
+  GoogleAnalytics = "UA-112535090-1"
+
