@@ -50,7 +50,7 @@ url_slides: "http://nbviewer.jupyter.org/format/slides/github/JoseRZapata/Pycon2
 
 url_code: "https://github.com/JoseRZapata/Pycon2020Colombia"
 url_pdf:
-url_video:
+url_video: "https://www.youtube.com/watch?v=SE4EACCD4NE"
 
 # Markdown Slides (optional).
 #   Associate this talk with Markdown slides.
