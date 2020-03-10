@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Colab | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/tags/colab/</link>
+      <atom:link href="https://joserzapata.github.io/es/tags/colab/index.xml" rel="self" type="application/rss+xml" />
+    <description>Colab</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2020</copyright><lastBuildDate>Mon, 09 Mar 2020 23:00:43 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Colab</title>
+      <link>https://joserzapata.github.io/es/tags/colab/</link>
+    </image>
+    
+    <item>
+      <title>Pyspark con Google Colab</title>
+      <link>https://joserzapata.github.io/es/post/pyspark-google-colab/</link>
+      <pubDate>Mon, 09 Mar 2020 23:00:43 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/post/pyspark-google-colab/</guid>
+      <description>&lt;h1 id=&#34;pyspark-en-google-colab-automatico&#34;&gt;PySpark en Google Colab Automatico&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;Instalacion Java&lt;/li&gt;
+&lt;li&gt;Instalacion de Spark&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;instalacion-java&#34;&gt;Instalacion Java&lt;/h2&gt;
+&lt;p&gt;Google Colaboratory funciona en un ambiente linux, por lo tanto se pueden usar comandos shell de linux antecedidos del caracter &amp;lsquo;!&amp;rsquo;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;!apt-get install openjdk-8-jdk-headless -qq &amp;gt; /dev/null
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;instalacion-spark&#34;&gt;Instalacion Spark&lt;/h2&gt;
+&lt;p&gt;Obtener automaticamente la ultima version de spark de&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;from bs4 import BeautifulSoup
+import requests
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;#Obtener las versiones de spark la pagina web
+url = &#39;https://downloads.apache.org/spark/&#39; 
+r = requests.get(url)
+html_doc = r.text
+soup = BeautifulSoup(html_doc)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# leer la pagina web y obtener las versiones de spark disponibles
+link_files = []
+for link in soup.find_all(&#39;a&#39;):
+  link_files.append(link.get(&#39;href&#39;))
+spark_link = [x for x in link_files if &#39;spark&#39; in x]  
+print(spark_link)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[&#39;spark-2.3.4/&#39;, &#39;spark-2.4.5/&#39;, &#39;spark-3.0.0-preview2/&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;La version a usar seran las superiores a spark-2.3.4  y menores a spark-3.0.0&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;# obtener la version y eliminar el caracter &#39;/&#39; del final
+ver_spark = spark_link[1][:-1]
+print(ver_spark)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;spark-2.4.5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;import os # libreria de manejo del sistema operativo
+#instalar automaticamente la version deseadda de spark
+os.system(f&amp;quot;wget -q https://www-us.apache.org/dist/spark/{ver_spark}/{ver_spark}-bin-hadoop2.7.tgz&amp;quot;)
+os.system(f&amp;quot;tar xf {ver_spark}-bin-hadoop2.7.tgz&amp;quot;)
+# instalar pyspark
+!pip install -q pyspark
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[K     |████████████████████████████████| 217.8MB 63kB/s 
+[K     |████████████████████████████████| 204kB 53.8MB/s 
+[Building wheel for pyspark (setup.py) ... done ]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;definir-variables-de-entorno&#34;&gt;Definir variables de entorno&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;os.environ[&amp;quot;JAVA_HOME&amp;quot;] = &amp;quot;/usr/lib/jvm/java-8-openjdk-amd64&amp;quot;
+os.environ[&amp;quot;SPARK_HOME&amp;quot;] = f&amp;quot;/content/{ver_spark}-bin-hadoop2.7&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;cargar-pyspark-en-el-sistema&#34;&gt;Cargar pyspark en el sistema&lt;/h1&gt;
+&lt;pre&gt;&lt;code&gt;from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName(&amp;quot;Test_spark&amp;quot;).master(&amp;quot;local[*]&amp;quot;).getOrCreate()
+spark
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;div&amp;gt;
+    &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;SparkSession - in-memory&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://cf857c0401dc:4040&amp;quot;&amp;gt;Spark UI&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
+
+&amp;lt;dl&amp;gt;
+  &amp;lt;dt&amp;gt;Version&amp;lt;/dt&amp;gt;
+    &amp;lt;dd&amp;gt;&amp;lt;code&amp;gt;v2.4.5&amp;lt;/code&amp;gt;&amp;lt;/dd&amp;gt;
+  &amp;lt;dt&amp;gt;Master&amp;lt;/dt&amp;gt;
+    &amp;lt;dd&amp;gt;&amp;lt;code&amp;gt;local[*]&amp;lt;/code&amp;gt;&amp;lt;/dd&amp;gt;
+  &amp;lt;dt&amp;gt;AppName&amp;lt;/dt&amp;gt;
+    &amp;lt;dd&amp;gt;&amp;lt;code&amp;gt;pyspark-shell&amp;lt;/code&amp;gt;&amp;lt;/dd&amp;gt;
+&amp;lt;/dl&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;/div&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h1 id=&#34;ejemplo-de-uso-de-pyspark&#34;&gt;Ejemplo de Uso de pyspark&lt;/h1&gt;
+&lt;p&gt;Leer archivo de prueba&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;archivo = &#39;./sample_data/california_housing_train.csv&#39;
+df_spark = spark.read.csv(archivo, inferSchema=True, header=True)
+
+# imprimir tipo de archivo
+print(type(df_spark))
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;class &#39;pyspark.sql.dataframe.DataFrame&#39;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;¿Numero de registros en el dataframe?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;df_spark.count()
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;17000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Estructura del dataframe&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;df_spark.printSchema()
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;root
+ |-- longitude: double (nullable = true)
+ |-- latitude: double (nullable = true)
+ |-- housing_median_age: double (nullable = true)
+ |-- total_rooms: double (nullable = true)
+ |-- total_bedrooms: double (nullable = true)
+ |-- population: double (nullable = true)
+ |-- households: double (nullable = true)
+ |-- median_income: double (nullable = true)
+ |-- median_house_value: double (nullable = true)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;¿Nombre de las Columnas de dataframe?&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;df_spark.columns
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[&#39;longitude&#39;,
+ &#39;latitude&#39;,
+ &#39;housing_median_age&#39;,
+ &#39;total_rooms&#39;,
+ &#39;total_bedrooms&#39;,
+ &#39;population&#39;,
+ &#39;households&#39;,
+ &#39;median_income&#39;,
+ &#39;median_house_value&#39;]
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Ver los primeros 20 registros del dataframe&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;df_spark.show()
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;+---------+--------+------------------+-----------+--------------+----------+----------+-------------+------------------+
+|longitude|latitude|housing_median_age|total_rooms|total_bedrooms|population|households|median_income|median_house_value|
++---------+--------+------------------+-----------+--------------+----------+----------+-------------+------------------+
+|  -114.31|   34.19|              15.0|     5612.0|        1283.0|    1015.0|     472.0|       1.4936|           66900.0|
+|  -114.47|    34.4|              19.0|     7650.0|        1901.0|    1129.0|     463.0|         1.82|           80100.0|
+|  -114.56|   33.69|              17.0|      720.0|         174.0|     333.0|     117.0|       1.6509|           85700.0|
+|  -114.57|   33.64|              14.0|     1501.0|         337.0|     515.0|     226.0|       3.1917|           73400.0|
+|  -114.57|   33.57|              20.0|     1454.0|         326.0|     624.0|     262.0|        1.925|           65500.0|
+|  -114.58|   33.63|              29.0|     1387.0|         236.0|     671.0|     239.0|       3.3438|           74000.0|
+|  -114.58|   33.61|              25.0|     2907.0|         680.0|    1841.0|     633.0|       2.6768|           82400.0|
+|  -114.59|   34.83|              41.0|      812.0|         168.0|     375.0|     158.0|       1.7083|           48500.0|
+|  -114.59|   33.61|              34.0|     4789.0|        1175.0|    3134.0|    1056.0|       2.1782|           58400.0|
+|   -114.6|   34.83|              46.0|     1497.0|         309.0|     787.0|     271.0|       2.1908|           48100.0|
+|   -114.6|   33.62|              16.0|     3741.0|         801.0|    2434.0|     824.0|       2.6797|           86500.0|
+|   -114.6|    33.6|              21.0|     1988.0|         483.0|    1182.0|     437.0|        1.625|           62000.0|
+|  -114.61|   34.84|              48.0|     1291.0|         248.0|     580.0|     211.0|       2.1571|           48600.0|
+|  -114.61|   34.83|              31.0|     2478.0|         464.0|    1346.0|     479.0|        3.212|           70400.0|
+|  -114.63|   32.76|              15.0|     1448.0|         378.0|     949.0|     300.0|       0.8585|           45000.0|
+|  -114.65|   34.89|              17.0|     2556.0|         587.0|    1005.0|     401.0|       1.6991|           69100.0|
+|  -114.65|    33.6|              28.0|     1678.0|         322.0|     666.0|     256.0|       2.9653|           94900.0|
+|  -114.65|   32.79|              21.0|       44.0|          33.0|      64.0|      27.0|       0.8571|           25000.0|
+|  -114.66|   32.74|              17.0|     1388.0|         386.0|     775.0|     320.0|       1.2049|           44000.0|
+|  -114.67|   33.92|              17.0|       97.0|          24.0|      29.0|      15.0|       1.2656|           27500.0|
++---------+--------+------------------+-----------+--------------+----------+----------+-------------+------------------+
+only showing top 20 rows
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;descricipcion-estadistica-del-dataframe&#34;&gt;Descricipcion Estadistica del dataframe&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;df_spark.describe().toPandas().transpose()
+&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;Descripcion estadistica de una sola columna (&amp;lsquo;median_house_value&amp;rsquo;)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;df_spark.describe([&#39;median_house_value&#39;]).show()
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;+-------+------------------+
+|summary|median_house_value|
++-------+------------------+
+|  count|             17000|
+|   mean|207300.91235294117|
+| stddev|115983.76438720895|
+|    min|           14999.0|
+|    max|          500001.0|
++-------+------------------+
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

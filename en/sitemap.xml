@@ -48,21 +48,6 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/</loc>
-    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/"
-                />
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/tags/jupyter-notebook/</loc>
     <lastmod>2020-02-07T12:35:00-05:00</lastmod>
     <xhtml:link
@@ -749,6 +734,36 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/publication/essentia-acm/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/phd/</loc>
+    <lastmod>2013-09-13T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/phd/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/phd/"
                 />
   </url>
   
