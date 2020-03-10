@@ -768,6 +768,66 @@
   </url>
   
   <url>
+    <loc>https://joserzapata.github.io/es/publication_types/7/</loc>
+    <lastmod>2013-09-13T14:49:50+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/publication_types/7/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/publication_types/7/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/publication/phd-thesis/</loc>
+    <lastmod>2013-09-13T14:49:50+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/publication/phd-thesis/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/publication/phd-thesis/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/tags/comparative-evaluation/</loc>
+    <lastmod>2013-09-13T14:49:50+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/comparative-evaluation/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/comparative-evaluation/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/tags/phd/</loc>
+    <lastmod>2013-09-13T14:49:50+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/phd/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/phd/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joserzapata.github.io/es/</loc>
     <lastmod>2013-09-13T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -1049,21 +1109,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/publication/comparative-tempo/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/es/tags/comparative-evaluation/</loc>
-    <lastmod>2011-07-22T12:33:35-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/comparative-evaluation/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/comparative-evaluation/"
                 />
   </url>
   
