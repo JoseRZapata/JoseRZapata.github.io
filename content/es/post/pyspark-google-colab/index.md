@@ -31,18 +31,25 @@ projects: []
 # PySpark en Google Colab Automatico
 
 1. Instalacion Marzo/2020
-2. Instalacion Java
-3. Instalacion de Spark
-
-## Instalacion Marzo/ 2020
+2. Intalacion Automatica
+   1. Instalacion Java
+   2. Instalacion de Spark
+   3. Ejemplo de Uso de pyspark
+   
+# Instalacion Rapida Marzo/ 2020
 De forma General para usar pyspark en Colab Marzo/2020 seria con los siguientes comandos en una celda en Colab:
-```python
-!apt-get install openjdk-8-jdk-headless -qq > /dev/null
 
+Instalar Java
+```
+!apt-get install openjdk-8-jdk-headless -qq > /dev/null
+```
+```python
 import os # libreria de manejo del sistema operativo
 os.system("wget -q https://www-us.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz")
 os.system("tar xf /spark-2.4.5-bin-hadoop2.7.tgz")
-# instalar pyspark
+```
+instalar pyspark
+```
 !pip install -q pyspark
 ```
 
@@ -57,35 +64,32 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName("Test_spark").master("local[*]").getOrCreate()
 spark
 ```
-Pero cuadno salga una nueva version de spark sera necesario actualizar los
-links de descarga, ya qeu siempre borran las versiones 2.x.x cuando sale una nueva.
+Pero cuando salga una nueva version de spark sera necesario actualizar los
+links de descarga, ya que siempre borran las versiones 2.x.x cuando sale una nueva.
 
 Lo mejor es configurar automaticamente para que descargue la version que sea
 mayor que 2.3.4 que es la anterior y menor que spark 3.0.0 que aun se encuentra en desarrollo
 
 Para esto el siguiente codigo detecta la version actual de spark, la descarga, la descomprime y luego realiza la instalacion de spark en google colab.
 
-
+# Instalacion Automatica
 ## Instalacion de Java
 Google Colaboratory funciona en un ambiente linux, por lo tanto se pueden usar comandos shell de linux antecedidos del caracter '!'
-
 
 ```
 !apt-get install openjdk-8-jdk-headless -qq > /dev/null
 ```
-
 ## Instalacion de Spark
 
 Obtener automaticamente la ultima version de spark de 
 
-
-```
+```python
 from bs4 import BeautifulSoup
 import requests
 ```
 
 
-```
+```python
 #Obtener las versiones de spark la pagina web
 url = 'https://downloads.apache.org/spark/' 
 r = requests.get(url)
@@ -93,8 +97,7 @@ html_doc = r.text
 soup = BeautifulSoup(html_doc)
 ```
 
-
-```
+```python
 # leer la pagina web y obtener las versiones de spark disponibles
 link_files = []
 for link in soup.find_all('a'):
@@ -103,7 +106,7 @@ spark_link = [x for x in link_files if 'spark' in x]
 print(spark_link)
 ```
 
-    ['spark-2.3.4/', 'spark-2.4.5/', 'spark-3.0.0-preview2/']
+  ['spark-2.3.4/', 'spark-2.4.5/', 'spark-3.0.0-preview2/']
 
 
 La version a usar seran las superiores a spark-2.3.4  y menores a spark-3.0.0
@@ -111,20 +114,20 @@ La version a usar seran las superiores a spark-2.3.4  y menores a spark-3.0.0
 obtener la version y eliminar el caracter '/' del final
 
 
-```
+```python
 ver_spark = spark_link[1][:-1] # obtener la version y eliminar el caracter '/' del final
 print(ver_spark)
 ```
 
     spark-2.4.5
 
-
-
-```
+```python
 import os # libreria de manejo del sistema operativo
 #instalar automaticamente la version deseadda de spark
-os.system(f"wget -q https://www-us.apache.org/dist/spark/{ver_spark}/{ver_spark}-bin-hadoop2.7.tgz")
+link = "https://www-us.apache.org/dist/spark/"
+os.system(f"wget -q {link}{ver_spark}/{ver_spark}-bin-hadoop2.7.tgz")
 os.system(f"tar xf {ver_spark}-bin-hadoop2.7.tgz")
+
 # instalar pyspark
 !pip install -q pyspark
 ```
@@ -136,13 +139,12 @@ os.system(f"tar xf {ver_spark}-bin-hadoop2.7.tgz")
 
 ## Definir variables de entorno
 
-
 ```
 os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
 os.environ["SPARK_HOME"] = f"/content/{ver_spark}-bin-hadoop2.7"
 ```
 
-# Cargar pyspark en el sistema
+## Cargar pyspark en el sistema
 
 ```
 from pyspark.sql import SparkSession
@@ -230,9 +232,6 @@ df_spark.printSchema()
 df_spark.columns
 ```
 
-
-
-
     ['longitude',
      'latitude',
      'housing_median_age',
@@ -282,126 +281,25 @@ df_spark.show()
 
 ## Descricipcion Estadistica del dataframe
 
-
-```
+```python
 df_spark.describe().toPandas().transpose()
 ```
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>0</th>
-      <th>1</th>
-      <th>2</th>
-      <th>3</th>
-      <th>4</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>summary</th>
-      <td>count</td>
-      <td>mean</td>
-      <td>stddev</td>
-      <td>min</td>
-      <td>max</td>
-    </tr>
-    <tr>
-      <th>longitude</th>
-      <td>17000</td>
-      <td>-119.56210823529375</td>
-      <td>2.0051664084260357</td>
-      <td>-124.35</td>
-      <td>-114.31</td>
-    </tr>
-    <tr>
-      <th>latitude</th>
-      <td>17000</td>
-      <td>35.6252247058827</td>
-      <td>2.1373397946570867</td>
-      <td>32.54</td>
-      <td>41.95</td>
-    </tr>
-    <tr>
-      <th>housing_median_age</th>
-      <td>17000</td>
-      <td>28.58935294117647</td>
-      <td>12.586936981660406</td>
-      <td>1.0</td>
-      <td>52.0</td>
-    </tr>
-    <tr>
-      <th>total_rooms</th>
-      <td>17000</td>
-      <td>2643.664411764706</td>
-      <td>2179.947071452777</td>
-      <td>2.0</td>
-      <td>37937.0</td>
-    </tr>
-    <tr>
-      <th>total_bedrooms</th>
-      <td>17000</td>
-      <td>539.4108235294118</td>
-      <td>421.4994515798648</td>
-      <td>1.0</td>
-      <td>6445.0</td>
-    </tr>
-    <tr>
-      <th>population</th>
-      <td>17000</td>
-      <td>1429.5739411764705</td>
-      <td>1147.852959159527</td>
-      <td>3.0</td>
-      <td>35682.0</td>
-    </tr>
-    <tr>
-      <th>households</th>
-      <td>17000</td>
-      <td>501.2219411764706</td>
-      <td>384.5208408559016</td>
-      <td>1.0</td>
-      <td>6082.0</td>
-    </tr>
-    <tr>
-      <th>median_income</th>
-      <td>17000</td>
-      <td>3.883578100000021</td>
-      <td>1.9081565183791036</td>
-      <td>0.4999</td>
-      <td>15.0001</td>
-    </tr>
-    <tr>
-      <th>median_house_value</th>
-      <td>17000</td>
-      <td>207300.91235294117</td>
-      <td>115983.76438720895</td>
-      <td>14999.0</td>
-      <td>500001.0</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-
+||0|1|2|3|4|
+|--- |--- |--- |--- |--- |--- |
+|summary|count|mean|stddev|min|max|
+|longitude|17000|-119.56210823529375|2.0051664084260357|-124.35|-114.31|
+|latitude|17000|35.6252247058827|2.1373397946570867|32.54|41.95|
+|housing_median_age|17000|28.58935294117647|12.586936981660406|1.0|52.0|
+|total_rooms|17000|2643.664411764706|2179.947071452777|2.0|37937.0|
+|total_bedrooms|17000|539.4108235294118|421.4994515798648|1.0|6445.0|
+|population|17000|1429.5739411764705|1147.852959159527|3.0|35682.0|
+|households|17000|501.2219411764706|384.5208408559016|1.0|6082.0|
+|median_income|17000|3.883578100000021|1.9081565183791036|0.4999|15.0001|
+|median_house_value|17000|207300.91235294117|115983.76438720895|14999.0|500001.0|
 
 Descripcion estadistica de una sola columna ('median_house_value')
 
-
-```
+```python
 df_spark.describe(['median_house_value']).show()
 ```
 
