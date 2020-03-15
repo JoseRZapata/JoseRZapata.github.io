@@ -28,6 +28,7 @@
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Pyspark_Colab_es.ipynb&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;instalacion-rapida-marzo-2020&#34;&gt;Instalacion Rapida Marzo/ 2020&lt;/h1&gt;
 &lt;p&gt;De forma General para usar pyspark en Colab Marzo/2020 seria con los siguientes comandos en una celda en Colab:&lt;/p&gt;
 &lt;p&gt;Instalar Java&lt;/p&gt;
