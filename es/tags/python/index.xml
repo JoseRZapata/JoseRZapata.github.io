@@ -20,70 +20,77 @@
       <description>&lt;h1 id=&#34;pyspark-en-google-colab-automatico&#34;&gt;PySpark en Google Colab Automatico&lt;/h1&gt;
 &lt;ol&gt;
 &lt;li&gt;Instalacion Marzo/2020&lt;/li&gt;
+&lt;li&gt;Intalacion Automatica
+&lt;ol&gt;
 &lt;li&gt;Instalacion Java&lt;/li&gt;
 &lt;li&gt;Instalacion de Spark&lt;/li&gt;
+&lt;li&gt;Ejemplo de Uso de pyspark&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;instalacion-marzo-2020&#34;&gt;Instalacion Marzo/ 2020&lt;/h2&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;instalacion-rapida-marzo-2020&#34;&gt;Instalacion Rapida Marzo/ 2020&lt;/h1&gt;
 &lt;p&gt;De forma General para usar pyspark en Colab Marzo/2020 seria con los siguientes comandos en una celda en Colab:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;!&lt;/span&gt;apt&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;get install openjdk&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;jdk&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;headless &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;qq &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;dev&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;null
-
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os &lt;span style=&#34;color:#75715e&#34;&gt;# libreria de manejo del sistema operativo&lt;/span&gt;
+&lt;p&gt;Instalar Java&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;!apt-get install openjdk-8-jdk-headless -qq &amp;gt; /dev/null
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os &lt;span style=&#34;color:#75715e&#34;&gt;# libreria de manejo del sistema operativo&lt;/span&gt;
 os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;system(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;wget -q https://www-us.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz&amp;#34;&lt;/span&gt;)
 os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;system(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tar xf /spark-2.4.5-bin-hadoop2.7.tgz&amp;#34;&lt;/span&gt;)
-&lt;span style=&#34;color:#75715e&#34;&gt;# instalar pyspark&lt;/span&gt;
-&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;!&lt;/span&gt;pip install &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;q pyspark
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Variables de Entorno&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;instalar pyspark&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;!pip install -q pyspark
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Variables de Entorno&lt;/span&gt;
 os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;environ[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JAVA_HOME&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/usr/lib/jvm/java-8-openjdk-amd64&amp;#34;&lt;/span&gt;
 os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;environ[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SPARK_HOME&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/content/{ver_spark}-bin-hadoop2.7&amp;#34;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Cargar Pyspark&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; pyspark.sql &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; SparkSession
 spark &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; SparkSession&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;builder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;appName(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Test_spark&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;master(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;local[*]&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getOrCreate()
 spark
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pero cuadno salga una nueva version de spark sera necesario actualizar los
-links de descarga, ya qeu siempre borran las versiones 2.x.x cuando sale una nueva.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pero cuando salga una nueva version de spark sera necesario actualizar los
+links de descarga, ya que siempre borran las versiones 2.x.x cuando sale una nueva.&lt;/p&gt;
 &lt;p&gt;Lo mejor es configurar automaticamente para que descargue la version que sea
 mayor que 2.3.4 que es la anterior y menor que spark 3.0.0 que aun se encuentra en desarrollo&lt;/p&gt;
 &lt;p&gt;Para esto el siguiente codigo detecta la version actual de spark, la descarga, la descomprime y luego realiza la instalacion de spark en google colab.&lt;/p&gt;
+&lt;h1 id=&#34;instalacion-automatica&#34;&gt;Instalacion Automatica&lt;/h1&gt;
 &lt;h2 id=&#34;instalacion-de-java&#34;&gt;Instalacion de Java&lt;/h2&gt;
 &lt;p&gt;Google Colaboratory funciona en un ambiente linux, por lo tanto se pueden usar comandos shell de linux antecedidos del caracter &amp;lsquo;!&amp;rsquo;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;!apt-get install openjdk-8-jdk-headless -qq &amp;gt; /dev/null
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;instalacion-de-spark&#34;&gt;Instalacion de Spark&lt;/h2&gt;
 &lt;p&gt;Obtener automaticamente la ultima version de spark de&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;from bs4 import BeautifulSoup
-import requests
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;#Obtener las versiones de spark la pagina web
-url = &#39;https://downloads.apache.org/spark/&#39; 
-r = requests.get(url)
-html_doc = r.text
-soup = BeautifulSoup(html_doc)
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;# leer la pagina web y obtener las versiones de spark disponibles
-link_files = []
-for link in soup.find_all(&#39;a&#39;):
-  link_files.append(link.get(&#39;href&#39;))
-spark_link = [x for x in link_files if &#39;spark&#39; in x]  
-print(spark_link)
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[&#39;spark-2.3.4/&#39;, &#39;spark-2.4.5/&#39;, &#39;spark-3.0.0-preview2/&#39;]
-&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; bs4 &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; BeautifulSoup
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; requests
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Obtener las versiones de spark la pagina web&lt;/span&gt;
+url &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://downloads.apache.org/spark/&amp;#39;&lt;/span&gt; 
+r &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; requests&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(url)
+html_doc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; r&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;text
+soup &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; BeautifulSoup(html_doc)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# leer la pagina web y obtener las versiones de spark disponibles&lt;/span&gt;
+link_files &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; link &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; soup&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;find_all(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;):
+  link_files&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(link&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;href&amp;#39;&lt;/span&gt;))
+spark_link &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [x &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; link_files &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;spark&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; x]  
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(spark_link)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;[&amp;lsquo;spark-2.3.4/&#39;, &amp;lsquo;spark-2.4.5/&#39;, &amp;lsquo;spark-3.0.0-preview2/&#39;]&lt;/p&gt;
 &lt;p&gt;La version a usar seran las superiores a spark-2.3.4  y menores a spark-3.0.0&lt;/p&gt;
 &lt;p&gt;obtener la version y eliminar el caracter &amp;lsquo;/&amp;rsquo; del final&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;ver_spark = spark_link[1][:-1] # obtener la version y eliminar el caracter &#39;/&#39; del final
-print(ver_spark)
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;spark-2.4.5
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;ver_spark &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; spark_link[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][:&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;# obtener la version y eliminar el caracter &amp;#39;/&amp;#39; del final&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(ver_spark)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;spark-2.4.5
 &lt;/code&gt;&lt;/pre&gt;
-&lt;pre&gt;&lt;code&gt;import os # libreria de manejo del sistema operativo
-#instalar automaticamente la version deseadda de spark
-os.system(f&amp;quot;wget -q https://www-us.apache.org/dist/spark/{ver_spark}/{ver_spark}-bin-hadoop2.7.tgz&amp;quot;)
-os.system(f&amp;quot;tar xf {ver_spark}-bin-hadoop2.7.tgz&amp;quot;)
-# instalar pyspark
-!pip install -q pyspark
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;|████████████████████████████████| 217.8MB 63kB/s 
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os &lt;span style=&#34;color:#75715e&#34;&gt;# libreria de manejo del sistema operativo&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#instalar automaticamente la version deseadda de spark&lt;/span&gt;
+link &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://www-us.apache.org/dist/spark/&amp;#34;&lt;/span&gt;
+os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;system(f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;wget -q {link}{ver_spark}/{ver_spark}-bin-hadoop2.7.tgz&amp;#34;&lt;/span&gt;)
+os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;system(f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tar xf {ver_spark}-bin-hadoop2.7.tgz&amp;#34;&lt;/span&gt;)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# instalar pyspark&lt;/span&gt;
+&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;!&lt;/span&gt;pip install &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;q pyspark
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;|████████████████████████████████| 217.8MB 63kB/s 
 |████████████████████████████████| 204kB 53.8MB/s 
 Building wheel for pyspark (setup.py) ... done
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;definir-variables-de-entorno&#34;&gt;Definir variables de entorno&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;os.environ[&amp;quot;JAVA_HOME&amp;quot;] = &amp;quot;/usr/lib/jvm/java-8-openjdk-amd64&amp;quot;
 os.environ[&amp;quot;SPARK_HOME&amp;quot;] = f&amp;quot;/content/{ver_spark}-bin-hadoop2.7&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;cargar-pyspark-en-el-sistema&#34;&gt;Cargar pyspark en el sistema&lt;/h1&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cargar-pyspark-en-el-sistema&#34;&gt;Cargar pyspark en el sistema&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName(&amp;quot;Test_spark&amp;quot;).master(&amp;quot;local[*]&amp;quot;).getOrCreate()
 spark
@@ -159,21 +166,104 @@ print(type(df_spark))
 only showing top 20 rows
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;descricipcion-estadistica-del-dataframe&#34;&gt;Descricipcion Estadistica del dataframe&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;df_spark.describe().toPandas().transpose()
-&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
-    vertical-align: top;
-}
-
-.dataframe thead th {
-    text-align: right;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_spark&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;describe()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;toPandas()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;transpose()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;summary&lt;/td&gt;
+&lt;td&gt;count&lt;/td&gt;
+&lt;td&gt;mean&lt;/td&gt;
+&lt;td&gt;stddev&lt;/td&gt;
+&lt;td&gt;min&lt;/td&gt;
+&lt;td&gt;max&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;longitude&lt;/td&gt;
+&lt;td&gt;17000&lt;/td&gt;
+&lt;td&gt;-119.56210823529375&lt;/td&gt;
+&lt;td&gt;2.0051664084260357&lt;/td&gt;
+&lt;td&gt;-124.35&lt;/td&gt;
+&lt;td&gt;-114.31&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;latitude&lt;/td&gt;
+&lt;td&gt;17000&lt;/td&gt;
+&lt;td&gt;35.6252247058827&lt;/td&gt;
+&lt;td&gt;2.1373397946570867&lt;/td&gt;
+&lt;td&gt;32.54&lt;/td&gt;
+&lt;td&gt;41.95&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;housing_median_age&lt;/td&gt;
+&lt;td&gt;17000&lt;/td&gt;
+&lt;td&gt;28.58935294117647&lt;/td&gt;
+&lt;td&gt;12.586936981660406&lt;/td&gt;
+&lt;td&gt;1.0&lt;/td&gt;
+&lt;td&gt;52.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;total_rooms&lt;/td&gt;
+&lt;td&gt;17000&lt;/td&gt;
+&lt;td&gt;2643.664411764706&lt;/td&gt;
+&lt;td&gt;2179.947071452777&lt;/td&gt;
+&lt;td&gt;2.0&lt;/td&gt;
+&lt;td&gt;37937.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;total_bedrooms&lt;/td&gt;
+&lt;td&gt;17000&lt;/td&gt;
+&lt;td&gt;539.4108235294118&lt;/td&gt;
+&lt;td&gt;421.4994515798648&lt;/td&gt;
+&lt;td&gt;1.0&lt;/td&gt;
+&lt;td&gt;6445.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;population&lt;/td&gt;
+&lt;td&gt;17000&lt;/td&gt;
+&lt;td&gt;1429.5739411764705&lt;/td&gt;
+&lt;td&gt;1147.852959159527&lt;/td&gt;
+&lt;td&gt;3.0&lt;/td&gt;
+&lt;td&gt;35682.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;households&lt;/td&gt;
+&lt;td&gt;17000&lt;/td&gt;
+&lt;td&gt;501.2219411764706&lt;/td&gt;
+&lt;td&gt;384.5208408559016&lt;/td&gt;
+&lt;td&gt;1.0&lt;/td&gt;
+&lt;td&gt;6082.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;median_income&lt;/td&gt;
+&lt;td&gt;17000&lt;/td&gt;
+&lt;td&gt;3.883578100000021&lt;/td&gt;
+&lt;td&gt;1.9081565183791036&lt;/td&gt;
+&lt;td&gt;0.4999&lt;/td&gt;
+&lt;td&gt;15.0001&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;median_house_value&lt;/td&gt;
+&lt;td&gt;17000&lt;/td&gt;
+&lt;td&gt;207300.91235294117&lt;/td&gt;
+&lt;td&gt;115983.76438720895&lt;/td&gt;
+&lt;td&gt;14999.0&lt;/td&gt;
+&lt;td&gt;500001.0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;p&gt;Descripcion estadistica de una sola columna (&amp;lsquo;median_house_value&amp;rsquo;)&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;df_spark.describe([&#39;median_house_value&#39;]).show()
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;+-------+------------------+
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_spark&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;describe([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;median_house_value&amp;#39;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;+-------+------------------+
 |summary|median_house_value|
 +-------+------------------+
 |  count|             17000|

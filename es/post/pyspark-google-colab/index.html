@@ -612,70 +612,77 @@
       <h1 id="pyspark-en-google-colab-automatico">PySpark en Google Colab Automatico</h1>
 <ol>
 <li>Instalacion Marzo/2020</li>
+<li>Intalacion Automatica
+<ol>
 <li>Instalacion Java</li>
 <li>Instalacion de Spark</li>
+<li>Ejemplo de Uso de pyspark</li>
 </ol>
-<h2 id="instalacion-marzo-2020">Instalacion Marzo/ 2020</h2>
+</li>
+</ol>
+<h1 id="instalacion-rapida-marzo-2020">Instalacion Rapida Marzo/ 2020</h1>
 <p>De forma General para usar pyspark en Colab Marzo/2020 seria con los siguientes comandos en una celda en Colab:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">!</span>apt<span style="color:#f92672">-</span>get install openjdk<span style="color:#f92672">-</span><span style="color:#ae81ff">8</span><span style="color:#f92672">-</span>jdk<span style="color:#f92672">-</span>headless <span style="color:#f92672">-</span>qq <span style="color:#f92672">&gt;</span> <span style="color:#f92672">/</span>dev<span style="color:#f92672">/</span>null
-
-<span style="color:#f92672">import</span> os <span style="color:#75715e"># libreria de manejo del sistema operativo</span>
+<p>Instalar Java</p>
+<pre><code>!apt-get install openjdk-8-jdk-headless -qq &gt; /dev/null
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os <span style="color:#75715e"># libreria de manejo del sistema operativo</span>
 os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;wget -q https://www-us.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz&#34;</span>)
 os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;tar xf /spark-2.4.5-bin-hadoop2.7.tgz&#34;</span>)
-<span style="color:#75715e"># instalar pyspark</span>
-<span style="color:#960050;background-color:#1e0010">!</span>pip install <span style="color:#f92672">-</span>q pyspark
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Variables de Entorno</span>
+</code></pre></div><p>instalar pyspark</p>
+<pre><code>!pip install -q pyspark
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Variables de Entorno</span>
 os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;JAVA_HOME&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/usr/lib/jvm/java-8-openjdk-amd64&#34;</span>
 os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;SPARK_HOME&#34;</span>] <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;/content/{ver_spark}-bin-hadoop2.7&#34;</span>
 </code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Cargar Pyspark</span>
 <span style="color:#f92672">from</span> pyspark.sql <span style="color:#f92672">import</span> SparkSession
 spark <span style="color:#f92672">=</span> SparkSession<span style="color:#f92672">.</span>builder<span style="color:#f92672">.</span>appName(<span style="color:#e6db74">&#34;Test_spark&#34;</span>)<span style="color:#f92672">.</span>master(<span style="color:#e6db74">&#34;local[*]&#34;</span>)<span style="color:#f92672">.</span>getOrCreate()
 spark
-</code></pre></div><p>Pero cuadno salga una nueva version de spark sera necesario actualizar los
-links de descarga, ya qeu siempre borran las versiones 2.x.x cuando sale una nueva.</p>
+</code></pre></div><p>Pero cuando salga una nueva version de spark sera necesario actualizar los
+links de descarga, ya que siempre borran las versiones 2.x.x cuando sale una nueva.</p>
 <p>Lo mejor es configurar automaticamente para que descargue la version que sea
 mayor que 2.3.4 que es la anterior y menor que spark 3.0.0 que aun se encuentra en desarrollo</p>
 <p>Para esto el siguiente codigo detecta la version actual de spark, la descarga, la descomprime y luego realiza la instalacion de spark en google colab.</p>
+<h1 id="instalacion-automatica">Instalacion Automatica</h1>
 <h2 id="instalacion-de-java">Instalacion de Java</h2>
 <p>Google Colaboratory funciona en un ambiente linux, por lo tanto se pueden usar comandos shell de linux antecedidos del caracter &lsquo;!&rsquo;</p>
 <pre><code>!apt-get install openjdk-8-jdk-headless -qq &gt; /dev/null
 </code></pre><h2 id="instalacion-de-spark">Instalacion de Spark</h2>
 <p>Obtener automaticamente la ultima version de spark de</p>
-<pre><code>from bs4 import BeautifulSoup
-import requests
-</code></pre><pre><code>#Obtener las versiones de spark la pagina web
-url = 'https://downloads.apache.org/spark/' 
-r = requests.get(url)
-html_doc = r.text
-soup = BeautifulSoup(html_doc)
-</code></pre><pre><code># leer la pagina web y obtener las versiones de spark disponibles
-link_files = []
-for link in soup.find_all('a'):
-  link_files.append(link.get('href'))
-spark_link = [x for x in link_files if 'spark' in x]  
-print(spark_link)
-</code></pre><pre><code>['spark-2.3.4/', 'spark-2.4.5/', 'spark-3.0.0-preview2/']
-</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> bs4 <span style="color:#f92672">import</span> BeautifulSoup
+<span style="color:#f92672">import</span> requests
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Obtener las versiones de spark la pagina web</span>
+url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://downloads.apache.org/spark/&#39;</span> 
+r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url)
+html_doc <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>text
+soup <span style="color:#f92672">=</span> BeautifulSoup(html_doc)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># leer la pagina web y obtener las versiones de spark disponibles</span>
+link_files <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> link <span style="color:#f92672">in</span> soup<span style="color:#f92672">.</span>find_all(<span style="color:#e6db74">&#39;a&#39;</span>):
+  link_files<span style="color:#f92672">.</span>append(link<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;href&#39;</span>))
+spark_link <span style="color:#f92672">=</span> [x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> link_files <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;spark&#39;</span> <span style="color:#f92672">in</span> x]  
+<span style="color:#66d9ef">print</span>(spark_link)
+</code></pre></div><p>[&lsquo;spark-2.3.4/', &lsquo;spark-2.4.5/', &lsquo;spark-3.0.0-preview2/']</p>
 <p>La version a usar seran las superiores a spark-2.3.4  y menores a spark-3.0.0</p>
 <p>obtener la version y eliminar el caracter &lsquo;/&rsquo; del final</p>
-<pre><code>ver_spark = spark_link[1][:-1] # obtener la version y eliminar el caracter '/' del final
-print(ver_spark)
-</code></pre><pre><code>spark-2.4.5
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ver_spark <span style="color:#f92672">=</span> spark_link[<span style="color:#ae81ff">1</span>][:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#75715e"># obtener la version y eliminar el caracter &#39;/&#39; del final</span>
+<span style="color:#66d9ef">print</span>(ver_spark)
+</code></pre></div><pre><code>spark-2.4.5
 </code></pre>
-<pre><code>import os # libreria de manejo del sistema operativo
-#instalar automaticamente la version deseadda de spark
-os.system(f&quot;wget -q https://www-us.apache.org/dist/spark/{ver_spark}/{ver_spark}-bin-hadoop2.7.tgz&quot;)
-os.system(f&quot;tar xf {ver_spark}-bin-hadoop2.7.tgz&quot;)
-# instalar pyspark
-!pip install -q pyspark
-</code></pre><pre><code>|████████████████████████████████| 217.8MB 63kB/s 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os <span style="color:#75715e"># libreria de manejo del sistema operativo</span>
+<span style="color:#75715e">#instalar automaticamente la version deseadda de spark</span>
+link <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www-us.apache.org/dist/spark/&#34;</span>
+os<span style="color:#f92672">.</span>system(f<span style="color:#e6db74">&#34;wget -q {link}{ver_spark}/{ver_spark}-bin-hadoop2.7.tgz&#34;</span>)
+os<span style="color:#f92672">.</span>system(f<span style="color:#e6db74">&#34;tar xf {ver_spark}-bin-hadoop2.7.tgz&#34;</span>)
+
+<span style="color:#75715e"># instalar pyspark</span>
+<span style="color:#960050;background-color:#1e0010">!</span>pip install <span style="color:#f92672">-</span>q pyspark
+</code></pre></div><pre><code>|████████████████████████████████| 217.8MB 63kB/s 
 |████████████████████████████████| 204kB 53.8MB/s 
 Building wheel for pyspark (setup.py) ... done
 </code></pre>
 <h2 id="definir-variables-de-entorno">Definir variables de entorno</h2>
 <pre><code>os.environ[&quot;JAVA_HOME&quot;] = &quot;/usr/lib/jvm/java-8-openjdk-amd64&quot;
 os.environ[&quot;SPARK_HOME&quot;] = f&quot;/content/{ver_spark}-bin-hadoop2.7&quot;
-</code></pre><h1 id="cargar-pyspark-en-el-sistema">Cargar pyspark en el sistema</h1>
+</code></pre><h2 id="cargar-pyspark-en-el-sistema">Cargar pyspark en el sistema</h2>
 <pre><code>from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName(&quot;Test_spark&quot;).master(&quot;local[*]&quot;).getOrCreate()
 spark
@@ -751,21 +758,104 @@ print(type(df_spark))
 only showing top 20 rows
 </code></pre>
 <h2 id="descricipcion-estadistica-del-dataframe">Descricipcion Estadistica del dataframe</h2>
-<pre><code>df_spark.describe().toPandas().transpose()
-</code></pre><!-- raw HTML omitted -->
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
-
-.dataframe thead th {
-    text-align: right;
-}
-</code></pre>
-<p><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_spark<span style="color:#f92672">.</span>describe()<span style="color:#f92672">.</span>toPandas()<span style="color:#f92672">.</span>transpose()
+</code></pre></div><table>
+<thead>
+<tr>
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>summary</td>
+<td>count</td>
+<td>mean</td>
+<td>stddev</td>
+<td>min</td>
+<td>max</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>17000</td>
+<td>-119.56210823529375</td>
+<td>2.0051664084260357</td>
+<td>-124.35</td>
+<td>-114.31</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>17000</td>
+<td>35.6252247058827</td>
+<td>2.1373397946570867</td>
+<td>32.54</td>
+<td>41.95</td>
+</tr>
+<tr>
+<td>housing_median_age</td>
+<td>17000</td>
+<td>28.58935294117647</td>
+<td>12.586936981660406</td>
+<td>1.0</td>
+<td>52.0</td>
+</tr>
+<tr>
+<td>total_rooms</td>
+<td>17000</td>
+<td>2643.664411764706</td>
+<td>2179.947071452777</td>
+<td>2.0</td>
+<td>37937.0</td>
+</tr>
+<tr>
+<td>total_bedrooms</td>
+<td>17000</td>
+<td>539.4108235294118</td>
+<td>421.4994515798648</td>
+<td>1.0</td>
+<td>6445.0</td>
+</tr>
+<tr>
+<td>population</td>
+<td>17000</td>
+<td>1429.5739411764705</td>
+<td>1147.852959159527</td>
+<td>3.0</td>
+<td>35682.0</td>
+</tr>
+<tr>
+<td>households</td>
+<td>17000</td>
+<td>501.2219411764706</td>
+<td>384.5208408559016</td>
+<td>1.0</td>
+<td>6082.0</td>
+</tr>
+<tr>
+<td>median_income</td>
+<td>17000</td>
+<td>3.883578100000021</td>
+<td>1.9081565183791036</td>
+<td>0.4999</td>
+<td>15.0001</td>
+</tr>
+<tr>
+<td>median_house_value</td>
+<td>17000</td>
+<td>207300.91235294117</td>
+<td>115983.76438720895</td>
+<td>14999.0</td>
+<td>500001.0</td>
+</tr>
+</tbody>
+</table>
 <p>Descripcion estadistica de una sola columna (&lsquo;median_house_value&rsquo;)</p>
-<pre><code>df_spark.describe(['median_house_value']).show()
-</code></pre><pre><code>+-------+------------------+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_spark<span style="color:#f92672">.</span>describe([<span style="color:#e6db74">&#39;median_house_value&#39;</span>])<span style="color:#f92672">.</span>show()
+</code></pre></div><pre><code>+-------+------------------+
 |summary|median_house_value|
 +-------+------------------+
 |  count|             17000|
@@ -964,6 +1054,8 @@ only showing top 20 rows
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/shell.min.js"></script>
         
       
 
