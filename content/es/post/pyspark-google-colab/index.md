@@ -5,8 +5,8 @@ title: "Pyspark con Google Colab"
 subtitle: "Usando pyspark en google colab"
 summary: "Configuracion de Google Colab para usar pyspark"
 authors: ["Jose R. Zapata"]
-tags: ["Python","Pyspark","Colab"]
-categories: []
+tags: ["Python","Pyspark","Colab", "Data-Science"]
+categories: ["Data-Science"]
 date: 2020-03-09T23:00:43-05:00
 lastmod: 2020-03-09T23:00:43-05:00
 featured: false
@@ -27,12 +27,46 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 ---
+
 # PySpark en Google Colab Automatico
 
-1. Instalacion Java
-2. Instalacion de Spark
+1. Instalacion Marzo/2020
+2. Instalacion Java
+3. Instalacion de Spark
 
-## Instalacion Java
+## Instalacion Marzo/ 2020
+De forma General para usar pyspark en Colab Marzo/2020 seria con los siguientes comandos en una celda en Colab:
+```python
+!apt-get install openjdk-8-jdk-headless -qq > /dev/null
+
+import os # libreria de manejo del sistema operativo
+os.system("wget -q https://www-us.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz")
+os.system("tar xf /spark-2.4.5-bin-hadoop2.7.tgz")
+# instalar pyspark
+!pip install -q pyspark
+```
+
+```python
+# Variables de Entorno
+os.environ["JAVA_HOME"] = "/usr/lib/jvm/java-8-openjdk-amd64"
+os.environ["SPARK_HOME"] = f"/content/{ver_spark}-bin-hadoop2.7"
+```
+```python
+# Cargar Pyspark
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName("Test_spark").master("local[*]").getOrCreate()
+spark
+```
+Pero cuadno salga una nueva version de spark sera necesario actualizar los
+links de descarga, ya qeu siempre borran las versiones 2.x.x cuando sale una nueva.
+
+Lo mejor es configurar automaticamente para que descargue la version que sea
+mayor que 2.3.4 que es la anterior y menor que spark 3.0.0 que aun se encuentra en desarrollo
+
+Para esto el siguiente codigo detecta la version actual de spark, la descarga, la descomprime y luego realiza la instalacion de spark en google colab.
+
+
+## Instalacion de Java
 Google Colaboratory funciona en un ambiente linux, por lo tanto se pueden usar comandos shell de linux antecedidos del caracter '!'
 
 
@@ -40,7 +74,7 @@ Google Colaboratory funciona en un ambiente linux, por lo tanto se pueden usar c
 !apt-get install openjdk-8-jdk-headless -qq > /dev/null
 ```
 
-## Instalacion Spark
+## Instalacion de Spark
 
 Obtener automaticamente la ultima version de spark de 
 
@@ -74,10 +108,11 @@ print(spark_link)
 
 La version a usar seran las superiores a spark-2.3.4  y menores a spark-3.0.0
 
+obtener la version y eliminar el caracter '/' del final
+
 
 ```
-# obtener la version y eliminar el caracter '/' del final
-ver_spark = spark_link[1][:-1]
+ver_spark = spark_link[1][:-1] # obtener la version y eliminar el caracter '/' del final
 print(ver_spark)
 ```
 
@@ -94,9 +129,9 @@ os.system(f"tar xf {ver_spark}-bin-hadoop2.7.tgz")
 !pip install -q pyspark
 ```
 
-    [K     |████████████████████████████████| 217.8MB 63kB/s 
-    [K     |████████████████████████████████| 204kB 53.8MB/s 
-    [Building wheel for pyspark (setup.py) ... done ]
+    |████████████████████████████████| 217.8MB 63kB/s 
+    |████████████████████████████████| 204kB 53.8MB/s 
+    Building wheel for pyspark (setup.py) ... done
 
 
 ## Definir variables de entorno
@@ -109,36 +144,31 @@ os.environ["SPARK_HOME"] = f"/content/{ver_spark}-bin-hadoop2.7"
 
 # Cargar pyspark en el sistema
 
-
 ```
 from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName("Test_spark").master("local[*]").getOrCreate()
 spark
 ```
 
-
-
-
-
-    <div>
-        <p><b>SparkSession - in-memory</b></p>
+<div>
+<p><b>SparkSession - in-memory</b></p>
 
 <div>
-    <p><b>SparkContext</b></p>
+  <p><b>SparkContext</b></p>
 
-    <p><a href="http://cf857c0401dc:4040">Spark UI</a></p>
+  <p><a href="http://cf857c0401dc:4040">Spark UI</a></p>
 
-    <dl>
+  <dl>
       <dt>Version</dt>
         <dd><code>v2.4.5</code></dd>
       <dt>Master</dt>
         <dd><code>local[*]</code></dd>
       <dt>AppName</dt>
         <dd><code>pyspark-shell</code></dd>
-    </dl>
+  </dl>
 </div>
 
-    </div>
+</div>
 
 
 
@@ -256,10 +286,6 @@ df_spark.show()
 ```
 df_spark.describe().toPandas().transpose()
 ```
-
-
-
-
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -389,4 +415,6 @@ df_spark.describe(['median_house_value']).show()
     |    max|          500001.0|
     +-------+------------------+
     
+De esta forma se puede instalar automaticamente spark en google colab y hacer uno de el de forma gratis.
 
+En la version gratis solo se cuenta con una CPU si se quiere aumentar la capacidad de procesamiento es necesario pagar.
