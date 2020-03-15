@@ -569,7 +569,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    3 min de lectura
+    4 min de lectura
   </span>
   
 
@@ -578,6 +578,10 @@
   
 
   
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/es/categories/data-science/">Data-Science</a></span>
   
 
 </div>
@@ -607,13 +611,35 @@
     <div class="article-style">
       <h1 id="pyspark-en-google-colab-automatico">PySpark en Google Colab Automatico</h1>
 <ol>
+<li>Instalacion Marzo/2020</li>
 <li>Instalacion Java</li>
 <li>Instalacion de Spark</li>
 </ol>
-<h2 id="instalacion-java">Instalacion Java</h2>
+<h2 id="instalacion-marzo-2020">Instalacion Marzo/ 2020</h2>
+<p>De forma General para usar pyspark en Colab Marzo/2020 seria con los siguientes comandos en una celda en Colab:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#960050;background-color:#1e0010">!</span>apt<span style="color:#f92672">-</span>get install openjdk<span style="color:#f92672">-</span><span style="color:#ae81ff">8</span><span style="color:#f92672">-</span>jdk<span style="color:#f92672">-</span>headless <span style="color:#f92672">-</span>qq <span style="color:#f92672">&gt;</span> <span style="color:#f92672">/</span>dev<span style="color:#f92672">/</span>null
+
+<span style="color:#f92672">import</span> os <span style="color:#75715e"># libreria de manejo del sistema operativo</span>
+os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;wget -q https://www-us.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz&#34;</span>)
+os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;tar xf /spark-2.4.5-bin-hadoop2.7.tgz&#34;</span>)
+<span style="color:#75715e"># instalar pyspark</span>
+<span style="color:#960050;background-color:#1e0010">!</span>pip install <span style="color:#f92672">-</span>q pyspark
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Variables de Entorno</span>
+os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;JAVA_HOME&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/usr/lib/jvm/java-8-openjdk-amd64&#34;</span>
+os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;SPARK_HOME&#34;</span>] <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;/content/{ver_spark}-bin-hadoop2.7&#34;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Cargar Pyspark</span>
+<span style="color:#f92672">from</span> pyspark.sql <span style="color:#f92672">import</span> SparkSession
+spark <span style="color:#f92672">=</span> SparkSession<span style="color:#f92672">.</span>builder<span style="color:#f92672">.</span>appName(<span style="color:#e6db74">&#34;Test_spark&#34;</span>)<span style="color:#f92672">.</span>master(<span style="color:#e6db74">&#34;local[*]&#34;</span>)<span style="color:#f92672">.</span>getOrCreate()
+spark
+</code></pre></div><p>Pero cuadno salga una nueva version de spark sera necesario actualizar los
+links de descarga, ya qeu siempre borran las versiones 2.x.x cuando sale una nueva.</p>
+<p>Lo mejor es configurar automaticamente para que descargue la version que sea
+mayor que 2.3.4 que es la anterior y menor que spark 3.0.0 que aun se encuentra en desarrollo</p>
+<p>Para esto el siguiente codigo detecta la version actual de spark, la descarga, la descomprime y luego realiza la instalacion de spark en google colab.</p>
+<h2 id="instalacion-de-java">Instalacion de Java</h2>
 <p>Google Colaboratory funciona en un ambiente linux, por lo tanto se pueden usar comandos shell de linux antecedidos del caracter &lsquo;!&rsquo;</p>
 <pre><code>!apt-get install openjdk-8-jdk-headless -qq &gt; /dev/null
-</code></pre><h2 id="instalacion-spark">Instalacion Spark</h2>
+</code></pre><h2 id="instalacion-de-spark">Instalacion de Spark</h2>
 <p>Obtener automaticamente la ultima version de spark de</p>
 <pre><code>from bs4 import BeautifulSoup
 import requests
@@ -631,8 +657,8 @@ print(spark_link)
 </code></pre><pre><code>['spark-2.3.4/', 'spark-2.4.5/', 'spark-3.0.0-preview2/']
 </code></pre>
 <p>La version a usar seran las superiores a spark-2.3.4  y menores a spark-3.0.0</p>
-<pre><code># obtener la version y eliminar el caracter '/' del final
-ver_spark = spark_link[1][:-1]
+<p>obtener la version y eliminar el caracter &lsquo;/&rsquo; del final</p>
+<pre><code>ver_spark = spark_link[1][:-1] # obtener la version y eliminar el caracter '/' del final
 print(ver_spark)
 </code></pre><pre><code>spark-2.4.5
 </code></pre>
@@ -642,9 +668,9 @@ os.system(f&quot;wget -q https://www-us.apache.org/dist/spark/{ver_spark}/{ver_s
 os.system(f&quot;tar xf {ver_spark}-bin-hadoop2.7.tgz&quot;)
 # instalar pyspark
 !pip install -q pyspark
-</code></pre><pre><code>[K     |████████████████████████████████| 217.8MB 63kB/s 
-[K     |████████████████████████████████| 204kB 53.8MB/s 
-[Building wheel for pyspark (setup.py) ... done ]
+</code></pre><pre><code>|████████████████████████████████| 217.8MB 63kB/s 
+|████████████████████████████████| 204kB 53.8MB/s 
+Building wheel for pyspark (setup.py) ... done
 </code></pre>
 <h2 id="definir-variables-de-entorno">Definir variables de entorno</h2>
 <pre><code>os.environ[&quot;JAVA_HOME&quot;] = &quot;/usr/lib/jvm/java-8-openjdk-amd64&quot;
@@ -653,24 +679,11 @@ os.environ[&quot;SPARK_HOME&quot;] = f&quot;/content/{ver_spark}-bin-hadoop2.7&q
 <pre><code>from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName(&quot;Test_spark&quot;).master(&quot;local[*]&quot;).getOrCreate()
 spark
-</code></pre><pre><code>&lt;div&gt;
-    &lt;p&gt;&lt;b&gt;SparkSession - in-memory&lt;/b&gt;&lt;/p&gt;
-</code></pre>
+</code></pre><!-- raw HTML omitted -->
 <!-- raw HTML omitted -->
-<pre><code>&lt;p&gt;&lt;a href=&quot;http://cf857c0401dc:4040&quot;&gt;Spark UI&lt;/a&gt;&lt;/p&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;Version&lt;/dt&gt;
-    &lt;dd&gt;&lt;code&gt;v2.4.5&lt;/code&gt;&lt;/dd&gt;
-  &lt;dt&gt;Master&lt;/dt&gt;
-    &lt;dd&gt;&lt;code&gt;local[*]&lt;/code&gt;&lt;/dd&gt;
-  &lt;dt&gt;AppName&lt;/dt&gt;
-    &lt;dd&gt;&lt;code&gt;pyspark-shell&lt;/code&gt;&lt;/dd&gt;
-&lt;/dl&gt;
-</code></pre>
 <!-- raw HTML omitted -->
-<pre><code>&lt;/div&gt;
-</code></pre>
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
 <h1 id="ejemplo-de-uso-de-pyspark">Ejemplo de Uso de pyspark</h1>
 <p>Leer archivo de prueba</p>
 <pre><code>archivo = './sample_data/california_housing_train.csv'
@@ -762,6 +775,8 @@ only showing top 20 rows
 |    max|          500001.0|
 +-------+------------------+
 </code></pre>
+<p>De esta forma se puede instalar automaticamente spark en google colab y hacer uno de el de forma gratis.</p>
+<p>En la version gratis solo se cuenta con una CPU si se quiere aumentar la capacidad de procesamiento es necesario pagar.</p>
 
     </div>
 
@@ -778,6 +793,8 @@ only showing top 20 rows
   <a class="badge badge-light" href="/es/tags/pyspark/">Pyspark</a>
   
   <a class="badge badge-light" href="/es/tags/colab/">Colab</a>
+  
+  <a class="badge badge-light" href="/es/tags/data-science/">Data-Science</a>
   
 </div>
 
@@ -946,7 +963,7 @@ only showing top 20 rows
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/r.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
         
       
 

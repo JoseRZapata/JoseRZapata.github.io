@@ -19,13 +19,35 @@
       <guid>https://joserzapata.github.io/es/post/pyspark-google-colab/</guid>
       <description>&lt;h1 id=&#34;pyspark-en-google-colab-automatico&#34;&gt;PySpark en Google Colab Automatico&lt;/h1&gt;
 &lt;ol&gt;
+&lt;li&gt;Instalacion Marzo/2020&lt;/li&gt;
 &lt;li&gt;Instalacion Java&lt;/li&gt;
 &lt;li&gt;Instalacion de Spark&lt;/li&gt;
 &lt;/ol&gt;
-&lt;h2 id=&#34;instalacion-java&#34;&gt;Instalacion Java&lt;/h2&gt;
+&lt;h2 id=&#34;instalacion-marzo-2020&#34;&gt;Instalacion Marzo/ 2020&lt;/h2&gt;
+&lt;p&gt;De forma General para usar pyspark en Colab Marzo/2020 seria con los siguientes comandos en una celda en Colab:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;!&lt;/span&gt;apt&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;get install openjdk&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;jdk&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;headless &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;qq &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;dev&lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt;null
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os &lt;span style=&#34;color:#75715e&#34;&gt;# libreria de manejo del sistema operativo&lt;/span&gt;
+os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;system(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;wget -q https://www-us.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz&amp;#34;&lt;/span&gt;)
+os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;system(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tar xf /spark-2.4.5-bin-hadoop2.7.tgz&amp;#34;&lt;/span&gt;)
+&lt;span style=&#34;color:#75715e&#34;&gt;# instalar pyspark&lt;/span&gt;
+&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;!&lt;/span&gt;pip install &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;q pyspark
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Variables de Entorno&lt;/span&gt;
+os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;environ[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JAVA_HOME&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/usr/lib/jvm/java-8-openjdk-amd64&amp;#34;&lt;/span&gt;
+os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;environ[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SPARK_HOME&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/content/{ver_spark}-bin-hadoop2.7&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Cargar Pyspark&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; pyspark.sql &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; SparkSession
+spark &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; SparkSession&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;builder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;appName(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Test_spark&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;master(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;local[*]&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getOrCreate()
+spark
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pero cuadno salga una nueva version de spark sera necesario actualizar los
+links de descarga, ya qeu siempre borran las versiones 2.x.x cuando sale una nueva.&lt;/p&gt;
+&lt;p&gt;Lo mejor es configurar automaticamente para que descargue la version que sea
+mayor que 2.3.4 que es la anterior y menor que spark 3.0.0 que aun se encuentra en desarrollo&lt;/p&gt;
+&lt;p&gt;Para esto el siguiente codigo detecta la version actual de spark, la descarga, la descomprime y luego realiza la instalacion de spark en google colab.&lt;/p&gt;
+&lt;h2 id=&#34;instalacion-de-java&#34;&gt;Instalacion de Java&lt;/h2&gt;
 &lt;p&gt;Google Colaboratory funciona en un ambiente linux, por lo tanto se pueden usar comandos shell de linux antecedidos del caracter &amp;lsquo;!&amp;rsquo;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;!apt-get install openjdk-8-jdk-headless -qq &amp;gt; /dev/null
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;instalacion-spark&#34;&gt;Instalacion Spark&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;instalacion-de-spark&#34;&gt;Instalacion de Spark&lt;/h2&gt;
 &lt;p&gt;Obtener automaticamente la ultima version de spark de&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;from bs4 import BeautifulSoup
 import requests
@@ -43,8 +65,8 @@ print(spark_link)
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[&#39;spark-2.3.4/&#39;, &#39;spark-2.4.5/&#39;, &#39;spark-3.0.0-preview2/&#39;]
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;La version a usar seran las superiores a spark-2.3.4  y menores a spark-3.0.0&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;# obtener la version y eliminar el caracter &#39;/&#39; del final
-ver_spark = spark_link[1][:-1]
+&lt;p&gt;obtener la version y eliminar el caracter &amp;lsquo;/&amp;rsquo; del final&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ver_spark = spark_link[1][:-1] # obtener la version y eliminar el caracter &#39;/&#39; del final
 print(ver_spark)
 &lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;spark-2.4.5
 &lt;/code&gt;&lt;/pre&gt;
@@ -54,9 +76,9 @@ os.system(f&amp;quot;wget -q https://www-us.apache.org/dist/spark/{ver_spark}/{v
 os.system(f&amp;quot;tar xf {ver_spark}-bin-hadoop2.7.tgz&amp;quot;)
 # instalar pyspark
 !pip install -q pyspark
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[K     |████████████████████████████████| 217.8MB 63kB/s 
-[K     |████████████████████████████████| 204kB 53.8MB/s 
-[Building wheel for pyspark (setup.py) ... done ]
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;|████████████████████████████████| 217.8MB 63kB/s 
+|████████████████████████████████| 204kB 53.8MB/s 
+Building wheel for pyspark (setup.py) ... done
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;definir-variables-de-entorno&#34;&gt;Definir variables de entorno&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;os.environ[&amp;quot;JAVA_HOME&amp;quot;] = &amp;quot;/usr/lib/jvm/java-8-openjdk-amd64&amp;quot;
@@ -65,24 +87,11 @@ os.environ[&amp;quot;SPARK_HOME&amp;quot;] = f&amp;quot;/content/{ver_spark}-bin
 &lt;pre&gt;&lt;code&gt;from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName(&amp;quot;Test_spark&amp;quot;).master(&amp;quot;local[*]&amp;quot;).getOrCreate()
 spark
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;div&amp;gt;
-    &amp;lt;p&amp;gt;&amp;lt;b&amp;gt;SparkSession - in-memory&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;p&amp;gt;&amp;lt;a href=&amp;quot;http://cf857c0401dc:4040&amp;quot;&amp;gt;Spark UI&amp;lt;/a&amp;gt;&amp;lt;/p&amp;gt;
-
-&amp;lt;dl&amp;gt;
-  &amp;lt;dt&amp;gt;Version&amp;lt;/dt&amp;gt;
-    &amp;lt;dd&amp;gt;&amp;lt;code&amp;gt;v2.4.5&amp;lt;/code&amp;gt;&amp;lt;/dd&amp;gt;
-  &amp;lt;dt&amp;gt;Master&amp;lt;/dt&amp;gt;
-    &amp;lt;dd&amp;gt;&amp;lt;code&amp;gt;local[*]&amp;lt;/code&amp;gt;&amp;lt;/dd&amp;gt;
-  &amp;lt;dt&amp;gt;AppName&amp;lt;/dt&amp;gt;
-    &amp;lt;dd&amp;gt;&amp;lt;code&amp;gt;pyspark-shell&amp;lt;/code&amp;gt;&amp;lt;/dd&amp;gt;
-&amp;lt;/dl&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
 &lt;!-- raw HTML omitted --&gt;
-&lt;pre&gt;&lt;code&gt;&amp;lt;/div&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;!-- raw HTML omitted --&gt;
 &lt;h1 id=&#34;ejemplo-de-uso-de-pyspark&#34;&gt;Ejemplo de Uso de pyspark&lt;/h1&gt;
 &lt;p&gt;Leer archivo de prueba&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;archivo = &#39;./sample_data/california_housing_train.csv&#39;
@@ -174,6 +183,8 @@ only showing top 20 rows
 |    max|          500001.0|
 +-------+------------------+
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;De esta forma se puede instalar automaticamente spark en google colab y hacer uno de el de forma gratis.&lt;/p&gt;
+&lt;p&gt;En la version gratis solo se cuenta con una CPU si se quiere aumentar la capacidad de procesamiento es necesario pagar.&lt;/p&gt;
 </description>
     </item>
     

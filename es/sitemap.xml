@@ -18,7 +18,42 @@
   </url>
   
   <url>
+    <loc>https://joserzapata.github.io/es/categories/</loc>
+    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/categories/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joserzapata.github.io/es/tags/colab/</loc>
+    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/tags/data-science/</loc>
+    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/data-science/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/data-science/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/categories/data-science/</loc>
     <lastmod>2020-03-09T23:00:43-05:00</lastmod>
   </url>
   
@@ -254,21 +289,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/talk/meetup_2018/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/es/tags/data-science/</loc>
-    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/data-science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/data-science/"
                 />
   </url>
   
@@ -1228,20 +1248,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/authors/admin/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/es/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/categories/"
                 />
   </url>
   
