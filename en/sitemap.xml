@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://joserzapata.github.io/authors/</loc>
-    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -14,6 +14,186 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/categories/</loc>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/data-science/</loc>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/data-science/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/data-science/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/categories/data-science/</loc>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/categories/data-science/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/categories/data-science/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/jose-r.-zapata/</loc>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/jose-r.-zapata/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/jose-r.-zapata/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/jupyter-notebook/</loc>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/jupyter-notebook/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/jupyter-notebook/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/post/</loc>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/python/</loc>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/python/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/</loc>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/post/covid19-visualizacion/</loc>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/post/covid19-visualizacion/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/post/covid19-visualizacion/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/colab/</loc>
+    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/colab/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/colab/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/pyspark/</loc>
+    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/pyspark/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/pyspark/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/post/pyspark-google-colab/</loc>
+    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/post/pyspark-google-colab/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/post/pyspark-google-colab/"
                 />
   </url>
   
@@ -33,36 +213,6 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/authors/jose-r.-zapata/</loc>
-    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/jose-r.-zapata/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/jose-r.-zapata/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/tags/jupyter-notebook/</loc>
-    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/jupyter-notebook/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/jupyter-notebook/"
-                />
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/tags/music/</loc>
     <lastmod>2020-02-07T12:35:00-05:00</lastmod>
     <xhtml:link
@@ -74,36 +224,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/tags/music/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/tags/python/</loc>
-    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/python/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/tags/</loc>
-    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/"
                 />
   </url>
   
@@ -224,21 +344,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/talk/meetup_2018/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/tags/data-science/</loc>
-    <lastmod>2018-10-02T18:00:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/data-science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/data-science/"
                 />
   </url>
   
@@ -1198,34 +1303,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/authors/admin/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/categories/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/post/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/post/"
                 />
   </url>
   

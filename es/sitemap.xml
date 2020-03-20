@@ -50,6 +50,16 @@
   <url>
     <loc>https://joserzapata.github.io/es/categories/data-science/</loc>
     <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/categories/data-science/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/categories/data-science/"
+                />
   </url>
   
   <url>
@@ -130,21 +140,61 @@
   <url>
     <loc>https://joserzapata.github.io/es/post/covid19-visualizacion/</loc>
     <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/post/covid19-visualizacion/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/post/covid19-visualizacion/"
+                />
   </url>
   
   <url>
     <loc>https://joserzapata.github.io/es/tags/colab/</loc>
     <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/colab/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/colab/"
+                />
   </url>
   
   <url>
     <loc>https://joserzapata.github.io/es/tags/pyspark/</loc>
     <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/pyspark/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/pyspark/"
+                />
   </url>
   
   <url>
     <loc>https://joserzapata.github.io/es/post/pyspark-google-colab/</loc>
     <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/post/pyspark-google-colab/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/post/pyspark-google-colab/"
+                />
   </url>
   
   <url>

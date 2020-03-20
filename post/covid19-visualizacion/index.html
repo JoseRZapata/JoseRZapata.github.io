@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jose Ricardo Zapata">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Visualizaciones con Python y Plotly de los datos mundiales del corona virus COVID19">
+
+  
+  <link rel="alternate" hreflang="es" href="https://joserzapata.github.io/es/post/covid19-visualizacion/">
+  
+  <link rel="alternate" hreflang="en-us" href="https://joserzapata.github.io/post/covid19-visualizacion/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#328cc1">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.30689228d1eb4cc4ce665e3dd036702c.css">
+
+  
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112535090-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-112535090-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://joserzapata.github.io/post/covid19-visualizacion/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@joserzapata">
+  <meta property="twitter:creator" content="@joserzapata">
+  
+  <meta property="og:site_name" content="Jose Ricardo Zapata">
+  <meta property="og:url" content="https://joserzapata.github.io/post/covid19-visualizacion/">
+  <meta property="og:title" content="Visualizacion Datos Coronavirus (COVID19) Mundial | Jose Ricardo Zapata">
+  <meta property="og:description" content="Visualizaciones con Python y Plotly de los datos mundiales del corona virus COVID19"><meta property="og:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg">
+  <meta property="twitter:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-03-17T17:03:57-05:00">
+    
+    <meta property="article:modified_time" content="2020-03-17T17:03:57-05:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://joserzapata.github.io/post/covid19-visualizacion/"
+  },
+  "headline": "Visualizacion Datos Coronavirus (COVID19) Mundial",
+  
+  "datePublished": "2020-03-17T17:03:57-05:00",
+  "dateModified": "2020-03-17T17:03:57-05:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Jose R. Zapata"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jose Ricardo Zapata",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://joserzapata.github.io/img/icon-512.png"
+    }
+  },
+  "description": "Visualizaciones con Python y Plotly de los datos mundiales del corona virus COVID19"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Visualizacion Datos Coronavirus (COVID19) Mundial | Jose Ricardo Zapata</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jose Ricardo Zapata</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/phd"><span>Phd Thesis</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i><span>English</span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="https://joserzapata.github.io/es/post/covid19-visualizacion/">
+                <span>Español</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Visualizacion Datos Coronavirus (COVID19) Mundial</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/jose-r.-zapata/">Jose R. Zapata</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 17, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/data-science/">Data-Science</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+<p><a href="https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
+
+<p>He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas actualizadas cada dia, y ademas practicar el uso de <a href="https://plot.ly/" target="_blank">plotly</a> para visualizacion interactiva.</p>
+
+<p><strong>Pueden interactuar con las graficas con el mouse y las Graficas se actualizaran
+diariamente con los nuevos datos!</strong></p>
+
+<p>Informacion extraida de 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE</p>
+
+<p><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">https://github.com/CSSEGISandData/COVID-19</a></p>
+
+<p><h2>Table of Contents</h2>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#paquetes-de-python-y-datos">Paquetes de Python y Datos</a>
+<ul>
+<li><a href="#paquetes-de-python">Paquetes de Python</a></li>
+<li><a href="#importar-datos">Importar datos</a></li>
+<li><a href="#datos-cssegisanddata-covid-19">Datos CSSEGISandData/COVID-19</a></li>
+<li><a href="#datos-generales-de-cada-dataframe">Datos Generales de cada Dataframe</a>
+<ul>
+<li><a href="#eliminar-ubicacion">Eliminar Ubicacion</a></li>
+<li><a href="#consolidar-datos">Consolidar datos</a></li>
+<li><a href="#datos-mundiales">Datos Mundiales</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#visualizacion-con-plotly">Visualizacion con Plotly</a>
+<ul>
+<li><a href="#valores-mundiales-de-confirmados-recuperados-y-muertos">Valores Mundiales de Confirmados, Recuperados y Muertos</a></li>
+<li><a href="#progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos">Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos</a></li>
+<li><a href="#total-casos-confirmados-de-covid-19-por-pais-excluyendo-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)</a></li>
+<li><a href="#total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)</a></li>
+<li><a href="#numero-de-casos-confirmados-en-colombia">Numero de Casos Confirmados en Colombia</a></li>
+</ul></li>
+<li><a href="#refencias">Refencias</a></li>
+</ul>
+</nav></p>
+
+<h1 id="paquetes-de-python-y-datos">Paquetes de Python y Datos</h1>
+
+<h2 id="paquetes-de-python">Paquetes de Python</h2>
+<pre><code>!pip install chart_studio -q</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<span style="color:#f92672">import</span> plotly.express <span style="color:#f92672">as</span> px
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+<span style="color:#f92672">import</span> chart_studio</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#chart-studio api</span>
+username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#75715e"># your username</span>
+api_key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#75715e"># your api api_key</span>
+chart_studio<span style="color:#f92672">.</span>tools<span style="color:#f92672">.</span>set_credentials_file(username<span style="color:#f92672">=</span>username, api_key<span style="color:#f92672">=</span>api_key)
+<span style="color:#f92672">import</span> chart_studio.plotly <span style="color:#f92672">as</span> py</code></pre></div>
+<h2 id="importar-datos">Importar datos</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv&#39;</span>)
+recovered <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv&#39;</span>)
+death <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv&#39;</span>)</code></pre></div>
+<h2 id="datos-cssegisanddata-covid-19">Datos CSSEGISandData/COVID-19</h2>
+
+<p>Descripcion de los datos en ingles</p>
+
+<p><strong>Province/State:</strong> China - province name; US/Canada/Australia/ - city name, state/province name; Others - name of the event (e.g., &ldquo;Diamond Princess&rdquo; cruise ship); other countries - blank.</p>
+
+<p><strong>Country/Region:</strong> country/region name conforming to WHO (will be updated).</p>
+
+<p><strong>Last Update:</strong> MM/DD/YYYY HH:mm (24 hour format, in UTC).</p>
+
+<p><strong>Confirmed:</strong> the number of confirmed cases. For Hubei Province: from Feb 13 (GMT +8), we report both clinically diagnosed and lab-confirmed cases. For lab-confirmed cases only (Before Feb 17), please refer to who_covid_19_situation_reports. For Italy, diagnosis standard might be changed since Feb 27 to &ldquo;slow the growth of new case numbers.&rdquo;</p>
+
+<p><strong>Deaths:</strong> the number of deaths.
+<strong>Recovered:</strong> the number of recovered cases.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed<span style="color:#f92672">.</span>head()</code></pre></div>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country/Region</th>
+      <th>1/22/20</th>
+      <th>1/23/20</th>
+      <th>1/24/20</th>
+      <th>1/25/20</th>
+      <th>1/26/20</th>
+      <th>1/27/20</th>
+      <th>1/28/20</th>
+      <th>1/29/20</th>
+      <th>1/30/20</th>
+      <th>1/31/20</th>
+      <th>2/1/20</th>
+      <th>2/2/20</th>
+      <th>2/3/20</th>
+      <th>2/4/20</th>
+      <th>2/5/20</th>
+      <th>2/6/20</th>
+      <th>2/7/20</th>
+      <th>2/8/20</th>
+      <th>2/9/20</th>
+      <th>2/10/20</th>
+      <th>2/11/20</th>
+      <th>2/12/20</th>
+      <th>2/13/20</th>
+      <th>2/14/20</th>
+      <th>2/15/20</th>
+      <th>2/16/20</th>
+      <th>2/17/20</th>
+      <th>2/18/20</th>
+      <th>2/19/20</th>
+      <th>2/20/20</th>
+      <th>2/21/20</th>
+      <th>2/22/20</th>
+      <th>2/23/20</th>
+      <th>2/24/20</th>
+      <th>2/25/20</th>
+      <th>2/26/20</th>
+      <th>2/27/20</th>
+      <th>2/28/20</th>
+      <th>2/29/20</th>
+      <th>3/1/20</th>
+      <th>3/2/20</th>
+      <th>3/3/20</th>
+      <th>3/4/20</th>
+      <th>3/5/20</th>
+      <th>3/6/20</th>
+      <th>3/7/20</th>
+      <th>3/8/20</th>
+      <th>3/9/20</th>
+      <th>3/10/20</th>
+      <th>3/11/20</th>
+      <th>3/12/20</th>
+      <th>3/13/20</th>
+      <th>3/14/20</th>
+      <th>3/15/20</th>
+      <th>3/16/20</th>
+      <th>3/17/20</th>
+      <th>3/18/20</th>
+      <th>3/19/20</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Thailand</td>
+      <td>2</td>
+      <td>3</td>
+      <td>5</td>
+      <td>7</td>
+      <td>8</td>
+      <td>8</td>
+      <td>14</td>
+      <td>14</td>
+      <td>14</td>
+      <td>19</td>
+      <td>19</td>
+      <td>19</td>
+      <td>19</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>25</td>
+      <td>32</td>
+      <td>32</td>
+      <td>32</td>
+      <td>33</td>
+      <td>33</td>
+      <td>33</td>
+      <td>33</td>
+      <td>33</td>
+      <td>34</td>
+      <td>35</td>
+      <td>35</td>
+      <td>35</td>
+      <td>35</td>
+      <td>35</td>
+      <td>35</td>
+      <td>35</td>
+      <td>35</td>
+      <td>37</td>
+      <td>40</td>
+      <td>40</td>
+      <td>41</td>
+      <td>42</td>
+      <td>42</td>
+      <td>43</td>
+      <td>43</td>
+      <td>43</td>
+      <td>47</td>
+      <td>48</td>
+      <td>50</td>
+      <td>50</td>
+      <td>50</td>
+      <td>53</td>
+      <td>59</td>
+      <td>70</td>
+      <td>75</td>
+      <td>82</td>
+      <td>114</td>
+      <td>147</td>
+      <td>177</td>
+      <td>212</td>
+      <td>272</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Japan</td>
+      <td>2</td>
+      <td>1</td>
+      <td>2</td>
+      <td>2</td>
+      <td>4</td>
+      <td>4</td>
+      <td>7</td>
+      <td>7</td>
+      <td>11</td>
+      <td>15</td>
+      <td>20</td>
+      <td>20</td>
+      <td>20</td>
+      <td>22</td>
+      <td>22</td>
+      <td>45</td>
+      <td>25</td>
+      <td>25</td>
+      <td>26</td>
+      <td>26</td>
+      <td>26</td>
+      <td>28</td>
+      <td>28</td>
+      <td>29</td>
+      <td>43</td>
+      <td>59</td>
+      <td>66</td>
+      <td>74</td>
+      <td>84</td>
+      <td>94</td>
+      <td>105</td>
+      <td>122</td>
+      <td>147</td>
+      <td>159</td>
+      <td>170</td>
+      <td>189</td>
+      <td>214</td>
+      <td>228</td>
+      <td>241</td>
+      <td>256</td>
+      <td>274</td>
+      <td>293</td>
+      <td>331</td>
+      <td>360</td>
+      <td>420</td>
+      <td>461</td>
+      <td>502</td>
+      <td>511</td>
+      <td>581</td>
+      <td>639</td>
+      <td>639</td>
+      <td>701</td>
+      <td>773</td>
+      <td>839</td>
+      <td>825</td>
+      <td>878</td>
+      <td>889</td>
+      <td>924</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Singapore</td>
+      <td>0</td>
+      <td>1</td>
+      <td>3</td>
+      <td>3</td>
+      <td>4</td>
+      <td>5</td>
+      <td>7</td>
+      <td>7</td>
+      <td>10</td>
+      <td>13</td>
+      <td>16</td>
+      <td>18</td>
+      <td>18</td>
+      <td>24</td>
+      <td>28</td>
+      <td>28</td>
+      <td>30</td>
+      <td>33</td>
+      <td>40</td>
+      <td>45</td>
+      <td>47</td>
+      <td>50</td>
+      <td>58</td>
+      <td>67</td>
+      <td>72</td>
+      <td>75</td>
+      <td>77</td>
+      <td>81</td>
+      <td>84</td>
+      <td>84</td>
+      <td>85</td>
+      <td>85</td>
+      <td>89</td>
+      <td>89</td>
+      <td>91</td>
+      <td>93</td>
+      <td>93</td>
+      <td>93</td>
+      <td>102</td>
+      <td>106</td>
+      <td>108</td>
+      <td>110</td>
+      <td>110</td>
+      <td>117</td>
+      <td>130</td>
+      <td>138</td>
+      <td>150</td>
+      <td>150</td>
+      <td>160</td>
+      <td>178</td>
+      <td>178</td>
+      <td>200</td>
+      <td>212</td>
+      <td>226</td>
+      <td>243</td>
+      <td>266</td>
+      <td>313</td>
+      <td>345</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Nepal</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Malaysia</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
+      <td>4</td>
+      <td>4</td>
+      <td>4</td>
+      <td>7</td>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+      <td>10</td>
+      <td>12</td>
+      <td>12</td>
+      <td>12</td>
+      <td>16</td>
+      <td>16</td>
+      <td>18</td>
+      <td>18</td>
+      <td>18</td>
+      <td>19</td>
+      <td>19</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>22</td>
+      <td>23</td>
+      <td>23</td>
+      <td>25</td>
+      <td>29</td>
+      <td>29</td>
+      <td>36</td>
+      <td>50</td>
+      <td>50</td>
+      <td>83</td>
+      <td>93</td>
+      <td>99</td>
+      <td>117</td>
+      <td>129</td>
+      <td>149</td>
+      <td>149</td>
+      <td>197</td>
+      <td>238</td>
+      <td>428</td>
+      <td>566</td>
+      <td>673</td>
+      <td>790</td>
+      <td>900</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#recovered.head()</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#death.head()</span></code></pre></div>
+<h2 id="datos-generales-de-cada-dataframe">Datos Generales de cada Dataframe</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#confirmed.info()</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#recovered.info()</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#death.info()</span></code></pre></div>
+<h3 id="eliminar-ubicacion">Eliminar Ubicacion</h3>
+
+<p>Se va realizar un analisis general de los datos y No se van a tomar los datos geograficos de <em>latitud</em>, <em>longitud</em> y los datos de <em>Province/State</em> estan incompletos.</p>
+
+<p>Solo se realizara un analisis por pais entonces se eliminaran las columnas mencionadas anteriormente</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed <span style="color:#f92672">=</span> confirmed<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">recovered <span style="color:#f92672">=</span> recovered<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death <span style="color:#f92672">=</span> death<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])</code></pre></div>
+<h3 id="consolidar-datos">Consolidar datos</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed_group <span style="color:#f92672">=</span> confirmed<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)
+confirmed_group <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>aggregate(np<span style="color:#f92672">.</span>sum)
+confirmed_group <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>T
+confirmed_group<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;date&#39;</span>
+confirmed_group <span style="color:#f92672">=</span>  confirmed_group<span style="color:#f92672">.</span>reset_index()</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">recovered_group <span style="color:#f92672">=</span> recovered<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)
+recovered_group <span style="color:#f92672">=</span> recovered_group<span style="color:#f92672">.</span>aggregate(np<span style="color:#f92672">.</span>sum)
+recovered_group <span style="color:#f92672">=</span> recovered_group<span style="color:#f92672">.</span>T
+recovered_group<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;date&#39;</span>
+recovered_group <span style="color:#f92672">=</span>  recovered_group<span style="color:#f92672">.</span>reset_index()</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death_group <span style="color:#f92672">=</span> death<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)
+death_group <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>aggregate(np<span style="color:#f92672">.</span>sum)
+death_group <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>T
+death_group<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;date&#39;</span>
+death_group <span style="color:#f92672">=</span>  death_group<span style="color:#f92672">.</span>reset_index()</code></pre></div>
+<h3 id="datos-mundiales">Datos Mundiales</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Numero de Casos confirmados por dia en el mundo</span>
+column_names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Fecha&#34;</span>, <span style="color:#e6db74">&#34;Confirmados&#34;</span>, <span style="color:#e6db74">&#34;Recuperados&#34;</span>,<span style="color:#e6db74">&#34;Muertos&#34;</span>]
+world <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(columns <span style="color:#f92672">=</span> column_names)
+world[<span style="color:#e6db74">&#39;Fecha&#39;</span>] <span style="color:#f92672">=</span> confirmed_group[<span style="color:#e6db74">&#39;date&#39;</span>]
+world[<span style="color:#e6db74">&#39;Confirmados&#39;</span>] <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)
+world[<span style="color:#e6db74">&#39;Recuperados&#39;</span>] <span style="color:#f92672">=</span> recovered_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)
+world[<span style="color:#e6db74">&#39;Muertos&#39;</span>] <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#world.tail()</span></code></pre></div>
+<h1 id="visualizacion-con-plotly">Visualizacion con Plotly</h1>
+
+<h2 id="valores-mundiales-de-confirmados-recuperados-y-muertos">Valores Mundiales de Confirmados, Recuperados y Muertos</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">temp <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(world<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,:])<span style="color:#f92672">.</span>T
+tm <span style="color:#f92672">=</span> temp<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Fecha&#34;</span>, value_vars<span style="color:#f92672">=</span>[ <span style="color:#e6db74">&#34;Confirmados&#34;</span>, <span style="color:#e6db74">&#34;Recuperados&#34;</span>,<span style="color:#e6db74">&#34;Muertos&#34;</span>])
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>bar(tm, x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;variable&#34;</span> , y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;value&#34;</span>, color<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;variable&#39;</span>,
+             color_discrete_sequence<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;blue&#34;</span>, <span style="color:#e6db74">&#34;green&#34;</span>, <span style="color:#e6db74">&#34;red&#34;</span>],
+             height<span style="color:#f92672">=</span><span style="color:#ae81ff">400</span>, width<span style="color:#f92672">=</span><span style="color:#ae81ff">600</span>,
+             title<span style="color:#f92672">=</span> f<span style="color:#e6db74">&#39;Total de Casos Mundiales de COVID 19 - {str(world.iloc[-1,0])}&#39;</span>)
+
+<span style="color:#75715e"># Agregar el valor de cada columna en la parte superior</span>
+<span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(len(tm[<span style="color:#e6db74">&#39;variable&#39;</span>])):
+  fig<span style="color:#f92672">.</span>add_annotation(x<span style="color:#f92672">=</span>tm<span style="color:#f92672">.</span>iloc[n,<span style="color:#ae81ff">1</span>], y<span style="color:#f92672">=</span>tm<span style="color:#f92672">.</span>iloc[n,<span style="color:#ae81ff">2</span>], text<span style="color:#f92672">=</span>str(tm<span style="color:#f92672">.</span>iloc[n,<span style="color:#ae81ff">2</span>]),
+                     showarrow<span style="color:#f92672">=</span>True, ax<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, ay<span style="color:#f92672">=-</span><span style="color:#ae81ff">30</span>)
+fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span>update(showlegend<span style="color:#f92672">=</span>False,
+                  yaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Numero de Personas&#34;</span>}}, <span style="color:#75715e"># Cambiar texto eje y</span>
+                  xaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>}} <span style="color:#75715e">#Esconder nombre eje x</span>
+                  )
+<span style="color:#75715e"># grabar grafica en chart-studio</span>
+<span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_general&#39;, auto_open=True)</span>
+fig<span style="color:#f92672">.</span>show()</code></pre></div>
+<iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
+
+<h2 id="progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos">Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">world_melt <span style="color:#f92672">=</span> world<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span>, value_vars<span style="color:#f92672">=</span> list(world<span style="color:#f92672">.</span>columns)[<span style="color:#ae81ff">1</span>:], var_name<span style="color:#f92672">=</span>None)
+
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>line(world_melt, x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Fecha&#34;</span>, y<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;value&#39;</span>,
+              color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;variable&#39;</span>,
+              title<span style="color:#f92672">=</span>f<span style="color:#e6db74">&#39;Total de Casos en el tiempo de COVID 19 - {world.iloc[-1,0]}&#39;</span>)
+<span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> list(world<span style="color:#f92672">.</span>columns)[<span style="color:#ae81ff">1</span>:]:
+  fig<span style="color:#f92672">.</span>add_annotation(x<span style="color:#f92672">=</span>world<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>], y<span style="color:#f92672">=</span>world<span style="color:#f92672">.</span>loc[world<span style="color:#f92672">.</span>index[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],n],
+                     text<span style="color:#f92672">=</span>n,
+                     showarrow<span style="color:#f92672">=</span>True, ax<span style="color:#f92672">=-</span><span style="color:#ae81ff">50</span>, ay<span style="color:#f92672">=-</span><span style="color:#ae81ff">20</span>)
+fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span>update(showlegend <span style="color:#f92672">=</span> False,
+                  yaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Numero de Personas&#34;</span>}}, <span style="color:#75715e"># Cambiar texto eje y</span>
+                  )
+<span style="color:#75715e"># grabar grafica en chart-studio</span>
+<span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_serie&#39;, auto_open=True)</span>
+fig<span style="color:#f92672">.</span>show()</code></pre></div>
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/3.embed"></iframe>
+
+<h2 id="total-casos-confirmados-de-covid-19-por-pais-excluyendo-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1 <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;China&#34;</span>])
+<span style="color:#75715e"># Cambiar el nombre de la columna</span>
+df1<span style="color:#f92672">.</span>rename(columns <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;date&#39;</span>:<span style="color:#e6db74">&#39;Fecha&#39;</span>}, inplace <span style="color:#f92672">=</span> True) 
+df_melt <span style="color:#f92672">=</span> df1<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span>, value_vars<span style="color:#f92672">=</span> list(df1<span style="color:#f92672">.</span>columns)[<span style="color:#ae81ff">1</span>:], var_name<span style="color:#f92672">=</span>None)
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>line(df_melt, x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span> , y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;value&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>,
+              color_discrete_sequence<span style="color:#f92672">=</span>px<span style="color:#f92672">.</span>colors<span style="color:#f92672">.</span>qualitative<span style="color:#f92672">.</span>G10,
+              title<span style="color:#f92672">=</span>f<span style="color:#e6db74">&#39;Total Casos Confirmados de COVID 19 por Pais (Excluyendo China) - {world.iloc[-1,0]}&#39;</span>)
+<span style="color:#75715e"># 8 paises mas infectados</span>
+fecha <span style="color:#f92672">=</span> df1[<span style="color:#e6db74">&#39;Fecha&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#75715e">#obtener la fecha del ultimo dato</span>
+paises <span style="color:#f92672">=</span> df1<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>:] <span style="color:#75715e">#obtener la serie sin el primer dato, fecha</span>
+paises<span style="color:#f92672">.</span>sort_values(ascending<span style="color:#f92672">=</span>False, inplace<span style="color:#f92672">=</span>True)
+mas_infectados<span style="color:#f92672">=</span>[]
+<span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">8</span>):
+  fig<span style="color:#f92672">.</span>add_annotation(x<span style="color:#f92672">=</span>fecha, y<span style="color:#f92672">=</span>paises[n], text<span style="color:#f92672">=</span>paises<span style="color:#f92672">.</span>index[n],
+                     showarrow<span style="color:#f92672">=</span>True, ax<span style="color:#f92672">=+</span><span style="color:#ae81ff">30</span>, ay<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+  mas_infectados<span style="color:#f92672">.</span>append(paises<span style="color:#f92672">.</span>index[n])
+fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span>update(showlegend<span style="color:#f92672">=</span>False,
+                  yaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Numero de Personas&#34;</span>}}, <span style="color:#75715e"># Cambiar texto eje y</span>
+                  )
+<span style="color:#75715e"># grabar grafica en chart-studio</span>
+<span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_no_china&#39;, auto_open=True)</span>
+fig<span style="color:#f92672">.</span>show()</code></pre></div>
+<iframe width="900" height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/5.embed"></iframe>
+
+<h2 id="total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df2 <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;China&#34;</span>] <span style="color:#f92672">+</span>mas_infectados)
+<span style="color:#75715e"># Cambiar el nombre de la columna</span>
+df2<span style="color:#f92672">.</span>rename(columns <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;date&#39;</span>:<span style="color:#e6db74">&#39;Fecha&#39;</span>}, inplace <span style="color:#f92672">=</span> True) 
+
+df_melt2 <span style="color:#f92672">=</span> df2<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span>, value_vars<span style="color:#f92672">=</span> list(df2<span style="color:#f92672">.</span>columns)[<span style="color:#ae81ff">1</span>:], var_name<span style="color:#f92672">=</span>None)
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>line(df_melt2, x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span> , y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;value&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>,
+              color_discrete_sequence<span style="color:#f92672">=</span>px<span style="color:#f92672">.</span>colors<span style="color:#f92672">.</span>qualitative<span style="color:#f92672">.</span>G10,
+              title<span style="color:#f92672">=</span>f<span style="color:#e6db74">&#39;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados) - {world.iloc[-1,0]}&#39;</span>)
+
+fecha <span style="color:#f92672">=</span> df2[<span style="color:#e6db74">&#39;Fecha&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#75715e">#obtener la fecha del ultimo dato</span>
+paises <span style="color:#f92672">=</span> df2<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>:] <span style="color:#75715e">#obtener la serie sin el primer dato, fecha</span>
+paises<span style="color:#f92672">.</span>sort_values(ascending<span style="color:#f92672">=</span>False, inplace<span style="color:#f92672">=</span>True)
+<span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> range(<span style="color:#ae81ff">8</span>):
+  fig<span style="color:#f92672">.</span>add_annotation(x<span style="color:#f92672">=</span>fecha, y<span style="color:#f92672">=</span>paises[n], text<span style="color:#f92672">=</span>paises<span style="color:#f92672">.</span>index[n],
+                     showarrow<span style="color:#f92672">=</span>True, ax<span style="color:#f92672">=+</span><span style="color:#ae81ff">30</span>, ay<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span>update(showlegend<span style="color:#f92672">=</span>False,
+                  yaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Numero de Personas&#34;</span>}}, <span style="color:#75715e"># Cambiar texto eje y</span>
+                  )
+<span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_no_8_infectados&#39;, auto_open=True)</span>
+fig<span style="color:#f92672">.</span>show()</code></pre></div>
+<iframe width="900" height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/7.embed"></iframe>
+
+<h2 id="numero-de-casos-confirmados-en-colombia">Numero de Casos Confirmados en Colombia</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>line(confirmed_group,x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;date&#39;</span> , y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Colombia&#39;</span>,
+              title<span style="color:#f92672">=</span>f<span style="color:#e6db74">&#39;Total Casos Confirmados de COVID 19 Colombia - {world.iloc[-1,0]}&#39;</span>)
+fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span>update(showlegend<span style="color:#f92672">=</span>False,
+                  yaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Numero de Personas&#34;</span>}}, <span style="color:#75715e"># Cambiar texto eje y</span>
+                  xaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Fecha&#34;</span>}})
+<span style="color:#75715e">#py.plot(fig, filename = &#39;Colombia_general&#39;, auto_open=True)</span>
+fig<span style="color:#f92672">.</span>show()</code></pre></div>
+<iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/9.embed"></iframe>
+
+<h1 id="refencias">Refencias</h1>
+
+<ul>
+<li><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">https://github.com/CSSEGISandData/COVID-19</a></li>
+<li><a href="https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons" target="_blank">https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons</a></li>
+<li><a href="https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/" target="_blank">https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/</a></li>
+<li><a href="https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus" target="_blank">https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus</a></li>
+<li><a href="https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200" target="_blank">https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200</a></li>
+</ul>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/python/">Python</a>
+  
+  <a class="badge badge-light" href="/tags/data-science/">Data-Science</a>
+  
+  <a class="badge badge-light" href="/tags/jupyter-notebook/">Jupyter-notebook</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://joserzapata.github.io/post/covid19-visualizacion/&amp;text=Visualizacion%20Datos%20Coronavirus%20%28COVID19%29%20Mundial" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://joserzapata.github.io/post/covid19-visualizacion/&amp;t=Visualizacion%20Datos%20Coronavirus%20%28COVID19%29%20Mundial" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Visualizacion%20Datos%20Coronavirus%20%28COVID19%29%20Mundial&amp;body=https://joserzapata.github.io/post/covid19-visualizacion/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://joserzapata.github.io/post/covid19-visualizacion/&amp;title=Visualizacion%20Datos%20Coronavirus%20%28COVID19%29%20Mundial" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Visualizacion%20Datos%20Coronavirus%20%28COVID19%29%20Mundial%20https://joserzapata.github.io/post/covid19-visualizacion/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/jose-r.-zapata/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/post/pyspark-google-colab/">Pyspark con Google Colab</a></li>
+      
+      <li><a href="/talk/pycon2020/">Comprensión de la música con Python, una mirada desde la Física y la Matemática</a></li>
+      
+      <li><a href="/talk/pycon2018/">Audio signal analysis with python</a></li>
+      
+      <li><a href="/talk/meetup_2018/">Aplicaciones de Audio con Machine Learning</a></li>
+      
+      <li><a href="/talk/aes2016/">Sistemas Automaticos para Extraccion de Información Musical (Generalidades y Aplicaciones)</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/shell.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2020 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

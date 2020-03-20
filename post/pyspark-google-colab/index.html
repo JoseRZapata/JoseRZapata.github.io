@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jose Ricardo Zapata">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Configuracion de Google Colab para usar pyspark">
+
+  
+  <link rel="alternate" hreflang="es" href="https://joserzapata.github.io/es/post/pyspark-google-colab/">
+  
+  <link rel="alternate" hreflang="en-us" href="https://joserzapata.github.io/post/pyspark-google-colab/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#328cc1">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.30689228d1eb4cc4ce665e3dd036702c.css">
+
+  
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112535090-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-112535090-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://joserzapata.github.io/post/pyspark-google-colab/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@joserzapata">
+  <meta property="twitter:creator" content="@joserzapata">
+  
+  <meta property="og:site_name" content="Jose Ricardo Zapata">
+  <meta property="og:url" content="https://joserzapata.github.io/post/pyspark-google-colab/">
+  <meta property="og:title" content="Pyspark con Google Colab | Jose Ricardo Zapata">
+  <meta property="og:description" content="Configuracion de Google Colab para usar pyspark"><meta property="og:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg">
+  <meta property="twitter:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-03-09T23:00:43-05:00">
+    
+    <meta property="article:modified_time" content="2020-03-09T23:00:43-05:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://joserzapata.github.io/post/pyspark-google-colab/"
+  },
+  "headline": "Pyspark con Google Colab",
+  
+  "datePublished": "2020-03-09T23:00:43-05:00",
+  "dateModified": "2020-03-09T23:00:43-05:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Jose R. Zapata"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jose Ricardo Zapata",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://joserzapata.github.io/img/icon-512.png"
+    }
+  },
+  "description": "Configuracion de Google Colab para usar pyspark"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Pyspark con Google Colab | Jose Ricardo Zapata</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Jose Ricardo Zapata</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/phd"><span>Phd Thesis</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i><span>English</span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="https://joserzapata.github.io/es/post/pyspark-google-colab/">
+                <span>Español</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Pyspark con Google Colab</h1>
+
+  
+  <p class="page-subtitle">Usando pyspark en google colab</p>
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/authors/jose-r.-zapata/">Jose R. Zapata</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Mar 9, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    5 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/data-science/">Data-Science</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="pyspark-en-google-colab-automatico">PySpark en Google Colab Automatico</h1>
+<ol>
+<li>Instalacion Marzo/2020</li>
+<li>Intalacion Automatica
+<ol>
+<li>Instalacion Java</li>
+<li>Instalacion de Spark</li>
+<li>Ejemplo de Uso de pyspark</li>
+</ol>
+</li>
+</ol>
+<p><a href="https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Pyspark_Colab_es.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
+<h1 id="instalacion-rapida-marzo-2020">Instalacion Rapida Marzo/ 2020</h1>
+<p>De forma General para usar pyspark en Colab Marzo/2020 seria con los siguientes comandos en una celda en Colab:</p>
+<p>Instalar Java</p>
+<pre><code>!apt-get install openjdk-8-jdk-headless -qq &gt; /dev/null
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os <span style="color:#75715e"># libreria de manejo del sistema operativo</span>
+os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;wget -q https://www-us.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz&#34;</span>)
+os<span style="color:#f92672">.</span>system(<span style="color:#e6db74">&#34;tar xf /spark-2.4.5-bin-hadoop2.7.tgz&#34;</span>)
+</code></pre></div><p>instalar pyspark</p>
+<pre><code>!pip install -q pyspark
+</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Variables de Entorno</span>
+os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;JAVA_HOME&#34;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/usr/lib/jvm/java-8-openjdk-amd64&#34;</span>
+os<span style="color:#f92672">.</span>environ[<span style="color:#e6db74">&#34;SPARK_HOME&#34;</span>] <span style="color:#f92672">=</span> f<span style="color:#e6db74">&#34;/content/{ver_spark}-bin-hadoop2.7&#34;</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Cargar Pyspark</span>
+<span style="color:#f92672">from</span> pyspark.sql <span style="color:#f92672">import</span> SparkSession
+spark <span style="color:#f92672">=</span> SparkSession<span style="color:#f92672">.</span>builder<span style="color:#f92672">.</span>appName(<span style="color:#e6db74">&#34;Test_spark&#34;</span>)<span style="color:#f92672">.</span>master(<span style="color:#e6db74">&#34;local[*]&#34;</span>)<span style="color:#f92672">.</span>getOrCreate()
+spark
+</code></pre></div><p>Pero cuando salga una nueva version de spark sera necesario actualizar los
+links de descarga, ya que siempre borran las versiones 2.x.x cuando sale una nueva.</p>
+<p>Lo mejor es configurar automaticamente para que descargue la version que sea
+mayor que 2.3.4 que es la anterior y menor que spark 3.0.0 que aun se encuentra en desarrollo</p>
+<p>Para esto el siguiente codigo detecta la version actual de spark, la descarga, la descomprime y luego realiza la instalacion de spark en google colab.</p>
+<h1 id="instalacion-automatica">Instalacion Automatica</h1>
+<h2 id="instalacion-de-java">Instalacion de Java</h2>
+<p>Google Colaboratory funciona en un ambiente linux, por lo tanto se pueden usar comandos shell de linux antecedidos del caracter &lsquo;!&rsquo;</p>
+<pre><code>!apt-get install openjdk-8-jdk-headless -qq &gt; /dev/null
+</code></pre><h2 id="instalacion-de-spark">Instalacion de Spark</h2>
+<p>Obtener automaticamente la ultima version de spark de</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> bs4 <span style="color:#f92672">import</span> BeautifulSoup
+<span style="color:#f92672">import</span> requests
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#Obtener las versiones de spark la pagina web</span>
+url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;https://downloads.apache.org/spark/&#39;</span> 
+r <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>get(url)
+html_doc <span style="color:#f92672">=</span> r<span style="color:#f92672">.</span>text
+soup <span style="color:#f92672">=</span> BeautifulSoup(html_doc)
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># leer la pagina web y obtener las versiones de spark disponibles</span>
+link_files <span style="color:#f92672">=</span> []
+<span style="color:#66d9ef">for</span> link <span style="color:#f92672">in</span> soup<span style="color:#f92672">.</span>find_all(<span style="color:#e6db74">&#39;a&#39;</span>):
+  link_files<span style="color:#f92672">.</span>append(link<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#39;href&#39;</span>))
+spark_link <span style="color:#f92672">=</span> [x <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> link_files <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#39;spark&#39;</span> <span style="color:#f92672">in</span> x]  
+<span style="color:#66d9ef">print</span>(spark_link)
+</code></pre></div><p>[&lsquo;spark-2.3.4/', &lsquo;spark-2.4.5/', &lsquo;spark-3.0.0-preview2/']</p>
+<p>La version a usar seran las superiores a spark-2.3.4  y menores a spark-3.0.0</p>
+<p>obtener la version y eliminar el caracter &lsquo;/&rsquo; del final</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">ver_spark <span style="color:#f92672">=</span> spark_link[<span style="color:#ae81ff">1</span>][:<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#75715e"># obtener la version y eliminar el caracter &#39;/&#39; del final</span>
+<span style="color:#66d9ef">print</span>(ver_spark)
+</code></pre></div><pre><code>spark-2.4.5
+</code></pre>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> os <span style="color:#75715e"># libreria de manejo del sistema operativo</span>
+<span style="color:#75715e">#instalar automaticamente la version deseadda de spark</span>
+link <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;https://www-us.apache.org/dist/spark/&#34;</span>
+os<span style="color:#f92672">.</span>system(f<span style="color:#e6db74">&#34;wget -q {link}{ver_spark}/{ver_spark}-bin-hadoop2.7.tgz&#34;</span>)
+os<span style="color:#f92672">.</span>system(f<span style="color:#e6db74">&#34;tar xf {ver_spark}-bin-hadoop2.7.tgz&#34;</span>)
+
+<span style="color:#75715e"># instalar pyspark</span>
+<span style="color:#960050;background-color:#1e0010">!</span>pip install <span style="color:#f92672">-</span>q pyspark
+</code></pre></div><pre><code>|████████████████████████████████| 217.8MB 63kB/s 
+|████████████████████████████████| 204kB 53.8MB/s 
+Building wheel for pyspark (setup.py) ... done
+</code></pre>
+<h2 id="definir-variables-de-entorno">Definir variables de entorno</h2>
+<pre><code>os.environ[&quot;JAVA_HOME&quot;] = &quot;/usr/lib/jvm/java-8-openjdk-amd64&quot;
+os.environ[&quot;SPARK_HOME&quot;] = f&quot;/content/{ver_spark}-bin-hadoop2.7&quot;
+</code></pre><h2 id="cargar-pyspark-en-el-sistema">Cargar pyspark en el sistema</h2>
+<pre><code>from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName(&quot;Test_spark&quot;).master(&quot;local[*]&quot;).getOrCreate()
+spark
+</code></pre><div>
+<p><b>SparkSession - in-memory</b></p>
+<div>
+  <p><b>SparkContext</b></p>
+  <p><a href="http://cf857c0401dc:4040">Spark UI</a></p>
+  <dl>
+      <dt>Version</dt>
+        <dd><code>v2.4.5</code></dd>
+      <dt>Master</dt>
+        <dd><code>local[*]</code></dd>
+      <dt>AppName</dt>
+        <dd><code>pyspark-shell</code></dd>
+  </dl>
+</div>
+</div>
+<h1 id="ejemplo-de-uso-de-pyspark">Ejemplo de Uso de pyspark</h1>
+<p>Leer archivo de prueba</p>
+<pre><code>archivo = './sample_data/california_housing_train.csv'
+df_spark = spark.read.csv(archivo, inferSchema=True, header=True)
+
+# imprimir tipo de archivo
+print(type(df_spark))
+</code></pre><pre><code>&lt;class 'pyspark.sql.dataframe.DataFrame'&gt;
+</code></pre>
+<p>¿Numero de registros en el dataframe?</p>
+<pre><code>df_spark.count()
+</code></pre><pre><code>17000
+</code></pre>
+<p>Estructura del dataframe</p>
+<pre><code>df_spark.printSchema()
+</code></pre><pre><code>root
+ |-- longitude: double (nullable = true)
+ |-- latitude: double (nullable = true)
+ |-- housing_median_age: double (nullable = true)
+ |-- total_rooms: double (nullable = true)
+ |-- total_bedrooms: double (nullable = true)
+ |-- population: double (nullable = true)
+ |-- households: double (nullable = true)
+ |-- median_income: double (nullable = true)
+ |-- median_house_value: double (nullable = true)
+</code></pre>
+<p>¿Nombre de las Columnas de dataframe?</p>
+<pre><code>df_spark.columns
+</code></pre><pre><code>['longitude',
+ 'latitude',
+ 'housing_median_age',
+ 'total_rooms',
+ 'total_bedrooms',
+ 'population',
+ 'households',
+ 'median_income',
+ 'median_house_value']
+</code></pre>
+<p>Ver los primeros 20 registros del dataframe</p>
+<pre><code>df_spark.show()
+</code></pre><pre><code>+---------+--------+------------------+-----------+--------------+----------+----------+-------------+------------------+
+|longitude|latitude|housing_median_age|total_rooms|total_bedrooms|population|households|median_income|median_house_value|
++---------+--------+------------------+-----------+--------------+----------+----------+-------------+------------------+
+|  -114.31|   34.19|              15.0|     5612.0|        1283.0|    1015.0|     472.0|       1.4936|           66900.0|
+|  -114.47|    34.4|              19.0|     7650.0|        1901.0|    1129.0|     463.0|         1.82|           80100.0|
+|  -114.56|   33.69|              17.0|      720.0|         174.0|     333.0|     117.0|       1.6509|           85700.0|
+|  -114.57|   33.64|              14.0|     1501.0|         337.0|     515.0|     226.0|       3.1917|           73400.0|
+|  -114.57|   33.57|              20.0|     1454.0|         326.0|     624.0|     262.0|        1.925|           65500.0|
+|  -114.58|   33.63|              29.0|     1387.0|         236.0|     671.0|     239.0|       3.3438|           74000.0|
+|  -114.58|   33.61|              25.0|     2907.0|         680.0|    1841.0|     633.0|       2.6768|           82400.0|
+|  -114.59|   34.83|              41.0|      812.0|         168.0|     375.0|     158.0|       1.7083|           48500.0|
+|  -114.59|   33.61|              34.0|     4789.0|        1175.0|    3134.0|    1056.0|       2.1782|           58400.0|
+|   -114.6|   34.83|              46.0|     1497.0|         309.0|     787.0|     271.0|       2.1908|           48100.0|
+|   -114.6|   33.62|              16.0|     3741.0|         801.0|    2434.0|     824.0|       2.6797|           86500.0|
+|   -114.6|    33.6|              21.0|     1988.0|         483.0|    1182.0|     437.0|        1.625|           62000.0|
+|  -114.61|   34.84|              48.0|     1291.0|         248.0|     580.0|     211.0|       2.1571|           48600.0|
+|  -114.61|   34.83|              31.0|     2478.0|         464.0|    1346.0|     479.0|        3.212|           70400.0|
+|  -114.63|   32.76|              15.0|     1448.0|         378.0|     949.0|     300.0|       0.8585|           45000.0|
+|  -114.65|   34.89|              17.0|     2556.0|         587.0|    1005.0|     401.0|       1.6991|           69100.0|
+|  -114.65|    33.6|              28.0|     1678.0|         322.0|     666.0|     256.0|       2.9653|           94900.0|
+|  -114.65|   32.79|              21.0|       44.0|          33.0|      64.0|      27.0|       0.8571|           25000.0|
+|  -114.66|   32.74|              17.0|     1388.0|         386.0|     775.0|     320.0|       1.2049|           44000.0|
+|  -114.67|   33.92|              17.0|       97.0|          24.0|      29.0|      15.0|       1.2656|           27500.0|
++---------+--------+------------------+-----------+--------------+----------+----------+-------------+------------------+
+only showing top 20 rows
+</code></pre>
+<h2 id="descricipcion-estadistica-del-dataframe">Descricipcion Estadistica del dataframe</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_spark<span style="color:#f92672">.</span>describe()<span style="color:#f92672">.</span>toPandas()<span style="color:#f92672">.</span>transpose()
+</code></pre></div><table>
+<thead>
+<tr>
+<th></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>summary</td>
+<td>count</td>
+<td>mean</td>
+<td>stddev</td>
+<td>min</td>
+<td>max</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>17000</td>
+<td>-119.56210823529375</td>
+<td>2.0051664084260357</td>
+<td>-124.35</td>
+<td>-114.31</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>17000</td>
+<td>35.6252247058827</td>
+<td>2.1373397946570867</td>
+<td>32.54</td>
+<td>41.95</td>
+</tr>
+<tr>
+<td>housing_median_age</td>
+<td>17000</td>
+<td>28.58935294117647</td>
+<td>12.586936981660406</td>
+<td>1.0</td>
+<td>52.0</td>
+</tr>
+<tr>
+<td>total_rooms</td>
+<td>17000</td>
+<td>2643.664411764706</td>
+<td>2179.947071452777</td>
+<td>2.0</td>
+<td>37937.0</td>
+</tr>
+<tr>
+<td>total_bedrooms</td>
+<td>17000</td>
+<td>539.4108235294118</td>
+<td>421.4994515798648</td>
+<td>1.0</td>
+<td>6445.0</td>
+</tr>
+<tr>
+<td>population</td>
+<td>17000</td>
+<td>1429.5739411764705</td>
+<td>1147.852959159527</td>
+<td>3.0</td>
+<td>35682.0</td>
+</tr>
+<tr>
+<td>households</td>
+<td>17000</td>
+<td>501.2219411764706</td>
+<td>384.5208408559016</td>
+<td>1.0</td>
+<td>6082.0</td>
+</tr>
+<tr>
+<td>median_income</td>
+<td>17000</td>
+<td>3.883578100000021</td>
+<td>1.9081565183791036</td>
+<td>0.4999</td>
+<td>15.0001</td>
+</tr>
+<tr>
+<td>median_house_value</td>
+<td>17000</td>
+<td>207300.91235294117</td>
+<td>115983.76438720895</td>
+<td>14999.0</td>
+<td>500001.0</td>
+</tr>
+</tbody>
+</table>
+<p>Descripcion estadistica de una sola columna (&lsquo;median_house_value&rsquo;)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df_spark<span style="color:#f92672">.</span>describe([<span style="color:#e6db74">&#39;median_house_value&#39;</span>])<span style="color:#f92672">.</span>show()
+</code></pre></div><pre><code>+-------+------------------+
+|summary|median_house_value|
++-------+------------------+
+|  count|             17000|
+|   mean|207300.91235294117|
+| stddev|115983.76438720895|
+|    min|           14999.0|
+|    max|          500001.0|
++-------+------------------+
+</code></pre>
+<p>De esta forma se puede instalar automaticamente spark en google colab y hacer uno de el de forma gratis.</p>
+<p>En la version gratis solo se cuenta con una CPU si se quiere aumentar la capacidad de procesamiento es necesario pagar.</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/python/">Python</a>
+  
+  <a class="badge badge-light" href="/tags/pyspark/">Pyspark</a>
+  
+  <a class="badge badge-light" href="/tags/colab/">Colab</a>
+  
+  <a class="badge badge-light" href="/tags/data-science/">Data-Science</a>
+  
+  <a class="badge badge-light" href="/tags/jupyter-notebook/">Jupyter-notebook</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://joserzapata.github.io/post/pyspark-google-colab/&amp;text=Pyspark%20con%20Google%20Colab" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://joserzapata.github.io/post/pyspark-google-colab/&amp;t=Pyspark%20con%20Google%20Colab" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Pyspark%20con%20Google%20Colab&amp;body=https://joserzapata.github.io/post/pyspark-google-colab/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://joserzapata.github.io/post/pyspark-google-colab/&amp;title=Pyspark%20con%20Google%20Colab" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Pyspark%20con%20Google%20Colab%20https://joserzapata.github.io/post/pyspark-google-colab/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/authors/jose-r.-zapata/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/talk/pycon2020/">Comprensión de la música con Python, una mirada desde la Física y la Matemática</a></li>
+      
+      <li><a href="/talk/pycon2018/">Audio signal analysis with python</a></li>
+      
+      <li><a href="/talk/meetup_2018/">Aplicaciones de Audio con Machine Learning</a></li>
+      
+      <li><a href="/talk/aes2016/">Sistemas Automaticos para Extraccion de Información Musical (Generalidades y Aplicaciones)</a></li>
+      
+      <li><a href="/publication/essentia-ismir/">Essentia: An Audio Analysis Library for Music Information Retrieval</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/shell.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2020 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
