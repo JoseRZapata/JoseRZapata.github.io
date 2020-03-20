@@ -607,73 +607,90 @@
   <div class="article-container">
 
     <div class="article-style">
-      <p><a href="https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a></p>
-<p>He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas actualizadas cada dia, y ademas practicar el uso de <a href="https://plot.ly/">plotly</a> para visualizacion interactiva.</p>
+      
+
+<p><a href="https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb" target="_blank"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a></p>
+
+<p>He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas actualizadas cada dia, y ademas practicar el uso de <a href="https://plot.ly/" target="_blank">plotly</a> para visualizacion interactiva.</p>
+
 <p><strong>Pueden interactuar con las graficas con el mouse y las Graficas se actualizaran
 diariamente con los nuevos datos!</strong></p>
-<p>Informacion extraida de 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE</p>
-<p><a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a></p>
-<h2>Índice</h2>
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#paquetes-de-python">Paquetes de Python</a></li>
-    <li><a href="#importar-datos">Importar datos</a></li>
-    <li><a href="#datos-cssegisanddatacovid-19">Datos CSSEGISandData/COVID-19</a></li>
-    <li><a href="#datos-generales-de-cada-dataframe">Datos Generales de cada Dataframe</a>
-      <ul>
-        <li><a href="#eliminar-ubicacion">Eliminar Ubicacion</a></li>
-        <li><a href="#consolidar-datos">Consolidar datos</a></li>
-        <li><a href="#datos-mundiales">Datos Mundiales</a></li>
-      </ul>
-    </li>
-  </ul>
 
-  <ul>
-    <li><a href="#valores-mundiales-de-confirmados-recuperados-y-muertos">Valores Mundiales de Confirmados, Recuperados y Muertos</a></li>
-    <li><a href="#progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos">Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos</a></li>
-    <li><a href="#total-casos-confirmados-de-covid-19-por-pais-excluyendo-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)</a></li>
-    <li><a href="#total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)</a></li>
-    <li><a href="#numero-de-casos-confirmados-en-colombia">Numero de Casos Confirmados en Colombia</a></li>
-  </ul>
-</nav>
+<p>Informacion extraida de 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE</p>
+
+<p><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">https://github.com/CSSEGISandData/COVID-19</a></p>
+
+<p><h2>Índice</h2>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#paquetes-de-python-y-datos">Paquetes de Python y Datos</a>
+<ul>
+<li><a href="#paquetes-de-python">Paquetes de Python</a></li>
+<li><a href="#importar-datos">Importar datos</a></li>
+<li><a href="#datos-cssegisanddata-covid-19">Datos CSSEGISandData/COVID-19</a></li>
+<li><a href="#datos-generales-de-cada-dataframe">Datos Generales de cada Dataframe</a>
+<ul>
+<li><a href="#eliminar-ubicacion">Eliminar Ubicacion</a></li>
+<li><a href="#consolidar-datos">Consolidar datos</a></li>
+<li><a href="#datos-mundiales">Datos Mundiales</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#visualizacion-con-plotly">Visualizacion con Plotly</a>
+<ul>
+<li><a href="#valores-mundiales-de-confirmados-recuperados-y-muertos">Valores Mundiales de Confirmados, Recuperados y Muertos</a></li>
+<li><a href="#progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos">Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos</a></li>
+<li><a href="#total-casos-confirmados-de-covid-19-por-pais-excluyendo-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)</a></li>
+<li><a href="#total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)</a></li>
+<li><a href="#numero-de-casos-confirmados-en-colombia">Numero de Casos Confirmados en Colombia</a></li>
+</ul></li>
+<li><a href="#refencias">Refencias</a></li>
+</ul>
+</nav></p>
+
+<h1 id="paquetes-de-python-y-datos">Paquetes de Python y Datos</h1>
+
 <h2 id="paquetes-de-python">Paquetes de Python</h2>
-<pre><code>!pip install chart_studio -q
-</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
+<pre><code>!pip install chart_studio -q</code></pre><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas <span style="color:#f92672">as</span> pd
 <span style="color:#f92672">import</span> plotly.express <span style="color:#f92672">as</span> px
 <span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
-<span style="color:#f92672">import</span> chart_studio
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#chart-studio api</span>
+<span style="color:#f92672">import</span> chart_studio</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#chart-studio api</span>
 username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#75715e"># your username</span>
 api_key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span> <span style="color:#75715e"># your api api_key</span>
 chart_studio<span style="color:#f92672">.</span>tools<span style="color:#f92672">.</span>set_credentials_file(username<span style="color:#f92672">=</span>username, api_key<span style="color:#f92672">=</span>api_key)
-<span style="color:#f92672">import</span> chart_studio.plotly <span style="color:#f92672">as</span> py
-</code></pre></div><h2 id="importar-datos">Importar datos</h2>
+<span style="color:#f92672">import</span> chart_studio.plotly <span style="color:#f92672">as</span> py</code></pre></div>
+<h2 id="importar-datos">Importar datos</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv&#39;</span>)
 recovered <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv&#39;</span>)
-death <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv&#39;</span>)
-</code></pre></div><h2 id="datos-cssegisanddatacovid-19">Datos CSSEGISandData/COVID-19</h2>
+death <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv&#39;</span>)</code></pre></div>
+<h2 id="datos-cssegisanddata-covid-19">Datos CSSEGISandData/COVID-19</h2>
+
 <p>Descripcion de los datos en ingles</p>
+
 <p><strong>Province/State:</strong> China - province name; US/Canada/Australia/ - city name, state/province name; Others - name of the event (e.g., &ldquo;Diamond Princess&rdquo; cruise ship); other countries - blank.</p>
+
 <p><strong>Country/Region:</strong> country/region name conforming to WHO (will be updated).</p>
+
 <p><strong>Last Update:</strong> MM/DD/YYYY HH:mm (24 hour format, in UTC).</p>
+
 <p><strong>Confirmed:</strong> the number of confirmed cases. For Hubei Province: from Feb 13 (GMT +8), we report both clinically diagnosed and lab-confirmed cases. For lab-confirmed cases only (Before Feb 17), please refer to who_covid_19_situation_reports. For Italy, diagnosis standard might be changed since Feb 27 to &ldquo;slow the growth of new case numbers.&rdquo;</p>
+
 <p><strong>Deaths:</strong> the number of deaths.
 <strong>Recovered:</strong> the number of recovered cases.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed<span style="color:#f92672">.</span>head()
-</code></pre></div><div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed<span style="color:#f92672">.</span>head()</code></pre></div>
+<div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
         vertical-align: middle;
     }
-<pre><code>.dataframe tbody tr th {
-    vertical-align: top;
-}
 
-.dataframe thead th {
-    text-align: right;
-}
-</code></pre>
-<p></style></p>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1053,44 +1070,39 @@ death <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#recovered.head()</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#death.head()</span>
-</code></pre></div><h2 id="datos-generales-de-cada-dataframe">Datos Generales de cada Dataframe</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#confirmed.info()</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#recovered.info()</span>
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#death.info()</span>
-</code></pre></div><h3 id="eliminar-ubicacion">Eliminar Ubicacion</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#recovered.head()</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#death.head()</span></code></pre></div>
+<h2 id="datos-generales-de-cada-dataframe">Datos Generales de cada Dataframe</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#confirmed.info()</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#recovered.info()</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#death.info()</span></code></pre></div>
+<h3 id="eliminar-ubicacion">Eliminar Ubicacion</h3>
+
 <p>Se va realizar un analisis general de los datos y No se van a tomar los datos geograficos de <em>latitud</em>, <em>longitud</em> y los datos de <em>Province/State</em> estan incompletos.</p>
+
 <p>Solo se realizara un analisis por pais entonces se eliminaran las columnas mencionadas anteriormente</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed <span style="color:#f92672">=</span> confirmed<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">recovered <span style="color:#f92672">=</span> recovered<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death <span style="color:#f92672">=</span> death<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])
-</code></pre></div><h3 id="consolidar-datos">Consolidar datos</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed <span style="color:#f92672">=</span> confirmed<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">recovered <span style="color:#f92672">=</span> recovered<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death <span style="color:#f92672">=</span> death<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])</code></pre></div>
+<h3 id="consolidar-datos">Consolidar datos</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed_group <span style="color:#f92672">=</span> confirmed<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)
 confirmed_group <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>aggregate(np<span style="color:#f92672">.</span>sum)
 confirmed_group <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>T
 confirmed_group<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;date&#39;</span>
-confirmed_group <span style="color:#f92672">=</span>  confirmed_group<span style="color:#f92672">.</span>reset_index()
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">recovered_group <span style="color:#f92672">=</span> recovered<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)
+confirmed_group <span style="color:#f92672">=</span>  confirmed_group<span style="color:#f92672">.</span>reset_index()</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">recovered_group <span style="color:#f92672">=</span> recovered<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)
 recovered_group <span style="color:#f92672">=</span> recovered_group<span style="color:#f92672">.</span>aggregate(np<span style="color:#f92672">.</span>sum)
 recovered_group <span style="color:#f92672">=</span> recovered_group<span style="color:#f92672">.</span>T
 recovered_group<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;date&#39;</span>
-recovered_group <span style="color:#f92672">=</span>  recovered_group<span style="color:#f92672">.</span>reset_index()
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death_group <span style="color:#f92672">=</span> death<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)
+recovered_group <span style="color:#f92672">=</span>  recovered_group<span style="color:#f92672">.</span>reset_index()</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death_group <span style="color:#f92672">=</span> death<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)
 death_group <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>aggregate(np<span style="color:#f92672">.</span>sum)
 death_group <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>T
 death_group<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;date&#39;</span>
-death_group <span style="color:#f92672">=</span>  death_group<span style="color:#f92672">.</span>reset_index()
-</code></pre></div><h3 id="datos-mundiales">Datos Mundiales</h3>
+death_group <span style="color:#f92672">=</span>  death_group<span style="color:#f92672">.</span>reset_index()</code></pre></div>
+<h3 id="datos-mundiales">Datos Mundiales</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Numero de Casos confirmados por dia en el mundo</span>
 column_names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Fecha&#34;</span>, <span style="color:#e6db74">&#34;Confirmados&#34;</span>, <span style="color:#e6db74">&#34;Recuperados&#34;</span>,<span style="color:#e6db74">&#34;Muertos&#34;</span>]
 world <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(columns <span style="color:#f92672">=</span> column_names)
 world[<span style="color:#e6db74">&#39;Fecha&#39;</span>] <span style="color:#f92672">=</span> confirmed_group[<span style="color:#e6db74">&#39;date&#39;</span>]
 world[<span style="color:#e6db74">&#39;Confirmados&#39;</span>] <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)
 world[<span style="color:#e6db74">&#39;Recuperados&#39;</span>] <span style="color:#f92672">=</span> recovered_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)
-world[<span style="color:#e6db74">&#39;Muertos&#39;</span>] <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)
-</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#world.tail()</span>
-</code></pre></div><h1 id="visualizacion-con-plotly">Visualizacion con Plotly</h1>
+world[<span style="color:#e6db74">&#39;Muertos&#39;</span>] <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#world.tail()</span></code></pre></div>
+<h1 id="visualizacion-con-plotly">Visualizacion con Plotly</h1>
+
 <h2 id="valores-mundiales-de-confirmados-recuperados-y-muertos">Valores Mundiales de Confirmados, Recuperados y Muertos</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">temp <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(world<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,:])<span style="color:#f92672">.</span>T
 tm <span style="color:#f92672">=</span> temp<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Fecha&#34;</span>, value_vars<span style="color:#f92672">=</span>[ <span style="color:#e6db74">&#34;Confirmados&#34;</span>, <span style="color:#e6db74">&#34;Recuperados&#34;</span>,<span style="color:#e6db74">&#34;Muertos&#34;</span>])
@@ -1109,8 +1121,9 @@ fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span
                   )
 <span style="color:#75715e"># grabar grafica en chart-studio</span>
 <span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_general&#39;, auto_open=True)</span>
-fig<span style="color:#f92672">.</span>show()
-</code></pre></div><iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
+fig<span style="color:#f92672">.</span>show()</code></pre></div>
+<iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
+
 <h2 id="progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos">Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">world_melt <span style="color:#f92672">=</span> world<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span>, value_vars<span style="color:#f92672">=</span> list(world<span style="color:#f92672">.</span>columns)[<span style="color:#ae81ff">1</span>:], var_name<span style="color:#f92672">=</span>None)
 
@@ -1126,8 +1139,9 @@ fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span
                   )
 <span style="color:#75715e"># grabar grafica en chart-studio</span>
 <span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_serie&#39;, auto_open=True)</span>
-fig<span style="color:#f92672">.</span>show()
-</code></pre></div><iframe width="900" height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/3.embed"></iframe>
+fig<span style="color:#f92672">.</span>show()</code></pre></div>
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/3.embed"></iframe>
+
 <h2 id="total-casos-confirmados-de-covid-19-por-pais-excluyendo-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1 <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;China&#34;</span>])
 <span style="color:#75715e"># Cambiar el nombre de la columna</span>
@@ -1150,8 +1164,9 @@ fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span
                   )
 <span style="color:#75715e"># grabar grafica en chart-studio</span>
 <span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_no_china&#39;, auto_open=True)</span>
-fig<span style="color:#f92672">.</span>show()
-</code></pre></div><iframe width="900" height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/5.embed"></iframe>
+fig<span style="color:#f92672">.</span>show()</code></pre></div>
+<iframe width="900" height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/5.embed"></iframe>
+
 <h2 id="total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df2 <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;China&#34;</span>] <span style="color:#f92672">+</span>mas_infectados)
 <span style="color:#75715e"># Cambiar el nombre de la columna</span>
@@ -1172,8 +1187,9 @@ fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span
                   yaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Numero de Personas&#34;</span>}}, <span style="color:#75715e"># Cambiar texto eje y</span>
                   )
 <span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_no_8_infectados&#39;, auto_open=True)</span>
-fig<span style="color:#f92672">.</span>show()
-</code></pre></div><iframe width="900" height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/7.embed"></iframe>
+fig<span style="color:#f92672">.</span>show()</code></pre></div>
+<iframe width="900" height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/7.embed"></iframe>
+
 <h2 id="numero-de-casos-confirmados-en-colombia">Numero de Casos Confirmados en Colombia</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>line(confirmed_group,x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;date&#39;</span> , y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Colombia&#39;</span>,
               title<span style="color:#f92672">=</span>f<span style="color:#e6db74">&#39;Total Casos Confirmados de COVID 19 Colombia - {world.iloc[-1,0]}&#39;</span>)
@@ -1181,15 +1197,17 @@ fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span
                   yaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Numero de Personas&#34;</span>}}, <span style="color:#75715e"># Cambiar texto eje y</span>
                   xaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Fecha&#34;</span>}})
 <span style="color:#75715e">#py.plot(fig, filename = &#39;Colombia_general&#39;, auto_open=True)</span>
-fig<span style="color:#f92672">.</span>show()
-</code></pre></div><iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/9.embed"></iframe>
+fig<span style="color:#f92672">.</span>show()</code></pre></div>
+<iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/9.embed"></iframe>
+
 <h1 id="refencias">Refencias</h1>
+
 <ul>
-<li><a href="https://github.com/CSSEGISandData/COVID-19">https://github.com/CSSEGISandData/COVID-19</a></li>
-<li><a href="https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons">https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons</a></li>
-<li><a href="https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/">https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/</a></li>
-<li><a href="https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus">https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus</a></li>
-<li><a href="https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200">https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200</a></li>
+<li><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">https://github.com/CSSEGISandData/COVID-19</a></li>
+<li><a href="https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons" target="_blank">https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons</a></li>
+<li><a href="https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/" target="_blank">https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/</a></li>
+<li><a href="https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus" target="_blank">https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus</a></li>
+<li><a href="https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200" target="_blank">https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200</a></li>
 </ul>
 
     </div>
