@@ -50,8 +50,9 @@ diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;#progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos&#34;&gt;Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#total-casos-confirmados-de-covid-19-por-pais-excluyendo-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#numero-de-casos-confirmados-en-colombia&#34;&gt;Numero de Casos Confirmados en Colombia&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#animacion-del-mapa-de-evolucion-temporal-del-codiv-19&#34;&gt;Animacion del Mapa de Evolucion Temporal del Codiv 19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#numero-de-casos-confirmados-en-colombia&#34;&gt;Numero de Casos Confirmados en Colombia&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#refencias&#34;&gt;Refencias&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;&lt;/p&gt;
@@ -529,7 +530,7 @@ fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=
 &lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_general&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe width=&#34;900&#34; height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/1.embed&#34;&gt;&lt;/iframe&gt;
+&lt;iframe width=100% height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/1.embed&#34;&gt;&lt;/iframe&gt;
 
 &lt;h2 id=&#34;progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos&#34;&gt;Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;world_melt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns)[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:], var_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;None)
@@ -547,7 +548,7 @@ fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=
 &lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_serie&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe width=&#34;900&#34; height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/3.embed&#34;&gt;&lt;/iframe&gt;
+&lt;iframe width=100% height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/3.embed&#34;&gt;&lt;/iframe&gt;
 
 &lt;h2 id=&#34;total-casos-confirmados-de-covid-19-por-pais-excluyendo-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;China&amp;#34;&lt;/span&gt;])
@@ -572,7 +573,7 @@ fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=
 &lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_no_china&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe width=&#34;900&#34; height=&#34;700&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/5.embed&#34;&gt;&lt;/iframe&gt;
+&lt;iframe width=100% height=&#34;700&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/5.embed&#34;&gt;&lt;/iframe&gt;
 
 &lt;h2 id=&#34;total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)&lt;/h2&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;China&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;mas_infectados)
@@ -595,9 +596,24 @@ fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=
                   )
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_no_8_infectados&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe width=&#34;900&#34; height=&#34;700&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/7.embed&#34;&gt;&lt;/iframe&gt;
+&lt;iframe width=100% height=&#34;700&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/7.embed&#34;&gt;&lt;/iframe&gt;
 
-&lt;h2 id=&#34;numero-de-casos-confirmados-en-colombia&#34;&gt;Numero de Casos Confirmados en Colombia&lt;/h2&gt;
+&lt;h1 id=&#34;animacion-del-mapa-de-evolucion-temporal-del-codiv-19&#34;&gt;Animacion del Mapa de Evolucion Temporal del Codiv 19&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;])
+confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;strftime(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%m/&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/%Y&amp;#39;&lt;/span&gt;)
+confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;size&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pow(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;)
+
+fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;scatter_geo(confirmed_melt, locations&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Country/Region&amp;#34;&lt;/span&gt;, locationmode&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;country names&amp;#39;&lt;/span&gt;, 
+                     color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Confirmados&amp;#34;&lt;/span&gt;, size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;size&amp;#39;&lt;/span&gt;, hover_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Country/Region&amp;#34;&lt;/span&gt;, 
+                     range_color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, max(confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], 
+                     projection&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;natural earth&amp;#34;&lt;/span&gt;, animation_frame&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;, 
+                     title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Contagiados COVID 19 en el Tiempo&amp;#39;&lt;/span&gt;)
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(layout_coloraxis_showscale&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False)
+&lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;mapa_evolucion_temporal&amp;#39;, auto_open=True)&lt;/span&gt;
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;iframe width=100% height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/54.embed&#34;&gt;&lt;/iframe&gt;
+
+&lt;h1 id=&#34;numero-de-casos-confirmados-en-colombia&#34;&gt;Numero de Casos Confirmados en Colombia&lt;/h1&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;line(confirmed_group,x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt; , y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Colombia&amp;#39;&lt;/span&gt;,
               title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total Casos Confirmados de COVID 19 Colombia - {world.iloc[-1,0]}&amp;#39;&lt;/span&gt;)
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False,
@@ -605,7 +621,7 @@ fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=
                   xaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;}})
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;Colombia_general&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe width=&#34;900&#34; height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/9.embed&#34;&gt;&lt;/iframe&gt;
+&lt;iframe width=100% height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/9.embed&#34;&gt;&lt;/iframe&gt;
 
 &lt;h1 id=&#34;refencias&#34;&gt;Refencias&lt;/h1&gt;
 
