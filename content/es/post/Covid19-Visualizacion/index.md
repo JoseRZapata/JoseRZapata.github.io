@@ -27,6 +27,7 @@ image:
 #   Otherwise, set `projects = []`.
 projects: []
 
+markup: blackfriday
 ---
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb)
 
@@ -40,6 +41,8 @@ Informacion extraida de 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Reposit
 https://github.com/CSSEGISandData/COVID-19
 
 {{% toc %}}
+
+# Paquetes de Python y Datos
 
 ## Paquetes de Python
 ```
@@ -705,6 +708,7 @@ fig.show()
 <iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/9.embed"></iframe>
 
 # Refencias
+
 - https://github.com/CSSEGISandData/COVID-19
 - https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons
 - https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/
