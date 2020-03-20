@@ -95,11 +95,21 @@ os.environ[&amp;quot;SPARK_HOME&amp;quot;] = f&amp;quot;/content/{ver_spark}-bin
 &lt;pre&gt;&lt;code&gt;from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName(&amp;quot;Test_spark&amp;quot;).master(&amp;quot;local[*]&amp;quot;).getOrCreate()
 spark
-&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;
+&lt;p&gt;&lt;b&gt;SparkSession - in-memory&lt;/b&gt;&lt;/p&gt;
+&lt;div&gt;
+  &lt;p&gt;&lt;b&gt;SparkContext&lt;/b&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&#34;http://cf857c0401dc:4040&#34;&gt;Spark UI&lt;/a&gt;&lt;/p&gt;
+  &lt;dl&gt;
+      &lt;dt&gt;Version&lt;/dt&gt;
+        &lt;dd&gt;&lt;code&gt;v2.4.5&lt;/code&gt;&lt;/dd&gt;
+      &lt;dt&gt;Master&lt;/dt&gt;
+        &lt;dd&gt;&lt;code&gt;local[*]&lt;/code&gt;&lt;/dd&gt;
+      &lt;dt&gt;AppName&lt;/dt&gt;
+        &lt;dd&gt;&lt;code&gt;pyspark-shell&lt;/code&gt;&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;ejemplo-de-uso-de-pyspark&#34;&gt;Ejemplo de Uso de pyspark&lt;/h1&gt;
 &lt;p&gt;Leer archivo de prueba&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;archivo = &#39;./sample_data/california_housing_train.csv&#39;

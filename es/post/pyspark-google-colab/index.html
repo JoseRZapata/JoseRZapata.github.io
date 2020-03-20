@@ -569,7 +569,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    4 min de lectura
+    5 min de lectura
   </span>
   
 
@@ -687,11 +687,21 @@ os.environ[&quot;SPARK_HOME&quot;] = f&quot;/content/{ver_spark}-bin-hadoop2.7&q
 <pre><code>from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName(&quot;Test_spark&quot;).master(&quot;local[*]&quot;).getOrCreate()
 spark
-</code></pre><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+</code></pre><div>
+<p><b>SparkSession - in-memory</b></p>
+<div>
+  <p><b>SparkContext</b></p>
+  <p><a href="http://cf857c0401dc:4040">Spark UI</a></p>
+  <dl>
+      <dt>Version</dt>
+        <dd><code>v2.4.5</code></dd>
+      <dt>Master</dt>
+        <dd><code>local[*]</code></dd>
+      <dt>AppName</dt>
+        <dd><code>pyspark-shell</code></dd>
+  </dl>
+</div>
+</div>
 <h1 id="ejemplo-de-uso-de-pyspark">Ejemplo de Uso de pyspark</h1>
 <p>Leer archivo de prueba</p>
 <pre><code>archivo = './sample_data/california_housing_train.csv'
@@ -886,6 +896,8 @@ only showing top 20 rows
   <a class="badge badge-light" href="/es/tags/colab/">Colab</a>
   
   <a class="badge badge-light" href="/es/tags/data-science/">Data-Science</a>
+  
+  <a class="badge badge-light" href="/es/tags/jupyter-notebook/">Jupyter-notebook</a>
   
 </div>
 

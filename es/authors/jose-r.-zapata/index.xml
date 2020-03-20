@@ -5,12 +5,603 @@
     <link>https://joserzapata.github.io/es/authors/jose-r.-zapata/</link>
       <atom:link href="https://joserzapata.github.io/es/authors/jose-r.-zapata/index.xml" rel="self" type="application/rss+xml" />
     <description>Jose R. Zapata</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2020</copyright><lastBuildDate>Mon, 09 Mar 2020 23:00:43 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2020</copyright><lastBuildDate>Tue, 17 Mar 2020 17:03:57 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Jose R. Zapata</title>
       <link>https://joserzapata.github.io/es/authors/jose-r.-zapata/</link>
     </image>
+    
+    <item>
+      <title>Visualizacion Datos Coronavirus (COVID19) Mundial</title>
+      <link>https://joserzapata.github.io/es/post/covid19-visualizacion/</link>
+      <pubDate>Tue, 17 Mar 2020 17:03:57 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/post/covid19-visualizacion/</guid>
+      <description>&lt;p&gt;He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas actualizadas cada dia, y ademas practicar el uso de &lt;a href=&#34;https://plot.ly/&#34;&gt;plotly&lt;/a&gt; para visualizacion interactiva.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pueden interactuar con las graficas con el mouse y las Graficas se actualizaran
+diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Informacion extraida de 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34;&gt;https://github.com/CSSEGISandData/COVID-19&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Índice&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#paquetes-de-python&#34;&gt;Paquetes de Python&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#importar-datos&#34;&gt;Importar datos&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#datos-cssegisanddatacovid-19&#34;&gt;Datos CSSEGISandData/COVID-19&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#datos-generales-de-cada-dataframe&#34;&gt;Datos Generales de cada Dataframe&lt;/a&gt;
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&#34;#eliminar-ubicacion&#34;&gt;Eliminar Ubicacion&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#consolidar-datos&#34;&gt;Consolidar datos&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&#34;#datos-mundiales&#34;&gt;Datos Mundiales&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href=&#34;#valores-mundiales-de-confirmados-recuperados-y-muertos&#34;&gt;Valores Mundiales de Confirmados, Recuperados y Muertos&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos&#34;&gt;Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#total-casos-confirmados-de-covid-19-por-pais-excluyendo-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&#34;#numero-de-casos-confirmados-en-colombia&#34;&gt;Numero de Casos Confirmados en Colombia&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2 id=&#34;paquetes-de-python&#34;&gt;Paquetes de Python&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;!pip install chart_studio -q
+&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; plotly.express &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; px
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; chart_studio
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#chart-studio api&lt;/span&gt;
+username &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# your username&lt;/span&gt;
+api_key &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# your api api_key&lt;/span&gt;
+chart_studio&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;tools&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_credentials_file(username&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;username, api_key&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;api_key)
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; chart_studio.plotly &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; py
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;importar-datos&#34;&gt;Importar datos&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv&amp;#39;&lt;/span&gt;)
+recovered &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv&amp;#39;&lt;/span&gt;)
+death &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;datos-cssegisanddatacovid-19&#34;&gt;Datos CSSEGISandData/COVID-19&lt;/h2&gt;
+&lt;p&gt;Descripcion de los datos en ingles&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Province/State:&lt;/strong&gt; China - province name; US/Canada/Australia/ - city name, state/province name; Others - name of the event (e.g., &amp;ldquo;Diamond Princess&amp;rdquo; cruise ship); other countries - blank.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Country/Region:&lt;/strong&gt; country/region name conforming to WHO (will be updated).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Last Update:&lt;/strong&gt; MM/DD/YYYY HH:mm (24 hour format, in UTC).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Confirmed:&lt;/strong&gt; the number of confirmed cases. For Hubei Province: from Feb 13 (GMT +8), we report both clinically diagnosed and lab-confirmed cases. For lab-confirmed cases only (Before Feb 17), please refer to who_covid_19_situation_reports. For Italy, diagnosis standard might be changed since Feb 27 to &amp;ldquo;slow the growth of new case numbers.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Deaths:&lt;/strong&gt; the number of deaths.
+&lt;strong&gt;Recovered:&lt;/strong&gt; the number of recovered cases.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div&gt;
+&lt;style scoped&gt;
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+&lt;pre&gt;&lt;code&gt;.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;/style&gt;&lt;/p&gt;
+&lt;table border=&#34;1&#34; class=&#34;dataframe&#34;&gt;
+  &lt;thead&gt;
+    &lt;tr style=&#34;text-align: right;&#34;&gt;
+      &lt;th&gt;&lt;/th&gt;
+      &lt;th&gt;Country/Region&lt;/th&gt;
+      &lt;th&gt;1/22/20&lt;/th&gt;
+      &lt;th&gt;1/23/20&lt;/th&gt;
+      &lt;th&gt;1/24/20&lt;/th&gt;
+      &lt;th&gt;1/25/20&lt;/th&gt;
+      &lt;th&gt;1/26/20&lt;/th&gt;
+      &lt;th&gt;1/27/20&lt;/th&gt;
+      &lt;th&gt;1/28/20&lt;/th&gt;
+      &lt;th&gt;1/29/20&lt;/th&gt;
+      &lt;th&gt;1/30/20&lt;/th&gt;
+      &lt;th&gt;1/31/20&lt;/th&gt;
+      &lt;th&gt;2/1/20&lt;/th&gt;
+      &lt;th&gt;2/2/20&lt;/th&gt;
+      &lt;th&gt;2/3/20&lt;/th&gt;
+      &lt;th&gt;2/4/20&lt;/th&gt;
+      &lt;th&gt;2/5/20&lt;/th&gt;
+      &lt;th&gt;2/6/20&lt;/th&gt;
+      &lt;th&gt;2/7/20&lt;/th&gt;
+      &lt;th&gt;2/8/20&lt;/th&gt;
+      &lt;th&gt;2/9/20&lt;/th&gt;
+      &lt;th&gt;2/10/20&lt;/th&gt;
+      &lt;th&gt;2/11/20&lt;/th&gt;
+      &lt;th&gt;2/12/20&lt;/th&gt;
+      &lt;th&gt;2/13/20&lt;/th&gt;
+      &lt;th&gt;2/14/20&lt;/th&gt;
+      &lt;th&gt;2/15/20&lt;/th&gt;
+      &lt;th&gt;2/16/20&lt;/th&gt;
+      &lt;th&gt;2/17/20&lt;/th&gt;
+      &lt;th&gt;2/18/20&lt;/th&gt;
+      &lt;th&gt;2/19/20&lt;/th&gt;
+      &lt;th&gt;2/20/20&lt;/th&gt;
+      &lt;th&gt;2/21/20&lt;/th&gt;
+      &lt;th&gt;2/22/20&lt;/th&gt;
+      &lt;th&gt;2/23/20&lt;/th&gt;
+      &lt;th&gt;2/24/20&lt;/th&gt;
+      &lt;th&gt;2/25/20&lt;/th&gt;
+      &lt;th&gt;2/26/20&lt;/th&gt;
+      &lt;th&gt;2/27/20&lt;/th&gt;
+      &lt;th&gt;2/28/20&lt;/th&gt;
+      &lt;th&gt;2/29/20&lt;/th&gt;
+      &lt;th&gt;3/1/20&lt;/th&gt;
+      &lt;th&gt;3/2/20&lt;/th&gt;
+      &lt;th&gt;3/3/20&lt;/th&gt;
+      &lt;th&gt;3/4/20&lt;/th&gt;
+      &lt;th&gt;3/5/20&lt;/th&gt;
+      &lt;th&gt;3/6/20&lt;/th&gt;
+      &lt;th&gt;3/7/20&lt;/th&gt;
+      &lt;th&gt;3/8/20&lt;/th&gt;
+      &lt;th&gt;3/9/20&lt;/th&gt;
+      &lt;th&gt;3/10/20&lt;/th&gt;
+      &lt;th&gt;3/11/20&lt;/th&gt;
+      &lt;th&gt;3/12/20&lt;/th&gt;
+      &lt;th&gt;3/13/20&lt;/th&gt;
+      &lt;th&gt;3/14/20&lt;/th&gt;
+      &lt;th&gt;3/15/20&lt;/th&gt;
+      &lt;th&gt;3/16/20&lt;/th&gt;
+      &lt;th&gt;3/17/20&lt;/th&gt;
+      &lt;th&gt;3/18/20&lt;/th&gt;
+      &lt;th&gt;3/19/20&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;th&gt;0&lt;/th&gt;
+      &lt;td&gt;Thailand&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;14&lt;/td&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;32&lt;/td&gt;
+      &lt;td&gt;32&lt;/td&gt;
+      &lt;td&gt;32&lt;/td&gt;
+      &lt;td&gt;33&lt;/td&gt;
+      &lt;td&gt;33&lt;/td&gt;
+      &lt;td&gt;33&lt;/td&gt;
+      &lt;td&gt;33&lt;/td&gt;
+      &lt;td&gt;33&lt;/td&gt;
+      &lt;td&gt;34&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;35&lt;/td&gt;
+      &lt;td&gt;37&lt;/td&gt;
+      &lt;td&gt;40&lt;/td&gt;
+      &lt;td&gt;40&lt;/td&gt;
+      &lt;td&gt;41&lt;/td&gt;
+      &lt;td&gt;42&lt;/td&gt;
+      &lt;td&gt;42&lt;/td&gt;
+      &lt;td&gt;43&lt;/td&gt;
+      &lt;td&gt;43&lt;/td&gt;
+      &lt;td&gt;43&lt;/td&gt;
+      &lt;td&gt;47&lt;/td&gt;
+      &lt;td&gt;48&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;53&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;70&lt;/td&gt;
+      &lt;td&gt;75&lt;/td&gt;
+      &lt;td&gt;82&lt;/td&gt;
+      &lt;td&gt;114&lt;/td&gt;
+      &lt;td&gt;147&lt;/td&gt;
+      &lt;td&gt;177&lt;/td&gt;
+      &lt;td&gt;212&lt;/td&gt;
+      &lt;td&gt;272&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;1&lt;/th&gt;
+      &lt;td&gt;Japan&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+      &lt;td&gt;15&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;20&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;45&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;26&lt;/td&gt;
+      &lt;td&gt;26&lt;/td&gt;
+      &lt;td&gt;26&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;29&lt;/td&gt;
+      &lt;td&gt;43&lt;/td&gt;
+      &lt;td&gt;59&lt;/td&gt;
+      &lt;td&gt;66&lt;/td&gt;
+      &lt;td&gt;74&lt;/td&gt;
+      &lt;td&gt;84&lt;/td&gt;
+      &lt;td&gt;94&lt;/td&gt;
+      &lt;td&gt;105&lt;/td&gt;
+      &lt;td&gt;122&lt;/td&gt;
+      &lt;td&gt;147&lt;/td&gt;
+      &lt;td&gt;159&lt;/td&gt;
+      &lt;td&gt;170&lt;/td&gt;
+      &lt;td&gt;189&lt;/td&gt;
+      &lt;td&gt;214&lt;/td&gt;
+      &lt;td&gt;228&lt;/td&gt;
+      &lt;td&gt;241&lt;/td&gt;
+      &lt;td&gt;256&lt;/td&gt;
+      &lt;td&gt;274&lt;/td&gt;
+      &lt;td&gt;293&lt;/td&gt;
+      &lt;td&gt;331&lt;/td&gt;
+      &lt;td&gt;360&lt;/td&gt;
+      &lt;td&gt;420&lt;/td&gt;
+      &lt;td&gt;461&lt;/td&gt;
+      &lt;td&gt;502&lt;/td&gt;
+      &lt;td&gt;511&lt;/td&gt;
+      &lt;td&gt;581&lt;/td&gt;
+      &lt;td&gt;639&lt;/td&gt;
+      &lt;td&gt;639&lt;/td&gt;
+      &lt;td&gt;701&lt;/td&gt;
+      &lt;td&gt;773&lt;/td&gt;
+      &lt;td&gt;839&lt;/td&gt;
+      &lt;td&gt;825&lt;/td&gt;
+      &lt;td&gt;878&lt;/td&gt;
+      &lt;td&gt;889&lt;/td&gt;
+      &lt;td&gt;924&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;2&lt;/th&gt;
+      &lt;td&gt;Singapore&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;5&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;13&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;24&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;28&lt;/td&gt;
+      &lt;td&gt;30&lt;/td&gt;
+      &lt;td&gt;33&lt;/td&gt;
+      &lt;td&gt;40&lt;/td&gt;
+      &lt;td&gt;45&lt;/td&gt;
+      &lt;td&gt;47&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;58&lt;/td&gt;
+      &lt;td&gt;67&lt;/td&gt;
+      &lt;td&gt;72&lt;/td&gt;
+      &lt;td&gt;75&lt;/td&gt;
+      &lt;td&gt;77&lt;/td&gt;
+      &lt;td&gt;81&lt;/td&gt;
+      &lt;td&gt;84&lt;/td&gt;
+      &lt;td&gt;84&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+      &lt;td&gt;85&lt;/td&gt;
+      &lt;td&gt;89&lt;/td&gt;
+      &lt;td&gt;89&lt;/td&gt;
+      &lt;td&gt;91&lt;/td&gt;
+      &lt;td&gt;93&lt;/td&gt;
+      &lt;td&gt;93&lt;/td&gt;
+      &lt;td&gt;93&lt;/td&gt;
+      &lt;td&gt;102&lt;/td&gt;
+      &lt;td&gt;106&lt;/td&gt;
+      &lt;td&gt;108&lt;/td&gt;
+      &lt;td&gt;110&lt;/td&gt;
+      &lt;td&gt;110&lt;/td&gt;
+      &lt;td&gt;117&lt;/td&gt;
+      &lt;td&gt;130&lt;/td&gt;
+      &lt;td&gt;138&lt;/td&gt;
+      &lt;td&gt;150&lt;/td&gt;
+      &lt;td&gt;150&lt;/td&gt;
+      &lt;td&gt;160&lt;/td&gt;
+      &lt;td&gt;178&lt;/td&gt;
+      &lt;td&gt;178&lt;/td&gt;
+      &lt;td&gt;200&lt;/td&gt;
+      &lt;td&gt;212&lt;/td&gt;
+      &lt;td&gt;226&lt;/td&gt;
+      &lt;td&gt;243&lt;/td&gt;
+      &lt;td&gt;266&lt;/td&gt;
+      &lt;td&gt;313&lt;/td&gt;
+      &lt;td&gt;345&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;3&lt;/th&gt;
+      &lt;td&gt;Nepal&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;th&gt;4&lt;/th&gt;
+      &lt;td&gt;Malaysia&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;8&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;12&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;16&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;18&lt;/td&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;19&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;22&lt;/td&gt;
+      &lt;td&gt;23&lt;/td&gt;
+      &lt;td&gt;23&lt;/td&gt;
+      &lt;td&gt;25&lt;/td&gt;
+      &lt;td&gt;29&lt;/td&gt;
+      &lt;td&gt;29&lt;/td&gt;
+      &lt;td&gt;36&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;50&lt;/td&gt;
+      &lt;td&gt;83&lt;/td&gt;
+      &lt;td&gt;93&lt;/td&gt;
+      &lt;td&gt;99&lt;/td&gt;
+      &lt;td&gt;117&lt;/td&gt;
+      &lt;td&gt;129&lt;/td&gt;
+      &lt;td&gt;149&lt;/td&gt;
+      &lt;td&gt;149&lt;/td&gt;
+      &lt;td&gt;197&lt;/td&gt;
+      &lt;td&gt;238&lt;/td&gt;
+      &lt;td&gt;428&lt;/td&gt;
+      &lt;td&gt;566&lt;/td&gt;
+      &lt;td&gt;673&lt;/td&gt;
+      &lt;td&gt;790&lt;/td&gt;
+      &lt;td&gt;900&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/div&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#recovered.head()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#death.head()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;datos-generales-de-cada-dataframe&#34;&gt;Datos Generales de cada Dataframe&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#confirmed.info()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#recovered.info()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#death.info()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;eliminar-ubicacion&#34;&gt;Eliminar Ubicacion&lt;/h3&gt;
+&lt;p&gt;Se va realizar un analisis general de los datos y No se van a tomar los datos geograficos de &lt;em&gt;latitud&lt;/em&gt;, &lt;em&gt;longitud&lt;/em&gt; y los datos de &lt;em&gt;Province/State&lt;/em&gt; estan incompletos.&lt;/p&gt;
+&lt;p&gt;Solo se realizara un analisis por pais entonces se eliminaran las columnas mencionadas anteriormente&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Lat&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Long&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Province/State&amp;#39;&lt;/span&gt;])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;recovered &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; recovered&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Lat&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Long&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Province/State&amp;#39;&lt;/span&gt;])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;death &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Lat&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Long&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Province/State&amp;#39;&lt;/span&gt;])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;consolidar-datos&#34;&gt;Consolidar datos&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(by&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;)
+confirmed_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;aggregate(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum)
+confirmed_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;T
+confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;
+confirmed_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reset_index()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;recovered_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; recovered&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(by&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;)
+recovered_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; recovered_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;aggregate(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum)
+recovered_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; recovered_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;T
+recovered_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;
+recovered_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  recovered_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reset_index()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;death_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(by&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;)
+death_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;aggregate(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum)
+death_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;T
+death_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;
+death_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  death_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reset_index()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;datos-mundiales&#34;&gt;Datos Mundiales&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Numero de Casos confirmados por dia en el mundo&lt;/span&gt;
+column_names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Confirmados&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Recuperados&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Muertos&amp;#34;&lt;/span&gt;]
+world &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame(columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; column_names)
+world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;]
+world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; recovered_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#world.tail()&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;visualizacion-con-plotly&#34;&gt;Visualizacion con Plotly&lt;/h1&gt;
+&lt;h2 id=&#34;valores-mundiales-de-confirmados-recuperados-y-muertos&#34;&gt;Valores Mundiales de Confirmados, Recuperados y Muertos&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;temp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame(world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,:])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;T
+tm &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; temp&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[ &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Confirmados&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Recuperados&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Muertos&amp;#34;&lt;/span&gt;])
+fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;bar(tm, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;variable&amp;#34;&lt;/span&gt; , y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;variable&amp;#39;&lt;/span&gt;,
+             color_discrete_sequence&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;blue&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;red&amp;#34;&lt;/span&gt;],
+             height&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;400&lt;/span&gt;, width&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;600&lt;/span&gt;,
+             title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total de Casos Mundiales de COVID 19 - {str(world.iloc[-1,0])}&amp;#39;&lt;/span&gt;)
+
+&lt;span style=&#34;color:#75715e&#34;&gt;# Agregar el valor de cada columna en la parte superior&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(len(tm[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;variable&amp;#39;&lt;/span&gt;])):
+  fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_annotation(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;tm&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[n,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;], y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;tm&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[n,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], text&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;str(tm&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[n,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;]),
+                     showarrow&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True, ax&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, ay&lt;span style=&#34;color:#f92672&#34;&gt;=-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;)
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False,
+                  yaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Numero de Personas&amp;#34;&lt;/span&gt;}}, &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar texto eje y&lt;/span&gt;
+                  xaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;}} &lt;span style=&#34;color:#75715e&#34;&gt;#Esconder nombre eje x&lt;/span&gt;
+                  )
+&lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_general&amp;#39;, auto_open=True)&lt;/span&gt;
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;iframe width=&#34;900&#34; height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/1.embed&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos&#34;&gt;Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;world_melt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns)[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:], var_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;None)
+
+fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;line(world_melt, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;,
+              color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;variable&amp;#39;&lt;/span&gt;,
+              title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total de Casos en el tiempo de COVID 19 - {world.iloc[-1,0]}&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; list(world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns)[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]:
+  fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_annotation(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;], y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loc[world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],n],
+                     text&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;n,
+                     showarrow&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True, ax&lt;span style=&#34;color:#f92672&#34;&gt;=-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, ay&lt;span style=&#34;color:#f92672&#34;&gt;=-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;)
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; False,
+                  yaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Numero de Personas&amp;#34;&lt;/span&gt;}}, &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar texto eje y&lt;/span&gt;
+                  )
+&lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_serie&amp;#39;, auto_open=True)&lt;/span&gt;
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;iframe width=&#34;900&#34; height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/3.embed&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;total-casos-confirmados-de-covid-19-por-pais-excluyendo-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;China&amp;#34;&lt;/span&gt;])
+&lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar el nombre de la columna&lt;/span&gt;
+df1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;rename(columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;}, inplace &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True) 
+df_melt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(df1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns)[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:], var_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;None)
+fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;line(df_melt, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt; , y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;,
+              color_discrete_sequence&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;colors&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;qualitative&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;G10,
+              title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total Casos Confirmados de COVID 19 por Pais (Excluyendo China) - {world.iloc[-1,0]}&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#75715e&#34;&gt;# 8 paises mas infectados&lt;/span&gt;
+fecha &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df1[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;#obtener la fecha del ultimo dato&lt;/span&gt;
+paises &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:] &lt;span style=&#34;color:#75715e&#34;&gt;#obtener la serie sin el primer dato, fecha&lt;/span&gt;
+paises&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sort_values(ascending&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False, inplace&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True)
+mas_infectados&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;):
+  fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_annotation(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;fecha, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;paises[n], text&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;paises&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index[n],
+                     showarrow&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True, ax&lt;span style=&#34;color:#f92672&#34;&gt;=+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;, ay&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+  mas_infectados&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(paises&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index[n])
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False,
+                  yaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Numero de Personas&amp;#34;&lt;/span&gt;}}, &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar texto eje y&lt;/span&gt;
+                  )
+&lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_no_china&amp;#39;, auto_open=True)&lt;/span&gt;
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;iframe width=&#34;900&#34; height=&#34;700&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/5.embed&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;China&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;mas_infectados)
+&lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar el nombre de la columna&lt;/span&gt;
+df2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;rename(columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;}, inplace &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True) 
+
+df_melt2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(df2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns)[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:], var_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;None)
+fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;line(df_melt2, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt; , y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;,
+              color_discrete_sequence&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;colors&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;qualitative&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;G10,
+              title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados) - {world.iloc[-1,0]}&amp;#39;&lt;/span&gt;)
+
+fecha &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;#obtener la fecha del ultimo dato&lt;/span&gt;
+paises &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:] &lt;span style=&#34;color:#75715e&#34;&gt;#obtener la serie sin el primer dato, fecha&lt;/span&gt;
+paises&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sort_values(ascending&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False, inplace&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;):
+  fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_annotation(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;fecha, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;paises[n], text&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;paises&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index[n],
+                     showarrow&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True, ax&lt;span style=&#34;color:#f92672&#34;&gt;=+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;, ay&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False,
+                  yaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Numero de Personas&amp;#34;&lt;/span&gt;}}, &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar texto eje y&lt;/span&gt;
+                  )
+&lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_no_8_infectados&amp;#39;, auto_open=True)&lt;/span&gt;
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;iframe width=&#34;900&#34; height=&#34;700&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/7.embed&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;numero-de-casos-confirmados-en-colombia&#34;&gt;Numero de Casos Confirmados en Colombia&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;line(confirmed_group,x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt; , y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Colombia&amp;#39;&lt;/span&gt;,
+              title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total Casos Confirmados de COVID 19 Colombia - {world.iloc[-1,0]}&amp;#39;&lt;/span&gt;)
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False,
+                  yaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Numero de Personas&amp;#34;&lt;/span&gt;}}, &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar texto eje y&lt;/span&gt;
+                  xaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;}})
+&lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;Colombia_general&amp;#39;, auto_open=True)&lt;/span&gt;
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;iframe width=&#34;900&#34; height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/9.embed&#34;&gt;&lt;/iframe&gt;
+&lt;h1 id=&#34;refencias&#34;&gt;Refencias&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34;&gt;https://github.com/CSSEGISandData/COVID-19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons&#34;&gt;https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/&#34;&gt;https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus&#34;&gt;https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200&#34;&gt;https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Pyspark con Google Colab</title>
@@ -95,11 +686,21 @@ os.environ[&amp;quot;SPARK_HOME&amp;quot;] = f&amp;quot;/content/{ver_spark}-bin
 &lt;pre&gt;&lt;code&gt;from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName(&amp;quot;Test_spark&amp;quot;).master(&amp;quot;local[*]&amp;quot;).getOrCreate()
 spark
-&lt;/code&gt;&lt;/pre&gt;&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;!-- raw HTML omitted --&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;
+&lt;p&gt;&lt;b&gt;SparkSession - in-memory&lt;/b&gt;&lt;/p&gt;
+&lt;div&gt;
+  &lt;p&gt;&lt;b&gt;SparkContext&lt;/b&gt;&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&#34;http://cf857c0401dc:4040&#34;&gt;Spark UI&lt;/a&gt;&lt;/p&gt;
+  &lt;dl&gt;
+      &lt;dt&gt;Version&lt;/dt&gt;
+        &lt;dd&gt;&lt;code&gt;v2.4.5&lt;/code&gt;&lt;/dd&gt;
+      &lt;dt&gt;Master&lt;/dt&gt;
+        &lt;dd&gt;&lt;code&gt;local[*]&lt;/code&gt;&lt;/dd&gt;
+      &lt;dt&gt;AppName&lt;/dt&gt;
+        &lt;dd&gt;&lt;code&gt;pyspark-shell&lt;/code&gt;&lt;/dd&gt;
+  &lt;/dl&gt;
+&lt;/div&gt;
+&lt;/div&gt;
 &lt;h1 id=&#34;ejemplo-de-uso-de-pyspark&#34;&gt;Ejemplo de Uso de pyspark&lt;/h1&gt;
 &lt;p&gt;Leer archivo de prueba&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;archivo = &#39;./sample_data/california_housing_train.csv&#39;

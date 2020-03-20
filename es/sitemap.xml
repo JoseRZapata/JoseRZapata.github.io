@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://joserzapata.github.io/es/authors/</loc>
-    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://joserzapata.github.io/es/categories/</loc>
-    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -33,13 +33,8 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/es/tags/colab/</loc>
-    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/es/tags/data-science/</loc>
-    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -54,12 +49,12 @@
   
   <url>
     <loc>https://joserzapata.github.io/es/categories/data-science/</loc>
-    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://joserzapata.github.io/es/authors/jose-r.-zapata/</loc>
-    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -73,8 +68,23 @@
   </url>
   
   <url>
+    <loc>https://joserzapata.github.io/es/tags/jupyter-notebook/</loc>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/jupyter-notebook/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/jupyter-notebook/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joserzapata.github.io/es/post/</loc>
-    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -88,18 +98,8 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/es/tags/pyspark/</loc>
-    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/es/post/pyspark-google-colab/</loc>
-    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/es/tags/python/</loc>
-    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -114,7 +114,7 @@
   
   <url>
     <loc>https://joserzapata.github.io/es/tags/</loc>
-    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -125,6 +125,26 @@
                 hreflang="es"
                 href="https://joserzapata.github.io/es/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/post/covid19-visualizacion/</loc>
+    <lastmod>2020-03-17T17:03:57-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/tags/colab/</loc>
+    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/tags/pyspark/</loc>
+    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/post/pyspark-google-colab/</loc>
+    <lastmod>2020-03-09T23:00:43-05:00</lastmod>
   </url>
   
   <url>
@@ -139,21 +159,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/talk/pycon2020/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/es/tags/jupyter-notebook/</loc>
-    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/jupyter-notebook/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/jupyter-notebook/"
                 />
   </url>
   
