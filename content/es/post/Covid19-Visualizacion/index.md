@@ -574,7 +574,7 @@ fig.layout.update(showlegend=False,
 fig.show()
 ```
 
-<iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
+<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
 
 
 ## Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos
@@ -598,7 +598,7 @@ fig.layout.update(showlegend = False,
 fig.show()
 ```
 
-<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/3.embed"></iframe>
+<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/3.embed"></iframe>
 
 
 ## Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)
@@ -628,7 +628,7 @@ fig.layout.update(showlegend=False,
 #py.plot(fig, filename = 'total_casos_no_china', auto_open=True)
 fig.show()
 ```
-<iframe width="900" height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/5.embed"></iframe>
+<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/5.embed"></iframe>
 
 
 ## Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)
@@ -657,7 +657,7 @@ fig.layout.update(showlegend=False,
 fig.show()
 ```
 
-<iframe width="900" height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/7.embed"></iframe>
+<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/7.embed"></iframe>
 
 
 ## Numero de Casos Confirmados en Colombia
@@ -671,7 +671,7 @@ fig.layout.update(showlegend=False,
 #py.plot(fig, filename = 'Colombia_general', auto_open=True)
 fig.show()
 ```
-<iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/9.embed"></iframe>
+<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/9.embed"></iframe>
 
 # Refencias
 
