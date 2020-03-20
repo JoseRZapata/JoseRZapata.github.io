@@ -644,8 +644,7 @@ diariamente con los nuevos datos!</strong></p>
 <ul>
 <li><a href="#paquetes-de-python">Paquetes de Python</a></li>
 <li><a href="#importar-datos">Importar datos</a></li>
-<li><a href="#datos-cssegisanddata-covid-19">Datos CSSEGISandData/COVID-19</a></li>
-<li><a href="#datos-generales-de-cada-dataframe">Datos Generales de cada Dataframe</a>
+<li><a href="#datos-cssegisanddata-covid-19">Datos CSSEGISandData/COVID-19</a>
 <ul>
 <li><a href="#eliminar-ubicacion">Eliminar Ubicacion</a></li>
 <li><a href="#consolidar-datos">Consolidar datos</a></li>
@@ -1087,9 +1086,7 @@ death <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span
   </tbody>
 </table>
 </div>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#recovered.head()</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#death.head()</span></code></pre></div>
-<h2 id="datos-generales-de-cada-dataframe">Datos Generales de cada Dataframe</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#confirmed.info()</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#recovered.info()</span></code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#death.info()</span></code></pre></div>
+
 <h3 id="eliminar-ubicacion">Eliminar Ubicacion</h3>
 
 <p>Se va realizar un analisis general de los datos y No se van a tomar los datos geograficos de <em>latitud</em>, <em>longitud</em> y los datos de <em>Province/State</em> estan incompletos.</p>
@@ -1117,7 +1114,7 @@ world <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span
 world[<span style="color:#e6db74">&#39;Fecha&#39;</span>] <span style="color:#f92672">=</span> confirmed_group[<span style="color:#e6db74">&#39;date&#39;</span>]
 world[<span style="color:#e6db74">&#39;Confirmados&#39;</span>] <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)
 world[<span style="color:#e6db74">&#39;Recuperados&#39;</span>] <span style="color:#f92672">=</span> recovered_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)
-world[<span style="color:#e6db74">&#39;Muertos&#39;</span>] <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#world.tail()</span></code></pre></div>
+world[<span style="color:#e6db74">&#39;Muertos&#39;</span>] <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)</code></pre></div>
 <h1 id="visualizacion-con-plotly">Visualizacion con Plotly</h1>
 
 <h2 id="valores-mundiales-de-confirmados-recuperados-y-muertos">Valores Mundiales de Confirmados, Recuperados y Muertos</h2>
