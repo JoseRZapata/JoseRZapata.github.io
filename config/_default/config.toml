@@ -71,3 +71,6 @@ ignoreFiles = ["\\.ipynb$", ".ipynb_checkpoints$", "\\.Rmd$", "\\.Rmarkdown$", "
 [marketing]
   GoogleAnalytics = "UA-112535090-1"
 
+#html  
+[markup.goldmark.renderer]
+unsafe= true
