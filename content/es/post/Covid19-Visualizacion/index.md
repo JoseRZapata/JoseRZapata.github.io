@@ -28,6 +28,8 @@ image:
 projects: []
 
 ---
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb)
+
 He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas actualizadas cada dia, y ademas practicar el uso de [plotly](https://plot.ly/) para visualizacion interactiva.
 
 **Pueden interactuar con las graficas con el mouse y las Graficas se actualizaran 
@@ -581,7 +583,6 @@ world['Muertos'] = death_group.iloc[:,1:].sum(1)
 # Visualizacion con Plotly
 
 ## Valores Mundiales de Confirmados, Recuperados y Muertos
-
 
 ```python
 temp = pd.DataFrame(world.iloc[-1,:]).T
