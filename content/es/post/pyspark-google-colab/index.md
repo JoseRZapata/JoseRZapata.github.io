@@ -5,7 +5,7 @@ title: "Pyspark con Google Colab"
 subtitle: "Usando pyspark en google colab"
 summary: "Configuracion de Google Colab para usar pyspark"
 authors: ["Jose R. Zapata"]
-tags: ["Python","Pyspark","Colab", "Data-Science"]
+tags: ["Python","Pyspark","Colab", "Data-Science" ,"Jupyter-notebook"]
 categories: ["Data-Science"]
 date: 2020-03-09T23:00:43-05:00
 lastmod: 2020-03-09T23:00:43-05:00
