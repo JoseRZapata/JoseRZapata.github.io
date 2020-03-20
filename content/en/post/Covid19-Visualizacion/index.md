@@ -486,35 +486,6 @@ confirmed.head()
 </table>
 </div>
 
-
-
-
-```python
-#recovered.head()
-```
-
-
-```python
-#death.head()
-```
-
-## Datos Generales de cada Dataframe
-
-
-```python
-#confirmed.info()
-```
-
-
-```python
-#recovered.info()
-```
-
-
-```python
-#death.info()
-```
-
 ### Eliminar Ubicacion
 Se va realizar un analisis general de los datos y No se van a tomar los datos geograficos de *latitud*, *longitud* y los datos de *Province/State* estan incompletos.
 
@@ -576,11 +547,6 @@ world['Fecha'] = confirmed_group['date']
 world['Confirmados'] = confirmed_group.iloc[:,1:].sum(1)
 world['Recuperados'] = recovered_group.iloc[:,1:].sum(1)
 world['Muertos'] = death_group.iloc[:,1:].sum(1)
-```
-
-
-```python
-#world.tail()
 ```
 
 # Visualizacion con Plotly
