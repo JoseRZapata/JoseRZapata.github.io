@@ -659,8 +659,27 @@ fig.show()
 
 <iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/7.embed"></iframe>
 
+# Animacion del Mapa de Evolucion Temporal del Codiv 19
 
-## Numero de Casos Confirmados en Colombia
+```python
+confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
+confirmed_melt['Fecha'] = confirmed_melt['Fecha'].dt.strftime('%m/%d/%Y')
+confirmed_melt['size'] = confirmed_melt['Confirmados'].pow(0.3)
+
+fig = px.scatter_geo(confirmed_melt, locations="Country/Region", locationmode='country names', 
+                     color="Confirmados", size='size', hover_name="Country/Region", 
+                     range_color= [0, max(confirmed_melt['Confirmados'])+2], 
+                     projection="natural earth", animation_frame="Fecha", 
+                     title='Contagiados COVID 19 en el Tiempo')
+fig.update(layout_coloraxis_showscale=False)
+#py.plot(fig, filename = 'mapa_evolucion_temporal', auto_open=True)
+fig.show()
+```
+
+<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/54.embed"></iframe>
+
+
+# Numero de Casos Confirmados en Colombia
 
 ```python
 fig = px.line(confirmed_group,x='date' , y='Colombia',
