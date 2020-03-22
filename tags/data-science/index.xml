@@ -44,15 +44,18 @@ diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;#datos-mundiales&#34;&gt;Datos Mundiales&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#visualizacion-con-plotly&#34;&gt;Visualizacion con Plotly&lt;/a&gt;
+&lt;li&gt;&lt;a href=&#34;#covid19-en-el-mundo&#34;&gt;Covid19 en el Mundo&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#valores-mundiales-de-confirmados-recuperados-y-muertos&#34;&gt;Valores Mundiales de Confirmados, Recuperados y Muertos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos&#34;&gt;Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#total-casos-confirmados-de-covid-19-por-pais-excluyendo-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#animacion-del-mapa-de-evolucion-temporal-del-codiv-19&#34;&gt;Animacion del Mapa de Evolucion Temporal del Codiv 19&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#numero-de-casos-confirmados-en-colombia&#34;&gt;Numero de Casos Confirmados en Colombia&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#covid-19-en-colombia&#34;&gt;Covid 19 en Colombia&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#numero-de-casos-covid-19-en-colombia&#34;&gt;Numero de Casos COVID 19 en Colombia&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#refencias&#34;&gt;Refencias&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;&lt;/p&gt;
@@ -509,9 +512,13 @@ world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span
 world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
 world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; recovered_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
 world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h1 id=&#34;visualizacion-con-plotly&#34;&gt;Visualizacion con Plotly&lt;/h1&gt;
+&lt;h1 id=&#34;covid19-en-el-mundo&#34;&gt;Covid19 en el Mundo&lt;/h1&gt;
+
+&lt;p&gt;Visualizacion con Plotly&lt;/p&gt;
 
 &lt;h2 id=&#34;valores-mundiales-de-confirmados-recuperados-y-muertos&#34;&gt;Valores Mundiales de Confirmados, Recuperados y Muertos&lt;/h2&gt;
+
+&lt;iframe width=100% height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/1.embed&#34;&gt;&lt;/iframe&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;temp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame(world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,:])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;T
 tm &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; temp&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[ &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Confirmados&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Recuperados&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Muertos&amp;#34;&lt;/span&gt;])
 fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;bar(tm, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;variable&amp;#34;&lt;/span&gt; , y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;variable&amp;#39;&lt;/span&gt;,
@@ -530,9 +537,9 @@ fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=
 &lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_general&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe width=100% height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/1.embed&#34;&gt;&lt;/iframe&gt;
-
 &lt;h2 id=&#34;progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos&#34;&gt;Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos&lt;/h2&gt;
+
+&lt;iframe width=100% height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/3.embed&#34;&gt;&lt;/iframe&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;world_melt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns)[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:], var_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;None)
 
 fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;line(world_melt, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;,
@@ -548,9 +555,9 @@ fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=
 &lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_serie&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe width=100% height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/3.embed&#34;&gt;&lt;/iframe&gt;
-
 &lt;h2 id=&#34;total-casos-confirmados-de-covid-19-por-pais-excluyendo-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)&lt;/h2&gt;
+
+&lt;iframe width=100% height=&#34;700&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/5.embed&#34;&gt;&lt;/iframe&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;China&amp;#34;&lt;/span&gt;])
 &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar el nombre de la columna&lt;/span&gt;
 df1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;rename(columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;}, inplace &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True) 
@@ -573,9 +580,9 @@ fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=
 &lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_no_china&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe width=100% height=&#34;700&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/5.embed&#34;&gt;&lt;/iframe&gt;
-
 &lt;h2 id=&#34;total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)&lt;/h2&gt;
+
+&lt;iframe width=100% height=&#34;700&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/7.embed&#34;&gt;&lt;/iframe&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;China&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;mas_infectados)
 &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar el nombre de la columna&lt;/span&gt;
 df2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;rename(columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;}, inplace &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True) 
@@ -596,9 +603,9 @@ fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=
                   )
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_no_8_infectados&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe width=100% height=&#34;700&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/7.embed&#34;&gt;&lt;/iframe&gt;
+&lt;h2 id=&#34;animacion-del-mapa-de-evolucion-temporal-del-codiv-19&#34;&gt;Animacion del Mapa de Evolucion Temporal del Codiv 19&lt;/h2&gt;
 
-&lt;h1 id=&#34;animacion-del-mapa-de-evolucion-temporal-del-codiv-19&#34;&gt;Animacion del Mapa de Evolucion Temporal del Codiv 19&lt;/h1&gt;
+&lt;iframe width=100% height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/54.embed&#34;&gt;&lt;/iframe&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;])
 confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;strftime(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%m/&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/%Y&amp;#39;&lt;/span&gt;)
 confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;size&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pow(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;)
@@ -611,19 +618,35 @@ fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(layout_coloraxis_showscale&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False)
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;mapa_evolucion_temporal&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe width=100% height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/54.embed&#34;&gt;&lt;/iframe&gt;
+&lt;h1 id=&#34;covid-19-en-colombia&#34;&gt;Covid 19 en Colombia&lt;/h1&gt;
 
-&lt;h1 id=&#34;numero-de-casos-confirmados-en-colombia&#34;&gt;Numero de Casos Confirmados en Colombia&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;line(confirmed_group,x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt; , y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Colombia&amp;#39;&lt;/span&gt;,
-              title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total Casos Confirmados de COVID 19 Colombia - {world.iloc[-1,0]}&amp;#39;&lt;/span&gt;)
+&lt;h2 id=&#34;numero-de-casos-covid-19-en-colombia&#34;&gt;Numero de Casos COVID 19 en Colombia&lt;/h2&gt;
+
+&lt;iframe width=100% height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/9.embed&#34;&gt;&lt;/iframe&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;column_names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Confirmados&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Recuperados&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Muertos&amp;#34;&lt;/span&gt;]
+colombia &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame(columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; column_names)
+colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;]
+colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Colombia&amp;#39;&lt;/span&gt;]
+colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; recovered_group[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Colombia&amp;#39;&lt;/span&gt;]
+colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death_group[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Colombia&amp;#39;&lt;/span&gt;]
+df_melt3 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; colombia&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(colombia&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns)[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:], var_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;None)
+fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;line(df_melt3, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt; , y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;variable&amp;#39;&lt;/span&gt;,
+              color_discrete_sequence&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;colors&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;qualitative&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;G10,
+              title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Corona virus (COVID 19) en Colombia - {colombia.iloc[-1,0]}&amp;#39;&lt;/span&gt;)
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_indicator( title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;, value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],
+                  mode &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;number+delta&amp;#34;&lt;/span&gt;, delta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt;: colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;
+                  ]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;relative&amp;#39;&lt;/span&gt;: True },domain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.25&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;75&lt;/span&gt;]})
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_indicator(title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;, value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],
+                  mode &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;number+delta&amp;#34;&lt;/span&gt;, delta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt;: colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;
+                  ]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;relative&amp;#39;&lt;/span&gt;: True },domain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.75&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.25&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;75&lt;/span&gt;]})
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False,
                   yaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Numero de Personas&amp;#34;&lt;/span&gt;}}, &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar texto eje y&lt;/span&gt;
                   xaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;}})
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;Colombia_general&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;iframe width=100% height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/9.embed&#34;&gt;&lt;/iframe&gt;
-
 &lt;h1 id=&#34;refencias&#34;&gt;Refencias&lt;/h1&gt;
+
+&lt;p&gt;Fuentes de datos, visualizaciones y analisis de datos.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34; target=&#34;_blank&#34;&gt;https://github.com/CSSEGISandData/COVID-19&lt;/a&gt;&lt;/li&gt;

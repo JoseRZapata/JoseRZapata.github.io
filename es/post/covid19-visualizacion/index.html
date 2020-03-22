@@ -651,15 +651,18 @@ diariamente con los nuevos datos!</strong></p>
 <li><a href="#datos-mundiales">Datos Mundiales</a></li>
 </ul></li>
 </ul></li>
-<li><a href="#visualizacion-con-plotly">Visualizacion con Plotly</a>
+<li><a href="#covid19-en-el-mundo">Covid19 en el Mundo</a>
 <ul>
 <li><a href="#valores-mundiales-de-confirmados-recuperados-y-muertos">Valores Mundiales de Confirmados, Recuperados y Muertos</a></li>
 <li><a href="#progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos">Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos</a></li>
 <li><a href="#total-casos-confirmados-de-covid-19-por-pais-excluyendo-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)</a></li>
 <li><a href="#total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)</a></li>
-</ul></li>
 <li><a href="#animacion-del-mapa-de-evolucion-temporal-del-codiv-19">Animacion del Mapa de Evolucion Temporal del Codiv 19</a></li>
-<li><a href="#numero-de-casos-confirmados-en-colombia">Numero de Casos Confirmados en Colombia</a></li>
+</ul></li>
+<li><a href="#covid-19-en-colombia">Covid 19 en Colombia</a>
+<ul>
+<li><a href="#numero-de-casos-covid-19-en-colombia">Numero de Casos COVID 19 en Colombia</a></li>
+</ul></li>
 <li><a href="#refencias">Refencias</a></li>
 </ul>
 </nav></p>
@@ -1116,9 +1119,13 @@ world[<span style="color:#e6db74">&#39;Fecha&#39;</span>] <span style="color:#f9
 world[<span style="color:#e6db74">&#39;Confirmados&#39;</span>] <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)
 world[<span style="color:#e6db74">&#39;Recuperados&#39;</span>] <span style="color:#f92672">=</span> recovered_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)
 world[<span style="color:#e6db74">&#39;Muertos&#39;</span>] <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)</code></pre></div>
-<h1 id="visualizacion-con-plotly">Visualizacion con Plotly</h1>
+<h1 id="covid19-en-el-mundo">Covid19 en el Mundo</h1>
+
+<p>Visualizacion con Plotly</p>
 
 <h2 id="valores-mundiales-de-confirmados-recuperados-y-muertos">Valores Mundiales de Confirmados, Recuperados y Muertos</h2>
+
+<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">temp <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(world<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,:])<span style="color:#f92672">.</span>T
 tm <span style="color:#f92672">=</span> temp<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Fecha&#34;</span>, value_vars<span style="color:#f92672">=</span>[ <span style="color:#e6db74">&#34;Confirmados&#34;</span>, <span style="color:#e6db74">&#34;Recuperados&#34;</span>,<span style="color:#e6db74">&#34;Muertos&#34;</span>])
 fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>bar(tm, x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;variable&#34;</span> , y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;value&#34;</span>, color<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;variable&#39;</span>,
@@ -1137,9 +1144,9 @@ fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span
 <span style="color:#75715e"># grabar grafica en chart-studio</span>
 <span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_general&#39;, auto_open=True)</span>
 fig<span style="color:#f92672">.</span>show()</code></pre></div>
-<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
-
 <h2 id="progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos">Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos</h2>
+
+<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/3.embed"></iframe>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">world_melt <span style="color:#f92672">=</span> world<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span>, value_vars<span style="color:#f92672">=</span> list(world<span style="color:#f92672">.</span>columns)[<span style="color:#ae81ff">1</span>:], var_name<span style="color:#f92672">=</span>None)
 
 fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>line(world_melt, x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Fecha&#34;</span>, y<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;value&#39;</span>,
@@ -1155,9 +1162,9 @@ fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span
 <span style="color:#75715e"># grabar grafica en chart-studio</span>
 <span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_serie&#39;, auto_open=True)</span>
 fig<span style="color:#f92672">.</span>show()</code></pre></div>
-<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/3.embed"></iframe>
-
 <h2 id="total-casos-confirmados-de-covid-19-por-pais-excluyendo-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)</h2>
+
+<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/5.embed"></iframe>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df1 <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;China&#34;</span>])
 <span style="color:#75715e"># Cambiar el nombre de la columna</span>
 df1<span style="color:#f92672">.</span>rename(columns <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;date&#39;</span>:<span style="color:#e6db74">&#39;Fecha&#39;</span>}, inplace <span style="color:#f92672">=</span> True) 
@@ -1180,9 +1187,9 @@ fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span
 <span style="color:#75715e"># grabar grafica en chart-studio</span>
 <span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_no_china&#39;, auto_open=True)</span>
 fig<span style="color:#f92672">.</span>show()</code></pre></div>
-<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/5.embed"></iframe>
-
 <h2 id="total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china">Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)</h2>
+
+<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/7.embed"></iframe>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">df2 <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;China&#34;</span>] <span style="color:#f92672">+</span>mas_infectados)
 <span style="color:#75715e"># Cambiar el nombre de la columna</span>
 df2<span style="color:#f92672">.</span>rename(columns <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;date&#39;</span>:<span style="color:#e6db74">&#39;Fecha&#39;</span>}, inplace <span style="color:#f92672">=</span> True) 
@@ -1203,9 +1210,9 @@ fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span
                   )
 <span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_no_8_infectados&#39;, auto_open=True)</span>
 fig<span style="color:#f92672">.</span>show()</code></pre></div>
-<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/7.embed"></iframe>
+<h2 id="animacion-del-mapa-de-evolucion-temporal-del-codiv-19">Animacion del Mapa de Evolucion Temporal del Codiv 19</h2>
 
-<h1 id="animacion-del-mapa-de-evolucion-temporal-del-codiv-19">Animacion del Mapa de Evolucion Temporal del Codiv 19</h1>
+<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/54.embed"></iframe>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed_melt[<span style="color:#e6db74">&#39;Fecha&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(confirmed_melt[<span style="color:#e6db74">&#39;Fecha&#39;</span>])
 confirmed_melt[<span style="color:#e6db74">&#39;Fecha&#39;</span>] <span style="color:#f92672">=</span> confirmed_melt[<span style="color:#e6db74">&#39;Fecha&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%m/</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">/%Y&#39;</span>)
 confirmed_melt[<span style="color:#e6db74">&#39;size&#39;</span>] <span style="color:#f92672">=</span> confirmed_melt[<span style="color:#e6db74">&#39;Confirmados&#39;</span>]<span style="color:#f92672">.</span>pow(<span style="color:#ae81ff">0.3</span>)
@@ -1218,19 +1225,35 @@ fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>s
 fig<span style="color:#f92672">.</span>update(layout_coloraxis_showscale<span style="color:#f92672">=</span>False)
 <span style="color:#75715e">#py.plot(fig, filename = &#39;mapa_evolucion_temporal&#39;, auto_open=True)</span>
 fig<span style="color:#f92672">.</span>show()</code></pre></div>
-<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/54.embed"></iframe>
+<h1 id="covid-19-en-colombia">Covid 19 en Colombia</h1>
 
-<h1 id="numero-de-casos-confirmados-en-colombia">Numero de Casos Confirmados en Colombia</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>line(confirmed_group,x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;date&#39;</span> , y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Colombia&#39;</span>,
-              title<span style="color:#f92672">=</span>f<span style="color:#e6db74">&#39;Total Casos Confirmados de COVID 19 Colombia - {world.iloc[-1,0]}&#39;</span>)
+<h2 id="numero-de-casos-covid-19-en-colombia">Numero de Casos COVID 19 en Colombia</h2>
+
+<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/9.embed"></iframe>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">column_names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Fecha&#34;</span>, <span style="color:#e6db74">&#34;Confirmados&#34;</span>, <span style="color:#e6db74">&#34;Recuperados&#34;</span>,<span style="color:#e6db74">&#34;Muertos&#34;</span>]
+colombia <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(columns <span style="color:#f92672">=</span> column_names)
+colombia[<span style="color:#e6db74">&#39;Fecha&#39;</span>] <span style="color:#f92672">=</span> confirmed_group[<span style="color:#e6db74">&#39;date&#39;</span>]
+colombia[<span style="color:#e6db74">&#39;Confirmados&#39;</span>] <span style="color:#f92672">=</span> confirmed_group[<span style="color:#e6db74">&#39;Colombia&#39;</span>]
+colombia[<span style="color:#e6db74">&#39;Recuperados&#39;</span>] <span style="color:#f92672">=</span> recovered_group[<span style="color:#e6db74">&#39;Colombia&#39;</span>]
+colombia[<span style="color:#e6db74">&#39;Muertos&#39;</span>] <span style="color:#f92672">=</span> death_group[<span style="color:#e6db74">&#39;Colombia&#39;</span>]
+df_melt3 <span style="color:#f92672">=</span> colombia<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span>, value_vars<span style="color:#f92672">=</span> list(colombia<span style="color:#f92672">.</span>columns)[<span style="color:#ae81ff">1</span>:], var_name<span style="color:#f92672">=</span>None)
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>line(df_melt3, x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span> , y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;value&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;variable&#39;</span>,
+              color_discrete_sequence<span style="color:#f92672">=</span>px<span style="color:#f92672">.</span>colors<span style="color:#f92672">.</span>qualitative<span style="color:#f92672">.</span>G10,
+              title<span style="color:#f92672">=</span>f<span style="color:#e6db74">&#39;Corona virus (COVID 19) en Colombia - {colombia.iloc[-1,0]}&#39;</span>)
+fig<span style="color:#f92672">.</span>add_indicator( title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Confirmados&#39;</span>, value <span style="color:#f92672">=</span> colombia[<span style="color:#e6db74">&#39;Confirmados&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+                  mode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;number+delta&#34;</span>, delta <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;reference&#34;</span>: colombia[<span style="color:#e6db74">&#39;Confirmados&#39;</span>
+                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.5</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.25</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">75</span>]})
+fig<span style="color:#f92672">.</span>add_indicator(title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Recuperados&#39;</span>, value <span style="color:#f92672">=</span> colombia[<span style="color:#e6db74">&#39;Recuperados&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+                  mode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;number+delta&#34;</span>, delta <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;reference&#34;</span>: colombia[<span style="color:#e6db74">&#39;Recuperados&#39;</span>
+                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.75</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.25</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">75</span>]})
 fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span>update(showlegend<span style="color:#f92672">=</span>False,
                   yaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Numero de Personas&#34;</span>}}, <span style="color:#75715e"># Cambiar texto eje y</span>
                   xaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Fecha&#34;</span>}})
 <span style="color:#75715e">#py.plot(fig, filename = &#39;Colombia_general&#39;, auto_open=True)</span>
 fig<span style="color:#f92672">.</span>show()</code></pre></div>
-<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/9.embed"></iframe>
-
 <h1 id="refencias">Refencias</h1>
+
+<p>Fuentes de datos, visualizaciones y analisis de datos.</p>
 
 <ul>
 <li><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">https://github.com/CSSEGISandData/COVID-19</a></li>
