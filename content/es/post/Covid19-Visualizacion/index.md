@@ -26,7 +26,6 @@ image:
 #   E.g. `projects = ["internal-project"]` references `content/project/deep-learning/index.md`.
 #   Otherwise, set `projects = []`.
 projects: []
-
 markup: blackfriday
 ---
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb)
@@ -549,9 +548,10 @@ world['Recuperados'] = recovered_group.iloc[:,1:].sum(1)
 world['Muertos'] = death_group.iloc[:,1:].sum(1)
 ```
 
-# Visualizacion con Plotly
-
+# Covid19 en el Mundo
+Visualizacion con Plotly
 ## Valores Mundiales de Confirmados, Recuperados y Muertos
+<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
 
 ```python
 temp = pd.DataFrame(world.iloc[-1,:]).T
@@ -574,11 +574,8 @@ fig.layout.update(showlegend=False,
 fig.show()
 ```
 
-<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
-
-
 ## Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos
-
+<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/3.embed"></iframe>
 
 ```python
 world_melt = world.melt(id_vars='Fecha', value_vars= list(world.columns)[1:], var_name=None)
@@ -598,11 +595,8 @@ fig.layout.update(showlegend = False,
 fig.show()
 ```
 
-<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/3.embed"></iframe>
-
-
 ## Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)
-
+<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/5.embed"></iframe>
 
 ```python
 df1 = confirmed_group.drop(columns=["China"])
@@ -628,11 +622,9 @@ fig.layout.update(showlegend=False,
 #py.plot(fig, filename = 'total_casos_no_china', auto_open=True)
 fig.show()
 ```
-<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/5.embed"></iframe>
-
 
 ## Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)
-
+<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/7.embed"></iframe>
 
 ```python
 df2 = confirmed_group.drop(columns=["China"] +mas_infectados)
@@ -657,9 +649,10 @@ fig.layout.update(showlegend=False,
 fig.show()
 ```
 
-<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/7.embed"></iframe>
 
-# Animacion del Mapa de Evolucion Temporal del Codiv 19
+## Animacion del Mapa de Evolucion Temporal del Codiv 19
+
+<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/54.embed"></iframe>
 
 ```python
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
@@ -675,24 +668,38 @@ fig.update(layout_coloraxis_showscale=False)
 #py.plot(fig, filename = 'mapa_evolucion_temporal', auto_open=True)
 fig.show()
 ```
+# Covid 19 en Colombia
 
-<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/54.embed"></iframe>
+## Numero de Casos COVID 19 en Colombia
 
-
-# Numero de Casos Confirmados en Colombia
+<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/9.embed"></iframe>
 
 ```python
-fig = px.line(confirmed_group,x='date' , y='Colombia',
-              title=f'Total Casos Confirmados de COVID 19 Colombia - {world.iloc[-1,0]}')
+column_names = ["Fecha", "Confirmados", "Recuperados","Muertos"]
+colombia = pd.DataFrame(columns = column_names)
+colombia['Fecha'] = confirmed_group['date']
+colombia['Confirmados'] = confirmed_group['Colombia']
+colombia['Recuperados'] = recovered_group['Colombia']
+colombia['Muertos'] = death_group['Colombia']
+df_melt3 = colombia.melt(id_vars='Fecha', value_vars= list(colombia.columns)[1:], var_name=None)
+fig = px.line(df_melt3, x='Fecha' , y='value', color='variable',
+              color_discrete_sequence=px.colors.qualitative.G10,
+              title=f'Corona virus (COVID 19) en Colombia - {colombia.iloc[-1,0]}')
+fig.add_indicator( title='Confirmados', value = colombia['Confirmados'].iloc[-1],
+                  mode = "number+delta", delta = {"reference": colombia['Confirmados'
+                  ].iloc[-2], 'relative': True },domain = {'x': [0, 0.5], 'y': [0.25, .75]})
+fig.add_indicator(title='Recuperados', value = colombia['Recuperados'].iloc[-1],
+                  mode = "number+delta", delta = {"reference": colombia['Recuperados'
+                  ].iloc[-2], 'relative': True },domain = {'x': [0.5, 0.75], 'y': [0.25, .75]})
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   xaxis =  {"title": {"text": "Fecha"}})
 #py.plot(fig, filename = 'Colombia_general', auto_open=True)
 fig.show()
 ```
-<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/9.embed"></iframe>
 
 # Refencias
+Fuentes de datos, visualizaciones y analisis de datos.
 
 - https://github.com/CSSEGISandData/COVID-19
 - https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons
