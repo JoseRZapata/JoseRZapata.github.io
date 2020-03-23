@@ -8,7 +8,7 @@ authors: ["Jose R. Zapata"]
 tags: ["Python", "Data-Science" ,"Jupyter-notebook"]
 categories: ["Data-Science"]
 date: 2020-03-17T17:03:57-05:00
-lastmod: 2020-03-17T17:03:57-05:00
+lastmod: 2020-03-23T17:03:57-05:00
 featured: false
 draft: false
 
@@ -549,7 +549,9 @@ world['Muertos'] = death_group.iloc[:,1:].sum(1)
 ```
 
 # Covid19 en el Mundo
+
 Visualizacion con Plotly
+
 ## Valores Mundiales de Confirmados, Recuperados y Muertos
 <iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
 
@@ -572,6 +574,27 @@ fig.layout.update(showlegend=False,
 # grabar grafica en chart-studio
 #py.plot(fig, filename = 'total_casos_general', auto_open=True)
 fig.show()
+```
+## Mapa Mundial de Confirmados por Pais
+Mover el Mouse sobre el mapa para ver la informacion de cada pais
+<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/97.embed"></iframe>
+
+```python
+confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
+confirmed_melt['Fecha'] = confirmed_melt['Fecha'].dt.strftime('%m/%d/%Y')
+confirmed_melt['size'] = confirmed_melt['Confirmados'].pow(0.3)
+max_Fecha = confirmed_melt['Fecha'].max()
+conf_max = confirmed_melt[confirmed_melt['Fecha']== max_Fecha]
+
+fig = px.scatter_geo(conf_max, locations="Country/Region", locationmode='country names', 
+                     color="Confirmados", size='size', hover_name="Country/Region", 
+                     range_color= [0, max(confirmed_melt['Confirmados'])+2], 
+                     projection="natural earth", 
+                     title='Mapa de Confirmados COVID 19 por Pais')
+fig.update(layout_coloraxis_showscale=False)
+#py.plot(fig, filename = 'mapa_confirmados_pais', auto_open=True)
+fig.show()
+
 ```
 
 ## Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos
@@ -649,8 +672,8 @@ fig.layout.update(showlegend=False,
 fig.show()
 ```
 
-
 ## Animacion del Mapa de Evolucion Temporal del Codiv 19
+Mover el Mouse sobre el mapa para ver la informacion de cada pais.
 
 <iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/54.embed"></iframe>
 
