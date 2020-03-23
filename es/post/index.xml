@@ -47,6 +47,7 @@ diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;#covid19-en-el-mundo&#34;&gt;Covid19 en el Mundo&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#valores-mundiales-de-confirmados-recuperados-y-muertos&#34;&gt;Valores Mundiales de Confirmados, Recuperados y Muertos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#mapa-mundial-de-confirmados-por-pais&#34;&gt;Mapa Mundial de Confirmados por Pais&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos&#34;&gt;Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#total-casos-confirmados-de-covid-19-por-pais-excluyendo-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados-y-china&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)&lt;/a&gt;&lt;/li&gt;
@@ -537,6 +538,24 @@ fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=
 &lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio&lt;/span&gt;
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_general&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&#34;mapa-mundial-de-confirmados-por-pais&#34;&gt;Mapa Mundial de Confirmados por Pais&lt;/h2&gt;
+
+&lt;p&gt;Mover el Mouse sobre el mapa para ver la informacion de cada pais
+&lt;iframe width=100% height=&#34;400&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/97.embed&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;])
+confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;strftime(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%m/&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/%Y&amp;#39;&lt;/span&gt;)
+confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;size&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pow(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;)
+max_Fecha &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;max()
+conf_max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; max_Fecha]
+
+fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;scatter_geo(conf_max, locations&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Country/Region&amp;#34;&lt;/span&gt;, locationmode&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;country names&amp;#39;&lt;/span&gt;, 
+                     color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Confirmados&amp;#34;&lt;/span&gt;, size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;size&amp;#39;&lt;/span&gt;, hover_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Country/Region&amp;#34;&lt;/span&gt;, 
+                     range_color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, max(confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], 
+                     projection&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;natural earth&amp;#34;&lt;/span&gt;, 
+                     title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Mapa de Confirmados COVID 19 por Pais&amp;#39;&lt;/span&gt;)
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(layout_coloraxis_showscale&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False)
+&lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;mapa_confirmados_pais&amp;#39;, auto_open=True)&lt;/span&gt;
+fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&#34;progresion-mundial-en-el-tiempo-de-de-confirmados-recuperados-y-muertos&#34;&gt;Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos&lt;/h2&gt;
 
 &lt;iframe width=100% height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/3.embed&#34;&gt;&lt;/iframe&gt;
@@ -604,6 +623,8 @@ fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=
 &lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_no_8_infectados&amp;#39;, auto_open=True)&lt;/span&gt;
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&#34;animacion-del-mapa-de-evolucion-temporal-del-codiv-19&#34;&gt;Animacion del Mapa de Evolucion Temporal del Codiv 19&lt;/h2&gt;
+
+&lt;p&gt;Mover el Mouse sobre el mapa para ver la informacion de cada pais.&lt;/p&gt;
 
 &lt;iframe width=100% height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plot.ly/~joser.zapata/54.embed&#34;&gt;&lt;/iframe&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;])
