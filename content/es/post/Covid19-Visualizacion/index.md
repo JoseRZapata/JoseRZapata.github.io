@@ -8,7 +8,7 @@ authors: ["Jose R. Zapata"]
 tags: ["Python", "Data-Science" ,"Jupyter-notebook"]
 categories: ["Data-Science"]
 date: 2020-03-17T17:03:57-05:00
-lastmod: 2020-03-23T17:03:57-05:00
+lastmod: 2020-03-24T17:03:57-05:00
 featured: false
 draft: false
 
@@ -28,7 +28,12 @@ image:
 projects: []
 markup: blackfriday
 ---
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb)
+
+  |   |  
+---|---|---
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb) | [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JoseRZapata/JoseRZapata.github.io/master?filepath=Jupyter_Notebook/Covid19_Visualizacion_es.ipynb) | [![nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb)
+
+***
 
 He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas actualizadas cada dia, y ademas practicar el uso de [plotly](https://plot.ly/) para visualizacion interactiva.
 
@@ -40,6 +45,8 @@ Informacion extraida de 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Reposit
 https://github.com/CSSEGISandData/COVID-19
 
 {{% toc %}}
+
+***
 
 # Paquetes de Python y Datos
 
@@ -720,6 +727,15 @@ fig.layout.update(showlegend=False,
 #py.plot(fig, filename = 'Colombia_general', auto_open=True)
 fig.show()
 ```
+# Codigo Fuente Jupyter notebook
+## Ejecutar en Google Colaboratory
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb)
+
+## Ejecutar en MyBinder
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JoseRZapata/JoseRZapata.github.io/master?filepath=Jupyter_Notebook/Covid19_Visualizacion_es.ipynb)
+
+## Leer en nbviewer
+[![nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb)
 
 # Refencias
 Fuentes de datos, visualizaciones y analisis de datos.
