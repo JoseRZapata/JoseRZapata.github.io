@@ -91,7 +91,6 @@ Descripcion de los datos en ingles
 **Confirmed:** the number of confirmed cases. For Hubei Province: from Feb 13 (GMT +8), we report both clinically diagnosed and lab-confirmed cases. For lab-confirmed cases only (Before Feb 17), please refer to who_covid_19_situation_reports. For Italy, diagnosis standard might be changed since Feb 27 to "slow the growth of new case numbers."
 
 **Deaths:** the number of deaths.
-**Recovered:** the number of recovered cases.
 
 
 ```python
@@ -502,12 +501,6 @@ Solo se realizara un analisis por pais entonces se eliminaran las columnas menci
 ```python
 confirmed = confirmed.drop(columns=['Lat', 'Long','Province/State'])
 ```
-
-
-```python
-recovered = recovered.drop(columns=['Lat', 'Long','Province/State'])
-```
-
 
 ```python
 death = death.drop(columns=['Lat', 'Long','Province/State'])
