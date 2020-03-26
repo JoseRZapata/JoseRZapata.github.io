@@ -8,7 +8,7 @@ authors: ["Jose R. Zapata"]
 tags: ["Python", "Data-Science" ,"Jupyter-notebook"]
 categories: ["Data-Science"]
 date: 2020-03-17T17:03:57-05:00
-lastmod: 2020-03-24T17:03:57-05:00
+lastmod: 2020-03-26T17:03:57-05:00
 featured: false
 draft: false
 
@@ -62,7 +62,7 @@ import numpy as np
 import chart_studio
 ```
 
-
+Para subir las graficas interactivas de plotly a chart studio
 ```python
 #chart-studio api
 username = '' # your username
@@ -72,10 +72,10 @@ import chart_studio.plotly as py
 ```
 
 ## Importar datos
+
 ```python
-confirmed = pd.read_csv('https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Confirmed.csv')
-recovered = pd.read_csv('https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Recovered.csv')
-death = pd.read_csv('https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_19-covid-Deaths.csv')
+confirmed = pd.read_csv('https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv')
+death = pd.read_csv('https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv')
 ```
 
 ## Datos CSSEGISandData/COVID-19
@@ -526,15 +526,6 @@ confirmed_group =  confirmed_group.reset_index()
 
 
 ```python
-recovered_group = recovered.groupby(by='Country/Region')
-recovered_group = recovered_group.aggregate(np.sum)
-recovered_group = recovered_group.T
-recovered_group.index.name = 'date'
-recovered_group =  recovered_group.reset_index()
-```
-
-
-```python
 death_group = death.groupby(by='Country/Region')
 death_group = death_group.aggregate(np.sum)
 death_group = death_group.T
@@ -547,11 +538,10 @@ death_group =  death_group.reset_index()
 
 ```python
 # Numero de Casos confirmados por dia en el mundo
-column_names = ["Fecha", "Confirmados", "Recuperados","Muertos"]
+column_names = ["Fecha", "Confirmados", "Muertos"]
 world = pd.DataFrame(columns = column_names)
 world['Fecha'] = confirmed_group['date']
 world['Confirmados'] = confirmed_group.iloc[:,1:].sum(1)
-world['Recuperados'] = recovered_group.iloc[:,1:].sum(1)
 world['Muertos'] = death_group.iloc[:,1:].sum(1)
 ```
 
@@ -559,14 +549,14 @@ world['Muertos'] = death_group.iloc[:,1:].sum(1)
 
 Visualizacion con Plotly
 
-## Valores Mundiales de Confirmados, Recuperados y Muertos
+## Valores Mundiales de Confirmados y Muertos
 <iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
 
 ```python
 temp = pd.DataFrame(world.iloc[-1,:]).T
-tm = temp.melt(id_vars="Fecha", value_vars=[ "Confirmados", "Recuperados","Muertos"])
+tm = temp.melt(id_vars="Fecha", value_vars=[ "Confirmados","Muertos"])
 fig = px.bar(tm, x="variable" , y="value", color= 'variable',
-             color_discrete_sequence=["blue", "green", "red"],
+             color_discrete_sequence=["green", "blue"],
              height=400, width=600,
              title= f'Total de Casos Mundiales de COVID 19 - {str(world.iloc[-1,0])}')
 
@@ -590,8 +580,10 @@ Mover el Mouse sobre el mapa para ver la informacion de cada pais
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
 confirmed_melt['Fecha'] = confirmed_melt['Fecha'].dt.strftime('%m/%d/%Y')
 confirmed_melt['size'] = confirmed_melt['Confirmados'].pow(0.3)
+
 max_Fecha = confirmed_melt['Fecha'].max()
 conf_max = confirmed_melt[confirmed_melt['Fecha']== max_Fecha]
+conf_max.dropna(inplace=True) #eliminar filas con valores faltantes
 
 fig = px.scatter_geo(conf_max, locations="Country/Region", locationmode='country names', 
                      color="Confirmados", size='size', hover_name="Country/Region", 
@@ -604,7 +596,7 @@ fig.show()
 
 ```
 
-## Progresion Mundial en el Tiempo de de Confirmados, Recuperados y Muertos
+## Progresion Mundial en el Tiempo de de Confirmados y Muertos
 <iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/3.embed"></iframe>
 
 ```python
@@ -617,6 +609,14 @@ for n in list(world.columns)[1:]:
   fig.add_annotation(x=world.iloc[-1,0], y=world.loc[world.index[-1],n],
                      text=n,
                      showarrow=True, ax=-50, ay=-20)
+# Indicador de numero total de confirmados
+fig.add_indicator( title='Confirmados', value = world['Confirmados'].iloc[-1],
+                  mode = "number+delta", delta = {"reference": world['Confirmados'
+                  ].iloc[-2], 'relative': True },domain = {'x': [0, 0.5], 'y': [0.25, .75]})
+#Indicador numero total de muertos
+fig.add_indicator(title='Muertos', value = world['Muertos'].iloc[-1],
+                  mode = "number+delta", delta = {"reference": world['Muertos'
+                  ].iloc[-2], 'relative': True },domain = {'x': [0.5, 0.75], 'y': [0.25, .75]})  
 fig.layout.update(showlegend = False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   )
@@ -625,11 +625,11 @@ fig.layout.update(showlegend = False,
 fig.show()
 ```
 
-## Total Casos Confirmados de COVID 19 por Pais (Excluyendo China)
+## Total Casos Confirmados de COVID 19 por Pais
 <iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/5.embed"></iframe>
 
 ```python
-df1 = confirmed_group.drop(columns=["China"])
+df1 = confirmed_group
 # Cambiar el nombre de la columna
 df1.rename(columns = {'date':'Fecha'}, inplace = True) 
 df_melt = df1.melt(id_vars='Fecha', value_vars= list(df1.columns)[1:], var_name=None)
@@ -653,11 +653,11 @@ fig.layout.update(showlegend=False,
 fig.show()
 ```
 
-## Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados y China)
+## Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados)
 <iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/7.embed"></iframe>
 
 ```python
-df2 = confirmed_group.drop(columns=["China"] +mas_infectados)
+df2 = confirmed_group.drop(columns= mas_infectados)
 # Cambiar el nombre de la columna
 df2.rename(columns = {'date':'Fecha'}, inplace = True) 
 
@@ -688,6 +688,7 @@ Mover el Mouse sobre el mapa para ver la informacion de cada pais.
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
 confirmed_melt['Fecha'] = confirmed_melt['Fecha'].dt.strftime('%m/%d/%Y')
 confirmed_melt['size'] = confirmed_melt['Confirmados'].pow(0.3)
+confirmed_melt.dropna(inplace=True) #eliminar filas con valores faltantes
 
 fig = px.scatter_geo(confirmed_melt, locations="Country/Region", locationmode='country names', 
                      color="Confirmados", size='size', hover_name="Country/Region", 
@@ -705,12 +706,12 @@ fig.show()
 <iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/9.embed"></iframe>
 
 ```python
-column_names = ["Fecha", "Confirmados", "Recuperados","Muertos"]
+column_names = ["Fecha", "Confirmados", "Muertos"]
 colombia = pd.DataFrame(columns = column_names)
-colombia['Fecha'] = confirmed_group['date']
+colombia['Fecha'] = confirmed_group['Fecha']
 colombia['Confirmados'] = confirmed_group['Colombia']
-colombia['Recuperados'] = recovered_group['Colombia']
 colombia['Muertos'] = death_group['Colombia']
+
 df_melt3 = colombia.melt(id_vars='Fecha', value_vars= list(colombia.columns)[1:], var_name=None)
 fig = px.line(df_melt3, x='Fecha' , y='value', color='variable',
               color_discrete_sequence=px.colors.qualitative.G10,
@@ -718,13 +719,13 @@ fig = px.line(df_melt3, x='Fecha' , y='value', color='variable',
 fig.add_indicator( title='Confirmados', value = colombia['Confirmados'].iloc[-1],
                   mode = "number+delta", delta = {"reference": colombia['Confirmados'
                   ].iloc[-2], 'relative': True },domain = {'x': [0, 0.5], 'y': [0.25, .75]})
-fig.add_indicator(title='Recuperados', value = colombia['Recuperados'].iloc[-1],
-                  mode = "number+delta", delta = {"reference": colombia['Recuperados'
+fig.add_indicator(title='Muertos', value = colombia['Muertos'].iloc[-1],
+                  mode = "number+delta", delta = {"reference": colombia['Muertos'
                   ].iloc[-2], 'relative': True },domain = {'x': [0.5, 0.75], 'y': [0.25, .75]})
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   xaxis =  {"title": {"text": "Fecha"}})
-#py.plot(fig, filename = 'Colombia_general', auto_open=True)
+py.plot(fig, filename = 'Colombia_general', auto_open=True)
 fig.show()
 ```
 # Codigo Fuente Jupyter notebook
