@@ -8,7 +8,7 @@ por: Jose R. Zapata - https://joserzapata.github.io/
 https://joserzapata.github.io/post/covid19-visualizacion/ 
 
 Ejemplo:
-python Covid19_Update.py [chart_studio username] [chart_studio password]
+python Covid19_update.py [chart_studio username] [chart_studio password]
  
 He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas
 actualizadas cada dia, y ademas practicar el uso de [plotly](https://plot.ly/) para visualizacion interactiva.
