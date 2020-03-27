@@ -20,8 +20,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        cd Scripts/Covid/
-        pip install -r requirements.txt
+        pip install -r Scripts/Covid/requirements.txt
     - name: updated figs
       run: |
-        python Covid19_update.py ${{secrets.chart_plotly_name}} ${{secrets.chart_plotly_clave}}
+        python Scripts/Covid/Covid19_update.py ${{secrets.chart_plotly_name}} ${{secrets.chart_plotly_clave}}
