@@ -24,4 +24,4 @@ jobs:
         pip install -r requirements.txt
     - name: updated figs
       run: |
-        Covid19_update.py ${{secrets.chart_plotly_name}} ${{secrets.chart_plotly_clave}}
+        python Covid19_update.py ${{secrets.chart_plotly_name}} ${{secrets.chart_plotly_clave}}
