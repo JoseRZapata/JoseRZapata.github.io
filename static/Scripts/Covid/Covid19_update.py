@@ -129,7 +129,7 @@ fig = px.line(world_melt, x="Fecha", y= 'value',
 for n in list(world.columns)[1:]:
   fig.add_annotation(x=world.iloc[-1,0], y=world.loc[world.index[-1],n],
                      text=n,
-                     showarrow=True, ax=-50, ay=-20)
+                     showarrow=True, ax=-50, ay=-20, xref="x",yref="y" )
 # Indicador de numero total de confirmados
 fig.add_indicator( title='Confirmados', value = world['Confirmados'].iloc[-1],
                   mode = "number+delta", delta = {"reference": world['Confirmados'
@@ -163,7 +163,7 @@ paises.sort_values(ascending=False, inplace=True)
 mas_infectados=[]
 for n in range(8):
   fig.add_annotation(x=fecha, y=paises[n], text=paises.index[n],
-                     showarrow=True, ax=+30, ay=0)
+                     showarrow=True, ax=+30, ay=0, xref="x",yref="y")
   mas_infectados.append(paises.index[n])
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
@@ -190,7 +190,7 @@ paises = df2.iloc[-1,1:] #obtener la serie sin el primer dato, fecha
 paises.sort_values(ascending=False, inplace=True)
 for n in range(8):
   fig.add_annotation(x=fecha, y=paises[n], text=paises.index[n],
-                     showarrow=True, ax=+30, ay=0)
+                     showarrow=True, ax=+30, ay=0, xref="x",yref="y")
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   )
