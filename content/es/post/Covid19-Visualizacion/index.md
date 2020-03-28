@@ -543,7 +543,7 @@ world['Muertos'] = death_group.iloc[:,1:].sum(1)
 Visualizacion con Plotly
 
 ## Valores Mundiales de Confirmados y Muertos
-<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
+<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
 
 ```python
 temp = pd.DataFrame(world.iloc[-1,:]).T
