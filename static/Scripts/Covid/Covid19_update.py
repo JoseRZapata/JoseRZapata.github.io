@@ -8,7 +8,7 @@ por: Jose R. Zapata - https://joserzapata.github.io/
 https://joserzapata.github.io/post/covid19-visualizacion/ 
 
 Ejemplo:
-python Covid19_update.py [chart_studio username] [chart_studio password]
+python Covid19_Update.py [chart_studio username] [chart_studio password]
  
 He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas
 actualizadas cada dia, y ademas practicar el uso de [plotly](https://plot.ly/) para visualizacion interactiva.
@@ -79,17 +79,12 @@ world['Muertos'] = death_group.iloc[:,1:].sum(1)
 # 
 
 temp = pd.DataFrame(world.iloc[-1,:]).T
-
 tm = temp.melt(id_vars="Fecha", value_vars=[ "Confirmados","Muertos"])
-fig = px.bar(tm, x="variable" , y="value", color= 'variable',
+fig = px.bar(tm, x="variable" , y="value", color= 'variable', text='value',
              color_discrete_sequence=["green", "blue"],
-             height=400, width=600,
+             height=500, width=600,
              title= f'Total de Casos Mundiales de COVID 19 - {str(world.iloc[-1,0])}')
-
-# Agregar el valor de cada columna en la parte superior
-for n in range(len(tm['variable'])):
-  fig.add_annotation(x=tm.iloc[n,1], y=tm.iloc[n,2], text=str(tm.iloc[n,2]),
-                     showarrow=True, ax=0, ay=-30)
+fig.update_traces(textposition='outside')#poner los valores de las barras fuera
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   xaxis =  {"title": {"text": ""}} #Esconder nombre eje x
@@ -129,7 +124,7 @@ fig = px.line(world_melt, x="Fecha", y= 'value',
 for n in list(world.columns)[1:]:
   fig.add_annotation(x=world.iloc[-1,0], y=world.loc[world.index[-1],n],
                      text=n,
-                     showarrow=True, ax=-50, ay=-20, xref="x",yref="y" )
+                     showarrow=True, ax=-50, ay=-20)
 # Indicador de numero total de confirmados
 fig.add_indicator( title='Confirmados', value = world['Confirmados'].iloc[-1],
                   mode = "number+delta", delta = {"reference": world['Confirmados'
@@ -163,7 +158,7 @@ paises.sort_values(ascending=False, inplace=True)
 mas_infectados=[]
 for n in range(8):
   fig.add_annotation(x=fecha, y=paises[n], text=paises.index[n],
-                     showarrow=True, ax=+30, ay=0, xref="x",yref="y")
+                     showarrow=True, ax=+30, ay=0)
   mas_infectados.append(paises.index[n])
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
@@ -190,7 +185,7 @@ paises = df2.iloc[-1,1:] #obtener la serie sin el primer dato, fecha
 paises.sort_values(ascending=False, inplace=True)
 for n in range(8):
   fig.add_annotation(x=fecha, y=paises[n], text=paises.index[n],
-                     showarrow=True, ax=+30, ay=0, xref="x",yref="y")
+                     showarrow=True, ax=+30, ay=0)
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   )
