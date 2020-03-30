@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Visualizacion Datos Coronavirus (COVID19) Mundial"
+title: "Visualizacion Datos Coronavirus (COVID19) Mundial con Plotly"
 subtitle: ""
 summary: "Visualizaciones con Python y Plotly de los datos mundiales del corona virus COVID19"
 authors: ["Jose R. Zapata"]
