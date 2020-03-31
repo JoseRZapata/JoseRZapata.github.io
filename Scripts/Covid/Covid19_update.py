@@ -11,7 +11,7 @@ Ejemplo:
 python Covid19_Update.py [chart_studio username] [chart_studio password]
  
 He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas
-actualizadas cada dia, y ademas practicar el uso de [plotly](https://plot.ly/) para visualizacion interactiva.
+actualizadas cada dia, y ademas practicar el uso de [plotly](https://plotly.com/) para visualizacion interactiva.
 
 Las Graficas se actualizaran diariamente con los nuevos datos!
 
@@ -112,6 +112,23 @@ fig = px.scatter_geo(conf_max, locations="Country/Region", locationmode='country
 fig.update(layout_coloraxis_showscale=False)
 py.plot(fig, filename = 'mapa_confirmados_pais', auto_open=False)
 #fig.show()
+
+# ## Confirmados vs Muertos por pais
+death_melt['Fecha'] = pd.to_datetime(death_melt['Fecha'])
+death_melt['Fecha'] = death_melt['Fecha'].dt.strftime('%m/%d/%Y')
+
+max_Fecha = death_melt['Fecha'].max()
+death_max = death_melt[death_melt['Fecha']== max_Fecha].copy()
+death_max.dropna(inplace=True) #eliminar filas con valores faltantes
+
+fig = px.scatter(full_melt_max.sort_values('Muertos', ascending=False).iloc[:10, :], 
+                 x='Confirmados', y='Muertos', color='Country/Region', size='Confirmados', height=500,
+                 text='Country/Region', log_x=True, log_y=True, title= f'Muertos vs Confirmados - {max_Fecha} - (10 Paises)')
+fig.update_traces(textposition='top center')
+fig.layout.update(showlegend = False)
+py.plot(fig, filename = 'scatter_muertos_confirmados', auto_open=False)
+#fig.show()
+
 
 
 # ## Progresion Mundial en el Tiempo del numero de casos
