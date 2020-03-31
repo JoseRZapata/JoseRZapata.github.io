@@ -8,7 +8,7 @@ authors: ["Jose R. Zapata"]
 tags: ["Python", "Data-Science" ,"Jupyter-notebook"]
 categories: ["Data-Science"]
 date: 2020-03-17T17:03:57-05:00
-lastmod: 2020-03-26T17:03:57-05:00
+lastmod: 2020-03-31T17:03:57-05:00
 featured: false
 draft: false
 
@@ -35,7 +35,7 @@ markup: blackfriday
 
 ***
 
-He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas actualizadas cada dia, y ademas practicar el uso de [plotly](https://plot.ly/) para visualizacion interactiva.
+He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas actualizadas cada dia, y ademas practicar el uso de [plotly](https://plotly.com/) para visualizacion interactiva.
 
 **Pueden interactuar con las graficas con el mouse y las Graficas se actualizaran 
 diariamente con los nuevos datos!**
@@ -543,7 +543,7 @@ world['Muertos'] = death_group.iloc[:,1:].sum(1)
 Visualizacion con Plotly
 
 ## Valores Mundiales de Confirmados y Muertos
-<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/1.embed"></iframe>
+<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/1.embed"></iframe>
 
 ```python
 temp = pd.DataFrame(world.iloc[-1,:]).T
@@ -567,7 +567,7 @@ fig.show()
 ```
 ## Mapa Mundial de Confirmados por Pais
 Mover el Mouse sobre el mapa para ver la informacion de cada pais
-<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/97.embed"></iframe>
+<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/97.embed"></iframe>
 
 ```python
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
@@ -588,9 +588,29 @@ fig.update(layout_coloraxis_showscale=False)
 fig.show()
 
 ```
+## Confirmados vs Muertos por pais
+
+<iframe width=100% height="800" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/289.embed"></iframe>
+
+```python
+death_melt['Fecha'] = pd.to_datetime(death_melt['Fecha'])
+death_melt['Fecha'] = death_melt['Fecha'].dt.strftime('%m/%d/%Y')
+
+max_Fecha = death_melt['Fecha'].max()
+death_max = death_melt[death_melt['Fecha']== max_Fecha].copy()
+death_max.dropna(inplace=True) #eliminar filas con valores faltantes
+
+fig = px.scatter(full_melt_max.sort_values('Muertos', ascending=False).iloc[:10, :], 
+                 x='Confirmados', y='Muertos', color='Country/Region', size='Confirmados', height=500,
+                 text='Country/Region', log_x=True, log_y=True, title= f'Muertos vs Confirmados - {max_Fecha} - (10 Paises)')
+fig.update_traces(textposition='top center')
+fig.layout.update(showlegend = False)
+#py.plot(fig, filename = 'scatter_muertos_confirmados', auto_open=False)
+fig.show()
+```
 
 ## Progresion Mundial en el Tiempo de de Confirmados y Muertos
-<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/3.embed"></iframe>
+<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/3.embed"></iframe>
 
 ```python
 world_melt = world.melt(id_vars='Fecha', value_vars= list(world.columns)[1:], var_name=None)
@@ -619,7 +639,7 @@ fig.show()
 ```
 
 ## Total Casos Confirmados de COVID 19 por Pais
-<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/5.embed"></iframe>
+<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/5.embed"></iframe>
 
 ```python
 df1 = confirmed_group
@@ -647,7 +667,7 @@ fig.show()
 ```
 
 ## Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados)
-<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/7.embed"></iframe>
+<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/7.embed"></iframe>
 
 ```python
 df2 = confirmed_group.drop(columns= mas_infectados)
@@ -675,7 +695,7 @@ fig.show()
 ## Animacion del Mapa de Evolucion Temporal del Codiv 19
 Mover el Mouse sobre el mapa para ver la informacion de cada pais.
 
-<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/54.embed"></iframe>
+<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/54.embed"></iframe>
 
 ```python
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
@@ -696,7 +716,7 @@ fig.show()
 
 ## Numero de Casos COVID 19 en Colombia
 
-<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plot.ly/~joser.zapata/9.embed"></iframe>
+<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/9.embed"></iframe>
 
 ```python
 column_names = ["Fecha", "Confirmados", "Muertos"]
