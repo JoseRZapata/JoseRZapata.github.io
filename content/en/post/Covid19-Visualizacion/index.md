@@ -551,7 +551,7 @@ world['Muertos'] = death_group.iloc[:,1:].sum(1)
 Visualizacion con Plotly
 
 ## Valores Mundiales de Confirmados y Muertos
-<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/1.embed"></iframe>
+<iframe width="900" height="450" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/1.embed?link=false"></iframe>
 
 ```python
 temp = pd.DataFrame(world.iloc[-1,:]).T
@@ -566,12 +566,12 @@ fig.layout.update(showlegend=False,
                   xaxis =  {"title": {"text": ""}} #Esconder nombre eje x
                   )
 # grabar grafica en chart-studio
-#py.plot(fig, filename = 'total_casos_general', auto_open=True)
+#py.plot(fig, filename = 'total_casos_general', auto_open=False)
 fig.show()
 ```
 ## Mapa Mundial de Confirmados por Pais
 Mover el Mouse sobre el mapa para ver la informacion de cada pais
-<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/97.embed"></iframe>
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/97.embed?link=false"></iframe>
 
 ```python
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
@@ -588,13 +588,13 @@ fig = px.scatter_geo(conf_max, locations="Country/Region", locationmode='country
                      projection="natural earth", 
                      title='Mapa de Confirmados COVID 19 por Pais')
 fig.update(layout_coloraxis_showscale=False)
-#py.plot(fig, filename = 'mapa_confirmados_pais', auto_open=True)
+#py.plot(fig, filename = 'mapa_confirmados_pais', auto_open=False)
 fig.show()
 
 ```
 ## Confirmados vs Muertos por pais
 
-<iframe width=100% height="800" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/289.embed"></iframe>
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/289.embed?link=false"></iframe>
 
 ```python
 death_melt['Fecha'] = pd.to_datetime(death_melt['Fecha'])
@@ -614,7 +614,7 @@ fig.show()
 ```
 
 ## Progresion Mundial en el Tiempo de de Confirmados y Muertos
-<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/3.embed"></iframe>
+<iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/3.embed?link=false"></iframe>
 
 ```python
 world_melt = world.melt(id_vars='Fecha', value_vars= list(world.columns)[1:], var_name=None)
@@ -638,12 +638,12 @@ fig.layout.update(showlegend = False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   )
 # grabar grafica en chart-studio
-#py.plot(fig, filename = 'total_casos_serie', auto_open=True)
+#py.plot(fig, filename = 'total_casos_serie', auto_open=False)
 fig.show()
 ```
 
 ## Total Casos Confirmados de COVID 19 por Pais
-<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/5.embed"></iframe>
+<iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/5.embed?link=false"></iframe>
 
 ```python
 df1 = confirmed_group
@@ -666,12 +666,12 @@ fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   )
 # grabar grafica en chart-studio
-#py.plot(fig, filename = 'total_casos_no_china', auto_open=True)
+#py.plot(fig, filename = 'total_casos_no_china', auto_open=False)
 fig.show()
 ```
 
 ## Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados)
-<iframe width=100% height="700" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/7.embed"></iframe>
+<iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/7.embed?link=false"></iframe>
 
 ```python
 df2 = confirmed_group.drop(columns= mas_infectados)
@@ -692,14 +692,14 @@ for n in range(8):
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   )
-#py.plot(fig, filename = 'total_casos_no_8_infectados', auto_open=True)
+#py.plot(fig, filename = 'total_casos_no_8_infectados', auto_open=False)
 fig.show()
 ```
 
 ## Animacion del Mapa de Evolucion Temporal del Codiv 19
 Mover el Mouse sobre el mapa para ver la informacion de cada pais.
 
-<iframe width=100% height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/54.embed"></iframe>
+<iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/54.embed?link=false"></iframe>
 
 ```python
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
@@ -713,14 +713,14 @@ fig = px.scatter_geo(confirmed_melt, locations="Country/Region", locationmode='c
                      projection="natural earth", animation_frame="Fecha", 
                      title='Contagiados COVID 19 en el Tiempo')
 fig.update(layout_coloraxis_showscale=False)
-#py.plot(fig, filename = 'mapa_evolucion_temporal', auto_open=True)
+#py.plot(fig, filename = 'mapa_evolucion_temporal', auto_open=False)
 fig.show()
 ```
 # Covid 19 en Colombia
 
 ## Numero de Casos COVID 19 en Colombia
 
-<iframe width=100% height="400" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/9.embed"></iframe>
+<iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/9.embed?link=false"></iframe>
 
 ```python
 column_names = ["Fecha", "Confirmados", "Muertos"]
@@ -742,7 +742,7 @@ fig.add_indicator(title='Muertos', value = colombia['Muertos'].iloc[-1],
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   xaxis =  {"title": {"text": "Fecha"}})
-py.plot(fig, filename = 'Colombia_general', auto_open=True)
+py.plot(fig, filename = 'Colombia_general', auto_open=False)
 fig.show()
 ```
 # Codigo Fuente Jupyter notebook
