@@ -62,6 +62,8 @@ death_group =  death_group.reset_index()
 confirmed_melt = confirmed_group.melt(id_vars="date")
 confirmed_melt.rename(columns = {'value':'Confirmados', 'date':'Fecha'}, inplace = True)
 
+death_melt = death_group.melt(id_vars="date")
+death_melt.rename(columns = {'value':'Muertos', 'date':'Fecha'}, inplace = True)
 
 #  Datos Mundiales
 
@@ -120,6 +122,10 @@ death_melt['Fecha'] = death_melt['Fecha'].dt.strftime('%m/%d/%Y')
 max_Fecha = death_melt['Fecha'].max()
 death_max = death_melt[death_melt['Fecha']== max_Fecha].copy()
 death_max.dropna(inplace=True) #eliminar filas con valores faltantes
+
+full_melt_max = pd.merge(conf_max[['Country/Region','Confirmados']],
+                         death_max[['Country/Region','Muertos']],
+                         on='Country/Region', how='left')
 
 fig = px.scatter(full_melt_max.sort_values('Muertos', ascending=False).iloc[:10, :], 
                  x='Confirmados', y='Muertos', color='Country/Region', size='Confirmados', height=500,
