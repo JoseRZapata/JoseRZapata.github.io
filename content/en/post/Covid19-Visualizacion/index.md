@@ -525,6 +525,14 @@ death_group = death_group.T
 death_group.index.name = 'date'
 death_group =  death_group.reset_index()
 ```
+```python
+confirmed_melt = confirmed_group.melt(id_vars="date")
+confirmed_melt.rename(columns = {'value':'Confirmados', 'date':'Fecha'}, inplace = True)
+
+death_melt = death_group.melt(id_vars="date")
+death_melt.rename(columns = {'value':'Muertos', 'date':'Fecha'}, inplace = True)
+```
+
 
 ### Datos Mundiales
 
@@ -548,15 +556,11 @@ Visualizacion con Plotly
 ```python
 temp = pd.DataFrame(world.iloc[-1,:]).T
 tm = temp.melt(id_vars="Fecha", value_vars=[ "Confirmados","Muertos"])
-fig = px.bar(tm, x="variable" , y="value", color= 'variable',
+fig = px.bar(tm, x="variable" , y="value", color= 'variable', text='value',
              color_discrete_sequence=["green", "blue"],
-             height=400, width=600,
+             height=500, width=600,
              title= f'Total de Casos Mundiales de COVID 19 - {str(world.iloc[-1,0])}')
-
-# Agregar el valor de cada columna en la parte superior
-for n in range(len(tm['variable'])):
-  fig.add_annotation(x=tm.iloc[n,1], y=tm.iloc[n,2], text=str(tm.iloc[n,2]),
-                     showarrow=True, ax=0, ay=-30)
+fig.update_traces(textposition='outside')#poner los valores de las barras fuera
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   xaxis =  {"title": {"text": ""}} #Esconder nombre eje x
