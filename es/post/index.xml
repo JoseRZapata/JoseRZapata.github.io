@@ -1020,5 +1020,69 @@ only showing top 20 rows
 </description>
     </item>
     
+    <item>
+      <title>Tutorial de Produccion de Audio con Reaper</title>
+      <link>https://joserzapata.github.io/es/post/produccion-audio-reaper/</link>
+      <pubDate>Sat, 01 Sep 2018 09:10:53 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/post/produccion-audio-reaper/</guid>
+      <description>
+
+&lt;p&gt;Video tutoriales sobre el uso de &lt;a href=&#34;http://reaper.fm/&#34; target=&#34;_blank&#34;&gt;Reaper&lt;/a&gt; para produccion de audio,
+los videos fueron creados como apoyo para el curso de Audio del programa &lt;a href=&#34;https://www.upb.edu.co/es/pregrados/ingenieria-diseno-entretenimiento-medellin&#34; target=&#34;_blank&#34;&gt;Ingenieria en Diseño de entrentenimiento digital&lt;/a&gt; de la &lt;a href=&#34;https://www.upb.edu.co/&#34; target=&#34;_blank&#34;&gt;Universidad Pontificia Bolivariana&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://reaper.fm/download.php&#34; target=&#34;_blank&#34;&gt;Descargar REAPER&lt;/a&gt; para Windows, macOS o Linux.&lt;/p&gt;
+
+&lt;p&gt;&lt;h2&gt;Índice&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#1-introduccion-a-reaper-y-edicion&#34;&gt;1. Introduccion a Reaper y Edicion&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-manejo-de-canales-y-envios-con-reaper&#34;&gt;2. Manejo de canales y envios con Reaper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-automatizaciones-y-envolventes-en-reaper&#34;&gt;3 Automatizaciones y Envolventes en Reaper&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4-mezcla-y-masterizacion-en-reaper&#34;&gt;4. Mezcla y Masterizacion en Reaper&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&#34;1-introduccion-a-reaper-y-edicion&#34;&gt;1. Introduccion a Reaper y Edicion&lt;/h1&gt;
+
+&lt;p&gt;Introduccion a la configuración Manejo de REAPER para produccion de audio.&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Qoc1ZNvPH7Y&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;h1 id=&#34;2-manejo-de-canales-y-envios-con-reaper&#34;&gt;2. Manejo de canales y envios con Reaper&lt;/h1&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/2_uozsk_KwE&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;h1 id=&#34;3-automatizaciones-y-envolventes-en-reaper&#34;&gt;3 Automatizaciones y Envolventes en Reaper&lt;/h1&gt;
+
+&lt;p&gt;Automatización de Volumen, Panning y Efectos mediante envolventes en Reaper&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/Vd3xjzxmPQY&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+
+&lt;h1 id=&#34;4-mezcla-y-masterizacion-en-reaper&#34;&gt;4. Mezcla y Masterizacion en Reaper&lt;/h1&gt;
+
+&lt;p&gt;Principios Basicos de mezcla y masterizacion de audio en Reaper&lt;/p&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;https://www.youtube.com/embed/oNeNpOY3mvU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
   </channel>
 </rss>

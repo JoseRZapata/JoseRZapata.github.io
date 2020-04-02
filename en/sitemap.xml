@@ -363,6 +363,66 @@
   </url>
   
   <url>
+    <loc>https://joserzapata.github.io/tags/audio/</loc>
+    <lastmod>2018-09-01T09:10:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/audio/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/audio/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/categories/audio/</loc>
+    <lastmod>2018-09-01T09:10:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/categories/audio/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/categories/audio/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/reaper/</loc>
+    <lastmod>2018-09-01T09:10:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/reaper/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/reaper/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/post/produccion-audio-reaper/</loc>
+    <lastmod>2018-09-01T09:10:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/post/produccion-audio-reaper/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/post/produccion-audio-reaper/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joserzapata.github.io/talk/pycon2018/</loc>
     <lastmod>2018-02-09T11:40:35-05:00</lastmod>
     <xhtml:link
