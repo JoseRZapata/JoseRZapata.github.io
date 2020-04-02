@@ -1,10 +1,8 @@
-# Personal Website UNDER CONSTRUCTION
+# Personal Website [https://joserzapata.github.io/](https://joserzapata.github.io/)
 
 My personal Website [https://joserzapata.github.io/](https://joserzapata.github.io/)
 
 Using the [Hugo Academic Theme](https://themes.gohugo.io/theme/academic/)
-
-I'm updatting the hugo academic theme from zero Oct 2019
 
 ## My installation
 - Download and extract Academic Kickstart
