@@ -284,10 +284,15 @@ if api_key: py.plot(fig, filename = 'total_casos_no_8_infectados', auto_open=Fal
 # # Animacion del Mapa de Evolucion Temporal del Codiv 19
 
 # %%
+# Tomar la mitad de los datos para que la imagen este mas pequeña
+confirmed_melt = confirmed_group.iloc[::-2].iloc[::-1].melt(id_vars="Fecha")
+confirmed_melt.rename(columns = {'value':'Confirmados', 'date':'Fecha'}, inplace = True)
+
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
 confirmed_melt['Fecha'] = confirmed_melt['Fecha'].dt.strftime('%m/%d/%Y')
 confirmed_melt['size'] = confirmed_melt['Confirmados'].pow(0.3)
 confirmed_melt.dropna(inplace=True) #eliminar filas con valores faltantes
+
 
 fig = px.scatter_geo(confirmed_melt, locations="Country/Region", locationmode='country names', 
                      color="Confirmados", size='size', hover_name="Country/Region", 
