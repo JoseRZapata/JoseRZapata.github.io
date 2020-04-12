@@ -43,7 +43,7 @@ El libro esta acompañado por un repositorio con Jupyter Notebooks: https://gith
 
 Esta lista de verificación puede ser una guia paso a paso para proyectos de Machine Learning.
 
-# Definir el problema y mirar el panorama general.
+# 1. Definir el problema y mirar el panorama general.
 1. Definir el objetivo en términos del negocio.
 2. ¿Cómo se usará su solución?
 3. ¿Cuáles son las soluciones actuales (si las hay)?
@@ -58,7 +58,7 @@ etc.)
 11. Hacer un listado de los supuestos que hay hasta este momento.
 12. Verificar los supuestos si es posible.
 
-# Obténer los datos
+# 2. Obténer los datos
 {{% alert note %}}
 **Nota:** automatizar tanto como sea posible este proceso para que pueda obtener fácilmente datos nuevos.
 {{% /alert %}}
@@ -75,7 +75,7 @@ etc.)
 10. Verificar el tamaño y el tipo de datos (series de tiempo, muestra de datos, geoposicionamiento, etc.).
 11. **Separar un conjunto de datos prueba, dejarlos a un lado y nunca mirarlos.**
 
-# Explorar los datos para obtener información.
+# 3. Explorar los datos para obtener información.
 {{% alert note %}}
 **Nota:** intente obtener información de un experto en el tema para estos pasos.
 {{% /alert %}}
@@ -98,7 +98,7 @@ si necesario).
 9. Identificar datos adicionales que pueden ser útiles.
 10. Documentar lo que ha aprendido.
 
-# Preparación de los datos.
+# 4. Preparación de los datos.
 
 Para exponer mejor los patrones de los datos y usarlos con los algoritmos de Machine Learning.
 
@@ -132,7 +132,7 @@ columnas).
 4. Escalado de atributos (**Feature Scaling**).: 
 - estandarizar o normalizar atributos.
 
-# Exploracion y seleccion de modelos
+# 5. Exploración y selección de modelos
 {{% alert note %}}
 **Notas:**
 - Si se tiene una gran cantidad de datos, es posible que desee hacer un muestreo de los datos para tener conjuntos de entrenamiento más pequeños, de esta forma se pueden entrenar varios modelos diferentes en un tiempo razonable (se debe tener en cuenta que esto penaliza modelos complejos como redes neuronales grandes o Random Forest).
@@ -149,7 +149,7 @@ columnas).
 6. Realice una o dos iteraciones rápidas más de los cinco pasos anteriores.
 7. Hacer una lista corta de los tres a cinco modelos más prometedores, prefiriendo seleccionar modelos que cometan diferentes tipos de errores (diversidad de los errores).
 
-# Afinar los modelos.
+# 6. Afinar los modelos.
 {{% alert note %}}
 **Notas:**
 - Se deberá utilizar la mayor cantidad de datos posible para este paso, especialmente a medida que avanza hacia el final del ajuste fino del modelo.
@@ -167,7 +167,7 @@ No modifique su modelo después de medir el error de generalización:
 simplemente comenzaría a sobreajustar el conjunto de prueba.
 {{% /alert %}}
 
-# Presentacion de la solución. 
+# 7. Presentacion de la solución. 
 1. Documentar lo que ha hecho.
 2. Crear una buena presentación.
 - Asegúrese de resaltar el panorama general del proyecto o del problema primero.
@@ -177,7 +177,7 @@ simplemente comenzaría a sobreajustar el conjunto de prueba.
 - Enumerar los supuestos y las limitaciones del sistema.
 5. Asegúrarse de que los hallazgos clave se comuniquen a través de hermosas visualizaciones o declaraciones fáciles de recordar (por ejemplo, "el ingreso medio es el predictor número uno de los precios de la vivienda").
 
-# Desplegar, monitorear y mantener el sistema. 
+# 8. Desplegar, monitorear y mantener el sistema. 
 1. Preparar la solución para producción (conectar las entradas de datos de producción, escribir pruebas unitarias (unit test), etc.).
 2. Escribir código de monitoreo para verificar el rendimiento en tiempo real del sistema a intervalos regulares y activar alertas cuando se caiga o falle.
 - Tener cuidado con la lenta degradación: los modelos tienden a "pudrirse" a medida que los datos evolucionan, el modelo va perdiendo validez en el tiempo.
