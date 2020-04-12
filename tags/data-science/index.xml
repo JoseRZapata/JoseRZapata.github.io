@@ -30,14 +30,14 @@ con algunos pasos propios agregados o que he encontrado en otros libros o cursos
 &lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#definir-el-problema-y-mirar-el-panorama-general&#34;&gt;Definir el problema y mirar el panorama general.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#obténer-los-datos&#34;&gt;Obténer los datos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#explorar-los-datos-para-obtener-información&#34;&gt;Explorar los datos para obtener información.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#preparación-de-los-datos&#34;&gt;Preparación de los datos.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#exploracion-y-seleccion-de-modelos&#34;&gt;Exploracion y seleccion de modelos&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#afinar-los-modelos&#34;&gt;Afinar los modelos.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#presentacion-de-la-solución&#34;&gt;Presentacion de la solución.&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#desplegar-monitorear-y-mantener-el-sistema&#34;&gt;Desplegar, monitorear y mantener el sistema.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#1-definir-el-problema-y-mirar-el-panorama-general&#34;&gt;1. Definir el problema y mirar el panorama general.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#2-obténer-los-datos&#34;&gt;2. Obténer los datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#3-explorar-los-datos-para-obtener-información&#34;&gt;3. Explorar los datos para obtener información.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#4-preparación-de-los-datos&#34;&gt;4. Preparación de los datos.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#5-exploración-y-selección-de-modelos&#34;&gt;5. Exploración y selección de modelos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#6-afinar-los-modelos&#34;&gt;6. Afinar los modelos.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#7-presentacion-de-la-solución&#34;&gt;7. Presentacion de la solución.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#8-desplegar-monitorear-y-mantener-el-sistema&#34;&gt;8. Desplegar, monitorear y mantener el sistema.&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;Referencias&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;&lt;/p&gt;
@@ -46,7 +46,7 @@ con algunos pasos propios agregados o que he encontrado en otros libros o cursos
 
 &lt;p&gt;Esta lista de verificación puede ser una guia paso a paso para proyectos de Machine Learning.&lt;/p&gt;
 
-&lt;h1 id=&#34;definir-el-problema-y-mirar-el-panorama-general&#34;&gt;Definir el problema y mirar el panorama general.&lt;/h1&gt;
+&lt;h1 id=&#34;1-definir-el-problema-y-mirar-el-panorama-general&#34;&gt;1. Definir el problema y mirar el panorama general.&lt;/h1&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Definir el objetivo en términos del negocio.&lt;/li&gt;
@@ -64,7 +64,7 @@ etc.)&lt;/li&gt;
 &lt;li&gt;Verificar los supuestos si es posible.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;obténer-los-datos&#34;&gt;Obténer los datos&lt;/h1&gt;
+&lt;h1 id=&#34;2-obténer-los-datos&#34;&gt;2. Obténer los datos&lt;/h1&gt;
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -86,7 +86,7 @@ etc.)&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Separar un conjunto de datos prueba, dejarlos a un lado y nunca mirarlos.&lt;/strong&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;explorar-los-datos-para-obtener-información&#34;&gt;Explorar los datos para obtener información.&lt;/h1&gt;
+&lt;h1 id=&#34;3-explorar-los-datos-para-obtener-información&#34;&gt;3. Explorar los datos para obtener información.&lt;/h1&gt;
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -117,7 +117,7 @@ si necesario).&lt;/li&gt;
 &lt;li&gt;Documentar lo que ha aprendido.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;preparación-de-los-datos&#34;&gt;Preparación de los datos.&lt;/h1&gt;
+&lt;h1 id=&#34;4-preparación-de-los-datos&#34;&gt;4. Preparación de los datos.&lt;/h1&gt;
 
 &lt;p&gt;Para exponer mejor los patrones de los datos y usarlos con los algoritmos de Machine Learning.&lt;/p&gt;
 
@@ -162,7 +162,7 @@ columnas).&lt;/li&gt;
 &lt;li&gt;estandarizar o normalizar atributos.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;exploracion-y-seleccion-de-modelos&#34;&gt;Exploracion y seleccion de modelos&lt;/h1&gt;
+&lt;h1 id=&#34;5-exploración-y-selección-de-modelos&#34;&gt;5. Exploración y selección de modelos&lt;/h1&gt;
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -186,7 +186,7 @@ columnas).&lt;/li&gt;
 &lt;li&gt;Hacer una lista corta de los tres a cinco modelos más prometedores, prefiriendo seleccionar modelos que cometan diferentes tipos de errores (diversidad de los errores).&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;afinar-los-modelos&#34;&gt;Afinar los modelos.&lt;/h1&gt;
+&lt;h1 id=&#34;6-afinar-los-modelos&#34;&gt;6. Afinar los modelos.&lt;/h1&gt;
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
@@ -213,7 +213,7 @@ simplemente comenzaría a sobreajustar el conjunto de prueba.
   &lt;/div&gt;
 &lt;/div&gt;
 
-&lt;h1 id=&#34;presentacion-de-la-solución&#34;&gt;Presentacion de la solución.&lt;/h1&gt;
+&lt;h1 id=&#34;7-presentacion-de-la-solución&#34;&gt;7. Presentacion de la solución.&lt;/h1&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Documentar lo que ha hecho.&lt;/li&gt;
@@ -226,7 +226,7 @@ simplemente comenzaría a sobreajustar el conjunto de prueba.
 &lt;li&gt;Asegúrarse de que los hallazgos clave se comuniquen a través de hermosas visualizaciones o declaraciones fáciles de recordar (por ejemplo, &amp;ldquo;el ingreso medio es el predictor número uno de los precios de la vivienda&amp;rdquo;).&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h1 id=&#34;desplegar-monitorear-y-mantener-el-sistema&#34;&gt;Desplegar, monitorear y mantener el sistema.&lt;/h1&gt;
+&lt;h1 id=&#34;8-desplegar-monitorear-y-mantener-el-sistema&#34;&gt;8. Desplegar, monitorear y mantener el sistema.&lt;/h1&gt;
 
 &lt;ol&gt;
 &lt;li&gt;Preparar la solución para producción (conectar las entradas de datos de producción, escribir pruebas unitarias (unit test), etc.).&lt;/li&gt;
