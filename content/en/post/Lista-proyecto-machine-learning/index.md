@@ -2,15 +2,15 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Paso a paso en un Proyecto Machine Learning"
-subtitle: "Checklist y preguntas a realizar para su desarrollo"
-summary: ""
+subtitle: "Checklist y preguntas"
+summary: "Checklist y preguntas para realizar un proyecto de machine learning"
 authors: ["Jose R. Zapata"]
 tags: ["Data-Science"]
 categories: ["Data-Science"]
 date: 2020-04-09T06:54:44-05:00
 lastmod: 2020-04-09T06:54:44-05:00
 featured: false
-draft: true
+draft: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.

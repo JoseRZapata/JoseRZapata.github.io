@@ -2,15 +2,15 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Paso a paso en un Proyecto Machine Learning"
-subtitle: "Checklist y preguntas a realizar para su desarrollo"
-summary: ""
+subtitle: "Checklist y preguntas"
+summary: "Checklist y preguntas para realizar un proyecto de machine learning"
 authors: ["Jose R. Zapata"]
 tags: ["Data-Science"]
 categories: ["Data-Science"]
 date: 2020-04-09T06:54:44-05:00
 lastmod: 2020-04-09T06:54:44-05:00
 featured: false
-draft: true
+draft: false
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -141,7 +141,7 @@ columnas).
 
 1. Entrenar muchos modelos rápidos y utilizando parámetros estándar de diferentes categorías (p. Ej., Lineales, Naive Bayes, SVM, Random Forest, redes neuronales, etc.).
 2. Medir y comparar su desempeño.
-- Para cada modelo, utilice la validación cruzada (Cross validation) de N subconjuntos y calcule la media y la desviación estándar de la medida de rendimiento en las N evaluaciones.
+- Para cada modelo, utilice la validación cruzada ([Cross validation](https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada)) de N subconjuntos y calcule la media y la desviación estándar de la medida de rendimiento en las N evaluaciones.
 3. Analice las variables más significativas para cada algoritmo.
 4. Analice los tipos de errores que cometen los modelos.
 - ¿Qué datos habría utilizado un humano para evitar estos errores?
@@ -156,7 +156,7 @@ columnas).
 - Como siempre, automatizar lo que se pueda.
 {{% /alert %}}
 
-1. Ajuste los hiperparámetros ([hyperparameter tunning](https://en.wikipedia.org/wiki/Hyperparameter_optimization)) mediante validación cruzada (cross validation).
+1. Ajuste los hiperparámetros ([hyperparameter tunning](https://en.wikipedia.org/wiki/Hyperparameter_optimization)) mediante validación cruzada ([cross validation](https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada)).
 - Tratar las elecciones de transformación de datos como hiperparámetros, especialmente cuando no esta seguro de ellos (por ejemplo, ¿debería reemplazar los valores faltantes con cero o con el valor medio? ¿O simplemente dejar eliminar las filas?).
 - A menos que haya muy pocos valores de hiperparámetros para explorar, prefiera la búsqueda aleatoria (random search)  a la búsqueda de cuadrícula (grid search). Si el entrenamiento es muy largo, es posible que prefiera un enfoque de optimización bayesiano (por ejemplo, utilizando procesos previos gaussianos, como lo describen [Jasper Snoek, Hugo Larochelle y Ryan Adams](https://goo.gl/PEFfGr)[^1].
 2. Pruebe los métodos de Ensamble (ensemble methods). La combinación de sus mejores modelos a menudo tendrá un mejor rendimiento que se ejecutan individualmente (hay mejor desempeño si hay diversidad de errores entre los modelos).
