@@ -5,12 +5,255 @@
     <link>https://joserzapata.github.io/post/</link>
       <atom:link href="https://joserzapata.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Tue, 17 Mar 2020 17:03:57 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Thu, 09 Apr 2020 06:54:44 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Posts</title>
       <link>https://joserzapata.github.io/post/</link>
     </image>
+    
+    <item>
+      <title>Paso a paso en un Proyecto Machine Learning</title>
+      <link>https://joserzapata.github.io/post/lista-proyecto-machine-learning/</link>
+      <pubDate>Thu, 09 Apr 2020 06:54:44 -0500</pubDate>
+      <guid>https://joserzapata.github.io/post/lista-proyecto-machine-learning/</guid>
+      <description>
+
+&lt;p&gt;Esta es una traduccion propia al español del Apendice B (Machine Learning Project Checklist) del libro
+&lt;a href=&#34;https://www.amazon.com/-/es/gp/product/B07XGF2G87/&#34; target=&#34;_blank&#34;&gt;Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems&lt;/a&gt; 2nd Edition de &lt;a href=&#34;https://twitter.com/aureliengeron&#34; target=&#34;_blank&#34;&gt;Aurélien Géron&lt;/a&gt;
+con algunos pasos propios agregados o que he encontrado en otros libros o cursos que he realizado.&lt;/p&gt;
+
+&lt;p&gt;Este Libro me ha gustado mucho, para mi es el libro practico mas completo sobre machine learning con python que he leido, tiene una excelente estructura, codigo en python muy bien explicado, ademas muchos tips y sugerencias para realizar un proyecto de machine learning.&lt;/p&gt;
+
+&lt;p&gt;El libro esta acompañado por un repositorio con Jupyter Notebooks: &lt;a href=&#34;https://github.com/ageron/handson-ml2&#34; target=&#34;_blank&#34;&gt;https://github.com/ageron/handson-ml2&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
+&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#definir-el-problema-y-mirar-el-panorama-general&#34;&gt;Definir el problema y mirar el panorama general.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#obténer-los-datos&#34;&gt;Obténer los datos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#explorar-los-datos-para-obtener-información&#34;&gt;Explorar los datos para obtener información.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#preparación-de-los-datos&#34;&gt;Preparación de los datos.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#exploracion-y-seleccion-de-modelos&#34;&gt;Exploracion y seleccion de modelos&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#afinar-los-modelos&#34;&gt;Afinar los modelos.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#presentacion-de-la-solución&#34;&gt;Presentacion de la solución.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#desplegar-monitorear-y-mantener-el-sistema&#34;&gt;Desplegar, monitorear y mantener el sistema.&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;Referencias&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/nav&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Esta lista de verificación puede ser una guia paso a paso para proyectos de Machine Learning.&lt;/p&gt;
+
+&lt;h1 id=&#34;definir-el-problema-y-mirar-el-panorama-general&#34;&gt;Definir el problema y mirar el panorama general.&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Definir el objetivo en términos del negocio.&lt;/li&gt;
+&lt;li&gt;¿Cómo se usará su solución?&lt;/li&gt;
+&lt;li&gt;¿Cuáles son las soluciones actuales (si las hay)?&lt;/li&gt;
+&lt;li&gt;¿Cómo se debe enmarcar este problema (supervisado / no supervisado, en línea / fuera de línea,
+etc.)&lt;/li&gt;
+&lt;li&gt;¿Cómo se debe medir el desempeño o el rendimiento de la solucion?&lt;/li&gt;
+&lt;li&gt;¿La medida de desempeño está alineada con el objetivo del negocio?&lt;/li&gt;
+&lt;li&gt;¿Cuál sería el desempeño o rendimiento mínimo necesario para alcanzar el objetivo del negocio?&lt;/li&gt;
+&lt;li&gt;¿Cuáles son los problemas parecidos? ¿Se puede reutilizar experiencias o herramientas ya creadas?&lt;/li&gt;
+&lt;li&gt;¿Hay experiencia del problema disponible?&lt;/li&gt;
+&lt;li&gt;¿Cómo se puede resolver el problema manualmente?&lt;/li&gt;
+&lt;li&gt;Hacer un listado de los supuestos que hay hasta este momento.&lt;/li&gt;
+&lt;li&gt;Verificar los supuestos si es posible.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;obténer-los-datos&#34;&gt;Obténer los datos&lt;/h1&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;strong&gt;Nota:&lt;/strong&gt; automatizar tanto como sea posible este proceso para que pueda obtener fácilmente datos nuevos.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Enumere los datos que necesita y la cantidad que necesita.&lt;/li&gt;
+&lt;li&gt;Busque y documente dónde se pueden obtener los datos.&lt;/li&gt;
+&lt;li&gt;Compruebe cuánto espacio de almacenamiento ocuparán los datos.&lt;/li&gt;
+&lt;li&gt;Verifique las limitaciones legales y obtener autorización a los datos si es necesario.&lt;/li&gt;
+&lt;li&gt;Obtener autorizaciones de acceso a los datos.&lt;/li&gt;
+&lt;li&gt;Reservar suficiente espacio de almacenamiento para el proyecto.&lt;/li&gt;
+&lt;li&gt;Obtener los datos.&lt;/li&gt;
+&lt;li&gt;Convertir los datos a un formato que se pueda manipular fácilmente (sin cambiar los datos en sí).&lt;/li&gt;
+&lt;li&gt;Asegúrarse de que la información confidencial se elimine o se proteja (por ejemplo, anonimizar los datos).&lt;/li&gt;
+&lt;li&gt;Verificar el tamaño y el tipo de datos (series de tiempo, muestra de datos, geoposicionamiento, etc.).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Separar un conjunto de datos prueba, dejarlos a un lado y nunca mirarlos.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;explorar-los-datos-para-obtener-información&#34;&gt;Explorar los datos para obtener información.&lt;/h1&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;strong&gt;Nota:&lt;/strong&gt; intente obtener información de un experto en el tema para estos pasos.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Crear una copia de los datos para explorarlos (muestreándolos a un tamaño manejable
+si necesario).&lt;/li&gt;
+&lt;li&gt;Crar un Jupyter Notebook para mantener un registro de la exploración de los datos.&lt;/li&gt;
+&lt;li&gt;Estudiar cada atributo y sus características &lt;strong&gt;(Analisis Univariable)&lt;/strong&gt;:
+
+&lt;ul&gt;
+&lt;li&gt;Nombre&lt;/li&gt;
+&lt;li&gt;Tipo  de dato (categórico, int / float, acotado / no acotado, texto, estructurado, etc.)&lt;/li&gt;
+&lt;li&gt;porcentaje (%) de valores faltantes.&lt;/li&gt;
+&lt;li&gt;Ruido y tipo de ruido (estocástico, valores atípicos, errores de redondeo, etc.)&lt;/li&gt;
+&lt;li&gt;¿Son posiblemente útiles para el proyecto?&lt;/li&gt;
+&lt;li&gt;Tipo de distribución (gaussiana, uniforme, logarítmica, etc.)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Para los proyectos de aprendizaje supervisado, identifique los atributos objetivo (target).&lt;/li&gt;
+&lt;li&gt;Visualizacion de los datos.&lt;/li&gt;
+&lt;li&gt;Estudiar las correlaciones entre atributos &lt;strong&gt;(Analisis Bivariable)&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Estudiar cómo resolver el problema manualmente.&lt;/li&gt;
+&lt;li&gt;Identificar las transformaciones que tal vez se puedan aplicar.&lt;/li&gt;
+&lt;li&gt;Identificar datos adicionales que pueden ser útiles.&lt;/li&gt;
+&lt;li&gt;Documentar lo que ha aprendido.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;preparación-de-los-datos&#34;&gt;Preparación de los datos.&lt;/h1&gt;
+
+&lt;p&gt;Para exponer mejor los patrones de los datos y usarlos con los algoritmos de Machine Learning.&lt;/p&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;strong&gt;Notas:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trabaje en copias de los datos (mantenga intacto el conjunto de datos original).&lt;/li&gt;
+&lt;li&gt;Escriba funciones para todas las transformaciones de datos que realice, por cinco razones:
+&lt;ul&gt;
+&lt;li&gt;Para que pueda preparar fácilmente los datos la próxima vez que obtenga un conjunto de datos nuevo&lt;/li&gt;
+&lt;li&gt;Para que pueda aplicar estas transformaciones en proyectos futuros&lt;/li&gt;
+&lt;li&gt;Para limpiar y preparar el set de datos de prueba&lt;/li&gt;
+&lt;li&gt;Para limpiar y preparar nuevas instancias de datos una vez que su solución esté activa (produccion)&lt;/li&gt;
+&lt;li&gt;Para que sea fácil probar diferentes formas de preparación de datos como hiperparámetros&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+ 
+
+&lt;ol&gt;
+&lt;li&gt;Limpieza de datos:
+
+&lt;ul&gt;
+&lt;li&gt;Eliminar registros datos duplicados (disminuir el numero de datos)&lt;/li&gt;
+&lt;li&gt;Corregir o eliminar valores atípicos (opcional).&lt;/li&gt;
+&lt;li&gt;Los valores atípicos pueden separarse del dataset dependiendo del problema del proyecto (por ejemplo, deteccion de anomalias).&lt;/li&gt;
+&lt;li&gt;Completar los valores faltantes (por ejemplo, con cero, media, mediana &amp;hellip;) o eliminar las filas (o
+columnas).&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Selección de atributos (&lt;strong&gt;Feature Selection&lt;/strong&gt;) (opcional):&lt;/li&gt;
+&lt;li&gt;Descartar los atributos que no proporcionan información útil para el proyecto.&lt;/li&gt;
+&lt;li&gt;Eliminar registros duplicados (al eliminar atributos pueden quedar registros iguales)&lt;/li&gt;
+&lt;li&gt;Ingeniería de atributos (&lt;strong&gt;Feature Engineering&lt;/strong&gt;), cuando sea apropiado:&lt;/li&gt;
+&lt;li&gt;Discretizar las atributos continuas.&lt;/li&gt;
+&lt;li&gt;Descomponer en partes los atributos (p. Ej., Categóricas, fecha / hora, etc.).&lt;/li&gt;
+&lt;li&gt;Agregar transformaciones prometedoras de las atributos (por ejemplo, log(x), sqrt(x), x^2, etc.).&lt;/li&gt;
+&lt;li&gt;Aplicar funciones a los datos para agregar nuevos atributos.&lt;/li&gt;
+&lt;li&gt;Escalado de atributos (&lt;strong&gt;Feature Scaling&lt;/strong&gt;).:&lt;/li&gt;
+&lt;li&gt;estandarizar o normalizar atributos.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;exploracion-y-seleccion-de-modelos&#34;&gt;Exploracion y seleccion de modelos&lt;/h1&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;strong&gt;Notas:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Si se tiene una gran cantidad de datos, es posible que desee hacer un muestreo de los datos para tener conjuntos de entrenamiento más pequeños, de esta forma se pueden entrenar varios modelos diferentes en un tiempo razonable (se debe tener en cuenta que esto penaliza modelos complejos como redes neuronales grandes o Random Forest).&lt;/li&gt;
+&lt;li&gt;Una vez más, intentar automatizar estos pasos tanto como sea posible.&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Entrenar muchos modelos rápidos y utilizando parámetros estándar de diferentes categorías (p. Ej., Lineales, Naive Bayes, SVM, Random Forest, redes neuronales, etc.).&lt;/li&gt;
+&lt;li&gt;Medir y comparar su desempeño.&lt;/li&gt;
+&lt;li&gt;Para cada modelo, utilice la validación cruzada (&lt;a href=&#34;https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada&#34; target=&#34;_blank&#34;&gt;Cross validation&lt;/a&gt;) de N subconjuntos y calcule la media y la desviación estándar de la medida de rendimiento en las N evaluaciones.&lt;/li&gt;
+&lt;li&gt;Analice las variables más significativas para cada algoritmo.&lt;/li&gt;
+&lt;li&gt;Analice los tipos de errores que cometen los modelos.&lt;/li&gt;
+&lt;li&gt;¿Qué datos habría utilizado un humano para evitar estos errores?&lt;/li&gt;
+&lt;li&gt;Realizar rapidamente una selección de atributos e ingeniería de atributos (Feature selection, Feature Engineering).&lt;/li&gt;
+&lt;li&gt;Realice una o dos iteraciones rápidas más de los cinco pasos anteriores.&lt;/li&gt;
+&lt;li&gt;Hacer una lista corta de los tres a cinco modelos más prometedores, prefiriendo seleccionar modelos que cometan diferentes tipos de errores (diversidad de los errores).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;afinar-los-modelos&#34;&gt;Afinar los modelos.&lt;/h1&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    &lt;strong&gt;Notas:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Se deberá utilizar la mayor cantidad de datos posible para este paso, especialmente a medida que avanza hacia el final del ajuste fino del modelo.&lt;/li&gt;
+&lt;li&gt;Como siempre, automatizar lo que se pueda.&lt;/li&gt;
+&lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Ajuste los hiperparámetros (&lt;a href=&#34;https://en.wikipedia.org/wiki/Hyperparameter_optimization&#34; target=&#34;_blank&#34;&gt;hyperparameter tunning&lt;/a&gt;) mediante validación cruzada (&lt;a href=&#34;https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada&#34; target=&#34;_blank&#34;&gt;cross validation&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Tratar las elecciones de transformación de datos como hiperparámetros, especialmente cuando no esta seguro de ellos (por ejemplo, ¿debería reemplazar los valores faltantes con cero o con el valor medio? ¿O simplemente dejar eliminar las filas?).&lt;/li&gt;
+&lt;li&gt;A menos que haya muy pocos valores de hiperparámetros para explorar, prefiera la búsqueda aleatoria (random search)  a la búsqueda de cuadrícula (grid search). Si el entrenamiento es muy largo, es posible que prefiera un enfoque de optimización bayesiano (por ejemplo, utilizando procesos previos gaussianos, como lo describen &lt;a href=&#34;https://goo.gl/PEFfGr&#34; target=&#34;_blank&#34;&gt;Jasper Snoek, Hugo Larochelle y Ryan Adams&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
+&lt;li&gt;Pruebe los métodos de Ensamble (ensemble methods). La combinación de sus mejores modelos a menudo tendrá un mejor rendimiento que se ejecutan individualmente (hay mejor desempeño si hay diversidad de errores entre los modelos).&lt;/li&gt;
+&lt;li&gt;Una vez que esté seguro de su modelo final, mida su rendimiento en el conjunto de prueba (test set, separado al inicio) para estimar el error de generalización.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&#34;alert alert-warning&#34;&gt;
+  &lt;div&gt;
+    No modifique su modelo después de medir el error de generalización:
+simplemente comenzaría a sobreajustar el conjunto de prueba.
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;h1 id=&#34;presentacion-de-la-solución&#34;&gt;Presentacion de la solución.&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Documentar lo que ha hecho.&lt;/li&gt;
+&lt;li&gt;Crear una buena presentación.&lt;/li&gt;
+&lt;li&gt;Asegúrese de resaltar el panorama general del proyecto o del problema primero.&lt;/li&gt;
+&lt;li&gt;Explicar por qué la solución encontrada logra el objetivo buscado.&lt;/li&gt;
+&lt;li&gt;No olvidar presentar puntos interesantes que se notaron en el camino.&lt;/li&gt;
+&lt;li&gt;Describir qué funcionó y qué no.&lt;/li&gt;
+&lt;li&gt;Enumerar los supuestos y las limitaciones del sistema.&lt;/li&gt;
+&lt;li&gt;Asegúrarse de que los hallazgos clave se comuniquen a través de hermosas visualizaciones o declaraciones fáciles de recordar (por ejemplo, &amp;ldquo;el ingreso medio es el predictor número uno de los precios de la vivienda&amp;rdquo;).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;desplegar-monitorear-y-mantener-el-sistema&#34;&gt;Desplegar, monitorear y mantener el sistema.&lt;/h1&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Preparar la solución para producción (conectar las entradas de datos de producción, escribir pruebas unitarias (unit test), etc.).&lt;/li&gt;
+&lt;li&gt;Escribir código de monitoreo para verificar el rendimiento en tiempo real del sistema a intervalos regulares y activar alertas cuando se caiga o falle.&lt;/li&gt;
+&lt;li&gt;Tener cuidado con la lenta degradación: los modelos tienden a &amp;ldquo;pudrirse&amp;rdquo; a medida que los datos evolucionan, el modelo va perdiendo validez en el tiempo.&lt;/li&gt;
+&lt;li&gt;La medición del rendimiento puede requerir supervision humana (por ejemplo, a través de un servicio de crowdsourcing).&lt;/li&gt;
+&lt;li&gt;Controlar la calidad de los datos de entrada (por ejemplo, Un sensor que funciona mal y que envía valores aleatorios, o la salida de datos de otro equipo se vuelve obsoleta). Esto es particularmente importante para los sistemas de aprendizaje en línea (online learning).&lt;/li&gt;
+&lt;li&gt;Vuelva a entrenar sus modelos de forma regular con datos nuevos (automatizar lo más posible).&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/-/es/gp/product/B07XGF2G87/&#34; target=&#34;_blank&#34;&gt;Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ageron/handson-ml2&#34; target=&#34;_blank&#34;&gt;https://github.com/ageron/handson-ml2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;footnotes&#34;&gt;
+
+&lt;hr /&gt;
+
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;“Practical Bayesian Optimization of Machine Learning Algorithms,” J. Snoek, H. Larochelle, R. Adams (2012)
+ &lt;a class=&#34;footnote-return&#34; href=&#34;#fnref:1&#34;&gt;&lt;sup&gt;^&lt;/sup&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+    </item>
     
     <item>
       <title>Visualizacion Datos Coronavirus (COVID19) Mundial con Plotly</title>

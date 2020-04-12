@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://joserzapata.github.io/es/authors/</loc>
-    <lastmod>2020-03-31T17:03:57-05:00</lastmod>
+    <lastmod>2020-04-09T06:54:44-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://joserzapata.github.io/es/categories/</loc>
-    <lastmod>2020-03-31T17:03:57-05:00</lastmod>
+    <lastmod>2020-04-09T06:54:44-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -34,7 +34,7 @@
   
   <url>
     <loc>https://joserzapata.github.io/es/tags/data-science/</loc>
-    <lastmod>2020-03-31T17:03:57-05:00</lastmod>
+    <lastmod>2020-04-09T06:54:44-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -49,7 +49,7 @@
   
   <url>
     <loc>https://joserzapata.github.io/es/categories/data-science/</loc>
-    <lastmod>2020-03-31T17:03:57-05:00</lastmod>
+    <lastmod>2020-04-09T06:54:44-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -64,7 +64,7 @@
   
   <url>
     <loc>https://joserzapata.github.io/es/authors/jose-r.-zapata/</loc>
-    <lastmod>2020-03-31T17:03:57-05:00</lastmod>
+    <lastmod>2020-04-09T06:54:44-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -74,6 +74,51 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/authors/jose-r.-zapata/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/post/lista-proyecto-machine-learning/</loc>
+    <lastmod>2020-04-09T06:54:44-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/post/lista-proyecto-machine-learning/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/post/lista-proyecto-machine-learning/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/post/</loc>
+    <lastmod>2020-04-09T06:54:44-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/post/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/post/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/tags/</loc>
+    <lastmod>2020-04-09T06:54:44-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/"
                 />
   </url>
   
@@ -93,21 +138,6 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/es/post/</loc>
-    <lastmod>2020-03-31T17:03:57-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/post/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/post/"
-                />
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/es/tags/python/</loc>
     <lastmod>2020-03-31T17:03:57-05:00</lastmod>
     <xhtml:link
@@ -119,21 +149,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/tags/python/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/es/tags/</loc>
-    <lastmod>2020-03-31T17:03:57-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/"
                 />
   </url>
   

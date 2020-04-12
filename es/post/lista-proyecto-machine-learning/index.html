@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.5.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jose Ricardo Zapata">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Checklist y preguntas para realizar un proyecto de machine learning">
+
+  
+  <link rel="alternate" hreflang="en" href="https://joserzapata.github.io/post/lista-proyecto-machine-learning/">
+  
+  <link rel="alternate" hreflang="es" href="https://joserzapata.github.io/es/post/lista-proyecto-machine-learning/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#328cc1">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.min.30689228d1eb4cc4ce665e3dd036702c.css">
+
+  
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112535090-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           document.location = url;
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target);  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-112535090-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/es/index.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon-32.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="https://joserzapata.github.io/es/post/lista-proyecto-machine-learning/">
+
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@joserzapata">
+  <meta property="twitter:creator" content="@joserzapata">
+  
+  <meta property="og:site_name" content="Jose Ricardo Zapata">
+  <meta property="og:url" content="https://joserzapata.github.io/es/post/lista-proyecto-machine-learning/">
+  <meta property="og:title" content="Paso a paso en un Proyecto Machine Learning | Jose Ricardo Zapata">
+  <meta property="og:description" content="Checklist y preguntas para realizar un proyecto de machine learning"><meta property="og:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg">
+  <meta property="twitter:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg"><meta property="og:locale" content="es">
+  
+    
+      <meta property="article:published_time" content="2020-04-09T06:54:44-05:00">
+    
+    <meta property="article:modified_time" content="2020-04-09T06:54:44-05:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://joserzapata.github.io/es/post/lista-proyecto-machine-learning/"
+  },
+  "headline": "Paso a paso en un Proyecto Machine Learning",
+  
+  "datePublished": "2020-04-09T06:54:44-05:00",
+  "dateModified": "2020-04-09T06:54:44-05:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Jose R. Zapata"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Jose Ricardo Zapata",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://joserzapata.github.io/img/icon-512.png"
+    }
+  },
+  "description": "Checklist y preguntas para realizar un proyecto de machine learning"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Paso a paso en un Proyecto Machine Learning | Jose Ricardo Zapata</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Buscar</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Buscar..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/es/">Jose Ricardo Zapata</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Barra de navegación">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav mr-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/es/#about"><span>Inicio</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/es/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/es/#featured"><span>Publicaciones</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/es/#projects"><span>Proyectos</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/es/#teaching"><span>Cursos</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/es/#talks"><span>Charlas</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/es/phd"><span>Phd Tesis</span></a>
+        </li>
+
+        
+        
+
+      
+      </ul>
+      <ul class="navbar-nav ml-auto">
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+            <i class="fas fa-globe mr-1" aria-hidden="true"></i><span>Español</span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="https://joserzapata.github.io/post/lista-proyecto-machine-learning/">
+                <span>English</span>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Paso a paso en un Proyecto Machine Learning</h1>
+
+  
+  <p class="page-subtitle">Checklist y preguntas</p>
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+
+
+  
+  <span><a href="/es/authors/jose-r.-zapata/">Jose R. Zapata</a></span>
+
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Apr 9, 2020
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    8 min de lectura
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/es/categories/data-science/">Data-Science</a></span>
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      
+
+<p>Esta es una traduccion propia al español del Apendice B (Machine Learning Project Checklist) del libro
+<a href="https://www.amazon.com/-/es/gp/product/B07XGF2G87/" target="_blank">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems</a> 2nd Edition de <a href="https://twitter.com/aureliengeron" target="_blank">Aurélien Géron</a>
+con algunos pasos propios agregados o que he encontrado en otros libros o cursos que he realizado.</p>
+
+<p>Este Libro me ha gustado mucho, para mi es el libro practico mas completo sobre machine learning con python que he leido, tiene una excelente estructura, codigo en python muy bien explicado, ademas muchos tips y sugerencias para realizar un proyecto de machine learning.</p>
+
+<p>El libro esta acompañado por un repositorio con Jupyter Notebooks: <a href="https://github.com/ageron/handson-ml2" target="_blank">https://github.com/ageron/handson-ml2</a></p>
+
+<p><h2>Índice</h2>
+<nav id="TableOfContents">
+<ul>
+<li><a href="#definir-el-problema-y-mirar-el-panorama-general">Definir el problema y mirar el panorama general.</a></li>
+<li><a href="#obténer-los-datos">Obténer los datos</a></li>
+<li><a href="#explorar-los-datos-para-obtener-información">Explorar los datos para obtener información.</a></li>
+<li><a href="#preparación-de-los-datos">Preparación de los datos.</a></li>
+<li><a href="#exploracion-y-seleccion-de-modelos">Exploracion y seleccion de modelos</a></li>
+<li><a href="#afinar-los-modelos">Afinar los modelos.</a></li>
+<li><a href="#presentacion-de-la-solución">Presentacion de la solución.</a></li>
+<li><a href="#desplegar-monitorear-y-mantener-el-sistema">Desplegar, monitorear y mantener el sistema.</a></li>
+<li><a href="#referencias">Referencias</a></li>
+</ul>
+</nav></p>
+
+<hr />
+
+<p>Esta lista de verificación puede ser una guia paso a paso para proyectos de Machine Learning.</p>
+
+<h1 id="definir-el-problema-y-mirar-el-panorama-general">Definir el problema y mirar el panorama general.</h1>
+
+<ol>
+<li>Definir el objetivo en términos del negocio.</li>
+<li>¿Cómo se usará su solución?</li>
+<li>¿Cuáles son las soluciones actuales (si las hay)?</li>
+<li>¿Cómo se debe enmarcar este problema (supervisado / no supervisado, en línea / fuera de línea,
+etc.)</li>
+<li>¿Cómo se debe medir el desempeño o el rendimiento de la solucion?</li>
+<li>¿La medida de desempeño está alineada con el objetivo del negocio?</li>
+<li>¿Cuál sería el desempeño o rendimiento mínimo necesario para alcanzar el objetivo del negocio?</li>
+<li>¿Cuáles son los problemas parecidos? ¿Se puede reutilizar experiencias o herramientas ya creadas?</li>
+<li>¿Hay experiencia del problema disponible?</li>
+<li>¿Cómo se puede resolver el problema manualmente?</li>
+<li>Hacer un listado de los supuestos que hay hasta este momento.</li>
+<li>Verificar los supuestos si es posible.</li>
+</ol>
+
+<h1 id="obténer-los-datos">Obténer los datos</h1>
+
+<div class="alert alert-note">
+  <div>
+    <strong>Nota:</strong> automatizar tanto como sea posible este proceso para que pueda obtener fácilmente datos nuevos.
+  </div>
+</div>
+
+<ol>
+<li>Enumere los datos que necesita y la cantidad que necesita.</li>
+<li>Busque y documente dónde se pueden obtener los datos.</li>
+<li>Compruebe cuánto espacio de almacenamiento ocuparán los datos.</li>
+<li>Verifique las limitaciones legales y obtener autorización a los datos si es necesario.</li>
+<li>Obtener autorizaciones de acceso a los datos.</li>
+<li>Reservar suficiente espacio de almacenamiento para el proyecto.</li>
+<li>Obtener los datos.</li>
+<li>Convertir los datos a un formato que se pueda manipular fácilmente (sin cambiar los datos en sí).</li>
+<li>Asegúrarse de que la información confidencial se elimine o se proteja (por ejemplo, anonimizar los datos).</li>
+<li>Verificar el tamaño y el tipo de datos (series de tiempo, muestra de datos, geoposicionamiento, etc.).</li>
+<li><strong>Separar un conjunto de datos prueba, dejarlos a un lado y nunca mirarlos.</strong></li>
+</ol>
+
+<h1 id="explorar-los-datos-para-obtener-información">Explorar los datos para obtener información.</h1>
+
+<div class="alert alert-note">
+  <div>
+    <strong>Nota:</strong> intente obtener información de un experto en el tema para estos pasos.
+  </div>
+</div>
+
+<ol>
+<li>Crear una copia de los datos para explorarlos (muestreándolos a un tamaño manejable
+si necesario).</li>
+<li>Crar un Jupyter Notebook para mantener un registro de la exploración de los datos.</li>
+<li>Estudiar cada atributo y sus características <strong>(Analisis Univariable)</strong>:
+
+<ul>
+<li>Nombre</li>
+<li>Tipo  de dato (categórico, int / float, acotado / no acotado, texto, estructurado, etc.)</li>
+<li>porcentaje (%) de valores faltantes.</li>
+<li>Ruido y tipo de ruido (estocástico, valores atípicos, errores de redondeo, etc.)</li>
+<li>¿Son posiblemente útiles para el proyecto?</li>
+<li>Tipo de distribución (gaussiana, uniforme, logarítmica, etc.)</li>
+</ul></li>
+<li>Para los proyectos de aprendizaje supervisado, identifique los atributos objetivo (target).</li>
+<li>Visualizacion de los datos.</li>
+<li>Estudiar las correlaciones entre atributos <strong>(Analisis Bivariable)</strong>.</li>
+<li>Estudiar cómo resolver el problema manualmente.</li>
+<li>Identificar las transformaciones que tal vez se puedan aplicar.</li>
+<li>Identificar datos adicionales que pueden ser útiles.</li>
+<li>Documentar lo que ha aprendido.</li>
+</ol>
+
+<h1 id="preparación-de-los-datos">Preparación de los datos.</h1>
+
+<p>Para exponer mejor los patrones de los datos y usarlos con los algoritmos de Machine Learning.</p>
+
+<div class="alert alert-note">
+  <div>
+    <strong>Notas:</strong></p>
+<ul>
+<li>Trabaje en copias de los datos (mantenga intacto el conjunto de datos original).</li>
+<li>Escriba funciones para todas las transformaciones de datos que realice, por cinco razones:
+<ul>
+<li>Para que pueda preparar fácilmente los datos la próxima vez que obtenga un conjunto de datos nuevo</li>
+<li>Para que pueda aplicar estas transformaciones en proyectos futuros</li>
+<li>Para limpiar y preparar el set de datos de prueba</li>
+<li>Para limpiar y preparar nuevas instancias de datos una vez que su solución esté activa (produccion)</li>
+<li>Para que sea fácil probar diferentes formas de preparación de datos como hiperparámetros</li>
+</ul>
+</li>
+</ul>
+  </div>
+</div>
+ 
+
+<ol>
+<li>Limpieza de datos:
+
+<ul>
+<li>Eliminar registros datos duplicados (disminuir el numero de datos)</li>
+<li>Corregir o eliminar valores atípicos (opcional).</li>
+<li>Los valores atípicos pueden separarse del dataset dependiendo del problema del proyecto (por ejemplo, deteccion de anomalias).</li>
+<li>Completar los valores faltantes (por ejemplo, con cero, media, mediana &hellip;) o eliminar las filas (o
+columnas).</li>
+</ul></li>
+<li>Selección de atributos (<strong>Feature Selection</strong>) (opcional):</li>
+<li>Descartar los atributos que no proporcionan información útil para el proyecto.</li>
+<li>Eliminar registros duplicados (al eliminar atributos pueden quedar registros iguales)</li>
+<li>Ingeniería de atributos (<strong>Feature Engineering</strong>), cuando sea apropiado:</li>
+<li>Discretizar las atributos continuas.</li>
+<li>Descomponer en partes los atributos (p. Ej., Categóricas, fecha / hora, etc.).</li>
+<li>Agregar transformaciones prometedoras de las atributos (por ejemplo, log(x), sqrt(x), x^2, etc.).</li>
+<li>Aplicar funciones a los datos para agregar nuevos atributos.</li>
+<li>Escalado de atributos (<strong>Feature Scaling</strong>).:</li>
+<li>estandarizar o normalizar atributos.</li>
+</ol>
+
+<h1 id="exploracion-y-seleccion-de-modelos">Exploracion y seleccion de modelos</h1>
+
+<div class="alert alert-note">
+  <div>
+    <strong>Notas:</strong></p>
+<ul>
+<li>Si se tiene una gran cantidad de datos, es posible que desee hacer un muestreo de los datos para tener conjuntos de entrenamiento más pequeños, de esta forma se pueden entrenar varios modelos diferentes en un tiempo razonable (se debe tener en cuenta que esto penaliza modelos complejos como redes neuronales grandes o Random Forest).</li>
+<li>Una vez más, intentar automatizar estos pasos tanto como sea posible.</li>
+</ul>
+  </div>
+</div>
+
+<ol>
+<li>Entrenar muchos modelos rápidos y utilizando parámetros estándar de diferentes categorías (p. Ej., Lineales, Naive Bayes, SVM, Random Forest, redes neuronales, etc.).</li>
+<li>Medir y comparar su desempeño.</li>
+<li>Para cada modelo, utilice la validación cruzada (<a href="https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada" target="_blank">Cross validation</a>) de N subconjuntos y calcule la media y la desviación estándar de la medida de rendimiento en las N evaluaciones.</li>
+<li>Analice las variables más significativas para cada algoritmo.</li>
+<li>Analice los tipos de errores que cometen los modelos.</li>
+<li>¿Qué datos habría utilizado un humano para evitar estos errores?</li>
+<li>Realizar rapidamente una selección de atributos e ingeniería de atributos (Feature selection, Feature Engineering).</li>
+<li>Realice una o dos iteraciones rápidas más de los cinco pasos anteriores.</li>
+<li>Hacer una lista corta de los tres a cinco modelos más prometedores, prefiriendo seleccionar modelos que cometan diferentes tipos de errores (diversidad de los errores).</li>
+</ol>
+
+<h1 id="afinar-los-modelos">Afinar los modelos.</h1>
+
+<div class="alert alert-note">
+  <div>
+    <strong>Notas:</strong></p>
+<ul>
+<li>Se deberá utilizar la mayor cantidad de datos posible para este paso, especialmente a medida que avanza hacia el final del ajuste fino del modelo.</li>
+<li>Como siempre, automatizar lo que se pueda.</li>
+</ul>
+  </div>
+</div>
+
+<ol>
+<li>Ajuste los hiperparámetros (<a href="https://en.wikipedia.org/wiki/Hyperparameter_optimization" target="_blank">hyperparameter tunning</a>) mediante validación cruzada (<a href="https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada" target="_blank">cross validation</a>).</li>
+<li>Tratar las elecciones de transformación de datos como hiperparámetros, especialmente cuando no esta seguro de ellos (por ejemplo, ¿debería reemplazar los valores faltantes con cero o con el valor medio? ¿O simplemente dejar eliminar las filas?).</li>
+<li>A menos que haya muy pocos valores de hiperparámetros para explorar, prefiera la búsqueda aleatoria (random search)  a la búsqueda de cuadrícula (grid search). Si el entrenamiento es muy largo, es posible que prefiera un enfoque de optimización bayesiano (por ejemplo, utilizando procesos previos gaussianos, como lo describen <a href="https://goo.gl/PEFfGr" target="_blank">Jasper Snoek, Hugo Larochelle y Ryan Adams</a><sup class="footnote-ref" id="fnref:1"><a href="#fn:1">1</a></sup>.</li>
+<li>Pruebe los métodos de Ensamble (ensemble methods). La combinación de sus mejores modelos a menudo tendrá un mejor rendimiento que se ejecutan individualmente (hay mejor desempeño si hay diversidad de errores entre los modelos).</li>
+<li>Una vez que esté seguro de su modelo final, mida su rendimiento en el conjunto de prueba (test set, separado al inicio) para estimar el error de generalización.</li>
+</ol>
+
+<div class="alert alert-warning">
+  <div>
+    No modifique su modelo después de medir el error de generalización:
+simplemente comenzaría a sobreajustar el conjunto de prueba.
+  </div>
+</div>
+
+<h1 id="presentacion-de-la-solución">Presentacion de la solución.</h1>
+
+<ol>
+<li>Documentar lo que ha hecho.</li>
+<li>Crear una buena presentación.</li>
+<li>Asegúrese de resaltar el panorama general del proyecto o del problema primero.</li>
+<li>Explicar por qué la solución encontrada logra el objetivo buscado.</li>
+<li>No olvidar presentar puntos interesantes que se notaron en el camino.</li>
+<li>Describir qué funcionó y qué no.</li>
+<li>Enumerar los supuestos y las limitaciones del sistema.</li>
+<li>Asegúrarse de que los hallazgos clave se comuniquen a través de hermosas visualizaciones o declaraciones fáciles de recordar (por ejemplo, &ldquo;el ingreso medio es el predictor número uno de los precios de la vivienda&rdquo;).</li>
+</ol>
+
+<h1 id="desplegar-monitorear-y-mantener-el-sistema">Desplegar, monitorear y mantener el sistema.</h1>
+
+<ol>
+<li>Preparar la solución para producción (conectar las entradas de datos de producción, escribir pruebas unitarias (unit test), etc.).</li>
+<li>Escribir código de monitoreo para verificar el rendimiento en tiempo real del sistema a intervalos regulares y activar alertas cuando se caiga o falle.</li>
+<li>Tener cuidado con la lenta degradación: los modelos tienden a &ldquo;pudrirse&rdquo; a medida que los datos evolucionan, el modelo va perdiendo validez en el tiempo.</li>
+<li>La medición del rendimiento puede requerir supervision humana (por ejemplo, a través de un servicio de crowdsourcing).</li>
+<li>Controlar la calidad de los datos de entrada (por ejemplo, Un sensor que funciona mal y que envía valores aleatorios, o la salida de datos de otro equipo se vuelve obsoleta). Esto es particularmente importante para los sistemas de aprendizaje en línea (online learning).</li>
+<li>Vuelva a entrenar sus modelos de forma regular con datos nuevos (automatizar lo más posible).</li>
+</ol>
+
+<h1 id="referencias">Referencias</h1>
+
+<ul>
+<li><a href="https://www.amazon.com/-/es/gp/product/B07XGF2G87/" target="_blank">Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems</a></li>
+<li><a href="https://github.com/ageron/handson-ml2" target="_blank">https://github.com/ageron/handson-ml2</a></li>
+</ul>
+<div class="footnotes">
+
+<hr />
+
+<ol>
+<li id="fn:1">“Practical Bayesian Optimization of Machine Learning Algorithms,” J. Snoek, H. Larochelle, R. Adams (2012)
+ <a class="footnote-return" href="#fnref:1"><sup>^</sup></a></li>
+</ol>
+</div>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/es/tags/data-science/">Data-Science</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://joserzapata.github.io/es/post/lista-proyecto-machine-learning/&amp;text=Paso%20a%20paso%20en%20un%20Proyecto%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://joserzapata.github.io/es/post/lista-proyecto-machine-learning/&amp;t=Paso%20a%20paso%20en%20un%20Proyecto%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Paso%20a%20paso%20en%20un%20Proyecto%20Machine%20Learning&amp;body=https://joserzapata.github.io/es/post/lista-proyecto-machine-learning/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://joserzapata.github.io/es/post/lista-proyecto-machine-learning/&amp;title=Paso%20a%20paso%20en%20un%20Proyecto%20Machine%20Learning" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Paso%20a%20paso%20en%20un%20Proyecto%20Machine%20Learning%20https://joserzapata.github.io/es/post/lista-proyecto-machine-learning/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  
+
+
+
+
+
+
+  
+  
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/es/authors/jose-r.-zapata/"></a></h5>
+      
+      
+      <ul class="network-icon" aria-hidden="true">
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Relacionado</h3>
+    <ul>
+      
+      <li><a href="/es/post/covid19-visualizacion/">Visualizacion Datos Coronavirus (COVID19) Mundial con Plotly</a></li>
+      
+      <li><a href="/es/post/pyspark-google-colab/">Pyspark con Google Colab</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/shell.min.js"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/es/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No se encontraron resultados","placeholder":"Buscar...","results":"resultados encontrados"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Proyectos",
+        'publication' : "Publicaciones",
+        'talk' : "Charlas"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2020 &middot; 
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Citar</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copiar
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Descargar
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
