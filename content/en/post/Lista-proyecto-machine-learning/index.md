@@ -188,5 +188,7 @@ simplemente comenzaría a sobreajustar el conjunto de prueba.
 # Referencias
 - [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems](https://www.amazon.com/-/es/gp/product/B07XGF2G87/)
 - https://github.com/ageron/handson-ml2
+- https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+- https://medium.com/@mcintyreshiv/how-to-master-python-for-machine-learning-from-scratch-a-step-by-step-tutorial-8c6569895cb0
 
 [^1]: “Practical Bayesian Optimization of Machine Learning Algorithms,” J. Snoek, H. Larochelle, R. Adams (2012)
