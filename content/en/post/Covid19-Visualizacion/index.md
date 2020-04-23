@@ -4,7 +4,7 @@
 title: "Visualizacion Datos Coronavirus (COVID19) Mundial con Plotly"
 subtitle: ""
 summary: "Visualizaciones con Python y Plotly de los datos mundiales del corona virus COVID19"
-authors: ["Jose R. Zapata"]
+authors: ["admin"]
 tags: ["Python", "Data-Science" ,"Jupyter-notebook"]
 categories: ["Data-Science"]
 date: 2020-03-17T17:03:57-05:00

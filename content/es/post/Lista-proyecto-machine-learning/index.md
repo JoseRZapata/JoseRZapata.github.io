@@ -4,7 +4,7 @@
 title: "Paso a paso en un Proyecto Machine Learning"
 subtitle: "Checklist y preguntas"
 summary: "Checklist y preguntas para realizar un proyecto de machine learning"
-authors: ["Jose R. Zapata"]
+authors: ["admin"]
 tags: ["Data-Science"]
 categories: ["Data-Science"]
 date: 2020-04-09T06:54:44-05:00
