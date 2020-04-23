@@ -37,6 +37,8 @@ los videos fueron creados como apoyo para el curso de Audio del programa [Ingeni
 
 ***
 
+[Playlist del tutorial en youtube](https://www.youtube.com/watch?v=Qoc1ZNvPH7Y&list=PLW2bAKkMAGl6DTqEqEEGKnNExeAuMM1yb) 
+
 # 1. Introduccion a Reaper y Edicion
 Introduccion a la configuración Manejo de REAPER para produccion de audio.
 
