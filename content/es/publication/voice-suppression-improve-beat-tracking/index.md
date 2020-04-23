@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Using voice suppression algorithms to improve beat tracking in the presence of highly predominant vocals"
-authors: ["Jose R. Zapata", "Emilia Gómez"]
+authors: ["admin", "Emilia Gómez"]
 date: 2013-05-26T12:42:45-05:00
 doi: "10.1109/ICASSP.2013.6637607"
 

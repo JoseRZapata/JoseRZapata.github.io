@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Comparative evaluation and combination of automatic rhythm description systems"
-authors: ["Jose R. Zapata"]
+authors: ["admin"]
 date: 2013-09-13T14:49:50+01:00
 doi: ""
 
@@ -42,7 +42,7 @@ url_dataset:
 url_poster:
 url_project: https://joserzapata.github.io/phd/
 url_slides: https://goo.gl/vDJxCN
-url_source:
+url_source: https://joserzapata.github.io/phd/
 url_video:
 
 # Featured image

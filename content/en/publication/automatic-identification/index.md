@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "On the automatic identification of difficult examples for beat tracking: towards building new evaluation datasets"
-authors: ["Andre Holzapfel", "Matthew EP Davies", "Jose R. Zapata", "João Lobato Oliveira", "Fabien Gouyon"]
+authors: ["Andre Holzapfel", "Matthew EP Davies", "admin", "João Lobato Oliveira", "Fabien Gouyon"]
 date: 2012-03-25T19:44:33-05:00
 doi: "10.1109/ICASSP.2012.6287824"
 

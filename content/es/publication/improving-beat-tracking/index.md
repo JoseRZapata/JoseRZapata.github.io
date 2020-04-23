@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Improving Beat Tracking in the presence of highly predominant vocals using source separation techniques: Preliminary study"
-authors: ["Jose R. Zapata", "Emilia Gómez"]
+authors: ["admin", "Emilia Gómez"]
 date: 2012-06-28T22:17:42-05:00
 doi: ""
 

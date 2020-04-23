@@ -31,7 +31,7 @@ all_day: false
 # Schedule page publish date (NOT talk date).
 publishDate: 2019-11-25T22:07:22-05:00
 
-authors: ["Jose R. Zapata"]
+authors: ["admin"]
 tags: ["Python","Music-information-retrieval","Machine-learning","Data-science"]
 
 # Is this a featured talk? (true/false)

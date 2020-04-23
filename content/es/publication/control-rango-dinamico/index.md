@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Control de Rango Dinamico en Audio con Logica Difusa"
-authors: ["Jose R. Zapata","Tony Peñarredonda"]
+authors: ["admin","Tony Peñarredonda"]
 date: 2004-07-25T13:40:24-05:00
 doi: ""
 

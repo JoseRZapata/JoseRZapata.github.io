@@ -3,7 +3,7 @@
 
 title: "Acmus"
 summary: "El proyecto ACMus explora el uso de técnicas de aprendizaje automático para musicología computacional, gestión de archivos de música digital y recuperación de información musical. Dos elementos principales del proyecto son: 1. Énfasis en técnicas de aprendizaje automático semi-supervisadas y no supervisadas que dependen mínimamente de la disponibilidad de datos anotados para una tarea específica. 2. La música tradicional colombiana como foco principal de nuestro estudio."
-authors: []
+authors: ["admin"]
 tags: ["Music-information-retrieval","Musicology","Beat-tracking"]
 categories: []
 date: 2019-07-15T15:01:09-05:00

@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Assigning a confidence threshold on automatic beat annotation in large datasets"
-authors: ["Jose R. Zapata", "Matthew EP Davies", "Andre Holzapfel", "João Lobato Oliveira", "Fabien Gouyon"]
+authors: ["admin", "Matthew EP Davies", "Andre Holzapfel", "João Lobato Oliveira", "Fabien Gouyon"]
 date: 2012-10-08T19:38:56-05:00
 doi: "10.5281/zenodo.1415080"
 

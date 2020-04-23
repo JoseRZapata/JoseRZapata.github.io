@@ -5,7 +5,7 @@ date: "2013-09-13T00:00:00Z"
 
 reading_time: false  # Show estimated reading time?
 share: true  # Show social sharing links?
-profile: false  # Show author profile?
+profile: true  # Show author profile?
 comments: false  # Show comments?
 
 # Optional header image (relative to `static/img/` folder).

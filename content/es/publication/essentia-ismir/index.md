@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Essentia: An Audio Analysis Library for Music Information Retrieval"
-authors: ["Dmitry Bogdanov","Nicolas Wack", "Emilia Gómez", "Sankalp Gulati", "Perfecto Herrera", "Oscar Mayor", "Gerard Roma", "Justin Salamon", "Jose R. Zapata", "Xavier Serra"]
+authors: ["Dmitry Bogdanov","Nicolas Wack", "Emilia Gómez", "Sankalp Gulati", "Perfecto Herrera", "Oscar Mayor", "Gerard Roma", "Justin Salamon", "admin", "Xavier Serra"]
 date: 2013-11-03T23:32:53-05:00
 doi: "10.5281/zenodo.1415016"
 
