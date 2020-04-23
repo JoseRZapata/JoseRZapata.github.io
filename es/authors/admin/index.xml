@@ -1266,6 +1266,30 @@ only showing top 20 rows
     </item>
     
     <item>
+      <title>Comprensión de la música con Python, una mirada desde la Física y la Matemática</title>
+      <link>https://joserzapata.github.io/es/talk/pycon2020/</link>
+      <pubDate>Fri, 07 Feb 2020 12:35:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/talk/pycon2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Acmus</title>
+      <link>https://joserzapata.github.io/es/project/acmus/</link>
+      <pubDate>Mon, 15 Jul 2019 15:01:09 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/project/acmus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aplicaciones de Audio con Machine Learning</title>
+      <link>https://joserzapata.github.io/es/talk/meetup_2018/</link>
+      <pubDate>Tue, 02 Oct 2018 18:00:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/talk/meetup_2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Tutorial de Produccion de Audio con Reaper</title>
       <link>https://joserzapata.github.io/es/post/produccion-audio-reaper/</link>
       <pubDate>Sat, 01 Sep 2018 09:10:53 -0500</pubDate>
@@ -1345,6 +1369,126 @@ los videos fueron creados como apoyo para el curso de Audio del programa &lt;a h
 
 &lt;p&gt;&lt;a href=&#34;https://onedrive.live.com/download?cid=36FE636E42FB3884&amp;amp;resid=36FE636E42FB3884%212228&amp;amp;authkey=AMqdxQ1WjtrgjiI&#34; target=&#34;_blank&#34;&gt;Sesion de reaper terminada de mezcla y masterización&lt;/a&gt;&lt;/p&gt;
 </description>
+    </item>
+    
+    <item>
+      <title>Analisis de Señales de Audio con Python</title>
+      <link>https://joserzapata.github.io/es/talk/pycon2018/</link>
+      <pubDate>Fri, 09 Feb 2018 11:40:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/talk/pycon2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tempo Estimation</title>
+      <link>https://joserzapata.github.io/es/publication/tempo-estimation/</link>
+      <pubDate>Thu, 17 Nov 2016 18:14:05 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/tempo-estimation/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sistemas Automaticos para Extraccion de Información Musical (Generalidades y Aplicaciones)</title>
+      <link>https://joserzapata.github.io/es/talk/aes2016/</link>
+      <pubDate>Fri, 22 Jul 2016 14:00:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/talk/aes2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Multi-Feature Beat Tracking</title>
+      <link>https://joserzapata.github.io/es/publication/multifeature-beattracker/</link>
+      <pubDate>Thu, 03 Apr 2014 11:52:17 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/multifeature-beattracker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-ismir/</link>
+      <pubDate>Sun, 03 Nov 2013 23:32:53 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-ismir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: an open-source library for sound and music analysis</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-acm/</link>
+      <pubDate>Mon, 21 Oct 2013 00:11:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-acm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comparative evaluation and combination of automatic rhythm description systems</title>
+      <link>https://joserzapata.github.io/es/publication/phd-thesis/</link>
+      <pubDate>Fri, 13 Sep 2013 14:49:50 +0100</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/phd-thesis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Using voice suppression algorithms to improve beat tracking in the presence of highly predominant vocals</title>
+      <link>https://joserzapata.github.io/es/publication/voice-suppression-improve-beat-tracking/</link>
+      <pubDate>Sun, 26 May 2013 12:42:45 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/voice-suppression-improve-beat-tracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Selective Sampling for Beat Tracking Evaluation</title>
+      <link>https://joserzapata.github.io/es/publication/selective-sampling-beat-tracking/</link>
+      <pubDate>Sat, 03 Nov 2012 12:16:05 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/selective-sampling-beat-tracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assigning a confidence threshold on automatic beat annotation in large datasets</title>
+      <link>https://joserzapata.github.io/es/publication/assigning-confidence/</link>
+      <pubDate>Mon, 08 Oct 2012 19:38:56 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/assigning-confidence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Improving Beat Tracking in the presence of highly predominant vocals using source separation techniques: Preliminary study</title>
+      <link>https://joserzapata.github.io/es/publication/improving-beat-tracking/</link>
+      <pubDate>Thu, 28 Jun 2012 22:17:42 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/improving-beat-tracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On the automatic identification of difficult examples for beat tracking: towards building new evaluation datasets</title>
+      <link>https://joserzapata.github.io/es/publication/automatic-identification/</link>
+      <pubDate>Sun, 25 Mar 2012 19:44:33 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/automatic-identification/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Comparative Evaluation and Combination of Audio Tempo Estimation Approaches</title>
+      <link>https://joserzapata.github.io/es/publication/comparative-tempo/</link>
+      <pubDate>Fri, 22 Jul 2011 12:33:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/comparative-tempo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Efficient Detection of Exact Redundancies in Audio Signals</title>
+      <link>https://joserzapata.github.io/es/publication/efficient-detection/</link>
+      <pubDate>Wed, 01 Oct 2008 22:34:53 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/efficient-detection/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Control de Rango Dinamico en Audio con Logica Difusa</title>
+      <link>https://joserzapata.github.io/es/publication/control-rango-dinamico/</link>
+      <pubDate>Sun, 25 Jul 2004 13:40:24 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/control-rango-dinamico/</guid>
+      <description></description>
     </item>
     
   </channel>
