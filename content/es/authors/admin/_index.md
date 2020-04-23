@@ -53,6 +53,9 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/JoseRZapata
+- icon: stack-overflow
+  icon_pack: fab
+  link: https://stackoverflow.com/users/5863794/jose-r-zapata  
 - icon: orcid
   icon_pack: ai
   link: 'https://orcid.org/0000-0003-1484-5816'
