@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://joserzapata.github.io/authors/admin/</loc>
+    <lastmod>2020-04-09T06:54:44-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/admin/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/admin/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joserzapata.github.io/authors/</loc>
     <lastmod>2020-04-09T06:54:44-05:00</lastmod>
     <xhtml:link
@@ -59,21 +74,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/categories/data-science/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/authors/jose-r.-zapata/</loc>
-    <lastmod>2020-04-09T06:54:44-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/jose-r.-zapata/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/jose-r.-zapata/"
                 />
   </url>
   
@@ -224,6 +224,21 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/talk/pycon2020/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/jose-r.-zapata/</loc>
+    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/jose-r.-zapata/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/jose-r.-zapata/"
                 />
   </url>
   
@@ -1364,20 +1379,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/authors/tony-penarredonda/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/authors/admin/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/admin/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/admin/"
                 />
   </url>
   
