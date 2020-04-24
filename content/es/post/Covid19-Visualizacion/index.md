@@ -18,7 +18,7 @@ draft: false
 image:
   caption: ""
   focal_point: ""
-  preview_only: false
+  preview_only: true
 
 # Projects (optional).
 #   Associate this post with one or more of your projects.
@@ -697,7 +697,7 @@ fig.show()
 ```
 
 ## Animacion del Mapa de Evolucion Temporal del Codiv 19
-Mover el Mouse sobre el mapa para ver la informacion de cada pais.
+Mover el Mouse sobre el mapa para ver la información de cada pais. Presionar el boton de play para ver la animación.
 
 <iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/54.embed?link=false"></iframe>
 
