@@ -321,12 +321,7 @@ diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#numero-de-casos-covid-19-en-colombia&#34;&gt;Numero de Casos COVID 19 en Colombia&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#codigo-fuente-jupyter-notebook&#34;&gt;Codigo Fuente Jupyter notebook&lt;/a&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;#ejecutar-en-google-colaboratory&#34;&gt;Ejecutar en Google Colaboratory&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#ejecutar-en-mybinder&#34;&gt;Ejecutar en MyBinder&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;#leer-en-nbviewer&#34;&gt;Leer en nbviewer&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#codigo-fuente-jupyter-notebook&#34;&gt;Codigo Fuente Jupyter notebook&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#refencias&#34;&gt;Refencias&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/nav&gt;&lt;/p&gt;
@@ -962,17 +957,23 @@ py&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot(fig, filename &lt
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;codigo-fuente-jupyter-notebook&#34;&gt;Codigo Fuente Jupyter notebook&lt;/h1&gt;
 
-&lt;h2 id=&#34;ejecutar-en-google-colaboratory&#34;&gt;Ejecutar en Google Colaboratory&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Google Colaboratory&lt;/th&gt;
+&lt;th&gt;My binder&lt;/th&gt;
+&lt;th&gt;NBviewver&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;ejecutar-en-mybinder&#34;&gt;Ejecutar en MyBinder&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://mybinder.org/v2/gh/JoseRZapata/JoseRZapata.github.io/master?filepath=Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://mybinder.org/badge_logo.svg&#34; alt=&#34;Binder&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;leer-en-nbviewer&#34;&gt;Leer en nbviewer&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://nbviewer.jupyter.org/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/render-nbviewer-orange.svg&#34; alt=&#34;nbviewer&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href=&#34;https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mybinder.org/v2/gh/JoseRZapata/JoseRZapata.github.io/master?filepath=Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://mybinder.org/badge_logo.svg&#34; alt=&#34;Binder&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://nbviewer.jupyter.org/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/render-nbviewer-orange.svg&#34; alt=&#34;nbviewer&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;h1 id=&#34;refencias&#34;&gt;Refencias&lt;/h1&gt;
 
