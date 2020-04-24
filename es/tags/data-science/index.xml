@@ -913,7 +913,7 @@ fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=
 fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2 id=&#34;animacion-del-mapa-de-evolucion-temporal-del-codiv-19&#34;&gt;Animacion del Mapa de Evolucion Temporal del Codiv 19&lt;/h2&gt;
 
-&lt;p&gt;Mover el Mouse sobre el mapa para ver la informacion de cada pais.&lt;/p&gt;
+&lt;p&gt;Mover el Mouse sobre el mapa para ver la información de cada pais. Presionar el boton de play para ver la animación.&lt;/p&gt;
 
 &lt;iframe width=&#34;900&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/54.embed?link=false&#34;&gt;&lt;/iframe&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;])
