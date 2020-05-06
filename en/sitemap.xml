@@ -633,8 +633,38 @@
   </url>
   
   <url>
+    <loc>https://joserzapata.github.io/tags/acm/</loc>
+    <lastmod>2014-03-21T00:11:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/acm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/acm/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/dmitry-bogdanov/</loc>
+    <lastmod>2014-03-21T00:11:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/dmitry-bogdanov/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/dmitry-bogdanov/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joserzapata.github.io/tags/essentia/</loc>
-    <lastmod>2014-01-04T23:00:38-05:00</lastmod>
+    <lastmod>2014-03-21T00:11:35-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -644,6 +674,141 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/tags/essentia/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/publication/essentia-sigmm/</loc>
+    <lastmod>2014-03-21T00:11:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/publication/essentia-sigmm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/publication/essentia-sigmm/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/gerard-roma/</loc>
+    <lastmod>2014-03-21T00:11:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/gerard-roma/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/gerard-roma/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/justin-salamon/</loc>
+    <lastmod>2014-03-21T00:11:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/justin-salamon/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/justin-salamon/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/nicolas-wack/</loc>
+    <lastmod>2014-03-21T00:11:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/nicolas-wack/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/nicolas-wack/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/open-source/</loc>
+    <lastmod>2014-03-21T00:11:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/open-source/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/open-source/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/oscar-mayor/</loc>
+    <lastmod>2014-03-21T00:11:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/oscar-mayor/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/oscar-mayor/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/perfecto-herrera/</loc>
+    <lastmod>2014-03-21T00:11:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/perfecto-herrera/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/perfecto-herrera/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/sankalp-gulati/</loc>
+    <lastmod>2014-03-21T00:11:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/sankalp-gulati/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/sankalp-gulati/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/xavier-serra/</loc>
+    <lastmod>2014-03-21T00:11:35-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/xavier-serra/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/xavier-serra/"
                 />
   </url>
   
@@ -708,21 +873,6 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/tags/open-source/</loc>
-    <lastmod>2013-11-23T07:45:12-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/open-source/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/open-source/"
-                />
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/publication_types/1/</loc>
     <lastmod>2013-11-03T23:32:53-05:00</lastmod>
     <xhtml:link
@@ -734,21 +884,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/publication_types/1/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/authors/dmitry-bogdanov/</loc>
-    <lastmod>2013-11-03T23:32:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/dmitry-bogdanov/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/dmitry-bogdanov/"
                 />
   </url>
   
@@ -768,21 +903,6 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/authors/gerard-roma/</loc>
-    <lastmod>2013-11-03T23:32:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/gerard-roma/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/gerard-roma/"
-                />
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/tags/ismir/</loc>
     <lastmod>2013-11-03T23:32:53-05:00</lastmod>
     <xhtml:link
@@ -794,111 +914,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/tags/ismir/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/authors/justin-salamon/</loc>
-    <lastmod>2013-11-03T23:32:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/justin-salamon/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/justin-salamon/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/authors/nicolas-wack/</loc>
-    <lastmod>2013-11-03T23:32:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/nicolas-wack/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/nicolas-wack/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/authors/oscar-mayor/</loc>
-    <lastmod>2013-11-03T23:32:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/oscar-mayor/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/oscar-mayor/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/authors/perfecto-herrera/</loc>
-    <lastmod>2013-11-03T23:32:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/perfecto-herrera/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/perfecto-herrera/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/authors/sankalp-gulati/</loc>
-    <lastmod>2013-11-03T23:32:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/sankalp-gulati/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/sankalp-gulati/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/authors/xavier-serra/</loc>
-    <lastmod>2013-11-03T23:32:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/xavier-serra/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/xavier-serra/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/tags/acm/</loc>
-    <lastmod>2013-10-21T00:11:35-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/acm/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/acm/"
                 />
   </url>
   

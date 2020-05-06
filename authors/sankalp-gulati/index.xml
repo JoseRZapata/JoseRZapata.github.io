@@ -5,12 +5,20 @@
     <link>https://joserzapata.github.io/authors/sankalp-gulati/</link>
       <atom:link href="https://joserzapata.github.io/authors/sankalp-gulati/index.xml" rel="self" type="application/rss+xml" />
     <description>Sankalp Gulati</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sun, 03 Nov 2013 23:32:53 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Fri, 21 Mar 2014 00:11:35 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Sankalp Gulati</title>
       <link>https://joserzapata.github.io/authors/sankalp-gulati/</link>
     </image>
+    
+    <item>
+      <title>Essentia: an open source library for audio analysis</title>
+      <link>https://joserzapata.github.io/publication/essentia-sigmm/</link>
+      <pubDate>Fri, 21 Mar 2014 00:11:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/publication/essentia-sigmm/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
