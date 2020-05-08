@@ -55,7 +55,7 @@ date_format = "Jan 2006"
   company_url = "https://www.upb.edu.co/"
   location = "Medellin - Colombia"
   date_start = "2003-06-01"
-  date_end = "2009-09-21"
+  date_end = ""
   description = """
  
   """
