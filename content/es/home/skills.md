@@ -52,4 +52,8 @@ subtitle = ""
   name = "Git"
   description = ""  
 
+[design.spacing]
+  # Customize the section spacing. Order is top, right, bottom, left.
+  padding = ["20px", "0", "20px", "0"]
+
 +++

@@ -48,6 +48,11 @@ subtitle = ""
  
  # CSS class.
  css_class = ""
+
+[design.spacing]
+  # Customize the section spacing. Order is top, right, bottom, left.
+  padding = ["20px", "0", "20px", "0"]
+
 +++
 Cursos pasados y <span style="color:#328cc1">presentes</span> dictados en postgrado y pregrado en la [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/)
 
