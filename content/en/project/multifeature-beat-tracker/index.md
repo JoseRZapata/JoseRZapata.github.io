@@ -4,7 +4,7 @@
 title: "Multifeature Beat tracker"
 summary: "Matlab implementation of the Multi Feature Beat Tracker (Information Gain and Regularity), The essentia beat tracker, More details in [Multi-Feature Beat Tracking](https://joserzapata.github.io/publication/multifeaturebeattracker/)"
 authors: ["admin"]
-tags: ["Beat-tracking","Essentia","Matlab","Mirex"]
+tags: ["Beat-tracking","Essentia","Matlab","Mirex","Python"]
 categories: []
 date: 2014-01-04T23:00:38-05:00
 
