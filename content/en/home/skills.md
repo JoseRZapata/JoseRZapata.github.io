@@ -41,9 +41,9 @@ subtitle = ""
   description = ""  
 
 [[feature]]
-  icon = "r-project"
-  icon_pack = "fab"
-  name = "R"
+  icon = "random"
+  icon_pack = "fas"
+  name = "Signal Processing"
   description = ""  
 
 [[feature]]

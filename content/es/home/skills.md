@@ -25,14 +25,14 @@ subtitle = ""
 [[feature]]
   icon = "chart-line"
   icon_pack = "fas"
-  name = "Data Science"
-  description = ""  
+  name = "Ciencia de Datos"
+  description = "Data Science"
 
 [[feature]]
   icon = "laptop-code"
   icon_pack = "fas"
-  name = "Machine Learning"
-  description = ""
+  name = "Aprendizaje de Maquina"
+  description = "Machine Learning"
 
 [[feature]]
   icon = "terminal"
@@ -41,9 +41,9 @@ subtitle = ""
   description = ""  
 
 [[feature]]
-  icon = "r-project"
-  icon_pack = "fab"
-  name = "R"
+  icon = "random"
+  icon_pack = "fas"
+  name = "Procesamiento Señales"
   description = ""  
 
 [[feature]]
