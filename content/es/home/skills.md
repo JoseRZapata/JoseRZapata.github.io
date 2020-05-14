@@ -20,19 +20,19 @@ subtitle = ""
   icon = "python"
   icon_pack = "fab"
   name = "Python"
-  description = "" 
+  description = "Pandas, Scikit-learn, Numpy, Matplotlib, Plotly, Seaborn, BeautifulSoup, Selenium" 
 
 [[feature]]
   icon = "chart-line"
   icon_pack = "fas"
   name = "Ciencia de Datos"
-  description = "Data Science"
+  description = "Data Science en Python, R"
 
 [[feature]]
   icon = "laptop-code"
   icon_pack = "fas"
   name = "Aprendizaje de Maquina"
-  description = "Machine Learning"
+  description = "Scikit-learn, Machine Learning"
 
 [[feature]]
   icon = "terminal"
@@ -44,7 +44,7 @@ subtitle = ""
   icon = "random"
   icon_pack = "fas"
   name = "Procesamiento Señales"
-  description = ""  
+  description = " y Analisis de Frecuencia de señales"  
 
 [[feature]]
   icon = "git-square"
