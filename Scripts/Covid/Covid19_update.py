@@ -284,8 +284,9 @@ if api_key: py.plot(fig, filename = 'total_casos_no_8_infectados', auto_open=Fal
 # # Animacion del Mapa de Evolucion Temporal del Codiv 19
 
 # %%
-# Tomar la mitad de los datos para que la imagen este mas pequeña
-confirmed_melt = confirmed_group.iloc[::-2].iloc[::-1].melt(id_vars="Fecha")
+# Tomar una frecuencia de 3 los datos para que la imagen este mas pequeña
+# No se puedden enviar graficas grandes
+confirmed_melt = confirmed_group.iloc[::-3].iloc[::-1].melt(id_vars="Fecha")
 confirmed_melt.rename(columns = {'value':'Confirmados', 'date':'Fecha'}, inplace = True)
 
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
