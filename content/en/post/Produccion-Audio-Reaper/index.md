@@ -44,32 +44,32 @@ Introduccion a la configuración Manejo de REAPER para produccion de audio.
 
 {{< youtube Qoc1ZNvPH7Y >}}
 
-[Audios para Insertar](https://onedrive.live.com/download?cid=36FE636E42FB3884&resid=36FE636E42FB3884%212219&authkey=AMoQwR6sPqlfLX4)
+[Audios para Insertar](https://kutt.it/lx6GqC)
 
-[Imagen para Insertar](https://tmmidw.sn.files.1drv.com/y4mZzQC7vlBvKutmJRVr0LerTXxyCWiw47JMf8-ut9cigX3qgeoKp17mKopQu1_zmob1UyLH4pBWR8-czmOYSLLR64982-chtfeadjwWuP0mgwjTPpL-xvcWHGyqoBqjZZYAai_hMkqzgNyVpMiSBNgtcy8H56FjXiYLOfu6T8iC1DG76efG2RP09lPzBB8oBkFGKhWaZGNqjASL8cqPmpk8A)
+[Imagen para Insertar](https://kutt.it/GEevAg)
 
-[Video para Insertar](https://onedrive.live.com/download?cid=36FE636E42FB3884&resid=36FE636E42FB3884%212220&authkey=AO1nzX0jjKxzdR8)
+[Video para Insertar](https://kutt.it/pqSVvL)
 
 # 2. Manejo de canales y envios con Reaper
 
 {{< youtube 2_uozsk_KwE >}}
 
-[Ejemplo sesión completa de Reaper](https://onedrive.live.com/download?cid=36FE636E42FB3884&resid=36FE636E42FB3884%212224&authkey=ALCsZV225tgUOcU)
+[Ejemplo sesión completa de Reaper](https://kutt.it/ei9tob)
 
 # 3 Automatizaciones y Envolventes en Reaper
 Automatización de Volumen, Panning y Efectos mediante envolventes en Reaper
 
 {{< youtube Vd3xjzxmPQY >}}
 
-[Audios Practica de Automatización](https://onedrive.live.com/download?cid=36FE636E42FB3884&resid=36FE636E42FB3884%212227&authkey=AFkJLa7CeJJPcbs)
+[Audios Practica de Automatización](https://kutt.it/7PNPgy)
 
-[Proyecto Reaper de Automatización finalizado](https://onedrive.live.com/download?cid=36FE636E42FB3884&resid=36FE636E42FB3884%212226&authkey=AOCU9B3u5ZcKCfM)
+[Proyecto Reaper de Automatización finalizado](https://kutt.it/tNSK0a)
 
 # 4. Mezcla y Masterizacion en Reaper
 Principios Basicos de mezcla y masterización de audio en Reaper
 
 {{< youtube oNeNpOY3mvU >}}
 
-[Audios practica de mezcla y masterización](https://onedrive.live.com/download?cid=36FE636E42FB3884&resid=36FE636E42FB3884%212225&authkey=AClFPzUoqkJ6UtQ)
+[Audios practica de mezcla y masterización](https://kutt.it/YuYpK4)
 
-[Sesion de reaper terminada de mezcla y masterización](https://onedrive.live.com/download?cid=36FE636E42FB3884&resid=36FE636E42FB3884%212228&authkey=AMqdxQ1WjtrgjiI)
+[Sesión final de reaper  con mezcla y masterización](https://kutt.it/fGVlfi)
