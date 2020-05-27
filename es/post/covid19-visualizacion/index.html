@@ -162,7 +162,7 @@
     
       <meta property="article:published_time" content="2020-03-17T17:03:57-05:00">
     
-    <meta property="article:modified_time" content="2020-03-31T17:03:57-05:00">
+    <meta property="article:modified_time" content="2020-05-27T17:03:57-05:00">
   
 
   
@@ -197,7 +197,7 @@
   ],
   
   "datePublished": "2020-03-17T17:03:57-05:00",
-  "dateModified": "2020-03-31T17:03:57-05:00",
+  "dateModified": "2020-05-27T17:03:57-05:00",
   
   "author": {
     "@type": "Person",
@@ -581,7 +581,7 @@
           Última actualización el
       
     
-    Mar 31, 2020
+    May 27, 2020
   </span>
   
 
@@ -590,7 +590,7 @@
   
   <span class="middot-divider"></span>
   <span class="article-reading-time">
-    8 min de lectura
+    10 min de lectura
   </span>
   
 
@@ -654,12 +654,18 @@
 
 <p>He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas actualizadas cada dia, y ademas practicar el uso de <a href="https://plotly.com/" target="_blank">plotly</a> para visualizacion interactiva.</p>
 
+<p>Principalmente los datos que se tienen es del numero de personas contegiadas y personas muertas quiero visualizar los datos de personas recuperadas y casos activos.</p>
+
 <p><strong>Pueden interactuar con las graficas con el mouse y las Graficas se actualizaran
 diariamente con los nuevos datos!</strong></p>
 
 <p>Informacion extraida de 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE</p>
 
 <p><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">https://github.com/CSSEGISandData/COVID-19</a></p>
+
+<p><strong>Actualizaciones:</strong></p>
+
+<p>27/May/2020 Se Agregar los datos de las personas recuperadas y se calculan los casos Activos</p>
 
 <p><h2>Índice</h2>
 <nav id="TableOfContents">
@@ -671,13 +677,14 @@ diariamente con los nuevos datos!</strong></p>
 <li><a href="#datos-cssegisanddata-covid-19">Datos CSSEGISandData/COVID-19</a>
 <ul>
 <li><a href="#eliminar-ubicacion">Eliminar Ubicacion</a></li>
+<li><a href="#casos-activos">Casos Activos</a></li>
 <li><a href="#consolidar-datos">Consolidar datos</a></li>
 <li><a href="#datos-mundiales">Datos Mundiales</a></li>
 </ul></li>
 </ul></li>
 <li><a href="#covid19-en-el-mundo">Covid19 en el Mundo</a>
 <ul>
-<li><a href="#valores-mundiales-de-confirmados-y-muertos">Valores Mundiales de Confirmados y Muertos</a></li>
+<li><a href="#valores-mundiales-de-casos-confirmados-activos-recuperados-y-muertos">Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos</a></li>
 <li><a href="#mapa-mundial-de-confirmados-por-pais">Mapa Mundial de Confirmados por Pais</a></li>
 <li><a href="#confirmados-vs-muertos-por-pais">Confirmados vs Muertos por pais</a></li>
 <li><a href="#progresion-mundial-en-el-tiempo-de-de-confirmados-y-muertos">Progresion Mundial en el Tiempo de de Confirmados y Muertos</a></li>
@@ -689,6 +696,7 @@ diariamente con los nuevos datos!</strong></p>
 <ul>
 <li><a href="#numero-de-casos-covid-19-en-colombia">Numero de Casos COVID 19 en Colombia</a></li>
 </ul></li>
+<li><a href="#actualizacion-de-las-graficas-cada-24-horas">Actualizacion de las Graficas cada 24 Horas</a></li>
 <li><a href="#codigo-fuente-jupyter-notebook">Codigo Fuente Jupyter notebook</a></li>
 <li><a href="#refencias">Refencias</a></li>
 </ul>
@@ -711,7 +719,8 @@ chart_studio<span style="color:#f92672">.</span>tools<span style="color:#f92672"
 <span style="color:#f92672">import</span> chart_studio.plotly <span style="color:#f92672">as</span> py</code></pre></div>
 <h2 id="importar-datos">Importar datos</h2>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv&#39;</span>)
-death <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv&#39;</span>)</code></pre></div>
+death <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv&#39;</span>)
+recovered <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>read_csv(<span style="color:#e6db74">&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv&#39;</span>)</code></pre></div>
 <h2 id="datos-cssegisanddata-covid-19">Datos CSSEGISandData/COVID-19</h2>
 
 <p>Descripcion de los datos en ingles</p>
@@ -725,6 +734,8 @@ death <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span
 <p><strong>Confirmed:</strong> the number of confirmed cases. For Hubei Province: from Feb 13 (GMT +8), we report both clinically diagnosed and lab-confirmed cases. For lab-confirmed cases only (Before Feb 17), please refer to who_covid_19_situation_reports. For Italy, diagnosis standard might be changed since Feb 27 to &ldquo;slow the growth of new case numbers.&rdquo;</p>
 
 <p><strong>Deaths:</strong> the number of deaths.</p>
+
+<p><strong>Recovered:</strong> the number of recovered cases.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed<span style="color:#f92672">.</span>head()</code></pre></div>
 <div>
 <style scoped>
@@ -1125,15 +1136,22 @@ death <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span
 <p>Se va realizar un analisis general de los datos y No se van a tomar los datos geograficos de <em>latitud</em>, <em>longitud</em> y los datos de <em>Province/State</em> estan incompletos.</p>
 
 <p>Solo se realizara un analisis por pais entonces se eliminaran las columnas mencionadas anteriormente</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed <span style="color:#f92672">=</span> confirmed<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death <span style="color:#f92672">=</span> death<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed <span style="color:#f92672">=</span> confirmed<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])
+death <span style="color:#f92672">=</span> death<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])
+recovered  <span style="color:#f92672">=</span> recovered<span style="color:#f92672">.</span>drop(columns<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;Lat&#39;</span>, <span style="color:#e6db74">&#39;Long&#39;</span>,<span style="color:#e6db74">&#39;Province/State&#39;</span>])</code></pre></div>
+<h3 id="casos-activos">Casos Activos</h3>
+
+<p>Se calcula a partir del número de personas confirmadas - muertos - recuperados</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">active <span style="color:#f92672">=</span>confirmed<span style="color:#f92672">.</span>copy()
+active<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:] <span style="color:#f92672">=</span> active<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:] <span style="color:#f92672">-</span> death<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:] <span style="color:#f92672">-</span> recovered<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]</code></pre></div>
 <h3 id="consolidar-datos">Consolidar datos</h3>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed_group <span style="color:#f92672">=</span> confirmed<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)
-confirmed_group <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>aggregate(np<span style="color:#f92672">.</span>sum)
-confirmed_group <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>T
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed_group <span style="color:#f92672">=</span> confirmed<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)<span style="color:#f92672">.</span>aggregate(np<span style="color:#f92672">.</span>sum)<span style="color:#f92672">.</span>T
 confirmed_group<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;date&#39;</span>
-confirmed_group <span style="color:#f92672">=</span>  confirmed_group<span style="color:#f92672">.</span>reset_index()</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death_group <span style="color:#f92672">=</span> death<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)
-death_group <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>aggregate(np<span style="color:#f92672">.</span>sum)
-death_group <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>T
+confirmed_group <span style="color:#f92672">=</span>  confirmed_group<span style="color:#f92672">.</span>reset_index()</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">recovered_group <span style="color:#f92672">=</span> recovered<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)<span style="color:#f92672">.</span>aggregate(np<span style="color:#f92672">.</span>sum)<span style="color:#f92672">.</span>T
+recovered_group<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;date&#39;</span>
+recovered_group <span style="color:#f92672">=</span>  recovered_group<span style="color:#f92672">.</span>reset_index()</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">active_group <span style="color:#f92672">=</span> active<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)<span style="color:#f92672">.</span>aggregate(np<span style="color:#f92672">.</span>sum)<span style="color:#f92672">.</span>T
+active_group<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;date&#39;</span>
+active_group <span style="color:#f92672">=</span>  active_group<span style="color:#f92672">.</span>reset_index()</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">death_group <span style="color:#f92672">=</span> death<span style="color:#f92672">.</span>groupby(by<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Country/Region&#39;</span>)<span style="color:#f92672">.</span>aggregate(np<span style="color:#f92672">.</span>sum)<span style="color:#f92672">.</span>T
 death_group<span style="color:#f92672">.</span>index<span style="color:#f92672">.</span>name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;date&#39;</span>
 death_group <span style="color:#f92672">=</span>  death_group<span style="color:#f92672">.</span>reset_index()</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed_melt <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;date&#34;</span>)
 confirmed_melt<span style="color:#f92672">.</span>rename(columns <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;value&#39;</span>:<span style="color:#e6db74">&#39;Confirmados&#39;</span>, <span style="color:#e6db74">&#39;date&#39;</span>:<span style="color:#e6db74">&#39;Fecha&#39;</span>}, inplace <span style="color:#f92672">=</span> True)
@@ -1142,22 +1160,24 @@ death_melt <span style="color:#f92672">=</span> death_group<span style="color:#f
 death_melt<span style="color:#f92672">.</span>rename(columns <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;value&#39;</span>:<span style="color:#e6db74">&#39;Muertos&#39;</span>, <span style="color:#e6db74">&#39;date&#39;</span>:<span style="color:#e6db74">&#39;Fecha&#39;</span>}, inplace <span style="color:#f92672">=</span> True)</code></pre></div>
 <h3 id="datos-mundiales">Datos Mundiales</h3>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Numero de Casos confirmados por dia en el mundo</span>
-column_names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Fecha&#34;</span>, <span style="color:#e6db74">&#34;Confirmados&#34;</span>, <span style="color:#e6db74">&#34;Muertos&#34;</span>]
+column_names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Fecha&#34;</span>, <span style="color:#e6db74">&#34;Confirmados&#34;</span>, <span style="color:#e6db74">&#34;Recuperados&#34;</span>,<span style="color:#e6db74">&#34;Muertos&#34;</span>]
 world <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(columns <span style="color:#f92672">=</span> column_names)
 world[<span style="color:#e6db74">&#39;Fecha&#39;</span>] <span style="color:#f92672">=</span> confirmed_group[<span style="color:#e6db74">&#39;date&#39;</span>]
 world[<span style="color:#e6db74">&#39;Confirmados&#39;</span>] <span style="color:#f92672">=</span> confirmed_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)
-world[<span style="color:#e6db74">&#39;Muertos&#39;</span>] <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)</code></pre></div>
+world[<span style="color:#e6db74">&#39;Muertos&#39;</span>] <span style="color:#f92672">=</span> death_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)
+world[<span style="color:#e6db74">&#39;Recuperados&#39;</span>] <span style="color:#f92672">=</span> recovered_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)
+world[<span style="color:#e6db74">&#39;Activos&#39;</span>] <span style="color:#f92672">=</span> active_group<span style="color:#f92672">.</span>iloc[:,<span style="color:#ae81ff">1</span>:]<span style="color:#f92672">.</span>sum(<span style="color:#ae81ff">1</span>)</code></pre></div>
 <h1 id="covid19-en-el-mundo">Covid19 en el Mundo</h1>
 
 <p>Visualizacion con Plotly</p>
 
-<h2 id="valores-mundiales-de-confirmados-y-muertos">Valores Mundiales de Confirmados y Muertos</h2>
+<h2 id="valores-mundiales-de-casos-confirmados-activos-recuperados-y-muertos">Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos</h2>
 
 <iframe width="900" height="450" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/1.embed?link=false"></iframe>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">temp <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(world<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,:])<span style="color:#f92672">.</span>T
-tm <span style="color:#f92672">=</span> temp<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Fecha&#34;</span>, value_vars<span style="color:#f92672">=</span>[ <span style="color:#e6db74">&#34;Confirmados&#34;</span>,<span style="color:#e6db74">&#34;Muertos&#34;</span>])
+tm <span style="color:#f92672">=</span> temp<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Fecha&#34;</span>, value_vars<span style="color:#f92672">=</span>[ <span style="color:#e6db74">&#34;Confirmados&#34;</span>,<span style="color:#e6db74">&#34;Activos&#34;</span>,<span style="color:#e6db74">&#34;Recuperados&#34;</span>,<span style="color:#e6db74">&#34;Muertos&#34;</span>])
 fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>bar(tm, x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;variable&#34;</span> , y<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;value&#34;</span>, color<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;variable&#39;</span>, text<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;value&#39;</span>,
-             color_discrete_sequence<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;green&#34;</span>, <span style="color:#e6db74">&#34;blue&#34;</span>],
+             color_discrete_sequence<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;teal&#34;</span>,<span style="color:#e6db74">&#34;navy&#34;</span>,<span style="color:#e6db74">&#34;green&#34;</span>, <span style="color:#e6db74">&#34;coral&#34;</span>],
              height<span style="color:#f92672">=</span><span style="color:#ae81ff">500</span>, width<span style="color:#f92672">=</span><span style="color:#ae81ff">600</span>,
              title<span style="color:#f92672">=</span> f<span style="color:#e6db74">&#39;Total de Casos Mundiales de COVID 19 - {str(world.iloc[-1,0])}&#39;</span>)
 fig<span style="color:#f92672">.</span>update_traces(textposition<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;outside&#39;</span>)<span style="color:#75715e">#poner los valores de las barras fuera</span>
@@ -1165,8 +1185,8 @@ fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span
                   yaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Numero de Personas&#34;</span>}}, <span style="color:#75715e"># Cambiar texto eje y</span>
                   xaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>}} <span style="color:#75715e">#Esconder nombre eje x</span>
                   )
-<span style="color:#75715e"># grabar grafica en chart-studio</span>
-<span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_general&#39;, auto_open=False)</span>
+<span style="color:#75715e"># grabar grafica en chart-studio si se proporciona el api-key</span>
+<span style="color:#66d9ef">if</span> api_key: py<span style="color:#f92672">.</span>plot(fig, filename <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;total_casos_general&#39;</span>, auto_open<span style="color:#f92672">=</span>False)
 fig<span style="color:#f92672">.</span>show()</code></pre></div>
 <h2 id="mapa-mundial-de-confirmados-por-pais">Mapa Mundial de Confirmados por Pais</h2>
 
@@ -1211,25 +1231,37 @@ fig<span style="color:#f92672">.</span>show()</code></pre></div>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">world_melt <span style="color:#f92672">=</span> world<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span>, value_vars<span style="color:#f92672">=</span> list(world<span style="color:#f92672">.</span>columns)[<span style="color:#ae81ff">1</span>:], var_name<span style="color:#f92672">=</span>None)
 
 fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>line(world_melt, x<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Fecha&#34;</span>, y<span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;value&#39;</span>,
-              color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;variable&#39;</span>,
+              color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;variable&#39;</span>,  color_discrete_sequence<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;teal&#34;</span>,<span style="color:#e6db74">&#34;green&#34;</span>,<span style="color:#e6db74">&#34;coral&#34;</span>, <span style="color:#e6db74">&#34;navy&#34;</span>],
               title<span style="color:#f92672">=</span>f<span style="color:#e6db74">&#39;Total de Casos en el tiempo de COVID 19 - {world.iloc[-1,0]}&#39;</span>)
 <span style="color:#66d9ef">for</span> n <span style="color:#f92672">in</span> list(world<span style="color:#f92672">.</span>columns)[<span style="color:#ae81ff">1</span>:]:
   fig<span style="color:#f92672">.</span>add_annotation(x<span style="color:#f92672">=</span>world<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>], y<span style="color:#f92672">=</span>world<span style="color:#f92672">.</span>loc[world<span style="color:#f92672">.</span>index[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],n],
-                     text<span style="color:#f92672">=</span>n,
+                     text<span style="color:#f92672">=</span>n, xref<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;x&#34;</span>,yref<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;y&#34;</span>,
                      showarrow<span style="color:#f92672">=</span>True, ax<span style="color:#f92672">=-</span><span style="color:#ae81ff">50</span>, ay<span style="color:#f92672">=-</span><span style="color:#ae81ff">20</span>)
 <span style="color:#75715e"># Indicador de numero total de confirmados</span>
-fig<span style="color:#f92672">.</span>add_indicator( title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Confirmados&#39;</span>, value <span style="color:#f92672">=</span> world[<span style="color:#e6db74">&#39;Confirmados&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+fig<span style="color:#f92672">.</span>add_indicator( title<span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;text&#39;</span>:<span style="color:#e6db74">&#39;Confirmados&#39;</span>, <span style="color:#e6db74">&#39;font&#39;</span>:{<span style="color:#e6db74">&#39;color&#39;</span>:<span style="color:#e6db74">&#39;teal&#39;</span>}},
+                  value <span style="color:#f92672">=</span> world[<span style="color:#e6db74">&#39;Confirmados&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
                   mode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;number+delta&#34;</span>, delta <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;reference&#34;</span>: world[<span style="color:#e6db74">&#39;Confirmados&#39;</span>
-                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.5</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.25</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">75</span>]})
+                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.25</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.15</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">4</span>]})
+<span style="color:#75715e">#Indicador numero total de Activos</span>
+fig<span style="color:#f92672">.</span>add_indicator(title<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;text&#39;</span>:<span style="color:#e6db74">&#39;Activos&#39;</span>, <span style="color:#e6db74">&#39;font&#39;</span>:{<span style="color:#e6db74">&#39;color&#39;</span>:<span style="color:#e6db74">&#39;navy&#39;</span>}},
+                  value <span style="color:#f92672">=</span> world[<span style="color:#e6db74">&#39;Activos&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+                  mode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;number+delta&#34;</span>, delta <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;reference&#34;</span>: world[<span style="color:#e6db74">&#39;Activos&#39;</span>
+                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.25</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.6</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">85</span>]})
+<span style="color:#75715e">#Indicador numero total de Recuperados</span>
+fig<span style="color:#f92672">.</span>add_indicator(title<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;text&#39;</span>:<span style="color:#e6db74">&#39;Recuperados&#39;</span>, <span style="color:#e6db74">&#39;font&#39;</span>:{<span style="color:#e6db74">&#39;color&#39;</span>:<span style="color:#e6db74">&#39;green&#39;</span>}},
+                  value <span style="color:#f92672">=</span> world[<span style="color:#e6db74">&#39;Recuperados&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+                  mode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;number+delta&#34;</span>, delta <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;reference&#34;</span>: world[<span style="color:#e6db74">&#39;Recuperados&#39;</span>
+                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.50</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.6</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">85</span>]}) 
 <span style="color:#75715e">#Indicador numero total de muertos</span>
-fig<span style="color:#f92672">.</span>add_indicator(title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Muertos&#39;</span>, value <span style="color:#f92672">=</span> world[<span style="color:#e6db74">&#39;Muertos&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+fig<span style="color:#f92672">.</span>add_indicator(title<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;text&#39;</span>:<span style="color:#e6db74">&#39;Muertos&#39;</span>, <span style="color:#e6db74">&#39;font&#39;</span>:{<span style="color:#e6db74">&#39;color&#39;</span>:<span style="color:#e6db74">&#39;coral&#39;</span>}}, 
+                  value <span style="color:#f92672">=</span> world[<span style="color:#e6db74">&#39;Muertos&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
                   mode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;number+delta&#34;</span>, delta <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;reference&#34;</span>: world[<span style="color:#e6db74">&#39;Muertos&#39;</span>
-                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.75</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.25</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">75</span>]})  
+                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.5</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.15</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">4</span>]})  
 fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span>update(showlegend <span style="color:#f92672">=</span> False,
                   yaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Numero de Personas&#34;</span>}}, <span style="color:#75715e"># Cambiar texto eje y</span>
                   )
-<span style="color:#75715e"># grabar grafica en chart-studio</span>
-<span style="color:#75715e">#py.plot(fig, filename = &#39;total_casos_serie&#39;, auto_open=False)</span>
+<span style="color:#75715e"># grabar grafica en chart-studio si se proporciona el api-key</span>
+<span style="color:#66d9ef">if</span> api_key: py<span style="color:#f92672">.</span>plot(fig, filename <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;total_casos_serie&#39;</span>, auto_open<span style="color:#f92672">=</span>False)
 fig<span style="color:#f92672">.</span>show()</code></pre></div>
 <h2 id="total-casos-confirmados-de-covid-19-por-pais">Total Casos Confirmados de COVID 19 por Pais</h2>
 
@@ -1281,7 +1313,7 @@ fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span
 fig<span style="color:#f92672">.</span>show()</code></pre></div>
 <h2 id="animacion-del-mapa-de-evolucion-temporal-del-codiv-19">Animacion del Mapa de Evolucion Temporal del Codiv 19</h2>
 
-<p>Mover el Mouse sobre el mapa para ver la información de cada pais. Presionar el boton de play para ver la animación.</p>
+<p>Mover el Mouse sobre el mapa para ver la informacion de cada pais. Presionar el boton de play para ver la animacion.</p>
 
 <iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/54.embed?link=false"></iframe>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed_melt[<span style="color:#e6db74">&#39;Fecha&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(confirmed_melt[<span style="color:#e6db74">&#39;Fecha&#39;</span>])
@@ -1302,27 +1334,49 @@ fig<span style="color:#f92672">.</span>show()</code></pre></div>
 <h2 id="numero-de-casos-covid-19-en-colombia">Numero de Casos COVID 19 en Colombia</h2>
 
 <iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/9.embed?link=false"></iframe>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">column_names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Fecha&#34;</span>, <span style="color:#e6db74">&#34;Confirmados&#34;</span>, <span style="color:#e6db74">&#34;Muertos&#34;</span>]
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">column_names <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Fecha&#34;</span>, <span style="color:#e6db74">&#34;Confirmados&#34;</span>, <span style="color:#e6db74">&#34;Recuperados&#34;</span>,<span style="color:#e6db74">&#34;Muertos&#34;</span>, <span style="color:#e6db74">&#34;Activos&#34;</span>]
 colombia <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>DataFrame(columns <span style="color:#f92672">=</span> column_names)
 colombia[<span style="color:#e6db74">&#39;Fecha&#39;</span>] <span style="color:#f92672">=</span> confirmed_group[<span style="color:#e6db74">&#39;Fecha&#39;</span>]
 colombia[<span style="color:#e6db74">&#39;Confirmados&#39;</span>] <span style="color:#f92672">=</span> confirmed_group[<span style="color:#e6db74">&#39;Colombia&#39;</span>]
+colombia[<span style="color:#e6db74">&#39;Recuperados&#39;</span>] <span style="color:#f92672">=</span> recovered_group[<span style="color:#e6db74">&#39;Colombia&#39;</span>]
 colombia[<span style="color:#e6db74">&#39;Muertos&#39;</span>] <span style="color:#f92672">=</span> death_group[<span style="color:#e6db74">&#39;Colombia&#39;</span>]
-
+colombia[<span style="color:#e6db74">&#39;Activos&#39;</span>] <span style="color:#f92672">=</span> active_group[<span style="color:#e6db74">&#39;Colombia&#39;</span>]
 df_melt3 <span style="color:#f92672">=</span> colombia<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span>, value_vars<span style="color:#f92672">=</span> list(colombia<span style="color:#f92672">.</span>columns)[<span style="color:#ae81ff">1</span>:], var_name<span style="color:#f92672">=</span>None)
 fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>line(df_melt3, x<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span> , y<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;value&#39;</span>, color<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;variable&#39;</span>,
-              color_discrete_sequence<span style="color:#f92672">=</span>px<span style="color:#f92672">.</span>colors<span style="color:#f92672">.</span>qualitative<span style="color:#f92672">.</span>G10,
+              color_discrete_sequence<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#34;teal&#34;</span>,<span style="color:#e6db74">&#34;green&#34;</span>,<span style="color:#e6db74">&#34;coral&#34;</span>, <span style="color:#e6db74">&#34;navy&#34;</span>],
               title<span style="color:#f92672">=</span>f<span style="color:#e6db74">&#39;Corona virus (COVID 19) en Colombia - {colombia.iloc[-1,0]}&#39;</span>)
-fig<span style="color:#f92672">.</span>add_indicator( title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Confirmados&#39;</span>, value <span style="color:#f92672">=</span> colombia[<span style="color:#e6db74">&#39;Confirmados&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+<span style="color:#75715e"># Indicador de numero total de confirmados</span>
+fig<span style="color:#f92672">.</span>add_indicator( title<span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;text&#39;</span>:<span style="color:#e6db74">&#39;Confirmados&#39;</span>, <span style="color:#e6db74">&#39;font&#39;</span>:{<span style="color:#e6db74">&#39;color&#39;</span>:<span style="color:#e6db74">&#39;teal&#39;</span>}},
+                  value <span style="color:#f92672">=</span> colombia[<span style="color:#e6db74">&#39;Confirmados&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
                   mode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;number+delta&#34;</span>, delta <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;reference&#34;</span>: colombia[<span style="color:#e6db74">&#39;Confirmados&#39;</span>
-                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.5</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.25</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">75</span>]})
-fig<span style="color:#f92672">.</span>add_indicator(title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Muertos&#39;</span>, value <span style="color:#f92672">=</span> colombia[<span style="color:#e6db74">&#39;Muertos&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.25</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.15</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">4</span>]})
+<span style="color:#75715e">#Indicador numero total de Activos</span>
+fig<span style="color:#f92672">.</span>add_indicator(title<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;text&#39;</span>:<span style="color:#e6db74">&#39;Activos&#39;</span>, <span style="color:#e6db74">&#39;font&#39;</span>:{<span style="color:#e6db74">&#39;color&#39;</span>:<span style="color:#e6db74">&#39;navy&#39;</span>}},
+                  value <span style="color:#f92672">=</span> colombia[<span style="color:#e6db74">&#39;Activos&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+                  mode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;number+delta&#34;</span>, delta <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;reference&#34;</span>: colombia[<span style="color:#e6db74">&#39;Activos&#39;</span>
+                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0.25</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.6</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">85</span>]})
+<span style="color:#75715e">#Indicador numero total de Recuperados</span>
+fig<span style="color:#f92672">.</span>add_indicator(title<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;text&#39;</span>:<span style="color:#e6db74">&#39;Recuperados&#39;</span>, <span style="color:#e6db74">&#39;font&#39;</span>:{<span style="color:#e6db74">&#39;color&#39;</span>:<span style="color:#e6db74">&#39;green&#39;</span>}},
+                  value <span style="color:#f92672">=</span> colombia[<span style="color:#e6db74">&#39;Recuperados&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
+                  mode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;number+delta&#34;</span>, delta <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;reference&#34;</span>: colombia[<span style="color:#e6db74">&#39;Recuperados&#39;</span>
+                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.50</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.6</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">85</span>]}) 
+<span style="color:#75715e">#Indicador numero total de muertos</span>
+fig<span style="color:#f92672">.</span>add_indicator(title<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;text&#39;</span>:<span style="color:#e6db74">&#39;Muertos&#39;</span>, <span style="color:#e6db74">&#39;font&#39;</span>:{<span style="color:#e6db74">&#39;color&#39;</span>:<span style="color:#e6db74">&#39;coral&#39;</span>}}, 
+                  value <span style="color:#f92672">=</span> colombia[<span style="color:#e6db74">&#39;Muertos&#39;</span>]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>],
                   mode <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;number+delta&#34;</span>, delta <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;reference&#34;</span>: colombia[<span style="color:#e6db74">&#39;Muertos&#39;</span>
-                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0.5</span>, <span style="color:#ae81ff">0.75</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.25</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">75</span>]})
+                  ]<span style="color:#f92672">.</span>iloc[<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>], <span style="color:#e6db74">&#39;relative&#39;</span>: True },domain <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#39;x&#39;</span>: [<span style="color:#ae81ff">0.25</span>, <span style="color:#ae81ff">0.5</span>], <span style="color:#e6db74">&#39;y&#39;</span>: [<span style="color:#ae81ff">0.15</span>, <span style="color:#f92672">.</span><span style="color:#ae81ff">4</span>]})
 fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span>update(showlegend<span style="color:#f92672">=</span>False,
                   yaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Numero de Personas&#34;</span>}}, <span style="color:#75715e"># Cambiar texto eje y</span>
                   xaxis <span style="color:#f92672">=</span>  {<span style="color:#e6db74">&#34;title&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: <span style="color:#e6db74">&#34;Fecha&#34;</span>}})
-py<span style="color:#f92672">.</span>plot(fig, filename <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Colombia_general&#39;</span>, auto_open<span style="color:#f92672">=</span>False)
+<span style="color:#75715e"># grabar grafica en chart-studio si se proporciona el api-key</span>
+<span style="color:#66d9ef">if</span> api_key: py<span style="color:#f92672">.</span>plot(fig, filename <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Colombia_general&#39;</span>, auto_open<span style="color:#f92672">=</span>False)
 fig<span style="color:#f92672">.</span>show()</code></pre></div>
+<h1 id="actualizacion-de-las-graficas-cada-24-horas">Actualizacion de las Graficas cada 24 Horas</h1>
+
+<p>Las graficas creadas con plotly son enviadas a chart-studio y cargadas en la pagina web mediante
+el tag <em>iframe</em> de html.
+Las gráficas se actualizan cada 24 horas usando <a href="https://github.com/features/actions" target="_blank">Github Actions</a></p>
+
 <h1 id="codigo-fuente-jupyter-notebook">Codigo Fuente Jupyter notebook</h1>
 
 <table>
@@ -1345,7 +1399,7 @@ fig<span style="color:#f92672">.</span>show()</code></pre></div>
 
 <h1 id="refencias">Refencias</h1>
 
-<p>Fuentes de datos, visualizaciones y analisis de datos.</p>
+<p>Fuentes de datos, visualizaciones y análisis de datos.</p>
 
 <ul>
 <li><a href="https://github.com/CSSEGISandData/COVID-19" target="_blank">https://github.com/CSSEGISandData/COVID-19</a></li>
@@ -1353,6 +1407,7 @@ fig<span style="color:#f92672">.</span>show()</code></pre></div>
 <li><a href="https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/" target="_blank">https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/</a></li>
 <li><a href="https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus" target="_blank">https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus</a></li>
 <li><a href="https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200" target="_blank">https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200</a></li>
+<li><a href="https://github.com/features/actions" target="_blank">https://github.com/features/actions</a></li>
 </ul>
 
     </div>

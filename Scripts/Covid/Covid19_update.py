@@ -18,6 +18,9 @@ Las Graficas se actualizaran diariamente con los nuevos datos!
 Informacion extraida de 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE
  
 https://github.com/CSSEGISandData/COVID-19
+
+Actualizaciones:
+- 25/May/2020 agregar datos de personas recuperadas
 """
 
 import pandas as pd
@@ -39,6 +42,7 @@ import chart_studio.plotly as py
 
 confirmed = pd.read_csv('https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv')
 death = pd.read_csv('https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv')
+recovered = pd.read_csv('https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv')
 
 # %% [markdown]
 # ## Datos CSSEGISandData/COVID-19
@@ -87,6 +91,12 @@ confirmed = confirmed.drop(columns=['Lat', 'Long','Province/State'])
 
 # %%
 death = death.drop(columns=['Lat', 'Long','Province/State'])
+recovered  = recovered.drop(columns=['Lat', 'Long','Province/State'])
+# %%
+# ### Personas Activas
+active =confirmed.copy()
+# Calcular el numero de casos activos
+active.iloc[:,1:] = active.iloc[:,1:] - death.iloc[:,1:] - recovered.iloc[:,1:]
 
 # %% [markdown]
 # ### Consolidar datos
@@ -105,6 +115,19 @@ death_group = death_group.aggregate(np.sum)
 death_group = death_group.T
 death_group.index.name = 'date'
 death_group =  death_group.reset_index()
+# %%
+recovered_group = recovered.groupby(by='Country/Region')
+recovered_group = recovered_group.aggregate(np.sum)
+recovered_group = recovered_group.T
+recovered_group.index.name = 'date'
+recovered_group =  recovered_group.reset_index()
+
+# %% 
+active_group = active.groupby(by='Country/Region')
+active_group = active_group.aggregate(np.sum)
+active_group = active_group.T
+active_group.index.name = 'date'
+active_group =  active_group.reset_index()
 
 
 # %%
@@ -122,11 +145,13 @@ death_melt.rename(columns = {'value':'Muertos', 'date':'Fecha'}, inplace = True)
 # %%
 # Numero de Casos confirmados por dia en el mundo
 
-column_names = ["Fecha", "Confirmados", "Muertos"]
+column_names = ["Fecha", "Confirmados", "Recuperados","Muertos"]
 world = pd.DataFrame(columns = column_names)
 world['Fecha'] = confirmed_group['date']
 world['Confirmados'] = confirmed_group.iloc[:,1:].sum(1)
 world['Muertos'] = death_group.iloc[:,1:].sum(1)
+world['Recuperados'] = recovered_group.iloc[:,1:].sum(1)
+world['Activos'] = active_group.iloc[:,1:].sum(1)
 
 # %% [markdown]
 # # Visualizacion con Plotly
@@ -136,9 +161,9 @@ world['Muertos'] = death_group.iloc[:,1:].sum(1)
 
 # %%
 temp = pd.DataFrame(world.iloc[-1,:]).T
-tm = temp.melt(id_vars="Fecha", value_vars=[ "Confirmados","Muertos"])
+tm = temp.melt(id_vars="Fecha", value_vars=[ "Confirmados","Activos","Recuperados","Muertos"])
 fig = px.bar(tm, x="variable" , y="value", color= 'variable', text='value',
-             color_discrete_sequence=["green", "blue"],
+             color_discrete_sequence=["teal","navy","green", "coral"],
              height=500, width=600,
              title= f'Total de Casos Mundiales de COVID 19 - {str(world.iloc[-1,0])}')
 fig.update_traces(textposition='outside')#poner los valores de las barras fuera
@@ -204,20 +229,32 @@ if api_key: py.plot(fig, filename = 'scatter_muertos_confirmados', auto_open=Fal
 world_melt = world.melt(id_vars='Fecha', value_vars= list(world.columns)[1:], var_name=None)
 
 fig = px.line(world_melt, x="Fecha", y= 'value',
-              color='variable', width=900,
+              color='variable',  color_discrete_sequence=["teal","green","coral", "navy"],
               title=f'Total de Casos en el tiempo de COVID 19 - {world.iloc[-1,0]}')
 for n in list(world.columns)[1:]:
   fig.add_annotation(x=world.iloc[-1,0], y=world.loc[world.index[-1],n],
                      text=n, xref="x",yref="y",
                      showarrow=True, ax=-50, ay=-20)
 # Indicador de numero total de confirmados
-fig.add_indicator( title='Confirmados', value = world['Confirmados'].iloc[-1],
+fig.add_indicator( title= {'text':'Confirmados', 'font':{'color':'teal'}},
+                  value = world['Confirmados'].iloc[-1],
                   mode = "number+delta", delta = {"reference": world['Confirmados'
-                  ].iloc[-2], 'relative': True },domain = {'x': [0, 0.5], 'y': [0.25, .75]})
+                  ].iloc[-2], 'relative': True },domain = {'x': [0, 0.25], 'y': [0.15, .4]})
+#Indicador numero total de Activos
+fig.add_indicator(title={'text':'Activos', 'font':{'color':'navy'}},
+                  value = world['Activos'].iloc[-1],
+                  mode = "number+delta", delta = {"reference": world['Activos'
+                  ].iloc[-2], 'relative': True },domain = {'x': [0, 0.25], 'y': [0.6, .85]})
+#Indicador numero total de Recuperados
+fig.add_indicator(title={'text':'Recuperados', 'font':{'color':'green'}},
+                  value = world['Recuperados'].iloc[-1],
+                  mode = "number+delta", delta = {"reference": world['Recuperados'
+                  ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.50], 'y': [0.6, .85]}) 
 #Indicador numero total de muertos
-fig.add_indicator(title='Muertos', value = world['Muertos'].iloc[-1],
+fig.add_indicator(title={'text':'Muertos', 'font':{'color':'coral'}}, 
+                  value = world['Muertos'].iloc[-1],
                   mode = "number+delta", delta = {"reference": world['Muertos'
-                  ].iloc[-2], 'relative': True },domain = {'x': [0.5, 0.75], 'y': [0.25, .75]})  
+                  ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.5], 'y': [0.15, .4]})  
 fig.layout.update(showlegend = False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   )
@@ -284,10 +321,11 @@ if api_key: py.plot(fig, filename = 'total_casos_no_8_infectados', auto_open=Fal
 # # Animacion del Mapa de Evolucion Temporal del Codiv 19
 
 # %%
-# Tomar una frecuencia de 3 los datos para que la imagen este mas pequeña
-# No se puedden enviar graficas grandes
-confirmed_melt = confirmed_group.iloc[::-3].iloc[::-1].melt(id_vars="Fecha")
-confirmed_melt.rename(columns = {'value':'Confirmados', 'date':'Fecha'}, inplace = True)
+if api_key:
+    # se toman la serie de tiempo cada 3 dias, por que las graficas
+    # grandes no se pueden subir a chart-studio con subscripcion gratuita
+    confirmed_melt = confirmed_group.iloc[::-3].iloc[::-1].melt(id_vars="Fecha")
+    confirmed_melt.rename(columns = {'value':'Confirmados', 'date':'Fecha'}, inplace = True)
 
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
 confirmed_melt['Fecha'] = confirmed_melt['Fecha'].dt.strftime('%m/%d/%Y')
@@ -309,23 +347,37 @@ if api_key: py.plot(fig, filename = 'mapa_evolucion_temporal', auto_open=False)
 # ## Numero de Casos COVID 19 en Colombia
 
 # %%
-column_names = ["Fecha", "Confirmados", "Muertos"]
+column_names = ["Fecha", "Confirmados", "Recuperados","Muertos", "Activos"]
 colombia = pd.DataFrame(columns = column_names)
 colombia['Fecha'] = confirmed_group['Fecha']
 colombia['Confirmados'] = confirmed_group['Colombia']
+colombia['Recuperados'] = recovered_group['Colombia']
 colombia['Muertos'] = death_group['Colombia']
-
+colombia['Activos'] = active_group['Colombia']
 df_melt3 = colombia.melt(id_vars='Fecha', value_vars= list(colombia.columns)[1:], var_name=None)
 fig = px.line(df_melt3, x='Fecha' , y='value', color='variable',
-              color_discrete_sequence=px.colors.qualitative.G10,width=900,
+              color_discrete_sequence=["teal","green","coral", "navy"],
               title=f'Corona virus (COVID 19) en Colombia - {colombia.iloc[-1,0]}')
-fig.add_indicator( title='Confirmados', value = colombia['Confirmados'].iloc[-1],
+# Indicador de numero total de confirmados
+fig.add_indicator( title= {'text':'Confirmados', 'font':{'color':'teal'}},
+                  value = colombia['Confirmados'].iloc[-1],
                   mode = "number+delta", delta = {"reference": colombia['Confirmados'
-                  ].iloc[-2], 'relative': True },domain = {'x': [0, 0.5], 'y': [0.25, .75]})
-
-fig.add_indicator(title='Muertos', value = colombia['Muertos'].iloc[-1],
+                  ].iloc[-2], 'relative': True },domain = {'x': [0, 0.25], 'y': [0.15, .4]})
+#Indicador numero total de Activos
+fig.add_indicator(title={'text':'Activos', 'font':{'color':'navy'}},
+                  value = colombia['Activos'].iloc[-1],
+                  mode = "number+delta", delta = {"reference": colombia['Activos'
+                  ].iloc[-2], 'relative': True },domain = {'x': [0, 0.25], 'y': [0.6, .85]})
+#Indicador numero total de Recuperados
+fig.add_indicator(title={'text':'Recuperados', 'font':{'color':'green'}},
+                  value = colombia['Recuperados'].iloc[-1],
+                  mode = "number+delta", delta = {"reference": colombia['Recuperados'
+                  ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.50], 'y': [0.6, .85]}) 
+#Indicador numero total de muertos
+fig.add_indicator(title={'text':'Muertos', 'font':{'color':'coral'}}, 
+                  value = colombia['Muertos'].iloc[-1],
                   mode = "number+delta", delta = {"reference": colombia['Muertos'
-                  ].iloc[-2], 'relative': True },domain = {'x': [0.5, 0.75], 'y': [0.25, .75]})
+                  ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.5], 'y': [0.15, .4]})
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   xaxis =  {"title": {"text": "Fecha"}})
