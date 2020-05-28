@@ -3,9 +3,8 @@
 
 name: Python covid update
 
-on:
-  schedule:
-    - cron: "0 5 * * *"
+on: [push]
+
 jobs:
   build:
 
