@@ -167,6 +167,7 @@ fig = px.bar(tm, x="variable" , y="value", color= 'variable', text='value',
              height=500, width=600,
              title= f'Total de Casos Mundiales de COVID 19 - {str(world.iloc[-1,0])}')
 fig.update_traces(textposition='outside')#poner los valores de las barras fuera
+fig.add_annotation(x='Muertos', y=tm['value'].max(),text='https://joserzapata.github.io/', showarrow=False)
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   xaxis =  {"title": {"text": ""}} #Esconder nombre eje x
@@ -192,6 +193,7 @@ fig = px.scatter_geo(conf_max, locations="Country/Region", locationmode='country
                      range_color= [0, max(confirmed_melt['Confirmados'])+2], 
                      projection="natural earth", width=900,
                      title='Mapa de Confirmados COVID 19 por Pais')
+fig.add_annotation(x=0.5, y=0,text='https://joserzapata.github.io/', showarrow=False)
 fig.update(layout_coloraxis_showscale=False)
 # grabar grafica en chart-studio si se proporciona el api-key
 if api_key: py.plot(fig, filename = 'mapa_confirmados_pais', auto_open=False)
@@ -255,6 +257,8 @@ fig.add_indicator(title={'text':'Muertos', 'font':{'color':'coral'}},
                   value = world['Muertos'].iloc[-1],
                   mode = "number+delta", delta = {"reference": world['Muertos'
                   ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.5], 'y': [0.15, .4]})  
+fig.add_annotation(x=80, y=world_melt['value'].max(),
+                   text='https://joserzapata.github.io/', showarrow=False)
 fig.layout.update(showlegend = False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   )
@@ -287,6 +291,8 @@ for n in range(8):
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   )
+fig.add_annotation(x=60, y=df_melt['value'].max(),
+                   text='https://joserzapata.github.io/', showarrow=False)                   
 # grabar grafica en chart-studio si se proporciona el api-key
 if api_key: py.plot(fig, filename = 'total_casos_no_china', auto_open=False)
 #fig.show()
@@ -310,6 +316,8 @@ paises.sort_values(ascending=False, inplace=True)
 for n in range(8):
   fig.add_annotation(x=fecha, y=paises[n], text=paises.index[n],
                      showarrow=True, ax=+30,xref="x", yref="y")
+fig.add_annotation(x=60, y=df_melt2['value'].max(),
+                   text='https://joserzapata.github.io/', showarrow=False)
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   )
@@ -339,6 +347,7 @@ fig = px.scatter_geo(confirmed_melt, locations="Country/Region", locationmode='c
                      projection="natural earth", animation_frame="Fecha", width=900,
                      title='Contagiados COVID 19 en el Tiempo')
 fig.update(layout_coloraxis_showscale=False)
+fig.add_annotation(x=0.5, y=-0.1,text='https://joserzapata.github.io/', showarrow=False)
 # grabar grafica en chart-studio si se proporciona el api-key
 if api_key: py.plot(fig, filename = 'mapa_evolucion_temporal', auto_open=False)
 #fig.show()
@@ -378,6 +387,8 @@ fig.add_indicator(title={'text':'Muertos', 'font':{'color':'coral'}},
                   value = colombia['Muertos'].iloc[-1],
                   mode = "number+delta", delta = {"reference": colombia['Muertos'
                   ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.5], 'y': [0.15, .4]})
+fig.add_annotation(x=80, y=df_melt3['value'].max(),
+                   text='https://joserzapata.github.io/', showarrow=False)
 fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   xaxis =  {"title": {"text": "Fecha"}})
