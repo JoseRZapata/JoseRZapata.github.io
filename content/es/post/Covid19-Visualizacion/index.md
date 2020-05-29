@@ -8,7 +8,7 @@ authors: ["admin"]
 tags: ["Python", "Data-Science" ,"Jupyter-notebook"]
 categories: ["Data-Science"]
 date: 2020-03-17T17:03:57-05:00
-lastmod: 2020-05-27T17:03:57-05:00
+lastmod: 2020-05-29T17:03:57-05:00
 featured: false
 draft: false
 
@@ -48,7 +48,9 @@ https://github.com/CSSEGISandData/COVID-19
 
 **Actualizaciones:**
 
-27/May/2020 Se Agregar los datos de las personas recuperadas y se calculan los casos Activos
+- 27/May/2020 Se Agregar los datos de las personas recuperadas y se calculan los casos Activos
+- 27/May/2020 Se agrega Bar chart race
+
 
 {{% toc %}}
 
@@ -565,8 +567,26 @@ world['Recuperados'] = recovered_group.iloc[:,1:].sum(1)
 world['Activos'] = active_group.iloc[:,1:].sum(1)
 ```
 
-# Covid19 en el Mundo
 
+# Covid19 en el Mundo
+## Evolucion Animada de Casos Activos por Pais
+La gráfica animada de la evolución temporal de los casos activos por país, la he creado con la libreria [Pandas alive](https://github.com/JackMcKew/pandas_alive) y [Bar Chart Race](https://github.com/dexplo/bar_chart_race).
+La barra horizontal gris representa el valor promedio de casos activos a nivel mundial.
+![Evolucion Temporal de casos activos](https://github.com/JoseRZapata/JoseRZapata.github.io/raw/master/Scripts/Covid/evolucion_casos_activos.gif)
+
+```python
+import pandas_alive
+active_evol = active_group.set_index('date')
+active_evol.index = pd.to_datetime(active_evol.index)
+active_evol.plot_animated(filename='evolucion_casos_activos.gif', n_bars=8,n_visible=8,
+                          title='Evolución en el tiempo de Casos Activos COVID-19 por pais \n https://joserzapata.github.io/',
+                          perpendicular_bar_func='mean', dpi=100,
+                          period_label={'x': .99, 'y': .25, 'ha': 'right', 'va': 'center'},
+                          period_fmt='%B %d, %Y',
+                          period_summary_func=lambda v: {'x': .99, 'y': .18,
+                                      's': f'Total Activos: {v.nlargest(8).sum():,.0f}',
+                                      'ha': 'right', 'size': 9, 'family': 'Courier New'})
+```
 Visualizacion con Plotly
 
 ## Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos
