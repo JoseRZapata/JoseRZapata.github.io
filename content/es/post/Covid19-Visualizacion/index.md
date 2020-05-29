@@ -49,7 +49,7 @@ https://github.com/CSSEGISandData/COVID-19
 **Actualizaciones:**
 
 - 27/May/2020 Se Agregar los datos de las personas recuperadas y se calculan los casos Activos
-- 27/May/2020 Se agrega Bar chart race
+- 29/May/2020 Se agrega Bar chart race
 
 
 {{% toc %}}
@@ -587,8 +587,8 @@ active_evol.plot_animated(filename='evolucion_casos_activos.gif', n_bars=8,n_vis
                                       's': f'Total Activos: {v.nlargest(8).sum():,.0f}',
                                       'ha': 'right', 'size': 9, 'family': 'Courier New'})
 ```
-Visualizacion con Plotly
 
+## Visualizacion con Plotly
 ## Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos
 <iframe width="900" height="450" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/1.embed?link=false"></iframe>
 
