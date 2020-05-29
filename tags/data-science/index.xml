@@ -299,7 +299,7 @@ diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;27/May/2020 Se Agregar los datos de las personas recuperadas y se calculan los casos Activos&lt;/li&gt;
-&lt;li&gt;27/May/2020 Se agrega Bar chart race&lt;/li&gt;
+&lt;li&gt;29/May/2020 Se agrega Bar chart race&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
@@ -320,6 +320,7 @@ diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;#covid19-en-el-mundo&#34;&gt;Covid19 en el Mundo&lt;/a&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#evolucion-animada-de-casos-activos-por-pais&#34;&gt;Evolucion Animada de Casos Activos por Pais&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;#visualizacion-con-plotly&#34;&gt;Visualizacion con Plotly&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#valores-mundiales-de-casos-confirmados-activos-recuperados-y-muertos&#34;&gt;Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#mapa-mundial-de-confirmados-por-pais&#34;&gt;Mapa Mundial de Confirmados por Pais&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#confirmados-vs-muertos-por-pais&#34;&gt;Confirmados vs Muertos por pais&lt;/a&gt;&lt;/li&gt;
@@ -821,7 +822,7 @@ active_evol&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot_animated
                           period_summary_func&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;lambda&lt;/span&gt; v: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;99&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;18&lt;/span&gt;,
                                       &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;: f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total Activos: {v.nlargest(8).sum():,.0f}&amp;#39;&lt;/span&gt;,
                                       &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ha&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;size&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;family&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Courier New&amp;#39;&lt;/span&gt;})&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;Visualizacion con Plotly&lt;/p&gt;
+&lt;h2 id=&#34;visualizacion-con-plotly&#34;&gt;Visualizacion con Plotly&lt;/h2&gt;
 
 &lt;h2 id=&#34;valores-mundiales-de-casos-confirmados-activos-recuperados-y-muertos&#34;&gt;Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos&lt;/h2&gt;
 
