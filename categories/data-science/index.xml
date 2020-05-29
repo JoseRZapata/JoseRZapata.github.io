@@ -297,7 +297,10 @@ diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Actualizaciones:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;27/May/2020 Se Agregar los datos de las personas recuperadas y se calculan los casos Activos&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;27/May/2020 Se Agregar los datos de las personas recuperadas y se calculan los casos Activos&lt;/li&gt;
+&lt;li&gt;27/May/2020 Se agrega Bar chart race&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -316,6 +319,7 @@ diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#covid19-en-el-mundo&#34;&gt;Covid19 en el Mundo&lt;/a&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;#evolucion-animada-de-casos-activos-por-pais&#34;&gt;Evolucion Animada de Casos Activos por Pais&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#valores-mundiales-de-casos-confirmados-activos-recuperados-y-muertos&#34;&gt;Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#mapa-mundial-de-confirmados-por-pais&#34;&gt;Mapa Mundial de Confirmados por Pais&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#confirmados-vs-muertos-por-pais&#34;&gt;Confirmados vs Muertos por pais&lt;/a&gt;&lt;/li&gt;
@@ -801,6 +805,22 @@ world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt
 world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Activos&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; active_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h1 id=&#34;covid19-en-el-mundo&#34;&gt;Covid19 en el Mundo&lt;/h1&gt;
 
+&lt;h2 id=&#34;evolucion-animada-de-casos-activos-por-pais&#34;&gt;Evolucion Animada de Casos Activos por Pais&lt;/h2&gt;
+
+&lt;p&gt;La gráfica animada de la evolución temporal de los casos activos por país, la he creado con la libreria &lt;a href=&#34;https://github.com/JackMcKew/pandas_alive&#34; target=&#34;_blank&#34;&gt;Pandas alive&lt;/a&gt; y &lt;a href=&#34;https://github.com/dexplo/bar_chart_race&#34; target=&#34;_blank&#34;&gt;Bar Chart Race&lt;/a&gt;.
+La barra horizontal gris representa el valor promedio de casos activos a nivel mundial.
+&lt;img src=&#34;https://github.com/JoseRZapata/JoseRZapata.github.io/raw/master/Scripts/Covid/evolucion_casos_activos.gif&#34; alt=&#34;Evolucion Temporal de casos activos&#34; /&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas_alive
+active_evol &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; active_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;)
+active_evol&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(active_evol&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index)
+active_evol&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot_animated(filename&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;evolucion_casos_activos.gif&amp;#39;&lt;/span&gt;, n_bars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;,n_visible&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;,
+                          title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Evolución en el tiempo de Casos Activos COVID-19 por pais &lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; https://joserzapata.github.io/&amp;#39;&lt;/span&gt;,
+                          perpendicular_bar_func&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;mean&amp;#39;&lt;/span&gt;, dpi&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;,
+                          period_label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;99&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ha&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;va&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;center&amp;#39;&lt;/span&gt;},
+                          period_fmt&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%B &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;, %Y&amp;#39;&lt;/span&gt;,
+                          period_summary_func&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;lambda&lt;/span&gt; v: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;99&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;18&lt;/span&gt;,
+                                      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;: f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total Activos: {v.nlargest(8).sum():,.0f}&amp;#39;&lt;/span&gt;,
+                                      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ha&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;size&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;family&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Courier New&amp;#39;&lt;/span&gt;})&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;Visualizacion con Plotly&lt;/p&gt;
 
 &lt;h2 id=&#34;valores-mundiales-de-casos-confirmados-activos-recuperados-y-muertos&#34;&gt;Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos&lt;/h2&gt;
