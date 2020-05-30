@@ -3,3 +3,4 @@ pandas==1.0.3
 numpy==1.18.1
 chart_studio==1.0.0
 pandas_alive==0.1.14
+attr==0.3.1
