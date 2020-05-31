@@ -25,3 +25,4 @@ jobs:
     - name: updated figs
       run: |
         python Scripts/Covid/Covid19_update.py ${{secrets.chart_plotly_name}} ${{secrets.chart_plotly_clave}}
+        python Scripts/Covid/Covid19_BarChartRace_update.py
