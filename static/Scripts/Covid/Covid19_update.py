@@ -28,7 +28,6 @@ import plotly.express as px
 import numpy as np
 import chart_studio
 import sys
-import pandas_alive
 
 username = sys.argv[1] # chart studio usuario
 api_key = sys.argv[2] # chart studio clave
@@ -396,20 +395,6 @@ fig.layout.update(showlegend=False,
 # grabar grafica en chart-studio si se proporciona el api-key
 if api_key: py.plot(fig, filename = 'Colombia_general', auto_open=False)
 #fig.show()
-
-#%%
-# #Evolucion Animada de casos activos por pais
-active_evol = active_group.set_index('date')
-active_evol.index = pd.to_datetime(active_evol.index)
-active_evol.plot_animated(filename='evolucion_casos_activos.gif', n_bars=8,n_visible=8,
-                          title='Evolución en el tiempo de Casos Activos COVID-19 por pais \n https://joserzapata.github.io/',
-                          perpendicular_bar_func='mean',
-                          period_label={'x': .99, 'y': .25, 'ha': 'right', 'va': 'center'},
-                          period_fmt='%B %d, %Y',
-                          period_summary_func=lambda v: {'x': .99, 'y': .18,
-                                      's': f'Total Activos: {v.nlargest(8).sum():,.0f}',
-                                      'ha': 'right', 'size': 9, 'family': 'Courier New'});
-
 
 # %% [markdown]
 # # Codigo Fuente Jupyter notebook
