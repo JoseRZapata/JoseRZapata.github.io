@@ -77,4 +77,4 @@ email: ""
 ---
 Profesor Titular de la facultad de tecnologías de la información y comunicación (TIC), en la [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) y investigador en [GIDATIC](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
 
-Mis intereses son en el área de **Ciencia de Datos** y **tecnologías de la información en sonido y musica**, que incluye temas como **Music information retrieval**, **Aprendizaje de Maquina (Machine Learning)**, **Análisis de audio** y **Análisis de datos**.
+Mis intereses son en **Ciencia de Datos** y **tecnologías de la información en sonido y musica**, que incluye temas como **Music information retrieval**, **Aprendizaje de Maquina (Machine Learning)**, **Análisis de audio** y **Análisis de datos**.
