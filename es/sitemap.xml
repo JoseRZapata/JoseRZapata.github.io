@@ -438,6 +438,36 @@
   </url>
   
   <url>
+    <loc>https://joserzapata.github.io/es/categories/academia/</loc>
+    <lastmod>2018-08-01T09:10:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/categories/academia/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/categories/academia/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/post/proyecto-grado/</loc>
+    <lastmod>2018-08-01T09:10:53-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/post/proyecto-grado/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/post/proyecto-grado/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joserzapata.github.io/es/talk/pycon2018/</loc>
     <lastmod>2018-02-09T11:40:35-05:00</lastmod>
     <xhtml:link
