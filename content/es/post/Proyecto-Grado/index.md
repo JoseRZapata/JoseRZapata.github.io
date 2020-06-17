@@ -31,6 +31,8 @@ markup: blackfriday
 
 Este es el resumen de algunas ideas concretas que he recopilado tanto en mi experiencia como docente, investigador y director de varios trabajos de final de carrera en pregrado y postgrado, para realizar una buena presentación del anteproyecto y del trabajo de grado.
 
+{{% toc %}}
+
 # Tips para la Creación de las Diapositivas
 
 - Usar letra Grande
