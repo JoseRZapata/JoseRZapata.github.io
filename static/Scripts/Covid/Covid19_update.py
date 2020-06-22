@@ -96,7 +96,7 @@ recovered  = recovered.drop(columns=['Lat', 'Long','Province/State'])
 # ### Personas Activas
 active =confirmed.copy()
 # Calcular el numero de casos activos
-active.iloc[:,1:] = active.iloc[:,1:] - death.iloc[:,1:] - recovered.iloc[:,1:]
+active.iloc[:,1:] = confirmed.iloc[:,1:] - death.iloc[:,1:] - recovered.iloc[:,1:]
 
 # %% [markdown]
 # ### Consolidar datos
@@ -360,9 +360,9 @@ column_names = ["Fecha", "Confirmados", "Recuperados","Muertos", "Activos"]
 colombia = pd.DataFrame(columns = column_names)
 colombia['Fecha'] = confirmed_group['Fecha']
 colombia['Confirmados'] = confirmed_group['Colombia']
-colombia['Recuperados'] = recovered_group['Colombia']
 colombia['Muertos'] = death_group['Colombia']
 colombia['Activos'] = active_group['Colombia']
+colombia['Recuperados'] = colombia['Confirmados'] - colombia['Activos'] - colombia['Muertos']
 df_melt3 = colombia.melt(id_vars='Fecha', value_vars= list(colombia.columns)[1:], var_name=None)
 fig = px.line(df_melt3, x='Fecha' , y='value', color='variable',
               color_discrete_sequence=["teal","green","coral", "navy"],
