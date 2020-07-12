@@ -25,8 +25,8 @@
 {{ if $item.Params.summary }}
   {{ $summary = $item.Params.summary | markdownify | emojify }}
 {{ else if .Params.abstract }}
-  {{ $summary = .Params.abstract | markdownify | emojify }}
-{{ else if $item.Truncated }}
+  {{ $summary = .Params.abstract | markdownify | emojify | truncate (site.Params.abstract_length | default 135) }}
+{{ else if $item.Summary }}
   {{ $summary = $item.Summary }}
 {{ end }}
 
@@ -38,9 +38,11 @@
     </h3>
 
     {{ with $summary }}
-    <div class="article-style">
-      {{ . | truncate 135 }}
-    </div>
+    <a href="{{ $item.RelPermalink }}" class="summary-link">
+      <div class="article-style">
+        {{.}}
+      </div>
+    </a>
     {{ end }}
 
     <div class="stream-meta article-metadata">
@@ -78,7 +80,7 @@
     {{ with $resource }}
     {{ $image := .Resize "150x" }}
     <a href="{{$link}}" {{ $target | safeHTMLAttr }}>
-      <img src="{{ $image.RelPermalink }}" alt="">
+      <img src="{{ $image.RelPermalink }}" alt="{{ $item.Title }}">
     </a>
     {{end}}
   </div>

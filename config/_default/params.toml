@@ -150,7 +150,7 @@ address_format = "en-us"
 ############################
 
 # Main menu alignment (l = left, c = center, r = right) and logo options.
-main_menu = {align = "l", show_logo = true, highlight_active_link = true, show_language = false}
+main_menu = {align = "l", show_logo = true, highlight_active_link = true, show_language = true}
 
 # Show estimated reading time for posts? (true/false)
 reading_time = true
@@ -179,7 +179,7 @@ abstract_length = 135
 #   E.g. To load `/assets/js/custom.js`, set `plugins_js = ["custom"]`.
 plugins_js  = []
 
- Avatars.
+# Avatars.
 # An avatar is an image that appears next to a user's name.
 # An avatar can be uploaded as an image named `avatar` to each user's profile or fetched from Gravatar.com.
 [avatar]
@@ -280,7 +280,7 @@ plugins_js  = []
 ## Marketing
 ############################
 [marketing]
-google_analytics = "UA-112535090-1"
+  google_analytics = "UA-112535090-1"
  #google_tag_manager = ""
 
 ############################
