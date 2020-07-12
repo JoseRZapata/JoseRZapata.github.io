@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Efficient Detection of Exact Redundancies in Audio Signals"
-authors: ["admin","Ricardo A. Garcia"]
+authors: ["joserzapata","Ricardo A. Garcia"]
 date: 2008-10-01T22:34:53-05:00
 doi: ""
 

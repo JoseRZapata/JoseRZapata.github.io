@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Multi-Feature Beat Tracking"
-authors: ["admin", "Matthew E.P. Davies", "Emilia Gómez"]
+authors: ["joserzapata", "Matthew E.P. Davies", "Emilia Gómez"]
 date: 2014-04-03T11:52:17-05:00
 doi: "10.1109/TASLP.2014.2305252"
 

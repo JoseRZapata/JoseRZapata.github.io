@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Essentia: an open-source library for sound and music analysis"
-authors: ["Dmitry Bogdanov","Nicolas Wack", "Emilia Gómez", "Sankalp Gulati", "Perfecto Herrera", "Oscar Mayor", "Gerard Roma", "Justin Salamon", "admin", "Xavier Serra"]
+authors: ["Dmitry Bogdanov","Nicolas Wack", "Emilia Gómez", "Sankalp Gulati", "Perfecto Herrera", "Oscar Mayor", "Gerard Roma", "Justin Salamon", "joserzapata", "Xavier Serra"]
 date: 2013-10-21T00:11:35-05:00
 doi: "10.1145/2502081.2502229"
 

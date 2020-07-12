@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Comparative Evaluation and Combination of Audio Tempo Estimation Approaches"
-authors: ["admin", "Emilia Gómez"]
+authors: ["joserzapata", "Emilia Gómez"]
 date: 2011-07-22T12:33:35-05:00
 doi: ""
 

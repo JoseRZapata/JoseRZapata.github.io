@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Selective Sampling for Beat Tracking Evaluation"
-authors: ["Andre Holzapfel", "Matthew EP Davies", "admin", "João Lobato Oliveira", "Fabien Gouyon"]
+authors: ["Andre Holzapfel", "Matthew EP Davies", "joserzapata", "João Lobato Oliveira", "Fabien Gouyon"]
 date: 2012-11-03T12:16:05-05:00
 doi: "10.1109/TASL.2012.2205244"
 
