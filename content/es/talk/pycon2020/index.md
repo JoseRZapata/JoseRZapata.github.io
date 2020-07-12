@@ -23,7 +23,7 @@ all_day: false
 # Schedule page publish date (NOT talk date).
 publishDate: 2020-02-07T21:12:33-05:00
 
-authors: ["admin"]
+authors: ["joserzapata"]
 tags: ["Python","Jupyter-notebook","Music","Waves"]
 
 # Is this a featured talk? (true/false)

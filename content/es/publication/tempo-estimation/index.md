@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Tempo Estimation"
-authors: ["admin"]
+authors: ["joserzapata"]
 date: 2016-11-17T18:14:05-05:00
 doi: "10.1201/9781315370996"
 

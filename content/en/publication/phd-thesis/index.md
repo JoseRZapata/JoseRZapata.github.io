@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Comparative evaluation and combination of automatic rhythm description systems"
-authors: ["admin"]
+authors: ["joserzapata"]
 date: 2013-09-13T14:49:50+01:00
 doi: ""
 

@@ -4,7 +4,7 @@ name: Jose R. Zapata
 
 # Username (this should match the folder name)
 authors:
-- admin
+- joserzapata
 
 # Is this the primary user of the site?
 superuser: true
@@ -18,24 +18,24 @@ organizations:
   url: "https://www.upb.edu.co"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Mis intereses de investigacion son Music Information Retrieval, Ciencia de Datos y Python.
+bio: My research interests include Music Information Retrieval, Data science and Python.
 
 interests:
 - Music Information Retrieval
-- Ciencia de Datos
-- Procesamiento de Audio
+- Data science
+- Audio signal processing
 - Python
-- Guitarra
+- Guitar
 
 education:
   courses:
-  - course: PhD in Tecnologías de la información y las Comunicaciones (Sound and Music Computing)
+  - course: PhD in Information and Communication Technologies (Sound and Music Computing)
     institution: Universitat Pompeu Fabra (UPF), Spain 
     year: 2013
-  - course: Master en Ingenieria area Telecomunicaciones
+  - course: MEng in Telecommunications
     institution: Universidad Pontificia Bolivariana (UPB), Colombia
     year: 2008
-  - course: Ingeniero Electronico
+  - course: BSc in in Electronic Engineering
     institution: Universidad Pontificia Bolivariana (UPB), Colombia
     year: 2002
 
@@ -55,13 +55,14 @@ social:
   link: https://github.com/JoseRZapata
 - icon: stack-overflow
   icon_pack: fab
-  link: https://stackoverflow.com/users/5863794/jose-r-zapata  
+  link: https://stackoverflow.com/users/5863794/jose-r-zapata
 - icon: orcid
   icon_pack: ai
   link: 'https://orcid.org/0000-0003-1484-5816'
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/jose-ricardo-zapata-gonzalez/
+
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 # - icon: cv
@@ -75,6 +76,6 @@ email: ""
 #   Set this to `[]` or comment out if you are not using People widget.  
 #user_groups: []
 ---
-Profesor Titular de la facultad de tecnologías de la información y comunicación (TIC), en la [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) y investigador en [GIDATIC](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
+Professor at the Faculty of Information and Communication Technologies (TIC), [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) and researcher at [GIDATIC](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
 
-Mis intereses son en **Ciencia de Datos** y **tecnologías de la información en sonido y musica**, que incluye temas como **Music information retrieval**, **Aprendizaje de Maquina (Machine Learning)**, **Análisis de audio** y **Análisis de datos**.
+My interests are based around **Data science** and **Sound and music information technologies**, which includes **Music information retrieval**, **Machine Learning**, **Audio analysis** and **Data analysis**. [EN ESPAÑOL](https://joserzapata.github.io/es/)

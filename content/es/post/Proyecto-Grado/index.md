@@ -4,7 +4,7 @@
 title: "Tips para la Exposición del Proyecto de Grado"
 subtitle: ""
 summary: "Tips para crear las diapositivas y para realizar la exposición del anteproyecto del trabajo de grado"
-authors: ["admin"]
+authors: ["joserzapata"]
 tags: []
 categories: ["Academia"]
 date: 2018-08-01T09:10:53-05:00

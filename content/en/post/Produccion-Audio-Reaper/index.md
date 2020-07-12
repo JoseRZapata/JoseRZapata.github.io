@@ -4,7 +4,7 @@
 title: "Tutorial de Produccion de Audio con Reaper"
 subtitle: ""
 summary: "Tutorial en Video y material produccion basica de Audio con Reaper"
-authors: ["admin"]
+authors: ["joserzapata"]
 tags: ["Audio","Reaper"]
 categories: ["Audio"]
 date: 2018-09-01T09:10:53-05:00

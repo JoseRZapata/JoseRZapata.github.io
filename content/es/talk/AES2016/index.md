@@ -29,7 +29,7 @@ all_day: false
 # Schedule page publish date (NOT talk date).
 publishDate: 2019-11-25T21:42:28-05:00
 
-authors: ["admin"]
+authors: ["joserzapata"]
 tags: ["Music-information-retrieval","Python"]
 
 # Is this a featured talk? (true/false)
