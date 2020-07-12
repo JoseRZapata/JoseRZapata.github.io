@@ -5,7 +5,7 @@
     <link>https://joserzapata.github.io/</link>
       <atom:link href="https://joserzapata.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Jose Ricardo Zapata</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Fri, 13 Sep 2013 00:00:00 +0000</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Thu, 09 Apr 2020 06:54:44 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Jose Ricardo Zapata</title>
@@ -123,7 +123,7 @@ si necesario).&lt;/li&gt;
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    &lt;strong&gt;Notas:&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Notas:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Trabaje en copias de los datos (mantenga intacto el conjunto de datos original).&lt;/li&gt;
 &lt;li&gt;Escriba funciones para todas las transformaciones de datos que realice, por cinco razones:
@@ -136,6 +136,7 @@ si necesario).&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+
   &lt;/div&gt;
 &lt;/div&gt;
  
@@ -166,11 +167,12 @@ columnas).&lt;/li&gt;
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    &lt;strong&gt;Notas:&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Notas:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Si se tiene una gran cantidad de datos, es posible que desee hacer un muestreo de los datos para tener conjuntos de entrenamiento más pequeños, de esta forma se pueden entrenar varios modelos diferentes en un tiempo razonable (se debe tener en cuenta que esto penaliza modelos complejos como redes neuronales grandes o Random Forest).&lt;/li&gt;
 &lt;li&gt;Una vez más, intentar automatizar estos pasos tanto como sea posible.&lt;/li&gt;
 &lt;/ul&gt;
+
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -190,11 +192,12 @@ columnas).&lt;/li&gt;
 
 &lt;div class=&#34;alert alert-note&#34;&gt;
   &lt;div&gt;
-    &lt;strong&gt;Notas:&lt;/strong&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;strong&gt;Notas:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Se deberá utilizar la mayor cantidad de datos posible para este paso, especialmente a medida que avanza hacia el final del ajuste fino del modelo.&lt;/li&gt;
 &lt;li&gt;Como siempre, automatizar lo que se pueda.&lt;/li&gt;
 &lt;/ul&gt;
+
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -1081,7 +1084,8 @@ Las gráficas se actualizan cada 24 horas usando &lt;a href=&#34;https://github.
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;a href=&#34;https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Pyspark_Colab_es.ipynb&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;
+&lt;a href=&#34;https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Pyspark_Colab_es.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;instalacion-rapida-marzo-2020&#34;&gt;Instalacion Rapida Marzo/ 2020&lt;/h1&gt;
 &lt;p&gt;De forma General para usar pyspark en Colab Marzo/2020 seria con los siguientes comandos en una celda en Colab:&lt;/p&gt;
 &lt;p&gt;Instalar Java&lt;/p&gt;
@@ -1122,7 +1126,7 @@ link_files &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
   link_files&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(link&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;href&amp;#39;&lt;/span&gt;))
 spark_link &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [x &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; link_files &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;spark&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; x]  
 &lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(spark_link)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;[&amp;lsquo;spark-2.3.4/&#39;, &amp;lsquo;spark-2.4.5/&#39;, &amp;lsquo;spark-3.0.0-preview2/&#39;]&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;[&amp;lsquo;spark-2.3.4/&amp;rsquo;, &amp;lsquo;spark-2.4.5/&amp;rsquo;, &amp;lsquo;spark-3.0.0-preview2/&#39;]&lt;/p&gt;
 &lt;p&gt;La version a usar seran las superiores a spark-2.3.4  y menores a spark-3.0.0&lt;/p&gt;
 &lt;p&gt;obtener la version y eliminar el caracter &amp;lsquo;/&amp;rsquo; del final&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;ver_spark &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; spark_link[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][:&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;# obtener la version y eliminar el caracter &amp;#39;/&amp;#39; del final&lt;/span&gt;
@@ -1753,22 +1757,39 @@ como el Estudio y comprensión de los datos y análisis de los datos (Usar Tabla
       <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
       <guid>https://joserzapata.github.io/phd/</guid>
       <description>&lt;h1 id=&#34;comparative-evaluation-and-combination-of-automatic-rhythm-description-systems&#34;&gt;Comparative evaluation and combination of automatic rhythm description systems&lt;/h1&gt;
-&lt;p&gt;Zapata, Jose R. (2013). &lt;a href=&#34;http://www.tdx.cat/bitstream/handle/10803/123822/tjrzg2.pdf?sequence=5&amp;amp;isAllowed=y&#34;&gt;Comparative evaluation and combination of automatic rhythm description systems&lt;/a&gt;. Ph.D. thesis (Information and Communication Technologies), Universitat Pompeu Fabra, Barcelona, Spain, 2013.&lt;/p&gt;
+&lt;p&gt;Zapata, Jose R. (2013). 
+&lt;a href=&#34;http://www.tdx.cat/bitstream/handle/10803/123822/tjrzg2.pdf?sequence=5&amp;amp;isAllowed=y&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Comparative evaluation and combination of automatic rhythm description systems&lt;/a&gt;. Ph.D. thesis (Information and Communication Technologies), Universitat Pompeu Fabra, Barcelona, Spain, 2013.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.tdx.cat/handle/10803/123822&#34;&gt;[TDX.cat]&lt;/a&gt;
-[&lt;a href=&#34;http://www.tdx.cat/bitstream/handle/10803/123822/tjrzg2.pdf?sequence=5&amp;amp;isAllowed=y&#34;&gt;PDF&lt;/a&gt;]
-[&lt;a href=&#34;http://mtg.upf.edu/node/3115&#34;&gt;MTG&lt;/a&gt;]
-[&lt;a href=&#34;https://goo.gl/vDJxCN&#34;&gt;Slides&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;
+&lt;a href=&#34;http://www.tdx.cat/handle/10803/123822&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[TDX.cat]&lt;/a&gt;
+[
+&lt;a href=&#34;http://www.tdx.cat/bitstream/handle/10803/123822/tjrzg2.pdf?sequence=5&amp;amp;isAllowed=y&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF&lt;/a&gt;]
+[
+&lt;a href=&#34;http://mtg.upf.edu/node/3115&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MTG&lt;/a&gt;]
+[
+&lt;a href=&#34;https://goo.gl/vDJxCN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;thesis-advisor&#34;&gt;Thesis advisor&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dr. &lt;a href=&#34;https://emiliagomez.com/&#34;&gt;Emilia Gómez&lt;/a&gt;, Universitat Pompeu Fabra (&lt;a href=&#34;https://www.upf.edu/web/mtg&#34;&gt;MTG&lt;/a&gt;, &lt;a href=&#34;https://www.upf.edu/en/&#34;&gt;UPF&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Dr. 
+&lt;a href=&#34;https://emiliagomez.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Emilia Gómez&lt;/a&gt;, Universitat Pompeu Fabra (
+&lt;a href=&#34;https://www.upf.edu/web/mtg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MTG&lt;/a&gt;, 
+&lt;a href=&#34;https://www.upf.edu/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UPF&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;defense-board&#34;&gt;Defense board&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dr. &lt;a href=&#34;https://www.upf.edu/web/xavier-serra&#34;&gt;Xavier Serra&lt;/a&gt;,  Universitat Pompeu Fabra (&lt;a href=&#34;https://www.upf.edu/web/mtg&#34;&gt;MTG&lt;/a&gt;, &lt;a href=&#34;https://www.upf.edu/en/&#34;&gt;UPF&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Dr. &lt;a href=&#34;http://www.fabiengouyon.org/&#34;&gt;Fabien Gouyon&lt;/a&gt;, Institute for Systems and Computer Engineering of Porto (&lt;a href=&#34;http://smc.inescporto.pt/&#34;&gt;SMC&lt;/a&gt;, &lt;a href=&#34;https://www.inesctec.pt/en&#34;&gt;INESC Porto&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Dr. &lt;a href=&#34;https://wp.nyu.edu/jpbello/&#34;&gt;Juan Pablo Bello&lt;/a&gt;, New York University (&lt;a href=&#34;https://steinhardt.nyu.edu/marl/&#34;&gt;MARL&lt;/a&gt;, &lt;a href=&#34;http://www.nyu.edu/&#34;&gt;NYU&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Dr. 
+&lt;a href=&#34;https://www.upf.edu/web/xavier-serra&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Xavier Serra&lt;/a&gt;,  Universitat Pompeu Fabra (
+&lt;a href=&#34;https://www.upf.edu/web/mtg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MTG&lt;/a&gt;, 
+&lt;a href=&#34;https://www.upf.edu/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UPF&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Dr. 
+&lt;a href=&#34;http://www.fabiengouyon.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fabien Gouyon&lt;/a&gt;, Institute for Systems and Computer Engineering of Porto (
+&lt;a href=&#34;http://smc.inescporto.pt/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SMC&lt;/a&gt;, 
+&lt;a href=&#34;https://www.inesctec.pt/en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;INESC Porto&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Dr. 
+&lt;a href=&#34;https://wp.nyu.edu/jpbello/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Juan Pablo Bello&lt;/a&gt;, New York University (
+&lt;a href=&#34;https://steinhardt.nyu.edu/marl/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MARL&lt;/a&gt;, 
+&lt;a href=&#34;http://www.nyu.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NYU&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;The automatic analysis of musical rhythm from audio, and more specifically tempo and beat tracking, is one of the fundamental open research problems

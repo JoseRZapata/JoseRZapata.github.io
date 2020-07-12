@@ -1,12 +1,11 @@
-<!DOCTYPE html>
-<html lang="es">
+<!DOCTYPE html><html lang="es" >
 
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="Source Themes Academic 4.5.0">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
 
   
 
@@ -21,7 +20,7 @@
   
   
 
-  <meta name="author" content="Jose R. Zapata">
+  
 
   
   
@@ -46,12 +45,15 @@
 
   
   
+
+  
+  
   
   
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
     
     
@@ -62,32 +64,147 @@
       
       
         
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
         
       
     
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
     
 
     
 
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
   
 
   
   
   
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
   
 
   
   
   
-  <link rel="stylesheet" href="/css/academic.min.30689228d1eb4cc4ce665e3dd036702c.css">
-
   
+  <link rel="stylesheet" href="/css/academic.min.3f4fdf8f2ca05984ea52886bb5e5e370.css">
 
   
 
@@ -103,13 +220,15 @@
       dataLayer.push(arguments);
   }
 
-  function trackOutboundLink(url) {
+  function trackOutboundLink(url, target) {
     gtag('event', 'click', {
          'event_category': 'outbound',
          'event_label': url,
          'transport_type': 'beacon',
          'event_callback': function () {
-           document.location = url;
+           if (target !== '_blank') {
+             document.location = url;
+           }
          }
     });
     console.debug("Outbound link clicked: " + url);
@@ -119,7 +238,7 @@
     if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
       return;
     }
-    trackOutboundLink(event.target);  
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
   }
 
   gtag('js', new Date());
@@ -134,15 +253,23 @@
 
 
   
+  
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
+
+  
   <link rel="alternate" href="/es/index.xml" type="application/rss+xml" title="Jose Ricardo Zapata">
   
 
   <link rel="manifest" href="/es/index.webmanifest">
-  <link rel="icon" type="image/png" href="/img/icon-32.png">
-  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
 
   <link rel="canonical" href="https://joserzapata.github.io/es/">
 
+  
+  
+  
   
   
   
@@ -161,7 +288,7 @@
   <meta property="og:description" content="Phd Information Technologies (Sound and Music Computing), Professor and Data Scientist"><meta property="og:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg">
   <meta property="twitter:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg"><meta property="og:locale" content="es">
   
-    <meta property="og:updated_time" content="2013-09-13T00:00:00&#43;00:00">
+    <meta property="og:updated_time" content="2020-04-09T06:54:44-05:00">
   
 
   
@@ -195,7 +322,6 @@
   <title>Jose Ricardo Zapata</title>
 
 </head>
-
 <body id="top" data-spy="scroll" data-offset="70" data-target="#navbar-main" >
 
   <aside class="search-results" id="search">
@@ -214,7 +340,7 @@
       <div id="search-box">
         
         <input name="q" id="search-query" placeholder="Buscar..." autocapitalize="off"
-        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
         
       </div>
 
@@ -231,24 +357,43 @@
 
 
   
-<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0 compensate-for-scrollbar" id="navbar-main">
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
   <div class="container">
 
     
+    <div class="d-none d-lg-inline-flex">
       <a class="navbar-brand" href="/es/">Jose Ricardo Zapata</a>
-      
-      <button type="button" class="navbar-toggler" data-toggle="collapse"
-              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Barra de navegación">
-        <span><i class="fas fa-bars"></i></span>
-      </button>
-      
+    </div>
+    
 
     
-    <div class="collapse navbar-collapse" id="navbar">
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Barra de navegación">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/es/">Jose Ricardo Zapata</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
 
       
-      
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav d-md-inline-flex">
         
 
         
@@ -446,44 +591,56 @@
         
 
       
+
+        
       </ul>
-      <ul class="navbar-nav ml-auto">
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
       
 
-        
-
-        
-        <li class="nav-item">
-          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
-        </li>
-        
-
-        
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
-            <i class="fas fa-globe mr-1" aria-hidden="true"></i><span>Español</span>
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Claro</span>
           </a>
-          <ul class="dropdown-menu">
-            
-            <li class="dropdown-item my-0 py-0 mx-0 px-0">
-              <a href="https://joserzapata.github.io/" data-target="/">
-                <span>English</span>
-              </a>
-            </li>
-            
-          </ul>
-        </li>
-        
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Oscuro</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automático</span>
+          </a>
+        </div>
+      </li>
+      
 
-        
-        <li class="nav-item">
-          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
-        </li>
-        
+      
+      <li class="nav-item dropdown i18n-dropdown">
+        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-globe mr-1" aria-hidden="true"></i><span class="d-none d-lg-inline">Español</span></a>
+        <div class="dropdown-menu">
+          <div class="dropdown-item dropdown-item-active">
+            <span>Español</span>
+          </div>
+          
+          <a class="dropdown-item" href="https://joserzapata.github.io/" data-target="/">
+            <span>English</span>
+          </a>
+          
+        </div>
+      </li>
+      
 
-      </ul>
+    </ul>
 
-    </div>
   </div>
 </nav>
 
@@ -503,10 +660,11 @@
 
 
 
+
   
-
-
-
+  
+  
+  
 
 
 
@@ -561,17 +719,18 @@
 
 
 
+
 <div class="row">
   <div class="col-12 col-lg-4">
     <div id="profile">
 
       
       
-      <img class="portrait" src="/es/authors/admin/avatar_hu7373ac7f5024718f2293d2af122fa4b1_76803_250x250_fill_q90_lanczos_center.jpg" alt="Avatar">
+      <img class="avatar avatar-circle" src="/es/authors/admin/avatar_hu7373ac7f5024718f2293d2af122fa4b1_76803_270x270_fill_q90_lanczos_center.jpg" alt="">
       
 
       <div class="portrait-title">
-        <h2>Jose R. Zapata</h2>
+        <h2></h2>
         <h3>PhD in Information and Communication Technologies (Sound and Music Computing)</h3>
 
         
@@ -692,7 +851,9 @@
     
     
 
-    <p>Profesor Titular de la facultad de tecnologías de la información y comunicación (TIC), en la <a href="http://www.upb.edu.co/">Universidad Pontificia Bolivariana (UPB)</a> y investigador en <a href="https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin">GIDATIC</a></p>
+    <p>Profesor Titular de la facultad de tecnologías de la información y comunicación (TIC), en la 
+<a href="http://www.upb.edu.co/" target="_blank" rel="noopener">Universidad Pontificia Bolivariana (UPB)</a> y investigador en 
+<a href="https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin" target="_blank" rel="noopener">GIDATIC</a></p>
 <p>Mis intereses son en <strong>Ciencia de Datos</strong> y <strong>tecnologías de la información en sonido y musica</strong>, que incluye temas como <strong>Music information retrieval</strong>, <strong>Aprendizaje de Maquina (Machine Learning)</strong>, <strong>Análisis de audio</strong> y <strong>Análisis de datos</strong>.</p>
 
 
@@ -812,7 +973,9 @@
     
   
   <div class="col-12 col-sm-4">
+    
     <div class="featurette-icon"><i class="fab fa-python"></i></div>
+    
     <h3>Python</h3>
     <p>Pandas, Scikit-learn, Numpy, Matplotlib, Plotly, Seaborn, BeautifulSoup, Selenium</p>
   </div>
@@ -823,7 +986,9 @@
     
   
   <div class="col-12 col-sm-4">
+    
     <div class="featurette-icon"><i class="fas fa-chart-line"></i></div>
+    
     <h3>Ciencia de Datos</h3>
     <p>Data Science en Python, R</p>
   </div>
@@ -834,7 +999,9 @@
     
   
   <div class="col-12 col-sm-4">
+    
     <div class="featurette-icon"><i class="fas fa-laptop-code"></i></div>
+    
     <h3>Aprendizaje de Maquina</h3>
     <p>Scikit-learn, Machine Learning</p>
   </div>
@@ -845,7 +1012,9 @@
     
   
   <div class="col-12 col-sm-4">
+    
     <div class="featurette-icon"><i class="fas fa-terminal"></i></div>
+    
     <h3>SQL</h3>
     
   </div>
@@ -856,7 +1025,9 @@
     
   
   <div class="col-12 col-sm-4">
+    
     <div class="featurette-icon"><i class="fas fa-random"></i></div>
+    
     <h3>Procesamiento Señales</h3>
     <p>y Analisis de Frecuencia de señales</p>
   </div>
@@ -867,7 +1038,9 @@
     
   
   <div class="col-12 col-sm-4">
+    
     <div class="featurette-icon"><i class="fab fa-git-square"></i></div>
+    
     <h3>Git</h3>
     
   </div>
@@ -945,6 +1118,7 @@
 
 
 
+
   
 
 
@@ -989,9 +1163,11 @@
     </h3>
 
     
-    <div class="article-style">
-      Checklist y preguntas para realizar un proyecto de machine learning
-    </div>
+    <a href="/es/post/lista-proyecto-machine-learning/" class="summary-link">
+      <div class="article-style">
+        Checklist y preguntas para realizar un proyecto de machine learning
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -1011,11 +1187,8 @@
   <div>
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>
   </div>
   
   
@@ -1063,7 +1236,7 @@
     
     
     <a href="/es/post/lista-proyecto-machine-learning/" >
-      <img src="/es/post/lista-proyecto-machine-learning/featured_hu15e7fc8de2bc9a083fd14f58d7fad377_257075_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/es/post/lista-proyecto-machine-learning/featured_hu15e7fc8de2bc9a083fd14f58d7fad377_257075_150x0_resize_q90_lanczos.jpg" alt="Paso a paso en un Proyecto Machine Learning">
     </a>
     
   </div>
@@ -1096,9 +1269,11 @@
     </h3>
 
     
-    <div class="article-style">
-      Visualizaciones con Python y Plotly de los datos mundiales del corona virus COVID19
-    </div>
+    <a href="/es/post/covid19-visualizacion/" class="summary-link">
+      <div class="article-style">
+        Visualizaciones con Python y Plotly de los datos mundiales del corona virus COVID19
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -1118,11 +1293,8 @@
   <div>
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>
   </div>
   
   
@@ -1172,7 +1344,7 @@
     
     
     <a href="/es/post/covid19-visualizacion/" >
-      <img src="/es/post/covid19-visualizacion/featured_hudfab1214afe61d2edbb7f58c6c31b5db_134960_150x0_resize_lanczos_2.png" alt="">
+      <img src="/es/post/covid19-visualizacion/featured_hudfab1214afe61d2edbb7f58c6c31b5db_134960_150x0_resize_lanczos_2.png" alt="Visualizacion Datos Coronavirus (COVID19) Mundial con Plotly">
     </a>
     
   </div>
@@ -1205,9 +1377,11 @@
     </h3>
 
     
-    <div class="article-style">
-      Configuracion de Google Colab para usar pyspark
-    </div>
+    <a href="/es/post/pyspark-google-colab/" class="summary-link">
+      <div class="article-style">
+        Configuracion de Google Colab para usar pyspark
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -1227,11 +1401,8 @@
   <div>
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>
   </div>
   
   
@@ -1279,7 +1450,7 @@
     
     
     <a href="/es/post/pyspark-google-colab/" >
-      <img src="/es/post/pyspark-google-colab/featured_huaaf814e26ef2ac3f187ba5fc0fad5a0f_44459_150x0_resize_lanczos_2.png" alt="">
+      <img src="/es/post/pyspark-google-colab/featured_huaaf814e26ef2ac3f187ba5fc0fad5a0f_44459_150x0_resize_lanczos_2.png" alt="Pyspark con Google Colab">
     </a>
     
   </div>
@@ -1312,9 +1483,11 @@
     </h3>
 
     
-    <div class="article-style">
-      Tutorial en Video y material produccion basica de Audio con Reaper
-    </div>
+    <a href="/es/post/produccion-audio-reaper/" class="summary-link">
+      <div class="article-style">
+        Tutorial en Video y material produccion basica de Audio con Reaper
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -1334,11 +1507,8 @@
   <div>
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>
   </div>
   
   
@@ -1386,7 +1556,7 @@
     
     
     <a href="/es/post/produccion-audio-reaper/" >
-      <img src="/es/post/produccion-audio-reaper/featured_hu0151b0215cd8c2da9ea41fe572c5fed5_5720_150x0_resize_q90_lanczos.jpeg" alt="">
+      <img src="/es/post/produccion-audio-reaper/featured_hu0151b0215cd8c2da9ea41fe572c5fed5_5720_150x0_resize_q90_lanczos.jpeg" alt="Tutorial de Produccion de Audio con Reaper">
     </a>
     
   </div>
@@ -1419,9 +1589,11 @@
     </h3>
 
     
-    <div class="article-style">
-      Tips para crear las diapositivas y para realizar la exposición del anteproyecto del trabajo de grado
-    </div>
+    <a href="/es/post/proyecto-grado/" class="summary-link">
+      <div class="article-style">
+        Tips para crear las diapositivas y para realizar la exposición del anteproyecto del trabajo de grado
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -1441,11 +1613,8 @@
   <div>
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>
   </div>
   
   
@@ -1493,7 +1662,7 @@
     
     
     <a href="/es/post/proyecto-grado/" >
-      <img src="/es/post/proyecto-grado/featured_hu03565e93fcc8a3304881d6d761366c22_21606_150x0_resize_lanczos_2.png" alt="">
+      <img src="/es/post/proyecto-grado/featured_hu03565e93fcc8a3304881d6d761366c22_21606_150x0_resize_lanczos_2.png" alt="Tips para la Exposición del Proyecto de Grado">
     </a>
     
   </div>
@@ -1569,6 +1738,14 @@
 
 
 
+
+
+
+
+
+  
+
+
 <div class="row">
   <div class="col-12 col-lg-4 section-heading">
     <h1>Publicaciones Relevantes</h1>
@@ -1592,8 +1769,6 @@
 
 
 
-  
-
 
 <div class="card-simple">
 
@@ -1610,11 +1785,8 @@
   <div>
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/matthew-e.p.-davies/">Matthew E.P. Davies</a></span>, <span><a href="/es/authors/emilia-gomez/">Emilia Gómez</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>, <span >Matthew E.P. Davies</span>, <span >Emilia Gómez</span>
   </div>
   
   
@@ -1730,8 +1902,6 @@
 
 
 
-  
-
 
 <div class="card-simple">
 
@@ -1748,11 +1918,8 @@
   <div>
     
 
-
-
   
-  <span><a href="/es/authors/dmitry-bogdanov/">Dmitry Bogdanov</a></span>, <span><a href="/es/authors/nicolas-wack/">Nicolas Wack</a></span>, <span><a href="/es/authors/emilia-gomez/">Emilia Gómez</a></span>, <span><a href="/es/authors/sankalp-gulati/">Sankalp Gulati</a></span>, <span><a href="/es/authors/perfecto-herrera/">Perfecto Herrera</a></span>, <span><a href="/es/authors/oscar-mayor/">Oscar Mayor</a></span>, <span><a href="/es/authors/gerard-roma/">Gerard Roma</a></span>, <span><a href="/es/authors/justin-salamon/">Justin Salamon</a></span>, <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/xavier-serra/">Xavier Serra</a></span>
-
+  <span >Dmitry Bogdanov</span>, <span >Nicolas Wack</span>, <span >Emilia Gómez</span>, <span >Sankalp Gulati</span>, <span >Perfecto Herrera</span>, <span >Oscar Mayor</span>, <span >Gerard Roma</span>, <span >Justin Salamon</span>, <span ><a href="/es/authors/admin/">admin</a></span>, <span >Xavier Serra</span>
   </div>
   
   
@@ -1896,8 +2063,6 @@
 
 
 
-  
-
 
 <div class="card-simple">
 
@@ -1914,11 +2079,8 @@
   <div>
     
 
-
-
   
-  <span><a href="/es/authors/andre-holzapfel/">Andre Holzapfel</a></span>, <span><a href="/es/authors/matthew-ep-davies/">Matthew EP Davies</a></span>, <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/joao-lobato-oliveira/">João Lobato Oliveira</a></span>, <span><a href="/es/authors/fabien-gouyon/">Fabien Gouyon</a></span>
-
+  <span >Andre Holzapfel</span>, <span >Matthew EP Davies</span>, <span ><a href="/es/authors/admin/">admin</a></span>, <span >João Lobato Oliveira</span>, <span >Fabien Gouyon</span>
   </div>
   
   
@@ -2022,6 +2184,8 @@
       
     
 
+  
+
   </div>
 </div>
 
@@ -2093,6 +2257,7 @@
 
 
 
+
   
 
 
@@ -2127,11 +2292,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>
   </span>
   (2016).
   <a href="/es/publication/tempo-estimation/">Tempo Estimation</a>.
@@ -2195,11 +2357,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/matthew-e.p.-davies/">Matthew E.P. Davies</a></span>, <span><a href="/es/authors/emilia-gomez/">Emilia Gómez</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>, <span >Matthew E.P. Davies</span>, <span >Emilia Gómez</span>
   </span>
   (2014).
   <a href="/es/publication/multifeature-beattracker/">Multi-Feature Beat Tracking</a>.
@@ -2269,11 +2428,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/dmitry-bogdanov/">Dmitry Bogdanov</a></span>, <span><a href="/es/authors/nicolas-wack/">Nicolas Wack</a></span>, <span><a href="/es/authors/emilia-gomez/">Emilia Gómez</a></span>, <span><a href="/es/authors/sankalp-gulati/">Sankalp Gulati</a></span>, <span><a href="/es/authors/perfecto-herrera/">Perfecto Herrera</a></span>, <span><a href="/es/authors/oscar-mayor/">Oscar Mayor</a></span>, <span><a href="/es/authors/gerard-roma/">Gerard Roma</a></span>, <span><a href="/es/authors/justin-salamon/">Justin Salamon</a></span>, <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/xavier-serra/">Xavier Serra</a></span>
-
+  <span >Dmitry Bogdanov</span>, <span >Nicolas Wack</span>, <span >Emilia Gómez</span>, <span >Sankalp Gulati</span>, <span >Perfecto Herrera</span>, <span >Oscar Mayor</span>, <span >Gerard Roma</span>, <span >Justin Salamon</span>, <span ><a href="/es/authors/admin/">admin</a></span>, <span >Xavier Serra</span>
   </span>
   (2014).
   <a href="/es/publication/essentia-sigmm/">Essentia: an open source library for audio analysis</a>.
@@ -2353,11 +2509,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/dmitry-bogdanov/">Dmitry Bogdanov</a></span>, <span><a href="/es/authors/nicolas-wack/">Nicolas Wack</a></span>, <span><a href="/es/authors/emilia-gomez/">Emilia Gómez</a></span>, <span><a href="/es/authors/sankalp-gulati/">Sankalp Gulati</a></span>, <span><a href="/es/authors/perfecto-herrera/">Perfecto Herrera</a></span>, <span><a href="/es/authors/oscar-mayor/">Oscar Mayor</a></span>, <span><a href="/es/authors/gerard-roma/">Gerard Roma</a></span>, <span><a href="/es/authors/justin-salamon/">Justin Salamon</a></span>, <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/xavier-serra/">Xavier Serra</a></span>
-
+  <span >Dmitry Bogdanov</span>, <span >Nicolas Wack</span>, <span >Emilia Gómez</span>, <span >Sankalp Gulati</span>, <span >Perfecto Herrera</span>, <span >Oscar Mayor</span>, <span >Gerard Roma</span>, <span >Justin Salamon</span>, <span ><a href="/es/authors/admin/">admin</a></span>, <span >Xavier Serra</span>
   </span>
   (2013).
   <a href="/es/publication/essentia-ismir/">Essentia: An Audio Analysis Library for Music Information Retrieval</a>.
@@ -2455,11 +2608,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/dmitry-bogdanov/">Dmitry Bogdanov</a></span>, <span><a href="/es/authors/nicolas-wack/">Nicolas Wack</a></span>, <span><a href="/es/authors/emilia-gomez/">Emilia Gómez</a></span>, <span><a href="/es/authors/sankalp-gulati/">Sankalp Gulati</a></span>, <span><a href="/es/authors/perfecto-herrera/">Perfecto Herrera</a></span>, <span><a href="/es/authors/oscar-mayor/">Oscar Mayor</a></span>, <span><a href="/es/authors/gerard-roma/">Gerard Roma</a></span>, <span><a href="/es/authors/justin-salamon/">Justin Salamon</a></span>, <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/xavier-serra/">Xavier Serra</a></span>
-
+  <span >Dmitry Bogdanov</span>, <span >Nicolas Wack</span>, <span >Emilia Gómez</span>, <span >Sankalp Gulati</span>, <span >Perfecto Herrera</span>, <span >Oscar Mayor</span>, <span >Gerard Roma</span>, <span >Justin Salamon</span>, <span ><a href="/es/authors/admin/">admin</a></span>, <span >Xavier Serra</span>
   </span>
   (2013).
   <a href="/es/publication/essentia-acm/">Essentia: an open-source library for sound and music analysis</a>.
@@ -2541,11 +2691,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>
   </span>
   (2013).
   <a href="/es/publication/phd-thesis/">Comparative evaluation and combination of automatic rhythm description systems</a>.
@@ -2623,11 +2770,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/emilia-gomez/">Emilia Gómez</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>, <span >Emilia Gómez</span>
   </span>
   (2013).
   <a href="/es/publication/voice-suppression-improve-beat-tracking/">Using voice suppression algorithms to improve beat tracking in the presence of highly predominant vocals</a>.
@@ -2721,11 +2865,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/andre-holzapfel/">Andre Holzapfel</a></span>, <span><a href="/es/authors/matthew-ep-davies/">Matthew EP Davies</a></span>, <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/joao-lobato-oliveira/">João Lobato Oliveira</a></span>, <span><a href="/es/authors/fabien-gouyon/">Fabien Gouyon</a></span>
-
+  <span >Andre Holzapfel</span>, <span >Matthew EP Davies</span>, <span ><a href="/es/authors/admin/">admin</a></span>, <span >João Lobato Oliveira</span>, <span >Fabien Gouyon</span>
   </span>
   (2012).
   <a href="/es/publication/selective-sampling-beat-tracking/">Selective Sampling for Beat Tracking Evaluation</a>.
@@ -2795,11 +2936,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/matthew-ep-davies/">Matthew EP Davies</a></span>, <span><a href="/es/authors/andre-holzapfel/">Andre Holzapfel</a></span>, <span><a href="/es/authors/joao-lobato-oliveira/">João Lobato Oliveira</a></span>, <span><a href="/es/authors/fabien-gouyon/">Fabien Gouyon</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>, <span >Matthew EP Davies</span>, <span >Andre Holzapfel</span>, <span >João Lobato Oliveira</span>, <span >Fabien Gouyon</span>
   </span>
   (2012).
   <a href="/es/publication/assigning-confidence/">Assigning a confidence threshold on automatic beat annotation in large datasets</a>.
@@ -2869,11 +3007,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/emilia-gomez/">Emilia Gómez</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>, <span >Emilia Gómez</span>
   </span>
   (2012).
   <a href="/es/publication/improving-beat-tracking/">Improving Beat Tracking in the presence of highly predominant vocals using source separation techniques: Preliminary study</a>.
@@ -2947,11 +3082,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/andre-holzapfel/">Andre Holzapfel</a></span>, <span><a href="/es/authors/matthew-ep-davies/">Matthew EP Davies</a></span>, <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/joao-lobato-oliveira/">João Lobato Oliveira</a></span>, <span><a href="/es/authors/fabien-gouyon/">Fabien Gouyon</a></span>
-
+  <span >Andre Holzapfel</span>, <span >Matthew EP Davies</span>, <span ><a href="/es/authors/admin/">admin</a></span>, <span >João Lobato Oliveira</span>, <span >Fabien Gouyon</span>
   </span>
   (2012).
   <a href="/es/publication/automatic-identification/">On the automatic identification of difficult examples for beat tracking: towards building new evaluation datasets</a>.
@@ -3021,11 +3153,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/emilia-gomez/">Emilia Gómez</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>, <span >Emilia Gómez</span>
   </span>
   (2011).
   <a href="/es/publication/comparative-tempo/">Comparative Evaluation and Combination of Audio Tempo Estimation Approaches</a>.
@@ -3115,11 +3244,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/ricardo-a.-garcia/">Ricardo A. Garcia</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>, <span >Ricardo A. Garcia</span>
   </span>
   (2008).
   <a href="/es/publication/efficient-detection/">Efficient Detection of Exact Redundancies in Audio Signals</a>.
@@ -3209,11 +3335,8 @@
   <span class="article-metadata li-cite-author">
     
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>, <span><a href="/es/authors/tony-penarredonda/">Tony Peñarredonda</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>, <span >Tony Peñarredonda</span>
   </span>
   (2004).
   <a href="/es/publication/control-rango-dinamico/">Control de Rango Dinamico en Audio con Logica Difusa</a>.
@@ -3311,13 +3434,13 @@
 
 
 <div class="row">
-  <div class="col-xs-12 col-md-4 section-heading">
+  <div class="col-12 col-lg-4 section-heading">
 
     <h1>Proyectos</h1>
     
 
   </div>
-  <div class="col-xs-12 col-md-8">
+  <div class="col-12 col-lg-8">
 
 
 
@@ -3363,7 +3486,7 @@
       <h4><a href="https://acmus-mir.github.io/" target="_blank" rel="noopener">Acmus</a></h4>
       
       <div class="article-style">
-        <p>El proyecto ACMus explora el uso de técnicas de aprendizaje automático para musicología computacional, gestión de archivos de música …</p>
+        <p>El proyecto ACMus explora el uso de técnicas de aprendizaje automático para musicología computacional, gestión de archivos de música digital y recuperación de información musical. Dos elementos principales del proyecto son: 1. Énfasis en técnicas de aprendizaje automático semi-supervisadas y no supervisadas que dependen mínimamente de la disponibilidad de datos anotados para una tarea específica. 2. La música tradicional colombiana como foco principal de nuestro estudio.</p>
       </div>
       
     </div>
@@ -3409,7 +3532,7 @@
       <h4><a href="https://github.com/JoseRZapata/MultiFeatureBeatTracking" target="_blank" rel="noopener">Multifeature Beat tracker</a></h4>
       
       <div class="article-style">
-        <p>Implementacion en Matlab del Multi Feature Beat Tracker (Information Gain and Regularity),el beat tracker de essentia, mas detalles en …</p>
+        <p>Implementacion en Matlab del Multi Feature Beat Tracker (Information Gain and Regularity),el beat tracker de essentia, mas detalles en <a href="https://joserzapata.github.io/publication/multifeaturebeattracker/">Multi-Feature Beat Tracking</a></p>
       </div>
       
     </div>
@@ -3455,7 +3578,7 @@
       <h4><a href="http://essentia.upf.edu/" target="_blank" rel="noopener">Essentia</a></h4>
       
       <div class="article-style">
-        <p>Essentia es una libreria en C++ de código abierto para análisis de audio y recuperación de información de música basada en audio. …</p>
+        <p>Essentia es una libreria en C++ de código abierto para análisis de audio y recuperación de información de música basada en audio. Contiene una amplia colección de algoritmos reutilizables que implementan la funcionalidad de entrada / salida de audio, bloques de procesamiento de señal digital estándar, caracterización estadística de datos y un amplio conjunto de descriptores de música espectrales, temporales, tonales y de alto nivel. Más detalles en este <a href="https://joserzapata.github.io/publication/essentia-ismir/">articulo</a></p>
       </div>
       
     </div>
@@ -3501,7 +3624,7 @@
       <h4><a href="http://smc.inesctec.pt/research/data-2/" target="_blank" rel="noopener">SMC Beat tracking Dataset</a></h4>
       
       <div class="article-style">
-        <p>Este dataset de Beat tracking contiene 217 fragmentos de aproximadamente 40 seg cada uno, de los cuales 19 son <em>fáciles</em> y los 198 …</p>
+        <p>Este dataset de Beat tracking contiene 217 fragmentos de aproximadamente 40 seg cada uno, de los cuales 19 son <em>fáciles</em> y los 198 restantes son <em>dificiles</em>. Este conjunto de datos ha sido diseñado para técnicas radicalmente nuevas que pueden lidiar con desafiantes situaciones de beat tracking como: acompañamiento suave, tiempo expresivo, cambios de compás, tempo lento, calidad de sonido pobre, etc. Más detalles en <a href="https://joserzapata.github.io/publication/selectivesampling/">Selective Sampling for Beat Tracking Evaluation</a></p>
       </div>
       
     </div>
@@ -3564,7 +3687,8 @@
       
     </div>
     <div class="col-12 col-lg-8">
-      <p>Cursos pasados y <span style="color:#328cc1">presentes</span> dictados en postgrado y pregrado en la <a href="http://www.upb.edu.co/">Universidad Pontificia Bolivariana (UPB)</a></p>
+      <p>Cursos pasados y <span style="color:#328cc1">presentes</span> dictados en postgrado y pregrado en la 
+<a href="http://www.upb.edu.co/" target="_blank" rel="noopener">Universidad Pontificia Bolivariana (UPB)</a></p>
 <table>
 <thead>
 <tr>
@@ -3577,7 +3701,8 @@
 <tr>
 <td><span style="color:#328cc1">Python y R para Ciencia de Datos</span></td>
 <td>|</td>
-<td><a href="https://github.com/JoseRZapata/SyS">Sistemas y Señales</a></td>
+<td>
+<a href="https://github.com/JoseRZapata/SyS" target="_blank" rel="noopener">Sistemas y Señales</a></td>
 </tr>
 <tr>
 <td><span style="color:#328cc1">Mineria de Audio e Imagenes</span></td>
@@ -3687,6 +3812,7 @@
 
 
 
+
   
 
 
@@ -3734,9 +3860,11 @@
     </h3>
 
     
-    <div class="article-style">
-      Python para demostrar y visualizar la naturaleza de las ondas del sonido, la relación entre diferentes notas y como se unen para crear …
-    </div>
+    <a href="/es/talk/pycon2020/" class="summary-link">
+      <div class="article-style">
+        Python para demostrar y visualizar la naturaleza de las ondas del sonido, la relación entre diferentes notas y como se unen para crear la Armonía Musical desde la Física y la Matemática
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -3757,11 +3885,8 @@
       <div>
         
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>
       </div>
       
     </div>
@@ -3830,7 +3955,7 @@
     
     
     <a href="/es/talk/pycon2020/" >
-      <img src="/es/talk/pycon2020/featured_hufce3cbb6258e0cb8fa80cfa35d21b956_4198_150x0_resize_lanczos_2.png" alt="">
+      <img src="/es/talk/pycon2020/featured_hufce3cbb6258e0cb8fa80cfa35d21b956_4198_150x0_resize_lanczos_2.png" alt="Comprensión de la música con Python, una mirada desde la Física y la Matemática">
     </a>
     
   </div>
@@ -3866,9 +3991,11 @@
     </h3>
 
     
-    <div class="article-style">
-      Mediante la extraccion automatica del contenido de las señales de audio y Machine learning se tienen aplicaciones de predicción, …
-    </div>
+    <a href="/es/talk/meetup_2018/" class="summary-link">
+      <div class="article-style">
+        Mediante la extraccion automatica del contenido de las señales de audio y Machine learning se tienen aplicaciones de predicción, clasificación y Agrupamiento, como: Deteccion de emociones en la voz (Speech Emotion), Reconocieminto de Voz (Speech-to-Text), Deteccion y segmentacion de personas hablando(Speaker Diarization), Music Information Retrieval (Extraccion Automatica de Informacion Musical), entre otros.
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -3886,11 +4013,8 @@
       <div>
         
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>
       </div>
       
     </div>
@@ -3935,7 +4059,7 @@
     
     
     <a href="/es/talk/meetup_2018/" >
-      <img src="/es/talk/meetup_2018/featured_hu4036b08ff19a6586ed1835635e8ad629_334526_150x0_resize_q90_lanczos.jpeg" alt="">
+      <img src="/es/talk/meetup_2018/featured_hu4036b08ff19a6586ed1835635e8ad629_334526_150x0_resize_q90_lanczos.jpeg" alt="Aplicaciones de Audio con Machine Learning">
     </a>
     
   </div>
@@ -3971,9 +4095,11 @@
     </h3>
 
     
-    <div class="article-style">
-      Uso de Python para Analisis de señales de Audio y Aplicaciones de Music Information Retrieval (Extraccion Automatica de informacion …
-    </div>
+    <a href="/es/talk/pycon2018/" class="summary-link">
+      <div class="article-style">
+        Uso de Python para Analisis de señales de Audio y Aplicaciones de Music Information Retrieval (Extraccion Automatica de informacion Musical).
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -3994,11 +4120,8 @@
       <div>
         
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>
       </div>
       
     </div>
@@ -4067,7 +4190,7 @@
     
     
     <a href="/es/talk/pycon2018/" >
-      <img src="/es/talk/pycon2018/featured_hubd232449ef8cd3f4387dfc32804da868_79554_150x0_resize_lanczos_2.png" alt="">
+      <img src="/es/talk/pycon2018/featured_hubd232449ef8cd3f4387dfc32804da868_79554_150x0_resize_lanczos_2.png" alt="Analisis de Señales de Audio con Python">
     </a>
     
   </div>
@@ -4103,9 +4226,11 @@
     </h3>
 
     
-    <div class="article-style">
-      El Music Information Retrieval (MIR), que tiene como objetivo extraer, analizar y procesar automaticamente la informacion musical en …
-    </div>
+    <a href="/es/talk/aes2016/" class="summary-link">
+      <div class="article-style">
+        El Music Information Retrieval (MIR), que tiene como objetivo extraer, analizar y procesar automaticamente la informacion musical en señales de audio para diferentes aplicaciones musicales e informaticas. Las principales tareas en MIR, son Beat tracking, deteccion de melodia, deteccion de acordes, fingerprinting, recomendacion de música, procesamiento de señales de audio, entre otras aplicaciones
+      </div>
+    </a>
     
 
     <div class="stream-meta article-metadata">
@@ -4126,11 +4251,8 @@
       <div>
         
 
-
-
   
-  <span><a href="/es/authors/admin/">Jose R. Zapata</a></span>
-
+  <span ><a href="/es/authors/admin/">admin</a></span>
       </div>
       
     </div>
@@ -4175,7 +4297,7 @@
     
     
     <a href="/es/talk/aes2016/" >
-      <img src="/es/talk/aes2016/featured_hu0aea7a5d868243c2d575f90da5eab218_96290_150x0_resize_q90_lanczos.jpg" alt="">
+      <img src="/es/talk/aes2016/featured_hu0aea7a5d868243c2d575f90da5eab218_96290_150x0_resize_q90_lanczos.jpg" alt="Sistemas Automaticos para Extraccion de Información Musical (Generalidades y Aplicaciones)">
     </a>
     
   </div>
@@ -4260,18 +4382,19 @@
       
       
       
+      
 
       <div class="tag-cloud">
         
           
           
           
-          <a href="/es/tags/acm/" style="font-size:1.5rem">ACM</a>
+          <a href="/es/tags/acm/" style="font-size:0.9047664198478523rem">ACM</a>
         
           
           
           
-          <a href="/es/tags/aes/" style="font-size:1.5rem">AES</a>
+          <a href="/es/tags/aes/" style="font-size:0.9047664198478523rem">AES</a>
         
           
           
@@ -4286,82 +4409,82 @@
           
           
           
-          <a href="/es/tags/beat-tracking/" style="font-size:3.7458839376460835rem">Beat-tracking</a>
+          <a href="/es/tags/beat-tracking/" style="font-size:1.4796184364798348rem">Beat-tracking</a>
         
           
           
           
-          <a href="/es/tags/comparative-evaluation/" style="font-size:1.5rem">Comparative-evaluation</a>
+          <a href="/es/tags/comparative-evaluation/" style="font-size:0.9047664198478523rem">Comparative-evaluation</a>
         
           
           
           
-          <a href="/es/tags/confidence-measure/" style="font-size:1.5rem">Confidence-measure</a>
+          <a href="/es/tags/confidence-measure/" style="font-size:0.9047664198478523rem">Confidence-measure</a>
         
           
           
           
-          <a href="/es/tags/data-science/" style="font-size:2.3rem">Data-Science</a>
+          <a href="/es/tags/data-science/" style="font-size:1.1095328396957047rem">Data-Science</a>
         
           
           
           
-          <a href="/es/tags/essentia/" style="font-size:2.55754247590989rem">Essentia</a>
+          <a href="/es/tags/essentia/" style="font-size:1.1754529031342296rem">Essentia</a>
         
           
           
           
-          <a href="/es/tags/icassp/" style="font-size:1.5rem">ICASSP</a>
+          <a href="/es/tags/icassp/" style="font-size:0.9047664198478523rem">ICASSP</a>
         
           
           
           
-          <a href="/es/tags/ieee/" style="font-size:2.3rem">IEEE</a>
+          <a href="/es/tags/ieee/" style="font-size:1.1095328396957047rem">IEEE</a>
         
           
           
           
-          <a href="/es/tags/ismir/" style="font-size:1.5rem">ISMIR</a>
+          <a href="/es/tags/ismir/" style="font-size:0.9047664198478523rem">ISMIR</a>
         
           
           
           
-          <a href="/es/tags/jupyter-notebook/" style="font-size:1.967970000576925rem">Jupyter-notebook</a>
+          <a href="/es/tags/jupyter-notebook/" style="font-size:1.0245470968657702rem">Jupyter-notebook</a>
         
           
           
           
-          <a href="/es/tags/mirex/" style="font-size:1.5rem">Mirex</a>
+          <a href="/es/tags/mirex/" style="font-size:0.9047664198478523rem">Mirex</a>
         
           
           
           
-          <a href="/es/tags/music-information-retrieval/" style="font-size:2.9458839376460837rem">Music-information-retrieval</a>
+          <a href="/es/tags/music-information-retrieval/" style="font-size:1.274852016631982rem">Music-information-retrieval</a>
         
           
           
           
-          <a href="/es/tags/open-source/" style="font-size:2.55754247590989rem">Open-source</a>
+          <a href="/es/tags/open-source/" style="font-size:1.1754529031342296rem">Open-source</a>
         
           
           
           
-          <a href="/es/tags/python/" style="font-size:3.467545294909838rem">Python</a>
+          <a href="/es/tags/python/" style="font-size:1.4083754272568205rem">Python</a>
         
           
           
           
-          <a href="/es/tags/selective-sampling/" style="font-size:1.5rem">Selective-sampling</a>
+          <a href="/es/tags/selective-sampling/" style="font-size:0.9047664198478523rem">Selective-sampling</a>
         
           
           
           
-          <a href="/es/tags/source-separation/" style="font-size:1.5rem">Source-separation</a>
+          <a href="/es/tags/source-separation/" style="font-size:0.9047664198478523rem">Source-separation</a>
         
           
           
           
-          <a href="/es/tags/tempo/" style="font-size:1.967970000576925rem">Tempo</a>
+          <a href="/es/tags/tempo/" style="font-size:1.0245470968657702rem">Tempo</a>
         
       </div>
     
@@ -4378,39 +4501,39 @@
 
     
     
-
     
-    
-    
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
 
       
 
       
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/python.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/shell.min.js"></script>
         
       
 
-      
-      
     
 
     
     
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
     
 
     
     
-    <script>hljs.initHighlightingOnLoad();</script>
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
     
 
     
@@ -4426,7 +4549,8 @@
         'post': "Posts",
         'project': "Proyectos",
         'publication' : "Publicaciones",
-        'talk' : "Charlas"
+        'talk' : "Charlas",
+        'slides' : "Diapositivas"
         };
     </script>
     
@@ -4460,6 +4584,21 @@
 
     
     
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    
+
+    
+    
 
     
     
@@ -4475,7 +4614,7 @@
     
     
     
-    <script src="/js/academic.min.d6bd04fdad2ad213aa8111c5a3b72fc5.js"></script>
+    <script src="/js/academic.min.66c553246b0f279a03be6e5597f72b52.js"></script>
 
     
 
@@ -4491,8 +4630,18 @@
   
 
   <p class="powered-by">
-    © 2020 &middot; 
+    © 2020
+  </p>
 
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
     Powered by the
     <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
     <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
