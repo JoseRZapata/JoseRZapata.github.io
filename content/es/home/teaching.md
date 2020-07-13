@@ -54,14 +54,15 @@ subtitle = ""
   padding = ["20px", "0", "20px", "0"]
 
 +++
+
 Cursos pasados y <span style="color:#328cc1">presentes</span> dictados en postgrado y pregrado en la [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/)
 
 | *PostGrado* | &#124; | *Pregrado* |
 | -----------------------| --- | ---------------------- | 
-| <span style="color:#328cc1">Python y R para Ciencia de Datos</span>   | &#124; | [Sistemas y Señales](https://github.com/JoseRZapata/SyS)|
-| <span style="color:#328cc1">Mineria de Audio e Imagenes</span> |&#124; |<span style="color:#328cc1"> Minieria de Datos</span>   |
-| Principios de Procesamiento de Imagenes |&#124; | <span style="color:#328cc1">Principios Audio </span>     |
-| Procesamiento de Audio   | &#124;  | Aplicaciones de Audio |
-| Procesamiento de Señales |&#124; | Teoria de Comunicaciones|
-| Principios de Telecomunicaciones|&#124; | Antenas y Lineas de transmision    |
-| Matlab     |&#124; | Lab. Teoria de Comunicaciones |
+| <span style="color:#328cc1">Python y R para Ciencia de Datos</span>   | &#124; | <span style="color:#328cc1">Machine Learning</span>|
+| <span style="color:#328cc1">Mineria de Audio e Imagenes</span> |&#124; |[Sistemas y Señales](https://github.com/JoseRZapata/SyS)|
+| Principios de Procesamiento de Imagenes |&#124; | <span style="color:#328cc1"> Minieria de Datos</span>|
+| Procesamiento de Audio   | &#124;  | <span style="color:#328cc1">Principios Audio </span>|
+| Procesamiento de Señales |&#124; | Aplicaciones de Audio|
+| Principios de Telecomunicaciones|&#124; | Teoria de Comunicaciones y Lab |
+| Matlab     |&#124; | Antenas y Lineas de transmision |
