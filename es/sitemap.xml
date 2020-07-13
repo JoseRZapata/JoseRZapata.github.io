@@ -3,21 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://joserzapata.github.io/es/authors/joserzapata/</loc>
-    <lastmod>2020-05-29T17:03:57-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/joserzapata/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/joserzapata/"
-                />
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/es/authors/</loc>
     <lastmod>2020-05-29T17:03:57-05:00</lastmod>
     <xhtml:link
@@ -74,6 +59,21 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/categories/data-science/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/authors/joserzapata/</loc>
+    <lastmod>2020-05-29T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/joserzapata/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/joserzapata/"
                 />
   </url>
   
