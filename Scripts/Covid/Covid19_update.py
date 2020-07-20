@@ -5,18 +5,18 @@
 
 por: Jose R. Zapata - https://joserzapata.github.io/
 
-https://joserzapata.github.io/post/covid19-visualizacion/ 
+https://joserzapata.github.io/post/covid19-visualizacion/
 
 Ejemplo:
 python Covid19_Update.py [chart_studio username] [chart_studio password]
- 
+
 He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas
 actualizadas cada dia, y ademas practicar el uso de [plotly](https://plotly.com/) para visualizacion interactiva.
 
 Las Graficas se actualizaran diariamente con los nuevos datos!
 
 Informacion extraida de 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE
- 
+
 https://github.com/CSSEGISandData/COVID-19
 
 Actualizaciones:
@@ -46,17 +46,17 @@ recovered = pd.read_csv('https://github.com/CSSEGISandData/COVID-19/raw/master/c
 
 # %% [markdown]
 # ## Datos CSSEGISandData/COVID-19
-# 
+#
 # Descripcion de los datos
-# 
+#
 # **Province/State:** China - province name; US/Canada/Australia/ - city name, state/province name; Others - name of the event (e.g., "Diamond Princess" cruise ship); other countries - blank.
-# 
+#
 # **Country/Region:** country/region name conforming to WHO (will be updated).
-# 
+#
 # **Last Update:** MM/DD/YYYY HH:mm (24 hour format, in UTC).
-# 
+#
 # **Confirmed: **the number of confirmed cases. For Hubei Province: from Feb 13 (GMT +8), we report both clinically diagnosed and lab-confirmed cases. For lab-confirmed cases only (Before Feb 17), please refer to who_covid_19_situation_reports. For Italy, diagnosis standard might be changed since Feb 27 to "slow the growth of new case numbers."
-# 
+#
 # **Deaths:** the number of deaths.
 # **Recovered:** the number of recovered cases.
 
@@ -79,11 +79,11 @@ recovered = pd.read_csv('https://github.com/CSSEGISandData/COVID-19/raw/master/c
 
 # %% [markdown]
 # ### Eliminar Ubicacion
-# 
+#
 # Se va realizar un analisis general de los datos y No se van a tomar los datos geograficos de *latitud*, *longitud* y los datos de *Province/State* estan incompletos.
-# 
+#
 # Solo se realizara un analisis por pais entonces se eliminaran las columnas mencionadas anteriormente
-# 
+#
 
 # %%
 confirmed = confirmed.drop(columns=['Lat', 'Long','Province/State'])
@@ -122,7 +122,7 @@ recovered_group = recovered_group.T
 recovered_group.index.name = 'date'
 recovered_group =  recovered_group.reset_index()
 
-# %% 
+# %%
 active_group = active.groupby(by='Country/Region')
 active_group = active_group.aggregate(np.sum)
 active_group = active_group.T
@@ -157,7 +157,7 @@ world['Activos'] = active_group.iloc[:,1:].sum(1)
 # # Visualizacion con Plotly
 # %% [markdown]
 # ## Valores Mundiales de Confirmados y Muertos
-# 
+#
 
 # %%
 temp = pd.DataFrame(world.iloc[-1,:]).T
@@ -188,9 +188,9 @@ max_Fecha = confirmed_melt['Fecha'].max()
 conf_max = confirmed_melt[confirmed_melt['Fecha']== max_Fecha].copy()
 conf_max.dropna(inplace=True) #eliminar filas con valores faltantes
 
-fig = px.scatter_geo(conf_max, locations="Country/Region", locationmode='country names', 
-                     color="Confirmados", size='size', hover_name="Country/Region", 
-                     range_color= [0, max(confirmed_melt['Confirmados'])+2], 
+fig = px.scatter_geo(conf_max, locations="Country/Region", locationmode='country names',
+                     color="Confirmados", size='size', hover_name="Country/Region",
+                     range_color= [0, max(confirmed_melt['Confirmados'])+2],
                      projection="natural earth", width=900,
                      title='Mapa de Confirmados COVID 19 por Pais')
 fig.add_annotation(x=0.5, y=0,text='https://joserzapata.github.io/', showarrow=False)
@@ -214,7 +214,7 @@ full_melt_max = pd.merge(conf_max[['Country/Region','Confirmados']],
                          death_max[['Country/Region','Muertos']],
                          on='Country/Region', how='left')
 
-fig = px.scatter(full_melt_max.sort_values('Muertos', ascending=False).iloc[:10, :], 
+fig = px.scatter(full_melt_max.sort_values('Muertos', ascending=False).iloc[:10, :],
                  x='Confirmados', y='Muertos', color='Country/Region', size='Confirmados', height=500,width=900,
                  text='Country/Region', log_x=True, log_y=True, title= f'Muertos vs Confirmados - {max_Fecha} - (10 Paises)')
 fig.update_traces(textposition='top center')
@@ -225,7 +225,7 @@ if api_key: py.plot(fig, filename = 'scatter_muertos_confirmados', auto_open=Fal
 
 # %% [markdown]
 # ## Progresion Mundial en el Tiempo del numero de casos
-# 
+#
 
 # %%
 world_melt = world.melt(id_vars='Fecha', value_vars= list(world.columns)[1:], var_name=None)
@@ -251,12 +251,12 @@ fig.add_indicator(title={'text':'Activos', 'font':{'color':'navy'}},
 fig.add_indicator(title={'text':'Recuperados', 'font':{'color':'green'}},
                   value = world['Recuperados'].iloc[-1],
                   mode = "number+delta", delta = {"reference": world['Recuperados'
-                  ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.50], 'y': [0.6, .85]}) 
+                  ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.50], 'y': [0.6, .85]})
 #Indicador numero total de muertos
-fig.add_indicator(title={'text':'Muertos', 'font':{'color':'coral'}}, 
+fig.add_indicator(title={'text':'Muertos', 'font':{'color':'coral'}},
                   value = world['Muertos'].iloc[-1],
                   mode = "number+delta", delta = {"reference": world['Muertos'
-                  ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.5], 'y': [0.15, .4]})  
+                  ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.5], 'y': [0.15, .4]})
 fig.add_annotation(x=80, y=world_melt['value'].max(),
                    text='https://joserzapata.github.io/', showarrow=False)
 fig.layout.update(showlegend = False,
@@ -268,13 +268,18 @@ if api_key: py.plot(fig, filename = 'total_casos_serie', auto_open=False)
 
 # %% [markdown]
 # ## Total Casos Confirmados de COVID 19 por Pais
-# 
+#
 
 # %%
 #df1 = confirmed_group.drop(columns=["China"])
 df1 = confirmed_group
 # Cambiar el nombre de la columna
-df1.rename(columns = {'date':'Fecha'}, inplace = True) 
+df1.rename(columns = {'date':'Fecha'}, inplace = True)
+if api_key:
+    # se toman la serie de tiempo cada 2 dias, por que las graficas
+    # grandes no se pueden subir a chart-studio con subscripcion gratuita
+    df1 = df1.iloc[::-2].iloc[::-1]
+
 df_melt = df1.melt(id_vars='Fecha', value_vars= list(df1.columns)[1:], var_name=None)
 fig = px.line(df_melt, x='Fecha' , y='value', color='Country/Region',
               color_discrete_sequence=px.colors.qualitative.G10, width=900,
@@ -292,7 +297,7 @@ fig.layout.update(showlegend=False,
                   yaxis =  {"title": {"text": "Numero de Personas"}}, # Cambiar texto eje y
                   )
 fig.add_annotation(x=60, y=df_melt['value'].max(),
-                   text='https://joserzapata.github.io/', showarrow=False)                   
+                   text='https://joserzapata.github.io/', showarrow=False)
 # grabar grafica en chart-studio si se proporciona el api-key
 if api_key: py.plot(fig, filename = 'total_casos_no_china', auto_open=False)
 #fig.show()
@@ -303,7 +308,11 @@ if api_key: py.plot(fig, filename = 'total_casos_no_china', auto_open=False)
 # %%
 df2 = confirmed_group.drop(columns=mas_infectados)
 # Cambiar el nombre de la columna
-df2.rename(columns = {'date':'Fecha'}, inplace = True) 
+df2.rename(columns = {'date':'Fecha'}, inplace = True)
+if api_key:
+    # se toman la serie de tiempo cada 2 dias, por que las graficas
+    # grandes no se pueden subir a chart-studio con subscripcion gratuita
+    df2 = df2.iloc[::-2].iloc[::-1]
 
 df_melt2 = df2.melt(id_vars='Fecha', value_vars= list(df2.columns)[1:], var_name=None)
 fig = px.line(df_melt2, x='Fecha' , y='value', color='Country/Region',
@@ -330,9 +339,9 @@ if api_key: py.plot(fig, filename = 'total_casos_no_8_infectados', auto_open=Fal
 
 # %%
 if api_key:
-    # se toman la serie de tiempo cada 3 dias, por que las graficas
+    # se toman la serie de tiempo cada 4 dias, por que las graficas
     # grandes no se pueden subir a chart-studio con subscripcion gratuita
-    confirmed_melt = confirmed_group.iloc[::-3].iloc[::-1].melt(id_vars="Fecha")
+    confirmed_melt = confirmed_group.iloc[::-4].iloc[::-1].melt(id_vars="Fecha")
     confirmed_melt.rename(columns = {'value':'Confirmados', 'date':'Fecha'}, inplace = True)
 
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
@@ -341,9 +350,9 @@ confirmed_melt['size'] = confirmed_melt['Confirmados'].pow(0.3)
 confirmed_melt.dropna(inplace=True) #eliminar filas con valores faltantes
 
 
-fig = px.scatter_geo(confirmed_melt, locations="Country/Region", locationmode='country names', 
-                     color="Confirmados", size='size', hover_name="Country/Region", 
-                     range_color= [0, max(confirmed_melt['Confirmados'])+2], 
+fig = px.scatter_geo(confirmed_melt, locations="Country/Region", locationmode='country names',
+                     color="Confirmados", size='size', hover_name="Country/Region",
+                     range_color= [0, max(confirmed_melt['Confirmados'])+2],
                      projection="natural earth", animation_frame="Fecha", width=900,
                      title='Contagiados COVID 19 en el Tiempo')
 fig.update(layout_coloraxis_showscale=False)
@@ -381,9 +390,9 @@ fig.add_indicator(title={'text':'Activos', 'font':{'color':'navy'}},
 fig.add_indicator(title={'text':'Recuperados', 'font':{'color':'green'}},
                   value = colombia['Recuperados'].iloc[-1],
                   mode = "number+delta", delta = {"reference": colombia['Recuperados'
-                  ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.50], 'y': [0.6, .85]}) 
+                  ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.50], 'y': [0.6, .85]})
 #Indicador numero total de muertos
-fig.add_indicator(title={'text':'Muertos', 'font':{'color':'coral'}}, 
+fig.add_indicator(title={'text':'Muertos', 'font':{'color':'coral'}},
                   value = colombia['Muertos'].iloc[-1],
                   mode = "number+delta", delta = {"reference": colombia['Muertos'
                   ].iloc[-2], 'relative': True },domain = {'x': [0.25, 0.5], 'y': [0.15, .4]})
@@ -400,16 +409,16 @@ if api_key: py.plot(fig, filename = 'Colombia_general', auto_open=False)
 # # Codigo Fuente Jupyter notebook
 # ## Ejecutar en Google Colaboratory
 # [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb)
-# 
+#
 # ## Ejecutar en MyBinder
 # [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/JoseRZapata/JoseRZapata.github.io/master?filepath=Jupyter_Notebook/Covid19_Visualizacion_es.ipynb)
-# 
+#
 # ## Leer en nbviewer
 # [![nbviewer](https://img.shields.io/badge/render-nbviewer-orange.svg)](https://nbviewer.jupyter.org/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb)
 # %% [markdown]
 # # Refencias
 # Fuentes de datos, visualizaciones y analisis de datos.
-# 
+#
 # - https://github.com/CSSEGISandData/COVID-19
 # - https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons
 # - https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/
