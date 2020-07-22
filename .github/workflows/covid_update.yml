@@ -6,6 +6,7 @@ name: Python covid update
 on:
   schedule:
     - cron: "0 5 * * *"
+
 jobs:
   build:
 
