@@ -1326,15 +1326,19 @@ world[<span style="color:#e6db74">&#39;Activos&#39;</span>] <span style="color:#
 
 <h2 id="evolucion-animada-de-casos-activos-por-pais">Evolucion Animada de Casos Activos por Pais</h2>
 
-<p>La gráfica animada de la evolución temporal de los casos activos por país, la he creado con la libreria <a href="https://github.com/JackMcKew/pandas_alive" target="_blank">Pandas alive</a> y <a href="https://github.com/dexplo/bar_chart_race" target="_blank">Bar Chart Race</a>.
-La barra horizontal gris representa el valor promedio de casos activos a nivel mundial.
-<img src="https://github.com/JoseRZapata/JoseRZapata.github.io/raw/master/Scripts/Covid/evolucion_casos_activos.gif" alt="Evolucion Temporal de casos activos" /></p>
+<p>La gráfica animada de la evolución temporal de los casos activos por país, la he creado con la libreria <a href="https://github.com/JackMcKew/pandas_alive" target="_blank">Pandas alive</a> y <a href="https://github.com/dexplo/bar_chart_race" target="_blank">Bar Chart Race</a>.</p>
+
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/qy-Nlak-riY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas_alive
 active_evol <span style="color:#f92672">=</span> active_group<span style="color:#f92672">.</span>set_index(<span style="color:#e6db74">&#39;date&#39;</span>)
 active_evol<span style="color:#f92672">.</span>index <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(active_evol<span style="color:#f92672">.</span>index)
-active_evol<span style="color:#f92672">.</span>plot_animated(filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;evolucion_casos_activos.gif&#39;</span>, n_bars<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,n_visible<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,
+active_evol<span style="color:#f92672">.</span>plot_animated(filename<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;evolucion_casos_activos.mp4&#39;</span>, n_bars<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,n_visible<span style="color:#f92672">=</span><span style="color:#ae81ff">8</span>,
                           title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Evolución en el tiempo de Casos Activos COVID-19 por pais </span><span style="color:#ae81ff">\n</span><span style="color:#e6db74"> https://joserzapata.github.io/&#39;</span>,
-                          perpendicular_bar_func<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mean&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">100</span>,
+                          perpendicular_bar_func<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;mean&#39;</span>, dpi<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>,
                           period_label<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;x&#39;</span>: <span style="color:#f92672">.</span><span style="color:#ae81ff">99</span>, <span style="color:#e6db74">&#39;y&#39;</span>: <span style="color:#f92672">.</span><span style="color:#ae81ff">25</span>, <span style="color:#e6db74">&#39;ha&#39;</span>: <span style="color:#e6db74">&#39;right&#39;</span>, <span style="color:#e6db74">&#39;va&#39;</span>: <span style="color:#e6db74">&#39;center&#39;</span>},
                           period_fmt<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;%B </span><span style="color:#e6db74">%d</span><span style="color:#e6db74">, %Y&#39;</span>,
                           period_summary_func<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> v: {<span style="color:#e6db74">&#39;x&#39;</span>: <span style="color:#f92672">.</span><span style="color:#ae81ff">99</span>, <span style="color:#e6db74">&#39;y&#39;</span>: <span style="color:#f92672">.</span><span style="color:#ae81ff">18</span>,
