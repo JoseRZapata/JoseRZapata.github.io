@@ -571,16 +571,16 @@ world['Activos'] = active_group.iloc[:,1:].sum(1)
 # Covid19 en el Mundo
 ## Evolucion Animada de Casos Activos por Pais
 La gráfica animada de la evolución temporal de los casos activos por país, la he creado con la libreria [Pandas alive](https://github.com/JackMcKew/pandas_alive) y [Bar Chart Race](https://github.com/dexplo/bar_chart_race).
-La barra horizontal gris representa el valor promedio de casos activos a nivel mundial.
-![Evolucion Temporal de casos activos](https://github.com/JoseRZapata/JoseRZapata.github.io/raw/master/Scripts/Covid/evolucion_casos_activos.gif)
+
+{{< youtube qy-Nlak-riY>}}
 
 ```python
 import pandas_alive
 active_evol = active_group.set_index('date')
 active_evol.index = pd.to_datetime(active_evol.index)
-active_evol.plot_animated(filename='evolucion_casos_activos.gif', n_bars=8,n_visible=8,
+active_evol.plot_animated(filename='evolucion_casos_activos.mp4', n_bars=8,n_visible=8,
                           title='Evolución en el tiempo de Casos Activos COVID-19 por pais \n https://joserzapata.github.io/',
-                          perpendicular_bar_func='mean', dpi=100,
+                          perpendicular_bar_func='mean', dpi=300,
                           period_label={'x': .99, 'y': .25, 'ha': 'right', 'va': 'center'},
                           period_fmt='%B %d, %Y',
                           period_summary_func=lambda v: {'x': .99, 'y': .18,
