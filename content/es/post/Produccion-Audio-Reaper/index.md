@@ -44,32 +44,32 @@ Introduccion a la configuración Manejo de REAPER para produccion de audio.
 
 {{< youtube Qoc1ZNvPH7Y >}}
 
-[Audios para Insertar](https://kutt.it/lx6GqC)
+[Audios para Insertar](https://bit.ly/3fVWWQr)
 
-[Imagen para Insertar](https://kutt.it/GEevAg)
+[Imagen para Insertar](https://bit.ly/3kLlpLV)
 
-[Video para Insertar](https://kutt.it/pqSVvL)
+[Video para Insertar](https://bit.ly/3aomHI9)
 
 # 2. Manejo de canales y envios con Reaper
 
 {{< youtube 2_uozsk_KwE >}}
 
-[Ejemplo sesión completa de Reaper](https://kutt.it/ei9tob)
+[Ejemplo sesión completa de Reaper](https://bit.ly/3aqV01b)
 
 # 3 Automatizaciones y Envolventes en Reaper
 Automatización de Volumen, Panning y Efectos mediante envolventes en Reaper
 
 {{< youtube Vd3xjzxmPQY >}}
 
-[Audios Practica de Automatización](https://kutt.it/7PNPgy)
+[Audios Practica de Automatización](https://bit.ly/2CrdLVG)
 
-[Proyecto Reaper de Automatización finalizado](https://kutt.it/tNSK0a)
+[Proyecto Reaper de Automatización finalizado](https://bit.ly/31T953B)
 
 # 4. Mezcla y Masterizacion en Reaper
 Principios Basicos de mezcla y masterización de audio en Reaper
 
 {{< youtube oNeNpOY3mvU >}}
 
-[Audios practica de mezcla y masterización](https://kutt.it/YuYpK4)
+[Audios practica de mezcla y masterización](https://bit.ly/2E8K1NJ)
 
-[Sesión final de reaper  con mezcla y masterización](https://kutt.it/fGVlfi)
+[Sesión final de reaper  con mezcla y masterización](https://bit.ly/2PVnKpk)
