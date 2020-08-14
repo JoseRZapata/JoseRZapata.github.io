@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Acmus"
-summary: "The ACMus project explores the use of machine learning techniques for computational musicology, digital music archive managment, and music information retrieval.Two main elements are the core of our project: 1. Emphasis on semi-supervised and unsupervised machine learning techniques that minimally rely on the availability of annotated data for a specific task. 2. Traditional Colombian music as the main focus of our study."
+summary: "Research Project to explore the use of machine learning techniques for computational musicology, digital music archive managment, and music information retrieval.Two main elements are the core of our project: 1. Emphasis on semi-supervised and unsupervised machine learning techniques that minimally rely on the availability of annotated data for a specific task. 2. Traditional Colombian music as the main focus of our study."
 authors: []
 tags: ["Music-information-retrieval","Musicology","Beat-tracking"]
 categories: []

@@ -1,15 +1,18 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Acmus"
-summary: "Proyecto de investigacion para explorar el uso de técnicas de aprendizaje automático para musicología computacional, gestión de archivos de música digital y recuperación de información musical. Dos elementos principales del proyecto son: 1. Énfasis en técnicas de aprendizaje automático semi-supervisadas y no supervisadas que dependen mínimamente de la disponibilidad de datos anotados para una tarea específica. 2. La música tradicional colombiana como foco principal de nuestro estudio."
+title: "Social Media Behaviour"
+summary: "Research Project that combines exclusive Facebook data (Condor Dataset, Crowdtangle, Ad’s) and public data to analyze the Social Media behavior to determine if there is coordinated non-authentic behavior. 
+
+This project in founded by the Social Media and Democracy Research Grants from the Social Science Research Council and access to Facebook data via Social Science One.
+"
 authors: ["joserzapata"]
-tags: ["Music-information-retrieval","Musicology","Beat-tracking"]
+tags: ["Data-Science","Python"]
 categories: []
-date: 2019-07-15T15:01:09-05:00
+date: 2020-02-14T17:09:59-05:00
 
 # Optional external URL for project (replaces project detail page).
-external_link: "https://acmus-mir.github.io/"
+external_link: "https://upb-ss1.github.io/"
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
