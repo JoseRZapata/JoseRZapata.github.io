@@ -228,6 +228,36 @@
   </url>
   
   <url>
+    <loc>https://joserzapata.github.io/es/project/</loc>
+    <lastmod>2020-02-14T17:09:59-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/project/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/project/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/es/project/social-media-behaviour/</loc>
+    <lastmod>2020-02-14T17:09:59-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/project/social-media-behaviour/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/project/social-media-behaviour/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joserzapata.github.io/es/talk/pycon2020/</loc>
     <lastmod>2020-02-07T12:35:00-05:00</lastmod>
     <xhtml:link
@@ -344,21 +374,6 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/tags/musicology/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/es/project/</loc>
-    <lastmod>2019-07-15T15:01:09-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/project/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/project/"
                 />
   </url>
   

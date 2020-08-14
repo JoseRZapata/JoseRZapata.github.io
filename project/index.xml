@@ -5,12 +5,20 @@
     <link>https://joserzapata.github.io/project/</link>
       <atom:link href="https://joserzapata.github.io/project/index.xml" rel="self" type="application/rss+xml" />
     <description>Projects</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Mon, 15 Jul 2019 15:01:09 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Fri, 14 Feb 2020 17:09:59 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Projects</title>
       <link>https://joserzapata.github.io/project/</link>
     </image>
+    
+    <item>
+      <title>Social Media Behaviour</title>
+      <link>https://joserzapata.github.io/project/social-media-behaviour/</link>
+      <pubDate>Fri, 14 Feb 2020 17:09:59 -0500</pubDate>
+      <guid>https://joserzapata.github.io/project/social-media-behaviour/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Acmus</title>
