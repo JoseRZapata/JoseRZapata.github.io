@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Social Media Behaviour"
+title: "Social Media Behaviour with exclusive Facebook data"
 summary: "Research Project that combines exclusive Facebook data (Condor Dataset, Crowdtangle, Ad’s) and public data to analyze the Social Media behavior to determine if there is coordinated non-authentic behavior. 
 
 This project in founded by the Social Media and Democracy Research Grants from the Social Science Research Council and access to Facebook data via Social Science One.

@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Social Media Behaviour"
+title: "Social Media Behaviour con datos exclusivos de Facebook"
 summary: "Proyecto de investigación en Análisis de Datos que combina datos exclusivos de Facebook (Condor Dataset, Crowdtangle, Ad's) y datos públicos para analizar el comportamiento de las redes sociales para determinar si existe un comportamiento no auténtico coordinado.
 
 Este proyecto es financiado por las Becas Social Media and Democracy Research Grants del Social Science Research Council y acceso a los datos de Facebook a través de Social Science One.
