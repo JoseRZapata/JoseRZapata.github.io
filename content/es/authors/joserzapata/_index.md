@@ -29,7 +29,7 @@ interests:
 
 education:
   courses:
-  - course: PhD in Tecnologías de la información y las Comunicaciones (Sound and Music Computing)
+  - course: PhD in Tecnologías de la información y las Comunicaciones
     institution: Universitat Pompeu Fabra (UPF), Spain 
     year: 2013
   - course: Master en Ingenieria area Telecomunicaciones

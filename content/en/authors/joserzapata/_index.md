@@ -29,7 +29,7 @@ interests:
 
 education:
   courses:
-  - course: PhD in Information and Communication Technologies (Sound and Music Computing)
+  - course: PhD in Information and Communication Technologies
     institution: Universitat Pompeu Fabra (UPF), Spain 
     year: 2013
   - course: MEng in Telecommunications
