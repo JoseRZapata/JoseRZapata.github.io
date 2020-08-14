@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: "PhD in Information and Communication Technologies (Sound and Music Computing)"
+role: "PhD in Information and Communication Technologies"
 
 # Organizations/Affiliations
 organizations:
@@ -18,11 +18,11 @@ organizations:
   url: "https://www.upb.edu.co"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include Music Information Retrieval, Data science and Python.
+bio: My research interests include Data science, Music Information Retrieval and Python.
 
 interests:
-- Music Information Retrieval
 - Data science
+- Music Information Retrieval
 - Audio signal processing
 - Python
 - Guitar
@@ -78,4 +78,4 @@ email: ""
 ---
 Professor at the Faculty of Information and Communication Technologies (TIC), [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) and researcher at [GIDATIC](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
 
-My interests are based around **Data science** and **Sound and music information technologies**, which includes **Music information retrieval**, **Machine Learning**, **Audio analysis** and **Data analysis**. [EN ESPAÑOL](https://joserzapata.github.io/es/)
+My interests are based around **Data science** and **Audio and Music information technologies**, which includes **Music information retrieval**, **Machine Learning**, **Audio analysis** and **Data analysis**. [EN ESPAÑOL](https://joserzapata.github.io/es/)
