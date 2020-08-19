@@ -367,11 +367,12 @@ if api_key: py.plot(fig, filename = 'mapa_evolucion_temporal', auto_open=False)
 # %%
 column_names = ["Fecha", "Confirmados", "Recuperados","Muertos", "Activos"]
 colombia = pd.DataFrame(columns = column_names)
-colombia['Fecha'] = confirmed_group['date']
+colombia['Fecha'] = confirmed_group['Fecha']
 colombia['Confirmados'] = confirmed_group['Colombia']
 colombia['Muertos'] = death_group['Colombia']
 colombia['Recuperados'] = recovered_group['Colombia']
-colombia['Activos'] = active_group['Colombia']
+colombia['Activos'] = colombia['Confirmados'] - colombia['Recuperados'] - colombia['Muertos']
+
 df_melt3 = colombia.melt(id_vars='Fecha', value_vars= list(colombia.columns)[1:], var_name=None)
 fig = px.line(df_melt3, x='Fecha' , y='value', color='variable',
               color_discrete_sequence=["teal","green","coral", "navy"],
