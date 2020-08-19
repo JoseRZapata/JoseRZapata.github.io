@@ -545,7 +545,7 @@ death_group =  death_group.reset_index()
 ```
 
 ```python
-confirmed_melt = confirmed_group.melt(id_vars="date")
+confirmed_melt = confirmed_group.melt(id_vars="date").copy()
 confirmed_melt.rename(columns = {'value':'Confirmados', 'date':'Fecha'}, inplace = True)
 
 death_melt = death_group.melt(id_vars="date")
@@ -560,7 +560,7 @@ death_melt.rename(columns = {'value':'Muertos', 'date':'Fecha'}, inplace = True)
 # Numero de Casos confirmados por dia en el mundo
 column_names = ["Fecha", "Confirmados", "Recuperados","Muertos"]
 world = pd.DataFrame(columns = column_names)
-world['Fecha'] = confirmed_group['date']
+world['Fecha'] = confirmed_group['date'].copy()
 world['Confirmados'] = confirmed_group.iloc[:,1:].sum(1)
 world['Muertos'] = death_group.iloc[:,1:].sum(1)
 world['Recuperados'] = recovered_group.iloc[:,1:].sum(1)
@@ -697,7 +697,7 @@ fig.show()
 <iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/5.embed?link=false"></iframe>
 
 ```python
-df1 = confirmed_group
+df1 = confirmed_group.copy()
 # Cambiar el nombre de la columna
 df1.rename(columns = {'date':'Fecha'}, inplace = True) 
 df_melt = df1.melt(id_vars='Fecha', value_vars= list(df1.columns)[1:], var_name=None)
@@ -725,7 +725,7 @@ fig.show()
 <iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/7.embed?link=false"></iframe>
 
 ```python
-df2 = confirmed_group.drop(columns= mas_infectados)
+df2 = confirmed_group.drop(columns= mas_infectados).copy()
 # Cambiar el nombre de la columna
 df2.rename(columns = {'date':'Fecha'}, inplace = True) 
 

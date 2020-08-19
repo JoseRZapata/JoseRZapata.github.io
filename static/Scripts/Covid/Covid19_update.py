@@ -131,7 +131,7 @@ active_group =  active_group.reset_index()
 
 
 # %%
-confirmed_melt = confirmed_group.melt(id_vars="date")
+confirmed_melt = confirmed_group.melt(id_vars="date").copy()
 confirmed_melt.rename(columns = {'value':'Confirmados', 'date':'Fecha'}, inplace = True)
 
 
@@ -147,7 +147,7 @@ death_melt.rename(columns = {'value':'Muertos', 'date':'Fecha'}, inplace = True)
 
 column_names = ["Fecha", "Confirmados", "Recuperados","Muertos"]
 world = pd.DataFrame(columns = column_names)
-world['Fecha'] = confirmed_group['date']
+world['Fecha'] = confirmed_group['date'].copy()
 world['Confirmados'] = confirmed_group.iloc[:,1:].sum(1)
 world['Muertos'] = death_group.iloc[:,1:].sum(1)
 world['Recuperados'] = recovered_group.iloc[:,1:].sum(1)
@@ -272,7 +272,7 @@ if api_key: py.plot(fig, filename = 'total_casos_serie', auto_open=False)
 
 # %%
 #df1 = confirmed_group.drop(columns=["China"])
-df1 = confirmed_group
+df1 = confirmed_group.copy()
 # Cambiar el nombre de la columna
 df1.rename(columns = {'date':'Fecha'}, inplace = True)
 if api_key:
@@ -306,7 +306,7 @@ if api_key: py.plot(fig, filename = 'total_casos_no_china', auto_open=False)
 # ## Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados)
 
 # %%
-df2 = confirmed_group.drop(columns=mas_infectados)
+df2 = confirmed_group.drop(columns=mas_infectados).copy()
 # Cambiar el nombre de la columna
 df2.rename(columns = {'date':'Fecha'}, inplace = True)
 if api_key:
@@ -341,7 +341,7 @@ if api_key: py.plot(fig, filename = 'total_casos_no_8_infectados', auto_open=Fal
 if api_key:
     # se toman la serie de tiempo cada 4 dias, por que las graficas
     # grandes no se pueden subir a chart-studio con subscripcion gratuita
-    confirmed_melt = confirmed_group.iloc[::-4].iloc[::-1].melt(id_vars="Fecha")
+    confirmed_melt = confirmed_group.iloc[::-4].iloc[::-1].melt(id_vars="Fecha").copy()
     confirmed_melt.rename(columns = {'value':'Confirmados', 'date':'Fecha'}, inplace = True)
 
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
@@ -367,7 +367,7 @@ if api_key: py.plot(fig, filename = 'mapa_evolucion_temporal', auto_open=False)
 # %%
 column_names = ["Fecha", "Confirmados", "Recuperados","Muertos", "Activos"]
 colombia = pd.DataFrame(columns = column_names)
-colombia['Fecha'] = confirmed_group['Fecha']
+colombia['Fecha'] = confirmed_group['date']
 colombia['Confirmados'] = confirmed_group['Colombia']
 colombia['Muertos'] = death_group['Colombia']
 colombia['Recuperados'] = recovered_group['Colombia']
@@ -404,7 +404,7 @@ fig.layout.update(showlegend=False,
                   xaxis =  {"title": {"text": "Fecha"}})
 # grabar grafica en chart-studio si se proporciona el api-key
 if api_key: py.plot(fig, filename = 'Colombia_general', auto_open=False)
-#fig.show()
+fig.show()
 
 # %% [markdown]
 # # Codigo Fuente Jupyter notebook
