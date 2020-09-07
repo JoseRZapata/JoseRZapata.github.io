@@ -339,9 +339,9 @@ if api_key: py.plot(fig, filename = 'total_casos_no_8_infectados', auto_open=Fal
 
 # %%
 if api_key:
-    # se toman la serie de tiempo cada 4 dias, por que las graficas
+    # se toman la serie de tiempo cada 5 dias, por que las graficas
     # grandes no se pueden subir a chart-studio con subscripcion gratuita
-    confirmed_melt = confirmed_group.iloc[::-4].iloc[::-1].melt(id_vars="date").copy()
+    confirmed_melt = confirmed_group.iloc[::-5].iloc[::-1].melt(id_vars="date").copy()
     confirmed_melt.rename(columns = {'value':'Confirmados', 'date':'Fecha'}, inplace = True)
 
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
