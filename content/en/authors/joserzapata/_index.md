@@ -76,6 +76,6 @@ email: ""
 #   Set this to `[]` or comment out if you are not using People widget.  
 #user_groups: []
 ---
-Professor at the Faculty of Information and Communication Technologies (TIC), [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/) and researcher at [GIDATIC](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)
+Researcher at [GIDATIC](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin) and Professor at the Faculty of Information and Communication Technologies (TIC), [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/).
 
 My interests are based around **Data science** and **Audio and Music information technologies**, which includes **Music information retrieval**, **Machine Learning**, **Audio analysis** and **Data analysis**. [EN ESPAÑOL](https://joserzapata.github.io/es/)
