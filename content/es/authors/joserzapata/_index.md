@@ -75,6 +75,6 @@ email: ""
 #   Set this to `[]` or comment out if you are not using People widget.  
 #user_groups: []
 ---
-investigador en [GIDATIC](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin)y Profesor Titular de la facultad de tecnologías de la información y comunicación (TIC), en la [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/).
+Investigador en [GIDATIC](https://www.upb.edu.co/es/investigacion/nuestro-sistema/grupos/grupo-investigaciones-desarrollo-aplicacion-telecomunicaciones-informatica-medellin) y Profesor Titular de la facultad de tecnologías de la información y comunicación (TIC), en la [Universidad Pontificia Bolivariana (UPB)](http://www.upb.edu.co/).
 
 Mis intereses son en **Ciencia de Datos** y **tecnologías de la información en audio y musica**, que incluye temas como **Music information retrieval**, **Aprendizaje de Maquina (Machine Learning)**, **Análisis de audio** y **Análisis de datos**.
