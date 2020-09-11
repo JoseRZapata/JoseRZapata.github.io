@@ -214,9 +214,9 @@ full_melt_max = pd.merge(conf_max[['Country/Region','Confirmados']],
                          death_max[['Country/Region','Muertos']],
                          on='Country/Region', how='left')
 
-fig = px.scatter(full_melt_max.sort_values('Muertos', ascending=False).iloc[:10, :],
+fig = px.scatter(full_melt_max.sort_values('Muertos', ascending=False).iloc[:15, :],
                  x='Confirmados', y='Muertos', color='Country/Region', size='Confirmados', height=500,width=900,
-                 text='Country/Region', log_x=True, log_y=True, title= f'Muertos vs Confirmados - {max_Fecha} - (10 Paises)')
+                 text='Country/Region', log_x=True, log_y=True, title= f'Muertos vs Confirmados - {max_Fecha} - (15 Paises)')
 fig.update_traces(textposition='top center')
 fig.layout.update(showlegend = False)
 # grabar grafica en chart-studio si se proporciona el api-key
