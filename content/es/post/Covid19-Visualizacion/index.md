@@ -643,9 +643,9 @@ max_Fecha = death_melt['Fecha'].max()
 death_max = death_melt[death_melt['Fecha']== max_Fecha].copy()
 death_max.dropna(inplace=True) #eliminar filas con valores faltantes
 
-fig = px.scatter(full_melt_max.sort_values('Muertos', ascending=False).iloc[:10, :], 
+fig = px.scatter(full_melt_max.sort_values('Muertos', ascending=False).iloc[:15, :], 
                  x='Confirmados', y='Muertos', color='Country/Region', size='Confirmados', height=500,
-                 text='Country/Region', log_x=True, log_y=True, title= f'Muertos vs Confirmados - {max_Fecha} - (10 Paises)')
+                 text='Country/Region', log_x=True, log_y=True, title= f'Muertos vs Confirmados - {max_Fecha} - (15 Paises)')
 fig.update_traces(textposition='top center')
 fig.layout.update(showlegend = False)
 #py.plot(fig, filename = 'scatter_muertos_confirmados', auto_open=False)
