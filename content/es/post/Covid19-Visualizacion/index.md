@@ -50,6 +50,7 @@ https://github.com/CSSEGISandData/COVID-19
 
 - 27/May/2020 Se Agregar los datos de las personas recuperadas y se calculan los casos Activos
 - 29/May/2020 Se agrega Bar chart race
+- 25/Sep/2020 Mapa Mundial de Confirmados por Pais con choropleth
 
 
 {{% toc %}}
@@ -615,16 +616,16 @@ Mover el Mouse sobre el mapa para ver la informacion de cada pais
 ```python
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
 confirmed_melt['Fecha'] = confirmed_melt['Fecha'].dt.strftime('%m/%d/%Y')
-confirmed_melt['size'] = confirmed_melt['Confirmados'].pow(0.3)
 
 max_Fecha = confirmed_melt['Fecha'].max()
 conf_max = confirmed_melt[confirmed_melt['Fecha']== max_Fecha]
 conf_max.dropna(inplace=True) #eliminar filas con valores faltantes
 
-fig = px.scatter_geo(conf_max, locations="Country/Region", locationmode='country names', 
-                     color="Confirmados", size='size', hover_name="Country/Region", 
-                     range_color= [0, max(confirmed_melt['Confirmados'])+2], 
-                     projection="natural earth", 
+fig = px.choropleth(conf_max, locations="Country/Region", locationmode='country names', 
+                     color=np.log10(conf_max["Confirmados"]), hover_name="Country/Region", 
+                     hover_data = ["Confirmados"],
+                     projection="natural earth", width=900,
+                     color_continuous_scale = px.colors.sequential.Jet,        
                      title='Mapa de Confirmados COVID 19 por Pais')
 fig.update(layout_coloraxis_showscale=False)
 #py.plot(fig, filename = 'mapa_confirmados_pais', auto_open=False)
@@ -652,7 +653,7 @@ fig.layout.update(showlegend = False)
 fig.show()
 ```
 
-## Progresion Mundial en el Tiempo de de Confirmados y Muertos
+## Progresion Mundial en el Tiempo de Confirmados y Muertos
 <iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/3.embed?link=false"></iframe>
 
 ```python
