@@ -573,7 +573,7 @@ world['Activos'] = active_group.iloc[:,1:].sum(1)
 ## Evolucion Animada de Casos Activos por Pais
 La gráfica animada de la evolución temporal de los casos activos por país, la he creado con la libreria [Pandas alive](https://github.com/JackMcKew/pandas_alive) y [Bar Chart Race](https://github.com/dexplo/bar_chart_race).
 
-{{< youtube qy-Nlak-riY>}}
+{{< youtube ogd7ZifCDQU>}}
 
 ```python
 import pandas_alive
