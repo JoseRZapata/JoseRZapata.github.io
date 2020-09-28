@@ -3,8 +3,38 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://joserzapata.github.io/publication_types/1/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/publication_types/1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/publication_types/1/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/antonio-escamilla/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/antonio-escamilla/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/antonio-escamilla/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joserzapata.github.io/authors/</loc>
-    <lastmod>2020-05-29T17:03:57-05:00</lastmod>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -14,6 +44,261 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/authors/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/beat-tracking/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/beat-tracking/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/beat-tracking/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/colombian-music/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/colombian-music/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/colombian-music/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/computational-musicology/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/computational-musicology/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/computational-musicology/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/estefania-cano/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/estefania-cano/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/estefania-cano/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/fernando-mora-angel/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/fernando-mora-angel/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/fernando-mora-angel/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/gustavo-lopez-gil/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/gustavo-lopez-gil/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/gustavo-lopez-gil/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/ismir/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/ismir/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/ismir/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/joserzapata/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/joserzapata/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/joserzapata/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/juan-fernando-alzate-londono/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/juan-fernando-alzate-londono/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/juan-fernando-alzate-londono/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/moises-betancur-pelaez/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/moises-betancur-pelaez/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/moises-betancur-pelaez/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/music-information-retrieval/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/music-information-retrieval/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/music-information-retrieval/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/publication_types/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/publication_types/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/publication_types/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/publication/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/publication/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/publication/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/python/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/python/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/python/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/publication/ismir2020/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/publication/ismir2020/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/publication/ismir2020/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/tags/</loc>
+    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/"
                 />
   </url>
   
@@ -63,36 +348,6 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/authors/joserzapata/</loc>
-    <lastmod>2020-05-29T17:03:57-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/joserzapata/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/joserzapata/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/</loc>
-    <lastmod>2020-05-29T17:03:57-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/"
-                />
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/post/lista-proyecto-machine-learning/</loc>
     <lastmod>2020-04-09T06:54:44-05:00</lastmod>
     <xhtml:link
@@ -123,21 +378,6 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/tags/</loc>
-    <lastmod>2020-05-29T17:03:57-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/tags/jupyter-notebook/</loc>
     <lastmod>2020-05-29T17:03:57-05:00</lastmod>
     <xhtml:link
@@ -149,21 +389,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/tags/jupyter-notebook/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/tags/python/</loc>
-    <lastmod>2020-05-29T17:03:57-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/python/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/python/"
                 />
   </url>
   
@@ -318,6 +543,66 @@
   </url>
   
   <url>
+    <loc>https://joserzapata.github.io/publication/acmus19/</loc>
+    <lastmod>2019-11-01T19:28:09+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/publication/acmus19/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/publication/acmus19/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/christian-kehling/</loc>
+    <lastmod>2019-11-01T19:28:09+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/christian-kehling/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/christian-kehling/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/fernando-mora-agnel/</loc>
+    <lastmod>2019-11-01T19:28:09+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/fernando-mora-agnel/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/fernando-mora-agnel/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/authors/sascha-grollmisch/</loc>
+    <lastmod>2019-11-01T19:28:09+08:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/sascha-grollmisch/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/sascha-grollmisch/"
+                />
+  </url>
+  
+  <url>
     <loc>https://joserzapata.github.io/project/acmus/</loc>
     <lastmod>2019-07-15T15:01:09-05:00</lastmod>
     <xhtml:link
@@ -329,36 +614,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/project/acmus/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/tags/beat-tracking/</loc>
-    <lastmod>2019-07-15T15:01:09-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/beat-tracking/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/beat-tracking/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/tags/music-information-retrieval/</loc>
-    <lastmod>2019-07-15T15:01:09-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/music-information-retrieval/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/music-information-retrieval/"
                 />
   </url>
   
@@ -524,36 +779,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/publication_types/6/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/publication_types/</loc>
-    <lastmod>2016-11-17T18:14:05-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/publication_types/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/publication_types/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/publication/</loc>
-    <lastmod>2016-11-17T18:14:05-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/publication/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/publication/"
                 />
   </url>
   
@@ -933,21 +1158,6 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/publication_types/1/</loc>
-    <lastmod>2013-11-03T23:32:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/publication_types/1/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/publication_types/1/"
-                />
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/publication/essentia-ismir/</loc>
     <lastmod>2013-11-03T23:32:53-05:00</lastmod>
     <xhtml:link
@@ -959,21 +1169,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/publication/essentia-ismir/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://joserzapata.github.io/tags/ismir/</loc>
-    <lastmod>2013-11-03T23:32:53-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/ismir/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/ismir/"
                 />
   </url>
   

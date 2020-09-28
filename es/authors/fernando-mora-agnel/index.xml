@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fernando Mora-Ágnel | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/authors/fernando-mora-agnel/</link>
+      <atom:link href="https://joserzapata.github.io/es/authors/fernando-mora-agnel/index.xml" rel="self" type="application/rss+xml" />
+    <description>Fernando Mora-Ágnel</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2020</copyright><lastBuildDate>Fri, 01 Nov 2019 19:28:09 +0800</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Fernando Mora-Ágnel</title>
+      <link>https://joserzapata.github.io/es/authors/fernando-mora-agnel/</link>
+    </image>
+    
+    <item>
+      <title>ACMUS - Advancing Computational Musicology: Semi-supervised and Unsupervised Segmentation and Annotation of Musical Collections</title>
+      <link>https://joserzapata.github.io/es/publication/acmus19/</link>
+      <pubDate>Fri, 01 Nov 2019 19:28:09 +0800</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/acmus19/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

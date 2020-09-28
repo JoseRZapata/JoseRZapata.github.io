@@ -5,12 +5,20 @@
     <link>https://joserzapata.github.io/es/</link>
       <atom:link href="https://joserzapata.github.io/es/index.xml" rel="self" type="application/rss+xml" />
     <description>Jose Ricardo Zapata</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2020</copyright><lastBuildDate>Thu, 09 Apr 2020 06:54:44 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>es</language><copyright>© 2020</copyright><lastBuildDate>Mon, 28 Sep 2020 10:57:42 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Jose Ricardo Zapata</title>
       <link>https://joserzapata.github.io/es/</link>
     </image>
+    
+    <item>
+      <title>Sesquialtera in the Colombian Bambuco: Perception and Estimation of Beat and Meter</title>
+      <link>https://joserzapata.github.io/es/publication/ismir2020/</link>
+      <pubDate>Mon, 28 Sep 2020 10:57:42 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/ismir2020/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Paso a paso en un Proyecto Machine Learning</title>
@@ -1364,6 +1372,14 @@ only showing top 20 rows
       <link>https://joserzapata.github.io/es/talk/pycon2020/</link>
       <pubDate>Fri, 07 Feb 2020 12:35:00 -0500</pubDate>
       <guid>https://joserzapata.github.io/es/talk/pycon2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ACMUS - Advancing Computational Musicology: Semi-supervised and Unsupervised Segmentation and Annotation of Musical Collections</title>
+      <link>https://joserzapata.github.io/es/publication/acmus19/</link>
+      <pubDate>Fri, 01 Nov 2019 19:28:09 +0800</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/acmus19/</guid>
       <description></description>
     </item>
     

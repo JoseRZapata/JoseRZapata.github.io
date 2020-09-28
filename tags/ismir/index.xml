@@ -5,12 +5,28 @@
     <link>https://joserzapata.github.io/tags/ismir/</link>
       <atom:link href="https://joserzapata.github.io/tags/ismir/index.xml" rel="self" type="application/rss+xml" />
     <description>ISMIR</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sun, 03 Nov 2013 23:32:53 -0500</lastBuildDate>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Mon, 28 Sep 2020 10:57:42 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>ISMIR</title>
       <link>https://joserzapata.github.io/tags/ismir/</link>
     </image>
+    
+    <item>
+      <title>Sesquialtera in the Colombian Bambuco: Perception and Estimation of Beat and Meter</title>
+      <link>https://joserzapata.github.io/publication/ismir2020/</link>
+      <pubDate>Mon, 28 Sep 2020 10:57:42 -0500</pubDate>
+      <guid>https://joserzapata.github.io/publication/ismir2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ACMUS - Advancing Computational Musicology: Semi-supervised and Unsupervised Segmentation and Annotation of Musical Collections</title>
+      <link>https://joserzapata.github.io/publication/acmus19/</link>
+      <pubDate>Fri, 01 Nov 2019 19:28:09 +0800</pubDate>
+      <guid>https://joserzapata.github.io/publication/acmus19/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
