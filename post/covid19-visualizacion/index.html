@@ -818,6 +818,7 @@ diariamente con los nuevos datos!</strong></p>
 <ul>
 <li>27/May/2020 Se Agregar los datos de las personas recuperadas y se calculan los casos Activos</li>
 <li>29/May/2020 Se agrega Bar chart race</li>
+<li>25/Sep/2020 Mapa Mundial de Confirmados por Pais con choropleth</li>
 </ul>
 
 <p><h2>Table of Contents</h2>
@@ -842,7 +843,7 @@ diariamente con los nuevos datos!</strong></p>
 <li><a href="#valores-mundiales-de-casos-confirmados-activos-recuperados-y-muertos">Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos</a></li>
 <li><a href="#mapa-mundial-de-confirmados-por-pais">Mapa Mundial de Confirmados por Pais</a></li>
 <li><a href="#confirmados-vs-muertos-por-pais">Confirmados vs Muertos por pais</a></li>
-<li><a href="#progresion-mundial-en-el-tiempo-de-de-confirmados-y-muertos">Progresion Mundial en el Tiempo de de Confirmados y Muertos</a></li>
+<li><a href="#progresion-mundial-en-el-tiempo-de-confirmados-y-muertos">Progresion Mundial en el Tiempo de Confirmados y Muertos</a></li>
 <li><a href="#total-casos-confirmados-de-covid-19-por-pais">Total Casos Confirmados de COVID 19 por Pais</a></li>
 <li><a href="#total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados">Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados)</a></li>
 <li><a href="#animacion-del-mapa-de-evolucion-temporal-del-codiv-19">Animacion del Mapa de Evolucion Temporal del Codiv 19</a></li>
@@ -1330,7 +1331,7 @@ world[<span style="color:#e6db74">&#39;Activos&#39;</span>] <span style="color:#
 
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-  <iframe src="https://www.youtube.com/embed/qy-Nlak-riY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+  <iframe src="https://www.youtube.com/embed/ogd7ZifCDQU" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
 </div>
 
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">import</span> pandas_alive
@@ -1369,16 +1370,16 @@ fig<span style="color:#f92672">.</span>show()</code></pre></div>
 <iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/97.embed?link=false"></iframe></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">confirmed_melt[<span style="color:#e6db74">&#39;Fecha&#39;</span>] <span style="color:#f92672">=</span> pd<span style="color:#f92672">.</span>to_datetime(confirmed_melt[<span style="color:#e6db74">&#39;Fecha&#39;</span>])
 confirmed_melt[<span style="color:#e6db74">&#39;Fecha&#39;</span>] <span style="color:#f92672">=</span> confirmed_melt[<span style="color:#e6db74">&#39;Fecha&#39;</span>]<span style="color:#f92672">.</span>dt<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#39;%m/</span><span style="color:#e6db74">%d</span><span style="color:#e6db74">/%Y&#39;</span>)
-confirmed_melt[<span style="color:#e6db74">&#39;size&#39;</span>] <span style="color:#f92672">=</span> confirmed_melt[<span style="color:#e6db74">&#39;Confirmados&#39;</span>]<span style="color:#f92672">.</span>pow(<span style="color:#ae81ff">0.3</span>)
 
 max_Fecha <span style="color:#f92672">=</span> confirmed_melt[<span style="color:#e6db74">&#39;Fecha&#39;</span>]<span style="color:#f92672">.</span>max()
 conf_max <span style="color:#f92672">=</span> confirmed_melt[confirmed_melt[<span style="color:#e6db74">&#39;Fecha&#39;</span>]<span style="color:#f92672">==</span> max_Fecha]
 conf_max<span style="color:#f92672">.</span>dropna(inplace<span style="color:#f92672">=</span>True) <span style="color:#75715e">#eliminar filas con valores faltantes</span>
 
-fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>scatter_geo(conf_max, locations<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Country/Region&#34;</span>, locationmode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;country names&#39;</span>, 
-                     color<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Confirmados&#34;</span>, size<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;size&#39;</span>, hover_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Country/Region&#34;</span>, 
-                     range_color<span style="color:#f92672">=</span> [<span style="color:#ae81ff">0</span>, max(confirmed_melt[<span style="color:#e6db74">&#39;Confirmados&#39;</span>])<span style="color:#f92672">+</span><span style="color:#ae81ff">2</span>], 
-                     projection<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;natural earth&#34;</span>, 
+fig <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>choropleth(conf_max, locations<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Country/Region&#34;</span>, locationmode<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;country names&#39;</span>, 
+                     color<span style="color:#f92672">=</span>np<span style="color:#f92672">.</span>log10(conf_max[<span style="color:#e6db74">&#34;Confirmados&#34;</span>]), hover_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Country/Region&#34;</span>, 
+                     hover_data <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Confirmados&#34;</span>],
+                     projection<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;natural earth&#34;</span>, width<span style="color:#f92672">=</span><span style="color:#ae81ff">900</span>,
+                     color_continuous_scale <span style="color:#f92672">=</span> px<span style="color:#f92672">.</span>colors<span style="color:#f92672">.</span>sequential<span style="color:#f92672">.</span>Jet,        
                      title<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Mapa de Confirmados COVID 19 por Pais&#39;</span>)
 fig<span style="color:#f92672">.</span>update(layout_coloraxis_showscale<span style="color:#f92672">=</span>False)
 <span style="color:#75715e">#py.plot(fig, filename = &#39;mapa_confirmados_pais&#39;, auto_open=False)</span>
@@ -1400,7 +1401,7 @@ fig<span style="color:#f92672">.</span>update_traces(textposition<span style="co
 fig<span style="color:#f92672">.</span>layout<span style="color:#f92672">.</span>update(showlegend <span style="color:#f92672">=</span> False)
 <span style="color:#75715e">#py.plot(fig, filename = &#39;scatter_muertos_confirmados&#39;, auto_open=False)</span>
 fig<span style="color:#f92672">.</span>show()</code></pre></div>
-<h2 id="progresion-mundial-en-el-tiempo-de-de-confirmados-y-muertos">Progresion Mundial en el Tiempo de de Confirmados y Muertos</h2>
+<h2 id="progresion-mundial-en-el-tiempo-de-confirmados-y-muertos">Progresion Mundial en el Tiempo de Confirmados y Muertos</h2>
 
 <iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/3.embed?link=false"></iframe>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">world_melt <span style="color:#f92672">=</span> world<span style="color:#f92672">.</span>melt(id_vars<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;Fecha&#39;</span>, value_vars<span style="color:#f92672">=</span> list(world<span style="color:#f92672">.</span>columns)[<span style="color:#ae81ff">1</span>:], var_name<span style="color:#f92672">=</span>None)
