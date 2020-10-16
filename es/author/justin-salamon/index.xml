@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Justin Salamon | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/author/justin-salamon/</link>
+      <atom:link href="https://joserzapata.github.io/es/author/justin-salamon/index.xml" rel="self" type="application/rss+xml" />
+    <description>Justin Salamon</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><copyright>© 2020</copyright><lastBuildDate>Fri, 21 Mar 2014 00:11:35 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Justin Salamon</title>
+      <link>https://joserzapata.github.io/es/author/justin-salamon/</link>
+    </image>
+    
+    <item>
+      <title>Essentia: an open source library for audio analysis</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-sigmm/</link>
+      <pubDate>Fri, 21 Mar 2014 00:11:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-sigmm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-ismir/</link>
+      <pubDate>Sun, 03 Nov 2013 23:32:53 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-ismir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: an open-source library for sound and music analysis</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-acm/</link>
+      <pubDate>Mon, 21 Oct 2013 00:11:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-acm/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

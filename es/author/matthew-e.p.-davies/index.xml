@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Matthew E.P. Davies | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/author/matthew-e.p.-davies/</link>
+      <atom:link href="https://joserzapata.github.io/es/author/matthew-e.p.-davies/index.xml" rel="self" type="application/rss+xml" />
+    <description>Matthew E.P. Davies</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><copyright>© 2020</copyright><lastBuildDate>Thu, 03 Apr 2014 11:52:17 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Matthew E.P. Davies</title>
+      <link>https://joserzapata.github.io/es/author/matthew-e.p.-davies/</link>
+    </image>
+    
+    <item>
+      <title>Multi-Feature Beat Tracking</title>
+      <link>https://joserzapata.github.io/es/publication/multifeature-beattracker/</link>
+      <pubDate>Thu, 03 Apr 2014 11:52:17 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/multifeature-beattracker/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

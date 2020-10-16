@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fernando Mora-Ángel | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/author/fernando-mora-angel/</link>
+      <atom:link href="https://joserzapata.github.io/author/fernando-mora-angel/index.xml" rel="self" type="application/rss+xml" />
+    <description>Fernando Mora-Ángel</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Mon, 28 Sep 2020 10:57:42 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Fernando Mora-Ángel</title>
+      <link>https://joserzapata.github.io/author/fernando-mora-angel/</link>
+    </image>
+    
+    <item>
+      <title>Sesquialtera in the Colombian Bambuco: Perception and Estimation of Beat and Meter</title>
+      <link>https://joserzapata.github.io/publication/ismir2020/</link>
+      <pubDate>Mon, 28 Sep 2020 10:57:42 -0500</pubDate>
+      <guid>https://joserzapata.github.io/publication/ismir2020/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

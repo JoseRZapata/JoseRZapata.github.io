@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dynamic-range-compression | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/tag/dynamic-range-compression/</link>
+      <atom:link href="https://joserzapata.github.io/es/tag/dynamic-range-compression/index.xml" rel="self" type="application/rss+xml" />
+    <description>Dynamic-range-compression</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><copyright>© 2020</copyright><lastBuildDate>Sun, 25 Jul 2004 13:40:24 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Dynamic-range-compression</title>
+      <link>https://joserzapata.github.io/es/tag/dynamic-range-compression/</link>
+    </image>
+    
+    <item>
+      <title>Control de Rango Dinamico en Audio con Logica Difusa</title>
+      <link>https://joserzapata.github.io/es/publication/control-rango-dinamico/</link>
+      <pubDate>Sun, 25 Jul 2004 13:40:24 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/control-rango-dinamico/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

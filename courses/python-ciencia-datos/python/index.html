@@ -1,0 +1,2649 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 4.8.0 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jose R. Zapata">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://joserzapata.github.io/courses/python-ciencia-datos/python/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#328cc1">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.min.38f0d4ecfd8591617643060685f8b2fc.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112535090-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-112535090-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+  
+
+  
+  <link rel="alternate" href="/courses/python-ciencia-datos/python/index.xml" type="application/rss+xml" title="Jose Ricardo Zapata">
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://joserzapata.github.io/courses/python-ciencia-datos/python/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@joserzapata">
+  <meta property="twitter:creator" content="@joserzapata">
+  
+  <meta property="og:site_name" content="Jose Ricardo Zapata">
+  <meta property="og:url" content="https://joserzapata.github.io/courses/python-ciencia-datos/python/">
+  <meta property="og:title" content="Programacion Con Python | Jose Ricardo Zapata">
+  <meta property="og:description" content="Learn how to use Academic&#39;s docs layout for publishing online courses, software documentation, and tutorials."><meta property="og:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg">
+  <meta property="twitter:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg"><meta property="og:locale" content="en-us">
+  
+    <meta property="og:updated_time" content="2020-09-09T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Programacion Con Python | Jose Ricardo Zapata</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class=" ">
+
+  
+  
+  
+    <script>window.wcDarkLightEnabled = true;</script>
+  
+  
+    <script>const isSiteThemeDark = false;</script>
+  
+  
+  <script src="/js/load-theme.js"></script>
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Jose Ricardo Zapata</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Jose Ricardo Zapata</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/phd"><span>Phd Thesis</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+  
+    
+    
+
+    
+    
+  </nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#tipos-de-datos">Tipos de Datos</a>
+      <ul>
+        <li><a href="#numeros">Numeros</a></li>
+        <li><a href="#type"><code>type()</code></a></li>
+        <li><a href="#asignacion-de-valores-variables">Asignacion de valores Variables</a></li>
+        <li><a href="#strings">Strings</a></li>
+        <li><a href="#imprimir-con-formato">Imprimir con formato</a></li>
+        <li><a href="#entrada-de-datos-del-usuario">Entrada de datos del usuario</a></li>
+        <li><a href="#listas">Listas</a></li>
+        <li><a href="#diccionarios">Diccionarios</a></li>
+        <li><a href="#booleans-logicos">Booleans (Logicos)</a></li>
+        <li><a href="#tuples">Tuples</a></li>
+        <li><a href="#casting">Casting</a></li>
+      </ul>
+    </li>
+    <li><a href="#operadores-de-comparacion-y-logicos">Operadores de Comparacion y Logicos</a>
+      <ul>
+        <li><a href="#operadores-de-comparacion">Operadores de Comparacion</a></li>
+        <li><a href="#operadores-logicos">Operadores Logicos</a></li>
+      </ul>
+    </li>
+    <li><a href="#programacion-con-python">Programacion con Python</a>
+      <ul>
+        <li><a href="#condicionales-ifelif-else">Condicionales if,elif, else</a></li>
+        <li><a href="#ciclos-for">Ciclos for</a></li>
+        <li><a href="#ciclos-while">Ciclos while</a></li>
+        <li><a href="#control-de-ciclos-break-y-continue">Control de ciclos break y continue</a></li>
+        <li><a href="#list-comprehension">List comprehension</a></li>
+      </ul>
+    </li>
+    <li><a href="#funciones">Funciones</a>
+      <ul>
+        <li><a href="#funciones-basicas-de-python">Funciones basicas de python</a></li>
+        <li><a href="#len"><code>len()</code></a></li>
+        <li><a href="#range"><code>range()</code></a></li>
+        <li><a href="#enumerate"><code>enumerate()</code></a></li>
+      </ul>
+    </li>
+    <li><a href="#metodos">Metodos</a>
+      <ul>
+        <li><a href="#metodos-en-strings">Metodos en strings</a></li>
+        <li><a href="#metodos-en-listas">Metodos en listas</a></li>
+      </ul>
+    </li>
+    <li><a href="#instalar-paquetes-o-librerias">Instalar Paquetes o Librerias</a>
+      <ul>
+        <li><a href="#instalacion-en-linea-de-comando">Instalacion en Linea de comando</a></li>
+        <li><a href="#instalacion-en-jupyter-notebook">Instalacion en Jupyter Notebook</a></li>
+      </ul>
+    </li>
+    <li><a href="#ejemplos">Ejemplos</a></li>
+    <li><a href="#referencias">Referencias</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Programacion Con Python</h1>
+
+          <div class="article-style">
+            <p>Curso Programacion Analitica</p>
+<p>Maestria TIC Linea Ciencia de Datos</p>
+<p>Por <a href="https://joserzapata.github.io/" target="_blank" rel="noopener">Jose R. Zapata</a></p>
+<p>En este notebook se encontra los temas mas importantes para el uso de python en ciencia de datos, se debe tener un un conocimiento basico de programacion para entender completamente el notebook.</p>
+<h2 id="tipos-de-datos">Tipos de Datos</h2>
+<p>Python tiene varios tipos de datos, los mismos datos básicos que otros lenguajes: enteros, flotantes, strings y booleanos. Además, las listas son un tipo predefinido en el lenguaje, los diccionarios, tuplas y sets.</p>
+<p>La funcion que se utiliza para determinar el tipo de datos es <strong><code>type()</code></strong></p>
+<p><strong>Para escribir comentarios es utiliza el caracter numeral #</strong></p>
+<h3 id="numeros">Numeros</h3>
+<p>IPython puede ser usado de forma interactiva como una calculadora. Esto permite que el análisis de datos pueda ser realizado de forma interactiva, de forma similar a como pueden usarse otras herramientas como el lenguaje R o Matlab. A continuación se ejemplifican los cálculos aritméticos básicos.</p>
+<pre><code class="language-python">2 + 3 #Suma
+</code></pre>
+<pre><code>5
+</code></pre>
+<pre><code class="language-python">2 * 3 #Multiplicacion
+</code></pre>
+<pre><code>6
+</code></pre>
+<pre><code class="language-python">7 / 2 #Division con respuesta de numero flotante
+</code></pre>
+<pre><code>3.5
+</code></pre>
+<pre><code class="language-python">5//2 # parte entera de la division
+</code></pre>
+<pre><code>2
+</code></pre>
+<pre><code class="language-python">2 ** 4 #Potenciacion
+</code></pre>
+<pre><code>16
+</code></pre>
+<pre><code class="language-python">8 % 2 #Operacion Modulo
+</code></pre>
+<pre><code>0
+</code></pre>
+<pre><code class="language-python">5 % 2 #Operacion Modulo
+</code></pre>
+<pre><code>1
+</code></pre>
+<pre><code class="language-python">53 % 15
+</code></pre>
+<pre><code>8
+</code></pre>
+<p>Orden específico para ralizar las operaciones y resolver fórmulas</p>
+<ol>
+<li>Potencias y radicales</li>
+<li>Multiplicación, división, división sesgada y módulo</li>
+<li>Suma y resta</li>
+</ol>
+<pre><code class="language-python">((2 + 3) * (5**2 + 5))/2 #Uso de varias operacion en la misma ecuacion
+</code></pre>
+<pre><code>75.0
+</code></pre>
+<h3 id="type"><code>type()</code></h3>
+<p>la funcion para conocer el tipo de dato</p>
+<pre><code class="language-python">#funcion para determinar el tipo de dato numerico
+type(3) # tipo entero (int)
+</code></pre>
+<pre><code>int
+</code></pre>
+<pre><code class="language-python">type(3.0) # Tipo flotante, se determina por el uso del punto
+</code></pre>
+<pre><code>float
+</code></pre>
+<pre><code class="language-python">type(2+2j)# Numero complejo
+</code></pre>
+<pre><code>complex
+</code></pre>
+<pre><code class="language-python">type(5/2) # Numero flotante
+</code></pre>
+<pre><code>float
+</code></pre>
+<pre><code class="language-python">type(5//2) # Numero entero
+</code></pre>
+<pre><code>int
+</code></pre>
+<h3 id="asignacion-de-valores-variables">Asignacion de valores Variables</h3>
+<p>Las variables en python no necesitan ser declaradas, simplemente se definen al ser utilizadas por primera vez. Además, (si bien no es recomendable) pueden cambiar de tipo volviendo a definir. la variables puede ser de cualqueire tipo de datos que maneja Python</p>
+<pre><code class="language-python"># Los nombres NO pueden empezar con un numero o un caracter especial
+name_of_var = 2 #Asignacion de valores a una variable
+type(name_of_var)
+</code></pre>
+<pre><code>int
+</code></pre>
+<pre><code class="language-python">name_of_var = 5.3 #Asignacion de valores a una variable
+type(name_of_var)
+</code></pre>
+<pre><code>float
+</code></pre>
+<pre><code class="language-python">x = 2 # asignado valores a diferentes variables
+y = 3
+</code></pre>
+<pre><code class="language-python">z = x + y # asignar la suma de dos variables
+</code></pre>
+<pre><code class="language-python">z
+</code></pre>
+<pre><code>5
+</code></pre>
+<pre><code class="language-python">type(z) #tipo de dato
+</code></pre>
+<pre><code>int
+</code></pre>
+<h3 id="strings">Strings</h3>
+<pre><code class="language-python">'Comillas sencillas'
+</code></pre>
+<pre><code>'Comillas sencillas'
+</code></pre>
+<pre><code class="language-python">&quot;Comillas dobles&quot;
+</code></pre>
+<pre><code>'Comillas dobles'
+</code></pre>
+<pre><code class="language-python">&quot; Se puede escribir 'Comillas' de esta forma&quot;
+</code></pre>
+<pre><code>&quot; Se puede escribir 'Comillas' de esta forma&quot;
+</code></pre>
+<pre><code class="language-python">&quot; Científico de datos: Persona que sabe más de estadística que cualquier programador y que a la vez sabe más de programación que cualquier estadístico &quot;
+</code></pre>
+<pre><code>' Científico de datos: Persona que sabe más de estadística que cualquier programador y que a la vez sabe más de programación que cualquier estadístico '
+</code></pre>
+<pre><code class="language-python">&quot;&quot;&quot;
+  Los strings de varias lineas pueden
+  escribirse delimitándolos tres comillas 
+  dobles y son usados corrientemente como
+  comentarios
+&quot;&quot;&quot;
+</code></pre>
+<pre><code>'\n  Los strings de varias lineas pueden\n  escribirse delimitándolos tres comillas \n  dobles y son usados corrientemente como\n  comentarios\n'
+</code></pre>
+<pre><code class="language-python">a = &quot;El Big data es como el sexo en la adolescencia: todo el mundo habla de ello, nadie sabe realmente cómo hacerlo, todos piensan que los demás lo están haciendo, así que todos dicen que también lo hacen...&quot;
+a
+</code></pre>
+<pre><code>'El Big data es como el sexo en la adolescencia: todo el mundo habla de ello, nadie sabe realmente cómo hacerlo, todos piensan que los demás lo están haciendo, así que todos dicen que también lo hacen...'
+</code></pre>
+<pre><code class="language-python">type(a) # tipo de datos
+</code></pre>
+<pre><code>str
+</code></pre>
+<pre><code class="language-python"># duplicar varias veces un string
+&quot;Ciencia de Datos &quot;*4
+</code></pre>
+<pre><code>'Ciencia de Datos Ciencia de Datos Ciencia de Datos Ciencia de Datos '
+</code></pre>
+<pre><code class="language-python"># Concatenar strings
+palabra = &quot;Amo &quot;+&quot;Programar &quot;+&quot;En Python&quot;
+palabra
+</code></pre>
+<pre><code>'Amo Programar En Python'
+</code></pre>
+<h3 id="imprimir-con-formato">Imprimir con formato</h3>
+<pre><code class="language-python">x = 'hello' # asignar varible tipo string
+</code></pre>
+<pre><code class="language-python">x #imprimir la variable en jupyter
+</code></pre>
+<pre><code>'hello'
+</code></pre>
+<pre><code class="language-python">print(x) #impresion de una variable en python
+</code></pre>
+<pre><code>hello
+</code></pre>
+<pre><code class="language-python">num = 3 # asignacion de variables
+name = 'Matias'
+</code></pre>
+<pre><code class="language-python"># Impresion con formato, podemos omitir la posicion si las variables estan en orden
+print('Me llamo: {}, y mi edad es: {}'.format(name,num))
+</code></pre>
+<pre><code>Me llamo: Matias, y mi edad es: 3
+</code></pre>
+<pre><code class="language-python"># Nuevo desde python 3.6
+#f-string o string literal format
+print(f'Me llamo: {name}, y mi edad es: {num}')
+</code></pre>
+<pre><code>Me llamo: Matias, y mi edad es: 3
+</code></pre>
+<h3 id="entrada-de-datos-del-usuario">Entrada de datos del usuario</h3>
+<pre><code class="language-python">#entrada = input('Como te llamas? ') # los datos sera tipo string
+#Simular entrada de texto
+entrada = 'Jose R. Zapata'
+</code></pre>
+<pre><code class="language-python">type(entrada) #tipo de dato
+</code></pre>
+<pre><code>str
+</code></pre>
+<pre><code class="language-python">print(f'Hola {entrada} te deseo lo mejor aprendiendo python para analisis de datos')
+</code></pre>
+<pre><code>Hola Jose R. Zapata te deseo lo mejor aprendiendo python para analisis de datos
+</code></pre>
+<h3 id="listas">Listas</h3>
+<p>Las listas son una de las principales estructuras para almacenar información en Python.</p>
+<ul>
+<li>En las listas podemos ingresar todo tipos de datos.</li>
+<li>Se utilizan los corchetes <code>[ ]</code> para definir una lista y se separan usando coma.</li>
+<li>Las listas son elementos Mutables (se pueden cambiar sus valores)</li>
+</ul>
+<pre><code class="language-python"># definicion de listas
+uno = [1,2,3] # las listas se crean delimitando sus elementos entre [ y ] y usando la , como separacion
+uno
+</code></pre>
+<pre><code>[1, 2, 3]
+</code></pre>
+<pre><code class="language-python">type(uno) #tipo de datos
+</code></pre>
+<pre><code>list
+</code></pre>
+<pre><code class="language-python">#Una lista puede tener diferentes tipos de datos
+['hi',1,[1,2,3]] #Esta lista tiene uns string, un numero y una lista como sus elementos
+</code></pre>
+<pre><code>['hi', 1, [1, 2, 3]]
+</code></pre>
+<pre><code class="language-python">my_list = ['a','b','c'] #creacion de una lista
+</code></pre>
+<pre><code class="language-python">my_list
+</code></pre>
+<pre><code>['a', 'b', 'c']
+</code></pre>
+<h4 id="indexacion-en-listas-y-strings">Indexacion en Listas y Strings</h4>
+<p>En Python, las listas son vectores; el primer elemento ocupa la posición 0, el segundo la 1 y así sucesivamente. Los índices negativos (iniciando en <code>-1</code>) se usan para indicar la posición contando desde atrás. Por ejemplo:</p>
+<pre><code> +---+---+---+---+---+---+
+ | P | y | t | h | o | n |
+ +---+---+---+---+---+---+
+   0   1   2   3   4   5   
+  -6  -5  -4  -3  -2  -1
+</code></pre>
+<p><strong>NOTA IMPORTANTE:</strong> En python la numeracion de las posiciones empieza en cero 0</p>
+<p>Para acceder a algun elemento de la lista, se utilizan corchetes, Ejemplo</p>
+<pre><code class="language-python">lista_vble = [45,23,38,2,8,17] #creacion de una lista
+lista_vble[2] # accediendo al valor que esta en la posicion 3
+&gt;&gt; 38
+</code></pre>
+<p>Los strings tienen un comportamiento similar a las List, pero los strings son variables inmutables, mientras que las listas si son mutables.</p>
+<pre><code class="language-python"># La indexacion y slicing de litas y strings es igual
+# La primera posicion es en 0
+word = 'Python'
+word[0]    # Caracter en la posición 0
+</code></pre>
+<pre><code>'P'
+</code></pre>
+<pre><code class="language-python">word[5]    # Caracter en la posición 5
+</code></pre>
+<pre><code>'n'
+</code></pre>
+<pre><code class="language-python">word[-1]  # Último caracter
+</code></pre>
+<pre><code>'n'
+</code></pre>
+<pre><code class="language-python">word[-2]  # Antepenúltimo caracter
+</code></pre>
+<pre><code>'o'
+</code></pre>
+<pre><code class="language-python">word[-6]   # Primer caracter en este ejemplo
+</code></pre>
+<pre><code>'P'
+</code></pre>
+<h4 id="seleccion-de-varios-elementos-slicing">Seleccion de varios elementos (Slicing)</h4>
+<p>El operador <code>:</code> se usa para indicar rangos, <code>[inicio:final-1]</code>, no se incluye el final</p>
+<pre><code> +---+---+---+---+---+---+
+ | P | y | t | h | o | n |
+ +---+---+---+---+---+---+
+   0   1   2   3   4   5   
+  -6  -5  -4  -3  -2  -1
+</code></pre>
+<pre><code class="language-python">word[0:2]  # El operador `:` se usa para indicar rangos, [inicio:final-1], no se incluye el final
+</code></pre>
+<pre><code>'Py'
+</code></pre>
+<pre><code class="language-python">word[:2]   # ':2' indica desde el principio hasta la posición 2 (sin incluirla)
+</code></pre>
+<pre><code>'Py'
+</code></pre>
+<pre><code class="language-python">word[2:5]  # [inicio:final-1], no se incluye el final
+</code></pre>
+<pre><code>'tho'
+</code></pre>
+<pre><code class="language-python">word[2:]   # Desde la posición 2 hasta el final
+</code></pre>
+<pre><code>'thon'
+</code></pre>
+<pre><code class="language-python">word[1:6:2] # [inicio:final-1:paso], Ej inicio = 1, final-1 = 5, paso cada 2 elementos
+</code></pre>
+<pre><code>'yhn'
+</code></pre>
+<pre><code class="language-python">word[::2]
+</code></pre>
+<pre><code>'Pto'
+</code></pre>
+<pre><code class="language-python">word[:2] + word[2:]  # Concatenacion de strings
+</code></pre>
+<pre><code>'Python'
+</code></pre>
+<pre><code class="language-python">word[:4] + word[2:] # Concatenacion de strings
+</code></pre>
+<pre><code>'Pyththon'
+</code></pre>
+<pre><code class="language-python">word[-2:]  # desde la posición -2 hasta el final, o sea, los últimos dos caracteres.
+</code></pre>
+<pre><code>'on'
+</code></pre>
+<pre><code class="language-python">word[:] # desde el primero hasta el último caracter.
+</code></pre>
+<pre><code>'Python'
+</code></pre>
+<pre><code class="language-python"># Asignaciones a una posicion especifica en las listas
+# Se podra hacer esta asignacion en los strings?
+#word[2] = 'e'
+</code></pre>
+<p>las listas son estructuras de datos mutables, entonces se pueden reescribir.</p>
+<p>Los strings NO son mutables</p>
+<pre><code class="language-python"># Las Listas son Variables Mutables
+H = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+P = H # copiar todo el contenido de Ha a P
+P[0] = 333
+print(&quot;Observar el que ocurre con 'H' cuando se cambia el valor de 'P', si P = H&quot;)
+print(f'P = {P}') # uso de f-strings para imprimir los resultados
+print(f'H = {H}') # uso de f-strings para imprimir los resultados
+</code></pre>
+<pre><code>Observar el que ocurre con 'H' cuando se cambia el valor de 'P', si P = H
+P = [333, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+H = [333, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</code></pre>
+<pre><code class="language-python">id(P)
+</code></pre>
+<pre><code>140079831399488
+</code></pre>
+<pre><code class="language-python">id(H)
+</code></pre>
+<pre><code>140079831399488
+</code></pre>
+<pre><code class="language-python">id(word)
+</code></pre>
+<pre><code>140079928559408
+</code></pre>
+<p>Las listas no se copian al asignarlas a otra variable, <em>¡es un puntero a la lista original!</em> ¡Esto evita problemas de memoria! pero puede llevar a errores en la programacion, entonces la copia se debe hacer explicita.</p>
+<pre><code class="language-python"># Las Listas son Variables Mutables
+H = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+P = H[:] # copiar todo el contenido de H a P
+P[0] = 333
+print(&quot;Observar el que ocurre con 'H' cuando se cambia el valor de 'P', si P = H[:]&quot;)
+print(f&quot;P = {P}&quot;) # uso de f-strings para imprimir los resultados
+print(f&quot;H = {H}&quot;) # uso de f-strings para imprimir los resultados
+</code></pre>
+<pre><code>Observar el que ocurre con 'H' cuando se cambia el valor de 'P', si P = H[:]
+P = [333, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+H = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</code></pre>
+<pre><code class="language-python">id(P)
+</code></pre>
+<pre><code>140079822691328
+</code></pre>
+<pre><code class="language-python">id(H)
+</code></pre>
+<pre><code>140079822797184
+</code></pre>
+<h4 id="indexacion-anidada">Indexacion anidada</h4>
+<pre><code class="language-python">nest = [1,2,3,[4,5,['target']]] # Lista con otra lista al interior
+nest
+</code></pre>
+<pre><code>[1, 2, 3, [4, 5, ['target']]]
+</code></pre>
+<pre><code class="language-python">nest[3] # Cuarto Elemento de la lista, lo que se retorna es una lista
+</code></pre>
+<pre><code>[4, 5, ['target']]
+</code></pre>
+<pre><code class="language-python">nest[3][2] # De la lista que es el elemento 4, obtener el elemento 3
+# el tipo de resultado es una lista
+</code></pre>
+<pre><code>['target']
+</code></pre>
+<pre><code class="language-python"># obtener el string
+nest[3][2][0] # De la lista que es el elemento 4, obtener el elemento 3, y obtener el valor de esa lista
+</code></pre>
+<pre><code>'target'
+</code></pre>
+<pre><code class="language-python">nest[3][2][0][:2] # De la lista que es el elemento 4, obtener el elemento 3, y obtener el valor de esa lista
+</code></pre>
+<pre><code>'ta'
+</code></pre>
+<pre><code class="language-python"># obtener otro elemento de la lista
+nest[3][:2][1]
+</code></pre>
+<pre><code>5
+</code></pre>
+<h4 id="agregar-datos-en-una-lista">Agregar datos en una lista</h4>
+<p>Agregar elementos a una lista se hace con los metodos: <code>.insert()</code>  <code>.append()</code></p>
+<h5 id="insert"><code>.insert()</code></h5>
+<p><code>list.insert(i, x)</code>: Inserta un ítem <code>x</code> en una posición <code>i</code>, los otros elementos despues de la posicion se mueven hacia la derecha.</p>
+<pre><code class="language-python">nest = [1,2,3,[4,5,['target']]] # Lista con otra lista al interior
+nest
+</code></pre>
+<pre><code>[1, 2, 3, [4, 5, ['target']]]
+</code></pre>
+<pre><code class="language-python">nest.insert(2,'Amo Python')
+nest
+</code></pre>
+<pre><code>[1, 2, 'Amo Python', 3, [4, 5, ['target']]]
+</code></pre>
+<h5 id="append"><code>.append()</code></h5>
+<p>Agrega los elementos al final de la lista</p>
+<pre><code class="language-python"># se agrega un dato al final de la lista utilizando el metodo append()
+nest[4][2].append(8)
+nest
+</code></pre>
+<pre><code>[1, 2, 'Amo Python', 3, [4, 5, ['target', 8]]]
+</code></pre>
+<pre><code class="language-python">nest[4].append('Pandas')
+nest
+</code></pre>
+<pre><code>[1, 2, 'Amo Python', 3, [4, 5, ['target', 8], 'Pandas']]
+</code></pre>
+<h4 id="asignar-valores-a-una-posición">Asignar valores a una posición</h4>
+<pre><code class="language-python">nest[2] = 'Casa' # reasignar el valor a una posicion de una lista
+nest
+</code></pre>
+<pre><code>[1, 2, 'Casa', 3, [4, 5, ['target', 8], 'Pandas']]
+</code></pre>
+<pre><code class="language-python">len(nest) #obtener el tamaño de la lista
+</code></pre>
+<pre><code>5
+</code></pre>
+<h4 id="borrar-elementos-de-una-lista">Borrar Elementos de una lista</h4>
+<pre><code class="language-python">nest[1:3] = [] # Borrar elementos de una lista
+nest
+</code></pre>
+<pre><code>[1, 3, [4, 5, ['target', 8], 'Pandas']]
+</code></pre>
+<pre><code class="language-python"># Borrar elementos de una lista conociendo su index
+
+del(nest[2][2][0]) 
+nest # observar que el valor esta dentro de una lista
+</code></pre>
+<pre><code>[1, 3, [4, 5, [8], 'Pandas']]
+</code></pre>
+<h4 id="concatenar-listas">Concatenar listas</h4>
+<pre><code class="language-python">print(nest)
+print(my_list)
+</code></pre>
+<pre><code>[1, 3, [4, 5, [8], 'Pandas']]
+['a', 'b', 'c']
+</code></pre>
+<pre><code class="language-python"># Concatenar listas
+new_list = nest + my_list
+new_list
+</code></pre>
+<pre><code>[1, 3, [4, 5, [8], 'Pandas'], 'a', 'b', 'c']
+</code></pre>
+<pre><code class="language-python"># agregar una lista al final
+nest.append(my_list)
+nest
+</code></pre>
+<pre><code>[1, 3, [4, 5, [8], 'Pandas'], ['a', 'b', 'c']]
+</code></pre>
+<pre><code class="language-python"># Repetir varias veces una lista
+repetida = my_list*4
+repetida
+</code></pre>
+<pre><code>['a', 'b', 'c', 'a', 'b', 'c', 'a', 'b', 'c', 'a', 'b', 'c']
+</code></pre>
+<pre><code class="language-python">new_list
+</code></pre>
+<pre><code>[1, 3, [4, 5, [8], 'Pandas'], 'a', 'b', 'c']
+</code></pre>
+<h3 id="diccionarios">Diccionarios</h3>
+<p>Se utilizan las llaves { } para su definicion, Un Diccionario es una estructura de datos con características especiales que nos permite almacenar cualquier tipo de valor como numeros, strings, listas e incluso otras funciones. Estos diccionarios nos permiten además identificar cada elemento por una clave (Key).
+Las claves son únicas dentro de un diccionario, es decir que no puede haber un diccionario que tenga dos veces la misma clave, si se asigna un valor a una clave ya existente, se reemplaza el valor anterior.</p>
+<p><strong>Nota:</strong>
+El algoritmo que usa Python internamente para buscar un elemento en un diccionario es muy distinto que el que utiliza para buscar en listas. los elementos en los diccionarios no tienen un orden determinado.</p>
+<p>Para buscar en las listas, se utiliza un algoritmos de comparación que tarda cada vez más a medida que la lista se hace más larga. En cambio, para buscar en diccionarios se utiliza un algoritmo llamado hash, que se basa en realizar un cálculo numérico sobre la clave del elemento, y tiene una propiedad muy interesante: sin importar cuántos elementos tenga el diccionario, el tiempo de búsqueda es siempre aproximadamente igual.</p>
+<p>Este algoritmo de hash es también la razón por la cual las claves de los diccionarios deben ser inmutables, ya que la operación hecha sobre las claves debe dar siempre el mismo resultado, y si se utilizara una variable mutable esto no sería posible.</p>
+<pre><code class="language-python"># Crear un diccionario
+d = {'key1':'item1','key2':'item2'}
+</code></pre>
+<pre><code class="language-python">d
+</code></pre>
+<pre><code>{'key1': 'item1', 'key2': 'item2'}
+</code></pre>
+<pre><code class="language-python">type(d)
+</code></pre>
+<pre><code>dict
+</code></pre>
+<pre><code class="language-python">d['key1'] #acceder al elemento que tiene la clave `key1`
+</code></pre>
+<pre><code>'item1'
+</code></pre>
+<pre><code class="language-python"># Un ejemplo de uso de los diccionarios
+pepito = {'edad':20,'nombre':'Pepito','Apellido':'Perez','estatura':1.77}
+pepito
+</code></pre>
+<pre><code>{'edad': 20, 'nombre': 'Pepito', 'Apellido': 'Perez', 'estatura': 1.77}
+</code></pre>
+<pre><code class="language-python">print(pepito['nombre'])
+print(pepito['Apellido']) #Observar que esta clave empieza con Mayuscula, Python es case sensitive
+print(pepito['edad'])
+print(pepito['estatura'])
+</code></pre>
+<pre><code>Pepito
+Perez
+20
+1.77
+</code></pre>
+<pre><code class="language-python">print (f&quot;El nombre del paciente es {pepito['nombre']} {pepito['Apellido']}, tiene {pepito['edad']} años y una estatura de {pepito['estatura']} &quot;)
+</code></pre>
+<pre><code>El nombre del paciente es Pepito Perez, tiene 20 años y una estatura de 1.77 
+</code></pre>
+<pre><code class="language-python">pepito.keys()
+</code></pre>
+<pre><code>dict_keys(['edad', 'nombre', 'Apellido', 'estatura'])
+</code></pre>
+<pre><code class="language-python"># Que ocurre si quiero obtener todos los valores del diccionario?
+# pepito[:]
+</code></pre>
+<h3 id="booleans-logicos">Booleans (Logicos)</h3>
+<pre><code class="language-python"># las palabras True y False son palabras restringidas
+# valor Verdadero
+True
+</code></pre>
+<pre><code>True
+</code></pre>
+<pre><code class="language-python"># valor Falso
+False
+</code></pre>
+<pre><code>False
+</code></pre>
+<pre><code class="language-python">v1 = True
+v2 = False
+
+print(f&quot;Valor de v1 = {v1} y v2 = {v2}&quot;)
+</code></pre>
+<pre><code>Valor de v1 = True y v2 = False
+</code></pre>
+<pre><code class="language-python">type(v1) # tipo de dato
+</code></pre>
+<pre><code>bool
+</code></pre>
+<h3 id="tuples">Tuples</h3>
+<p>Las tuplas son como las listas (se indexan de la misma forma), pero al igual que los strings no se pueden modificar (son inmutables). Son como unas listas de sólo lectura. Se crean con () (paréntesis) en lugar de [ ] (corchetes). Una vez se crea una tupla, no se puede cambiar ni su contenido ni su tamaño, a menos que hagas una copia de la tupla.</p>
+<pre><code class="language-python">fecha = (25, &quot;Mayo&quot;, 1810)
+fecha
+</code></pre>
+<pre><code>(25, 'Mayo', 1810)
+</code></pre>
+<pre><code class="language-python">type(fecha)
+</code></pre>
+<pre><code>tuple
+</code></pre>
+<pre><code class="language-python">fecha[0]
+</code></pre>
+<pre><code>25
+</code></pre>
+<pre><code class="language-python"># Se puede hacer?
+#fecha[1] = 'Julio'
+</code></pre>
+<h3 id="casting">Casting</h3>
+<p>Cambio entre tipos de datos</p>
+<pre><code class="language-python">#Conversion de float a entero
+int(5.789)
+</code></pre>
+<pre><code>5
+</code></pre>
+<pre><code class="language-python">#Conversion de entero a float
+float(3)
+</code></pre>
+<pre><code>3.0
+</code></pre>
+<pre><code class="language-python"># conversion de numero a string
+palabra = str(78345.345) 
+print(type(palabra))
+palabra
+</code></pre>
+<pre><code>&lt;class 'str'&gt;
+
+
+
+
+
+'78345.345'
+</code></pre>
+<pre><code class="language-python"># conversion de string a numero, si el string es un numero
+numero = int('3456') # recordar que los strings se escriben entre comillas simples o dobles
+print(type(numero))
+numero
+</code></pre>
+<pre><code>&lt;class 'int'&gt;
+
+
+
+
+
+3456
+</code></pre>
+<pre><code class="language-python">#conversion de lista a tuple
+tup = ('Python','Pandas',3.0,2018)
+lista = list(tup)
+type(lista)
+</code></pre>
+<pre><code>list
+</code></pre>
+<pre><code class="language-python"># conversion de tuple a lista
+lista2 = [1,2,3,4,5,6,7,8]
+tup2 = tuple(lista2)
+type(tup2)
+</code></pre>
+<pre><code>tuple
+</code></pre>
+<pre><code class="language-python"># Conversion de un numero a Boolean
+# Cualquier numero diferente de cero sera True
+print(bool(4))
+print(bool(1.65))
+print(bool(-3))
+print(bool(-5678))
+</code></pre>
+<pre><code>True
+True
+True
+True
+</code></pre>
+<pre><code class="language-python"># La conversion ser False si el numero es cero
+print(bool(0))
+</code></pre>
+<pre><code>False
+</code></pre>
+<pre><code class="language-python"># Conversion de Boolean a Numerico
+int(True)
+</code></pre>
+<pre><code>1
+</code></pre>
+<pre><code class="language-python"># Conversion de Boolean a Numerico
+int(False)
+</code></pre>
+<pre><code>0
+</code></pre>
+<hr>
+<h2 id="operadores-de-comparacion-y-logicos">Operadores de Comparacion y Logicos</h2>
+<h3 id="operadores-de-comparacion">Operadores de Comparacion</h3>
+<p>Python tiene los típicos operadores de comparación:</p>
+<table>
+<thead>
+<tr>
+<th>Operador</th>
+<th>Funcion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>Igual que</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>Diferente a</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>Menor que</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>| Mayor que
+&lt;= | Menor o igual que
+= | Mayor o igual que</p>
+</blockquote>
+<p>Sus respuestas son del tipo Boolean</p>
+<pre><code class="language-python">1 &gt; 2 # Mayor que
+</code></pre>
+<pre><code>False
+</code></pre>
+<pre><code class="language-python">1 &lt; 2 # Menor que
+</code></pre>
+<pre><code>True
+</code></pre>
+<pre><code class="language-python">1 &gt;= 1 # Mayor o igual que
+</code></pre>
+<pre><code>True
+</code></pre>
+<pre><code class="language-python">1 &lt;= 4 # Menor o igual que
+</code></pre>
+<pre><code>True
+</code></pre>
+<pre><code class="language-python">1 == 1 # Igual igual
+</code></pre>
+<pre><code>True
+</code></pre>
+<pre><code class="language-python">2 != 4 # Diferente
+</code></pre>
+<pre><code>True
+</code></pre>
+<pre><code class="language-python">'Hola' == 'Adios' #Comparacion de igualdad
+</code></pre>
+<pre><code>False
+</code></pre>
+<pre><code class="language-python">'Hola' != 'Adios' # Comparacion de diferencia
+</code></pre>
+<pre><code>True
+</code></pre>
+<pre><code class="language-python">'Hola' == 'hola' # Comparacion de igualdad
+</code></pre>
+<pre><code>False
+</code></pre>
+<h3 id="operadores-logicos">Operadores Logicos</h3>
+<p>Python implementa todos los operadores usuales de la lógica booleana.</p>
+<p>Se usan las palabras en inglés <code>and</code>, <code>or</code>, <code>not</code> en lugar de símbolos (||, &amp;&amp;, !, etc)</p>
+<pre><code class="language-python">(1 &gt; 2) and (2 &lt; 3) # Operador and
+</code></pre>
+<pre><code>False
+</code></pre>
+<pre><code class="language-python">(1 &gt; 2) or (2 &lt; 3) # operador or
+</code></pre>
+<pre><code>True
+</code></pre>
+<pre><code class="language-python">not(2 &lt; 3) or (1 &gt; 2) # operador not
+</code></pre>
+<pre><code>False
+</code></pre>
+<pre><code class="language-python">(1 == 2) or (2 == 3) or (4 == 4)
+</code></pre>
+<pre><code>True
+</code></pre>
+<hr>
+<h2 id="programacion-con-python">Programacion con Python</h2>
+<h3 id="condicionales-ifelif-else">Condicionales if,elif, else</h3>
+<p>En Python no hay llaves <code>{ }</code> ni <code>begin...end</code> para marcar el comienzo y fin de un bloque, sino que eso se logra con la indentación. La indentación por defecto son 4 espacios en blanco.</p>
+<p>Entonces va a ser necesario indentar correctamente para utilizar sentencias if, for o para definir funciones.</p>
+<p>El <code>if</code> es como el de otros lenguajes, pero no pide paréntesis y termina con <code>:</code> Su sintaxis es:</p>
+<pre><code class="language-python">if condicion : #se finaliza con dos puntos :
+    codigo a realizar#(indentado con 4 espacios)
+elif condicion:
+    codigo a realizar #(indentando con 4 espacios)
+elif condicion:
+    codigo a realizar #(indentando con 4 espacios)    
+else:
+    codigo a realizar #(indentado con 4 espacios)
+</code></pre>
+<pre><code class="language-python">if 1 &lt; 2:
+    print('Viva la Musica!')
+</code></pre>
+<pre><code>Viva la Musica!
+</code></pre>
+<pre><code class="language-python">if 1 &gt; 2:
+    print('Viva la Musica!')
+</code></pre>
+<pre><code class="language-python">if 1 &lt; 2:
+    print('Primero')
+else:
+    print('Ultimo')
+</code></pre>
+<pre><code>Primero
+</code></pre>
+<pre><code class="language-python">if 1 &gt; 2:
+    print('Primero')
+else:
+    print('Ultimo')
+</code></pre>
+<pre><code>Ultimo
+</code></pre>
+<pre><code class="language-python">if 1 == 2:
+    print('Primero')
+elif 3 == 3:
+    print('Mitad')
+else:
+    print('Ultimo')
+</code></pre>
+<pre><code>Mitad
+</code></pre>
+<h3 id="ciclos-for">Ciclos for</h3>
+<p>Los for son parecidos a los if, pero tienen la sintaxis</p>
+<p><code>for variable in lista:</code>. En este caso, variable es la variable que va a ir cambiando, y lista es una lista de python (o un iterable que es parecido)</p>
+<pre><code class="language-python">seq = [1,2,3,4,5] #lista de valores
+seq
+</code></pre>
+<pre><code>[1, 2, 3, 4, 5]
+</code></pre>
+<pre><code class="language-python">for item in seq: # en este ciclo item tomara cada uno de los valores que esta en seq uno por uno
+    print(item)
+</code></pre>
+<pre><code>1
+2
+3
+4
+5
+</code></pre>
+<pre><code class="language-python">for item in seq:
+    print('Viva la Musica!')
+</code></pre>
+<pre><code>Viva la Musica!
+Viva la Musica!
+Viva la Musica!
+Viva la Musica!
+Viva la Musica!
+</code></pre>
+<pre><code class="language-python">for casa in seq:
+    print(casa+casa)
+</code></pre>
+<pre><code>2
+4
+6
+8
+10
+</code></pre>
+<pre><code class="language-python"># Imprimir los strings de mi_lista por separado
+mi_lista=[&quot;img&quot;,&quot;python&quot;,&quot;numpy&quot;,&quot;pandas&quot;]
+for s in mi_lista:
+    print(s)    # este print va con indentación
+</code></pre>
+<pre><code>img
+python
+numpy
+pandas
+</code></pre>
+<h3 id="ciclos-while">Ciclos while</h3>
+<pre><code class="language-python">i = 1
+while i &lt; 5:
+    print(f'i es: {i}')
+    i = i+1
+</code></pre>
+<pre><code>i es: 1
+i es: 2
+i es: 3
+i es: 4
+</code></pre>
+<h3 id="control-de-ciclos-break-y-continue">Control de ciclos break y continue</h3>
+<p>Los comandos <code>break</code> y <code>continue</code> son utilizados para terminar/salir de un ciclos for o while.</p>
+<h4 id="break"><code>break</code></h4>
+<p>Termina la iteracion actual y continua con la ejecución de la siguiente instrucción</p>
+<pre><code class="language-python">for letra in &quot;Python&quot;:
+    if letra == &quot;h&quot;:
+        break
+    print (f&quot;Letra actual : {letra} &quot;)
+    
+print('Uso del comando break')    
+</code></pre>
+<pre><code>Letra actual : P 
+Letra actual : y 
+Letra actual : t 
+Uso del comando break
+</code></pre>
+<h4 id="continue"><code>continue</code></h4>
+<p>Regresa al comienzo del ciclo, ignorando todos los commandos que quedan en la iteración actual del ciclo e inicia la siguiente iteración.</p>
+<pre><code class="language-python">for letra in &quot;Python&quot;:
+    if letra == &quot;h&quot;:
+        continue
+    print(f&quot;Letra actual : {letra} &quot;)
+    
+print('Uso del comando continue')    
+</code></pre>
+<pre><code>Letra actual : P 
+Letra actual : y 
+Letra actual : t 
+Letra actual : o 
+Letra actual : n 
+Uso del comando continue
+</code></pre>
+<hr>
+<h3 id="list-comprehension">List comprehension</h3>
+<p>Las comprensiones de listas proveen una forma de escribir bucles for más concisamente.
+Pueden ser muy útiles para crear nuevas listas a partir de listas existentes o iterables, ademas tambien se puede poner condiciones. <a href="https://code.tutsplus.com/es/tutorials/list-comprehensions-in-python--cms-26836" target="_blank" rel="noopener">Link para mas ejemplos</a></p>
+<pre><code class="language-python"># Para elevar cada termino al cuadrado de una lista se deberia hacer asi:
+# Funcion para elevar al cuadrado cada uno de los elementos de una lista
+x = [1,2,3,4,5] #lista de valores
+
+out = []  # crear lista vacia
+for item in x:
+    out.append(item**2)
+print(out)
+</code></pre>
+<pre><code>[1, 4, 9, 16, 25]
+</code></pre>
+<pre><code class="language-python"># Usando List comprehension
+# *resultado*  = [*operacion*  *iteracion*  *condicion* ]
+out = [item**2 for item in x]
+out
+</code></pre>
+<pre><code>[1, 4, 9, 16, 25]
+</code></pre>
+<pre><code class="language-python"># Funcion para elevar al cuadrado cada uno de los elementos de una lista
+# Solo si el elemento es mayor que 3
+out = []
+for item in x:
+    if item &gt;= 3:
+        out.append(item**2)
+print(out)
+</code></pre>
+<pre><code>[9, 16, 25]
+</code></pre>
+<pre><code class="language-python"># *resultado*  = [*operacion*  *iteracion*  *condicion*  ]
+resultado = [item**2 for item in x if item &gt;= 3]
+resultado
+</code></pre>
+<pre><code>[9, 16, 25]
+</code></pre>
+<hr>
+<h2 id="funciones">Funciones</h2>
+<p>Las funciones se definen con la palabra clave ´def´ y tienen la sintaxis</p>
+<p><code>def nombre_funcion(parametros): pasos de la funcion</code></p>
+<p>Para devolver un valor utilizamos la palabra clave <code>return</code>.</p>
+<pre><code class="language-python">def my_func(): # el caracter `:` es obligatorio
+    &quot;&quot;&quot;                        # el cuerpo de la función esta definido por la identación (espacios en blanco) 
+    Docstring va aca.       
+    &quot;&quot;&quot;
+    print('Hola Python')
+</code></pre>
+<pre><code class="language-python">my_func()
+</code></pre>
+<pre><code>Hola Python
+</code></pre>
+<pre><code class="language-python">def square(x):   # el caracter `:` es obligatorio
+    return x**2  # el cuerpo de la función esta definido por la identación (espacios en blanco)
+                 # es obligatorio usar `return` para devolver valores
+</code></pre>
+<pre><code class="language-python">out = square(2)
+out # Para imprimir en jupyter (IPython) no es necesario la funcion print
+</code></pre>
+<pre><code>4
+</code></pre>
+<pre><code class="language-python"># Esta funcion recibe una lista y devuelve la suma de sus elementos
+def sumar_todos(lista):
+    suma=0             # recordar la identacion en Python, se recomienda 4 espacios
+    for v in lista:
+        #suma = suma +v
+        suma+=v        # Se identa nuevamente ya que esta dentro de un for
+    return suma
+</code></pre>
+<pre><code class="language-python">mi_lista=[54,12,99,15]
+la_suma = sumar_todos(mi_lista)
+print(f&quot;Los elementos de la lista suman = {la_suma}&quot;)
+</code></pre>
+<pre><code>Los elementos de la lista suman = 180
+</code></pre>
+<h3 id="funciones-basicas-de-python">Funciones basicas de python</h3>
+<p>Son funciones que incluye python desde su instalacion,
+<a href="https://docs.python.org/3.6/library/functions.html" target="_blank" rel="noopener">Built-in Functions</a>,
+estas son palabras restringidas <strong>NO USAR</strong></p>
+<table>
+<thead>
+<tr>
+<th>.</th>
+<th>.</th>
+<th>.</th>
+<th>.</th>
+<th>.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abs()</td>
+<td>dict()</td>
+<td>help()</td>
+<td>min()</td>
+<td>setattr()</td>
+</tr>
+<tr>
+<td>all()</td>
+<td><strong>dir()</strong></td>
+<td>hex()</td>
+<td>next()</td>
+<td>slice()</td>
+</tr>
+<tr>
+<td>any()</td>
+<td>divmod()</td>
+<td>id()</td>
+<td>object()</td>
+<td>sorted()</td>
+</tr>
+<tr>
+<td>ascii()</td>
+<td><strong>enumerate()</strong></td>
+<td>input()</td>
+<td>oct()</td>
+<td>staticmethod()</td>
+</tr>
+<tr>
+<td>bin()</td>
+<td>eval()</td>
+<td><strong>int()</strong></td>
+<td>open()</td>
+<td><strong>str()</strong></td>
+</tr>
+<tr>
+<td><strong>bool()</strong></td>
+<td>exec()</td>
+<td>isinstance()</td>
+<td>ord()</td>
+<td>sum()</td>
+</tr>
+<tr>
+<td>bytearray()</td>
+<td><strong>filter()</strong></td>
+<td>issubclass()</td>
+<td>pow()</td>
+<td>super()</td>
+</tr>
+<tr>
+<td>bytes()</td>
+<td><strong>float()</strong></td>
+<td>iter()</td>
+<td><strong>print()</strong></td>
+<td><strong>tuple()</strong></td>
+</tr>
+<tr>
+<td>callable()</td>
+<td>format()</td>
+<td><strong>len()</strong></td>
+<td>property()</td>
+<td><strong>type()</strong></td>
+</tr>
+<tr>
+<td>chr()</td>
+<td>frozenset()</td>
+<td><strong>list()</strong></td>
+<td><strong>range()</strong></td>
+<td>vars()</td>
+</tr>
+<tr>
+<td>classmethod()</td>
+<td>getattr()</td>
+<td>locals()</td>
+<td>repr()</td>
+<td>zip()</td>
+</tr>
+<tr>
+<td>compile()</td>
+<td>globals()</td>
+<td><strong>map()</strong></td>
+<td>reversed()</td>
+<td>import()</td>
+</tr>
+<tr>
+<td>complex()</td>
+<td>hasattr()</td>
+<td>max()</td>
+<td>round()</td>
+<td></td>
+</tr>
+<tr>
+<td>delattr()</td>
+<td>hash()</td>
+<td>memoryview()</td>
+<td><strong>set()</strong></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-python"># la funcion 'dir' Retorna un listado de atributos y metodos que tiene el tipo de datos especico
+dir('casa') #en este caso el tipo de datos es un string
+</code></pre>
+<pre><code>['__add__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__getnewargs__',
+ '__gt__',
+ '__hash__',
+ '__init__',
+ '__init_subclass__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__mod__',
+ '__mul__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__rmod__',
+ '__rmul__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ 'capitalize',
+ 'casefold',
+ 'center',
+ 'count',
+ 'encode',
+ 'endswith',
+ 'expandtabs',
+ 'find',
+ 'format',
+ 'format_map',
+ 'index',
+ 'isalnum',
+ 'isalpha',
+ 'isascii',
+ 'isdecimal',
+ 'isdigit',
+ 'isidentifier',
+ 'islower',
+ 'isnumeric',
+ 'isprintable',
+ 'isspace',
+ 'istitle',
+ 'isupper',
+ 'join',
+ 'ljust',
+ 'lower',
+ 'lstrip',
+ 'maketrans',
+ 'partition',
+ 'replace',
+ 'rfind',
+ 'rindex',
+ 'rjust',
+ 'rpartition',
+ 'rsplit',
+ 'rstrip',
+ 'split',
+ 'splitlines',
+ 'startswith',
+ 'strip',
+ 'swapcase',
+ 'title',
+ 'translate',
+ 'upper',
+ 'zfill']
+</code></pre>
+<pre><code class="language-python">'casa'.capitalize()
+</code></pre>
+<pre><code>'Casa'
+</code></pre>
+<pre><code class="language-python">'casa'.__class__
+</code></pre>
+<pre><code>str
+</code></pre>
+<pre><code class="language-python">dir(8)
+</code></pre>
+<pre><code>['__abs__',
+ '__add__',
+ '__and__',
+ '__bool__',
+ '__ceil__',
+ '__class__',
+ '__delattr__',
+ '__dir__',
+ '__divmod__',
+ '__doc__',
+ '__eq__',
+ '__float__',
+ '__floor__',
+ '__floordiv__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getnewargs__',
+ '__gt__',
+ '__hash__',
+ '__index__',
+ '__init__',
+ '__init_subclass__',
+ '__int__',
+ '__invert__',
+ '__le__',
+ '__lshift__',
+ '__lt__',
+ '__mod__',
+ '__mul__',
+ '__ne__',
+ '__neg__',
+ '__new__',
+ '__or__',
+ '__pos__',
+ '__pow__',
+ '__radd__',
+ '__rand__',
+ '__rdivmod__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__rfloordiv__',
+ '__rlshift__',
+ '__rmod__',
+ '__rmul__',
+ '__ror__',
+ '__round__',
+ '__rpow__',
+ '__rrshift__',
+ '__rshift__',
+ '__rsub__',
+ '__rtruediv__',
+ '__rxor__',
+ '__setattr__',
+ '__sizeof__',
+ '__str__',
+ '__sub__',
+ '__subclasshook__',
+ '__truediv__',
+ '__trunc__',
+ '__xor__',
+ 'as_integer_ratio',
+ 'bit_length',
+ 'conjugate',
+ 'denominator',
+ 'from_bytes',
+ 'imag',
+ 'numerator',
+ 'real',
+ 'to_bytes']
+</code></pre>
+<h3 id="len"><code>len()</code></h3>
+<p>Nos entrega la longitud de los elementos que hay en una lista, diccionario, string, etc</p>
+<pre><code class="language-python">mi_lista=[54,12,99,15]
+len(mi_lista)
+</code></pre>
+<pre><code>4
+</code></pre>
+<h3 id="range"><code>range()</code></h3>
+<p>Cuando no tenemos una lista y queremos hacer un for &ldquo;común&rdquo; y que la variable que cambia sea un número que va incrementándose, podemos utilizar la función range.</p>
+<p>En Python los índices comienzan en 0, y por eso los rangos también</p>
+<pre><code class="language-python">range(5) #funcion range de 0 hasta 5 (sin incluir el 5)
+</code></pre>
+<pre><code>range(0, 5)
+</code></pre>
+<pre><code class="language-python">list(range(5)) #se obtiene una lista de numeros enteros desde 0 hasta 5 (sin incluir el 5)
+</code></pre>
+<pre><code>[0, 1, 2, 3, 4]
+</code></pre>
+<pre><code class="language-python"># Si se usa en un FOR no es necesario convertirlo en un a lista
+for i in range(5): # Este es el uso mas comun de la funcion range
+    print(i)
+</code></pre>
+<pre><code>0
+1
+2
+3
+4
+</code></pre>
+<pre><code class="language-python">#También se puede comenzar el rango en otro valor en lugar de 0
+print(&quot;- for de 2 a 5:&quot;)
+for j in range(2,6): # range de 2 hasta 5
+    #aca va el codigo
+    print(j)
+</code></pre>
+<pre><code>- for de 2 a 5:
+2
+3
+4
+5
+</code></pre>
+<h3 id="enumerate"><code>enumerate()</code></h3>
+<pre><code class="language-python">mi_lista = ['apple', 'banana', 'grapes', 'pear'] # listado con frutas
+
+# funcion enumerate para obtener el numero de la iteracion 
+# y el valor de la lista que estoy iterando
+
+for itera, valor in enumerate(mi_lista): 
+    print(f&quot;En la iteracion {itera} tiene el valor asignado de {valor}&quot; )
+</code></pre>
+<pre><code>En la iteracion 0 tiene el valor asignado de apple
+En la iteracion 1 tiene el valor asignado de banana
+En la iteracion 2 tiene el valor asignado de grapes
+En la iteracion 3 tiene el valor asignado de pear
+</code></pre>
+<hr>
+<p><strong>NOTA: Se recomienda leer sobre las funciones (<code>map</code>, <code>filter</code>, <code>lambda</code> y <code>reduce</code>) que actuan sobre listas, y que permiten reemplazar los ciclos <code>for</code></strong></p>
+<p><a href="http://www.pythondiario.com/2017/10/programacion-funcional-lambda-map.html">http://www.pythondiario.com/2017/10/programacion-funcional-lambda-map.html</a></p>
+<hr>
+<hr>
+<h2 id="metodos">Metodos</h2>
+<p>Python permite definir clases y crear objetos de esas clases, pero esos temas están fuera de este tutorial. Los métodos se invocan de la siguiente forma objeto.metodo(parametro1,parametro2,&hellip;).</p>
+<h3 id="metodos-en-strings">Metodos en strings</h3>
+<p>Existen varios tipos de metodos para los strings, estos se utilizan mucho para hacer la preparacion de datos categoricos, para mas informacion:</p>
+<ul>
+<li><a href="https://docs.python.org/3.6/library/stdtypes.html#string-methods" target="_blank" rel="noopener">Metodos completos para strings</a></li>
+</ul>
+<pre><code class="language-python">st = 'Hola mi nombre es Jose R'
+</code></pre>
+<pre><code class="language-python">len(st) #funcion que determina la longitud de 'st' tambien sirve con listas
+</code></pre>
+<pre><code>24
+</code></pre>
+<h4 id="metodos-de-formato">Metodos de Formato</h4>
+<h5 id="lower"><code>.lower()</code></h5>
+<p>devuelve el string en minusculas</p>
+<pre><code class="language-python">st.lower() #devuelve el string en minusculas
+</code></pre>
+<pre><code>'hola mi nombre es jose r'
+</code></pre>
+<pre><code class="language-python">st # la operacion no es inplace
+</code></pre>
+<pre><code>'Hola mi nombre es Jose R'
+</code></pre>
+<h5 id="upper"><code>.upper()</code></h5>
+<p>devuelve el string en Mayusculas</p>
+<pre><code class="language-python">st.upper() #devuelve el string en Mayusculas
+</code></pre>
+<pre><code>'HOLA MI NOMBRE ES JOSE R'
+</code></pre>
+<pre><code class="language-python">st # la operacion no es inplace
+</code></pre>
+<pre><code>'Hola mi nombre es Jose R'
+</code></pre>
+<h5 id="swapcase"><code>.swapcase()</code></h5>
+<p>una copia de la cadena convertidas las mayúsculas en minúsculas y viceversa.</p>
+<pre><code class="language-python">st
+</code></pre>
+<pre><code>'Hola mi nombre es Jose R'
+</code></pre>
+<pre><code class="language-python">st.swapcase()
+</code></pre>
+<pre><code>'hOLA MI NOMBRE ES jOSE r'
+</code></pre>
+<h5 id="capitalize"><code>.capitalize()</code></h5>
+<p>una copia de la cadena con la primera letra en mayúsculas.</p>
+<pre><code class="language-python">st = 'hola mi nombre es jose r'
+st.capitalize()
+</code></pre>
+<pre><code>'Hola mi nombre es jose r'
+</code></pre>
+<h5 id="zfill"><code>.zfill()</code></h5>
+<p>Retorna una copia de la cadena rellena con ceros a la izquierda hasta alcanzar la longitud final indicada.</p>
+<pre><code class="language-python">id_upb = '5789'
+id_upb.zfill(9)
+</code></pre>
+<pre><code>'000005789'
+</code></pre>
+<h4 id="metodos-de-busqueda">Metodos de Busqueda</h4>
+<h5 id="count"><code>.count()</code></h5>
+<p>Retorna un entero representando la cantidad de apariciones de subcadena dentro de cadena</p>
+<pre><code class="language-python">st
+</code></pre>
+<pre><code>'hola mi nombre es jose r'
+</code></pre>
+<pre><code class="language-python">st.count('e') # numero de veces que esta la letra 'e'
+</code></pre>
+<pre><code>3
+</code></pre>
+<h4 id="find"><code>.find()</code></h4>
+<p>Retorna: un entero representando la posición donde inicia la subcadena dentro de cadena. Si no la encuentra, retorna -1.</p>
+<pre><code class="language-python">st
+</code></pre>
+<pre><code>'hola mi nombre es jose r'
+</code></pre>
+<pre><code class="language-python">st.find('nombre')
+</code></pre>
+<pre><code>8
+</code></pre>
+<h4 id="metodos-de-sustiticion">Metodos de Sustiticion</h4>
+<h5 id="replace"><code>.replace()</code></h5>
+<p>Reemplazar texto en una cadena</p>
+<pre><code class="language-python">'hola mi nombre es jose r'.replace('jose r','Jose Ricardo')
+</code></pre>
+<pre><code>'hola mi nombre es Jose Ricardo'
+</code></pre>
+<pre><code class="language-python">st.replace('jose r','Jose Ricardo')
+</code></pre>
+<pre><code>'hola mi nombre es Jose Ricardo'
+</code></pre>
+<h5 id="strip"><code>.strip()</code></h5>
+<p>Eliminar caracteres a la izquierda y derecha de una cadena</p>
+<pre><code class="language-python">st_esp = '   hola mi nombre es jose r           '# cadena de caracteres con muchos espacios
+st_esp
+</code></pre>
+<pre><code>'   hola mi nombre es jose r           '
+</code></pre>
+<pre><code class="language-python">st_esp.strip()  # Eliminar por predeterminado los espacios de izquierda y derecha
+</code></pre>
+<pre><code>'hola mi nombre es jose r'
+</code></pre>
+<pre><code class="language-python">st_esp = '------hola mi nombre es jose r----'# cadena de caracteres con muchos guiones
+st_esp
+</code></pre>
+<pre><code>'------hola mi nombre es jose r----'
+</code></pre>
+<pre><code class="language-python">st_esp.strip('-')# Eliminar los guiones de izquierda y derecha
+</code></pre>
+<pre><code>'hola mi nombre es jose r'
+</code></pre>
+<h5 id="lstrip"><code>.lstrip()</code></h5>
+<p>Eliminar caracteres a la izquierda de una cadena</p>
+<pre><code class="language-python">st_esp = 'www.kaggle.com'
+st_esp
+</code></pre>
+<pre><code>'www.kaggle.com'
+</code></pre>
+<pre><code class="language-python">st_esp.lstrip('w.') # Eliminar desde el inicio de la cadena incluido los caracteres definidos
+</code></pre>
+<pre><code>'kaggle.com'
+</code></pre>
+<pre><code class="language-python">'0000083746'.lstrip('0')
+</code></pre>
+<pre><code>'83746'
+</code></pre>
+<h5 id="rstrip"><code>.rstrip()</code></h5>
+<p>Eliminar caracteres a la derecha de una cadena</p>
+<pre><code class="language-python">st_esp.rstrip('.com') # Eliminar desde el inicio de la cadena incluido los caracteres definidos
+</code></pre>
+<pre><code>'www.kaggle'
+</code></pre>
+<h4 id="metodos-de-union-y-division">Metodos de Union y Division</h4>
+<h5 id="join"><code>.join()</code></h5>
+<p>Retorna la cadena unida con el elemento que se desee</p>
+<pre><code class="language-python">formato_numero_factura = (&quot;Nº 0000-0&quot;, &quot;-0000 (ID: &quot;, &quot;)&quot;)
+</code></pre>
+<pre><code class="language-python">numero = &quot;275&quot;
+</code></pre>
+<pre><code class="language-python">numero_factura = numero.join(formato_numero_factura) 
+numero_factura
+</code></pre>
+<pre><code>'Nº 0000-0275-0000 (ID: 275)'
+</code></pre>
+<h5 id="split"><code>.split()</code></h5>
+<p>Retorna una lista con todos elementos encontrados al dividir la cadena por un separador.</p>
+<pre><code class="language-python">palabras = &quot;python, guia, curso, tutorial&quot;.split(&quot;, &quot;) 
+palabras
+</code></pre>
+<pre><code>['python', 'guia', 'curso', 'tutorial']
+</code></pre>
+<pre><code class="language-python">st
+</code></pre>
+<pre><code>'hola mi nombre es jose r'
+</code></pre>
+<pre><code class="language-python">st.split() #divide el string en 'espacios en blanco por defecto' y devuelve una lista
+</code></pre>
+<pre><code>['hola', 'mi', 'nombre', 'es', 'jose', 'r']
+</code></pre>
+<pre><code class="language-python">tweet = 'Viva el Rock and Roll! #Musica #Concierto' # creando un string
+tweet
+</code></pre>
+<pre><code>'Viva el Rock and Roll! #Musica #Concierto'
+</code></pre>
+<pre><code class="language-python">tweet.split('#') # dividir el string y el elemnto de division es #
+</code></pre>
+<pre><code>['Viva el Rock and Roll! ', 'Musica ', 'Concierto']
+</code></pre>
+<pre><code class="language-python">tweet.split('#')[1]
+</code></pre>
+<pre><code>'Musica '
+</code></pre>
+<pre><code class="language-python">['hola','como','estas']
+</code></pre>
+<pre><code>['hola', 'como', 'estas']
+</code></pre>
+<pre><code class="language-python">'hola como estas'.split()
+</code></pre>
+<pre><code>['hola', 'como', 'estas']
+</code></pre>
+<h3 id="metodos-en-listas">Metodos en listas</h3>
+<p>Existen varios tipos de metodos para las listas, para mas informacion: <a href="https://docs.python.org/3.6/tutorial/datastructures.html" target="_blank" rel="noopener">Metodos completos para listas</a></p>
+<ul>
+<li>
+<p><code>list.append(x)</code>: Agrega un ítem al final de la lista. Equivale a <code>lst[len(lst):] = [x]</code></p>
+</li>
+<li>
+<p><code>list.insert(i, x)</code>:
+Inserta un ítem en una posición dada. El primer argumento es el índice del ítem delante del cual se insertará, por lo tanto <code>a.insert(0, x)</code> inserta al principio de la lista, y <code>lst.insert(len(lst), x)</code> equivale a <code>lst.append(x)</code></p>
+</li>
+<li>
+<p><code>list.remove(x)</code>: Quita el primer ítem de la lista cuyo valor sea x. Es un error si no existe tal ítem.</p>
+</li>
+<li>
+<p><code>list.pop([i])</code>: Quita el ítem en la posición dada de la lista, y lo devuelve. Si no se especifica un índice, a.pop() quita y devuelve el último ítem de la lista. (Los corchetes que encierran a i en la firma del método denotan que el parámetro es opcional, no que deberías escribir corchetes en esa posición. Verás esta notación con frecuencia en la Referencia de la Biblioteca de Python.)</p>
+</li>
+<li>
+<p><code>list.clear()</code>: Quita todos los elementos de la lista. Equivalente a <code>del lst[:]</code>.</p>
+</li>
+<li>
+<p><code>list.index(x[, start[, end]])</code>: Devuelve el índice basado de la lista del primer ítem cuyo valor sea x. Levanta una excepción ValueError si no existe tal ítem.
+Los argumentos opcionales start y end son interpetados como la notación de slicing y se usan para limitar la búsqueda a una subsecuencia particular de la lista. El index retornado se calcula de manera relativa al inicio de la secuencia completa en lugar de con respecto al argumento start.</p>
+</li>
+<li>
+<p><code>list.count(x)</code>: Devuelve el número de veces que x aparece en la lista.</p>
+</li>
+<li>
+<p><code>list.sort(key=None, reverse=False)</code>: Ordena los ítems de la lista in situ (los argumentos pueden ser usados para personalizar el orden de la lista, ve sorted() para su explicación).</p>
+</li>
+<li>
+<p><code>list.reverse()</code>: Invierte los elementos de la lista in situ.</p>
+</li>
+<li>
+<p><code>list.copy()</code>: Devuelve una copia superficial de la lista. Equivalente a <code>lst[:]</code>.</p>
+</li>
+</ul>
+<p>Las mas usadas son:</p>
+<pre><code class="language-python">lst = [8,2,3,45,24,53,785,98,1,3,6,9,2,1] # lista
+lst
+</code></pre>
+<pre><code>[8, 2, 3, 45, 24, 53, 785, 98, 1, 3, 6, 9, 2, 1]
+</code></pre>
+<pre><code class="language-python">len(lst) # numero de elementos de la lista
+</code></pre>
+<pre><code>14
+</code></pre>
+<h4 id="appendx"><code>.append(x)</code>:</h4>
+<p>Agrega un ítem al final de la lista. Equivale a <code>lst[len(lst):] = [x]</code></p>
+<pre><code class="language-python">lst.append(37) # Agrega este valro al final de la lista
+lst
+</code></pre>
+<pre><code>[8, 2, 3, 45, 24, 53, 785, 98, 1, 3, 6, 9, 2, 1, 37]
+</code></pre>
+<h4 id="popi"><code>.pop([i])</code>:</h4>
+<p>Quita el ítem en la posición dada de la lista, y lo devuelve. Si no se especifica un índice, <code>lst.pop()</code> quita y devuelve el último ítem de la lista. (Los corchetes que encierran a i en la firma del método denotan que el parámetro es opcional, no que deberías escribir corchetes en esa posición. Verás esta notación con frecuencia en la Referencia de la Biblioteca de Python.)</p>
+<pre><code class="language-python">aa = lst.pop() # saca el ultimo elemento de la lista, para siempre
+aa
+</code></pre>
+<pre><code>37
+</code></pre>
+<pre><code class="language-python">lst
+</code></pre>
+<pre><code>[8, 2, 3, 45, 24, 53, 785, 98, 1, 3, 6, 9, 2, 1]
+</code></pre>
+<pre><code class="language-python">aa = lst.pop(4) # saca el 4 elemento de la lista, para siempre
+aa
+</code></pre>
+<pre><code>24
+</code></pre>
+<pre><code class="language-python">lst
+</code></pre>
+<pre><code>[8, 2, 3, 45, 53, 785, 98, 1, 3, 6, 9, 2, 1]
+</code></pre>
+<h4 id="copy"><code>.copy()</code>:</h4>
+<p>Devuelve una copia superficial de la lista. Equivalente a <code>list[:]</code></p>
+<pre><code class="language-python"># Hacer una copia de la lista,
+new_lst = lst.copy()
+new_lst
+# tambien puede ser new_lst=lst[:]
+</code></pre>
+<pre><code>[8, 2, 3, 45, 53, 785, 98, 1, 3, 6, 9, 2, 1]
+</code></pre>
+<h4 id="sortreversefalse"><code>.sort(reverse=False)</code>:</h4>
+<p>Ordena los ítems de la lista in situ o inplace</p>
+<pre><code class="language-python">lst.sort() #ordena la lista de menor a mayor
+lst
+</code></pre>
+<pre><code>[1, 1, 2, 2, 3, 3, 6, 8, 9, 45, 53, 98, 785]
+</code></pre>
+<pre><code class="language-python">lst.sort(reverse=True) #ordena la lista de mayor a menor
+lst
+</code></pre>
+<pre><code>[785, 98, 53, 45, 9, 8, 6, 3, 3, 2, 2, 1, 1]
+</code></pre>
+<h4 id="identificar-elementos-en-la-lista">Identificar Elementos en la lista</h4>
+<pre><code class="language-python">'x' in [1,2,3] # identificar si un elemento esta en una lista
+</code></pre>
+<pre><code>False
+</code></pre>
+<pre><code class="language-python">'x' in ['x','y','z'] # identificar si un elemento esta en una lista
+</code></pre>
+<pre><code>True
+</code></pre>
+<h2 id="instalar-paquetes-o-librerias">Instalar Paquetes o Librerias</h2>
+<p>El repositorio Principal de donde se encuentran las librerias de Python es:</p>
+<p><a href="https://pypi.org/" target="_blank" rel="noopener">Pypi:  https://pypi.org/</a></p>
+<p>Si Ha realizado la instalacion con Anaconda, las librerias se encuentran en:</p>
+<p><a href="https://anaconda.org/anaconda/repo" target="_blank" rel="noopener">Anaconda Repo - https://anaconda.org/anaconda/repo</a></p>
+<h3 id="instalacion-en-linea-de-comando">Instalacion en Linea de comando</h3>
+<h4 id="pip">PIP</h4>
+<p><code>pip install [nombre_paquete]</code> #sin corchetes</p>
+<p>Ejemplo: <code>pip install pandas</code></p>
+<h4 id="conda">CONDA</h4>
+<p>Solo si se realizo una instalacion con Anaconda</p>
+<p><code>conda install -c [canal] [nombre_paquete]</code> #sin corchetes</p>
+<p>Ejemplo: <code>conda install -c anaconda pandas</code></p>
+<h3 id="instalacion-en-jupyter-notebook">Instalacion en Jupyter Notebook</h3>
+<h4 id="pip-1">PIP</h4>
+<p><code>!python -m pip install [nombre_paquete]</code> #sin corchetes</p>
+<p><strong>Usar este para Google Collaboratory</strong></p>
+<p>Ejemplo: <code>!python -m pip install pandas</code></p>
+<h4 id="conda-1">CONDA</h4>
+<p><code>!conda install -c [canal] [nombre_paquete]</code> #sin corchetes</p>
+<p>Ejemplo: <code>!conda install -c anaconda pandas</code></p>
+<h2 id="ejemplos">Ejemplos</h2>
+<p>Links con Jupyter notebook de ejemplo de diferentes temas, usando Python</p>
+<p><a href="https://github.com/donnemartin/data-science-ipython-notebooks">https://github.com/donnemartin/data-science-ipython-notebooks</a></p>
+<p><a href="https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks">https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks</a></p>
+<h2 id="referencias">Referencias</h2>
+<ul>
+<li><a href="https://docs.python.org/3.6/tutorial/index.html" target="_blank" rel="noopener">Tutorial official Python</a></li>
+<li><a href="http://docs.python.org.ar/tutorial/3/index.html" target="_blank" rel="noopener">Tutorial Python en español</a></li>
+<li><a href="https://docs.hektorprofe.net/python/" target="_blank" rel="noopener">Curso Python en Español</a></li>
+<li><a href="https://uniwebsidad.com/libros/python" target="_blank" rel="noopener">Python para principiantes</a></li>
+<li><a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PythonForDataScience.pdf" target="_blank" rel="noopener">Python for data science Cheatsheet</a></li>
+<li><a href="https://jakevdp.github.io/PythonDataScienceHandbook/" target="_blank" rel="noopener">Python Data Science Handbook -online Free</a></li>
+<li><a href="https://greenteapress.com/wp/think-python-2e/" target="_blank" rel="noopener">Think Python 2nd Edition by Allen B. Downey</a>
+<ul>
+<li><a href="https://argentinaenpython.com/quiero-aprender-python/aprenda-a-pensar-como-un-programador-con-python.pdf" target="_blank" rel="noopener">Pensar en Python, traduccion al español</a></li>
+</ul>
+</li>
+<li><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank" rel="noopener">Markdown cheatsheet</a></li>
+<li><a href="http://ipython.readthedocs.io/en/stable/index.html" target="_blank" rel="noopener">IPython tutorial</a></li>
+<li><a href="https://www.dataquest.io/blog/jupyter-notebook-tips-tricks-shortcuts/" target="_blank" rel="noopener">28 Jupyter Notebook tips, tricks, and shortcuts</a></li>
+</ul>
+<p><strong>Phd. Jose R. Zapata</strong></p>
+<ul>
+<li><a href="https://joserzapata.github.io/" target="_blank" rel="noopener">https://joserzapata.github.io/</a></li>
+<li><a href="https://twitter.com/joserzapata">https://twitter.com/joserzapata</a></li>
+</ul>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Sep 9, 2020</p>
+
+          
+
+
+
+
+
+          
+
+
+          
+
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2020
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Published with
+    <a href="https://wowchemy.com" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/shell.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/wowchemy.min.4c2bca31150ce93c5a5e43b8a50f22fd.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

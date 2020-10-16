@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Music-information-retrieval | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/tag/music-information-retrieval/</link>
+      <atom:link href="https://joserzapata.github.io/tag/music-information-retrieval/index.xml" rel="self" type="application/rss+xml" />
+    <description>Music-information-retrieval</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Mon, 28 Sep 2020 10:57:42 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Music-information-retrieval</title>
+      <link>https://joserzapata.github.io/tag/music-information-retrieval/</link>
+    </image>
+    
+    <item>
+      <title>Sesquialtera in the Colombian Bambuco: Perception and Estimation of Beat and Meter</title>
+      <link>https://joserzapata.github.io/publication/ismir2020/</link>
+      <pubDate>Mon, 28 Sep 2020 10:57:42 -0500</pubDate>
+      <guid>https://joserzapata.github.io/publication/ismir2020/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ACMUS - Advancing Computational Musicology: Semi-supervised and Unsupervised Segmentation and Annotation of Musical Collections</title>
+      <link>https://joserzapata.github.io/publication/acmus19/</link>
+      <pubDate>Fri, 01 Nov 2019 19:28:09 +0800</pubDate>
+      <guid>https://joserzapata.github.io/publication/acmus19/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Acmus</title>
+      <link>https://joserzapata.github.io/project/acmus/</link>
+      <pubDate>Mon, 15 Jul 2019 15:01:09 -0500</pubDate>
+      <guid>https://joserzapata.github.io/project/acmus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Aplicaciones de Audio con Machine Learning</title>
+      <link>https://joserzapata.github.io/talk/meetup_2018/</link>
+      <pubDate>Tue, 02 Oct 2018 18:00:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/talk/meetup_2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Audio signal analysis with python</title>
+      <link>https://joserzapata.github.io/talk/pycon2018/</link>
+      <pubDate>Fri, 09 Feb 2018 11:40:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/talk/pycon2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sistemas Automaticos para Extraccion de Información Musical (Generalidades y Aplicaciones)</title>
+      <link>https://joserzapata.github.io/talk/aes2016/</link>
+      <pubDate>Fri, 22 Jul 2016 14:00:00 -0500</pubDate>
+      <guid>https://joserzapata.github.io/talk/aes2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: an open source library for audio analysis</title>
+      <link>https://joserzapata.github.io/publication/essentia-sigmm/</link>
+      <pubDate>Fri, 21 Mar 2014 00:11:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/publication/essentia-sigmm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
+      <link>https://joserzapata.github.io/publication/essentia-ismir/</link>
+      <pubDate>Sun, 03 Nov 2013 23:32:53 -0500</pubDate>
+      <guid>https://joserzapata.github.io/publication/essentia-ismir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: an open-source library for sound and music analysis</title>
+      <link>https://joserzapata.github.io/publication/essentia-acm/</link>
+      <pubDate>Mon, 21 Oct 2013 00:11:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/publication/essentia-acm/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Matlab | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/tag/matlab/</link>
+      <atom:link href="https://joserzapata.github.io/tag/matlab/index.xml" rel="self" type="application/rss+xml" />
+    <description>Matlab</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sat, 04 Jan 2014 23:00:38 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Matlab</title>
+      <link>https://joserzapata.github.io/tag/matlab/</link>
+    </image>
+    
+    <item>
+      <title>Multifeature Beat tracker</title>
+      <link>https://joserzapata.github.io/project/multifeature-beat-tracker/</link>
+      <pubDate>Sat, 04 Jan 2014 23:00:38 -0500</pubDate>
+      <guid>https://joserzapata.github.io/project/multifeature-beat-tracker/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

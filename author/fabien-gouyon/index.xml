@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fabien Gouyon | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/author/fabien-gouyon/</link>
+      <atom:link href="https://joserzapata.github.io/author/fabien-gouyon/index.xml" rel="self" type="application/rss+xml" />
+    <description>Fabien Gouyon</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sat, 03 Nov 2012 12:16:05 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Fabien Gouyon</title>
+      <link>https://joserzapata.github.io/author/fabien-gouyon/</link>
+    </image>
+    
+    <item>
+      <title>Selective Sampling for Beat Tracking Evaluation</title>
+      <link>https://joserzapata.github.io/publication/selective-sampling-beat-tracking/</link>
+      <pubDate>Sat, 03 Nov 2012 12:16:05 -0500</pubDate>
+      <guid>https://joserzapata.github.io/publication/selective-sampling-beat-tracking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assigning a confidence threshold on automatic beat annotation in large datasets</title>
+      <link>https://joserzapata.github.io/publication/assigning-confidence/</link>
+      <pubDate>Mon, 08 Oct 2012 19:38:56 -0500</pubDate>
+      <guid>https://joserzapata.github.io/publication/assigning-confidence/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>On the automatic identification of difficult examples for beat tracking: towards building new evaluation datasets</title>
+      <link>https://joserzapata.github.io/publication/automatic-identification/</link>
+      <pubDate>Sun, 25 Mar 2012 19:44:33 -0500</pubDate>
+      <guid>https://joserzapata.github.io/publication/automatic-identification/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,7 +5,7 @@
     <link>https://joserzapata.github.io/</link>
       <atom:link href="https://joserzapata.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Jose Ricardo Zapata</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Mon, 28 Sep 2020 10:57:42 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Mon, 28 Sep 2020 10:57:42 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
       <title>Jose Ricardo Zapata</title>
@@ -28,12 +28,12 @@
       <description>
 
 &lt;p&gt;Esta es una traduccion propia al español del Apendice B (Machine Learning Project Checklist) del libro
-&lt;a href=&#34;https://www.amazon.com/-/es/gp/product/B07XGF2G87/&#34; target=&#34;_blank&#34;&gt;Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems&lt;/a&gt; 2nd Edition de &lt;a href=&#34;https://twitter.com/aureliengeron&#34; target=&#34;_blank&#34;&gt;Aurélien Géron&lt;/a&gt;
+&lt;a href=&#34;https://www.amazon.com/-/es/gp/product/B07XGF2G87/&#34;&gt;Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems&lt;/a&gt; 2nd Edition de &lt;a href=&#34;https://twitter.com/aureliengeron&#34;&gt;Aurélien Géron&lt;/a&gt;
 con algunos pasos propios agregados o que he encontrado en otros libros o cursos que he realizado.&lt;/p&gt;
 
 &lt;p&gt;Este Libro me ha gustado mucho, para mi es el libro practico mas completo sobre machine learning con python que he leido, tiene una excelente estructura, codigo en python muy bien explicado, ademas muchos tips y sugerencias para realizar un proyecto de machine learning.&lt;/p&gt;
 
-&lt;p&gt;El libro esta acompañado por un repositorio con Jupyter Notebooks: &lt;a href=&#34;https://github.com/ageron/handson-ml2&#34; target=&#34;_blank&#34;&gt;https://github.com/ageron/handson-ml2&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;El libro esta acompañado por un repositorio con Jupyter Notebooks: &lt;a href=&#34;https://github.com/ageron/handson-ml2&#34;&gt;https://github.com/ageron/handson-ml2&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -187,7 +187,7 @@ columnas).&lt;/li&gt;
 &lt;ol&gt;
 &lt;li&gt;Entrenar muchos modelos rápidos y utilizando parámetros estándar de diferentes categorías (p. Ej., Lineales, Naive Bayes, SVM, Random Forest, redes neuronales, etc.).&lt;/li&gt;
 &lt;li&gt;Medir y comparar su desempeño.&lt;/li&gt;
-&lt;li&gt;Para cada modelo, utilice la validación cruzada (&lt;a href=&#34;https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada&#34; target=&#34;_blank&#34;&gt;Cross validation&lt;/a&gt;) de N subconjuntos y calcule la media y la desviación estándar de la medida de rendimiento en las N evaluaciones.&lt;/li&gt;
+&lt;li&gt;Para cada modelo, utilice la validación cruzada (&lt;a href=&#34;https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada&#34;&gt;Cross validation&lt;/a&gt;) de N subconjuntos y calcule la media y la desviación estándar de la medida de rendimiento en las N evaluaciones.&lt;/li&gt;
 &lt;li&gt;Analice las variables más significativas para cada algoritmo.&lt;/li&gt;
 &lt;li&gt;Analice los tipos de errores que cometen los modelos.&lt;/li&gt;
 &lt;li&gt;¿Qué datos habría utilizado un humano para evitar estos errores?&lt;/li&gt;
@@ -210,9 +210,9 @@ columnas).&lt;/li&gt;
 &lt;/div&gt;
 
 &lt;ol&gt;
-&lt;li&gt;Ajuste los hiperparámetros (&lt;a href=&#34;https://en.wikipedia.org/wiki/Hyperparameter_optimization&#34; target=&#34;_blank&#34;&gt;hyperparameter tunning&lt;/a&gt;) mediante validación cruzada (&lt;a href=&#34;https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada&#34; target=&#34;_blank&#34;&gt;cross validation&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Ajuste los hiperparámetros (&lt;a href=&#34;https://en.wikipedia.org/wiki/Hyperparameter_optimization&#34;&gt;hyperparameter tunning&lt;/a&gt;) mediante validación cruzada (&lt;a href=&#34;https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada&#34;&gt;cross validation&lt;/a&gt;).&lt;/li&gt;
 &lt;li&gt;Tratar las elecciones de transformación de datos como hiperparámetros, especialmente cuando no esta seguro de ellos (por ejemplo, ¿debería reemplazar los valores faltantes con cero o con el valor medio? ¿O simplemente dejar eliminar las filas?).&lt;/li&gt;
-&lt;li&gt;A menos que haya muy pocos valores de hiperparámetros para explorar, prefiera la búsqueda aleatoria (random search)  a la búsqueda de cuadrícula (grid search). Si el entrenamiento es muy largo, es posible que prefiera un enfoque de optimización bayesiano (por ejemplo, utilizando procesos previos gaussianos, como lo describen &lt;a href=&#34;https://goo.gl/PEFfGr&#34; target=&#34;_blank&#34;&gt;Jasper Snoek, Hugo Larochelle y Ryan Adams&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
+&lt;li&gt;A menos que haya muy pocos valores de hiperparámetros para explorar, prefiera la búsqueda aleatoria (random search)  a la búsqueda de cuadrícula (grid search). Si el entrenamiento es muy largo, es posible que prefiera un enfoque de optimización bayesiano (por ejemplo, utilizando procesos previos gaussianos, como lo describen &lt;a href=&#34;https://goo.gl/PEFfGr&#34;&gt;Jasper Snoek, Hugo Larochelle y Ryan Adams&lt;/a&gt;&lt;sup class=&#34;footnote-ref&#34; id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/li&gt;
 &lt;li&gt;Pruebe los métodos de Ensamble (ensemble methods). La combinación de sus mejores modelos a menudo tendrá un mejor rendimiento que se ejecutan individualmente (hay mejor desempeño si hay diversidad de errores entre los modelos).&lt;/li&gt;
 &lt;li&gt;Una vez que esté seguro de su modelo final, mida su rendimiento en el conjunto de prueba (test set, separado al inicio) para estimar el error de generalización.&lt;/li&gt;
 &lt;/ol&gt;
@@ -251,10 +251,10 @@ simplemente comenzaría a sobreajustar el conjunto de prueba.
 &lt;h1 id=&#34;referencias&#34;&gt;Referencias&lt;/h1&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/-/es/gp/product/B07XGF2G87/&#34; target=&#34;_blank&#34;&gt;Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/ageron/handson-ml2&#34; target=&#34;_blank&#34;&gt;https://github.com/ageron/handson-ml2&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://machinelearningmastery.com/machine-learning-in-python-step-by-step/&#34; target=&#34;_blank&#34;&gt;https://machinelearningmastery.com/machine-learning-in-python-step-by-step/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/@mcintyreshiv/how-to-master-python-for-machine-learning-from-scratch-a-step-by-step-tutorial-8c6569895cb0&#34; target=&#34;_blank&#34;&gt;https://medium.com/@mcintyreshiv/how-to-master-python-for-machine-learning-from-scratch-a-step-by-step-tutorial-8c6569895cb0&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.amazon.com/-/es/gp/product/B07XGF2G87/&#34;&gt;Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow: Concepts, Tools, and Techniques to Build Intelligent Systems&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/ageron/handson-ml2&#34;&gt;https://github.com/ageron/handson-ml2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://machinelearningmastery.com/machine-learning-in-python-step-by-step/&#34;&gt;https://machinelearningmastery.com/machine-learning-in-python-step-by-step/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/@mcintyreshiv/how-to-master-python-for-machine-learning-from-scratch-a-step-by-step-tutorial-8c6569895cb0&#34;&gt;https://medium.com/@mcintyreshiv/how-to-master-python-for-machine-learning-from-scratch-a-step-by-step-tutorial-8c6569895cb0&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;div class=&#34;footnotes&#34;&gt;
 
@@ -286,16 +286,16 @@ simplemente comenzaría a sobreajustar el conjunto de prueba.
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://mybinder.org/v2/gh/JoseRZapata/JoseRZapata.github.io/master?filepath=Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://mybinder.org/badge_logo.svg&#34; alt=&#34;Binder&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://nbviewer.jupyter.org/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/render-nbviewer-orange.svg&#34; alt=&#34;nbviewer&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mybinder.org/v2/gh/JoseRZapata/JoseRZapata.github.io/master?filepath=Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34;&gt;&lt;img src=&#34;https://mybinder.org/badge_logo.svg&#34; alt=&#34;Binder&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://nbviewer.jupyter.org/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/render-nbviewer-orange.svg&#34; alt=&#34;nbviewer&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas actualizadas cada dia, y ademas practicar el uso de &lt;a href=&#34;https://plotly.com/&#34; target=&#34;_blank&#34;&gt;plotly&lt;/a&gt; para visualizacion interactiva.&lt;/p&gt;
+&lt;p&gt;He visto en las redes sociales varias visualizaciones de los datos del COVID 19 y queria realizarlos en Python para tener la actualizacion de las graficas actualizadas cada dia, y ademas practicar el uso de &lt;a href=&#34;https://plotly.com/&#34;&gt;plotly&lt;/a&gt; para visualizacion interactiva.&lt;/p&gt;
 
 &lt;p&gt;Principalmente los datos que se tienen es del numero de personas contegiadas y personas muertas quiero visualizar los datos de personas recuperadas y casos activos.&lt;/p&gt;
 
@@ -304,7 +304,7 @@ diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;Informacion extraida de 2019 Novel Coronavirus COVID-19 (2019-nCoV) Data Repository by Johns Hopkins CSSE&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34; target=&#34;_blank&#34;&gt;https://github.com/CSSEGISandData/COVID-19&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34;&gt;https://github.com/CSSEGISandData/COVID-19&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Actualizaciones:&lt;/strong&gt;&lt;/p&gt;
 
@@ -356,20 +356,32 @@ diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;paquetes-de-python-y-datos&#34;&gt;Paquetes de Python y Datos&lt;/h1&gt;
 
 &lt;h2 id=&#34;paquetes-de-python&#34;&gt;Paquetes de Python&lt;/h2&gt;
-&lt;pre&gt;&lt;code&gt;!pip install chart_studio -q&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; pd
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; plotly.express &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; px
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; numpy &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; np
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; chart_studio&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code&gt;!pip install chart_studio -q
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas as pd
+import plotly.express as px
+import numpy as np
+import chart_studio
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Para subir las graficas interactivas de plotly a chart studio&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#chart-studio api&lt;/span&gt;
-username &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# your username&lt;/span&gt;
-api_key &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# your api api_key&lt;/span&gt;
-chart_studio&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;tools&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_credentials_file(username&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;username, api_key&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;api_key)
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; chart_studio.plotly &lt;span style=&#34;color:#f92672&#34;&gt;as&lt;/span&gt; py&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#chart-studio api
+username = &#39;&#39; # your username
+api_key = &#39;&#39; # your api api_key
+chart_studio.tools.set_credentials_file(username=username, api_key=api_key)
+import chart_studio.plotly as py
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;importar-datos&#34;&gt;Importar datos&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv&amp;#39;&lt;/span&gt;)
-death &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv&amp;#39;&lt;/span&gt;)
-recovered &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read_csv(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv&amp;#39;&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;confirmed = pd.read_csv(&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv&#39;)
+death = pd.read_csv(&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv&#39;)
+recovered = pd.read_csv(&#39;https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv&#39;)
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;datos-cssegisanddata-covid-19&#34;&gt;Datos CSSEGISandData/COVID-19&lt;/h2&gt;
 
 &lt;p&gt;Descripcion de los datos en ingles&lt;/p&gt;
@@ -385,7 +397,10 @@ recovered &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span st
 &lt;p&gt;&lt;strong&gt;Deaths:&lt;/strong&gt; the number of deaths.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Recovered:&lt;/strong&gt; the number of recovered cases.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;head()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;confirmed.head()
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;div&gt;
 &lt;style scoped&gt;
     .dataframe tbody tr th:only-of-type {
@@ -785,266 +800,318 @@ recovered &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span st
 &lt;p&gt;Se va realizar un analisis general de los datos y No se van a tomar los datos geograficos de &lt;em&gt;latitud&lt;/em&gt;, &lt;em&gt;longitud&lt;/em&gt; y los datos de &lt;em&gt;Province/State&lt;/em&gt; estan incompletos.&lt;/p&gt;
 
 &lt;p&gt;Solo se realizara un analisis por pais entonces se eliminaran las columnas mencionadas anteriormente&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Lat&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Long&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Province/State&amp;#39;&lt;/span&gt;])
-death &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Lat&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Long&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Province/State&amp;#39;&lt;/span&gt;])
-recovered  &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; recovered&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Lat&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Long&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Province/State&amp;#39;&lt;/span&gt;])&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;confirmed = confirmed.drop(columns=[&#39;Lat&#39;, &#39;Long&#39;,&#39;Province/State&#39;])
+death = death.drop(columns=[&#39;Lat&#39;, &#39;Long&#39;,&#39;Province/State&#39;])
+recovered  = recovered.drop(columns=[&#39;Lat&#39;, &#39;Long&#39;,&#39;Province/State&#39;])
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h3 id=&#34;casos-activos&#34;&gt;Casos Activos&lt;/h3&gt;
 
 &lt;p&gt;Se calcula a partir del número de personas confirmadas - muertos - recuperados&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;active &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;confirmed&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy()
-active&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; active&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; death&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:] &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; recovered&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h3 id=&#34;consolidar-datos&#34;&gt;Consolidar datos&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(by&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;aggregate(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;T
-confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;
-confirmed_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reset_index()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;recovered_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; recovered&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(by&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;aggregate(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;T
-recovered_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;
-recovered_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  recovered_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reset_index()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;active_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; active&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(by&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;aggregate(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;T
-active_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;
-active_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  active_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reset_index()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;death_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupby(by&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;aggregate(np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;T
-death_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;
-death_group &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  death_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;reset_index()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed_melt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy()
-confirmed_melt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;rename(columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;}, inplace &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True)
 
-death_melt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;)
-death_melt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;rename(columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;}, inplace &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;active =confirmed.copy()
+active.iloc[:,1:] = active.iloc[:,1:] - death.iloc[:,1:] - recovered.iloc[:,1:]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;consolidar-datos&#34;&gt;Consolidar datos&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;confirmed_group = confirmed.groupby(by=&#39;Country/Region&#39;).aggregate(np.sum).T
+confirmed_group.index.name = &#39;date&#39;
+confirmed_group =  confirmed_group.reset_index()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;recovered_group = recovered.groupby(by=&#39;Country/Region&#39;).aggregate(np.sum).T
+recovered_group.index.name = &#39;date&#39;
+recovered_group =  recovered_group.reset_index()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;active_group = active.groupby(by=&#39;Country/Region&#39;).aggregate(np.sum).T
+active_group.index.name = &#39;date&#39;
+active_group =  active_group.reset_index()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;death_group = death.groupby(by=&#39;Country/Region&#39;).aggregate(np.sum).T
+death_group.index.name = &#39;date&#39;
+death_group =  death_group.reset_index()
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;confirmed_melt = confirmed_group.melt(id_vars=&amp;quot;date&amp;quot;).copy()
+confirmed_melt.rename(columns = {&#39;value&#39;:&#39;Confirmados&#39;, &#39;date&#39;:&#39;Fecha&#39;}, inplace = True)
+
+death_melt = death_group.melt(id_vars=&amp;quot;date&amp;quot;)
+death_melt.rename(columns = {&#39;value&#39;:&#39;Muertos&#39;, &#39;date&#39;:&#39;Fecha&#39;}, inplace = True)
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h3 id=&#34;datos-mundiales&#34;&gt;Datos Mundiales&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Numero de Casos confirmados por dia en el mundo&lt;/span&gt;
-column_names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Confirmados&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Recuperados&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Muertos&amp;#34;&lt;/span&gt;]
-world &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame(columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; column_names)
-world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy()
-world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
-world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
-world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; recovered_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
-world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Activos&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; active_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sum(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Numero de Casos confirmados por dia en el mundo
+column_names = [&amp;quot;Fecha&amp;quot;, &amp;quot;Confirmados&amp;quot;, &amp;quot;Recuperados&amp;quot;,&amp;quot;Muertos&amp;quot;]
+world = pd.DataFrame(columns = column_names)
+world[&#39;Fecha&#39;] = confirmed_group[&#39;date&#39;].copy()
+world[&#39;Confirmados&#39;] = confirmed_group.iloc[:,1:].sum(1)
+world[&#39;Muertos&#39;] = death_group.iloc[:,1:].sum(1)
+world[&#39;Recuperados&#39;] = recovered_group.iloc[:,1:].sum(1)
+world[&#39;Activos&#39;] = active_group.iloc[:,1:].sum(1)
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h1 id=&#34;covid19-en-el-mundo&#34;&gt;Covid19 en el Mundo&lt;/h1&gt;
 
 &lt;h2 id=&#34;evolucion-animada-de-casos-activos-por-pais&#34;&gt;Evolucion Animada de Casos Activos por Pais&lt;/h2&gt;
 
-&lt;p&gt;La gráfica animada de la evolución temporal de los casos activos por país, la he creado con la libreria &lt;a href=&#34;https://github.com/JackMcKew/pandas_alive&#34; target=&#34;_blank&#34;&gt;Pandas alive&lt;/a&gt; y &lt;a href=&#34;https://github.com/dexplo/bar_chart_race&#34; target=&#34;_blank&#34;&gt;Bar Chart Race&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;La gráfica animada de la evolución temporal de los casos activos por país, la he creado con la libreria &lt;a href=&#34;https://github.com/JackMcKew/pandas_alive&#34;&gt;Pandas alive&lt;/a&gt; y &lt;a href=&#34;https://github.com/dexplo/bar_chart_race&#34;&gt;Bar Chart Race&lt;/a&gt;.&lt;/p&gt;
 
 
 &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
   &lt;iframe src=&#34;https://www.youtube.com/embed/ogd7ZifCDQU&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; allowfullscreen title=&#34;YouTube Video&#34;&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pandas_alive
-active_evol &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; active_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;set_index(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;)
-active_evol&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(active_evol&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index)
-active_evol&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot_animated(filename&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;evolucion_casos_activos.mp4&amp;#39;&lt;/span&gt;, n_bars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;,n_visible&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;,
-                          title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Evolución en el tiempo de Casos Activos COVID-19 por pais &lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt; https://joserzapata.github.io/&amp;#39;&lt;/span&gt;,
-                          perpendicular_bar_func&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;mean&amp;#39;&lt;/span&gt;, dpi&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;300&lt;/span&gt;,
-                          period_label&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;99&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ha&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;va&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;center&amp;#39;&lt;/span&gt;},
-                          period_fmt&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%B &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;, %Y&amp;#39;&lt;/span&gt;,
-                          period_summary_func&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;lambda&lt;/span&gt; v: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;99&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;18&lt;/span&gt;,
-                                      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;s&amp;#39;&lt;/span&gt;: f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total Activos: {v.nlargest(8).sum():,.0f}&amp;#39;&lt;/span&gt;,
-                                      &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ha&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;right&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;size&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;family&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Courier New&amp;#39;&lt;/span&gt;})&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import pandas_alive
+active_evol = active_group.set_index(&#39;date&#39;)
+active_evol.index = pd.to_datetime(active_evol.index)
+active_evol.plot_animated(filename=&#39;evolucion_casos_activos.mp4&#39;, n_bars=8,n_visible=8,
+                          title=&#39;Evolución en el tiempo de Casos Activos COVID-19 por pais \n https://joserzapata.github.io/&#39;,
+                          perpendicular_bar_func=&#39;mean&#39;, dpi=300,
+                          period_label={&#39;x&#39;: .99, &#39;y&#39;: .25, &#39;ha&#39;: &#39;right&#39;, &#39;va&#39;: &#39;center&#39;},
+                          period_fmt=&#39;%B %d, %Y&#39;,
+                          period_summary_func=lambda v: {&#39;x&#39;: .99, &#39;y&#39;: .18,
+                                      &#39;s&#39;: f&#39;Total Activos: {v.nlargest(8).sum():,.0f}&#39;,
+                                      &#39;ha&#39;: &#39;right&#39;, &#39;size&#39;: 9, &#39;family&#39;: &#39;Courier New&#39;})
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;visualizacion-con-plotly&#34;&gt;Visualizacion con Plotly&lt;/h2&gt;
 
 &lt;h2 id=&#34;valores-mundiales-de-casos-confirmados-activos-recuperados-y-muertos&#34;&gt;Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos&lt;/h2&gt;
 
 &lt;iframe width=&#34;900&#34; height=&#34;450&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/1.embed?link=false&#34;&gt;&lt;/iframe&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;temp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame(world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,:])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;T
-tm &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; temp&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[ &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Confirmados&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Activos&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Recuperados&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Muertos&amp;#34;&lt;/span&gt;])
-fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;bar(tm, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;variable&amp;#34;&lt;/span&gt; , y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;value&amp;#34;&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;variable&amp;#39;&lt;/span&gt;, text&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;,
-             color_discrete_sequence&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;teal&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;navy&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;coral&amp;#34;&lt;/span&gt;],
-             height&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;500&lt;/span&gt;, width&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;600&lt;/span&gt;,
-             title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total de Casos Mundiales de COVID 19 - {str(world.iloc[-1,0])}&amp;#39;&lt;/span&gt;)
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update_traces(textposition&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;outside&amp;#39;&lt;/span&gt;)&lt;span style=&#34;color:#75715e&#34;&gt;#poner los valores de las barras fuera&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False,
-                  yaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Numero de Personas&amp;#34;&lt;/span&gt;}}, &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar texto eje y&lt;/span&gt;
-                  xaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;}} &lt;span style=&#34;color:#75715e&#34;&gt;#Esconder nombre eje x&lt;/span&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;temp = pd.DataFrame(world.iloc[-1,:]).T
+tm = temp.melt(id_vars=&amp;quot;Fecha&amp;quot;, value_vars=[ &amp;quot;Confirmados&amp;quot;,&amp;quot;Activos&amp;quot;,&amp;quot;Recuperados&amp;quot;,&amp;quot;Muertos&amp;quot;])
+fig = px.bar(tm, x=&amp;quot;variable&amp;quot; , y=&amp;quot;value&amp;quot;, color= &#39;variable&#39;, text=&#39;value&#39;,
+             color_discrete_sequence=[&amp;quot;teal&amp;quot;,&amp;quot;navy&amp;quot;,&amp;quot;green&amp;quot;, &amp;quot;coral&amp;quot;],
+             height=500, width=600,
+             title= f&#39;Total de Casos Mundiales de COVID 19 - {str(world.iloc[-1,0])}&#39;)
+fig.update_traces(textposition=&#39;outside&#39;)#poner los valores de las barras fuera
+fig.layout.update(showlegend=False,
+                  yaxis =  {&amp;quot;title&amp;quot;: {&amp;quot;text&amp;quot;: &amp;quot;Numero de Personas&amp;quot;}}, # Cambiar texto eje y
+                  xaxis =  {&amp;quot;title&amp;quot;: {&amp;quot;text&amp;quot;: &amp;quot;&amp;quot;}} #Esconder nombre eje x
                   )
-&lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio si se proporciona el api-key&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; api_key: py&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot(fig, filename &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;total_casos_general&amp;#39;&lt;/span&gt;, auto_open&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False)
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+# grabar grafica en chart-studio si se proporciona el api-key
+if api_key: py.plot(fig, filename = &#39;total_casos_general&#39;, auto_open=False)
+fig.show()
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;mapa-mundial-de-confirmados-por-pais&#34;&gt;Mapa Mundial de Confirmados por Pais&lt;/h2&gt;
 
 &lt;p&gt;Mover el Mouse sobre el mapa para ver la informacion de cada pais
 &lt;iframe width=&#34;900&#34; height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/97.embed?link=false&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;])
-confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;strftime(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%m/&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/%Y&amp;#39;&lt;/span&gt;)
 
-max_Fecha &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;max()
-conf_max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; max_Fecha]
-conf_max&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dropna(inplace&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True) &lt;span style=&#34;color:#75715e&#34;&gt;#eliminar filas con valores faltantes&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;confirmed_melt[&#39;Fecha&#39;] = pd.to_datetime(confirmed_melt[&#39;Fecha&#39;])
+confirmed_melt[&#39;Fecha&#39;] = confirmed_melt[&#39;Fecha&#39;].dt.strftime(&#39;%m/%d/%Y&#39;)
 
-fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;choropleth(conf_max, locations&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Country/Region&amp;#34;&lt;/span&gt;, locationmode&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;country names&amp;#39;&lt;/span&gt;, 
-                     color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;np&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;log10(conf_max[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Confirmados&amp;#34;&lt;/span&gt;]), hover_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Country/Region&amp;#34;&lt;/span&gt;, 
-                     hover_data &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Confirmados&amp;#34;&lt;/span&gt;],
-                     projection&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;natural earth&amp;#34;&lt;/span&gt;, width&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;900&lt;/span&gt;,
-                     color_continuous_scale &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;colors&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sequential&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;Jet,        
-                     title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Mapa de Confirmados COVID 19 por Pais&amp;#39;&lt;/span&gt;)
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(layout_coloraxis_showscale&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False)
-&lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;mapa_confirmados_pais&amp;#39;, auto_open=False)&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+max_Fecha = confirmed_melt[&#39;Fecha&#39;].max()
+conf_max = confirmed_melt[confirmed_melt[&#39;Fecha&#39;]== max_Fecha]
+conf_max.dropna(inplace=True) #eliminar filas con valores faltantes
+
+fig = px.choropleth(conf_max, locations=&amp;quot;Country/Region&amp;quot;, locationmode=&#39;country names&#39;, 
+                     color=np.log10(conf_max[&amp;quot;Confirmados&amp;quot;]), hover_name=&amp;quot;Country/Region&amp;quot;, 
+                     hover_data = [&amp;quot;Confirmados&amp;quot;],
+                     projection=&amp;quot;natural earth&amp;quot;, width=900,
+                     color_continuous_scale = px.colors.sequential.Jet,        
+                     title=&#39;Mapa de Confirmados COVID 19 por Pais&#39;)
+fig.update(layout_coloraxis_showscale=False)
+#py.plot(fig, filename = &#39;mapa_confirmados_pais&#39;, auto_open=False)
+fig.show()
+
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;confirmados-vs-muertos-por-pais&#34;&gt;Confirmados vs Muertos por pais&lt;/h2&gt;
 
 &lt;iframe width=&#34;900&#34; height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/289.embed?link=false&#34;&gt;&lt;/iframe&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;death_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(death_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;])
-death_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;strftime(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%m/&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/%Y&amp;#39;&lt;/span&gt;)
 
-max_Fecha &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;max()
-death_max &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death_melt[death_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; max_Fecha]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy()
-death_max&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dropna(inplace&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True) &lt;span style=&#34;color:#75715e&#34;&gt;#eliminar filas con valores faltantes&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;death_melt[&#39;Fecha&#39;] = pd.to_datetime(death_melt[&#39;Fecha&#39;])
+death_melt[&#39;Fecha&#39;] = death_melt[&#39;Fecha&#39;].dt.strftime(&#39;%m/%d/%Y&#39;)
 
-fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;scatter(full_melt_max&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sort_values(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;, ascending&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[:&lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;, :], 
-                 x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;, size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;, height&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;500&lt;/span&gt;,
-                 text&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;, log_x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True, log_y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True, title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos vs Confirmados - {max_Fecha} - (15 Paises)&amp;#39;&lt;/span&gt;)
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update_traces(textposition&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;top center&amp;#39;&lt;/span&gt;)
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; False)
-&lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;scatter_muertos_confirmados&amp;#39;, auto_open=False)&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+max_Fecha = death_melt[&#39;Fecha&#39;].max()
+death_max = death_melt[death_melt[&#39;Fecha&#39;]== max_Fecha].copy()
+death_max.dropna(inplace=True) #eliminar filas con valores faltantes
+
+fig = px.scatter(full_melt_max.sort_values(&#39;Muertos&#39;, ascending=False).iloc[:15, :], 
+                 x=&#39;Confirmados&#39;, y=&#39;Muertos&#39;, color=&#39;Country/Region&#39;, size=&#39;Confirmados&#39;, height=500,
+                 text=&#39;Country/Region&#39;, log_x=True, log_y=True, title= f&#39;Muertos vs Confirmados - {max_Fecha} - (15 Paises)&#39;)
+fig.update_traces(textposition=&#39;top center&#39;)
+fig.layout.update(showlegend = False)
+#py.plot(fig, filename = &#39;scatter_muertos_confirmados&#39;, auto_open=False)
+fig.show()
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;progresion-mundial-en-el-tiempo-de-confirmados-y-muertos&#34;&gt;Progresion Mundial en el Tiempo de Confirmados y Muertos&lt;/h2&gt;
 
 &lt;iframe width=&#34;900&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/3.embed?link=false&#34;&gt;&lt;/iframe&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;world_melt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns)[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:], var_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;None)
 
-fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;line(world_melt, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;,
-              color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;variable&amp;#39;&lt;/span&gt;,  color_discrete_sequence&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;teal&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;coral&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;navy&amp;#34;&lt;/span&gt;],
-              title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total de Casos en el tiempo de COVID 19 - {world.iloc[-1,0]}&amp;#39;&lt;/span&gt;)
-&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; list(world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns)[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:]:
-  fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_annotation(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;], y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loc[world&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],n],
-                     text&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;n, xref&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;x&amp;#34;&lt;/span&gt;,yref&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;y&amp;#34;&lt;/span&gt;,
-                     showarrow&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True, ax&lt;span style=&#34;color:#f92672&#34;&gt;=-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, ay&lt;span style=&#34;color:#f92672&#34;&gt;=-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;)
-&lt;span style=&#34;color:#75715e&#34;&gt;# Indicador de numero total de confirmados&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_indicator( title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;font&amp;#39;&lt;/span&gt;:{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;teal&amp;#39;&lt;/span&gt;}},
-                  value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],
-                  mode &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;number+delta&amp;#34;&lt;/span&gt;, delta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt;: world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;
-                  ]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;relative&amp;#39;&lt;/span&gt;: True },domain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.25&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.15&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;]})
-&lt;span style=&#34;color:#75715e&#34;&gt;#Indicador numero total de Activos&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_indicator(title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Activos&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;font&amp;#39;&lt;/span&gt;:{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;navy&amp;#39;&lt;/span&gt;}},
-                  value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Activos&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],
-                  mode &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;number+delta&amp;#34;&lt;/span&gt;, delta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt;: world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Activos&amp;#39;&lt;/span&gt;
-                  ]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;relative&amp;#39;&lt;/span&gt;: True },domain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.25&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.6&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;85&lt;/span&gt;]})
-&lt;span style=&#34;color:#75715e&#34;&gt;#Indicador numero total de Recuperados&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_indicator(title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;font&amp;#39;&lt;/span&gt;:{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;green&amp;#39;&lt;/span&gt;}},
-                  value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],
-                  mode &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;number+delta&amp;#34;&lt;/span&gt;, delta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt;: world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;
-                  ]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;relative&amp;#39;&lt;/span&gt;: True },domain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.25&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.50&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.6&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;85&lt;/span&gt;]}) 
-&lt;span style=&#34;color:#75715e&#34;&gt;#Indicador numero total de muertos&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_indicator(title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;font&amp;#39;&lt;/span&gt;:{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;coral&amp;#39;&lt;/span&gt;}}, 
-                  value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],
-                  mode &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;number+delta&amp;#34;&lt;/span&gt;, delta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt;: world[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;
-                  ]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;relative&amp;#39;&lt;/span&gt;: True },domain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.25&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.15&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;]})  
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; False,
-                  yaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Numero de Personas&amp;#34;&lt;/span&gt;}}, &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar texto eje y&lt;/span&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;world_melt = world.melt(id_vars=&#39;Fecha&#39;, value_vars= list(world.columns)[1:], var_name=None)
+
+fig = px.line(world_melt, x=&amp;quot;Fecha&amp;quot;, y= &#39;value&#39;,
+              color=&#39;variable&#39;,  color_discrete_sequence=[&amp;quot;teal&amp;quot;,&amp;quot;green&amp;quot;,&amp;quot;coral&amp;quot;, &amp;quot;navy&amp;quot;],
+              title=f&#39;Total de Casos en el tiempo de COVID 19 - {world.iloc[-1,0]}&#39;)
+for n in list(world.columns)[1:]:
+  fig.add_annotation(x=world.iloc[-1,0], y=world.loc[world.index[-1],n],
+                     text=n, xref=&amp;quot;x&amp;quot;,yref=&amp;quot;y&amp;quot;,
+                     showarrow=True, ax=-50, ay=-20)
+# Indicador de numero total de confirmados
+fig.add_indicator( title= {&#39;text&#39;:&#39;Confirmados&#39;, &#39;font&#39;:{&#39;color&#39;:&#39;teal&#39;}},
+                  value = world[&#39;Confirmados&#39;].iloc[-1],
+                  mode = &amp;quot;number+delta&amp;quot;, delta = {&amp;quot;reference&amp;quot;: world[&#39;Confirmados&#39;
+                  ].iloc[-2], &#39;relative&#39;: True },domain = {&#39;x&#39;: [0, 0.25], &#39;y&#39;: [0.15, .4]})
+#Indicador numero total de Activos
+fig.add_indicator(title={&#39;text&#39;:&#39;Activos&#39;, &#39;font&#39;:{&#39;color&#39;:&#39;navy&#39;}},
+                  value = world[&#39;Activos&#39;].iloc[-1],
+                  mode = &amp;quot;number+delta&amp;quot;, delta = {&amp;quot;reference&amp;quot;: world[&#39;Activos&#39;
+                  ].iloc[-2], &#39;relative&#39;: True },domain = {&#39;x&#39;: [0, 0.25], &#39;y&#39;: [0.6, .85]})
+#Indicador numero total de Recuperados
+fig.add_indicator(title={&#39;text&#39;:&#39;Recuperados&#39;, &#39;font&#39;:{&#39;color&#39;:&#39;green&#39;}},
+                  value = world[&#39;Recuperados&#39;].iloc[-1],
+                  mode = &amp;quot;number+delta&amp;quot;, delta = {&amp;quot;reference&amp;quot;: world[&#39;Recuperados&#39;
+                  ].iloc[-2], &#39;relative&#39;: True },domain = {&#39;x&#39;: [0.25, 0.50], &#39;y&#39;: [0.6, .85]}) 
+#Indicador numero total de muertos
+fig.add_indicator(title={&#39;text&#39;:&#39;Muertos&#39;, &#39;font&#39;:{&#39;color&#39;:&#39;coral&#39;}}, 
+                  value = world[&#39;Muertos&#39;].iloc[-1],
+                  mode = &amp;quot;number+delta&amp;quot;, delta = {&amp;quot;reference&amp;quot;: world[&#39;Muertos&#39;
+                  ].iloc[-2], &#39;relative&#39;: True },domain = {&#39;x&#39;: [0.25, 0.5], &#39;y&#39;: [0.15, .4]})  
+fig.layout.update(showlegend = False,
+                  yaxis =  {&amp;quot;title&amp;quot;: {&amp;quot;text&amp;quot;: &amp;quot;Numero de Personas&amp;quot;}}, # Cambiar texto eje y
                   )
-&lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio si se proporciona el api-key&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; api_key: py&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot(fig, filename &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;total_casos_serie&amp;#39;&lt;/span&gt;, auto_open&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False)
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+# grabar grafica en chart-studio si se proporciona el api-key
+if api_key: py.plot(fig, filename = &#39;total_casos_serie&#39;, auto_open=False)
+fig.show()
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;total-casos-confirmados-de-covid-19-por-pais&#34;&gt;Total Casos Confirmados de COVID 19 por Pais&lt;/h2&gt;
 
 &lt;iframe width=&#34;900&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/5.embed?link=false&#34;&gt;&lt;/iframe&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy()
-&lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar el nombre de la columna&lt;/span&gt;
-df1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;rename(columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;}, inplace &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True) 
-df_melt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(df1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns)[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:], var_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;None)
-fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;line(df_melt, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt; , y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;,
-              color_discrete_sequence&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;colors&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;qualitative&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;G10,
-              title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total Casos Confirmados de COVID 19 por Pais (Excluyendo China) - {world.iloc[-1,0]}&amp;#39;&lt;/span&gt;)
-&lt;span style=&#34;color:#75715e&#34;&gt;# 8 paises mas infectados&lt;/span&gt;
-fecha &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df1[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;#obtener la fecha del ultimo dato&lt;/span&gt;
-paises &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:] &lt;span style=&#34;color:#75715e&#34;&gt;#obtener la serie sin el primer dato, fecha&lt;/span&gt;
-paises&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sort_values(ascending&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False, inplace&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True)
-mas_infectados&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;):
-  fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_annotation(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;fecha, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;paises[n], text&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;paises&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index[n],
-                     showarrow&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True, ax&lt;span style=&#34;color:#f92672&#34;&gt;=+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;, ay&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
-  mas_infectados&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(paises&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index[n])
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False,
-                  yaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Numero de Personas&amp;#34;&lt;/span&gt;}}, &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar texto eje y&lt;/span&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df1 = confirmed_group.copy()
+# Cambiar el nombre de la columna
+df1.rename(columns = {&#39;date&#39;:&#39;Fecha&#39;}, inplace = True) 
+df_melt = df1.melt(id_vars=&#39;Fecha&#39;, value_vars= list(df1.columns)[1:], var_name=None)
+fig = px.line(df_melt, x=&#39;Fecha&#39; , y=&#39;value&#39;, color=&#39;Country/Region&#39;,
+              color_discrete_sequence=px.colors.qualitative.G10,
+              title=f&#39;Total Casos Confirmados de COVID 19 por Pais (Excluyendo China) - {world.iloc[-1,0]}&#39;)
+# 8 paises mas infectados
+fecha = df1[&#39;Fecha&#39;].iloc[-1] #obtener la fecha del ultimo dato
+paises = df1.iloc[-1,1:] #obtener la serie sin el primer dato, fecha
+paises.sort_values(ascending=False, inplace=True)
+mas_infectados=[]
+for n in range(8):
+  fig.add_annotation(x=fecha, y=paises[n], text=paises.index[n],
+                     showarrow=True, ax=+30, ay=0)
+  mas_infectados.append(paises.index[n])
+fig.layout.update(showlegend=False,
+                  yaxis =  {&amp;quot;title&amp;quot;: {&amp;quot;text&amp;quot;: &amp;quot;Numero de Personas&amp;quot;}}, # Cambiar texto eje y
                   )
-&lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_no_china&amp;#39;, auto_open=False)&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+# grabar grafica en chart-studio
+#py.plot(fig, filename = &#39;total_casos_no_china&#39;, auto_open=False)
+fig.show()
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados)&lt;/h2&gt;
 
 &lt;iframe width=&#34;900&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/7.embed?link=false&#34;&gt;&lt;/iframe&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;drop(columns&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mas_infectados)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;copy()
-&lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar el nombre de la columna&lt;/span&gt;
-df2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;rename(columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;date&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;}, inplace &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; True) 
 
-df_melt2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(df2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns)[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:], var_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;None)
-fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;line(df_melt2, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt; , y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Country/Region&amp;#39;&lt;/span&gt;,
-              color_discrete_sequence&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;colors&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;qualitative&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;G10,
-              title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados) - {world.iloc[-1,0]}&amp;#39;&lt;/span&gt;)
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df2 = confirmed_group.drop(columns= mas_infectados).copy()
+# Cambiar el nombre de la columna
+df2.rename(columns = {&#39;date&#39;:&#39;Fecha&#39;}, inplace = True) 
 
-fecha &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;#obtener la fecha del ultimo dato&lt;/span&gt;
-paises &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; df2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:] &lt;span style=&#34;color:#75715e&#34;&gt;#obtener la serie sin el primer dato, fecha&lt;/span&gt;
-paises&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sort_values(ascending&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False, inplace&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True)
-&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; n &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;):
-  fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_annotation(x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;fecha, y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;paises[n], text&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;paises&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index[n],
-                     showarrow&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True, ax&lt;span style=&#34;color:#f92672&#34;&gt;=+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;, ay&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False,
-                  yaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Numero de Personas&amp;#34;&lt;/span&gt;}}, &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar texto eje y&lt;/span&gt;
+df_melt2 = df2.melt(id_vars=&#39;Fecha&#39;, value_vars= list(df2.columns)[1:], var_name=None)
+fig = px.line(df_melt2, x=&#39;Fecha&#39; , y=&#39;value&#39;, color=&#39;Country/Region&#39;,
+              color_discrete_sequence=px.colors.qualitative.G10,
+              title=f&#39;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados) - {world.iloc[-1,0]}&#39;)
+
+fecha = df2[&#39;Fecha&#39;].iloc[-1] #obtener la fecha del ultimo dato
+paises = df2.iloc[-1,1:] #obtener la serie sin el primer dato, fecha
+paises.sort_values(ascending=False, inplace=True)
+for n in range(8):
+  fig.add_annotation(x=fecha, y=paises[n], text=paises.index[n],
+                     showarrow=True, ax=+30, ay=0)
+fig.layout.update(showlegend=False,
+                  yaxis =  {&amp;quot;title&amp;quot;: {&amp;quot;text&amp;quot;: &amp;quot;Numero de Personas&amp;quot;}}, # Cambiar texto eje y
                   )
-&lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;total_casos_no_8_infectados&amp;#39;, auto_open=False)&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+#py.plot(fig, filename = &#39;total_casos_no_8_infectados&#39;, auto_open=False)
+fig.show()
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2 id=&#34;animacion-del-mapa-de-evolucion-temporal-del-codiv-19&#34;&gt;Animacion del Mapa de Evolucion Temporal del Codiv 19&lt;/h2&gt;
 
 &lt;p&gt;Mover el Mouse sobre el mapa para ver la informacion de cada pais. Presionar el boton de play para ver la animacion.&lt;/p&gt;
 
 &lt;iframe width=&#34;900&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/54.embed?link=false&#34;&gt;&lt;/iframe&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;to_datetime(confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;])
-confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;strftime(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;%m/&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;%d&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;/%Y&amp;#39;&lt;/span&gt;)
-confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;size&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;pow(&lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;)
-confirmed_melt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;dropna(inplace&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;True) &lt;span style=&#34;color:#75715e&#34;&gt;#eliminar filas con valores faltantes&lt;/span&gt;
 
-fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;scatter_geo(confirmed_melt, locations&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Country/Region&amp;#34;&lt;/span&gt;, locationmode&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;country names&amp;#39;&lt;/span&gt;, 
-                     color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Confirmados&amp;#34;&lt;/span&gt;, size&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;size&amp;#39;&lt;/span&gt;, hover_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Country/Region&amp;#34;&lt;/span&gt;, 
-                     range_color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, max(confirmed_melt[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], 
-                     projection&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;natural earth&amp;#34;&lt;/span&gt;, animation_frame&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;, 
-                     title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Contagiados COVID 19 en el Tiempo&amp;#39;&lt;/span&gt;)
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(layout_coloraxis_showscale&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False)
-&lt;span style=&#34;color:#75715e&#34;&gt;#py.plot(fig, filename = &amp;#39;mapa_evolucion_temporal&amp;#39;, auto_open=False)&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;confirmed_melt[&#39;Fecha&#39;] = pd.to_datetime(confirmed_melt[&#39;Fecha&#39;])
+confirmed_melt[&#39;Fecha&#39;] = confirmed_melt[&#39;Fecha&#39;].dt.strftime(&#39;%m/%d/%Y&#39;)
+confirmed_melt[&#39;size&#39;] = confirmed_melt[&#39;Confirmados&#39;].pow(0.3)
+confirmed_melt.dropna(inplace=True) #eliminar filas con valores faltantes
+
+fig = px.scatter_geo(confirmed_melt, locations=&amp;quot;Country/Region&amp;quot;, locationmode=&#39;country names&#39;, 
+                     color=&amp;quot;Confirmados&amp;quot;, size=&#39;size&#39;, hover_name=&amp;quot;Country/Region&amp;quot;, 
+                     range_color= [0, max(confirmed_melt[&#39;Confirmados&#39;])+2], 
+                     projection=&amp;quot;natural earth&amp;quot;, animation_frame=&amp;quot;Fecha&amp;quot;, 
+                     title=&#39;Contagiados COVID 19 en el Tiempo&#39;)
+fig.update(layout_coloraxis_showscale=False)
+#py.plot(fig, filename = &#39;mapa_evolucion_temporal&#39;, auto_open=False)
+fig.show()
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h1 id=&#34;covid-19-en-colombia&#34;&gt;Covid 19 en Colombia&lt;/h1&gt;
 
 &lt;h2 id=&#34;numero-de-casos-covid-19-en-colombia&#34;&gt;Numero de Casos COVID 19 en Colombia&lt;/h2&gt;
 
 &lt;iframe width=&#34;900&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/9.embed?link=false&#34;&gt;&lt;/iframe&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;column_names &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Confirmados&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Recuperados&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Muertos&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Activos&amp;#34;&lt;/span&gt;]
-colombia &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pd&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DataFrame(columns &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; column_names)
-colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;]
-colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; confirmed_group[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Colombia&amp;#39;&lt;/span&gt;]
-colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; death_group[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Colombia&amp;#39;&lt;/span&gt;]
-colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; recovered_group[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Colombia&amp;#39;&lt;/span&gt;]
-colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Activos&amp;#39;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; active_group[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Colombia&amp;#39;&lt;/span&gt;]
-df_melt3 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; colombia&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;melt(id_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt;, value_vars&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(colombia&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;columns)[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:], var_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;None)
-fig &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; px&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;line(df_melt3, x&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Fecha&amp;#39;&lt;/span&gt; , y&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;value&amp;#39;&lt;/span&gt;, color&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;variable&amp;#39;&lt;/span&gt;,
-              color_discrete_sequence&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;teal&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;green&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;coral&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;navy&amp;#34;&lt;/span&gt;],
-              title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Corona virus (COVID 19) en Colombia - {colombia.iloc[-1,0]}&amp;#39;&lt;/span&gt;)
-&lt;span style=&#34;color:#75715e&#34;&gt;# Indicador de numero total de confirmados&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_indicator( title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;font&amp;#39;&lt;/span&gt;:{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;teal&amp;#39;&lt;/span&gt;}},
-                  value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],
-                  mode &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;number+delta&amp;#34;&lt;/span&gt;, delta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt;: colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Confirmados&amp;#39;&lt;/span&gt;
-                  ]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;relative&amp;#39;&lt;/span&gt;: True },domain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.25&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.15&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;]})
-&lt;span style=&#34;color:#75715e&#34;&gt;#Indicador numero total de Activos&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_indicator(title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Activos&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;font&amp;#39;&lt;/span&gt;:{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;navy&amp;#39;&lt;/span&gt;}},
-                  value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Activos&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],
-                  mode &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;number+delta&amp;#34;&lt;/span&gt;, delta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt;: colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Activos&amp;#39;&lt;/span&gt;
-                  ]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;relative&amp;#39;&lt;/span&gt;: True },domain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.25&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.6&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;85&lt;/span&gt;]})
-&lt;span style=&#34;color:#75715e&#34;&gt;#Indicador numero total de Recuperados&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_indicator(title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;font&amp;#39;&lt;/span&gt;:{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;green&amp;#39;&lt;/span&gt;}},
-                  value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],
-                  mode &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;number+delta&amp;#34;&lt;/span&gt;, delta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt;: colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Recuperados&amp;#39;&lt;/span&gt;
-                  ]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;relative&amp;#39;&lt;/span&gt;: True },domain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.25&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.50&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.6&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;85&lt;/span&gt;]}) 
-&lt;span style=&#34;color:#75715e&#34;&gt;#Indicador numero total de muertos&lt;/span&gt;
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;add_indicator(title&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;font&amp;#39;&lt;/span&gt;:{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;coral&amp;#39;&lt;/span&gt;}}, 
-                  value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;],
-                  mode &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;number+delta&amp;#34;&lt;/span&gt;, delta &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;reference&amp;#34;&lt;/span&gt;: colombia[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Muertos&amp;#39;&lt;/span&gt;
-                  ]&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;iloc[&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;relative&amp;#39;&lt;/span&gt;: True },domain &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;x&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.25&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0.5&lt;/span&gt;], &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;y&amp;#39;&lt;/span&gt;: [&lt;span style=&#34;color:#ae81ff&#34;&gt;0.15&lt;/span&gt;, &lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;]})
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;layout&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;update(showlegend&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False,
-                  yaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Numero de Personas&amp;#34;&lt;/span&gt;}}, &lt;span style=&#34;color:#75715e&#34;&gt;# Cambiar texto eje y&lt;/span&gt;
-                  xaxis &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;  {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;title&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Fecha&amp;#34;&lt;/span&gt;}})
-&lt;span style=&#34;color:#75715e&#34;&gt;# grabar grafica en chart-studio si se proporciona el api-key&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; api_key: py&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;plot(fig, filename &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Colombia_general&amp;#39;&lt;/span&gt;, auto_open&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;False)
-fig&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;column_names = [&amp;quot;Fecha&amp;quot;, &amp;quot;Confirmados&amp;quot;, &amp;quot;Recuperados&amp;quot;,&amp;quot;Muertos&amp;quot;, &amp;quot;Activos&amp;quot;]
+colombia = pd.DataFrame(columns = column_names)
+colombia[&#39;Fecha&#39;] = confirmed_group[&#39;Fecha&#39;]
+colombia[&#39;Confirmados&#39;] = confirmed_group[&#39;Colombia&#39;]
+colombia[&#39;Muertos&#39;] = death_group[&#39;Colombia&#39;]
+colombia[&#39;Recuperados&#39;] = recovered_group[&#39;Colombia&#39;]
+colombia[&#39;Activos&#39;] = active_group[&#39;Colombia&#39;]
+df_melt3 = colombia.melt(id_vars=&#39;Fecha&#39;, value_vars= list(colombia.columns)[1:], var_name=None)
+fig = px.line(df_melt3, x=&#39;Fecha&#39; , y=&#39;value&#39;, color=&#39;variable&#39;,
+              color_discrete_sequence=[&amp;quot;teal&amp;quot;,&amp;quot;green&amp;quot;,&amp;quot;coral&amp;quot;, &amp;quot;navy&amp;quot;],
+              title=f&#39;Corona virus (COVID 19) en Colombia - {colombia.iloc[-1,0]}&#39;)
+# Indicador de numero total de confirmados
+fig.add_indicator( title= {&#39;text&#39;:&#39;Confirmados&#39;, &#39;font&#39;:{&#39;color&#39;:&#39;teal&#39;}},
+                  value = colombia[&#39;Confirmados&#39;].iloc[-1],
+                  mode = &amp;quot;number+delta&amp;quot;, delta = {&amp;quot;reference&amp;quot;: colombia[&#39;Confirmados&#39;
+                  ].iloc[-2], &#39;relative&#39;: True },domain = {&#39;x&#39;: [0, 0.25], &#39;y&#39;: [0.15, .4]})
+#Indicador numero total de Activos
+fig.add_indicator(title={&#39;text&#39;:&#39;Activos&#39;, &#39;font&#39;:{&#39;color&#39;:&#39;navy&#39;}},
+                  value = colombia[&#39;Activos&#39;].iloc[-1],
+                  mode = &amp;quot;number+delta&amp;quot;, delta = {&amp;quot;reference&amp;quot;: colombia[&#39;Activos&#39;
+                  ].iloc[-2], &#39;relative&#39;: True },domain = {&#39;x&#39;: [0, 0.25], &#39;y&#39;: [0.6, .85]})
+#Indicador numero total de Recuperados
+fig.add_indicator(title={&#39;text&#39;:&#39;Recuperados&#39;, &#39;font&#39;:{&#39;color&#39;:&#39;green&#39;}},
+                  value = colombia[&#39;Recuperados&#39;].iloc[-1],
+                  mode = &amp;quot;number+delta&amp;quot;, delta = {&amp;quot;reference&amp;quot;: colombia[&#39;Recuperados&#39;
+                  ].iloc[-2], &#39;relative&#39;: True },domain = {&#39;x&#39;: [0.25, 0.50], &#39;y&#39;: [0.6, .85]}) 
+#Indicador numero total de muertos
+fig.add_indicator(title={&#39;text&#39;:&#39;Muertos&#39;, &#39;font&#39;:{&#39;color&#39;:&#39;coral&#39;}}, 
+                  value = colombia[&#39;Muertos&#39;].iloc[-1],
+                  mode = &amp;quot;number+delta&amp;quot;, delta = {&amp;quot;reference&amp;quot;: colombia[&#39;Muertos&#39;
+                  ].iloc[-2], &#39;relative&#39;: True },domain = {&#39;x&#39;: [0.25, 0.5], &#39;y&#39;: [0.15, .4]})
+fig.layout.update(showlegend=False,
+                  yaxis =  {&amp;quot;title&amp;quot;: {&amp;quot;text&amp;quot;: &amp;quot;Numero de Personas&amp;quot;}}, # Cambiar texto eje y
+                  xaxis =  {&amp;quot;title&amp;quot;: {&amp;quot;text&amp;quot;: &amp;quot;Fecha&amp;quot;}})
+# grabar grafica en chart-studio si se proporciona el api-key
+if api_key: py.plot(fig, filename = &#39;Colombia_general&#39;, auto_open=False)
+fig.show()
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h1 id=&#34;actualizacion-de-las-graficas-cada-24-horas&#34;&gt;Actualizacion de las Graficas cada 24 Horas&lt;/h1&gt;
 
 &lt;p&gt;Las graficas creadas con plotly son enviadas a chart-studio y cargadas en la pagina web mediante
 el tag &lt;em&gt;iframe&lt;/em&gt; de html.
-Las gráficas se actualizan cada 24 horas usando &lt;a href=&#34;https://github.com/features/actions&#34; target=&#34;_blank&#34;&gt;Github Actions&lt;/a&gt;&lt;/p&gt;
+Las gráficas se actualizan cada 24 horas usando &lt;a href=&#34;https://github.com/features/actions&#34;&gt;Github Actions&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;codigo-fuente-jupyter-notebook&#34;&gt;Codigo Fuente Jupyter notebook&lt;/h1&gt;
 
@@ -1059,9 +1126,9 @@ Las gráficas se actualizan cada 24 horas usando &lt;a href=&#34;https://github.
 
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;a href=&#34;https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://mybinder.org/v2/gh/JoseRZapata/JoseRZapata.github.io/master?filepath=Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://mybinder.org/badge_logo.svg&#34; alt=&#34;Binder&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
-&lt;td&gt;&lt;a href=&#34;https://nbviewer.jupyter.org/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/render-nbviewer-orange.svg&#34; alt=&#34;nbviewer&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://mybinder.org/v2/gh/JoseRZapata/JoseRZapata.github.io/master?filepath=Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34;&gt;&lt;img src=&#34;https://mybinder.org/badge_logo.svg&#34; alt=&#34;Binder&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href=&#34;https://nbviewer.jupyter.org/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Covid19_Visualizacion_es.ipynb&#34;&gt;&lt;img src=&#34;https://img.shields.io/badge/render-nbviewer-orange.svg&#34; alt=&#34;nbviewer&#34; /&gt;&lt;/a&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1071,12 +1138,12 @@ Las gráficas se actualizan cada 24 horas usando &lt;a href=&#34;https://github.
 &lt;p&gt;Fuentes de datos, visualizaciones y análisis de datos.&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34; target=&#34;_blank&#34;&gt;https://github.com/CSSEGISandData/COVID-19&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons&#34; target=&#34;_blank&#34;&gt;https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/&#34; target=&#34;_blank&#34;&gt;https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus&#34; target=&#34;_blank&#34;&gt;https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200&#34; target=&#34;_blank&#34;&gt;https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/features/actions&#34; target=&#34;_blank&#34;&gt;https://github.com/features/actions&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/CSSEGISandData/COVID-19&#34;&gt;https://github.com/CSSEGISandData/COVID-19&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons&#34;&gt;https://www.kaggle.com/imdevskp/covid-19-analysis-viz-prediction-comparisons&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/&#34;&gt;https://junye0798.com/post/build-a-dashboard-to-track-the-spread-of-coronavirus-using-dash/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus&#34;&gt;https://github.com/Perishleaf/data-visualisation-scripts/tree/master/dash-2019-coronavirus&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200&#34;&gt;https://medium.com/tomas-pueyo/coronavirus-por-qu%C3%A9-debemos-actuar-ya-93079c61e200&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/features/actions&#34;&gt;https://github.com/features/actions&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>
@@ -1097,25 +1164,29 @@ Las gráficas se actualizan cada 24 horas usando &lt;a href=&#34;https://github.
 &lt;/ol&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;
-&lt;a href=&#34;https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Pyspark_Colab_es.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://colab.research.google.com/github/JoseRZapata/JoseRZapata.github.io/blob/master/Jupyter_Notebook/Pyspark_Colab_es.ipynb&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;img src=&#34;https://colab.research.google.com/assets/colab-badge.svg&#34; alt=&#34;Open In Colab&#34;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&#34;instalacion-rapida-marzo-2020&#34;&gt;Instalacion Rapida Marzo/ 2020&lt;/h1&gt;
 &lt;p&gt;De forma General para usar pyspark en Colab Marzo/2020 seria con los siguientes comandos en una celda en Colab:&lt;/p&gt;
 &lt;p&gt;Instalar Java&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;!apt-get install openjdk-8-jdk-headless -qq &amp;gt; /dev/null
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os &lt;span style=&#34;color:#75715e&#34;&gt;# libreria de manejo del sistema operativo&lt;/span&gt;
-os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;system(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;wget -q https://www-us.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz&amp;#34;&lt;/span&gt;)
-os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;system(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tar xf /spark-2.4.5-bin-hadoop2.7.tgz&amp;#34;&lt;/span&gt;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;instalar pyspark&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os # libreria de manejo del sistema operativo
+os.system(&amp;quot;wget -q https://www-us.apache.org/dist/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz&amp;quot;)
+os.system(&amp;quot;tar xf /spark-2.4.5-bin-hadoop2.7.tgz&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;instalar pyspark&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;!pip install -q pyspark
-&lt;/code&gt;&lt;/pre&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Variables de Entorno&lt;/span&gt;
-os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;environ[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JAVA_HOME&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/usr/lib/jvm/java-8-openjdk-amd64&amp;#34;&lt;/span&gt;
-os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;environ[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SPARK_HOME&amp;#34;&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/content/{ver_spark}-bin-hadoop2.7&amp;#34;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Cargar Pyspark&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; pyspark.sql &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; SparkSession
-spark &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; SparkSession&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;builder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;appName(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Test_spark&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;master(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;local[*]&amp;#34;&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;getOrCreate()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Variables de Entorno
+os.environ[&amp;quot;JAVA_HOME&amp;quot;] = &amp;quot;/usr/lib/jvm/java-8-openjdk-amd64&amp;quot;
+os.environ[&amp;quot;SPARK_HOME&amp;quot;] = f&amp;quot;/content/{ver_spark}-bin-hadoop2.7&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# Cargar Pyspark
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.appName(&amp;quot;Test_spark&amp;quot;).master(&amp;quot;local[*]&amp;quot;).getOrCreate()
 spark
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Pero cuando salga una nueva version de spark sera necesario actualizar los
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Pero cuando salga una nueva version de spark sera necesario actualizar los
 links de descarga, ya que siempre borran las versiones 2.x.x cuando sale una nueva.&lt;/p&gt;
 &lt;p&gt;Lo mejor es configurar automaticamente para que descargue la version que sea
 mayor que 2.3.4 que es la anterior y menor que spark 3.0.0 que aun se encuentra en desarrollo&lt;/p&gt;
@@ -1124,48 +1195,56 @@ mayor que 2.3.4 que es la anterior y menor que spark 3.0.0 que aun se encuentra 
 &lt;h2 id=&#34;instalacion-de-java&#34;&gt;Instalacion de Java&lt;/h2&gt;
 &lt;p&gt;Google Colaboratory funciona en un ambiente linux, por lo tanto se pueden usar comandos shell de linux antecedidos del caracter &amp;lsquo;!&amp;rsquo;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;!apt-get install openjdk-8-jdk-headless -qq &amp;gt; /dev/null
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;instalacion-de-spark&#34;&gt;Instalacion de Spark&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;instalacion-de-spark&#34;&gt;Instalacion de Spark&lt;/h2&gt;
 &lt;p&gt;Obtener automaticamente la ultima version de spark de&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; bs4 &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; BeautifulSoup
-&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; requests
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#Obtener las versiones de spark la pagina web&lt;/span&gt;
-url &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;https://downloads.apache.org/spark/&amp;#39;&lt;/span&gt; 
-r &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; requests&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(url)
-html_doc &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; r&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;text
-soup &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; BeautifulSoup(html_doc)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# leer la pagina web y obtener las versiones de spark disponibles&lt;/span&gt;
-link_files &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
-&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; link &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; soup&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;find_all(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;):
-  link_files&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(link&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;href&amp;#39;&lt;/span&gt;))
-spark_link &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [x &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; link_files &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;spark&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; x]  
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(spark_link)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;[&amp;lsquo;spark-2.3.4/&amp;rsquo;, &amp;lsquo;spark-2.4.5/&amp;rsquo;, &amp;lsquo;spark-3.0.0-preview2/&#39;]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;from bs4 import BeautifulSoup
+import requests
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;#Obtener las versiones de spark la pagina web
+url = &#39;https://downloads.apache.org/spark/&#39; 
+r = requests.get(url)
+html_doc = r.text
+soup = BeautifulSoup(html_doc)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;# leer la pagina web y obtener las versiones de spark disponibles
+link_files = []
+for link in soup.find_all(&#39;a&#39;):
+  link_files.append(link.get(&#39;href&#39;))
+spark_link = [x for x in link_files if &#39;spark&#39; in x]  
+print(spark_link)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;[&amp;lsquo;spark-2.3.4/&amp;rsquo;, &amp;lsquo;spark-2.4.5/&amp;rsquo;, &amp;lsquo;spark-3.0.0-preview2/&#39;]&lt;/p&gt;
 &lt;p&gt;La version a usar seran las superiores a spark-2.3.4  y menores a spark-3.0.0&lt;/p&gt;
 &lt;p&gt;obtener la version y eliminar el caracter &amp;lsquo;/&amp;rsquo; del final&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;ver_spark &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; spark_link[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;][:&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#75715e&#34;&gt;# obtener la version y eliminar el caracter &amp;#39;/&amp;#39; del final&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;print&lt;/span&gt;(ver_spark)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;spark-2.4.5
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;ver_spark = spark_link[1][:-1] # obtener la version y eliminar el caracter &#39;/&#39; del final
+print(ver_spark)
 &lt;/code&gt;&lt;/pre&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; os &lt;span style=&#34;color:#75715e&#34;&gt;# libreria de manejo del sistema operativo&lt;/span&gt;
-&lt;span style=&#34;color:#75715e&#34;&gt;#instalar automaticamente la version deseadda de spark&lt;/span&gt;
-link &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://www-us.apache.org/dist/spark/&amp;#34;&lt;/span&gt;
-os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;system(f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;wget -q {link}{ver_spark}/{ver_spark}-bin-hadoop2.7.tgz&amp;#34;&lt;/span&gt;)
-os&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;system(f&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tar xf {ver_spark}-bin-hadoop2.7.tgz&amp;#34;&lt;/span&gt;)
+&lt;pre&gt;&lt;code&gt;spark-2.4.5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;import os # libreria de manejo del sistema operativo
+#instalar automaticamente la version deseadda de spark
+link = &amp;quot;https://www-us.apache.org/dist/spark/&amp;quot;
+os.system(f&amp;quot;wget -q {link}{ver_spark}/{ver_spark}-bin-hadoop2.7.tgz&amp;quot;)
+os.system(f&amp;quot;tar xf {ver_spark}-bin-hadoop2.7.tgz&amp;quot;)
 
-&lt;span style=&#34;color:#75715e&#34;&gt;# instalar pyspark&lt;/span&gt;
-&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;!&lt;/span&gt;pip install &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;q pyspark
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;|████████████████████████████████| 217.8MB 63kB/s 
+# instalar pyspark
+!pip install -q pyspark
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;|████████████████████████████████| 217.8MB 63kB/s 
 |████████████████████████████████| 204kB 53.8MB/s 
 Building wheel for pyspark (setup.py) ... done
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;definir-variables-de-entorno&#34;&gt;Definir variables de entorno&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;os.environ[&amp;quot;JAVA_HOME&amp;quot;] = &amp;quot;/usr/lib/jvm/java-8-openjdk-amd64&amp;quot;
 os.environ[&amp;quot;SPARK_HOME&amp;quot;] = f&amp;quot;/content/{ver_spark}-bin-hadoop2.7&amp;quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cargar-pyspark-en-el-sistema&#34;&gt;Cargar pyspark en el sistema&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&#34;cargar-pyspark-en-el-sistema&#34;&gt;Cargar pyspark en el sistema&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;from pyspark.sql import SparkSession
 spark = SparkSession.builder.appName(&amp;quot;Test_spark&amp;quot;).master(&amp;quot;local[*]&amp;quot;).getOrCreate()
 spark
-&lt;/code&gt;&lt;/pre&gt;&lt;div&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div&gt;
 &lt;p&gt;&lt;b&gt;SparkSession - in-memory&lt;/b&gt;&lt;/p&gt;
 &lt;div&gt;
   &lt;p&gt;&lt;b&gt;SparkContext&lt;/b&gt;&lt;/p&gt;
@@ -1187,15 +1266,18 @@ df_spark = spark.read.csv(archivo, inferSchema=True, header=True)
 
 # imprimir tipo de archivo
 print(type(df_spark))
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;&amp;lt;class &#39;pyspark.sql.dataframe.DataFrame&#39;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;class &#39;pyspark.sql.dataframe.DataFrame&#39;&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;¿Numero de registros en el dataframe?&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;df_spark.count()
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;17000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;17000
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Estructura del dataframe&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;df_spark.printSchema()
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;root
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;root
  |-- longitude: double (nullable = true)
  |-- latitude: double (nullable = true)
  |-- housing_median_age: double (nullable = true)
@@ -1208,7 +1290,8 @@ print(type(df_spark))
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;¿Nombre de las Columnas de dataframe?&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;df_spark.columns
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;[&#39;longitude&#39;,
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[&#39;longitude&#39;,
  &#39;latitude&#39;,
  &#39;housing_median_age&#39;,
  &#39;total_rooms&#39;,
@@ -1220,7 +1303,8 @@ print(type(df_spark))
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Ver los primeros 20 registros del dataframe&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;df_spark.show()
-&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code&gt;+---------+--------+------------------+-----------+--------------+----------+----------+-------------+------------------+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;+---------+--------+------------------+-----------+--------------+----------+----------+-------------+------------------+
 |longitude|latitude|housing_median_age|total_rooms|total_bedrooms|population|households|median_income|median_house_value|
 +---------+--------+------------------+-----------+--------------+----------+----------+-------------+------------------+
 |  -114.31|   34.19|              15.0|     5612.0|        1283.0|    1015.0|     472.0|       1.4936|           66900.0|
@@ -1247,8 +1331,9 @@ print(type(df_spark))
 only showing top 20 rows
 &lt;/code&gt;&lt;/pre&gt;
 &lt;h2 id=&#34;descricipcion-estadistica-del-dataframe&#34;&gt;Descricipcion Estadistica del dataframe&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_spark&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;describe()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;toPandas()&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;transpose()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df_spark.describe().toPandas().transpose()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
 &lt;th&gt;&lt;/th&gt;
@@ -1343,8 +1428,9 @@ only showing top 20 rows
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Descripcion estadistica de una sola columna (&amp;lsquo;median_house_value&amp;rsquo;)&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;df_spark&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;describe([&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;median_house_value&amp;#39;&lt;/span&gt;])&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;show()
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;pre&gt;&lt;code&gt;+-------+------------------+
+&lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df_spark.describe([&#39;median_house_value&#39;]).show()
+&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;+-------+------------------+
 |summary|median_house_value|
 +-------+------------------+
 |  count|             17000|
@@ -1406,10 +1492,10 @@ only showing top 20 rows
       <guid>https://joserzapata.github.io/post/produccion-audio-reaper/</guid>
       <description>
 
-&lt;p&gt;Video tutoriales sobre el uso de &lt;a href=&#34;http://reaper.fm/&#34; target=&#34;_blank&#34;&gt;Reaper&lt;/a&gt; para produccion de audio,
-los videos fueron creados como apoyo para el curso de Audio del programa &lt;a href=&#34;https://www.upb.edu.co/es/pregrados/ingenieria-diseno-entretenimiento-medellin&#34; target=&#34;_blank&#34;&gt;Ingenieria en Diseño de entrentenimiento digital&lt;/a&gt; de la &lt;a href=&#34;https://www.upb.edu.co/&#34; target=&#34;_blank&#34;&gt;Universidad Pontificia Bolivariana&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Video tutoriales sobre el uso de &lt;a href=&#34;http://reaper.fm/&#34;&gt;Reaper&lt;/a&gt; para produccion de audio,
+los videos fueron creados como apoyo para el curso de Audio del programa &lt;a href=&#34;https://www.upb.edu.co/es/pregrados/ingenieria-diseno-entretenimiento-medellin&#34;&gt;Ingenieria en Diseño de entrentenimiento digital&lt;/a&gt; de la &lt;a href=&#34;https://www.upb.edu.co/&#34;&gt;Universidad Pontificia Bolivariana&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://reaper.fm/download.php&#34; target=&#34;_blank&#34;&gt;Descargar REAPER&lt;/a&gt; para Windows, macOS o Linux.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://reaper.fm/download.php&#34;&gt;Descargar REAPER&lt;/a&gt; para Windows, macOS o Linux.&lt;/p&gt;
 
 &lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
 &lt;nav id=&#34;TableOfContents&#34;&gt;
@@ -1423,7 +1509,7 @@ los videos fueron creados como apoyo para el curso de Audio del programa &lt;a h
 
 &lt;hr /&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Qoc1ZNvPH7Y&amp;amp;list=PLW2bAKkMAGl6DTqEqEEGKnNExeAuMM1yb&#34; target=&#34;_blank&#34;&gt;Playlist del tutorial en youtube&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=Qoc1ZNvPH7Y&amp;amp;list=PLW2bAKkMAGl6DTqEqEEGKnNExeAuMM1yb&#34;&gt;Playlist del tutorial en youtube&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;1-introduccion-a-reaper-y-edicion&#34;&gt;1. Introduccion a Reaper y Edicion&lt;/h1&gt;
 
@@ -1435,11 +1521,11 @@ los videos fueron creados como apoyo para el curso de Audio del programa &lt;a h
 &lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href=&#34;https://bit.ly/3fVWWQr&#34; target=&#34;_blank&#34;&gt;Audios para Insertar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bit.ly/3fVWWQr&#34;&gt;Audios para Insertar&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://bit.ly/3kLlpLV&#34; target=&#34;_blank&#34;&gt;Imagen para Insertar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bit.ly/3kLlpLV&#34;&gt;Imagen para Insertar&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://bit.ly/3aomHI9&#34; target=&#34;_blank&#34;&gt;Video para Insertar&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bit.ly/3aomHI9&#34;&gt;Video para Insertar&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;2-manejo-de-canales-y-envios-con-reaper&#34;&gt;2. Manejo de canales y envios con Reaper&lt;/h1&gt;
 
@@ -1449,7 +1535,7 @@ los videos fueron creados como apoyo para el curso de Audio del programa &lt;a h
 &lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href=&#34;https://bit.ly/3aqV01b&#34; target=&#34;_blank&#34;&gt;Ejemplo sesión completa de Reaper&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bit.ly/3aqV01b&#34;&gt;Ejemplo sesión completa de Reaper&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;3-automatizaciones-y-envolventes-en-reaper&#34;&gt;3 Automatizaciones y Envolventes en Reaper&lt;/h1&gt;
 
@@ -1461,9 +1547,9 @@ los videos fueron creados como apoyo para el curso de Audio del programa &lt;a h
 &lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href=&#34;https://bit.ly/2CrdLVG&#34; target=&#34;_blank&#34;&gt;Audios Practica de Automatización&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bit.ly/2CrdLVG&#34;&gt;Audios Practica de Automatización&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://bit.ly/31T953B&#34; target=&#34;_blank&#34;&gt;Proyecto Reaper de Automatización finalizado&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bit.ly/31T953B&#34;&gt;Proyecto Reaper de Automatización finalizado&lt;/a&gt;&lt;/p&gt;
 
 &lt;h1 id=&#34;4-mezcla-y-masterizacion-en-reaper&#34;&gt;4. Mezcla y Masterizacion en Reaper&lt;/h1&gt;
 
@@ -1475,9 +1561,9 @@ los videos fueron creados como apoyo para el curso de Audio del programa &lt;a h
 &lt;/div&gt;
 
 
-&lt;p&gt;&lt;a href=&#34;https://bit.ly/2E8K1NJ&#34; target=&#34;_blank&#34;&gt;Audios practica de mezcla y masterización&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bit.ly/2E8K1NJ&#34;&gt;Audios practica de mezcla y masterización&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://bit.ly/2PVnKpk&#34; target=&#34;_blank&#34;&gt;Sesión final de reaper  con mezcla y masterización&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://bit.ly/2PVnKpk&#34;&gt;Sesión final de reaper  con mezcla y masterización&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -1520,7 +1606,7 @@ los videos fueron creados como apoyo para el curso de Audio del programa &lt;a h
 cuando el presentador las señala o explica algo que esta en ellas como ayuda a la presentación&lt;/li&gt;
 &lt;li&gt;No leer las diapositivas&lt;/li&gt;
 &lt;li&gt;Ser directo&lt;/li&gt;
-&lt;li&gt;Recuerde el &lt;a href=&#34;https://es.wikipedia.org/wiki/Zen_de_Python&#34; target=&#34;_blank&#34;&gt;Zen de Python&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Recuerde el &lt;a href=&#34;https://es.wikipedia.org/wiki/Zen_de_Python&#34;&gt;Zen de Python&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;Disfrutar la presentación! (Esta es la mas importante)&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -1786,39 +1872,22 @@ como el Estudio y comprensión de los datos y análisis de los datos (Usar Tabla
       <pubDate>Fri, 13 Sep 2013 00:00:00 +0000</pubDate>
       <guid>https://joserzapata.github.io/phd/</guid>
       <description>&lt;h1 id=&#34;comparative-evaluation-and-combination-of-automatic-rhythm-description-systems&#34;&gt;Comparative evaluation and combination of automatic rhythm description systems&lt;/h1&gt;
-&lt;p&gt;Zapata, Jose R. (2013). 
-&lt;a href=&#34;http://www.tdx.cat/bitstream/handle/10803/123822/tjrzg2.pdf?sequence=5&amp;amp;isAllowed=y&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Comparative evaluation and combination of automatic rhythm description systems&lt;/a&gt;. Ph.D. thesis (Information and Communication Technologies), Universitat Pompeu Fabra, Barcelona, Spain, 2013.&lt;/p&gt;
+&lt;p&gt;Zapata, Jose R. (2013). &lt;a href=&#34;http://www.tdx.cat/bitstream/handle/10803/123822/tjrzg2.pdf?sequence=5&amp;amp;isAllowed=y&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Comparative evaluation and combination of automatic rhythm description systems&lt;/a&gt;. Ph.D. thesis (Information and Communication Technologies), Universitat Pompeu Fabra, Barcelona, Spain, 2013.&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&#34;http://www.tdx.cat/handle/10803/123822&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[TDX.cat]&lt;/a&gt;
-[
-&lt;a href=&#34;http://www.tdx.cat/bitstream/handle/10803/123822/tjrzg2.pdf?sequence=5&amp;amp;isAllowed=y&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF&lt;/a&gt;]
-[
-&lt;a href=&#34;http://mtg.upf.edu/node/3115&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MTG&lt;/a&gt;]
-[
-&lt;a href=&#34;https://goo.gl/vDJxCN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;]&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.tdx.cat/handle/10803/123822&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;[TDX.cat]&lt;/a&gt;
+[&lt;a href=&#34;http://www.tdx.cat/bitstream/handle/10803/123822/tjrzg2.pdf?sequence=5&amp;amp;isAllowed=y&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;PDF&lt;/a&gt;]
+[&lt;a href=&#34;http://mtg.upf.edu/node/3115&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MTG&lt;/a&gt;]
+[&lt;a href=&#34;https://goo.gl/vDJxCN&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Slides&lt;/a&gt;]&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;thesis-advisor&#34;&gt;Thesis advisor&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dr. 
-&lt;a href=&#34;https://emiliagomez.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Emilia Gómez&lt;/a&gt;, Universitat Pompeu Fabra (
-&lt;a href=&#34;https://www.upf.edu/web/mtg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MTG&lt;/a&gt;, 
-&lt;a href=&#34;https://www.upf.edu/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UPF&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Dr. &lt;a href=&#34;https://emiliagomez.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Emilia Gómez&lt;/a&gt;, Universitat Pompeu Fabra (&lt;a href=&#34;https://www.upf.edu/web/mtg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MTG&lt;/a&gt;, &lt;a href=&#34;https://www.upf.edu/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UPF&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;defense-board&#34;&gt;Defense board&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Dr. 
-&lt;a href=&#34;https://www.upf.edu/web/xavier-serra&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Xavier Serra&lt;/a&gt;,  Universitat Pompeu Fabra (
-&lt;a href=&#34;https://www.upf.edu/web/mtg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MTG&lt;/a&gt;, 
-&lt;a href=&#34;https://www.upf.edu/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UPF&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Dr. 
-&lt;a href=&#34;http://www.fabiengouyon.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fabien Gouyon&lt;/a&gt;, Institute for Systems and Computer Engineering of Porto (
-&lt;a href=&#34;http://smc.inescporto.pt/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SMC&lt;/a&gt;, 
-&lt;a href=&#34;https://www.inesctec.pt/en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;INESC Porto&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;Dr. 
-&lt;a href=&#34;https://wp.nyu.edu/jpbello/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Juan Pablo Bello&lt;/a&gt;, New York University (
-&lt;a href=&#34;https://steinhardt.nyu.edu/marl/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MARL&lt;/a&gt;, 
-&lt;a href=&#34;http://www.nyu.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NYU&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Dr. &lt;a href=&#34;https://www.upf.edu/web/xavier-serra&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Xavier Serra&lt;/a&gt;,  Universitat Pompeu Fabra (&lt;a href=&#34;https://www.upf.edu/web/mtg&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MTG&lt;/a&gt;, &lt;a href=&#34;https://www.upf.edu/en/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;UPF&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Dr. &lt;a href=&#34;http://www.fabiengouyon.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Fabien Gouyon&lt;/a&gt;, Institute for Systems and Computer Engineering of Porto (&lt;a href=&#34;http://smc.inescporto.pt/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SMC&lt;/a&gt;, &lt;a href=&#34;https://www.inesctec.pt/en&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;INESC Porto&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Dr. &lt;a href=&#34;https://wp.nyu.edu/jpbello/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Juan Pablo Bello&lt;/a&gt;, New York University (&lt;a href=&#34;https://steinhardt.nyu.edu/marl/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;MARL&lt;/a&gt;, &lt;a href=&#34;http://www.nyu.edu/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;NYU&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;abstract&#34;&gt;Abstract&lt;/h2&gt;
 &lt;p&gt;The automatic analysis of musical rhythm from audio, and more specifically tempo and beat tracking, is one of the fundamental open research problems

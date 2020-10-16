@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Open-source | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/tag/open-source/</link>
+      <atom:link href="https://joserzapata.github.io/es/tag/open-source/index.xml" rel="self" type="application/rss+xml" />
+    <description>Open-source</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><copyright>© 2020</copyright><lastBuildDate>Fri, 21 Mar 2014 00:11:35 -0500</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Open-source</title>
+      <link>https://joserzapata.github.io/es/tag/open-source/</link>
+    </image>
+    
+    <item>
+      <title>Essentia: an open source library for audio analysis</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-sigmm/</link>
+      <pubDate>Fri, 21 Mar 2014 00:11:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-sigmm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia</title>
+      <link>https://joserzapata.github.io/es/project/essentia/</link>
+      <pubDate>Sat, 23 Nov 2013 07:45:12 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/project/essentia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: An Audio Analysis Library for Music Information Retrieval</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-ismir/</link>
+      <pubDate>Sun, 03 Nov 2013 23:32:53 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-ismir/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Essentia: an open-source library for sound and music analysis</title>
+      <link>https://joserzapata.github.io/es/publication/essentia-acm/</link>
+      <pubDate>Mon, 21 Oct 2013 00:11:35 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/essentia-acm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>SMC Beat tracking Dataset</title>
+      <link>https://joserzapata.github.io/es/project/smc-beat-tracker-dataset/</link>
+      <pubDate>Sun, 27 May 2012 13:30:13 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/project/smc-beat-tracker-dataset/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

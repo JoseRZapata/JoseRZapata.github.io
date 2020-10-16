@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>7 | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/es/publication-type/7/</link>
+      <atom:link href="https://joserzapata.github.io/es/publication-type/7/index.xml" rel="self" type="application/rss+xml" />
+    <description>7</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><copyright>© 2020</copyright><lastBuildDate>Fri, 13 Sep 2013 14:49:50 +0100</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>7</title>
+      <link>https://joserzapata.github.io/es/publication-type/7/</link>
+    </image>
+    
+    <item>
+      <title>Comparative evaluation and combination of automatic rhythm description systems</title>
+      <link>https://joserzapata.github.io/es/publication/phd-thesis/</link>
+      <pubDate>Fri, 13 Sep 2013 14:49:50 +0100</pubDate>
+      <guid>https://joserzapata.github.io/es/publication/phd-thesis/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
