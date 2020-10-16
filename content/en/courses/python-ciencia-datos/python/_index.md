@@ -2999,6 +2999,7 @@ https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Noteboo
 - [Tutorial Python en español](http://docs.python.org.ar/tutorial/3/index.html)
 - [Curso Python en Español](https://docs.hektorprofe.net/python/)
 - [Python para principiantes](https://uniwebsidad.com/libros/python)
+- [Practical Python Programming](https://dabeaz-course.github.io/practical-python/Notes/Contents.html)
 - [Python for data science Cheatsheet](https://s3.amazonaws.com/assets.datacamp.com/blog_assets/PythonForDataScience.pdf)
 - [Python Data Science Handbook -online Free](https://jakevdp.github.io/PythonDataScienceHandbook/)
 - [Think Python 2nd Edition by Allen B. Downey](https://greenteapress.com/wp/think-python-2e/)
