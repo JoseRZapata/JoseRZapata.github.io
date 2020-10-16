@@ -3,7 +3,7 @@
 title: Ciencia de Datos con Python
 
 # Page summary for search engines.
-summary: Blah, blah, blah...
+summary: Aprender el lenguaje Python como herramienta para los procesos de Ciencia de Datos
 
 # Date page published
 date: 2020-09-09

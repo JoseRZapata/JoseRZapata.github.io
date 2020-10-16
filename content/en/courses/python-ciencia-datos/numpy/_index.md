@@ -1,7 +1,7 @@
 ---
 # Title, summary, and page position.
 linktitle: 2 - Numpy
-summary: Numpy
+summary: Libreria de Algebra Lineal (Vectores y Matrices)
 weight: 2
 icon: book
 icon_pack: fas

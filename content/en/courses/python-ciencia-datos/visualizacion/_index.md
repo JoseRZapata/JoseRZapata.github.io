@@ -1,7 +1,7 @@
 ---
 # Title, summary, and page position.
 linktitle: 4 - Visualizacion
-summary: matplotlib, plotly, seaborn
+summary: Librerias de visualizacion (matplotlib, plotly, seaborn)
 weight: 4
 icon: book
 icon_pack: fas
