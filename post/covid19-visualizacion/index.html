@@ -1107,7 +1107,7 @@ active_evol.plot_animated(filename='evolucion_casos_activos.mp4', n_bars=8,n_vis
 
 <h2 id="valores-mundiales-de-casos-confirmados-activos-recuperados-y-muertos">Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos</h2>
 
-<iframe width="900" height="450" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/1.embed?link=false"></iframe>
+<iframe width="100%" height="450" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/1.embed?link=false"></iframe>
 
 <pre><code class="language-python">temp = pd.DataFrame(world.iloc[-1,:]).T
 tm = temp.melt(id_vars=&quot;Fecha&quot;, value_vars=[ &quot;Confirmados&quot;,&quot;Activos&quot;,&quot;Recuperados&quot;,&quot;Muertos&quot;])
@@ -1128,7 +1128,7 @@ fig.show()
 <h2 id="mapa-mundial-de-confirmados-por-pais">Mapa Mundial de Confirmados por Pais</h2>
 
 <p>Mover el Mouse sobre el mapa para ver la informacion de cada pais
-<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/97.embed?link=false"></iframe></p>
+<iframe width="100%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/97.embed?link=false"></iframe></p>
 
 <pre><code class="language-python">confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
 confirmed_melt['Fecha'] = confirmed_melt['Fecha'].dt.strftime('%m/%d/%Y')
@@ -1151,7 +1151,7 @@ fig.show()
 
 <h2 id="confirmados-vs-muertos-por-pais">Confirmados vs Muertos por pais</h2>
 
-<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/289.embed?link=false"></iframe>
+<iframe width="100%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/289.embed?link=false"></iframe>
 
 <pre><code class="language-python">death_melt['Fecha'] = pd.to_datetime(death_melt['Fecha'])
 death_melt['Fecha'] = death_melt['Fecha'].dt.strftime('%m/%d/%Y')
@@ -1171,7 +1171,7 @@ fig.show()
 
 <h2 id="progresion-mundial-en-el-tiempo-de-confirmados-y-muertos">Progresion Mundial en el Tiempo de Confirmados y Muertos</h2>
 
-<iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/3.embed?link=false"></iframe>
+<iframe width="100%" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/3.embed?link=false"></iframe>
 
 <pre><code class="language-python">world_melt = world.melt(id_vars='Fecha', value_vars= list(world.columns)[1:], var_name=None)
 
@@ -1212,7 +1212,7 @@ fig.show()
 
 <h2 id="total-casos-confirmados-de-covid-19-por-pais">Total Casos Confirmados de COVID 19 por Pais</h2>
 
-<iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/5.embed?link=false"></iframe>
+<iframe width="100%" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/5.embed?link=false"></iframe>
 
 <pre><code class="language-python">df1 = confirmed_group.copy()
 # Cambiar el nombre de la columna
@@ -1240,7 +1240,7 @@ fig.show()
 
 <h2 id="total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados">Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados)</h2>
 
-<iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/7.embed?link=false"></iframe>
+<iframe width="100%" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/7.embed?link=false"></iframe>
 
 <pre><code class="language-python">df2 = confirmed_group.drop(columns= mas_infectados).copy()
 # Cambiar el nombre de la columna
@@ -1268,7 +1268,7 @@ fig.show()
 
 <p>Mover el Mouse sobre el mapa para ver la informacion de cada pais. Presionar el boton de play para ver la animacion.</p>
 
-<iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/54.embed?link=false"></iframe>
+<iframe width="100%" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/54.embed?link=false"></iframe>
 
 <pre><code class="language-python">confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
 confirmed_melt['Fecha'] = confirmed_melt['Fecha'].dt.strftime('%m/%d/%Y')
@@ -1289,7 +1289,7 @@ fig.show()
 
 <h2 id="numero-de-casos-covid-19-en-colombia">Numero de Casos COVID 19 en Colombia</h2>
 
-<iframe width="900" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/9.embed?link=false"></iframe>
+<iframe width="100%" height="600" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/9.embed?link=false"></iframe>
 
 <pre><code class="language-python">column_names = [&quot;Fecha&quot;, &quot;Confirmados&quot;, &quot;Recuperados&quot;,&quot;Muertos&quot;, &quot;Activos&quot;]
 colombia = pd.DataFrame(columns = column_names)

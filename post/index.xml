@@ -479,7 +479,7 @@ active_evol.plot_animated(filename=&#39;evolucion_casos_activos.mp4&#39;, n_bars
 
 &lt;h2 id=&#34;valores-mundiales-de-casos-confirmados-activos-recuperados-y-muertos&#34;&gt;Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos&lt;/h2&gt;
 
-&lt;iframe width=&#34;900&#34; height=&#34;450&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/1.embed?link=false&#34;&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;450&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/1.embed?link=false&#34;&gt;&lt;/iframe&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;temp = pd.DataFrame(world.iloc[-1,:]).T
 tm = temp.melt(id_vars=&amp;quot;Fecha&amp;quot;, value_vars=[ &amp;quot;Confirmados&amp;quot;,&amp;quot;Activos&amp;quot;,&amp;quot;Recuperados&amp;quot;,&amp;quot;Muertos&amp;quot;])
@@ -500,7 +500,7 @@ fig.show()
 &lt;h2 id=&#34;mapa-mundial-de-confirmados-por-pais&#34;&gt;Mapa Mundial de Confirmados por Pais&lt;/h2&gt;
 
 &lt;p&gt;Mover el Mouse sobre el mapa para ver la informacion de cada pais
-&lt;iframe width=&#34;900&#34; height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/97.embed?link=false&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/97.embed?link=false&#34;&gt;&lt;/iframe&gt;&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;confirmed_melt[&#39;Fecha&#39;] = pd.to_datetime(confirmed_melt[&#39;Fecha&#39;])
 confirmed_melt[&#39;Fecha&#39;] = confirmed_melt[&#39;Fecha&#39;].dt.strftime(&#39;%m/%d/%Y&#39;)
@@ -523,7 +523,7 @@ fig.show()
 
 &lt;h2 id=&#34;confirmados-vs-muertos-por-pais&#34;&gt;Confirmados vs Muertos por pais&lt;/h2&gt;
 
-&lt;iframe width=&#34;900&#34; height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/289.embed?link=false&#34;&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;500&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/289.embed?link=false&#34;&gt;&lt;/iframe&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;death_melt[&#39;Fecha&#39;] = pd.to_datetime(death_melt[&#39;Fecha&#39;])
 death_melt[&#39;Fecha&#39;] = death_melt[&#39;Fecha&#39;].dt.strftime(&#39;%m/%d/%Y&#39;)
@@ -543,7 +543,7 @@ fig.show()
 
 &lt;h2 id=&#34;progresion-mundial-en-el-tiempo-de-confirmados-y-muertos&#34;&gt;Progresion Mundial en el Tiempo de Confirmados y Muertos&lt;/h2&gt;
 
-&lt;iframe width=&#34;900&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/3.embed?link=false&#34;&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/3.embed?link=false&#34;&gt;&lt;/iframe&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;world_melt = world.melt(id_vars=&#39;Fecha&#39;, value_vars= list(world.columns)[1:], var_name=None)
 
@@ -584,7 +584,7 @@ fig.show()
 
 &lt;h2 id=&#34;total-casos-confirmados-de-covid-19-por-pais&#34;&gt;Total Casos Confirmados de COVID 19 por Pais&lt;/h2&gt;
 
-&lt;iframe width=&#34;900&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/5.embed?link=false&#34;&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/5.embed?link=false&#34;&gt;&lt;/iframe&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df1 = confirmed_group.copy()
 # Cambiar el nombre de la columna
@@ -612,7 +612,7 @@ fig.show()
 
 &lt;h2 id=&#34;total-casos-confirmados-de-covid-19-por-pais-excluyendo-los-8-mas-infectados&#34;&gt;Total Casos Confirmados de COVID 19 por Pais (Excluyendo los 8 mas infectados)&lt;/h2&gt;
 
-&lt;iframe width=&#34;900&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/7.embed?link=false&#34;&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/7.embed?link=false&#34;&gt;&lt;/iframe&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;df2 = confirmed_group.drop(columns= mas_infectados).copy()
 # Cambiar el nombre de la columna
@@ -640,7 +640,7 @@ fig.show()
 
 &lt;p&gt;Mover el Mouse sobre el mapa para ver la informacion de cada pais. Presionar el boton de play para ver la animacion.&lt;/p&gt;
 
-&lt;iframe width=&#34;900&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/54.embed?link=false&#34;&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/54.embed?link=false&#34;&gt;&lt;/iframe&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;confirmed_melt[&#39;Fecha&#39;] = pd.to_datetime(confirmed_melt[&#39;Fecha&#39;])
 confirmed_melt[&#39;Fecha&#39;] = confirmed_melt[&#39;Fecha&#39;].dt.strftime(&#39;%m/%d/%Y&#39;)
@@ -661,7 +661,7 @@ fig.show()
 
 &lt;h2 id=&#34;numero-de-casos-covid-19-en-colombia&#34;&gt;Numero de Casos COVID 19 en Colombia&lt;/h2&gt;
 
-&lt;iframe width=&#34;900&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/9.embed?link=false&#34;&gt;&lt;/iframe&gt;
+&lt;iframe width=&#34;100%&#34; height=&#34;600&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34; src=&#34;//plotly.com/~joser.zapata/9.embed?link=false&#34;&gt;&lt;/iframe&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;column_names = [&amp;quot;Fecha&amp;quot;, &amp;quot;Confirmados&amp;quot;, &amp;quot;Recuperados&amp;quot;,&amp;quot;Muertos&amp;quot;, &amp;quot;Activos&amp;quot;]
 colombia = pd.DataFrame(columns = column_names)
