@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://joserzapata.github.io/sitemap.xml
