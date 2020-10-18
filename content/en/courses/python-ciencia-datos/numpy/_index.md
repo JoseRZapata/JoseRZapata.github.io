@@ -2,7 +2,7 @@
 # Title, summary, and page position.
 linktitle: 2 - Numpy
 summary: Libreria de Algebra Lineal (Vectores y Matrices)
-weight: 2
+weight: 20
 icon: book
 icon_pack: fas
 authors: ["joserzapata"]

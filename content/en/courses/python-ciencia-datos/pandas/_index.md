@@ -3,7 +3,7 @@
 # Title, summary, and page position.
 linktitle: 3 - Pandas
 summary: Libreria de Manipulación y análisis de datos estructurados
-weight: 3
+weight: 30
 icon: book
 icon_pack: fas
 

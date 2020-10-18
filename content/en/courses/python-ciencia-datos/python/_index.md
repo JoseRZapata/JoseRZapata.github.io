@@ -2,7 +2,7 @@
 # Title, summary, and page position.
 linktitle: 1 - Python
 summary: Introduccion al Lenguaje Python
-weight: 1
+weight: 11
 icon: book
 icon_pack: fas
 
