@@ -2,7 +2,7 @@
 # Title, summary, and page position.
 linktitle: 9 - Clustering
 summary: Ejemplo Clustering con Python
-weight: 54
+weight: 80
 icon: book
 icon_pack: fas
 
