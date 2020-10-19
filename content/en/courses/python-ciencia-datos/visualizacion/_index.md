@@ -2434,11 +2434,6 @@ Anaconda instala automaticamente Seaborn, en caso de no tenerlo instalarlo con e
 
 `conda install seaborn` o `pip install seaborn`.
 
-Se recomienda la instalacion con Conda, se debe tener instalado:
-numpy (>= 1.9.3), 
-scipy (>= 0.14.0), 
-matplotlib (>= 1.4.3), 
-pandas (>= 0.15.2)
 
 ### Importar seaborn
 Se importa de forma estandar de la siguiente manera:
