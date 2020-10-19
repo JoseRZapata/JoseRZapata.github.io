@@ -1,0 +1,2264 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 4.8.0 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jose R. Zapata">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Ejemplo Clustering con Python">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://joserzapata.github.io/courses/python-ciencia-datos/clustering/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#328cc1">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.min.2e8848883a20272c77656a192827610d.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112535090-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-112535090-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+  
+
+  
+  <link rel="alternate" href="/courses/python-ciencia-datos/clustering/index.xml" type="application/rss+xml" title="Jose Ricardo Zapata">
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_huef99ce4a8cdef83a01a57b9c8063a4d3_108982_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_huef99ce4a8cdef83a01a57b9c8063a4d3_108982_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://joserzapata.github.io/courses/python-ciencia-datos/clustering/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@joserzapata">
+  <meta property="twitter:creator" content="@joserzapata">
+  
+  <meta property="og:site_name" content="Jose Ricardo Zapata">
+  <meta property="og:url" content="https://joserzapata.github.io/courses/python-ciencia-datos/clustering/">
+  <meta property="og:title" content="Clustering con Scikit Learn | Jose Ricardo Zapata">
+  <meta property="og:description" content="Ejemplo Clustering con Python"><meta property="og:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg">
+  <meta property="twitter:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg"><meta property="og:locale" content="en-us">
+  
+    <meta property="og:updated_time" content="2020-09-09T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Clustering con Scikit Learn | Jose Ricardo Zapata</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class=" ">
+
+  
+  
+  
+    <script>window.wcDarkLightEnabled = true;</script>
+  
+  
+    <script>const isSiteThemeDark = false;</script>
+  
+  
+  <script src="/js/load-theme.js"></script>
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Jose Ricardo Zapata</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Jose Ricardo Zapata</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/phd"><span>Phd Thesis</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+  
+    
+    
+
+    
+    
+  </nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#preprocesamiento-de-datos">Preprocesamiento de datos</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#scatter-plot">Scatter plot</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#kmeans">Kmeans</a></li>
+    <li><a href="#agglomerative">Agglomerative</a></li>
+    <li><a href="#dbscan">Dbscan</a></li>
+    <li><a href="#mean-shift">Mean Shift</a></li>
+    <li><a href="#birch">Birch</a></li>
+    <li><a href="#affinity-propagation">Affinity Propagation</a></li>
+    <li><a href="#mini-batch-kmeans">Mini Batch Kmeans</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#kmeans-clustering">KMeans clustering</a></li>
+    <li><a href="#dbscan-clustering">DBSCAN clustering</a></li>
+    <li><a href="#meanshift-clustering">MeanShift clustering</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Clustering con Scikit Learn</h1>
+
+          <div class="article-style">
+            <p>Curso Programacion Analitica</p>
+<p>Maestria TIC Linea Ciencia de Datos</p>
+<p>Por <a href="https://joserzapata.github.io/" target="_blank" rel="noopener">Jose R. Zapata</a></p>
+<p>Importar librerias</p>
+<pre><code class="language-python">import pandas as pd
+import matplotlib
+import matplotlib.pyplot as plt
+import numpy as np
+</code></pre>
+<pre><code class="language-python">from sklearn import metrics
+from sklearn.cluster import KMeans
+
+import warnings
+warnings.filterwarnings(&quot;ignore&quot;)
+</code></pre>
+<h1 id="informacion-de-los-datos">Informacion de los datos</h1>
+<pre><code class="language-python">iris_df = pd.read_csv('datasets/iris.csv', 
+                      skiprows=1, 
+                      names = ['sepal-length',
+                               'sepal-width',
+                               'petal-length',
+                               'petal-width',
+                               'class'])
+
+iris_df.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal-length</th>
+      <th>sepal-width</th>
+      <th>petal-length</th>
+      <th>petal-width</th>
+      <th>class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>5.1</td>
+      <td>3.5</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4.9</td>
+      <td>3.0</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4.7</td>
+      <td>3.2</td>
+      <td>1.3</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.6</td>
+      <td>3.1</td>
+      <td>1.5</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>3.6</td>
+      <td>1.4</td>
+      <td>0.2</td>
+      <td>Iris-setosa</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<p>Mezclar la base de datos</p>
+<pre><code class="language-python">iris_df = iris_df.sample(frac=1).reset_index(drop=True)
+
+iris_df.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal-length</th>
+      <th>sepal-width</th>
+      <th>petal-length</th>
+      <th>petal-width</th>
+      <th>class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>6.5</td>
+      <td>2.8</td>
+      <td>4.6</td>
+      <td>1.5</td>
+      <td>Iris-versicolor</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6.8</td>
+      <td>3.2</td>
+      <td>5.9</td>
+      <td>2.3</td>
+      <td>Iris-virginica</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5.4</td>
+      <td>3.9</td>
+      <td>1.3</td>
+      <td>0.4</td>
+      <td>Iris-setosa</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6.7</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>1.7</td>
+      <td>Iris-versicolor</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7.2</td>
+      <td>3.2</td>
+      <td>6.0</td>
+      <td>1.8</td>
+      <td>Iris-virginica</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">iris_df.shape
+</code></pre>
+<pre><code>(150, 5)
+</code></pre>
+<pre><code class="language-python">iris_df[iris_df.isnull().any(axis=1)]
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal-length</th>
+      <th>sepal-width</th>
+      <th>petal-length</th>
+      <th>petal-width</th>
+      <th>class</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">iris_df.describe()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal-length</th>
+      <th>sepal-width</th>
+      <th>petal-length</th>
+      <th>petal-width</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>150.000000</td>
+      <td>150.000000</td>
+      <td>150.000000</td>
+      <td>150.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>5.843333</td>
+      <td>3.054000</td>
+      <td>3.758667</td>
+      <td>1.198667</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.828066</td>
+      <td>0.433594</td>
+      <td>1.764420</td>
+      <td>0.763161</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>4.300000</td>
+      <td>2.000000</td>
+      <td>1.000000</td>
+      <td>0.100000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>5.100000</td>
+      <td>2.800000</td>
+      <td>1.600000</td>
+      <td>0.300000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>5.800000</td>
+      <td>3.000000</td>
+      <td>4.350000</td>
+      <td>1.300000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>6.400000</td>
+      <td>3.300000</td>
+      <td>5.100000</td>
+      <td>1.800000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>7.900000</td>
+      <td>4.400000</td>
+      <td>6.900000</td>
+      <td>2.500000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">iris_df['class'].unique()
+</code></pre>
+<pre><code>array(['Iris-versicolor', 'Iris-virginica', 'Iris-setosa'], dtype=object)
+</code></pre>
+<h2 id="preprocesamiento-de-datos">Preprocesamiento de datos</h2>
+<pre><code class="language-python">from sklearn import preprocessing
+
+label_encoding = preprocessing.LabelEncoder()
+
+iris_df['class'] = label_encoding.fit_transform(iris_df['class'].astype(str))
+
+iris_df.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal-length</th>
+      <th>sepal-width</th>
+      <th>petal-length</th>
+      <th>petal-width</th>
+      <th>class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>6.5</td>
+      <td>2.8</td>
+      <td>4.6</td>
+      <td>1.5</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6.8</td>
+      <td>3.2</td>
+      <td>5.9</td>
+      <td>2.3</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5.4</td>
+      <td>3.9</td>
+      <td>1.3</td>
+      <td>0.4</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6.7</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>1.7</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7.2</td>
+      <td>3.2</td>
+      <td>6.0</td>
+      <td>1.8</td>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">iris_df.describe()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal-length</th>
+      <th>sepal-width</th>
+      <th>petal-length</th>
+      <th>petal-width</th>
+      <th>class</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>150.000000</td>
+      <td>150.000000</td>
+      <td>150.000000</td>
+      <td>150.000000</td>
+      <td>150.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>5.843333</td>
+      <td>3.054000</td>
+      <td>3.758667</td>
+      <td>1.198667</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>0.828066</td>
+      <td>0.433594</td>
+      <td>1.764420</td>
+      <td>0.763161</td>
+      <td>0.819232</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>4.300000</td>
+      <td>2.000000</td>
+      <td>1.000000</td>
+      <td>0.100000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>5.100000</td>
+      <td>2.800000</td>
+      <td>1.600000</td>
+      <td>0.300000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>5.800000</td>
+      <td>3.000000</td>
+      <td>4.350000</td>
+      <td>1.300000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>6.400000</td>
+      <td>3.300000</td>
+      <td>5.100000</td>
+      <td>1.800000</td>
+      <td>2.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>7.900000</td>
+      <td>4.400000</td>
+      <td>6.900000</td>
+      <td>2.500000</td>
+      <td>2.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h1 id="analisis-univariable">Analisis Univariable</h1>
+<p>Se debe hacer un analisis de cada una de las variables y describir sus caracteristicas</p>
+<h1 id="analisis-bivariable">Analisis Bivariable</h1>
+<h2 id="scatter-plot">Scatter plot</h2>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(iris_df['sepal-length'], iris_df['sepal-width'], s=250)
+
+plt.xlabel('sepal-length')
+plt.ylabel('sepal-width')
+
+plt.show()
+</code></pre>
+<p><img src="./9-Clustering-Python_18_0.png" alt="png"></p>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(iris_df['petal-width'], iris_df['petal-length'], s=250)
+
+plt.xlabel('petal-width')
+plt.ylabel('petal-length')
+
+plt.show()
+</code></pre>
+<p><img src="./9-Clustering-Python_19_0.png" alt="png"></p>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(iris_df['sepal-length'], iris_df['petal-length'], s=250)
+
+plt.xlabel('sepal-length')
+plt.ylabel('petal-length')
+
+plt.show()
+</code></pre>
+<p><img src="./9-Clustering-Python_20_0.png" alt="png"></p>
+<h1 id="kmeans-simple">KMeans SIMPLE</h1>
+<pre><code class="language-python">iris_2D = iris_df[['sepal-length', 'petal-length']]
+
+iris_2D.sample(5)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal-length</th>
+      <th>petal-length</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>133</th>
+      <td>6.4</td>
+      <td>5.3</td>
+    </tr>
+    <tr>
+      <th>124</th>
+      <td>5.6</td>
+      <td>3.6</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>5.8</td>
+      <td>5.1</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>4.7</td>
+      <td>1.3</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>6.7</td>
+      <td>5.2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">iris_2D.shape
+</code></pre>
+<pre><code>(150, 2)
+</code></pre>
+<pre><code class="language-python">iris_2D = np.array(iris_2D)
+</code></pre>
+<pre><code class="language-python">kmeans_model_2D = KMeans(n_clusters=3, max_iter=1000).fit(iris_2D)
+</code></pre>
+<pre><code class="language-python">kmeans_model_2D.labels_
+</code></pre>
+<pre><code>array([2, 0, 1, 0, 0, 2, 0, 1, 2, 0, 2, 1, 1, 2, 1, 1, 0, 2, 1, 2, 2, 0,
+       2, 2, 2, 1, 0, 2, 1, 0, 1, 0, 1, 2, 2, 1, 0, 2, 1, 0, 2, 1, 0, 2,
+       0, 2, 1, 1, 2, 1, 1, 0, 0, 0, 2, 1, 2, 0, 1, 1, 1, 2, 2, 1, 2, 0,
+       2, 0, 1, 0, 2, 2, 1, 2, 2, 1, 0, 0, 1, 0, 1, 0, 2, 2, 0, 1, 2, 2,
+       1, 2, 0, 2, 1, 0, 1, 1, 1, 2, 2, 1, 0, 2, 2, 0, 2, 1, 0, 1, 2, 2,
+       1, 2, 1, 1, 1, 2, 0, 1, 2, 0, 1, 1, 1, 2, 2, 2, 2, 1, 0, 1, 2, 2,
+       2, 0, 0, 2, 2, 0, 2, 0, 1, 2, 1, 0, 1, 2, 0, 0, 1, 2], dtype=int32)
+</code></pre>
+<pre><code class="language-python">centroids_2D = kmeans_model_2D.cluster_centers_
+
+centroids_2D
+</code></pre>
+<pre><code>array([[6.83902439, 5.67804878],
+       [5.00784314, 1.49411765],
+       [5.87413793, 4.39310345]])
+</code></pre>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(centroids_2D[:,0], centroids_2D[:,1], c='r', s=250, marker='s')
+
+for i in range(len(centroids_2D)):
+    plt.annotate(i, (centroids_2D[i][0], centroids_2D[i][1]), fontsize=30)
+</code></pre>
+<p><img src="./9-Clustering-Python_28_0.png" alt="png"></p>
+<pre><code class="language-python">iris_labels = iris_df['class']
+</code></pre>
+<pre><code class="language-python">print(&quot;Homogeneity_score: &quot;, metrics.homogeneity_score(iris_labels, kmeans_model_2D.labels_))
+
+print(&quot;Completeness_score: &quot;, metrics.completeness_score(iris_labels, kmeans_model_2D.labels_))
+
+print(&quot;v_measure_score: &quot;, metrics.v_measure_score(iris_labels, kmeans_model_2D.labels_))
+
+print(&quot;Adjusted_rand_score: &quot;, metrics.adjusted_rand_score(iris_labels, kmeans_model_2D.labels_))
+
+print(&quot;Adjusted_mutual_info_score: &quot;, metrics.adjusted_mutual_info_score(iris_labels,  kmeans_model_2D.labels_))
+
+print(&quot;Silhouette_score: &quot;, metrics.silhouette_score(iris_2D, kmeans_model_2D.labels_))
+</code></pre>
+<pre><code>Homogeneity_score:  0.7033177646052958
+Completeness_score:  0.7096993707802843
+v_measure_score:  0.706494157075837
+Adjusted_rand_score:  0.6988627672348092
+Adjusted_mutual_info_score:  0.7028024531409133
+Silhouette_score:  0.5890612473759281
+</code></pre>
+<pre><code class="language-python">colors = ['yellow','blue','green']
+
+plt.figure(figsize=(12, 8))
+
+plt.scatter(iris_df['sepal-length'], iris_df['petal-length'], c=iris_df['class'], s=200,
+            cmap=matplotlib.colors.ListedColormap(colors), alpha=0.5)
+
+plt.scatter(centroids_2D[:,0], centroids_2D[:,1], c='r', s=250, marker='s')
+
+for i in range(len(centroids_2D)):
+    plt.annotate( i, (centroids_2D[i][0], centroids_2D[i][1]), fontsize=30)
+</code></pre>
+<p><img src="./9-Clustering-Python_31_0.png" alt="png"></p>
+<pre><code class="language-python">iris_features = iris_df.drop('class', axis=1)
+
+iris_features.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sepal-length</th>
+      <th>sepal-width</th>
+      <th>petal-length</th>
+      <th>petal-width</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>6.5</td>
+      <td>2.8</td>
+      <td>4.6</td>
+      <td>1.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6.8</td>
+      <td>3.2</td>
+      <td>5.9</td>
+      <td>2.3</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5.4</td>
+      <td>3.9</td>
+      <td>1.3</td>
+      <td>0.4</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>6.7</td>
+      <td>3.0</td>
+      <td>5.0</td>
+      <td>1.7</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7.2</td>
+      <td>3.2</td>
+      <td>6.0</td>
+      <td>1.8</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">iris_labels = iris_df['class']
+
+iris_labels.sample(5)
+</code></pre>
+<pre><code>81     2
+136    1
+86     1
+19     1
+61     1
+Name: class, dtype: int64
+</code></pre>
+<pre><code class="language-python">kmeans_model = KMeans(n_clusters=3).fit(iris_features)
+</code></pre>
+<pre><code class="language-python">kmeans_model.labels_
+</code></pre>
+<pre><code>array([2, 0, 1, 0, 0, 2, 0, 1, 2, 0, 2, 1, 1, 2, 1, 1, 0, 2, 1, 2, 2, 2,
+       2, 2, 2, 1, 0, 2, 1, 0, 1, 0, 1, 2, 2, 1, 0, 2, 1, 0, 2, 1, 0, 2,
+       0, 2, 1, 1, 2, 1, 1, 2, 2, 0, 2, 1, 2, 0, 1, 1, 1, 2, 2, 1, 2, 0,
+       2, 0, 1, 0, 2, 2, 1, 2, 2, 1, 0, 0, 1, 0, 1, 0, 2, 2, 0, 1, 2, 2,
+       1, 2, 0, 2, 1, 0, 1, 1, 1, 2, 2, 1, 0, 2, 2, 0, 2, 1, 0, 1, 2, 2,
+       1, 2, 1, 1, 1, 2, 0, 1, 2, 0, 2, 1, 1, 2, 2, 2, 2, 1, 0, 1, 2, 2,
+       2, 0, 0, 2, 2, 0, 2, 0, 1, 2, 1, 0, 1, 2, 0, 0, 1, 2], dtype=int32)
+</code></pre>
+<pre><code class="language-python">kmeans_model.cluster_centers_
+</code></pre>
+<pre><code>array([[6.85      , 3.07368421, 5.74210526, 2.07105263],
+       [5.006     , 3.418     , 1.464     , 0.244     ],
+       [5.9016129 , 2.7483871 , 4.39354839, 1.43387097]])
+</code></pre>
+<pre><code class="language-python">print(&quot;Homogeneity_score: &quot;, metrics.homogeneity_score(iris_labels, kmeans_model.labels_))
+print(&quot;Completeness_score: &quot;, metrics.completeness_score(iris_labels, kmeans_model.labels_))
+print(&quot;v_measure_score: &quot;, metrics.v_measure_score(iris_labels, kmeans_model.labels_))
+print(&quot;Adjusted_rand_score: &quot;, metrics.adjusted_rand_score(iris_labels, kmeans_model.labels_))
+print(&quot;Adjusted_mutual_info_score: &quot;, metrics.adjusted_mutual_info_score(iris_labels,  kmeans_model.labels_))
+print(&quot;Silhouette_score: &quot;, metrics.silhouette_score(iris_features, kmeans_model.labels_))
+</code></pre>
+<pre><code>Homogeneity_score:  0.7514854021988338
+Completeness_score:  0.7649861514489815
+v_measure_score:  0.7581756800057784
+Adjusted_rand_score:  0.7302382722834697
+Adjusted_mutual_info_score:  0.7551191675800484
+Silhouette_score:  0.5525919445499757
+</code></pre>
+<h1 id="clustering-con-varios-modelos">Clustering con varios modelos</h1>
+<pre><code class="language-python">from sklearn import metrics
+
+from sklearn.cluster import KMeans
+from sklearn.cluster import AgglomerativeClustering
+from sklearn.cluster import DBSCAN
+from sklearn.cluster import MeanShift
+from sklearn.cluster import Birch
+from sklearn.cluster import AffinityPropagation
+from sklearn.cluster import MiniBatchKMeans
+
+import warnings
+warnings.filterwarnings(&quot;ignore&quot;)
+</code></pre>
+<pre><code class="language-python">def build_model(clustering_model, data, labels):
+    
+    model = clustering_model(data)
+
+    print('homo\tcompl\tv-meas\tARI\tAMI\tsilhouette')
+    print(50 * '-')
+    
+    print('%.3f\t%.3f\t%.3f\t%.3f\t%.3f\t%.3f'
+          %(metrics.homogeneity_score(labels, model.labels_),
+            metrics.completeness_score(labels, model.labels_),
+            metrics.v_measure_score(labels, model.labels_),
+            metrics.adjusted_rand_score(labels, model.labels_),
+            metrics.adjusted_mutual_info_score(labels,  model.labels_),
+            metrics.silhouette_score(data, model.labels_)))
+</code></pre>
+<h2 id="kmeans">Kmeans</h2>
+<pre><code class="language-python">def k_means(data, n_clusters=3, max_iter=1000):
+    model = KMeans(n_clusters=n_clusters, max_iter=max_iter).fit(data)
+    
+    return model
+</code></pre>
+<pre><code class="language-python">build_model(k_means, iris_features, iris_labels)
+</code></pre>
+<pre><code>homo	compl	v-meas	ARI	AMI	silhouette
+--------------------------------------------------
+0.751	0.765	0.758	0.730	0.755	0.553
+</code></pre>
+<h2 id="agglomerative">Agglomerative</h2>
+<pre><code class="language-python">def agglomerative_fn(data, n_clusters=3):
+    model = AgglomerativeClustering(n_clusters = n_clusters).fit(data)
+    
+    return model
+</code></pre>
+<pre><code class="language-python">build_model(agglomerative_fn, iris_features, iris_labels)
+</code></pre>
+<pre><code>homo	compl	v-meas	ARI	AMI	silhouette
+--------------------------------------------------
+0.761	0.780	0.770	0.731	0.767	0.554
+</code></pre>
+<h2 id="dbscan">Dbscan</h2>
+<pre><code class="language-python">def dbscan_fn(data, eps=0.45, min_samples=4):
+    model = DBSCAN(eps=eps, min_samples=min_samples).fit(data)
+    return model
+</code></pre>
+<pre><code class="language-python">build_model(dbscan_fn, iris_features, iris_labels)
+</code></pre>
+<pre><code>homo	compl	v-meas	ARI	AMI	silhouette
+--------------------------------------------------
+0.577	0.609	0.593	0.508	0.584	0.372
+</code></pre>
+<h2 id="mean-shift">Mean Shift</h2>
+<pre><code class="language-python">def mean_shift_fn(data, bandwidth=0.85):
+    model = MeanShift(bandwidth=bandwidth).fit(data)
+    return model
+</code></pre>
+<pre><code class="language-python">build_model(mean_shift_fn, iris_features, iris_labels)
+</code></pre>
+<pre><code>homo	compl	v-meas	ARI	AMI	silhouette
+--------------------------------------------------
+0.760	0.772	0.766	0.744	0.763	0.551
+</code></pre>
+<h2 id="birch">Birch</h2>
+<pre><code class="language-python">def birch_fn(data, n_clusters=3):
+    model = Birch(n_clusters=n_clusters).fit(data)
+    return model
+</code></pre>
+<pre><code class="language-python">build_model(birch_fn, iris_features, iris_labels)
+</code></pre>
+<pre><code>homo	compl	v-meas	ARI	AMI	silhouette
+--------------------------------------------------
+0.635	0.792	0.705	0.566	0.700	0.534
+</code></pre>
+<h2 id="affinity-propagation">Affinity Propagation</h2>
+<pre><code class="language-python">def affinity_propagation_fn(data, damping=0.6, max_iter=1000):
+    model = AffinityPropagation(damping=damping, max_iter=max_iter).fit(data)
+    return model
+</code></pre>
+<pre><code class="language-python">build_model(affinity_propagation_fn, iris_features, iris_labels)
+</code></pre>
+<pre><code>homo	compl	v-meas	ARI	AMI	silhouette
+--------------------------------------------------
+0.851	0.492	0.623	0.437	0.612	0.349
+</code></pre>
+<h2 id="mini-batch-kmeans">Mini Batch Kmeans</h2>
+<pre><code class="language-python">def mini_batch_kmeans_fn(data, n_clusters=3, max_iter=1000):
+    model = MiniBatchKMeans(n_clusters=n_clusters, max_iter=max_iter, batch_size=20).fit(data)
+    return model
+</code></pre>
+<pre><code class="language-python">build_model(mini_batch_kmeans_fn, iris_features, iris_labels)
+</code></pre>
+<pre><code>homo	compl	v-meas	ARI	AMI	silhouette
+--------------------------------------------------
+0.745	0.754	0.750	0.729	0.746	0.549
+</code></pre>
+<h1 id="hyperparameter-tuning-optimizacion-de-hiperparametros">Hyperparameter Tuning (optimizacion de Hiperparametros)</h1>
+<p>El ejemplo se desarrollara con un dataset diferente con menos variables</p>
+<pre><code class="language-python">from sklearn import metrics
+from sklearn.metrics import silhouette_score
+
+from sklearn.model_selection import ParameterGrid
+
+from sklearn.cluster import KMeans
+from sklearn.cluster import DBSCAN
+from sklearn.cluster import MeanShift
+</code></pre>
+<pre><code class="language-python">drivers_df = pd.read_csv('datasets/driver_details.csv')
+
+drivers_df.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Driver_ID</th>
+      <th>Distance_Feature</th>
+      <th>Speeding_Feature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3423311935</td>
+      <td>71.24</td>
+      <td>28</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3423313212</td>
+      <td>52.53</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3423313724</td>
+      <td>64.54</td>
+      <td>27</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>3423311373</td>
+      <td>55.69</td>
+      <td>22</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3423310999</td>
+      <td>54.58</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">drivers_df.shape
+</code></pre>
+<pre><code>(4000, 3)
+</code></pre>
+<pre><code class="language-python">drivers_df[drivers_df.isnull().any(axis=1)]
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Driver_ID</th>
+      <th>Distance_Feature</th>
+      <th>Speeding_Feature</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">drivers_df.describe()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Driver_ID</th>
+      <th>Distance_Feature</th>
+      <th>Speeding_Feature</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>4.000000e+03</td>
+      <td>4000.000000</td>
+      <td>4000.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>3.423312e+09</td>
+      <td>76.041523</td>
+      <td>10.721000</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>1.154845e+03</td>
+      <td>53.469563</td>
+      <td>13.708543</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>3.423310e+09</td>
+      <td>15.520000</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>3.423311e+09</td>
+      <td>45.247500</td>
+      <td>4.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>3.423312e+09</td>
+      <td>53.330000</td>
+      <td>6.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>3.423313e+09</td>
+      <td>65.632500</td>
+      <td>9.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>3.423314e+09</td>
+      <td>244.790000</td>
+      <td>100.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">drivers_features = drivers_df.drop('Driver_ID', axis=1)
+</code></pre>
+<h2 id="kmeans-clustering">KMeans clustering</h2>
+<pre><code class="language-python">parameters = {'n_clusters': [2, 3, 4, 5, 10, 20, 30]}
+
+parameter_grid = ParameterGrid(parameters)
+</code></pre>
+<pre><code class="language-python">list(parameter_grid)
+</code></pre>
+<pre><code>[{'n_clusters': 2},
+ {'n_clusters': 3},
+ {'n_clusters': 4},
+ {'n_clusters': 5},
+ {'n_clusters': 10},
+ {'n_clusters': 20},
+ {'n_clusters': 30}]
+</code></pre>
+<pre><code class="language-python">best_score = -1
+model = KMeans()
+</code></pre>
+<pre><code class="language-python">for g in parameter_grid:
+    model.set_params(**g)
+    model.fit(drivers_features)
+
+    ss = metrics.silhouette_score(drivers_features, model.labels_)
+    print('Parametro: ', g, 'Score: ', ss)
+    if ss &gt; best_score:
+        best_score = ss
+        best_grid = g
+</code></pre>
+<pre><code>Parametro:  {'n_clusters': 2} Score:  0.8490223286225532
+Parametro:  {'n_clusters': 3} Score:  0.8231396834167266
+Parametro:  {'n_clusters': 4} Score:  0.5911323766293183
+Parametro:  {'n_clusters': 5} Score:  0.5128161654454148
+Parametro:  {'n_clusters': 10} Score:  0.41891069100637685
+Parametro:  {'n_clusters': 20} Score:  0.3639487789194615
+Parametro:  {'n_clusters': 30} Score:  0.3540375785241541
+</code></pre>
+<pre><code class="language-python">best_grid
+</code></pre>
+<pre><code>{'n_clusters': 2}
+</code></pre>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(drivers_features['Distance_Feature'], 
+            drivers_features['Speeding_Feature'], s=250)
+
+plt.xlabel('Distance_Feature')
+plt.ylabel('Speeding_Feature')
+
+plt.show()
+</code></pre>
+<p><img src="./9-Clustering-Python_75_0.png" alt="png"></p>
+<h2 id="dbscan-clustering">DBSCAN clustering</h2>
+<pre><code class="language-python">parameters = {'eps': [0.9, 1.0, 5.0, 10.0, 12.0, 14.0, 20.0],
+              'min_samples': [5, 7, 10, 12]}
+
+parameter_grid = ParameterGrid(parameters)
+
+list(parameter_grid)
+</code></pre>
+<pre><code>[{'eps': 0.9, 'min_samples': 5},
+ {'eps': 0.9, 'min_samples': 7},
+ {'eps': 0.9, 'min_samples': 10},
+ {'eps': 0.9, 'min_samples': 12},
+ {'eps': 1.0, 'min_samples': 5},
+ {'eps': 1.0, 'min_samples': 7},
+ {'eps': 1.0, 'min_samples': 10},
+ {'eps': 1.0, 'min_samples': 12},
+ {'eps': 5.0, 'min_samples': 5},
+ {'eps': 5.0, 'min_samples': 7},
+ {'eps': 5.0, 'min_samples': 10},
+ {'eps': 5.0, 'min_samples': 12},
+ {'eps': 10.0, 'min_samples': 5},
+ {'eps': 10.0, 'min_samples': 7},
+ {'eps': 10.0, 'min_samples': 10},
+ {'eps': 10.0, 'min_samples': 12},
+ {'eps': 12.0, 'min_samples': 5},
+ {'eps': 12.0, 'min_samples': 7},
+ {'eps': 12.0, 'min_samples': 10},
+ {'eps': 12.0, 'min_samples': 12},
+ {'eps': 14.0, 'min_samples': 5},
+ {'eps': 14.0, 'min_samples': 7},
+ {'eps': 14.0, 'min_samples': 10},
+ {'eps': 14.0, 'min_samples': 12},
+ {'eps': 20.0, 'min_samples': 5},
+ {'eps': 20.0, 'min_samples': 7},
+ {'eps': 20.0, 'min_samples': 10},
+ {'eps': 20.0, 'min_samples': 12}]
+</code></pre>
+<pre><code class="language-python">model = DBSCAN()
+best_score = -1
+</code></pre>
+<pre><code class="language-python">for g in parameter_grid:
+    model.set_params(**g)
+    model.fit(drivers_features)
+
+    ss = metrics.silhouette_score(drivers_features, model.labels_)
+    print('Parametro: ', g, 'Score: ', ss)
+    if ss &gt; best_score:
+        best_score = ss
+        best_grid = g
+</code></pre>
+<pre><code>Parametro:  {'eps': 0.9, 'min_samples': 5} Score:  -0.6057173612292268
+Parametro:  {'eps': 0.9, 'min_samples': 7} Score:  -0.4265046999507063
+Parametro:  {'eps': 0.9, 'min_samples': 10} Score:  -0.39254168253371013
+Parametro:  {'eps': 0.9, 'min_samples': 12} Score:  -0.4286838741223884
+Parametro:  {'eps': 1.0, 'min_samples': 5} Score:  -0.6155746493060738
+Parametro:  {'eps': 1.0, 'min_samples': 7} Score:  -0.41637001640330673
+Parametro:  {'eps': 1.0, 'min_samples': 10} Score:  -0.3837814631696031
+Parametro:  {'eps': 1.0, 'min_samples': 12} Score:  -0.38648235283744914
+Parametro:  {'eps': 5.0, 'min_samples': 5} Score:  0.31011275260225
+Parametro:  {'eps': 5.0, 'min_samples': 7} Score:  0.7820011223700856
+Parametro:  {'eps': 5.0, 'min_samples': 10} Score:  0.7974222681120255
+Parametro:  {'eps': 5.0, 'min_samples': 12} Score:  0.7914367881923341
+Parametro:  {'eps': 10.0, 'min_samples': 5} Score:  0.7598056658175874
+Parametro:  {'eps': 10.0, 'min_samples': 7} Score:  0.8157570071704705
+Parametro:  {'eps': 10.0, 'min_samples': 10} Score:  0.8107405850782263
+Parametro:  {'eps': 10.0, 'min_samples': 12} Score:  0.7826641175724478
+Parametro:  {'eps': 12.0, 'min_samples': 5} Score:  0.8082887021398691
+Parametro:  {'eps': 12.0, 'min_samples': 7} Score:  0.8006933163754029
+Parametro:  {'eps': 12.0, 'min_samples': 10} Score:  0.8177778536465214
+Parametro:  {'eps': 12.0, 'min_samples': 12} Score:  0.8155661587264617
+Parametro:  {'eps': 14.0, 'min_samples': 5} Score:  0.8111072866552332
+Parametro:  {'eps': 14.0, 'min_samples': 7} Score:  0.8121719747215577
+Parametro:  {'eps': 14.0, 'min_samples': 10} Score:  0.8029471072047811
+Parametro:  {'eps': 14.0, 'min_samples': 12} Score:  0.8178938395610874
+Parametro:  {'eps': 20.0, 'min_samples': 5} Score:  0.8490223286225532
+Parametro:  {'eps': 20.0, 'min_samples': 7} Score:  0.8490223286225532
+Parametro:  {'eps': 20.0, 'min_samples': 10} Score:  0.8192119040131286
+Parametro:  {'eps': 20.0, 'min_samples': 12} Score:  0.8156567891999053
+</code></pre>
+<pre><code class="language-python">best_grid
+</code></pre>
+<pre><code>{'eps': 20.0, 'min_samples': 5}
+</code></pre>
+<pre><code class="language-python">model.set_params(**best_grid)
+model.fit(drivers_features)
+</code></pre>
+<pre><code>DBSCAN(algorithm='auto', eps=20.0, leaf_size=30, metric='euclidean',
+       metric_params=None, min_samples=5, n_jobs=None, p=None)
+</code></pre>
+<pre><code class="language-python">len(model.labels_)
+</code></pre>
+<pre><code>4000
+</code></pre>
+<pre><code class="language-python">n_clusters = len(set(model.labels_)) - (1 if -1 in model.labels_ else 0)
+
+n_clusters
+</code></pre>
+<pre><code>2
+</code></pre>
+<pre><code class="language-python">n_noise = list(model.labels_).count(-1)
+
+n_noise
+</code></pre>
+<pre><code>0
+</code></pre>
+<pre><code class="language-python">another_grid = {'eps': 5.0, 'min_samples': 5}
+
+model.set_params(**another_grid)
+model.fit(drivers_features)
+
+n_clusters = len(set(model.labels_)) - (1 if -1 in model.labels_ else 0)
+print('Numero de clusters: ', n_clusters)
+
+n_noise = list(model.labels_).count(-1)
+print('Puntos ruido: ', n_noise)
+</code></pre>
+<pre><code>Numero de clusters:  7
+Puntos ruido:  117
+</code></pre>
+<pre><code class="language-python">another_grid = {'eps': 5.0, 'min_samples': 7}
+
+model.set_params(**another_grid)
+model.fit(drivers_features)
+
+n_clusters = len(set(model.labels_)) - (1 if -1 in model.labels_ else 0)
+print('Numero de Clusters: ', n_clusters)
+
+n_noise = list(model.labels_).count(-1)
+print('Puntos Ruido: ', n_noise)
+</code></pre>
+<pre><code>Numero de Clusters:  3
+Puntos Ruido:  157
+</code></pre>
+<h2 id="meanshift-clustering">MeanShift clustering</h2>
+<p><a href="https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/cluster/mean_shift_.py#L4">https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/cluster/mean_shift_.py#L4</a></p>
+<p><a href="https://stats.stackexchange.com/questions/86324/name-of-algorithm-or-paper-that-scikit-learn-cluster-estimate-bandwidth-func">https://stats.stackexchange.com/questions/86324/name-of-algorithm-or-paper-that-scikit-learn-cluster-estimate-bandwidth-func</a></p>
+<pre><code class="language-python">from sklearn.cluster import estimate_bandwidth
+estimate_bandwidth(drivers_features)
+</code></pre>
+<pre><code>33.960524729584314
+</code></pre>
+<pre><code class="language-python">model = MeanShift(bandwidth=estimate_bandwidth(drivers_features)).fit(drivers_features)
+
+metrics.silhouette_score(drivers_features, model.labels_)
+</code></pre>
+<pre><code>0.8231396834167266
+</code></pre>
+<h1 id="referencias">Referencias</h1>
+<p><a href="https://scikit-learn.org/stable/modules/clustering.html#clustering">https://scikit-learn.org/stable/modules/clustering.html#clustering</a></p>
+<p>Cheatsheet scikitlearn
+<a href="https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116">https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116</a></p>
+<p><strong>Phd. Jose R. Zapata</strong></p>
+<ul>
+<li><a href="https://joserzapata.github.io/" target="_blank" rel="noopener">https://joserzapata.github.io/</a></li>
+<li><a href="mailto:joser.zapata@upb.edu.co">joser.zapata@upb.edu.co</a></li>
+</ul>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Sep 9, 2020</p>
+
+          
+
+
+
+
+
+          
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2020
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Published with
+    <a href="https://wowchemy.com" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/shell.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/wowchemy.min.4c2bca31150ce93c5a5e43b8a50f22fd.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning con Scikit Learn | Jose Ricardo Zapata</title>
+    <link>https://joserzapata.github.io/courses/python-ciencia-datos/ml/</link>
+      <atom:link href="https://joserzapata.github.io/courses/python-ciencia-datos/ml/index.xml" rel="self" type="application/rss+xml" />
+    <description>Machine Learning con Scikit Learn</description>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Wed, 09 Sep 2020 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <title>Machine Learning con Scikit Learn</title>
+      <link>https://joserzapata.github.io/courses/python-ciencia-datos/ml/</link>
+    </image>
+    
+  </channel>
+</rss>

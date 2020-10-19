@@ -1,0 +1,3193 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  
+  
+  <meta name="generator" content="Wowchemy 4.8.0 for Hugo">
+  
+
+  
+
+  
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Jose R. Zapata">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Ejemplo Regresion con Python">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://joserzapata.github.io/courses/python-ciencia-datos/regresion/">
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+  
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#328cc1">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+    
+      
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+    
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/wowchemy.min.2e8848883a20272c77656a192827610d.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112535090-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-112535090-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+  
+
+  
+  <link rel="alternate" href="/courses/python-ciencia-datos/regresion/index.xml" type="application/rss+xml" title="Jose Ricardo Zapata">
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_huef99ce4a8cdef83a01a57b9c8063a4d3_108982_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_huef99ce4a8cdef83a01a57b9c8063a4d3_108982_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://joserzapata.github.io/courses/python-ciencia-datos/regresion/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@joserzapata">
+  <meta property="twitter:creator" content="@joserzapata">
+  
+  <meta property="og:site_name" content="Jose Ricardo Zapata">
+  <meta property="og:url" content="https://joserzapata.github.io/courses/python-ciencia-datos/regresion/">
+  <meta property="og:title" content="Regresion con Scikit Learn | Jose Ricardo Zapata">
+  <meta property="og:description" content="Ejemplo Regresion con Python"><meta property="og:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg">
+  <meta property="twitter:image" content="https://joserzapata.github.io/img/JoseRZapata.jpg"><meta property="og:locale" content="en-us">
+  
+    <meta property="og:updated_time" content="2020-09-09T00:00:00&#43;00:00">
+  
+
+  
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Regresion con Scikit Learn | Jose Ricardo Zapata</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" class=" ">
+
+  
+  
+  
+    <script>window.wcDarkLightEnabled = true;</script>
+  
+  
+    <script>const isSiteThemeDark = false;</script>
+  
+  
+  <script src="/js/load-theme.js"></script>
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">Jose Ricardo Zapata</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">Jose Ricardo Zapata</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#featured"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#teaching"><span>Teaching</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+            
+            
+            
+              
+            
+            
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Talks</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+
+        
+
+        
+        
+        
+        
+
+        
+          
+            
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/phd"><span>Phd Thesis</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-moon" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      <form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  
+  
+  
+  
+  
+    
+    
+
+    
+    
+  </nav>
+
+    </div>
+
+    
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#eliminar-columnas-no-necesarias">Eliminar Columnas no necesarias</a></li>
+    <li><a href="#convertir-el-formato-de-model-year-a-año-completo">Convertir el formato de &lsquo;model year&rsquo; a año completo</a></li>
+    <li><a href="#agregar-columna-de-los-años-del-automobil">Agregar columna de los años del automobil</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#scatter-plots">Scatter Plots</a></li>
+    <li><a href="#correlacion">Correlacion</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#regresion-lineal-con-una-caracteristica-horsepower">Regresion lineal con una caracteristica (horsepower)</a></li>
+    <li><a href="#regresion-lineal-con-una-caracteristica---age">Regresion lineal con una caracteristica - age</a></li>
+    <li><a href="#regresion-lineal-con-varias-caracteristicas">Regresion lineal con varias caracteristicas</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#funciones-de-ayuda">Funciones de ayuda</a></li>
+    <li><a href="#regresion-lineal-1">Regresion lineal</a></li>
+    <li><a href="#lasso">Lasso</a></li>
+    <li><a href="#ridge">Ridge</a></li>
+    <li><a href="#elasticnet">Elasticnet</a></li>
+    <li><a href="#svr">SVR</a></li>
+    <li><a href="#knr">KNR</a></li>
+    <li><a href="#sgd">SGD</a></li>
+    <li><a href="#decision-tree">Decision Tree</a></li>
+    <li><a href="#lars">Lars</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#lasso-regression">Lasso regression</a></li>
+    <li><a href="#kneighbors-regression">KNeighbors regression</a></li>
+    <li><a href="#decision-tree-1">Decision Tree</a></li>
+    <li><a href="#svr-1">SVR</a></li>
+  </ul>
+</nav>
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article">
+
+        <div class="docs-article-container">
+          <h1>Regresion con Scikit Learn</h1>
+
+          <div class="article-style">
+            <p>Curso Programacion Analitica</p>
+<p>Maestria TIC Linea Ciencia de Datos</p>
+<p>Por <a href="https://joserzapata.github.io/" target="_blank" rel="noopener">Jose R. Zapata</a></p>
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+import datetime
+</code></pre>
+<h1 id="informacion-de-los-datos">Informacion de los datos</h1>
+<pre><code class="language-python">automobile_df = pd.read_csv('auto-mpg.csv')
+
+# Ver 5 registros aleatorios
+automobile_df.sample(5)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+      <th>model year</th>
+      <th>origin</th>
+      <th>car name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>284</th>
+      <td>20.6</td>
+      <td>6</td>
+      <td>225.0</td>
+      <td>110</td>
+      <td>3360</td>
+      <td>16.6</td>
+      <td>79</td>
+      <td>1</td>
+      <td>dodge aspen 6</td>
+    </tr>
+    <tr>
+      <th>136</th>
+      <td>16.0</td>
+      <td>8</td>
+      <td>302.0</td>
+      <td>140</td>
+      <td>4141</td>
+      <td>14.0</td>
+      <td>74</td>
+      <td>1</td>
+      <td>ford gran torino</td>
+    </tr>
+    <tr>
+      <th>300</th>
+      <td>23.9</td>
+      <td>8</td>
+      <td>260.0</td>
+      <td>90</td>
+      <td>3420</td>
+      <td>22.2</td>
+      <td>79</td>
+      <td>1</td>
+      <td>oldsmobile cutlass salon brougham</td>
+    </tr>
+    <tr>
+      <th>182</th>
+      <td>28.0</td>
+      <td>4</td>
+      <td>107.0</td>
+      <td>86</td>
+      <td>2464</td>
+      <td>15.5</td>
+      <td>76</td>
+      <td>2</td>
+      <td>fiat 131</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>12.0</td>
+      <td>8</td>
+      <td>429.0</td>
+      <td>198</td>
+      <td>4952</td>
+      <td>11.5</td>
+      <td>73</td>
+      <td>1</td>
+      <td>mercury marquis brougham</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">#Tamaño del dataset
+automobile_df.shape 
+</code></pre>
+<pre><code>(398, 9)
+</code></pre>
+<pre><code class="language-python">automobile_df.info()
+</code></pre>
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 398 entries, 0 to 397
+Data columns (total 9 columns):
+ #   Column        Non-Null Count  Dtype  
+---  ------        --------------  -----  
+ 0   mpg           398 non-null    float64
+ 1   cylinders     398 non-null    int64  
+ 2   displacement  398 non-null    float64
+ 3   horsepower    398 non-null    object 
+ 4   weight        398 non-null    int64  
+ 5   acceleration  398 non-null    float64
+ 6   model year    398 non-null    int64  
+ 7   origin        398 non-null    int64  
+ 8   car name      398 non-null    object 
+dtypes: float64(3), int64(4), object(2)
+memory usage: 28.1+ KB
+</code></pre>
+<h1 id="preparacion-de-datos">Preparacion de Datos</h1>
+<pre><code class="language-python">automobile_df = automobile_df.replace('?', np.nan)
+</code></pre>
+<pre><code class="language-python">automobile_df = automobile_df.dropna()
+</code></pre>
+<pre><code class="language-python">automobile_df.shape
+</code></pre>
+<pre><code>(392, 9)
+</code></pre>
+<h2 id="eliminar-columnas-no-necesarias">Eliminar Columnas no necesarias</h2>
+<pre><code class="language-python">automobile_df.drop(['origin', 'car name'], axis=1, inplace=True)
+</code></pre>
+<pre><code class="language-python">automobile_df.sample(5)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+      <th>model year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>164</th>
+      <td>21.0</td>
+      <td>6</td>
+      <td>231.0</td>
+      <td>110</td>
+      <td>3039</td>
+      <td>15.0</td>
+      <td>75</td>
+    </tr>
+    <tr>
+      <th>309</th>
+      <td>41.5</td>
+      <td>4</td>
+      <td>98.0</td>
+      <td>76</td>
+      <td>2144</td>
+      <td>14.7</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>224</th>
+      <td>15.0</td>
+      <td>8</td>
+      <td>302.0</td>
+      <td>130</td>
+      <td>4295</td>
+      <td>14.9</td>
+      <td>77</td>
+    </tr>
+    <tr>
+      <th>322</th>
+      <td>46.6</td>
+      <td>4</td>
+      <td>86.0</td>
+      <td>65</td>
+      <td>2110</td>
+      <td>17.9</td>
+      <td>80</td>
+    </tr>
+    <tr>
+      <th>371</th>
+      <td>29.0</td>
+      <td>4</td>
+      <td>135.0</td>
+      <td>84</td>
+      <td>2525</td>
+      <td>16.0</td>
+      <td>82</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">automobile_df.info()
+</code></pre>
+<pre><code>&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 392 entries, 0 to 397
+Data columns (total 7 columns):
+ #   Column        Non-Null Count  Dtype  
+---  ------        --------------  -----  
+ 0   mpg           392 non-null    float64
+ 1   cylinders     392 non-null    int64  
+ 2   displacement  392 non-null    float64
+ 3   horsepower    392 non-null    object 
+ 4   weight        392 non-null    int64  
+ 5   acceleration  392 non-null    float64
+ 6   model year    392 non-null    int64  
+dtypes: float64(3), int64(3), object(1)
+memory usage: 24.5+ KB
+</code></pre>
+<h2 id="convertir-el-formato-de-model-year-a-año-completo">Convertir el formato de &lsquo;model year&rsquo; a año completo</h2>
+<pre><code class="language-python">automobile_df['model year'] = '19' + automobile_df['model year'].astype(str)
+</code></pre>
+<pre><code class="language-python">automobile_df.sample(5)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+      <th>model year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>132</th>
+      <td>25.0</td>
+      <td>4</td>
+      <td>140.0</td>
+      <td>75</td>
+      <td>2542</td>
+      <td>17.0</td>
+      <td>1974</td>
+    </tr>
+    <tr>
+      <th>213</th>
+      <td>13.0</td>
+      <td>8</td>
+      <td>350.0</td>
+      <td>145</td>
+      <td>4055</td>
+      <td>12.0</td>
+      <td>1976</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>10.0</td>
+      <td>8</td>
+      <td>360.0</td>
+      <td>215</td>
+      <td>4615</td>
+      <td>14.0</td>
+      <td>1970</td>
+    </tr>
+    <tr>
+      <th>306</th>
+      <td>28.8</td>
+      <td>6</td>
+      <td>173.0</td>
+      <td>115</td>
+      <td>2595</td>
+      <td>11.3</td>
+      <td>1979</td>
+    </tr>
+    <tr>
+      <th>259</th>
+      <td>20.8</td>
+      <td>6</td>
+      <td>200.0</td>
+      <td>85</td>
+      <td>3070</td>
+      <td>16.7</td>
+      <td>1978</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h2 id="agregar-columna-de-los-años-del-automobil">Agregar columna de los años del automobil</h2>
+<pre><code class="language-python">automobile_df['age'] = datetime.datetime.now().year - pd.to_numeric(automobile_df['model year'])
+</code></pre>
+<pre><code class="language-python">automobile_df.drop(['model year'], axis=1, inplace=True)
+</code></pre>
+<pre><code class="language-python">automobile_df.sample(5)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>298</th>
+      <td>23.0</td>
+      <td>8</td>
+      <td>350.0</td>
+      <td>125</td>
+      <td>3900</td>
+      <td>17.4</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>154</th>
+      <td>15.0</td>
+      <td>6</td>
+      <td>250.0</td>
+      <td>72</td>
+      <td>3432</td>
+      <td>21.0</td>
+      <td>45</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>15.0</td>
+      <td>8</td>
+      <td>350.0</td>
+      <td>165</td>
+      <td>3693</td>
+      <td>11.5</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>23.0</td>
+      <td>4</td>
+      <td>120.0</td>
+      <td>97</td>
+      <td>2506</td>
+      <td>14.5</td>
+      <td>48</td>
+    </tr>
+    <tr>
+      <th>199</th>
+      <td>20.0</td>
+      <td>6</td>
+      <td>225.0</td>
+      <td>100</td>
+      <td>3651</td>
+      <td>17.7</td>
+      <td>44</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">automobile_df.dtypes
+</code></pre>
+<pre><code>mpg             float64
+cylinders         int64
+displacement    float64
+horsepower       object
+weight            int64
+acceleration    float64
+age               int64
+dtype: object
+</code></pre>
+<pre><code class="language-python">automobile_df['horsepower'] = pd.to_numeric(automobile_df['horsepower'], errors='coerce')
+</code></pre>
+<pre><code class="language-python">automobile_df.describe()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>392.000000</td>
+      <td>392.000000</td>
+      <td>392.000000</td>
+      <td>392.000000</td>
+      <td>392.000000</td>
+      <td>392.000000</td>
+      <td>392.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>23.445918</td>
+      <td>5.471939</td>
+      <td>194.411990</td>
+      <td>104.469388</td>
+      <td>2977.584184</td>
+      <td>15.541327</td>
+      <td>44.020408</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>7.805007</td>
+      <td>1.705783</td>
+      <td>104.644004</td>
+      <td>38.491160</td>
+      <td>849.402560</td>
+      <td>2.758864</td>
+      <td>3.683737</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>9.000000</td>
+      <td>3.000000</td>
+      <td>68.000000</td>
+      <td>46.000000</td>
+      <td>1613.000000</td>
+      <td>8.000000</td>
+      <td>38.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>17.000000</td>
+      <td>4.000000</td>
+      <td>105.000000</td>
+      <td>75.000000</td>
+      <td>2225.250000</td>
+      <td>13.775000</td>
+      <td>41.000000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>22.750000</td>
+      <td>4.000000</td>
+      <td>151.000000</td>
+      <td>93.500000</td>
+      <td>2803.500000</td>
+      <td>15.500000</td>
+      <td>44.000000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>29.000000</td>
+      <td>8.000000</td>
+      <td>275.750000</td>
+      <td>126.000000</td>
+      <td>3614.750000</td>
+      <td>17.025000</td>
+      <td>47.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>46.600000</td>
+      <td>8.000000</td>
+      <td>455.000000</td>
+      <td>230.000000</td>
+      <td>5140.000000</td>
+      <td>24.800000</td>
+      <td>50.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<h1 id="analisis-univariable">Analisis Univariable</h1>
+<p>Se debe hacer un analisis de cada una de las variables y describir sus caracteristicas</p>
+<h1 id="analisis-bivariable">Analisis Bivariable</h1>
+<h2 id="scatter-plots">Scatter Plots</h2>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(automobile_df['age'], automobile_df['mpg'])
+
+plt.xlabel('Años')
+plt.ylabel('Millas por galon');
+</code></pre>
+<p><img src="./7-Regresion-Python_27_0.png" alt="png"></p>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(automobile_df['acceleration'], automobile_df['mpg'])
+
+plt.xlabel('Aceleracion')
+plt.ylabel('Millas por galon');
+</code></pre>
+<p><img src="./7-Regresion-Python_28_0.png" alt="png"></p>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(automobile_df['weight'], automobile_df['mpg'])
+
+plt.xlabel('Peso')
+plt.ylabel('Millas por galon');
+</code></pre>
+<p><img src="./7-Regresion-Python_29_0.png" alt="png"></p>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(automobile_df['displacement'], automobile_df['mpg'])
+
+plt.xlabel('Desplazamiento')
+plt.ylabel('Millas por galon');
+</code></pre>
+<p><img src="./7-Regresion-Python_30_0.png" alt="png"></p>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(automobile_df['horsepower'], automobile_df['mpg'])
+
+plt.xlabel('Caballos de fuerza')
+plt.ylabel('Millas por galon');
+</code></pre>
+<p><img src="./7-Regresion-Python_31_0.png" alt="png"></p>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(automobile_df['cylinders'], automobile_df['mpg'])
+
+plt.xlabel('Cilindros')
+plt.ylabel('Millas por galon');
+</code></pre>
+<p><img src="./7-Regresion-Python_32_0.png" alt="png"></p>
+<h2 id="correlacion">Correlacion</h2>
+<pre><code class="language-python">automobile_corr = automobile_df.corr()
+
+automobile_corr
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>mpg</th>
+      <td>1.000000</td>
+      <td>-0.777618</td>
+      <td>-0.805127</td>
+      <td>-0.778427</td>
+      <td>-0.832244</td>
+      <td>0.423329</td>
+      <td>-0.580541</td>
+    </tr>
+    <tr>
+      <th>cylinders</th>
+      <td>-0.777618</td>
+      <td>1.000000</td>
+      <td>0.950823</td>
+      <td>0.842983</td>
+      <td>0.897527</td>
+      <td>-0.504683</td>
+      <td>0.345647</td>
+    </tr>
+    <tr>
+      <th>displacement</th>
+      <td>-0.805127</td>
+      <td>0.950823</td>
+      <td>1.000000</td>
+      <td>0.897257</td>
+      <td>0.932994</td>
+      <td>-0.543800</td>
+      <td>0.369855</td>
+    </tr>
+    <tr>
+      <th>horsepower</th>
+      <td>-0.778427</td>
+      <td>0.842983</td>
+      <td>0.897257</td>
+      <td>1.000000</td>
+      <td>0.864538</td>
+      <td>-0.689196</td>
+      <td>0.416361</td>
+    </tr>
+    <tr>
+      <th>weight</th>
+      <td>-0.832244</td>
+      <td>0.897527</td>
+      <td>0.932994</td>
+      <td>0.864538</td>
+      <td>1.000000</td>
+      <td>-0.416839</td>
+      <td>0.309120</td>
+    </tr>
+    <tr>
+      <th>acceleration</th>
+      <td>0.423329</td>
+      <td>-0.504683</td>
+      <td>-0.543800</td>
+      <td>-0.689196</td>
+      <td>-0.416839</td>
+      <td>1.000000</td>
+      <td>-0.290316</td>
+    </tr>
+    <tr>
+      <th>age</th>
+      <td>-0.580541</td>
+      <td>0.345647</td>
+      <td>0.369855</td>
+      <td>0.416361</td>
+      <td>0.309120</td>
+      <td>-0.290316</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 10))
+
+sns.heatmap(automobile_corr, annot=True);
+</code></pre>
+<p><img src="./7-Regresion-Python_35_0.png" alt="png"></p>
+<pre><code class="language-python">automobile_df = automobile_df.sample(frac=1).reset_index(drop=True)
+
+automobile_df.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>17.0</td>
+      <td>8</td>
+      <td>305.0</td>
+      <td>130</td>
+      <td>3840</td>
+      <td>15.4</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>30.0</td>
+      <td>4</td>
+      <td>98.0</td>
+      <td>68</td>
+      <td>2155</td>
+      <td>16.5</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>19.4</td>
+      <td>6</td>
+      <td>232.0</td>
+      <td>90</td>
+      <td>3210</td>
+      <td>17.2</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>31.8</td>
+      <td>4</td>
+      <td>85.0</td>
+      <td>65</td>
+      <td>2020</td>
+      <td>19.2</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>26.0</td>
+      <td>4</td>
+      <td>108.0</td>
+      <td>93</td>
+      <td>2391</td>
+      <td>15.5</td>
+      <td>46</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">automobile_df.to_csv('auto-mpg-processed.csv', index=False)
+</code></pre>
+<h1 id="regresion-lineal">Regresion Lineal</h1>
+<h2 id="regresion-lineal-con-una-caracteristica-horsepower">Regresion lineal con una caracteristica (horsepower)</h2>
+<pre><code class="language-python">from sklearn.model_selection import train_test_split
+
+X = automobile_df[['horsepower']]
+Y = automobile_df['mpg']
+
+x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
+</code></pre>
+<pre><code class="language-python">x_train.sample(5)
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>horsepower</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>375</th>
+      <td>89</td>
+    </tr>
+    <tr>
+      <th>265</th>
+      <td>68</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>97</td>
+    </tr>
+    <tr>
+      <th>231</th>
+      <td>120</td>
+    </tr>
+    <tr>
+      <th>349</th>
+      <td>108</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">from sklearn.linear_model import LinearRegression
+
+linear_model = LinearRegression(normalize=True).fit(x_train, y_train)
+</code></pre>
+<pre><code class="language-python">print('Puntaje Entrenamiento: ', linear_model.score(x_train, y_train))
+</code></pre>
+<pre><code>Puntaje Entrenamiento:  0.6323165116170613
+</code></pre>
+<pre><code class="language-python">y_pred = linear_model.predict(x_test)
+</code></pre>
+<pre><code class="language-python">from sklearn.metrics import r2_score
+
+print('Puntaje Testing: ', r2_score(y_test, y_pred))
+</code></pre>
+<pre><code>Puntaje Testing:  0.31221638583688094
+</code></pre>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(x_test, y_test)
+plt.plot(x_test, y_pred, color='r')
+
+plt.xlabel('Caballos de Fuerza')
+plt.ylabel('Mpg')
+plt.show()
+</code></pre>
+<p><img src="./7-Regresion-Python_46_0.png" alt="png"></p>
+<h2 id="regresion-lineal-con-una-caracteristica---age">Regresion lineal con una caracteristica - age</h2>
+<pre><code class="language-python">X = automobile_df[['age']]
+Y = automobile_df['mpg']
+
+x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
+
+linear_model = LinearRegression(normalize=True).fit(x_train, y_train)
+
+print('Puntaje de entrenamiento: ', linear_model.score(x_train, y_train))
+
+y_pred = linear_model.predict(x_test)
+
+print('Puntaje de Testing: ', r2_score(y_test, y_pred))
+</code></pre>
+<pre><code>Puntaje de entrenamiento:  0.36723602073481343
+Puntaje de Testing:  0.20002514279066197
+</code></pre>
+<pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
+
+plt.scatter(x_test, y_test)
+plt.plot(x_test, y_pred, color='r')
+
+plt.xlabel('Age')
+plt.ylabel('Mpg')
+plt.show()
+</code></pre>
+<p><img src="./7-Regresion-Python_49_0.png" alt="png"></p>
+<h2 id="regresion-lineal-con-varias-caracteristicas">Regresion lineal con varias caracteristicas</h2>
+<pre><code class="language-python"># X = automobile_df[['displacement', 'horsepower', 'weight', 'acceleration', 'cylinders']]
+
+X = automobile_df[['displacement', 'horsepower', 'weight']]
+Y = automobile_df['mpg']
+
+x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
+</code></pre>
+<pre><code class="language-python">linear_model = LinearRegression(normalize=True).fit(x_train, y_train)
+</code></pre>
+<pre><code class="language-python">print('Training score: ', linear_model.score(x_train, y_train))
+</code></pre>
+<pre><code>Training score:  0.7017904639110666
+</code></pre>
+<pre><code class="language-python">predictors = x_train.columns
+coef = pd.Series(linear_model.coef_, predictors).sort_values()
+
+print(coef)
+</code></pre>
+<pre><code>horsepower     -0.047675
+weight         -0.005258
+displacement   -0.004028
+dtype: float64
+</code></pre>
+<pre><code class="language-python">y_pred = linear_model.predict(x_test)
+</code></pre>
+<pre><code class="language-python">print('Puntaje Testing', r2_score(y_test, y_pred))
+</code></pre>
+<pre><code>Puntaje Testing 0.7243525511175973
+</code></pre>
+<pre><code class="language-python">plt.figure(figsize = (20,10))
+
+plt.plot(y_pred, label='Prediccion')
+plt.plot(y_test.values, label='Real')
+
+plt.ylabel('Mpg')
+
+plt.legend()
+plt.show()
+</code></pre>
+<p><img src="./7-Regresion-Python_57_0.png" alt="png"></p>
+<h1 id="regresión-con-múltiples-modelos">Regresión con Múltiples Modelos</h1>
+<pre><code class="language-python">import statsmodels.api as sm
+
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import r2_score
+from sklearn.preprocessing import StandardScaler
+
+from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import Lasso
+from sklearn.linear_model import Ridge
+from sklearn.linear_model import ElasticNet
+from sklearn.linear_model import Lars
+from sklearn.linear_model import SGDRegressor
+from sklearn.svm import SVR
+from sklearn.neighbors import KNeighborsRegressor
+from sklearn.tree import DecisionTreeRegressor
+
+import warnings
+warnings.filterwarnings(&quot;ignore&quot;)
+</code></pre>
+<pre><code class="language-python">automobile_df = pd.read_csv('auto-mpg-processed.csv')
+
+automobile_df.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>17.0</td>
+      <td>8</td>
+      <td>305.0</td>
+      <td>130</td>
+      <td>3840</td>
+      <td>15.4</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>30.0</td>
+      <td>4</td>
+      <td>98.0</td>
+      <td>68</td>
+      <td>2155</td>
+      <td>16.5</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>19.4</td>
+      <td>6</td>
+      <td>232.0</td>
+      <td>90</td>
+      <td>3210</td>
+      <td>17.2</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>31.8</td>
+      <td>4</td>
+      <td>85.0</td>
+      <td>65</td>
+      <td>2020</td>
+      <td>19.2</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>26.0</td>
+      <td>4</td>
+      <td>108.0</td>
+      <td>93</td>
+      <td>2391</td>
+      <td>15.5</td>
+      <td>46</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">result_dict = {}
+</code></pre>
+<h2 id="funciones-de-ayuda">Funciones de ayuda</h2>
+<pre><code class="language-python">def build_model(regression_fn,                
+                name_of_y_col, 
+                names_of_x_cols, 
+                dataset, 
+                test_frac=0.2,
+                preprocess_fn=None,
+                show_plot_Y=False,
+                show_plot_scatter=False):
+    
+    &quot;&quot;&quot;build_model
+    
+    Funcion para entrenar y evaluar un modelo
+        
+    &quot;&quot;&quot;
+    
+    X = dataset[names_of_x_cols]
+    Y = dataset[name_of_y_col]
+
+    if preprocess_fn is not None:
+        X = preprocess_fn(X)
+
+    x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=test_frac)
+    
+    model = regression_fn(x_train, y_train)
+    
+    y_pred = model.predict(x_test)
+    
+    print(&quot;Entrenamiento_score : &quot; , model.score(x_train, y_train))
+    print(&quot;Prueba_score : &quot;, r2_score(y_test, y_pred))
+
+    if show_plot_Y == True:
+        fig, ax = plt.subplots(figsize=(12, 8))
+        
+        plt.plot(y_pred, label='Prediccion')
+        plt.plot(y_test.values, label='Actual')
+        
+        plt.ylabel(name_of_y_col)
+
+        plt.legend()
+        plt.show()
+
+    if show_plot_scatter == True:
+        fig, ax = plt.subplots(figsize=(12, 8))
+        
+        plt.scatter(x_test, y_test)
+        plt.plot(x_test, y_pred, 'r')
+        
+        plt.legend(['Linea de Prediccion','Datos observados'])
+        plt.show()
+    
+    return {
+            'Entrenamiento_score': model.score(x_train, y_train),
+            'Prueba_score': r2_score(y_test, y_pred)
+           }     
+</code></pre>
+<pre><code class="language-python">def compare_results():
+    for key in result_dict:
+        print('Regresion: ', key)
+        print('Entrenamiento score', result_dict[key]['Entrenamiento_score'])
+        print('Prueba score', result_dict[key]['Prueba_score'])
+        print()
+</code></pre>
+<h2 id="regresion-lineal-1">Regresion lineal</h2>
+<pre><code class="language-python">def linear_reg(x_train, y_train):
+    model = LinearRegression(normalize=True)
+    model.fit(x_train, y_train)
+    
+    return model
+</code></pre>
+<pre><code class="language-python">result_dict['mpg ~ single_linear'] = build_model(linear_reg,
+                                                 'mpg',
+                                                ['weight'],
+                                                  automobile_df,
+                                                  show_plot_Y=True)
+</code></pre>
+<pre><code>Entrenamiento_score :  0.6940251922026459
+Prueba_score :  0.6780272557552722
+</code></pre>
+<p><img src="./7-Regresion-Python_67_1.png" alt="png"></p>
+<pre><code class="language-python">result_dict['mpg ~ kitchen_sink_linear'] = build_model(linear_reg,
+                                                      'mpg',
+                                                     ['cylinders',
+                                                      'displacement',
+                                                      'horsepower',
+                                                      'weight',
+                                                      'acceleration'],
+                                                      automobile_df,
+                                                      show_plot_Y=True)
+</code></pre>
+<pre><code>Entrenamiento_score :  0.7143524190779553
+Prueba_score :  0.6496852460273488
+</code></pre>
+<p><img src="./7-Regresion-Python_68_1.png" alt="png"></p>
+<pre><code class="language-python">result_dict['mpg ~ parsimonius_linear'] = build_model(linear_reg,
+                                                      'mpg',
+                                                    ['horsepower',
+                                                     'weight'],
+                                                      automobile_df,
+                                                      show_plot_Y=True)
+</code></pre>
+<pre><code>Entrenamiento_score :  0.7069851597873933
+Prueba_score :  0.7035037058069924
+</code></pre>
+<p><img src="./7-Regresion-Python_69_1.png" alt="png"></p>
+<pre><code class="language-python">compare_results()
+</code></pre>
+<pre><code>Regresion:  mpg ~ single_linear
+Entrenamiento score 0.6940251922026459
+Prueba score 0.6780272557552722
+
+Regresion:  mpg ~ kitchen_sink_linear
+Entrenamiento score 0.7143524190779553
+Prueba score 0.6496852460273488
+
+Regresion:  mpg ~ parsimonius_linear
+Entrenamiento score 0.7069851597873933
+Prueba score 0.7035037058069924
+</code></pre>
+<h2 id="lasso">Lasso</h2>
+<pre><code class="language-python">def lasso_reg(x_train, y_train, alpha=0.5):
+    model = Lasso(alpha=alpha)
+    model.fit(x_train, y_train)
+    
+    return model
+</code></pre>
+<pre><code class="language-python">result_dict['mpg ~ kitchen_sink_lasso'] = build_model(lasso_reg,
+                                                     'mpg',
+                                                    ['cylinders',
+                                                     'displacement',
+                                                     'horsepower',
+                                                     'weight',
+                                                     'acceleration'],
+                                                      automobile_df,
+                                                      show_plot_Y=True)
+</code></pre>
+<pre><code>Entrenamiento_score :  0.7151538580963827
+Prueba_score :  0.6762521302280093
+</code></pre>
+<p><img src="./7-Regresion-Python_73_1.png" alt="png"></p>
+<pre><code class="language-python">compare_results()
+</code></pre>
+<pre><code>Regresion:  mpg ~ single_linear
+Entrenamiento score 0.6940251922026459
+Prueba score 0.6780272557552722
+
+Regresion:  mpg ~ kitchen_sink_linear
+Entrenamiento score 0.7143524190779553
+Prueba score 0.6496852460273488
+
+Regresion:  mpg ~ parsimonius_linear
+Entrenamiento score 0.7069851597873933
+Prueba score 0.7035037058069924
+
+Regresion:  mpg ~ kitchen_sink_lasso
+Entrenamiento score 0.7151538580963827
+Prueba score 0.6762521302280093
+</code></pre>
+<h2 id="ridge">Ridge</h2>
+<pre><code class="language-python">def ridge_reg(x_train, y_train, alpha=0.5, normalize=True):
+    model = Ridge(alpha=alpha, normalize=normalize)
+    model.fit(x_train, y_train)
+    
+    return model
+</code></pre>
+<pre><code class="language-python">result_dict['mpg ~ kitchen_sink_ridge'] = build_model(ridge_reg,
+                                                      'mpg',
+                                                     ['cylinders',
+                                                      'displacement',
+                                                      'horsepower',
+                                                      'weight',
+                                                      'acceleration'],
+                                                       automobile_df,
+                                                       show_plot_Y=True)
+</code></pre>
+<pre><code>Entrenamiento_score :  0.6896708807553231
+Prueba_score :  0.6556435118377518
+</code></pre>
+<p><img src="./7-Regresion-Python_77_1.png" alt="png"></p>
+<pre><code class="language-python">compare_results()
+</code></pre>
+<pre><code>Regresion:  mpg ~ single_linear
+Entrenamiento score 0.6940251922026459
+Prueba score 0.6780272557552722
+
+Regresion:  mpg ~ kitchen_sink_linear
+Entrenamiento score 0.7143524190779553
+Prueba score 0.6496852460273488
+
+Regresion:  mpg ~ parsimonius_linear
+Entrenamiento score 0.7069851597873933
+Prueba score 0.7035037058069924
+
+Regresion:  mpg ~ kitchen_sink_lasso
+Entrenamiento score 0.7151538580963827
+Prueba score 0.6762521302280093
+
+Regresion:  mpg ~ kitchen_sink_ridge
+Entrenamiento score 0.6896708807553231
+Prueba score 0.6556435118377518
+</code></pre>
+<h2 id="elasticnet">Elasticnet</h2>
+<pre><code class="language-python">def elastic_net_reg(x_train, y_train, alpha=1, l1_ratio=0.5, 
+                    normalize=False, max_iter=100000, warm_start=True, equivalent_to=&quot;Elastic Net&quot;):
+
+    print(&quot;Equivalent to:&quot;, equivalent_to)
+    
+    model = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, 
+                       normalize=normalize, max_iter=max_iter, warm_start=warm_start)
+    model.fit(x_train, y_train)
+
+    return model
+</code></pre>
+<pre><code class="language-python">from functools import partial
+
+## This generates a warning which says will not converge
+result_dict['mpg ~ kitchen_sink_elastic_net_ols'] = build_model(partial(elastic_net_reg, 
+                                                                        alpha=0, equivalent_to=&quot;OLS&quot;),
+                                                               'mpg',
+                                                              ['cylinders',
+                                                               'displacement',
+                                                               'horsepower',
+                                                               'weight',
+                                                               'acceleration'],
+                                                                automobile_df,
+                                                                show_plot_Y=True)
+</code></pre>
+<pre><code>Equivalent to: OLS
+Entrenamiento_score :  0.7164509306550633
+Prueba_score :  0.6549631422669479
+</code></pre>
+<p><img src="./7-Regresion-Python_81_1.png" alt="png"></p>
+<pre><code class="language-python">result_dict['mpg ~ kitchen_sink_elastic_net_lasso'] = build_model(partial(elastic_net_reg, alpha=1, 
+                                                                    l1_ratio=0, equivalent_to=&quot;Lasso&quot;),
+                                                                  'mpg',
+                                                                 ['cylinders',
+                                                                  'displacement',
+                                                                  'horsepower',
+                                                                  'weight',
+                                                                  'acceleration'],
+                                                                   automobile_df,
+                                                                   show_plot_Y=True)
+</code></pre>
+<pre><code>Equivalent to: Lasso
+Entrenamiento_score :  0.7095244697290346
+Prueba_score :  0.693312102583202
+</code></pre>
+<p><img src="./7-Regresion-Python_82_1.png" alt="png"></p>
+<pre><code class="language-python">result_dict['mpg ~ kitchen_sink_elastic_net_ridge'] = build_model(partial(elastic_net_reg, alpha=1, 
+                                                                    l1_ratio=1, equivalent_to=&quot;Ridge&quot;),
+                                                                  'mpg',
+                                                                 ['cylinders',
+                                                                  'displacement',
+                                                                  'horsepower',
+                                                                  'weight',
+                                                                  'acceleration'],
+                                                                   automobile_df,
+                                                                   show_plot_Y=True)
+</code></pre>
+<pre><code>Equivalent to: Ridge
+Entrenamiento_score :  0.7062365688088987
+Prueba_score :  0.7064404958207979
+</code></pre>
+<p><img src="./7-Regresion-Python_83_1.png" alt="png"></p>
+<pre><code class="language-python">result_dict['mpg ~ kitchen_sink_elastic_net'] = build_model(partial(elastic_net_reg, alpha=1, l1_ratio=0.5),
+                                                            'mpg',
+                                                          [ 'cylinders',
+                                                            'displacement',
+                                                            'horsepower',
+                                                            'weight',
+                                                            'acceleration'],
+                                                            automobile_df,
+                                                            show_plot_Y=True)
+</code></pre>
+<pre><code>Equivalent to: Elastic Net
+Entrenamiento_score :  0.7143840512964182
+Prueba_score :  0.6719883512351271
+</code></pre>
+<p><img src="./7-Regresion-Python_84_1.png" alt="png"></p>
+<pre><code class="language-python">compare_results()
+</code></pre>
+<pre><code>Regresion:  mpg ~ single_linear
+Entrenamiento score 0.6940251922026459
+Prueba score 0.6780272557552722
+
+Regresion:  mpg ~ kitchen_sink_linear
+Entrenamiento score 0.7143524190779553
+Prueba score 0.6496852460273488
+
+Regresion:  mpg ~ parsimonius_linear
+Entrenamiento score 0.7069851597873933
+Prueba score 0.7035037058069924
+
+Regresion:  mpg ~ kitchen_sink_lasso
+Entrenamiento score 0.7151538580963827
+Prueba score 0.6762521302280093
+
+Regresion:  mpg ~ kitchen_sink_ridge
+Entrenamiento score 0.6896708807553231
+Prueba score 0.6556435118377518
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_ols
+Entrenamiento score 0.7164509306550633
+Prueba score 0.6549631422669479
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_lasso
+Entrenamiento score 0.7095244697290346
+Prueba score 0.693312102583202
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_ridge
+Entrenamiento score 0.7062365688088987
+Prueba score 0.7064404958207979
+
+Regresion:  mpg ~ kitchen_sink_elastic_net
+Entrenamiento score 0.7143840512964182
+Prueba score 0.6719883512351271
+</code></pre>
+<h2 id="svr">SVR</h2>
+<p>For SVR regression with larger datasets this alternate implementations is preferred</p>
+<p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVR.html#sklearn.svm.LinearSVR">https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVR.html#sklearn.svm.LinearSVR</a></p>
+<ul>
+<li>Uses a different library for implementation</li>
+<li>More flexibility with choice of penalties</li>
+<li>Scales to larger datasets</li>
+</ul>
+<pre><code class="language-python">def svr_reg(x_train, y_train, kernel='linear', epsilon=0.05, C=0.3):
+    model = SVR(kernel=kernel, epsilon=epsilon, C=C)
+    model.fit(x_train,y_train)
+    
+    return model
+</code></pre>
+<pre><code class="language-python">result_dict['mpg ~ kitchen_sink_svr'] = build_model(svr_reg,
+                                                    'mpg',
+                                                   ['cylinders',
+                                                    'displacement',
+                                                    'horsepower',
+                                                    'weight',
+                                                    'acceleration'],
+                                                     automobile_df,
+                                                     show_plot_Y=True)
+</code></pre>
+<pre><code>Entrenamiento_score :  0.6933523813332493
+Prueba_score :  0.6864550093179962
+</code></pre>
+<p><img src="./7-Regresion-Python_89_1.png" alt="png"></p>
+<pre><code class="language-python">compare_results()
+</code></pre>
+<pre><code>Regresion:  mpg ~ single_linear
+Entrenamiento score 0.6940251922026459
+Prueba score 0.6780272557552722
+
+Regresion:  mpg ~ kitchen_sink_linear
+Entrenamiento score 0.7143524190779553
+Prueba score 0.6496852460273488
+
+Regresion:  mpg ~ parsimonius_linear
+Entrenamiento score 0.7069851597873933
+Prueba score 0.7035037058069924
+
+Regresion:  mpg ~ kitchen_sink_lasso
+Entrenamiento score 0.7151538580963827
+Prueba score 0.6762521302280093
+
+Regresion:  mpg ~ kitchen_sink_ridge
+Entrenamiento score 0.6896708807553231
+Prueba score 0.6556435118377518
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_ols
+Entrenamiento score 0.7164509306550633
+Prueba score 0.6549631422669479
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_lasso
+Entrenamiento score 0.7095244697290346
+Prueba score 0.693312102583202
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_ridge
+Entrenamiento score 0.7062365688088987
+Prueba score 0.7064404958207979
+
+Regresion:  mpg ~ kitchen_sink_elastic_net
+Entrenamiento score 0.7143840512964182
+Prueba score 0.6719883512351271
+
+Regresion:  mpg ~ kitchen_sink_svr
+Entrenamiento score 0.6933523813332493
+Prueba score 0.6864550093179962
+</code></pre>
+<h2 id="knr">KNR</h2>
+<pre><code class="language-python">def kneighbors_reg(x_train, y_train, n_neighbors=10):
+    model = KNeighborsRegressor(n_neighbors=n_neighbors)
+    model.fit(x_train, y_train)
+    
+    return model
+</code></pre>
+<pre><code class="language-python">result_dict['mpg ~ kitchen_sink_kneighbors'] = build_model(kneighbors_reg,
+                                                           'mpg',
+                                                          ['cylinders',
+                                                           'displacement',
+                                                           'horsepower',
+                                                           'weight',
+                                                           'acceleration'],
+                                                           automobile_df,
+                                                           show_plot_Y=True)
+</code></pre>
+<pre><code>Entrenamiento_score :  0.7486049876709735
+Prueba_score :  0.7499122640106735
+</code></pre>
+<p><img src="./7-Regresion-Python_93_1.png" alt="png"></p>
+<pre><code class="language-python">compare_results()
+</code></pre>
+<pre><code>Regresion:  mpg ~ single_linear
+Entrenamiento score 0.6940251922026459
+Prueba score 0.6780272557552722
+
+Regresion:  mpg ~ kitchen_sink_linear
+Entrenamiento score 0.7143524190779553
+Prueba score 0.6496852460273488
+
+Regresion:  mpg ~ parsimonius_linear
+Entrenamiento score 0.7069851597873933
+Prueba score 0.7035037058069924
+
+Regresion:  mpg ~ kitchen_sink_lasso
+Entrenamiento score 0.7151538580963827
+Prueba score 0.6762521302280093
+
+Regresion:  mpg ~ kitchen_sink_ridge
+Entrenamiento score 0.6896708807553231
+Prueba score 0.6556435118377518
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_ols
+Entrenamiento score 0.7164509306550633
+Prueba score 0.6549631422669479
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_lasso
+Entrenamiento score 0.7095244697290346
+Prueba score 0.693312102583202
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_ridge
+Entrenamiento score 0.7062365688088987
+Prueba score 0.7064404958207979
+
+Regresion:  mpg ~ kitchen_sink_elastic_net
+Entrenamiento score 0.7143840512964182
+Prueba score 0.6719883512351271
+
+Regresion:  mpg ~ kitchen_sink_svr
+Entrenamiento score 0.6933523813332493
+Prueba score 0.6864550093179962
+
+Regresion:  mpg ~ kitchen_sink_kneighbors
+Entrenamiento score 0.7486049876709735
+Prueba score 0.7499122640106735
+</code></pre>
+<h2 id="sgd">SGD</h2>
+<pre><code class="language-python">def apply_standard_scaler(x):
+    scaler = StandardScaler()
+    scaler.fit(x)  
+
+    return scaler.transform(x)
+</code></pre>
+<pre><code class="language-python">def sgd_reg(x_train, y_train, max_iter=10000, tol=1e-3):
+    model = SGDRegressor(max_iter=max_iter, tol=tol)
+    model.fit(x_train, y_train)
+    
+    return model
+</code></pre>
+<pre><code class="language-python">result_dict['mpg ~ kitchen_sink_sgd'] = build_model(sgd_reg,
+                                                   'mpg',
+                                                  ['cylinders',
+                                                   'displacement',
+                                                   'horsepower',
+                                                   'weight',
+                                                   'acceleration'],
+                                                    automobile_df,
+                                                    show_plot_Y=True,
+                                                    preprocess_fn=apply_standard_scaler)
+</code></pre>
+<pre><code>Entrenamiento_score :  0.7161070391196642
+Prueba_score :  0.6613614209196004
+</code></pre>
+<p><img src="./7-Regresion-Python_98_1.png" alt="png"></p>
+<pre><code class="language-python">compare_results()
+</code></pre>
+<pre><code>Regresion:  mpg ~ single_linear
+Entrenamiento score 0.6940251922026459
+Prueba score 0.6780272557552722
+
+Regresion:  mpg ~ kitchen_sink_linear
+Entrenamiento score 0.7143524190779553
+Prueba score 0.6496852460273488
+
+Regresion:  mpg ~ parsimonius_linear
+Entrenamiento score 0.7069851597873933
+Prueba score 0.7035037058069924
+
+Regresion:  mpg ~ kitchen_sink_lasso
+Entrenamiento score 0.7151538580963827
+Prueba score 0.6762521302280093
+
+Regresion:  mpg ~ kitchen_sink_ridge
+Entrenamiento score 0.6896708807553231
+Prueba score 0.6556435118377518
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_ols
+Entrenamiento score 0.7164509306550633
+Prueba score 0.6549631422669479
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_lasso
+Entrenamiento score 0.7095244697290346
+Prueba score 0.693312102583202
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_ridge
+Entrenamiento score 0.7062365688088987
+Prueba score 0.7064404958207979
+
+Regresion:  mpg ~ kitchen_sink_elastic_net
+Entrenamiento score 0.7143840512964182
+Prueba score 0.6719883512351271
+
+Regresion:  mpg ~ kitchen_sink_svr
+Entrenamiento score 0.6933523813332493
+Prueba score 0.6864550093179962
+
+Regresion:  mpg ~ kitchen_sink_kneighbors
+Entrenamiento score 0.7486049876709735
+Prueba score 0.7499122640106735
+
+Regresion:  mpg ~ kitchen_sink_sgd
+Entrenamiento score 0.7161070391196642
+Prueba score 0.6613614209196004
+</code></pre>
+<h2 id="decision-tree">Decision Tree</h2>
+<pre><code class="language-python">def decision_tree_reg(x_train, y_train, max_depth=2):
+    model = DecisionTreeRegressor(max_depth=max_depth)
+    model.fit(x_train, y_train)
+    
+    return model
+</code></pre>
+<pre><code class="language-python">result_dict['mpg ~ kitchen_sink_decision_tree'] = build_model(decision_tree_reg,
+                                                             'mpg',
+                                                            ['cylinders',
+                                                             'displacement',
+                                                             'horsepower',
+                                                             'weight',
+                                                             'acceleration'],
+                                                              automobile_df,
+                                                              show_plot_Y=True)
+</code></pre>
+<pre><code>Entrenamiento_score :  0.7309719034142717
+Prueba_score :  0.7059004654965224
+</code></pre>
+<p><img src="./7-Regresion-Python_102_1.png" alt="png"></p>
+<pre><code class="language-python">compare_results()
+</code></pre>
+<pre><code>Regresion:  mpg ~ single_linear
+Entrenamiento score 0.6940251922026459
+Prueba score 0.6780272557552722
+
+Regresion:  mpg ~ kitchen_sink_linear
+Entrenamiento score 0.7143524190779553
+Prueba score 0.6496852460273488
+
+Regresion:  mpg ~ parsimonius_linear
+Entrenamiento score 0.7069851597873933
+Prueba score 0.7035037058069924
+
+Regresion:  mpg ~ kitchen_sink_lasso
+Entrenamiento score 0.7151538580963827
+Prueba score 0.6762521302280093
+
+Regresion:  mpg ~ kitchen_sink_ridge
+Entrenamiento score 0.6896708807553231
+Prueba score 0.6556435118377518
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_ols
+Entrenamiento score 0.7164509306550633
+Prueba score 0.6549631422669479
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_lasso
+Entrenamiento score 0.7095244697290346
+Prueba score 0.693312102583202
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_ridge
+Entrenamiento score 0.7062365688088987
+Prueba score 0.7064404958207979
+
+Regresion:  mpg ~ kitchen_sink_elastic_net
+Entrenamiento score 0.7143840512964182
+Prueba score 0.6719883512351271
+
+Regresion:  mpg ~ kitchen_sink_svr
+Entrenamiento score 0.6933523813332493
+Prueba score 0.6864550093179962
+
+Regresion:  mpg ~ kitchen_sink_kneighbors
+Entrenamiento score 0.7486049876709735
+Prueba score 0.7499122640106735
+
+Regresion:  mpg ~ kitchen_sink_sgd
+Entrenamiento score 0.7161070391196642
+Prueba score 0.6613614209196004
+
+Regresion:  mpg ~ kitchen_sink_decision_tree
+Entrenamiento score 0.7309719034142717
+Prueba score 0.7059004654965224
+</code></pre>
+<h2 id="lars">Lars</h2>
+<pre><code class="language-python">def lars_reg(x_train, y_train, n_nonzero_coefs=4):
+    model = Lars(n_nonzero_coefs=n_nonzero_coefs)
+    model.fit(x_train, y_train)
+    
+    return model
+</code></pre>
+<pre><code class="language-python">result_dict['mpg ~ kitchen_sink_lars'] = build_model(lars_reg,
+                                                    'mpg',
+                                                   ['cylinders',
+                                                    'displacement',
+                                                    'horsepower',
+                                                    'weight',
+                                                    'acceleration'],
+                                                     automobile_df,
+                                                     show_plot_Y=True)
+</code></pre>
+<pre><code>Entrenamiento_score :  0.7097904166855645
+Prueba_score :  0.6827026729724508
+</code></pre>
+<p><img src="./7-Regresion-Python_106_1.png" alt="png"></p>
+<pre><code class="language-python">compare_results()
+</code></pre>
+<pre><code>Regresion:  mpg ~ single_linear
+Entrenamiento score 0.6940251922026459
+Prueba score 0.6780272557552722
+
+Regresion:  mpg ~ kitchen_sink_linear
+Entrenamiento score 0.7143524190779553
+Prueba score 0.6496852460273488
+
+Regresion:  mpg ~ parsimonius_linear
+Entrenamiento score 0.7069851597873933
+Prueba score 0.7035037058069924
+
+Regresion:  mpg ~ kitchen_sink_lasso
+Entrenamiento score 0.7151538580963827
+Prueba score 0.6762521302280093
+
+Regresion:  mpg ~ kitchen_sink_ridge
+Entrenamiento score 0.6896708807553231
+Prueba score 0.6556435118377518
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_ols
+Entrenamiento score 0.7164509306550633
+Prueba score 0.6549631422669479
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_lasso
+Entrenamiento score 0.7095244697290346
+Prueba score 0.693312102583202
+
+Regresion:  mpg ~ kitchen_sink_elastic_net_ridge
+Entrenamiento score 0.7062365688088987
+Prueba score 0.7064404958207979
+
+Regresion:  mpg ~ kitchen_sink_elastic_net
+Entrenamiento score 0.7143840512964182
+Prueba score 0.6719883512351271
+
+Regresion:  mpg ~ kitchen_sink_svr
+Entrenamiento score 0.6933523813332493
+Prueba score 0.6864550093179962
+
+Regresion:  mpg ~ kitchen_sink_kneighbors
+Entrenamiento score 0.7486049876709735
+Prueba score 0.7499122640106735
+
+Regresion:  mpg ~ kitchen_sink_sgd
+Entrenamiento score 0.7161070391196642
+Prueba score 0.6613614209196004
+
+Regresion:  mpg ~ kitchen_sink_decision_tree
+Entrenamiento score 0.7309719034142717
+Prueba score 0.7059004654965224
+
+Regresion:  mpg ~ kitchen_sink_lars
+Entrenamiento score 0.7097904166855645
+Prueba score 0.6827026729724508
+</code></pre>
+<h1 id="hyper-parameter-tunning">Hyper Parameter Tunning</h1>
+<pre><code class="language-python">from sklearn.metrics import r2_score
+from sklearn.preprocessing import StandardScaler
+
+from sklearn.model_selection import GridSearchCV
+
+import warnings
+warnings.filterwarnings(&quot;ignore&quot;)
+</code></pre>
+<pre><code class="language-python">automobile_df = pd.read_csv('auto-mpg-processed.csv')
+
+automobile_df.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>17.0</td>
+      <td>8</td>
+      <td>305.0</td>
+      <td>130</td>
+      <td>3840</td>
+      <td>15.4</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>30.0</td>
+      <td>4</td>
+      <td>98.0</td>
+      <td>68</td>
+      <td>2155</td>
+      <td>16.5</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>19.4</td>
+      <td>6</td>
+      <td>232.0</td>
+      <td>90</td>
+      <td>3210</td>
+      <td>17.2</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>31.8</td>
+      <td>4</td>
+      <td>85.0</td>
+      <td>65</td>
+      <td>2020</td>
+      <td>19.2</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>26.0</td>
+      <td>4</td>
+      <td>108.0</td>
+      <td>93</td>
+      <td>2391</td>
+      <td>15.5</td>
+      <td>46</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python">X = automobile_df.drop(['mpg', 'age'], axis=1)
+
+Y = automobile_df['mpg']
+
+x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
+</code></pre>
+<h2 id="lasso-regression">Lasso regression</h2>
+<pre><code class="language-python">parameters = {'alpha': [0.2, 0.4, 0.6, 0.7, 0.8, 0.9, 1.0]}
+
+grid_search = GridSearchCV(Lasso(), parameters, cv=3, return_train_score=True)
+grid_search.fit(x_train, y_train)
+
+grid_search.best_params_
+</code></pre>
+<pre><code>{'alpha': 0.2}
+</code></pre>
+<pre><code class="language-python">for i in range(len(parameters['alpha'])):
+    print('Parametros: ', grid_search.cv_results_['params'][i])
+
+    print('Promedio Score Prueba: ', grid_search.cv_results_['mean_test_score'][i])
+    
+    print('Rank: ', grid_search.cv_results_['rank_test_score'][i])
+</code></pre>
+<pre><code>Parametros:  {'alpha': 0.2}
+Promedio Score Prueba:  0.6798292939123337
+Rank:  1
+Parametros:  {'alpha': 0.4}
+Promedio Score Prueba:  0.6793066874613363
+Rank:  2
+Parametros:  {'alpha': 0.6}
+Promedio Score Prueba:  0.6792520244406055
+Rank:  3
+Parametros:  {'alpha': 0.7}
+Promedio Score Prueba:  0.6792212039982681
+Rank:  4
+Parametros:  {'alpha': 0.8}
+Promedio Score Prueba:  0.6791902701986242
+Rank:  5
+Parametros:  {'alpha': 0.9}
+Promedio Score Prueba:  0.6791585685202491
+Rank:  6
+Parametros:  {'alpha': 1.0}
+Promedio Score Prueba:  0.6791274140429867
+Rank:  7
+</code></pre>
+<pre><code class="language-python">lasso_model = Lasso(alpha=grid_search.best_params_['alpha']).fit(x_train, y_train)
+</code></pre>
+<pre><code class="language-python">y_pred = lasso_model.predict(x_test)
+
+print('Entrenamiento score: ', lasso_model.score(x_train, y_train))
+print('Prueba score: ', r2_score(y_test, y_pred))
+</code></pre>
+<pre><code>Entrenamiento score:  0.7039334256831417
+Prueba score:  0.712881256878038
+</code></pre>
+<h2 id="kneighbors-regression">KNeighbors regression</h2>
+<pre><code class="language-python">parameters = {'n_neighbors': [10, 12, 14, 18, 20, 25, 30, 35, 50]}
+
+grid_search = GridSearchCV(KNeighborsRegressor(), parameters, cv=3, return_train_score=True)
+grid_search.fit(x_train, y_train)
+
+grid_search.best_params_
+</code></pre>
+<pre><code>{'n_neighbors': 20}
+</code></pre>
+<pre><code class="language-python">for i in range(len(parameters['n_neighbors'])):
+    print('Parametros: ', grid_search.cv_results_['params'][i])
+    print('Promedio Score prueba: ', grid_search.cv_results_['mean_test_score'][i])
+    print('Rank: ', grid_search.cv_results_['rank_test_score'][i])
+</code></pre>
+<pre><code>Parametros:  {'n_neighbors': 10}
+Promedio Score prueba:  0.6731278997926874
+Rank:  9
+Parametros:  {'n_neighbors': 12}
+Promedio Score prueba:  0.6743114600648372
+Rank:  8
+Parametros:  {'n_neighbors': 14}
+Promedio Score prueba:  0.6818160912518643
+Rank:  7
+Parametros:  {'n_neighbors': 18}
+Promedio Score prueba:  0.6926328790991523
+Rank:  3
+Parametros:  {'n_neighbors': 20}
+Promedio Score prueba:  0.693608261494612
+Rank:  1
+Parametros:  {'n_neighbors': 25}
+Promedio Score prueba:  0.6929003433058707
+Rank:  2
+Parametros:  {'n_neighbors': 30}
+Promedio Score prueba:  0.6917246778395015
+Rank:  4
+Parametros:  {'n_neighbors': 35}
+Promedio Score prueba:  0.6891030084152204
+Rank:  5
+Parametros:  {'n_neighbors': 50}
+Promedio Score prueba:  0.68514355215919
+Rank:  6
+</code></pre>
+<pre><code class="language-python">kneighbors_model = KNeighborsRegressor(n_neighbors=grid_search.best_params_['n_neighbors']).fit(x_train, y_train)
+</code></pre>
+<pre><code class="language-python">y_pred = kneighbors_model.predict(x_test)
+
+print('Entrenamiento score: ', kneighbors_model.score(x_train, y_train))
+print('Prueba score: ', r2_score(y_test, y_pred))
+</code></pre>
+<pre><code>Entrenamiento score:  0.7233999422504827
+Prueba score:  0.7376145104222849
+</code></pre>
+<h2 id="decision-tree-1">Decision Tree</h2>
+<pre><code class="language-python">parameters = {'max_depth':[1, 2, 3, 4, 5, 7, 8]}
+
+grid_search = GridSearchCV(DecisionTreeRegressor(), parameters, cv=3, return_train_score=True)
+grid_search.fit(x_train, y_train)
+
+grid_search.best_params_
+</code></pre>
+<pre><code>{'max_depth': 3}
+</code></pre>
+<pre><code class="language-python">decision_tree_model = DecisionTreeRegressor(max_depth=grid_search.best_params_['max_depth']).fit(x_train, y_train)
+</code></pre>
+<pre><code class="language-python">y_pred = decision_tree_model.predict(x_test)
+
+print('Entrenamiento score: ', decision_tree_model.score(x_train, y_train))
+print('Prueba score: ', r2_score(y_test, y_pred))
+</code></pre>
+<pre><code>Entrenamiento score:  0.7721490521354658
+Prueba score:  0.7344373548362138
+</code></pre>
+<h2 id="svr-1">SVR</h2>
+<pre><code class="language-python">parameters = {'epsilon': [0.05, 0.1, 0.2, 0.3],
+              'C': [0.2, 0.3]}
+
+grid_search = GridSearchCV(SVR(kernel='linear'), parameters, cv=3, return_train_score=True)
+grid_search.fit(x_train, y_train)
+
+grid_search.best_params_
+</code></pre>
+<pre><code>{'C': 0.3, 'epsilon': 0.05}
+</code></pre>
+<pre><code class="language-python">svr_model = SVR(kernel='linear',
+                epsilon=grid_search.best_params_['epsilon'], 
+                C=grid_search.best_params_['C']).fit(x_train, y_train)
+</code></pre>
+<pre><code class="language-python">y_pred = svr_model.predict(x_test)
+
+print('Entrenamiento score: ', svr_model.score(x_train, y_train))
+print('Prueba score: ', r2_score(y_test, y_pred))
+</code></pre>
+<pre><code>Entrenamiento score:  0.6879838340458595
+Prueba score:  0.6978720556081329
+</code></pre>
+<h1 id="grabar-el-modelo">Grabar el Modelo</h1>
+<pre><code class="language-python">from joblib import dump# libreria de serializacion
+
+# grabar el modelo en un archivo
+dump(kneighbors_model, 'kneighbors_model-auto_mpg.joblib')
+</code></pre>
+<pre><code>['kneighbors_model-auto_mpg.joblib']
+</code></pre>
+<h1 id="usar-el-modelo">Usar el Modelo</h1>
+<pre><code class="language-python">import pandas as pd
+from joblib import load 
+</code></pre>
+<pre><code class="language-python">modelo = load('kneighbors_model-auto_mpg.joblib')
+</code></pre>
+<pre><code class="language-python">modelo
+</code></pre>
+<pre><code>KNeighborsRegressor(algorithm='auto', leaf_size=30, metric='minkowski',
+                    metric_params=None, n_jobs=None, n_neighbors=20, p=2,
+                    weights='uniform')
+</code></pre>
+<pre><code class="language-python">datos = pd.read_csv('auto-mpg-processed.csv')
+datos.head()
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mpg</th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+      <th>age</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>17.0</td>
+      <td>8</td>
+      <td>305.0</td>
+      <td>130</td>
+      <td>3840</td>
+      <td>15.4</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>30.0</td>
+      <td>4</td>
+      <td>98.0</td>
+      <td>68</td>
+      <td>2155</td>
+      <td>16.5</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>19.4</td>
+      <td>6</td>
+      <td>232.0</td>
+      <td>90</td>
+      <td>3210</td>
+      <td>17.2</td>
+      <td>42</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>31.8</td>
+      <td>4</td>
+      <td>85.0</td>
+      <td>65</td>
+      <td>2020</td>
+      <td>19.2</td>
+      <td>41</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>26.0</td>
+      <td>4</td>
+      <td>108.0</td>
+      <td>93</td>
+      <td>2391</td>
+      <td>15.5</td>
+      <td>46</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python"># tomar dos datos de entrada para realizar la prediccion
+datos_prueba = datos.iloc[2:4,1:6]
+datos_prueba
+</code></pre>
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+<pre><code>.dataframe tbody tr th {
+    vertical-align: top;
+}
+
+.dataframe thead th {
+    text-align: right;
+}
+</code></pre>
+<p></style></p>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>cylinders</th>
+      <th>displacement</th>
+      <th>horsepower</th>
+      <th>weight</th>
+      <th>acceleration</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>2</th>
+      <td>6</td>
+      <td>232.0</td>
+      <td>90</td>
+      <td>3210</td>
+      <td>17.2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>85.0</td>
+      <td>65</td>
+      <td>2020</td>
+      <td>19.2</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+<pre><code class="language-python"># realizar predcion ccon el modelo
+modelo.predict(datos_prueba)
+</code></pre>
+<pre><code>array([19.57 , 34.105])
+</code></pre>
+<h1 id="referencias">Referencias</h1>
+<p><a href="https://scikit-learn.org/stable/supervised_learning.html#supervised-learning">https://scikit-learn.org/stable/supervised_learning.html#supervised-learning</a></p>
+<p>Cheatsheet scikitlearn
+<a href="https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116">https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116</a></p>
+<p><strong>Phd. Jose R. Zapata</strong></p>
+<ul>
+<li><a href="https://joserzapata.github.io/" target="_blank" rel="noopener">https://joserzapata.github.io/</a></li>
+<li><a href="mailto:joser.zapata@upb.edu.co">joser.zapata@upb.edu.co</a></li>
+</ul>
+
+          </div>
+
+          
+
+
+
+          
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          <p>Last updated on Sep 9, 2020</p>
+
+          
+
+
+
+
+
+          
+
+
+          
+
+
+  
+  
+
+
+
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    © 2020
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    
+    Published with
+    <a href="https://wowchemy.com" target="_blank" rel="noopener">Wowchemy</a>  —
+    the free, <a href="https://github.com/wowchemy/wowchemy-hugo-modules" target="_blank" rel="noopener">
+    open source</a> website builder that empowers creators.
+    
+
+    
+  </p>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js" integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/shell.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks",
+        'slides' : "Slides"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.2/anchor.min.js" integrity="sha512-I7w3ZdSFzw5j3jU3ZkNikBNeIrl3i+hEuEdwNmqUJvwNcaBUNcijnP2gd9DtGlgVYDplfjGoD8vTNsID+lCjqg==" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/wowchemy.min.4c2bca31150ce93c5a5e43b8a50f22fd.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
