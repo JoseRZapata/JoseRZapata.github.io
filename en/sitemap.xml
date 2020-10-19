@@ -33,17 +33,17 @@
   </url>
   
   <url>
-    <loc>https://joserzapata.github.io/courses/python-ciencia-datos/clustering/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://joserzapata.github.io/courses/python-ciencia-datos/regresion/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://joserzapata.github.io/courses/python-ciencia-datos/clasificacion/</loc>
+    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://joserzapata.github.io/courses/python-ciencia-datos/clustering/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url>
   
