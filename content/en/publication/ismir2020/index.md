@@ -36,7 +36,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
+url_pdf: https://program.ismir2020.net/static/final_papers/156.pdf
 url_code: https://github.com/ACMUS-MIR/publications-resources
 url_dataset: https://zenodo.org/record/3965447#.X3ILTXUzZEY
 url_poster:
