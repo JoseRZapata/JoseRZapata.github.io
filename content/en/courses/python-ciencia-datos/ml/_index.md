@@ -22,7 +22,36 @@ Scikit-learn es una biblioteca de código abierto de	 Python que
 implementa una gran variedad de algoritmos de aprendizaje automático,
 Preprocesamiento, validación cruzada y visualización.
 
-# Ejemplo Basico
+
+
+# Proceso de un Proyecto de Machine Learning
+
+En este link encuentran un listado de los pasos a realizar en un proyecto de machine Learning:
+
+https://medium.com/@joserzapata/paso-a-paso-en-un-proyecto-machine-learning-bcdd0939d387
+
+- [1. Definir el problema y mirar el panorama general.](https://joserzapata.github.io/post/lista-proyecto-machine-learning/#1-definir-el-problema-y-mirar-el-panorama-general)
+- [2. Obténer los datos](https://joserzapata.github.io/post/lista-proyecto-machine-learning/#2-obténer-los-datos)
+- [3. Explorar los datos para obtener información.](https://joserzapata.github.io/post/lista-proyecto-machine-learning/#3-explorar-los-datos-para-obtener-información)
+- [4. Preparación de los datos.](https://joserzapata.github.io/post/lista-proyecto-machine-learning/#4-preparación-de-los-datos)
+- [5. Exploración y selección de modelos](https://joserzapata.github.io/post/lista-proyecto-machine-learning/#5-exploración-y-selección-de-modelos)
+-  [6. Afinar los modelos.](https://joserzapata.github.io/post/lista-proyecto-machine-learning/#6-afinar-los-modelos) 
+- [7. Presentacion de la solución.](https://joserzapata.github.io/post/lista-proyecto-machine-learning/#7-presentacion-de-la-solución)
+- [8. Desplegar, monitorear y mantener el sistema.](https://joserzapata.github.io/post/lista-proyecto-machine-learning/#8-desplegar-monitorear-y-mantener-el-sistema)
+
+## Pasos para la construccion y seleccion de un Modelo de Machine Learning
+
+![Construir Modelo](https://miro.medium.com/max/2805/0*IT9aLhgbOVDkMNKM)
+
+1. Preparacion de los datos
+2. Division de los datos entre datos de **Entrenamiento** (Para seleccionar el modelo, 80%) y datos de **Test** (para probar el modelo final, 20%)
+3. Se selecciona la medida de Evaluacion segun la aplicacion
+4. Usando solo los datos de **Entrenamiento** se selecciona los mejores modelos utilizando cross validation y comparando sus resultados 
+5. Se toman los mejores modelos (1, 2 o 3 dependiendo de su rendimiento) y se ajustan los Hiper Parametros
+6. Se toman los parametros del mejor modelo y se entrena con todos los datos de **Entrenamiento** y se evalua su rendimiento con los datos de **TEST**
+7. Si hay un buen resultado se pasa a la etapa de Implementacion (Deployment), en caso contrario segun sea el problema, se prueba con otros modelos o se devuelve a la etapa de Feature Engineering.
+
+# Ejemplo Basico con un solo modelo
 
 
 ```python
@@ -45,7 +74,7 @@ scaler = preprocessing.StandardScaler().fit(X_train)
 X_train = scaler.transform(X_train)
 X_test = scaler.transform(X_test)
 
-## Seleccion del algoritmo de macchine learning
+## Seleccion del algoritmo de machine learning
 knn = neighbors.KNeighborsClassifier(n_neighbors=5)
 
 ## Entrenamiento del Modelo
