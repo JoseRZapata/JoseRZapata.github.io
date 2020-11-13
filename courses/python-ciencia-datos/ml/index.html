@@ -766,6 +766,10 @@
 
       <nav id="TableOfContents">
   <ul>
+    <li><a href="#pasos-para-la-construccion-y-seleccion-de-un-modelo-de-machine-learning">Pasos para la construccion y seleccion de un Modelo de Machine Learning</a></li>
+  </ul>
+
+  <ul>
     <li><a href="#standardizacion">Standardizacion</a></li>
     <li><a href="#normalizacion">Normalizacion</a></li>
     <li><a href="#binarizacion">Binarizacion</a></li>
@@ -849,7 +853,31 @@
 <p>Scikit-learn es una biblioteca de código abierto de	 Python que
 implementa una gran variedad de algoritmos de aprendizaje automático,
 Preprocesamiento, validación cruzada y visualización.</p>
-<h1 id="ejemplo-basico">Ejemplo Basico</h1>
+<h1 id="proceso-de-un-proyecto-de-machine-learning">Proceso de un Proyecto de Machine Learning</h1>
+<p>En este link encuentran un listado de los pasos a realizar en un proyecto de machine Learning:</p>
+<p><a href="https://medium.com/@joserzapata/paso-a-paso-en-un-proyecto-machine-learning-bcdd0939d387">https://medium.com/@joserzapata/paso-a-paso-en-un-proyecto-machine-learning-bcdd0939d387</a></p>
+<ul>
+<li><a href="https://joserzapata.github.io/post/lista-proyecto-machine-learning/#1-definir-el-problema-y-mirar-el-panorama-general" target="_blank" rel="noopener">1. Definir el problema y mirar el panorama general.</a></li>
+<li><a href="https://joserzapata.github.io/post/lista-proyecto-machine-learning/#2-obt%c3%a9ner-los-datos" target="_blank" rel="noopener">2. Obténer los datos</a></li>
+<li><a href="https://joserzapata.github.io/post/lista-proyecto-machine-learning/#3-explorar-los-datos-para-obtener-informaci%c3%b3n" target="_blank" rel="noopener">3. Explorar los datos para obtener información.</a></li>
+<li><a href="https://joserzapata.github.io/post/lista-proyecto-machine-learning/#4-preparaci%c3%b3n-de-los-datos" target="_blank" rel="noopener">4. Preparación de los datos.</a></li>
+<li><a href="https://joserzapata.github.io/post/lista-proyecto-machine-learning/#5-exploraci%c3%b3n-y-selecci%c3%b3n-de-modelos" target="_blank" rel="noopener">5. Exploración y selección de modelos</a></li>
+<li><a href="https://joserzapata.github.io/post/lista-proyecto-machine-learning/#6-afinar-los-modelos" target="_blank" rel="noopener">6. Afinar los modelos.</a></li>
+<li><a href="https://joserzapata.github.io/post/lista-proyecto-machine-learning/#7-presentacion-de-la-soluci%c3%b3n" target="_blank" rel="noopener">7. Presentacion de la solución.</a></li>
+<li><a href="https://joserzapata.github.io/post/lista-proyecto-machine-learning/#8-desplegar-monitorear-y-mantener-el-sistema" target="_blank" rel="noopener">8. Desplegar, monitorear y mantener el sistema.</a></li>
+</ul>
+<h2 id="pasos-para-la-construccion-y-seleccion-de-un-modelo-de-machine-learning">Pasos para la construccion y seleccion de un Modelo de Machine Learning</h2>
+<p><img src="https://miro.medium.com/max/2805/0*IT9aLhgbOVDkMNKM" alt="Construir Modelo"></p>
+<ol>
+<li>Preparacion de los datos</li>
+<li>Division de los datos entre datos de <strong>Entrenamiento</strong> (Para seleccionar el modelo, 80%) y datos de <strong>Test</strong> (para probar el modelo final, 20%)</li>
+<li>Se selecciona la medida de Evaluacion segun la aplicacion</li>
+<li>Usando solo los datos de <strong>Entrenamiento</strong> se selecciona los mejores modelos utilizando cross validation y comparando sus resultados</li>
+<li>Se toman los mejores modelos (1, 2 o 3 dependiendo de su rendimiento) y se ajustan los Hiper Parametros</li>
+<li>Se toman los parametros del mejor modelo y se entrena con todos los datos de <strong>Entrenamiento</strong> y se evalua su rendimiento con los datos de <strong>TEST</strong></li>
+<li>Si hay un buen resultado se pasa a la etapa de Implementacion (Deployment), en caso contrario segun sea el problema, se prueba con otros modelos o se devuelve a la etapa de Feature Engineering.</li>
+</ol>
+<h1 id="ejemplo-basico-con-un-solo-modelo">Ejemplo Basico con un solo modelo</h1>
 <pre><code class="language-python">## Importar Librerias
 from sklearn import neighbors, datasets, preprocessing
 from sklearn.model_selection import train_test_split
@@ -869,7 +897,7 @@ scaler = preprocessing.StandardScaler().fit(X_train)
 X_train = scaler.transform(X_train)
 X_test = scaler.transform(X_test)
 
-## Seleccion del algoritmo de macchine learning
+## Seleccion del algoritmo de machine learning
 knn = neighbors.KNeighborsClassifier(n_neighbors=5)
 
 ## Entrenamiento del Modelo
