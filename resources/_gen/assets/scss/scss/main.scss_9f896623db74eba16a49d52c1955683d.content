@@ -7144,7 +7144,7 @@ a.text-dark:hover, a.text-dark:focus {
  *  License: https://github.com/wowchemy/wowchemy-hugo-modules/blob/master/LICENSE.md
  **************************************************/
 /*************************************************
- *  Academic's Core
+ *  Wowchemy's Core Style
  **************************************************/
 html {
   font-family: "Roboto", sans-serif;
@@ -7175,6 +7175,26 @@ body {
 
 body.no-navbar {
   margin-top: 0 !important; }
+
+.page-wrapper {
+  min-height: calc(100vh - 70px);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100vw; }
+
+@media (max-width: 991.98px) {
+  .page-wrapper {
+    min-height: calc(100vh - 50px); } }
+
+.page-wrapper.no-navbar {
+  min-height: 100vh; }
+
+.page-header,
+.page-footer {
+  flex-shrink: 0; }
+
+.page-body {
+  flex-grow: 1; }
 
 .max-width-640 {
   max-width: 640px; }
@@ -7283,6 +7303,18 @@ video {
 .img-responsive {
   /* Extend Bootstrap declaration with centering. */
   margin: 0 auto; }
+
+/* Hide overflowing of zoomed child img element */
+.img-hover-zoom {
+  overflow: hidden; }
+
+/* Smooth transition for image zoom on hover */
+.img-hover-zoom img {
+  transition: transform .3s ease-in-out; }
+
+/* Transform the image scale when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.1); }
 
 figcaption {
   display: block;
@@ -7585,9 +7617,6 @@ table > tbody > tr:hover > td,
 table > tbody > tr:hover > th {
   background-color: #e5e5e5; }
 
-/*************************************************
- *  Article Alerts (Shortcode) and Asides (Mmark)
- **************************************************/
 /* Style asides as Bootstrap alerts. */
 /* Asides use <p> block element whereas alerts use <div>. */
 .article-style aside p,
@@ -7657,7 +7686,6 @@ div.alert a {
 
 footer {
   margin: 4rem 0 0;
-  padding: 2rem 0;
   width: 100%; }
 
 footer p {
@@ -7667,12 +7695,10 @@ footer p {
 footer .powered-by {
   font-size: 0.67rem; }
 
-.site-footer,
-footer a.back-to-top i {
+.site-footer {
   color: rgba(0, 0, 0, 0.54); }
 
 .dark .site-footer,
-.dark footer a.back-to-top i,
 .dark .docs .body-footer {
   color: rgba(255, 255, 255, 0.54); }
 
@@ -7684,10 +7710,9 @@ footer a.back-to-top i {
   list-style: none;
   height: auto;
   width: auto;
-  font-size: 0;
   text-decoration: none; }
 
-.footer-license-icons img {
+.footer-license-icons i {
   display: inline-flex;
   margin-right: 8px;
   height: 22px;
@@ -8211,13 +8236,7 @@ article .article-metadata {
   overflow-x: hidden;
   overflow-wrap: break-word;
   word-wrap: break-word;
-  -ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-  -ms-hyphens: auto;
-  -moz-hyphens: auto;
-  -webkit-hyphens: auto;
-  hyphens: auto; }
+  word-break: break-word; }
 
 .article-style img,
 .article-style video {
@@ -8432,18 +8451,11 @@ ul.share li:hover i {
 /*************************************************
  *  Page Builder: sections and widgets
  **************************************************/
-@keyframes intro {
-  0% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
-
 .home-section {
-  position: relative;
   background-color: white;
+  position: relative;
   padding: 110px 0 110px 0;
-  animation: intro 0.3s both;
-  animation-delay: 0.15s; }
+  z-index: 0; }
 
 .home-section.fullscreen {
   min-height: calc(100vh - 70px); }
@@ -8451,6 +8463,9 @@ ul.share li:hover i {
 @media (max-width: 991.98px) {
   .home-section.fullscreen {
     min-height: calc(100vh - 50px); } }
+
+.no-navbar .home-section.fullscreen {
+  min-height: 100vh; }
 
 /* Override dark colors that may be inherited from body.dark */
 .home-section.dark,
@@ -8485,16 +8500,27 @@ ul.share li:hover i {
   position: absolute;
   top: 100%;
 }*/
+.home-section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1; }
+
 /* Default background image properties for home sections. */
-.home-section.bg-image {
+.home-section-bg.bg-image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
 
-/* Create a parallax-like scrolling effect. */
+/* Create a parallax-like scrolling effect on desktop browsers. */
 .parallax {
-  height: 100%;
   background-attachment: fixed; }
+
+@media (max-width: 991.98px) {
+  .parallax {
+    background-attachment: scroll; } }
 
 .home-section:first-of-type {
   padding-top: 50px; }
@@ -8542,14 +8568,7 @@ ul.share li:hover i {
  *  Hero Widget
  **************************************************/
 .wg-hero {
-  padding: 3em 0;
-  clear: both;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  animation: intro 0.3s both;
-  animation-delay: 0s;
-  animation-delay: 0.25s; }
+  padding: 3em 0; }
 
 .hero-title {
   font-size: 2.7rem;
@@ -8612,14 +8631,14 @@ a.hero-cta-alt:hover {
 /*************************************************
  *  Slider Widget
  **************************************************/
-/* Clear `.home-section` as padding and animation interferes with Slider's layout and animations. */
+/* Clear `.home-section` as any padding or animation interferes with Slider's layout and animations. */
 .home-section.wg-slider {
   padding: 0;
   animation: none;
   animation-delay: unset; }
 
 /* The Slider widget reuses the Hero widget's `.wg-hero` class.
- * We must remove the `animation` and `clear` in this instance or
+ * We must remove any `animation` and `clear` (although Hero no longer sets `clear: both`) in this instance or
  * multiple slides can be `.active` at once. */
 .carousel-inner .wg-hero {
   animation: none;
@@ -8884,26 +8903,26 @@ ul.ul-edu li .description p.institution {
 /*************************************************
  *  Contact
  **************************************************/
-.contact-widget .fa-ul {
+.wg-contact .fa-ul {
   margin-left: 3.14285714rem;
   /* Must be > `fa-2x` icon size. */ }
 
-.contact-widget .fa-li {
+.wg-contact .fa-li {
   position: absolute;
   left: -3.14285714rem;
-  /* Negative of `.contact-widget .fa-ul` margin. */
+  /* Negative of `.wg-contact .fa-ul` margin. */
   width: 2rem;
   /* Match `fa-2x` icon size. */
   top: 0.14285714em;
   /* Default FA value. */
   text-align: center; }
 
-.contact-widget li {
+.wg-contact li {
   padding-top: 0.8rem;
   /* Align text with bottom of `fa-2x` icon. */
   margin-bottom: 0.3rem; }
 
-.contact-widget li:last-of-type {
+.wg-contact li:last-of-type {
   margin-bottom: 0; }
 
 #map {
@@ -9230,11 +9249,17 @@ body.dark,
 .dark .btn.btn-primary.active {
   color: initial; }
 
-/* Mermaid.js div */
 div.mermaid {
   width: 100%;
   text-align: center;
   margin-bottom: 1rem; }
+
+div.chart {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  overflow-x: auto; }
 
 /*************************************************
  *  Style for right to left (RTL) languages.

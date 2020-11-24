@@ -193,7 +193,7 @@ active_evol.plot_animated(filename='evolucion_casos_activos.mp4', n_bars=8,n_vis
 ## Visualizacion con Plotly
 
 ## Valores Mundiales de Casos Confirmados, Activos, Recuperados y Muertos
-<iframe width="100%" height="450" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/1.embed?link=false"></iframe>
+<iframe width="100%" height="450" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/2362.embed?link=false"></iframe>
 
 ```python
 temp = pd.DataFrame(world.iloc[-1,:]).T
@@ -213,7 +213,7 @@ fig.show()
 ```
 ## Mapa Mundial de Confirmados por Pais
 Mover el Mouse sobre el mapa para ver la informacion de cada pais
-<iframe width="100%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/97.embed?link=false"></iframe>
+<iframe width="100%" height="500" frameborder="0" scrolling="no" src="//plotly.com/~joser.zapata/2364.embed?link=false"></iframe>
 
 ```python
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
