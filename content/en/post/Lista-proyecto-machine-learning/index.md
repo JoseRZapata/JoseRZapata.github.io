@@ -39,6 +39,8 @@ El libro esta acompañado por un repositorio con Jupyter Notebooks: https://gith
 
 {{% toc %}}
 
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="joserzapata" data-color="#328cc1" data-emoji="" data-font="Cookie" data-text="Comprame un Cafe" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script><br>
+
 ***
 
 Esta lista de verificación puede ser una guia paso a paso para proyectos de Machine Learning.

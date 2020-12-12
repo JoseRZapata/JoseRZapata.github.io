@@ -31,6 +31,8 @@ markup: blackfriday
 
 Este es el resumen de algunas ideas concretas que he recopilado tanto en mi experiencia como docente, investigador y director de varios trabajos de final de carrera en pregrado y postgrado, para realizar una buena presentación del anteproyecto y del trabajo de grado.
 
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="joserzapata" data-color="#328cc1" data-emoji="" data-font="Cookie" data-text="Comprame un Cafe" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script><br>
+
 {{% toc %}}
 
 # Tips para la Creación de las Diapositivas

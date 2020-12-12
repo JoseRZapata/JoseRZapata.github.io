@@ -37,6 +37,9 @@ los videos fueron creados como apoyo para el curso de Audio del programa [Ingeni
 
 ***
 
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="joserzapata" data-color="#328cc1" data-emoji="" data-font="Cookie" data-text="Comprame un Cafe" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script><br>
+
+
 [Playlist del tutorial en youtube](https://www.youtube.com/watch?v=Qoc1ZNvPH7Y&list=PLW2bAKkMAGl6DTqEqEEGKnNExeAuMM1yb) 
 
 # 1. Introduccion a Reaper y Edicion
