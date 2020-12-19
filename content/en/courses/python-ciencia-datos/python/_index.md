@@ -12,10 +12,6 @@ date: "2020-09-09T00:00:00Z"
 type: book  # Do not modify
 ---
 
-Curso Programacion Analitica
-
-Maestria TIC Linea Ciencia de Datos
-
 Por [Jose R. Zapata](https://joserzapata.github.io/)
 
 En este notebook se encontra los temas mas importantes para el uso de python en ciencia de datos, se debe tener un un conocimiento basico de programacion para entender completamente el notebook.

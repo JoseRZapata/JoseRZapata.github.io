@@ -449,4 +449,5 @@ Cheatsheet scikitlearn - https://datacamp-community-prod.s3.amazonaws.com/5433fa
 
 **Phd. Jose R. Zapata**
 - [https://joserzapata.github.io/](https://joserzapata.github.io/)
+- https://twitter.com/joserzapata
 
