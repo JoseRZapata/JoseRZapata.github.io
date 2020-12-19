@@ -19,6 +19,8 @@ Maestria TIC Linea Ciencia de Datos
 
 Por [Jose R. Zapata](https://joserzapata.github.io/)
 
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="joserzapata" data-color="#328cc1" data-emoji="" data-font="Cookie" data-text="Invítame a un Café" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script><br>
+
 **NumPy** es una libreria de Algebra Lineal para Python, la razón por la cual es tan importante para Data Science con Python es que casi todas las librerias del ecosistema de PyData confían en NumPy como uno de sus principales componentes.
 
 Numpy también es increíblemente rápido, ya que tiene enlaces a librerias en C. Para obtener más información sobre por qué usar Arrays en lugar de listas, mira esto [StackOverflow post](http://stackoverflow.com/questions/993984/why-numpy-instead-of-python-lists).    

@@ -18,11 +18,11 @@ Maestria TIC Linea Ciencia de Datos
 
 Por [Jose R. Zapata](https://joserzapata.github.io/)
 
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="joserzapata" data-color="#328cc1" data-emoji="" data-font="Cookie" data-text="Invítame a un Café" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script><br>
+
 Scikit-learn es una biblioteca de código abierto de	 Python que
 implementa una gran variedad de algoritmos de aprendizaje automático,
 Preprocesamiento, validación cruzada y visualización.
-
-
 
 # Proceso de un Proyecto de Machine Learning
 

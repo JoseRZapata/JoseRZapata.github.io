@@ -20,6 +20,7 @@ Por [Jose R. Zapata](https://joserzapata.github.io/)
 
 En este notebook se encontra los temas mas importantes para el uso de python en ciencia de datos, se debe tener un un conocimiento basico de programacion para entender completamente el notebook.
 
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="joserzapata" data-color="#328cc1" data-emoji="" data-font="Cookie" data-text="Invítame a un Café" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script><br>
 
 ## Tipos de Datos
 Python tiene varios tipos de datos, los mismos datos básicos que otros lenguajes: enteros, flotantes, strings y booleanos. Además, las listas son un tipo predefinido en el lenguaje, los diccionarios, tuplas y sets.

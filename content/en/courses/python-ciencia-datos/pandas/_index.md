@@ -17,6 +17,8 @@ type: book  # Do not modify
 ### Maestria TIC Linea Ciencia de Datos
 ### Por [Jose R. Zapata](https://joserzapata.github.io/)
 
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="joserzapata" data-color="#328cc1" data-emoji="" data-font="Cookie" data-text="Invítame a un Café" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script><br>
+
 Pandas es una herramienta de manipulación de datos de alto nivel desarrollada por [Wes McKinney](http://wesmckinney.com/). Es construido sobre Numpy y permite el análisis de datos que cuenta con las estructuras de datos que necesitamos para limpiar los datos en bruto y que sean aptos para el análisis (por ejemplo, tablas). Como Pandas permite realizar tareas importantes, como alinear datos para su comparación, fusionar conjuntos de datos, gestión de datos perdidos, etc., se ha convertido en una librería muy importante para procesar datos a alto nivel en Python (es decir, estadísticas ). Pandas fue diseñada originalmente para gestionar datos financieros, y como alternativo al uso de hojas de cálculo (es decir, Microsoft Excel).
 
 Los principales tipos de datos que pueden representarse con pandas son:

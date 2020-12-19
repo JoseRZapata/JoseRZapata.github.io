@@ -18,6 +18,7 @@ Maestria TIC Linea Ciencia de Datos
 
 Por [Jose R. Zapata](https://joserzapata.github.io/)
 
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="joserzapata" data-color="#328cc1" data-emoji="" data-font="Cookie" data-text="Invítame a un Café" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script><br>
 
 Python cuenta con varias librerias para visualizacion las principale son:
 * [matplotlib](https://matplotlib.org/) para graficas sencillas: bars, pies, lines, scatter plots, etc.
