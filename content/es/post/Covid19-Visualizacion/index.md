@@ -220,7 +220,7 @@ Mover el Mouse sobre el mapa para ver la informacion de cada pais
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
 confirmed_melt['Fecha'] = confirmed_melt['Fecha'].dt.strftime('%m/%d/%Y')
 
-max_Fecha = confirmed_melt['Fecha'].max()
+max_Fecha = confirmed_melt['Fecha'].iloc[-1]
 conf_max = confirmed_melt[confirmed_melt['Fecha']== max_Fecha]
 conf_max.dropna(inplace=True) #eliminar filas con valores faltantes
 
@@ -243,7 +243,7 @@ fig.show()
 death_melt['Fecha'] = pd.to_datetime(death_melt['Fecha'])
 death_melt['Fecha'] = death_melt['Fecha'].dt.strftime('%m/%d/%Y')
 
-max_Fecha = death_melt['Fecha'].max()
+max_Fecha = death_melt['Fecha'].iloc[-1]
 death_max = death_melt[death_melt['Fecha']== max_Fecha].copy()
 death_max.dropna(inplace=True) #eliminar filas con valores faltantes
 
