@@ -183,15 +183,15 @@ if api_key: py.plot(fig, filename = 'total_casos_general', auto_open=False)
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
 confirmed_melt['Fecha'] = confirmed_melt['Fecha'].dt.strftime('%m/%d/%Y')
 
-max_Fecha = confirmed_melt['Fecha'].max()
+max_Fecha = confirmed_melt['Fecha'].iloc[-1]
 conf_max = confirmed_melt[confirmed_melt['Fecha']== max_Fecha].copy()
 conf_max.dropna(inplace=True) #eliminar filas con valores faltantes
 
-fig = px.choropleth(conf_max, locations="Country/Region", locationmode='country names', 
-                     color=np.log10(conf_max["Confirmados"]), hover_name="Country/Region", 
+fig = px.choropleth(conf_max, locations="Country/Region", locationmode='country names',
+                     color=np.log10(conf_max["Confirmados"]), hover_name="Country/Region",
                      hover_data = ["Confirmados"],
                      projection="natural earth", width=900,
-                     color_continuous_scale = px.colors.sequential.Jet,        
+                     color_continuous_scale = px.colors.sequential.Jet,
                      title='Mapa de Confirmados COVID 19 por Pais')
 fig.add_annotation(x=0.5, y=0,text='https://joserzapata.github.io/', showarrow=False)
 fig.update(layout_coloraxis_showscale=False)
@@ -206,7 +206,7 @@ if api_key: py.plot(fig, filename = 'mapa_confirmados_pais', auto_open=False)
 death_melt['Fecha'] = pd.to_datetime(death_melt['Fecha'])
 death_melt['Fecha'] = death_melt['Fecha'].dt.strftime('%m/%d/%Y')
 
-max_Fecha = death_melt['Fecha'].max()
+max_Fecha = death_melt['Fecha'].iloc[-1]
 death_max = death_melt[death_melt['Fecha']== max_Fecha].copy()
 death_max.dropna(inplace=True) #eliminar filas con valores faltantes
 
