@@ -509,7 +509,7 @@ fig.show()
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;confirmed_melt[&#39;Fecha&#39;] = pd.to_datetime(confirmed_melt[&#39;Fecha&#39;])
 confirmed_melt[&#39;Fecha&#39;] = confirmed_melt[&#39;Fecha&#39;].dt.strftime(&#39;%m/%d/%Y&#39;)
 
-max_Fecha = confirmed_melt[&#39;Fecha&#39;].max()
+max_Fecha = confirmed_melt[&#39;Fecha&#39;].iloc[-1]
 conf_max = confirmed_melt[confirmed_melt[&#39;Fecha&#39;]== max_Fecha]
 conf_max.dropna(inplace=True) #eliminar filas con valores faltantes
 
@@ -532,7 +532,7 @@ fig.show()
 &lt;pre&gt;&lt;code class=&#34;language-python&#34;&gt;death_melt[&#39;Fecha&#39;] = pd.to_datetime(death_melt[&#39;Fecha&#39;])
 death_melt[&#39;Fecha&#39;] = death_melt[&#39;Fecha&#39;].dt.strftime(&#39;%m/%d/%Y&#39;)
 
-max_Fecha = death_melt[&#39;Fecha&#39;].max()
+max_Fecha = death_melt[&#39;Fecha&#39;].iloc[-1]
 death_max = death_melt[death_melt[&#39;Fecha&#39;]== max_Fecha].copy()
 death_max.dropna(inplace=True) #eliminar filas con valores faltantes
 
