@@ -279,7 +279,7 @@ df1.rename(columns = {'date':'Fecha'}, inplace = True)
 if api_key:
     # se toman la serie de tiempo cada 2 dias, por que las graficas
     # grandes no se pueden subir a chart-studio con subscripcion gratuita
-    df1 = df1.iloc[::-3].iloc[::-1]
+    df1 = df1.iloc[::-5].iloc[::-1]
 
 df_melt = df1.melt(id_vars='Fecha', value_vars= list(df1.columns)[1:], var_name=None)
 fig = px.line(df_melt, x='Fecha' , y='value', color='Country/Region',
@@ -313,7 +313,7 @@ df2.rename(columns = {'date':'Fecha'}, inplace = True)
 if api_key:
     # se toman la serie de tiempo cada 2 dias, por que las graficas
     # grandes no se pueden subir a chart-studio con subscripcion gratuita
-    df2 = df2.iloc[::-3].iloc[::-1]
+    df2 = df2.iloc[::-5].iloc[::-1]
 
 df_melt2 = df2.melt(id_vars='Fecha', value_vars= list(df2.columns)[1:], var_name=None)
 fig = px.line(df_melt2, x='Fecha' , y='value', color='Country/Region',
@@ -342,7 +342,7 @@ if api_key: py.plot(fig, filename = 'total_casos_no_8_infectados', auto_open=Fal
 if api_key:
     # se toman la serie de tiempo cada 6 dias, por que las graficas
     # grandes no se pueden subir a chart-studio con subscripcion gratuita
-    confirmed_melt = confirmed_group.iloc[::-7].iloc[::-1].melt(id_vars="date").copy()
+    confirmed_melt = confirmed_group.iloc[::-10].iloc[::-1].melt(id_vars="date").copy()
     confirmed_melt.rename(columns = {'value':'Confirmados', 'date':'Fecha'}, inplace = True)
 
 confirmed_melt['Fecha'] = pd.to_datetime(confirmed_melt['Fecha'])
