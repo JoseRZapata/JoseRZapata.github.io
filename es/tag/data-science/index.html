@@ -95,6 +95,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
 
     
 
@@ -337,7 +339,7 @@
   
   <meta property="og:site_name" content="Jose Ricardo Zapata" />
   <meta property="og:url" content="https://joserzapata.github.io/es/tag/data-science/" />
-  <meta property="og:title" content="Data-Science | Jose Ricardo Zapata" />
+  <meta property="og:title" content="Data-science | Jose Ricardo Zapata" />
   <meta property="og:description" content="Phd Information Technologies (Sound and Music Computing), Professor and Data Scientist" /><meta property="og:image" content="https://joserzapata.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" />
     <meta property="twitter:image" content="https://joserzapata.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="es" />
   
@@ -358,7 +360,7 @@
 
 
 
-  <title>Data-Science | Jose Ricardo Zapata</title>
+  <title>Data-science | Jose Ricardo Zapata</title>
 </head>
 
 
@@ -376,6 +378,43 @@
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Buscar</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Cerrar"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Buscar..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Buscar...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -688,6 +727,10 @@
 
       
       
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
 
       
       
@@ -758,7 +801,7 @@
     
   
 <div class="universal-wrapper pt-3">
-  <h1>Data-Science</h1>
+  <h1>Data-science</h1>
 
   
 
@@ -828,7 +871,7 @@ Este proyecto es financiado por las Becas Social Media and Democracy Research Gr
     
     
     <div>
-      <h2><a href="/es/talk/meetup_2018/" >Aplicaciones de Audio con Machine Learning</a></h2>
+      <h2><a href="/es/event/meetup_2018/" >Aplicaciones de Audio con Machine Learning</a></h2>
       <div class="article-style">
         
           Mediante la extraccion automatica del contenido de las señales de audio y Machine learning se tienen aplicaciones de predicción, clasificación y Agrupamiento, como: Deteccion de emociones en la voz (Speech Emotion), Reconocieminto de Voz (Speech-to-Text), Deteccion y segmentacion de personas hablando(Speaker Diarization), Music Information Retrieval (Extraccion Automatica de Informacion Musical), entre otros.
@@ -943,12 +986,31 @@ Este proyecto es financiado por las Becas Social Media and Democracy Research Gr
     
     
     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
 
     
     
 
     
     
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
     
 
     
@@ -964,6 +1026,14 @@ Este proyecto es financiado por las Becas Social Media and Democracy Research Gr
 
     
     
+      
+      
+      
+      
+      
+      
+      
+    
 
     
     
@@ -973,8 +1043,11 @@ Este proyecto es financiado por las Becas Social Media and Democracy Research Gr
     
     
     
+      
+      
     
-    <script src="/es/js/wowchemy.min.163b8d9708d5ac450497c0142c0dad35.js"></script>
+    
+    <script src="/es/js/wowchemy.min.cf1fff399df354689ffdfb59c6fa4755.js"></script>
 
     
 

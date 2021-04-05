@@ -275,19 +275,6 @@
                 href="https://joserzapata.github.io/es/categories/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/es/tag/data-science/</loc>
-    <lastmod>2020-05-29T17:03:57-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tag/data-science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tag/data-science/"
-                />
-  </url><url>
     <loc>https://joserzapata.github.io/es/category/data-science/</loc>
     <lastmod>2020-05-29T17:03:57-05:00</lastmod>
     <xhtml:link
@@ -299,6 +286,19 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://joserzapata.github.io/es/category/data-science/"
+                />
+  </url><url>
+    <loc>https://joserzapata.github.io/es/tag/data-science/</loc>
+    <lastmod>2020-05-29T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tag/data-science/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tag/data-science/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/es/post/lista-proyecto-machine-learning/</loc>
@@ -418,17 +418,17 @@
                 href="https://joserzapata.github.io/es/project/social-media-behaviour/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/es/talk/pycon2020/</loc>
+    <loc>https://joserzapata.github.io/es/event/pycon2020/</loc>
     <lastmod>2020-02-07T12:35:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://joserzapata.github.io/talk/pycon2020/"
+                href="https://joserzapata.github.io/event/pycon2020/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://joserzapata.github.io/es/talk/pycon2020/"
+                href="https://joserzapata.github.io/es/event/pycon2020/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/es/tag/music/</loc>
@@ -444,17 +444,17 @@
                 href="https://joserzapata.github.io/es/tag/music/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/es/talk/</loc>
+    <loc>https://joserzapata.github.io/es/event/</loc>
     <lastmod>2020-02-07T12:35:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://joserzapata.github.io/talk/"
+                href="https://joserzapata.github.io/event/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://joserzapata.github.io/es/talk/"
+                href="https://joserzapata.github.io/es/event/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/es/tag/waves/</loc>
@@ -548,17 +548,17 @@
                 href="https://joserzapata.github.io/es/tag/musicology/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/es/talk/meetup_2018/</loc>
+    <loc>https://joserzapata.github.io/es/event/meetup_2018/</loc>
     <lastmod>2018-10-02T18:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://joserzapata.github.io/talk/meetup_2018/"
+                href="https://joserzapata.github.io/event/meetup_2018/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://joserzapata.github.io/es/talk/meetup_2018/"
+                href="https://joserzapata.github.io/es/event/meetup_2018/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/es/tag/machine-learning/</loc>
@@ -652,17 +652,17 @@
                 href="https://joserzapata.github.io/es/post/proyecto-grado/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/es/talk/pycon2018/</loc>
+    <loc>https://joserzapata.github.io/es/event/pycon2018/</loc>
     <lastmod>2018-02-09T11:40:35-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://joserzapata.github.io/talk/pycon2018/"
+                href="https://joserzapata.github.io/event/pycon2018/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://joserzapata.github.io/es/talk/pycon2018/"
+                href="https://joserzapata.github.io/es/event/pycon2018/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/es/publication-type/6/</loc>
@@ -704,17 +704,17 @@
                 href="https://joserzapata.github.io/es/publication/tempo-estimation/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/es/talk/aes2016/</loc>
+    <loc>https://joserzapata.github.io/es/event/aes2016/</loc>
     <lastmod>2016-07-22T14:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://joserzapata.github.io/talk/aes2016/"
+                href="https://joserzapata.github.io/event/aes2016/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://joserzapata.github.io/es/talk/aes2016/"
+                href="https://joserzapata.github.io/es/event/aes2016/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/es/publication-type/2/</loc>

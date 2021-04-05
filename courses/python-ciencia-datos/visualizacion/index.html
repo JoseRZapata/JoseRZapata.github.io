@@ -93,6 +93,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
 
     
 
@@ -374,6 +376,43 @@
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -682,9 +721,27 @@
       
       
         
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://twitter.com/joserzapata" target="_blank" rel="noopener" aria-label="twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://www.linkedin.com/in/jose-ricardo-zapata-gonzalez/" target="_blank" rel="noopener" aria-label="linkedin">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+        
       
 
       
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
       
 
       
@@ -740,6 +797,12 @@
     </div>
   </button>
 
+  
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
   
 </form>
 
@@ -799,7 +862,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/python/"><i class="fas fa-book pr-1"></i>1 - Python</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/python/"><i class="fas fa-book pr-1"></i>1. Python</a>
     
 
     
@@ -819,7 +882,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/numpy/"><i class="fas fa-book pr-1"></i>2 - Numpy</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/numpy/"><i class="fas fa-book pr-1"></i>2. Numpy</a>
     
 
     
@@ -839,7 +902,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/pandas/"><i class="fas fa-book pr-1"></i>3 - Pandas</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/pandas/"><i class="fas fa-book pr-1"></i>3. Pandas</a>
     
 
     
@@ -859,7 +922,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link  active" href="/courses/python-ciencia-datos/visualizacion/"><i class="fas fa-book pr-1"></i>4 - Visualizacion</a>
+        <a class="docs-toc-link  active" href="/courses/python-ciencia-datos/visualizacion/"><i class="fas fa-book pr-1"></i>4. Visualizacion</a>
     
 
     
@@ -879,7 +942,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/ml/"><i class="fas fa-book pr-1"></i>5 - Machine Learning</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/ml/"><i class="fas fa-book pr-1"></i>5. Machine Learning</a>
     
 
     
@@ -899,7 +962,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/regresion/"><i class="fas fa-book pr-1"></i>6 - Regresion</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/regresion/"><i class="fas fa-book pr-1"></i>6. Regresion</a>
     
 
     
@@ -919,7 +982,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/clasificacion/"><i class="fas fa-book pr-1"></i>7 - Clasificacion</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/clasificacion/"><i class="fas fa-book pr-1"></i>7. Clasificacion</a>
     
 
     
@@ -939,7 +1002,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/clustering/"><i class="fas fa-book pr-1"></i>8 - Clustering</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/clustering/"><i class="fas fa-book pr-1"></i>8. Clustering</a>
     
 
     
@@ -2518,7 +2581,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-857126439" class="chart"></div>
+<div id="chart-967285314" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2528,7 +2591,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./01.json", function(chart) {
-        Plotly.plot('chart-857126439', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-967285314', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2538,7 +2601,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-514682379" class="chart"></div>
+<div id="chart-129467385" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2548,7 +2611,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./02.json", function(chart) {
-        Plotly.plot('chart-514682379', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-129467385', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2557,7 +2620,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-291876543" class="chart"></div>
+<div id="chart-815693427" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2567,7 +2630,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./03.json", function(chart) {
-        Plotly.plot('chart-291876543', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-815693427', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2577,7 +2640,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-182597436" class="chart"></div>
+<div id="chart-285693417" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2587,7 +2650,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./04.json", function(chart) {
-        Plotly.plot('chart-182597436', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-285693417', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2596,7 +2659,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-219836547" class="chart"></div>
+<div id="chart-637198254" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2606,7 +2669,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./05.json", function(chart) {
-        Plotly.plot('chart-219836547', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-637198254', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2617,7 +2680,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-289174356" class="chart"></div>
+<div id="chart-524986173" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2627,7 +2690,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./06.json", function(chart) {
-        Plotly.plot('chart-289174356', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-524986173', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2637,7 +2700,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-761384259" class="chart"></div>
+<div id="chart-481537926" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2647,7 +2710,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./07.json", function(chart) {
-        Plotly.plot('chart-761384259', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-481537926', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2657,7 +2720,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-245381967" class="chart"></div>
+<div id="chart-527983461" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2667,7 +2730,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./08.json", function(chart) {
-        Plotly.plot('chart-245381967', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-527983461', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2677,7 +2740,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-487192536" class="chart"></div>
+<div id="chart-962873451" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2687,7 +2750,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./09.json", function(chart) {
-        Plotly.plot('chart-487192536', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-962873451', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2696,7 +2759,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-651789243" class="chart"></div>
+<div id="chart-137469825" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2706,7 +2769,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./10.json", function(chart) {
-        Plotly.plot('chart-651789243', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-137469825', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2718,7 +2781,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-189764523" class="chart"></div>
+<div id="chart-621948375" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2728,7 +2791,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./11.json", function(chart) {
-        Plotly.plot('chart-189764523', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-621948375', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2738,7 +2801,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-745361298" class="chart"></div>
+<div id="chart-478596213" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2748,7 +2811,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./12.json", function(chart) {
-        Plotly.plot('chart-745361298', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-478596213', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2757,7 +2820,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-842953167" class="chart"></div>
+<div id="chart-837241695" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2767,7 +2830,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./13.json", function(chart) {
-        Plotly.plot('chart-842953167', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-837241695', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2777,7 +2840,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-589214763" class="chart"></div>
+<div id="chart-847952361" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2787,7 +2850,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./14.json", function(chart) {
-        Plotly.plot('chart-589214763', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-847952361', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2797,7 +2860,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-528193476" class="chart"></div>
+<div id="chart-567438291" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2807,7 +2870,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./15.json", function(chart) {
-        Plotly.plot('chart-528193476', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-567438291', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2817,7 +2880,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-935184627" class="chart"></div>
+<div id="chart-617295843" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2827,7 +2890,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./16.json", function(chart) {
-        Plotly.plot('chart-935184627', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-617295843', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2837,7 +2900,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-325691748" class="chart"></div>
+<div id="chart-361548279" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2847,7 +2910,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./17.json", function(chart) {
-        Plotly.plot('chart-325691748', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-361548279', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2857,7 +2920,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-154937682" class="chart"></div>
+<div id="chart-759846231" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2867,7 +2930,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./18.json", function(chart) {
-        Plotly.plot('chart-154937682', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-759846231', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2877,7 +2940,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-537612498" class="chart"></div>
+<div id="chart-574916823" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2887,7 +2950,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./19.json", function(chart) {
-        Plotly.plot('chart-537612498', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-574916823', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2900,7 +2963,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-352981674" class="chart"></div>
+<div id="chart-815947632" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2910,7 +2973,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./20.json", function(chart) {
-        Plotly.plot('chart-352981674', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-815947632', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2919,7 +2982,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-947156328" class="chart"></div>
+<div id="chart-713259486" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2929,7 +2992,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./21.json", function(chart) {
-        Plotly.plot('chart-947156328', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-713259486', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2938,7 +3001,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-395742816" class="chart"></div>
+<div id="chart-596731842" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2948,7 +3011,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./22.json", function(chart) {
-        Plotly.plot('chart-395742816', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-596731842', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2958,7 +3021,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-671452983" class="chart"></div>
+<div id="chart-784291653" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2968,7 +3031,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./23.json", function(chart) {
-        Plotly.plot('chart-671452983', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-784291653', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2978,7 +3041,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-178926354" class="chart"></div>
+<div id="chart-614293785" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2988,7 +3051,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./24.json", function(chart) {
-        Plotly.plot('chart-178926354', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-614293785', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2998,7 +3061,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-984162357" class="chart"></div>
+<div id="chart-348269517" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3008,7 +3071,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./25.json", function(chart) {
-        Plotly.plot('chart-984162357', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-348269517', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3017,7 +3080,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-395461278" class="chart"></div>
+<div id="chart-971423568" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3027,7 +3090,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./26.json", function(chart) {
-        Plotly.plot('chart-395461278', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-971423568', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3036,7 +3099,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-173254986" class="chart"></div>
+<div id="chart-369541278" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3046,7 +3109,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./27.json", function(chart) {
-        Plotly.plot('chart-173254986', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-369541278', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3164,7 +3227,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-127536849" class="chart"></div>
+<div id="chart-514876239" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3174,7 +3237,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./28.json", function(chart) {
-        Plotly.plot('chart-127536849', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-514876239', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3187,7 +3250,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-214673598" class="chart"></div>
+<div id="chart-723648915" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3197,7 +3260,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./29.json", function(chart) {
-        Plotly.plot('chart-214673598', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-723648915', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3211,7 +3274,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-976584321" class="chart"></div>
+<div id="chart-285691347" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3221,7 +3284,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./30.json", function(chart) {
-        Plotly.plot('chart-976584321', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-285691347', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3234,7 +3297,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-715429386" class="chart"></div>
+<div id="chart-921687543" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3244,7 +3307,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./31.json", function(chart) {
-        Plotly.plot('chart-715429386', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-921687543', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3253,7 +3316,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-673495281" class="chart"></div>
+<div id="chart-465923817" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3263,7 +3326,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./32.json", function(chart) {
-        Plotly.plot('chart-673495281', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-465923817', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3273,7 +3336,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-678932145" class="chart"></div>
+<div id="chart-845763291" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3283,7 +3346,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./33.json", function(chart) {
-        Plotly.plot('chart-678932145', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-845763291', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3293,7 +3356,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-136482795" class="chart"></div>
+<div id="chart-821379465" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3303,7 +3366,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./34.json", function(chart) {
-        Plotly.plot('chart-136482795', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-821379465', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3315,7 +3378,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-691435278" class="chart"></div>
+<div id="chart-816379245" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3325,7 +3388,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./35.json", function(chart) {
-        Plotly.plot('chart-691435278', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-816379245', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3336,7 +3399,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-625439817" class="chart"></div>
+<div id="chart-514978263" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3346,7 +3409,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./36.json", function(chart) {
-        Plotly.plot('chart-625439817', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-514978263', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3358,7 +3421,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-869731542" class="chart"></div>
+<div id="chart-473218965" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3368,7 +3431,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./37.json", function(chart) {
-        Plotly.plot('chart-869731542', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-473218965', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -4619,6 +4682,8 @@ sns.lmplot(x='total_bill',y='tip',data=tips,col='day',hue='sex',palette='coolwar
     
     
     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
 
     
     
@@ -4630,6 +4695,23 @@ sns.lmplot(x='total_bill',y='tip',data=tips,col='day',hue='sex',palette='coolwar
 
     
     
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
     
 
     
@@ -4647,6 +4729,14 @@ sns.lmplot(x='total_bill',y='tip',data=tips,col='day',hue='sex',palette='coolwar
 
     
     
+      
+      
+      
+      
+      
+      
+      
+    
 
     
     
@@ -4656,8 +4746,11 @@ sns.lmplot(x='total_bill',y='tip',data=tips,col='day',hue='sex',palette='coolwar
     
     
     
+      
+      
     
-    <script src="/en/js/wowchemy.min.163b8d9708d5ac450497c0142c0dad35.js"></script>
+    
+    <script src="/en/js/wowchemy.min.b61a8f62b6e5c0cd322c8158c5b5dfb6.js"></script>
 
     
 

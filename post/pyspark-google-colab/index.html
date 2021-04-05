@@ -95,6 +95,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
 
     
 
@@ -427,6 +429,43 @@
   
 
 
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
 
 
   <div class="page-header">
@@ -734,9 +773,27 @@
       
       
         
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://twitter.com/joserzapata" target="_blank" rel="noopener" aria-label="twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://www.linkedin.com/in/jose-ricardo-zapata-gonzalez/" target="_blank" rel="noopener" aria-label="linkedin">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+        
       
 
       
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
       
 
       
@@ -1204,7 +1261,7 @@ only showing top 20 rows
   
   <a class="badge badge-light" href="/tag/colab/">Colab</a>
   
-  <a class="badge badge-light" href="/tag/data-science/">Data-Science</a>
+  <a class="badge badge-light" href="/tag/data-science/">Data-science</a>
   
   <a class="badge badge-light" href="/tag/jupyter-notebook/">Jupyter-notebook</a>
   
@@ -1447,11 +1504,11 @@ only showing top 20 rows
       
       <li><a href="/project/social-media-behaviour/">Social Media Behaviour with exclusive Facebook data</a></li>
       
-      <li><a href="/talk/pycon2020/">Comprensión de la música con Python, una mirada desde la Física y la Matemática</a></li>
+      <li><a href="/event/pycon2020/">Comprensión de la música con Python, una mirada desde la Física y la Matemática</a></li>
       
-      <li><a href="/talk/meetup_2018/">Aplicaciones de Audio con Machine Learning</a></li>
+      <li><a href="/event/meetup_2018/">Aplicaciones de Audio con Machine Learning</a></li>
       
-      <li><a href="/talk/pycon2018/">Audio signal analysis with python</a></li>
+      <li><a href="/event/pycon2018/">Audio signal analysis with python</a></li>
       
     </ul>
   </div>
@@ -1566,12 +1623,31 @@ only showing top 20 rows
     
     
     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
 
     
     
 
     
     
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
     
 
     
@@ -1587,6 +1663,14 @@ only showing top 20 rows
 
     
     
+      
+      
+      
+      
+      
+      
+      
+    
 
     
     
@@ -1596,8 +1680,11 @@ only showing top 20 rows
     
     
     
+      
+      
     
-    <script src="/en/js/wowchemy.min.163b8d9708d5ac450497c0142c0dad35.js"></script>
+    
+    <script src="/en/js/wowchemy.min.b61a8f62b6e5c0cd322c8158c5b5dfb6.js"></script>
 
     
 

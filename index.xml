@@ -5,7 +5,7 @@
     <link>https://joserzapata.github.io/</link>
       <atom:link href="https://joserzapata.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Jose Ricardo Zapata</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Mon, 28 Sep 2020 10:57:42 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Sun, 04 Apr 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Jose Ricardo Zapata</title>
@@ -1068,9 +1068,9 @@ only showing top 20 rows
     
     <item>
       <title>Comprensión de la música con Python, una mirada desde la Física y la Matemática</title>
-      <link>https://joserzapata.github.io/talk/pycon2020/</link>
+      <link>https://joserzapata.github.io/event/pycon2020/</link>
       <pubDate>Fri, 07 Feb 2020 12:35:00 -0500</pubDate>
-      <guid>https://joserzapata.github.io/talk/pycon2020/</guid>
+      <guid>https://joserzapata.github.io/event/pycon2020/</guid>
       <description></description>
     </item>
     
@@ -1092,9 +1092,9 @@ only showing top 20 rows
     
     <item>
       <title>Aplicaciones de Audio con Machine Learning</title>
-      <link>https://joserzapata.github.io/talk/meetup_2018/</link>
+      <link>https://joserzapata.github.io/event/meetup_2018/</link>
       <pubDate>Tue, 02 Oct 2018 18:00:00 -0500</pubDate>
-      <guid>https://joserzapata.github.io/talk/meetup_2018/</guid>
+      <guid>https://joserzapata.github.io/event/meetup_2018/</guid>
       <description></description>
     </item>
     
@@ -1409,9 +1409,9 @@ como el Estudio y comprensión de los datos y análisis de los datos (Usar Tabla
     
     <item>
       <title>Audio signal analysis with python</title>
-      <link>https://joserzapata.github.io/talk/pycon2018/</link>
+      <link>https://joserzapata.github.io/event/pycon2018/</link>
       <pubDate>Fri, 09 Feb 2018 11:40:35 -0500</pubDate>
-      <guid>https://joserzapata.github.io/talk/pycon2018/</guid>
+      <guid>https://joserzapata.github.io/event/pycon2018/</guid>
       <description></description>
     </item>
     
@@ -1425,9 +1425,9 @@ como el Estudio y comprensión de los datos y análisis de los datos (Usar Tabla
     
     <item>
       <title>Sistemas Automaticos para Extraccion de Información Musical (Generalidades y Aplicaciones)</title>
-      <link>https://joserzapata.github.io/talk/aes2016/</link>
+      <link>https://joserzapata.github.io/event/aes2016/</link>
       <pubDate>Fri, 22 Jul 2016 14:00:00 -0500</pubDate>
-      <guid>https://joserzapata.github.io/talk/aes2016/</guid>
+      <guid>https://joserzapata.github.io/event/aes2016/</guid>
       <description></description>
     </item>
     

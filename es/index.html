@@ -97,6 +97,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
 
     
 
@@ -306,6 +308,8 @@
   
   
   
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  
 
   
     <link rel="alternate" href="/es/index.xml" type="application/rss+xml" title="Jose Ricardo Zapata" />
@@ -353,7 +357,13 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite","url": "https://joserzapata.github.io/"
+  "@type": "WebSite",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://joserzapata.github.io/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  },
+  "url": "https://joserzapata.github.io/"
 }
 </script>
 
@@ -386,6 +396,43 @@
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Buscar</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Cerrar"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Buscar..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Buscar...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -697,6 +744,10 @@
       
 
       
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Buscar"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
       
 
       
@@ -4538,522 +4589,6 @@ Este proyecto es financiado por las Becas Social Media and Democracy Research Gr
   
 
   
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/es/talk/pycon2020/" >Comprensión de la música con Python, una mirada desde la Física y la Matemática</a>
-    </div>
-
-    
-    <a href="/es/talk/pycon2020/"  class="summary-link">
-      <div class="article-style">
-        Python para demostrar y visualizar la naturaleza de las ondas del sonido, la relación entre diferentes notas y como se unen para crear la Armonía Musical desde la Física y la Matemática
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-  
-  
-  <div>
-    
-
-  <span >
-      <a href="/es/author/jose-r.-zapata/">Jose R. Zapata</a></span>
-  </div>
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Feb 7, 2020
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-    <div class="btn-links">
-      
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/JoseRZapata/Pycon2020Colombia" target="_blank" rel="noopener">
-  Código fuente
-</a>
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="http://nbviewer.jupyter.org/format/slides/github/JoseRZapata/Pycon2020Colombia/blob/master/Pycon2020_Musica_Python.ipynb" target="_blank" rel="noopener">
-  Diapositivas
-</a>
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.youtube.com/watch?v=SE4EACCD4NE" target="_blank" rel="noopener">
-  Vídeo
-</a>
-
-
-
-
-
-    </div>
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-    
-    <a href="/es/talk/pycon2020/" >
-      <img src="/es/talk/pycon2020/featured_hufce3cbb6258e0cb8fa80cfa35d21b956_4198_150x0_resize_lanczos_2.png" alt="Comprensión de la música con Python, una mirada desde la Física y la Matemática" loading="lazy">
-    </a>
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/es/talk/meetup_2018/" >Aplicaciones de Audio con Machine Learning</a>
-    </div>
-
-    
-    <a href="/es/talk/meetup_2018/"  class="summary-link">
-      <div class="article-style">
-        Mediante la extraccion automatica del contenido de las señales de audio y Machine learning se tienen aplicaciones de predicción, clasificación y Agrupamiento, como: Deteccion de emociones en la voz (Speech Emotion), Reconocieminto de Voz (Speech-to-Text), Deteccion y segmentacion de personas hablando(Speaker Diarization), Music Information Retrieval (Extraccion Automatica de Informacion Musical), entre otros.
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-  
-  
-  <div>
-    
-
-  <span >
-      <a href="/es/author/jose-r.-zapata/">Jose R. Zapata</a></span>
-  </div>
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Oct 2, 2018
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-    
-    <a href="/es/talk/meetup_2018/" >
-      <img src="/es/talk/meetup_2018/featured_hu4036b08ff19a6586ed1835635e8ad629_334526_150x0_resize_q90_lanczos.jpeg" alt="Aplicaciones de Audio con Machine Learning" loading="lazy">
-    </a>
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/es/talk/pycon2018/" >Analisis de Señales de Audio con Python</a>
-    </div>
-
-    
-    <a href="/es/talk/pycon2018/"  class="summary-link">
-      <div class="article-style">
-        Uso de Python para Analisis de señales de Audio y Aplicaciones de Music Information Retrieval (Extraccion Automatica de informacion Musical).
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-  
-  
-  <div>
-    
-
-  <span >
-      <a href="/es/author/jose-r.-zapata/">Jose R. Zapata</a></span>
-  </div>
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Feb 9, 2018
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-    <div class="btn-links">
-      
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://github.com/JoseRZapata/Pycon2018Colombia" target="_blank" rel="noopener">
-  Código fuente
-</a>
-
-
-
-
-
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://nbviewer.jupyter.org/github/JoseRZapata/Pycon2018Colombia/blob/master/Pycon2018-AudioAnalysis-en.ipynb" target="_blank" rel="noopener">
-  Diapositivas
-</a>
-
-
-
-  
-  
-    
-  
-<a class="btn btn-outline-primary btn-page-header btn-sm" href="https://www.youtube.com/watch?v=zu63_q7x8b0" target="_blank" rel="noopener">
-  Vídeo
-</a>
-
-
-
-
-
-    </div>
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-    
-    <a href="/es/talk/pycon2018/" >
-      <img src="/es/talk/pycon2018/featured_hubd232449ef8cd3f4387dfc32804da868_79554_150x0_resize_lanczos_2.png" alt="Analisis de Señales de Audio con Python" loading="lazy">
-    </a>
-    
-  </div>
-</div>
-
-    
-  
-    
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<div class="media stream-item">
-  <div class="media-body">
-
-    <div class="section-subheading article-title mb-0 mt-0">
-      <a href="/es/talk/aes2016/" >Sistemas Automaticos para Extraccion de Información Musical (Generalidades y Aplicaciones)</a>
-    </div>
-
-    
-    <a href="/es/talk/aes2016/"  class="summary-link">
-      <div class="article-style">
-        El Music Information Retrieval (MIR), que tiene como objetivo extraer, analizar y procesar automaticamente la informacion musical en señales de audio para diferentes aplicaciones musicales e informaticas. Las principales tareas en MIR, son Beat tracking, deteccion de melodia, deteccion de acordes, fingerprinting, recomendacion de música, procesamiento de señales de audio, entre otras aplicaciones
-      </div>
-    </a>
-    
-
-    <div class="stream-meta article-metadata">
-
-      
-
-      
-        
-
-
-<div class="article-metadata">
-
-  
-  
-  
-  
-  <div>
-    
-
-  <span >
-      <a href="/es/author/jose-r.-zapata/">Jose R. Zapata</a></span>
-  </div>
-  
-  
-
-  
-  <span class="article-date">
-    
-    
-      
-    
-    Jul 22, 2016
-  </span>
-  
-
-  
-
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-  
-
-</div>
-
-      
-    </div>
-
-    
-
-  </div>
-  <div class="ml-3">
-    
-    
-    
-    <a href="/es/talk/aes2016/" >
-      <img src="/es/talk/aes2016/featured_hu0aea7a5d868243c2d575f90da5eab218_96290_150x0_resize_q90_lanczos.jpg" alt="Sistemas Automaticos para Extraccion de Información Musical (Generalidades y Aplicaciones)" loading="lazy">
-    </a>
-    
-  </div>
-</div>
-
-    
-  
 
   
   
@@ -5203,7 +4738,7 @@ Este proyecto es financiado por las Becas Social Media and Democracy Research Gr
         
         
         
-        <a href="/es/tag/data-science/" style="font-size:1.05251415863663rem">Data-Science</a>
+        <a href="/es/tag/data-science/" style="font-size:1.05251415863663rem">Data-science</a>
       
         
         
@@ -5385,12 +4920,31 @@ Este proyecto es financiado por las Becas Social Media and Democracy Research Gr
     
     
     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
 
     
     
 
     
     
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
     
 
     
@@ -5406,6 +4960,14 @@ Este proyecto es financiado por las Becas Social Media and Democracy Research Gr
 
     
     
+      
+      
+      
+      
+      
+      
+      
+    
 
     
     
@@ -5415,8 +4977,11 @@ Este proyecto es financiado por las Becas Social Media and Democracy Research Gr
     
     
     
+      
+      
     
-    <script src="/es/js/wowchemy.min.163b8d9708d5ac450497c0142c0dad35.js"></script>
+    
+    <script src="/es/js/wowchemy.min.cf1fff399df354689ffdfb59c6fa4755.js"></script>
 
     
 

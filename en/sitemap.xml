@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://joserzapata.github.io/courses/python-ciencia-datos/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://joserzapata.github.io/courses/python-ciencia-datos/python/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
@@ -28,6 +28,22 @@
   </url><url>
     <loc>https://joserzapata.github.io/courses/python-ciencia-datos/clustering/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://joserzapata.github.io/courses/</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://joserzapata.github.io/</loc>
+    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/"
+                />
   </url><url>
     <loc>https://joserzapata.github.io/publication-type/1/</loc>
     <lastmod>2020-09-28T10:57:42-05:00</lastmod>
@@ -172,19 +188,6 @@
                 href="https://joserzapata.github.io/author/jose-r.-zapata/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/</loc>
-    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/"
-                />
-  </url><url>
     <loc>https://joserzapata.github.io/author/juan-fernando-alzate-londono/</loc>
     <lastmod>2020-09-28T10:57:42-05:00</lastmod>
     <xhtml:link
@@ -289,9 +292,6 @@
                 href="https://joserzapata.github.io/tags/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/courses/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://joserzapata.github.io/categories/</loc>
     <lastmod>2020-05-29T17:03:57-05:00</lastmod>
     <xhtml:link
@@ -305,19 +305,6 @@
                 href="https://joserzapata.github.io/categories/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/tag/data-science/</loc>
-    <lastmod>2020-05-29T17:03:57-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tag/data-science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tag/data-science/"
-                />
-  </url><url>
     <loc>https://joserzapata.github.io/category/data-science/</loc>
     <lastmod>2020-05-29T17:03:57-05:00</lastmod>
     <xhtml:link
@@ -329,6 +316,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/category/data-science/"
+                />
+  </url><url>
+    <loc>https://joserzapata.github.io/tag/data-science/</loc>
+    <lastmod>2020-05-29T17:03:57-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tag/data-science/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tag/data-science/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/post/lista-proyecto-machine-learning/</loc>
@@ -448,17 +448,17 @@
                 href="https://joserzapata.github.io/project/social-media-behaviour/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/talk/pycon2020/</loc>
+    <loc>https://joserzapata.github.io/event/pycon2020/</loc>
     <lastmod>2020-02-07T12:35:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://joserzapata.github.io/es/talk/pycon2020/"
+                href="https://joserzapata.github.io/es/event/pycon2020/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://joserzapata.github.io/talk/pycon2020/"
+                href="https://joserzapata.github.io/event/pycon2020/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/tag/music/</loc>
@@ -474,17 +474,17 @@
                 href="https://joserzapata.github.io/tag/music/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/talk/</loc>
+    <loc>https://joserzapata.github.io/event/</loc>
     <lastmod>2020-02-07T12:35:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://joserzapata.github.io/es/talk/"
+                href="https://joserzapata.github.io/es/event/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://joserzapata.github.io/talk/"
+                href="https://joserzapata.github.io/event/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/tag/waves/</loc>
@@ -578,17 +578,17 @@
                 href="https://joserzapata.github.io/tag/musicology/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/talk/meetup_2018/</loc>
+    <loc>https://joserzapata.github.io/event/meetup_2018/</loc>
     <lastmod>2018-10-02T18:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://joserzapata.github.io/es/talk/meetup_2018/"
+                href="https://joserzapata.github.io/es/event/meetup_2018/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://joserzapata.github.io/talk/meetup_2018/"
+                href="https://joserzapata.github.io/event/meetup_2018/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/tag/machine-learning/</loc>
@@ -682,17 +682,17 @@
                 href="https://joserzapata.github.io/post/proyecto-grado/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/talk/pycon2018/</loc>
+    <loc>https://joserzapata.github.io/event/pycon2018/</loc>
     <lastmod>2018-02-09T11:40:35-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://joserzapata.github.io/es/talk/pycon2018/"
+                href="https://joserzapata.github.io/es/event/pycon2018/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://joserzapata.github.io/talk/pycon2018/"
+                href="https://joserzapata.github.io/event/pycon2018/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/publication-type/6/</loc>
@@ -734,17 +734,17 @@
                 href="https://joserzapata.github.io/publication/tempo-estimation/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/talk/aes2016/</loc>
+    <loc>https://joserzapata.github.io/event/aes2016/</loc>
     <lastmod>2016-07-22T14:00:00-05:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://joserzapata.github.io/es/talk/aes2016/"
+                href="https://joserzapata.github.io/es/event/aes2016/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://joserzapata.github.io/talk/aes2016/"
+                href="https://joserzapata.github.io/event/aes2016/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/publication-type/2/</loc>

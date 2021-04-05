@@ -93,6 +93,8 @@
     
     
     
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    
 
     
 
@@ -340,7 +342,7 @@
     <meta property="twitter:image" content="https://joserzapata.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2020-09-09T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2021-04-04T00:00:00&#43;00:00" />
     
   
 
@@ -374,6 +376,43 @@
 
   
 
+
+<aside class="search-modal" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#" aria-label="Close"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search" class="form-control"
+        aria-label="Search...">
+        
+      </div>
+
+      
+      
+
+      
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
 
 
 
@@ -682,9 +721,27 @@
       
       
         
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://twitter.com/joserzapata" target="_blank" rel="noopener" aria-label="twitter">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+            </a>
+          </li>
+        
+          
+          <li class="nav-item d-none d-lg-inline-flex">
+            <a class="nav-link" href="https://www.linkedin.com/in/jose-ricardo-zapata-gonzalez/" target="_blank" rel="noopener" aria-label="linkedin">
+              <i class="fab fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </li>
+        
       
 
       
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#" aria-label="Search"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
       
 
       
@@ -741,6 +798,12 @@
   </button>
 
   
+  <button class="form-control sidebar-search js-search d-none d-md-flex">
+    <i class="fas fa-search pr-2"></i>
+    <span class="sidebar-search-text">Search...</span>
+    <span class="sidebar-search-shortcut">/</span>
+  </button>
+  
 </form>
 
 <nav class="collapse docs-links" id="docs-nav">
@@ -795,7 +858,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/python/"><i class="fas fa-book pr-1"></i>1 - Python</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/python/"><i class="fas fa-book pr-1"></i>1. Python</a>
     
 
     
@@ -815,7 +878,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/numpy/"><i class="fas fa-book pr-1"></i>2 - Numpy</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/numpy/"><i class="fas fa-book pr-1"></i>2. Numpy</a>
     
 
     
@@ -835,7 +898,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/pandas/"><i class="fas fa-book pr-1"></i>3 - Pandas</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/pandas/"><i class="fas fa-book pr-1"></i>3. Pandas</a>
     
 
     
@@ -855,7 +918,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/visualizacion/"><i class="fas fa-book pr-1"></i>4 - Visualizacion</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/visualizacion/"><i class="fas fa-book pr-1"></i>4. Visualizacion</a>
     
 
     
@@ -875,7 +938,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/ml/"><i class="fas fa-book pr-1"></i>5 - Machine Learning</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/ml/"><i class="fas fa-book pr-1"></i>5. Machine Learning</a>
     
 
     
@@ -895,7 +958,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/regresion/"><i class="fas fa-book pr-1"></i>6 - Regresion</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/regresion/"><i class="fas fa-book pr-1"></i>6. Regresion</a>
     
 
     
@@ -915,7 +978,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/clasificacion/"><i class="fas fa-book pr-1"></i>7 - Clasificacion</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/clasificacion/"><i class="fas fa-book pr-1"></i>7. Clasificacion</a>
     
 
     
@@ -935,7 +998,7 @@
 
     
       <div class="docs-toc-item">
-        <a class="docs-toc-link " href="/courses/python-ciencia-datos/clustering/"><i class="fas fa-book pr-1"></i>8 - Clustering</a>
+        <a class="docs-toc-link " href="/courses/python-ciencia-datos/clustering/"><i class="fas fa-book pr-1"></i>8. Clustering</a>
     
 
     
@@ -966,7 +1029,13 @@
         <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
       </ul>
 
-      <nav id="TableOfContents"></nav>
+      <nav id="TableOfContents">
+  <ul>
+    <li><a href="#proposito-del-curso">Proposito del Curso</a></li>
+    <li><a href="#temas">Temas</a></li>
+    <li><a href="#docente">Docente</a></li>
+  </ul>
+</nav>
 
       
     </div>
@@ -983,52 +1052,74 @@
 
           <div class="article-style">
             <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="joserzapata" data-color="#328cc1" data-emoji="" data-font="Cookie" data-text="Invítame a un Café" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script><br>
+<h2 id="proposito-del-curso">Proposito del Curso</h2>
+<p>Manejo y uso de Python como herramienta para la solución de problemas en Ciencia de Datos tales como:</p>
+<ul>
+<li>Fundamentos de programación con Python</li>
+<li>Extracción, transformación y carga de datos.</li>
+<li>Análisis estadístico descriptivo de los datos.</li>
+<li>Visualización de datos.</li>
+<li>Modelamiento y evaluación de sistemas de aprendizaje de máquina supervisados y no supervisados.</li>
+</ul>
+<h2 id="temas">Temas</h2>
 
 
   <ul class="list-unstyled">
     
       <li>
-        <h5><a href="/courses/python-ciencia-datos/python/">1 - Python</a></h5>
+        <h5><a href="/courses/python-ciencia-datos/python/">1. Python</a></h5>
         <p>Introduccion al Lenguaje Python</p>
       </li>
     
       <li>
-        <h5><a href="/courses/python-ciencia-datos/numpy/">2 - Numpy</a></h5>
+        <h5><a href="/courses/python-ciencia-datos/numpy/">2. Numpy</a></h5>
         <p>Libreria de Algebra Lineal (Vectores y Matrices)</p>
       </li>
     
       <li>
-        <h5><a href="/courses/python-ciencia-datos/pandas/">3 - Pandas</a></h5>
+        <h5><a href="/courses/python-ciencia-datos/pandas/">3. Pandas</a></h5>
         <p>Libreria de Manipulación y análisis de datos estructurados</p>
       </li>
     
       <li>
-        <h5><a href="/courses/python-ciencia-datos/visualizacion/">4 - Visualizacion</a></h5>
+        <h5><a href="/courses/python-ciencia-datos/visualizacion/">4. Visualizacion</a></h5>
         <p>Librerias de visualizacion (matplotlib, plotly, seaborn)</p>
       </li>
     
       <li>
-        <h5><a href="/courses/python-ciencia-datos/ml/">5 - Machine Learning</a></h5>
+        <h5><a href="/courses/python-ciencia-datos/ml/">5. Machine Learning</a></h5>
         <p>Libreria de machine Learning que incluye varios algoritmos de clasificación, regresión y análisis de grupos, ademas de herramientas para seleccion, evaluacion de modelos.</p>
       </li>
     
       <li>
-        <h5><a href="/courses/python-ciencia-datos/regresion/">6 - Regresion</a></h5>
+        <h5><a href="/courses/python-ciencia-datos/regresion/">6. Regresion</a></h5>
         <p>Ejemplo Regresion con Python</p>
       </li>
     
       <li>
-        <h5><a href="/courses/python-ciencia-datos/clasificacion/">7 - Clasificacion</a></h5>
+        <h5><a href="/courses/python-ciencia-datos/clasificacion/">7. Clasificacion</a></h5>
         <p>Ejemplo Regresion con Python</p>
       </li>
     
       <li>
-        <h5><a href="/courses/python-ciencia-datos/clustering/">8 - Clustering</a></h5>
+        <h5><a href="/courses/python-ciencia-datos/clustering/">8. Clustering</a></h5>
         <p>Ejemplo Clustering con Python</p>
       </li>
     
   </ul>
 
+
+<h2 id="docente">Docente</h2>
+<a href="/author/jose-r.-zapata/">Jose R. Zapata</a>
+<hr>
+<ul class="cta-group">
+  
+  <li>
+    <a href="python"  class="btn btn-primary px-3 py-3">Empezar</a>
+  </li>
+  
+  
+</ul>
 
 
           </div>
@@ -1051,7 +1142,7 @@
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Sep 9, 2020</p>
+          <p>Last updated on Apr 4, 2021</p>
 
           
 
@@ -1181,6 +1272,8 @@
     
     
     
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js" integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin="anonymous"></script>
+    
 
     
     
@@ -1192,6 +1285,23 @@
 
     
     
+    
+      
+      <script id="search-hit-fuse-template" type="text/x-template">
+        <div class="search-hit" id="summary-{{key}}">
+          <div class="search-hit-content">
+            <div class="search-hit-name">
+              <a href="{{relpermalink}}">{{title}}</a>
+              <div class="article-metadata search-hit-type">{{type}}</div>
+              <p class="search-hit-description">{{snippet}}</p>
+            </div>
+          </div>
+        </div>
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+      
     
 
     
@@ -1207,6 +1317,14 @@
 
     
     
+      
+      
+      
+      
+      
+      
+      
+    
 
     
     
@@ -1216,8 +1334,11 @@
     
     
     
+      
+      
     
-    <script src="/en/js/wowchemy.min.163b8d9708d5ac450497c0142c0dad35.js"></script>
+    
+    <script src="/en/js/wowchemy.min.b61a8f62b6e5c0cd322c8158c5b5dfb6.js"></script>
 
     
 
