@@ -5,9 +5,9 @@
     <link>https://joserzapata.github.io/</link>
       <atom:link href="https://joserzapata.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Jose Ricardo Zapata</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Mon, 28 Sep 2020 10:57:42 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Mon, 28 Sep 2020 10:57:42 -0500</lastBuildDate>
     <image>
-      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <url>https://joserzapata.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Jose Ricardo Zapata</title>
       <link>https://joserzapata.github.io/</link>
     </image>
@@ -37,8 +37,9 @@ con algunos pasos propios agregados o que he encontrado en otros libros o cursos
 
 &lt;p&gt;&lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&#34; data-name=&#34;bmc-button&#34; data-slug=&#34;joserzapata&#34; data-color=&#34;#328cc1&#34; data-emoji=&#34;&#34; data-font=&#34;Cookie&#34; data-text=&#34;Invítame a un Café&#34; data-outline-color=&#34;#000000&#34; data-font-color=&#34;#ffffff&#34; data-coffee-color=&#34;#FFDD00&#34; &gt;&lt;/script&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#1-definir-el-problema-y-mirar-el-panorama-general&#34;&gt;1. Definir el problema y mirar el panorama general.&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#2-obténer-los-datos&#34;&gt;2. Obténer los datos&lt;/a&gt;&lt;/li&gt;
@@ -50,7 +51,8 @@ con algunos pasos propios agregados o que he encontrado en otros libros o cursos
 &lt;li&gt;&lt;a href=&#34;#8-desplegar-monitorear-y-mantener-el-sistema&#34;&gt;8. Desplegar, monitorear y mantener el sistema.&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#referencias&#34;&gt;Referencias&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
 
 &lt;hr /&gt;
 
@@ -318,8 +320,9 @@ diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&#34; data-name=&#34;bmc-button&#34; data-slug=&#34;joserzapata&#34; data-color=&#34;#328cc1&#34; data-emoji=&#34;&#34; data-font=&#34;Cookie&#34; data-text=&#34;Invítame a un Café&#34; data-outline-color=&#34;#000000&#34; data-font-color=&#34;#ffffff&#34; data-coffee-color=&#34;#FFDD00&#34; &gt;&lt;/script&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#paquetes-de-python-y-datos&#34;&gt;Paquetes de Python y Datos&lt;/a&gt;
 &lt;ul&gt;
@@ -353,7 +356,8 @@ diariamente con los nuevos datos!&lt;/strong&gt;&lt;/p&gt;
 &lt;li&gt;&lt;a href=&#34;#codigo-fuente-jupyter-notebook&#34;&gt;Codigo Fuente Jupyter notebook&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#refencias&#34;&gt;Refencias&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
 
 &lt;hr /&gt;
 
@@ -1106,15 +1110,17 @@ los videos fueron creados como apoyo para el curso de Audio del programa &lt;a h
 
 &lt;p&gt;&lt;a href=&#34;http://reaper.fm/download.php&#34;&gt;Descargar REAPER&lt;/a&gt; para Windows, macOS o Linux.&lt;/p&gt;
 
-&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#1-introduccion-a-reaper-y-edicion&#34;&gt;1. Introduccion a Reaper y Edicion&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#2-manejo-de-canales-y-envios-con-reaper&#34;&gt;2. Manejo de canales y envios con Reaper&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#3-automatizaciones-y-envolventes-en-reaper&#34;&gt;3 Automatizaciones y Envolventes en Reaper&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#4-mezcla-y-masterizacion-en-reaper&#34;&gt;4. Mezcla y Masterizacion en Reaper&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
 
 &lt;hr /&gt;
 
@@ -1189,8 +1195,9 @@ los videos fueron creados como apoyo para el curso de Audio del programa &lt;a h
 
 &lt;p&gt;&lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&#34; data-name=&#34;bmc-button&#34; data-slug=&#34;joserzapata&#34; data-color=&#34;#328cc1&#34; data-emoji=&#34;&#34; data-font=&#34;Cookie&#34; data-text=&#34;Invítame a un Café&#34; data-outline-color=&#34;#000000&#34; data-font-color=&#34;#ffffff&#34; data-coffee-color=&#34;#FFDD00&#34; &gt;&lt;/script&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#tips-para-la-creación-de-las-diapositivas&#34;&gt;Tips para la Creación de las Diapositivas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#exposición-anteproyecto&#34;&gt;Exposición Anteproyecto&lt;/a&gt;
@@ -1204,7 +1211,8 @@ los videos fueron creados como apoyo para el curso de Audio del programa &lt;a h
 &lt;li&gt;&lt;a href=&#34;#preguntas-de-evaluación-1&#34;&gt;Preguntas de evaluación:&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
 
 &lt;h1 id=&#34;tips-para-la-creación-de-las-diapositivas&#34;&gt;Tips para la Creación de las Diapositivas&lt;/h1&gt;
 

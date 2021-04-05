@@ -5,9 +5,9 @@
     <link>https://joserzapata.github.io/category/academia/</link>
       <atom:link href="https://joserzapata.github.io/category/academia/index.xml" rel="self" type="application/rss+xml" />
     <description>Academia</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Wed, 01 Aug 2018 09:10:53 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Wed, 01 Aug 2018 09:10:53 -0500</lastBuildDate>
     <image>
-      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <url>https://joserzapata.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Academia</title>
       <link>https://joserzapata.github.io/category/academia/</link>
     </image>
@@ -23,8 +23,9 @@
 
 &lt;p&gt;&lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js&#34; data-name=&#34;bmc-button&#34; data-slug=&#34;joserzapata&#34; data-color=&#34;#328cc1&#34; data-emoji=&#34;&#34; data-font=&#34;Cookie&#34; data-text=&#34;Invítame a un Café&#34; data-outline-color=&#34;#000000&#34; data-font-color=&#34;#ffffff&#34; data-coffee-color=&#34;#FFDD00&#34; &gt;&lt;/script&gt;&lt;br&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#tips-para-la-creación-de-las-diapositivas&#34;&gt;Tips para la Creación de las Diapositivas&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#exposición-anteproyecto&#34;&gt;Exposición Anteproyecto&lt;/a&gt;
@@ -38,7 +39,8 @@
 &lt;li&gt;&lt;a href=&#34;#preguntas-de-evaluación-1&#34;&gt;Preguntas de evaluación:&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
 
 &lt;h1 id=&#34;tips-para-la-creación-de-las-diapositivas&#34;&gt;Tips para la Creación de las Diapositivas&lt;/h1&gt;
 

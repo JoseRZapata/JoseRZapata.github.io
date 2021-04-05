@@ -5,9 +5,9 @@
     <link>https://joserzapata.github.io/category/audio/</link>
       <atom:link href="https://joserzapata.github.io/category/audio/index.xml" rel="self" type="application/rss+xml" />
     <description>Audio</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2020</copyright><lastBuildDate>Sat, 01 Sep 2018 09:10:53 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Sat, 01 Sep 2018 09:10:53 -0500</lastBuildDate>
     <image>
-      <url>https://joserzapata.github.io/img/JoseRZapata.jpg</url>
+      <url>https://joserzapata.github.io/media/icon_hua2ec155b4296a9c9791d015323e16eb5_11927_512x512_fill_lanczos_center_2.png</url>
       <title>Audio</title>
       <link>https://joserzapata.github.io/category/audio/</link>
     </image>
@@ -24,15 +24,17 @@ los videos fueron creados como apoyo para el curso de Audio del programa &lt;a h
 
 &lt;p&gt;&lt;a href=&#34;http://reaper.fm/download.php&#34;&gt;Descargar REAPER&lt;/a&gt; para Windows, macOS o Linux.&lt;/p&gt;
 
-&lt;p&gt;&lt;h2&gt;Table of Contents&lt;/h2&gt;
-&lt;nav id=&#34;TableOfContents&#34;&gt;
+&lt;details class=&#34;toc-inpage d-print-none  &#34; open&gt;
+  &lt;summary class=&#34;font-weight-bold&#34;&gt;Table of Contents&lt;/summary&gt;
+  &lt;nav id=&#34;TableOfContents&#34;&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;#1-introduccion-a-reaper-y-edicion&#34;&gt;1. Introduccion a Reaper y Edicion&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#2-manejo-de-canales-y-envios-con-reaper&#34;&gt;2. Manejo de canales y envios con Reaper&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#3-automatizaciones-y-envolventes-en-reaper&#34;&gt;3 Automatizaciones y Envolventes en Reaper&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&#34;#4-mezcla-y-masterizacion-en-reaper&#34;&gt;4. Mezcla y Masterizacion en Reaper&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;/nav&gt;&lt;/p&gt;
+&lt;/nav&gt;
+&lt;/details&gt;
 
 &lt;hr /&gt;
 
