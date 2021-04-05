@@ -18,12 +18,16 @@ En este notebook se encontra los temas mas importantes para el uso de python en 
 
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="joserzapata" data-color="#328cc1" data-emoji="" data-font="Cookie" data-text="Invítame a un Café" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script><br>
 
+
+
 ## Tipos de Datos
 Python tiene varios tipos de datos, los mismos datos básicos que otros lenguajes: enteros, flotantes, strings y booleanos. Además, las listas son un tipo predefinido en el lenguaje, los diccionarios, tuplas y sets.
 
 La funcion que se utiliza para determinar el tipo de datos es **`type()`**
 
 **Para escribir comentarios es utiliza el caracter numeral #**
+
+{{< toc hide_on="xl" >}}
 
 ### Numeros
 IPython puede ser usado de forma interactiva como una calculadora. Esto permite que el análisis de datos pueda ser realizado de forma interactiva, de forma similar a como pueden usarse otras herramientas como el lenguaje R o Matlab. A continuación se ejemplifican los cálculos aritméticos básicos.
