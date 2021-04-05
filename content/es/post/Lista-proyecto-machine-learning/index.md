@@ -61,9 +61,9 @@ etc.)
 12. Verificar los supuestos si es posible.
 
 # 2. Obténer los datos
-{{% alert note %}}
+{{% callout note %}}
 **Nota:** automatizar tanto como sea posible este proceso para que pueda obtener fácilmente datos nuevos.
-{{% /alert %}}
+{{% /callout %}}
 
 1. Enumere los datos que necesita y la cantidad que necesita.
 2. Busque y documente dónde se pueden obtener los datos.
@@ -78,9 +78,9 @@ etc.)
 11. **Separar un conjunto de datos prueba, dejarlos a un lado y nunca mirarlos.**
 
 # 3. Explorar los datos para obtener información.
-{{% alert note %}}
+{{% callout note %}}
 **Nota:** intente obtener información de un experto en el tema para estos pasos.
-{{% /alert %}}
+{{% /callout %}}
 
 1. Crear una copia de los datos para explorarlos (muestreándolos a un tamaño manejable
 si necesario).
@@ -104,7 +104,7 @@ si necesario).
 
 Para exponer mejor los patrones de los datos y usarlos con los algoritmos de Machine Learning.
 
-{{% alert note %}}
+{{% callout note %}}
 
 **Notas:**
 - Trabaje en copias de los datos (mantenga intacto el conjunto de datos original).
@@ -115,7 +115,7 @@ Para exponer mejor los patrones de los datos y usarlos con los algoritmos de Mac
   - Para limpiar y preparar nuevas instancias de datos una vez que su solución esté activa (produccion)
   - Para que sea fácil probar diferentes formas de preparación de datos como hiperparámetros
   
-{{% /alert %}} 
+{{% /callout %}} 
 
 1. Limpieza de datos:
   - Eliminar registros datos duplicados (disminuir el numero de datos)
@@ -135,11 +135,11 @@ columnas).
 - estandarizar o normalizar atributos.
 
 # 5. Exploración y selección de modelos
-{{% alert note %}}
+{{% callout note %}}
 **Notas:**
 - Si se tiene una gran cantidad de datos, es posible que desee hacer un muestreo de los datos para tener conjuntos de entrenamiento más pequeños, de esta forma se pueden entrenar varios modelos diferentes en un tiempo razonable (se debe tener en cuenta que esto penaliza modelos complejos como redes neuronales grandes o Random Forest).
 - Una vez más, intentar automatizar estos pasos tanto como sea posible.
-{{% /alert %}}
+{{% /callout %}}
 
 1. Entrenar muchos modelos rápidos y utilizando parámetros estándar de diferentes categorías (p. Ej., Lineales, Naive Bayes, SVM, Random Forest, redes neuronales, etc.).
 2. Medir y comparar su desempeño.
@@ -152,11 +152,11 @@ columnas).
 7. Hacer una lista corta de los tres a cinco modelos más prometedores, prefiriendo seleccionar modelos que cometan diferentes tipos de errores (diversidad de los errores).
 
 # 6. Afinar los modelos.
-{{% alert note %}}
+{{% callout note %}}
 **Notas:**
 - Se deberá utilizar la mayor cantidad de datos posible para este paso, especialmente a medida que avanza hacia el final del ajuste fino del modelo.
 - Como siempre, automatizar lo que se pueda.
-{{% /alert %}}
+{{% /callout %}}
 
 1. Ajuste los hiperparámetros ([hyperparameter tunning](https://en.wikipedia.org/wiki/Hyperparameter_optimization)) mediante validación cruzada ([cross validation](https://es.wikipedia.org/wiki/Validaci%C3%B3n_cruzada)).
 - Tratar las elecciones de transformación de datos como hiperparámetros, especialmente cuando no esta seguro de ellos (por ejemplo, ¿debería reemplazar los valores faltantes con cero o con el valor medio? ¿O simplemente dejar eliminar las filas?).
@@ -164,10 +164,10 @@ columnas).
 2. Pruebe los métodos de Ensamble (ensemble methods). La combinación de sus mejores modelos a menudo tendrá un mejor rendimiento que se ejecutan individualmente (hay mejor desempeño si hay diversidad de errores entre los modelos).
 3. Una vez que esté seguro de su modelo final, mida su rendimiento en el conjunto de prueba (test set, separado al inicio) para estimar el error de generalización.
 
-{{% alert warning %}}
+{{% callout warning %}}
 No modifique su modelo después de medir el error de generalización:
 simplemente comenzaría a sobreajustar el conjunto de prueba.
-{{% /alert %}}
+{{% /callout %}}
 
 # 7. Presentacion de la solución. 
 1. Documentar lo que ha hecho.
