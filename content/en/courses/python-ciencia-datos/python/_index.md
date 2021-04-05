@@ -1,6 +1,6 @@
 ---
 # Title, summary, and page position.
-linktitle: 1 - Python
+linktitle: 1. Python
 summary: Introduccion al Lenguaje Python
 weight: 11
 icon: book

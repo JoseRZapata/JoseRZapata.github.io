@@ -1,6 +1,6 @@
 ---
 # Title, summary, and page position.
-linktitle: 4 - Visualizacion
+linktitle: 4. Visualizacion
 summary: Librerias de visualizacion (matplotlib, plotly, seaborn)
 weight: 40
 icon: book

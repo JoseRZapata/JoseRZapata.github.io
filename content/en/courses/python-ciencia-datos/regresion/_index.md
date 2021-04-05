@@ -1,6 +1,6 @@
 ---
 # Title, summary, and page position.
-linktitle: 6 - Regresion
+linktitle: 6. Regresion
 summary: Ejemplo Regresion con Python
 weight: 60
 icon: book

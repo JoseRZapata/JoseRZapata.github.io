@@ -1,6 +1,6 @@
 ---
 # Title, summary, and page position.
-linktitle: 8 - Clustering
+linktitle: 8. Clustering
 summary: Ejemplo Clustering con Python
 weight: 80
 icon: book

@@ -1,6 +1,6 @@
 ---
 # Title, summary, and page position.
-linktitle: 5 - Machine Learning
+linktitle: 5. Machine Learning
 summary: Libreria de machine Learning que incluye varios algoritmos de clasificación, regresión y análisis de grupos, ademas de herramientas para seleccion, evaluacion de modelos.
 weight: 50
 icon: book
