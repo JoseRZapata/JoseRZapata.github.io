@@ -3,7 +3,7 @@
 linktitle: 7. Clasificacion
 summary: Ejemplo Regresion con Python
 weight: 70
-icon: book
+icon: align-center
 icon_pack: fas
 
 # Page metadata.

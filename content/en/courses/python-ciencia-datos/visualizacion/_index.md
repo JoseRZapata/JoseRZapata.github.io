@@ -3,11 +3,11 @@
 linktitle: 4. Visualizacion
 summary: Librerias de visualizacion (matplotlib, plotly, seaborn)
 weight: 40
-icon: book
+icon: chart-bar
 icon_pack: fas
 
 # Page metadata.
-title: Visualización de Datos con PYTHON
+title: Visualización de Datos con Python
 date: "2020-09-09T00:00:00Z"
 type: book  # Do not modify
 ---

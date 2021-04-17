@@ -3,8 +3,8 @@
 linktitle: 1. Python
 summary: Introduccion al Lenguaje Python
 weight: 11
-icon: book
-icon_pack: fas
+icon: python
+icon_pack: fab
 
 # Page metadata.
 title: Programacion Con Python

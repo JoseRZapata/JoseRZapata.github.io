@@ -3,12 +3,12 @@
 linktitle: 8. Clustering
 summary: Ejemplo Clustering con Python
 weight: 80
-icon: book
+icon: braille
 icon_pack: fas
 
 # Page metadata.
 title: Clustering con Scikit Learn
-date: "2020-09-09T00:00:00Z"
+date: "2021-04-17T00:00:00Z"
 type: book  # Do not modify
 ---
 

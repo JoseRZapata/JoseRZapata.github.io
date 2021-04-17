@@ -4,12 +4,12 @@
 linktitle: 3. Pandas
 summary: Libreria de Manipulación y análisis de datos estructurados
 weight: 30
-icon: book
-icon_pack: fas
+icon: buromobelexperte
+icon_pack: fab
 
 # Page metadata.
 title: PANDAS - Manipulacion de Datos con Python
-date: "2020-09-09T00:00:00Z"
+date: "2021-04-17T00:00:00Z"
 type: book  # Do not modify
 ---
 Por [Jose R. Zapata](https://joserzapata.github.io/)

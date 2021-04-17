@@ -3,7 +3,7 @@
 linktitle: 6. Regresion
 summary: Ejemplo Regresion con Python
 weight: 60
-icon: book
+icon: chart-line
 icon_pack: fas
 
 # Page metadata.
