@@ -8,14 +8,13 @@ icon_pack: fas
 
 # Page metadata.
 title: Regresion con Scikit Learn
-date: "2020-09-09T00:00:00Z"
+date: "2021-04-17T00:00:00Z"
 type: book  # Do not modify
 ---
 
 Por [Jose R. Zapata](https://joserzapata.github.io/) 
 
 <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="joserzapata" data-color="#328cc1" data-emoji="" data-font="Cookie" data-text="Invítame a un Café" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script><br>
-
 ```python
 import pandas as pd
 import numpy as np
@@ -25,7 +24,7 @@ import seaborn as sns
 import datetime
 ```
 
-# Informacion de los datos
+## Informacion de los datos
 
 
 ```python
@@ -47,7 +46,7 @@ automobile_df.sample(5)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -69,18 +68,6 @@ automobile_df.sample(5)
   </thead>
   <tbody>
     <tr>
-      <th>284</th>
-      <td>20.6</td>
-      <td>6</td>
-      <td>225.0</td>
-      <td>110</td>
-      <td>3360</td>
-      <td>16.6</td>
-      <td>79</td>
-      <td>1</td>
-      <td>dodge aspen 6</td>
-    </tr>
-    <tr>
       <th>136</th>
       <td>16.0</td>
       <td>8</td>
@@ -93,40 +80,52 @@ automobile_df.sample(5)
       <td>ford gran torino</td>
     </tr>
     <tr>
-      <th>300</th>
-      <td>23.9</td>
-      <td>8</td>
-      <td>260.0</td>
-      <td>90</td>
-      <td>3420</td>
-      <td>22.2</td>
-      <td>79</td>
+      <th>155</th>
+      <td>15.0</td>
+      <td>6</td>
+      <td>250.0</td>
+      <td>72</td>
+      <td>3158</td>
+      <td>19.5</td>
+      <td>75</td>
       <td>1</td>
-      <td>oldsmobile cutlass salon brougham</td>
+      <td>ford maverick</td>
     </tr>
     <tr>
-      <th>182</th>
-      <td>28.0</td>
-      <td>4</td>
-      <td>107.0</td>
-      <td>86</td>
-      <td>2464</td>
-      <td>15.5</td>
-      <td>76</td>
-      <td>2</td>
-      <td>fiat 131</td>
-    </tr>
-    <tr>
-      <th>90</th>
-      <td>12.0</td>
+      <th>156</th>
+      <td>16.0</td>
       <td>8</td>
-      <td>429.0</td>
-      <td>198</td>
-      <td>4952</td>
+      <td>400.0</td>
+      <td>170</td>
+      <td>4668</td>
       <td>11.5</td>
-      <td>73</td>
+      <td>75</td>
       <td>1</td>
-      <td>mercury marquis brougham</td>
+      <td>pontiac catalina</td>
+    </tr>
+    <tr>
+      <th>189</th>
+      <td>15.5</td>
+      <td>8</td>
+      <td>304.0</td>
+      <td>120</td>
+      <td>3962</td>
+      <td>13.9</td>
+      <td>76</td>
+      <td>1</td>
+      <td>amc matador</td>
+    </tr>
+    <tr>
+      <th>331</th>
+      <td>33.8</td>
+      <td>4</td>
+      <td>97.0</td>
+      <td>67</td>
+      <td>2145</td>
+      <td>18.0</td>
+      <td>80</td>
+      <td>3</td>
+      <td>subaru dl</td>
     </tr>
   </tbody>
 </table>
@@ -170,7 +169,7 @@ automobile_df.info()
     memory usage: 28.1+ KB
 
 
-# Preparacion de Datos
+## Preparacion de Datos
 
 
 ```python
@@ -194,7 +193,7 @@ automobile_df.shape
 
 
 
-## Eliminar Columnas no necesarias
+### Eliminar Columnas no necesarias
 
 
 ```python
@@ -218,7 +217,7 @@ automobile_df.sample(5)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -238,54 +237,54 @@ automobile_df.sample(5)
   </thead>
   <tbody>
     <tr>
-      <th>164</th>
+      <th>359</th>
+      <td>28.1</td>
+      <td>4</td>
+      <td>141.0</td>
+      <td>80</td>
+      <td>3230</td>
+      <td>20.4</td>
+      <td>81</td>
+    </tr>
+    <tr>
+      <th>131</th>
+      <td>32.0</td>
+      <td>4</td>
+      <td>71.0</td>
+      <td>65</td>
+      <td>1836</td>
       <td>21.0</td>
+      <td>74</td>
+    </tr>
+    <tr>
+      <th>257</th>
+      <td>19.4</td>
       <td>6</td>
-      <td>231.0</td>
-      <td>110</td>
-      <td>3039</td>
-      <td>15.0</td>
+      <td>232.0</td>
+      <td>90</td>
+      <td>3210</td>
+      <td>17.2</td>
+      <td>78</td>
+    </tr>
+    <tr>
+      <th>174</th>
+      <td>18.0</td>
+      <td>6</td>
+      <td>171.0</td>
+      <td>97</td>
+      <td>2984</td>
+      <td>14.5</td>
       <td>75</td>
     </tr>
     <tr>
-      <th>309</th>
-      <td>41.5</td>
-      <td>4</td>
-      <td>98.0</td>
-      <td>76</td>
-      <td>2144</td>
-      <td>14.7</td>
-      <td>80</td>
-    </tr>
-    <tr>
-      <th>224</th>
-      <td>15.0</td>
-      <td>8</td>
-      <td>302.0</td>
-      <td>130</td>
-      <td>4295</td>
-      <td>14.9</td>
-      <td>77</td>
-    </tr>
-    <tr>
-      <th>322</th>
-      <td>46.6</td>
-      <td>4</td>
-      <td>86.0</td>
-      <td>65</td>
-      <td>2110</td>
-      <td>17.9</td>
-      <td>80</td>
-    </tr>
-    <tr>
-      <th>371</th>
-      <td>29.0</td>
-      <td>4</td>
-      <td>135.0</td>
-      <td>84</td>
-      <td>2525</td>
+      <th>188</th>
       <td>16.0</td>
-      <td>82</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>150</td>
+      <td>4190</td>
+      <td>13.0</td>
+      <td>76</td>
     </tr>
   </tbody>
 </table>
@@ -314,7 +313,7 @@ automobile_df.info()
     memory usage: 24.5+ KB
 
 
-## Convertir el formato de 'model year' a año completo
+### Convertir el formato de 'model year' a año completo
 
 
 ```python
@@ -338,7 +337,7 @@ automobile_df.sample(5)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -358,54 +357,54 @@ automobile_df.sample(5)
   </thead>
   <tbody>
     <tr>
-      <th>132</th>
-      <td>25.0</td>
+      <th>144</th>
+      <td>31.0</td>
       <td>4</td>
-      <td>140.0</td>
-      <td>75</td>
-      <td>2542</td>
-      <td>17.0</td>
+      <td>76.0</td>
+      <td>52</td>
+      <td>1649</td>
+      <td>16.5</td>
       <td>1974</td>
     </tr>
     <tr>
-      <th>213</th>
-      <td>13.0</td>
+      <th>231</th>
+      <td>15.5</td>
       <td>8</td>
-      <td>350.0</td>
-      <td>145</td>
-      <td>4055</td>
-      <td>12.0</td>
-      <td>1976</td>
+      <td>400.0</td>
+      <td>190</td>
+      <td>4325</td>
+      <td>12.2</td>
+      <td>1977</td>
     </tr>
     <tr>
-      <th>25</th>
-      <td>10.0</td>
+      <th>154</th>
+      <td>15.0</td>
+      <td>6</td>
+      <td>250.0</td>
+      <td>72</td>
+      <td>3432</td>
+      <td>21.0</td>
+      <td>1975</td>
+    </tr>
+    <tr>
+      <th>169</th>
+      <td>20.0</td>
+      <td>6</td>
+      <td>232.0</td>
+      <td>100</td>
+      <td>2914</td>
+      <td>16.0</td>
+      <td>1975</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>16.0</td>
       <td>8</td>
-      <td>360.0</td>
-      <td>215</td>
-      <td>4615</td>
-      <td>14.0</td>
-      <td>1970</td>
-    </tr>
-    <tr>
-      <th>306</th>
-      <td>28.8</td>
-      <td>6</td>
-      <td>173.0</td>
-      <td>115</td>
-      <td>2595</td>
-      <td>11.3</td>
-      <td>1979</td>
-    </tr>
-    <tr>
-      <th>259</th>
-      <td>20.8</td>
-      <td>6</td>
-      <td>200.0</td>
-      <td>85</td>
-      <td>3070</td>
-      <td>16.7</td>
-      <td>1978</td>
+      <td>400.0</td>
+      <td>230</td>
+      <td>4278</td>
+      <td>9.5</td>
+      <td>1973</td>
     </tr>
   </tbody>
 </table>
@@ -413,7 +412,7 @@ automobile_df.sample(5)
 
 
 
-## Agregar columna de los años del automobil
+### Agregar columna de los años del automobil
 
 
 ```python
@@ -442,7 +441,7 @@ automobile_df.sample(5)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -462,54 +461,54 @@ automobile_df.sample(5)
   </thead>
   <tbody>
     <tr>
-      <th>298</th>
-      <td>23.0</td>
-      <td>8</td>
-      <td>350.0</td>
-      <td>125</td>
-      <td>3900</td>
-      <td>17.4</td>
+      <th>18</th>
+      <td>27.0</td>
+      <td>4</td>
+      <td>97.0</td>
+      <td>88</td>
+      <td>2130</td>
+      <td>14.5</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th>314</th>
+      <td>26.4</td>
+      <td>4</td>
+      <td>140.0</td>
+      <td>88</td>
+      <td>2870</td>
+      <td>18.1</td>
       <td>41</td>
     </tr>
     <tr>
-      <th>154</th>
-      <td>15.0</td>
-      <td>6</td>
-      <td>250.0</td>
-      <td>72</td>
-      <td>3432</td>
-      <td>21.0</td>
-      <td>45</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>15.0</td>
-      <td>8</td>
-      <td>350.0</td>
-      <td>165</td>
-      <td>3693</td>
-      <td>11.5</td>
-      <td>50</td>
-    </tr>
-    <tr>
-      <th>82</th>
-      <td>23.0</td>
+      <th>380</th>
+      <td>36.0</td>
       <td>4</td>
       <td>120.0</td>
-      <td>97</td>
-      <td>2506</td>
+      <td>88</td>
+      <td>2160</td>
       <td>14.5</td>
-      <td>48</td>
+      <td>39</td>
     </tr>
     <tr>
-      <th>199</th>
-      <td>20.0</td>
+      <th>16</th>
+      <td>18.0</td>
       <td>6</td>
-      <td>225.0</td>
-      <td>100</td>
-      <td>3651</td>
-      <td>17.7</td>
-      <td>44</td>
+      <td>199.0</td>
+      <td>97</td>
+      <td>2774</td>
+      <td>15.5</td>
+      <td>51</td>
+    </tr>
+    <tr>
+      <th>276</th>
+      <td>21.6</td>
+      <td>4</td>
+      <td>121.0</td>
+      <td>115</td>
+      <td>2795</td>
+      <td>15.7</td>
+      <td>43</td>
     </tr>
   </tbody>
 </table>
@@ -558,7 +557,7 @@ automobile_df.describe()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -595,7 +594,7 @@ automobile_df.describe()
       <td>104.469388</td>
       <td>2977.584184</td>
       <td>15.541327</td>
-      <td>44.020408</td>
+      <td>45.020408</td>
     </tr>
     <tr>
       <th>std</th>
@@ -615,7 +614,7 @@ automobile_df.describe()
       <td>46.000000</td>
       <td>1613.000000</td>
       <td>8.000000</td>
-      <td>38.000000</td>
+      <td>39.000000</td>
     </tr>
     <tr>
       <th>25%</th>
@@ -625,7 +624,7 @@ automobile_df.describe()
       <td>75.000000</td>
       <td>2225.250000</td>
       <td>13.775000</td>
-      <td>41.000000</td>
+      <td>42.000000</td>
     </tr>
     <tr>
       <th>50%</th>
@@ -635,7 +634,7 @@ automobile_df.describe()
       <td>93.500000</td>
       <td>2803.500000</td>
       <td>15.500000</td>
-      <td>44.000000</td>
+      <td>45.000000</td>
     </tr>
     <tr>
       <th>75%</th>
@@ -645,7 +644,7 @@ automobile_df.describe()
       <td>126.000000</td>
       <td>3614.750000</td>
       <td>17.025000</td>
-      <td>47.000000</td>
+      <td>48.000000</td>
     </tr>
     <tr>
       <th>max</th>
@@ -655,7 +654,7 @@ automobile_df.describe()
       <td>230.000000</td>
       <td>5140.000000</td>
       <td>24.800000</td>
-      <td>50.000000</td>
+      <td>51.000000</td>
     </tr>
   </tbody>
 </table>
@@ -663,12 +662,12 @@ automobile_df.describe()
 
 
 
-# Analisis Univariable
-Se debe hacer un analisis de cada una de las variables y describir sus caracteristicas
+## Analisis Univariable
+Se debe hacer un analisis de cada una de las variables y describir sus caracteristicas.
 
-# Analisis Bivariable
+## Analisis Bivariable
 
-## Scatter Plots
+### Scatter Plots
 
 
 ```python
@@ -681,10 +680,10 @@ plt.ylabel('Millas por galon');
 ```
 
 
-    
-![png](./7-Regresion-Python_27_0.png)
-    
-    
+​    
+![png](./7-Regresion-Python_26_0.png)
+​    
+
 
 
 ```python
@@ -697,9 +696,9 @@ plt.ylabel('Millas por galon');
 ```
 
 
-    
-![png](./7-Regresion-Python_28_0.png)
-    
+​    
+![png](./7-Regresion-Python_27_0.png)
+​    
 
 
 
@@ -713,9 +712,9 @@ plt.ylabel('Millas por galon');
 ```
 
 
-    
-![png](./7-Regresion-Python_29_0.png)
-    
+​    
+![png](./7-Regresion-Python_28_0.png)
+​    
 
 
 
@@ -729,9 +728,9 @@ plt.ylabel('Millas por galon');
 ```
 
 
-    
-![png](./7-Regresion-Python_30_0.png)
-    
+​    
+![png](./7-Regresion-Python_29_0.png)
+​    
 
 
 
@@ -745,9 +744,9 @@ plt.ylabel('Millas por galon');
 ```
 
 
-    
-![png](./7-Regresion-Python_31_0.png)
-    
+​    
+![png](./7-Regresion-Python_30_0.png)
+​    
 
 
 
@@ -761,12 +760,12 @@ plt.ylabel('Millas por galon');
 ```
 
 
-    
-![png](./7-Regresion-Python_32_0.png)
-    
+​    
+![png](./7-Regresion-Python_31_0.png)
+​    
 
 
-## Correlacion
+### Correlacion
 
 
 ```python
@@ -787,7 +786,7 @@ automobile_corr
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -890,9 +889,9 @@ sns.heatmap(automobile_corr, annot=True);
 ```
 
 
-    
-![png](./7-Regresion-Python_35_0.png)
-    
+​    
+![png](./7-Regresion-Python_34_0.png)
+​    
 
 
 
@@ -914,7 +913,7 @@ automobile_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -935,53 +934,53 @@ automobile_df.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>17.0</td>
-      <td>8</td>
-      <td>305.0</td>
-      <td>130</td>
-      <td>3840</td>
-      <td>15.4</td>
-      <td>41</td>
+      <td>16.5</td>
+      <td>6</td>
+      <td>168.0</td>
+      <td>120</td>
+      <td>3820</td>
+      <td>16.7</td>
+      <td>45</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>30.0</td>
+      <td>25.0</td>
       <td>4</td>
-      <td>98.0</td>
-      <td>68</td>
-      <td>2155</td>
-      <td>16.5</td>
-      <td>42</td>
+      <td>116.0</td>
+      <td>81</td>
+      <td>2220</td>
+      <td>16.9</td>
+      <td>45</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>19.4</td>
-      <td>6</td>
-      <td>232.0</td>
-      <td>90</td>
-      <td>3210</td>
-      <td>17.2</td>
-      <td>42</td>
+      <td>16.0</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>150</td>
+      <td>4498</td>
+      <td>14.5</td>
+      <td>46</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>31.8</td>
-      <td>4</td>
-      <td>85.0</td>
-      <td>65</td>
-      <td>2020</td>
-      <td>19.2</td>
-      <td>41</td>
+      <td>12.0</td>
+      <td>8</td>
+      <td>429.0</td>
+      <td>198</td>
+      <td>4952</td>
+      <td>11.5</td>
+      <td>48</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>26.0</td>
+      <td>31.3</td>
       <td>4</td>
-      <td>108.0</td>
-      <td>93</td>
-      <td>2391</td>
-      <td>15.5</td>
-      <td>46</td>
+      <td>120.0</td>
+      <td>75</td>
+      <td>2542</td>
+      <td>17.5</td>
+      <td>41</td>
     </tr>
   </tbody>
 </table>
@@ -994,9 +993,9 @@ automobile_df.head()
 automobile_df.to_csv('auto-mpg-processed.csv', index=False)
 ```
 
-# Regresion Lineal
+## Regresion Lineal
 
-## Regresion lineal con una caracteristica (horsepower)
+### Regresion lineal con una caracteristica (horsepower)
 
 
 ```python
@@ -1005,7 +1004,7 @@ from sklearn.model_selection import train_test_split
 X = automobile_df[['horsepower']]
 Y = automobile_df['mpg']
 
-x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
+x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2) #20%
 ```
 
 
@@ -1025,7 +1024,7 @@ x_train.sample(5)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1039,24 +1038,24 @@ x_train.sample(5)
   </thead>
   <tbody>
     <tr>
-      <th>375</th>
-      <td>89</td>
+      <th>23</th>
+      <td>70</td>
     </tr>
     <tr>
-      <th>265</th>
-      <td>68</td>
+      <th>348</th>
+      <td>153</td>
     </tr>
     <tr>
-      <th>29</th>
+      <th>357</th>
+      <td>72</td>
+    </tr>
+    <tr>
+      <th>366</th>
+      <td>100</td>
+    </tr>
+    <tr>
+      <th>74</th>
       <td>97</td>
-    </tr>
-    <tr>
-      <th>231</th>
-      <td>120</td>
-    </tr>
-    <tr>
-      <th>349</th>
-      <td>108</td>
     </tr>
   </tbody>
 </table>
@@ -1076,7 +1075,7 @@ linear_model = LinearRegression(normalize=True).fit(x_train, y_train)
 print('Puntaje Entrenamiento: ', linear_model.score(x_train, y_train))
 ```
 
-    Puntaje Entrenamiento:  0.6323165116170613
+    Puntaje Entrenamiento:  0.6013261684165121
 
 
 
@@ -1091,7 +1090,7 @@ from sklearn.metrics import r2_score
 print('Puntaje Testing: ', r2_score(y_test, y_pred))
 ```
 
-    Puntaje Testing:  0.31221638583688094
+    Puntaje Testing:  0.6173981579692112
 
 
 
@@ -1107,12 +1106,12 @@ plt.show()
 ```
 
 
-    
-![png](./7-Regresion-Python_46_0.png)
-    
+​    
+![png](./7-Regresion-Python_45_0.png)
+​    
 
 
-## Regresion lineal con una caracteristica - age
+### Regresion lineal con una caracteristica - age
 
 
 ```python
@@ -1130,8 +1129,8 @@ y_pred = linear_model.predict(x_test)
 print('Puntaje de Testing: ', r2_score(y_test, y_pred))
 ```
 
-    Puntaje de entrenamiento:  0.36723602073481343
-    Puntaje de Testing:  0.20002514279066197
+    Puntaje de entrenamiento:  0.3151398209833455
+    Puntaje de Testing:  0.41035823800038795
 
 
 
@@ -1147,12 +1146,12 @@ plt.show()
 ```
 
 
-    
-![png](./7-Regresion-Python_49_0.png)
-    
+​    
+![png](./7-Regresion-Python_48_0.png)
+​    
 
 
-## Regresion lineal con varias caracteristicas
+### Regresion lineal con varias caracteristicas
 
 
 ```python
@@ -1174,7 +1173,7 @@ linear_model = LinearRegression(normalize=True).fit(x_train, y_train)
 print('Training score: ', linear_model.score(x_train, y_train))
 ```
 
-    Training score:  0.7017904639110666
+    Training score:  0.6935339515300342
 
 
 
@@ -1185,9 +1184,9 @@ coef = pd.Series(linear_model.coef_, predictors).sort_values()
 print(coef)
 ```
 
-    horsepower     -0.047675
-    weight         -0.005258
-    displacement   -0.004028
+    horsepower     -0.044184
+    displacement   -0.010151
+    weight         -0.004635
     dtype: float64
 
 
@@ -1201,7 +1200,7 @@ y_pred = linear_model.predict(x_test)
 print('Puntaje Testing', r2_score(y_test, y_pred))
 ```
 
-    Puntaje Testing 0.7243525511175973
+    Puntaje Testing 0.7335785739591847
 
 
 
@@ -1218,12 +1217,22 @@ plt.show()
 ```
 
 
-    
-![png](./7-Regresion-Python_57_0.png)
-    
+​    
+![png](./7-Regresion-Python_56_0.png)
+​    
 
 
-# Regresión con Múltiples Modelos
+## Regresión con Múltiples Modelos
+
+Si se tienen **muchos modelos** realizar cross validation con todos es costoso computacionalmente y en tiempo, entonces se debe ir descartando los modelos con menos desempeño hasta llegar al modelo final
+- Inicialmente se dividen los datos en una parte para realizar la seleccion del modelo (**Model selection dataset**) y otra para realizar la prueba de desempeño (**Performance dataset**, esta parte de los datos se debe usar solo en el final de todo el proceso)
+- Primer paso es dividir el **Model selection dataset** en una parte de entrenamiento (train) y otra de prueba (test), normalmente en una proporcion de 80/20 o 70/30.
+- Hacer una evaluacion de todos los modelos la division enterior y seleccionar los mejores (preferiblemente que tengan un principio de funcionamiento diferente entre ellos).
+- Con lo mejores modelos (la cantidad depende de que tan parecido es su resultado) realizar un cross-validation (detectar si hay over-fitting) para obtener los que tengan mejor resultado.
+- Se saca el mejor o los mejores modelos (Los que tengan mejor desempeño y poca varianza en sus resultados) y se realiza optimizacion de hiper parametros (Hyper parameter Tunning). Este proceso es costoso computacionalmente por eso se debe realizar con muy pocos modelos.
+- Luego se selecciona el mejor modelo (Mejor desempeño y poca varianza) y se obtienen los hiper parametros que dieron el mejor resultado.
+- Finalmente se entrena el modelo seleccionado con los hiper-parametros hallados sobre el **Model selection dataset** y se hace la prueba final con el **Performance dataset**
+
 
 
 ```python
@@ -1266,7 +1275,7 @@ automobile_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1287,53 +1296,53 @@ automobile_df.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>17.0</td>
-      <td>8</td>
-      <td>305.0</td>
-      <td>130</td>
-      <td>3840</td>
-      <td>15.4</td>
-      <td>41</td>
+      <td>16.5</td>
+      <td>6</td>
+      <td>168.0</td>
+      <td>120</td>
+      <td>3820</td>
+      <td>16.7</td>
+      <td>45</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>30.0</td>
+      <td>25.0</td>
       <td>4</td>
-      <td>98.0</td>
-      <td>68</td>
-      <td>2155</td>
-      <td>16.5</td>
-      <td>42</td>
+      <td>116.0</td>
+      <td>81</td>
+      <td>2220</td>
+      <td>16.9</td>
+      <td>45</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>19.4</td>
-      <td>6</td>
-      <td>232.0</td>
-      <td>90</td>
-      <td>3210</td>
-      <td>17.2</td>
-      <td>42</td>
+      <td>16.0</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>150</td>
+      <td>4498</td>
+      <td>14.5</td>
+      <td>46</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>31.8</td>
-      <td>4</td>
-      <td>85.0</td>
-      <td>65</td>
-      <td>2020</td>
-      <td>19.2</td>
-      <td>41</td>
+      <td>12.0</td>
+      <td>8</td>
+      <td>429.0</td>
+      <td>198</td>
+      <td>4952</td>
+      <td>11.5</td>
+      <td>48</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>26.0</td>
+      <td>31.3</td>
       <td>4</td>
-      <td>108.0</td>
-      <td>93</td>
-      <td>2391</td>
-      <td>15.5</td>
-      <td>46</td>
+      <td>120.0</td>
+      <td>75</td>
+      <td>2542</td>
+      <td>17.5</td>
+      <td>41</td>
     </tr>
   </tbody>
 </table>
@@ -1346,7 +1355,7 @@ automobile_df.head()
 result_dict = {}
 ```
 
-## Funciones de ayuda
+### Funciones de ayuda
 
 
 ```python
@@ -1355,9 +1364,7 @@ def build_model(regression_fn,
                 names_of_x_cols, 
                 dataset, 
                 test_frac=0.2,
-                preprocess_fn=None,
-                show_plot_Y=False,
-                show_plot_scatter=False):
+                preprocess_fn=None):
     
     """build_model
     
@@ -1380,26 +1387,6 @@ def build_model(regression_fn,
     print("Entrenamiento_score : " , model.score(x_train, y_train))
     print("Prueba_score : ", r2_score(y_test, y_pred))
 
-    if show_plot_Y == True:
-        fig, ax = plt.subplots(figsize=(12, 8))
-        
-        plt.plot(y_pred, label='Prediccion')
-        plt.plot(y_test.values, label='Actual')
-        
-        plt.ylabel(name_of_y_col)
-
-        plt.legend()
-        plt.show()
-
-    if show_plot_scatter == True:
-        fig, ax = plt.subplots(figsize=(12, 8))
-        
-        plt.scatter(x_test, y_test)
-        plt.plot(x_test, y_pred, 'r')
-        
-        plt.legend(['Linea de Prediccion','Datos observados'])
-        plt.show()
-    
     return {
             'Entrenamiento_score': model.score(x_train, y_train),
             'Prueba_score': r2_score(y_test, y_pred)
@@ -1416,7 +1403,7 @@ def compare_results():
         print()
 ```
 
-## Regresion lineal
+### Regresion lineal
 
 
 ```python
@@ -1432,18 +1419,11 @@ def linear_reg(x_train, y_train):
 result_dict['mpg ~ single_linear'] = build_model(linear_reg,
                                                  'mpg',
                                                 ['weight'],
-                                                  automobile_df,
-                                                  show_plot_Y=True)
+                                                  automobile_df)
 ```
 
-    Entrenamiento_score :  0.6940251922026459
-    Prueba_score :  0.6780272557552722
-
-
-
-    
-![png](./7-Regresion-Python_67_1.png)
-    
+    Entrenamiento_score :  0.6696115274238652
+    Prueba_score :  0.7704980985444312
 
 
 
@@ -1455,18 +1435,11 @@ result_dict['mpg ~ kitchen_sink_linear'] = build_model(linear_reg,
                                                       'horsepower',
                                                       'weight',
                                                       'acceleration'],
-                                                      automobile_df,
-                                                      show_plot_Y=True)
+                                                      automobile_df)
 ```
 
-    Entrenamiento_score :  0.7143524190779553
-    Prueba_score :  0.6496852460273488
-
-
-
-    
-![png](./7-Regresion-Python_68_1.png)
-    
+    Entrenamiento_score :  0.7074657620419418
+    Prueba_score :  0.6989622365211952
 
 
 
@@ -1475,18 +1448,11 @@ result_dict['mpg ~ parsimonius_linear'] = build_model(linear_reg,
                                                       'mpg',
                                                     ['horsepower',
                                                      'weight'],
-                                                      automobile_df,
-                                                      show_plot_Y=True)
+                                                      automobile_df)
 ```
 
-    Entrenamiento_score :  0.7069851597873933
-    Prueba_score :  0.7035037058069924
-
-
-
-    
-![png](./7-Regresion-Python_69_1.png)
-    
+    Entrenamiento_score :  0.7013230352668707
+    Prueba_score :  0.7232115758741458
 
 
 
@@ -1495,20 +1461,20 @@ compare_results()
 ```
 
     Regresion:  mpg ~ single_linear
-    Entrenamiento score 0.6940251922026459
-    Prueba score 0.6780272557552722
+    Entrenamiento score 0.6696115274238652
+    Prueba score 0.7704980985444312
     
     Regresion:  mpg ~ kitchen_sink_linear
-    Entrenamiento score 0.7143524190779553
-    Prueba score 0.6496852460273488
+    Entrenamiento score 0.7074657620419418
+    Prueba score 0.6989622365211952
     
     Regresion:  mpg ~ parsimonius_linear
-    Entrenamiento score 0.7069851597873933
-    Prueba score 0.7035037058069924
-    
+    Entrenamiento score 0.7013230352668707
+    Prueba score 0.7232115758741458
 
 
-## Lasso
+
+### Lasso
 
 
 ```python
@@ -1528,18 +1494,11 @@ result_dict['mpg ~ kitchen_sink_lasso'] = build_model(lasso_reg,
                                                      'horsepower',
                                                      'weight',
                                                      'acceleration'],
-                                                      automobile_df,
-                                                      show_plot_Y=True)
+                                                      automobile_df)
 ```
 
-    Entrenamiento_score :  0.7151538580963827
-    Prueba_score :  0.6762521302280093
-
-
-
-    
-![png](./7-Regresion-Python_73_1.png)
-    
+    Entrenamiento_score :  0.6943200981996365
+    Prueba_score :  0.7366916237596017
 
 
 
@@ -1548,24 +1507,24 @@ compare_results()
 ```
 
     Regresion:  mpg ~ single_linear
-    Entrenamiento score 0.6940251922026459
-    Prueba score 0.6780272557552722
+    Entrenamiento score 0.6696115274238652
+    Prueba score 0.7704980985444312
     
     Regresion:  mpg ~ kitchen_sink_linear
-    Entrenamiento score 0.7143524190779553
-    Prueba score 0.6496852460273488
+    Entrenamiento score 0.7074657620419418
+    Prueba score 0.6989622365211952
     
     Regresion:  mpg ~ parsimonius_linear
-    Entrenamiento score 0.7069851597873933
-    Prueba score 0.7035037058069924
+    Entrenamiento score 0.7013230352668707
+    Prueba score 0.7232115758741458
     
     Regresion:  mpg ~ kitchen_sink_lasso
-    Entrenamiento score 0.7151538580963827
-    Prueba score 0.6762521302280093
-    
+    Entrenamiento score 0.6943200981996365
+    Prueba score 0.7366916237596017
 
 
-## Ridge
+
+### Ridge
 
 
 ```python
@@ -1585,18 +1544,11 @@ result_dict['mpg ~ kitchen_sink_ridge'] = build_model(ridge_reg,
                                                       'horsepower',
                                                       'weight',
                                                       'acceleration'],
-                                                       automobile_df,
-                                                       show_plot_Y=True)
+                                                       automobile_df)
 ```
 
-    Entrenamiento_score :  0.6896708807553231
-    Prueba_score :  0.6556435118377518
-
-
-
-    
-![png](./7-Regresion-Python_77_1.png)
-    
+    Entrenamiento_score :  0.6890878092067418
+    Prueba_score :  0.6560571888322049
 
 
 
@@ -1605,28 +1557,28 @@ compare_results()
 ```
 
     Regresion:  mpg ~ single_linear
-    Entrenamiento score 0.6940251922026459
-    Prueba score 0.6780272557552722
+    Entrenamiento score 0.6696115274238652
+    Prueba score 0.7704980985444312
     
     Regresion:  mpg ~ kitchen_sink_linear
-    Entrenamiento score 0.7143524190779553
-    Prueba score 0.6496852460273488
+    Entrenamiento score 0.7074657620419418
+    Prueba score 0.6989622365211952
     
     Regresion:  mpg ~ parsimonius_linear
-    Entrenamiento score 0.7069851597873933
-    Prueba score 0.7035037058069924
+    Entrenamiento score 0.7013230352668707
+    Prueba score 0.7232115758741458
     
     Regresion:  mpg ~ kitchen_sink_lasso
-    Entrenamiento score 0.7151538580963827
-    Prueba score 0.6762521302280093
+    Entrenamiento score 0.6943200981996365
+    Prueba score 0.7366916237596017
     
     Regresion:  mpg ~ kitchen_sink_ridge
-    Entrenamiento score 0.6896708807553231
-    Prueba score 0.6556435118377518
-    
+    Entrenamiento score 0.6890878092067418
+    Prueba score 0.6560571888322049
 
 
-## Elasticnet
+
+### Elasticnet
 
 
 ```python
@@ -1655,19 +1607,12 @@ result_dict['mpg ~ kitchen_sink_elastic_net_ols'] = build_model(partial(elastic_
                                                                'horsepower',
                                                                'weight',
                                                                'acceleration'],
-                                                                automobile_df,
-                                                                show_plot_Y=True)
+                                                                automobile_df)
 ```
 
     Equivalent to: OLS
-    Entrenamiento_score :  0.7164509306550633
-    Prueba_score :  0.6549631422669479
-
-
-
-    
-![png](./7-Regresion-Python_81_1.png)
-    
+    Entrenamiento_score :  0.7286154402790895
+    Prueba_score :  0.6261044691205849
 
 
 
@@ -1680,19 +1625,12 @@ result_dict['mpg ~ kitchen_sink_elastic_net_lasso'] = build_model(partial(elasti
                                                                   'horsepower',
                                                                   'weight',
                                                                   'acceleration'],
-                                                                   automobile_df,
-                                                                   show_plot_Y=True)
+                                                                   automobile_df)
 ```
 
     Equivalent to: Lasso
-    Entrenamiento_score :  0.7095244697290346
-    Prueba_score :  0.693312102583202
-
-
-
-    
-![png](./7-Regresion-Python_82_1.png)
-    
+    Entrenamiento_score :  0.7065392087832174
+    Prueba_score :  0.697481690838238
 
 
 
@@ -1705,19 +1643,12 @@ result_dict['mpg ~ kitchen_sink_elastic_net_ridge'] = build_model(partial(elasti
                                                                   'horsepower',
                                                                   'weight',
                                                                   'acceleration'],
-                                                                   automobile_df,
-                                                                   show_plot_Y=True)
+                                                                   automobile_df)
 ```
 
     Equivalent to: Ridge
-    Entrenamiento_score :  0.7062365688088987
-    Prueba_score :  0.7064404958207979
-
-
-
-    
-![png](./7-Regresion-Python_83_1.png)
-    
+    Entrenamiento_score :  0.7197200945905666
+    Prueba_score :  0.6454151082422006
 
 
 
@@ -1729,19 +1660,12 @@ result_dict['mpg ~ kitchen_sink_elastic_net'] = build_model(partial(elastic_net_
                                                             'horsepower',
                                                             'weight',
                                                             'acceleration'],
-                                                            automobile_df,
-                                                            show_plot_Y=True)
+                                                            automobile_df)
 ```
 
     Equivalent to: Elastic Net
-    Entrenamiento_score :  0.7143840512964182
-    Prueba_score :  0.6719883512351271
-
-
-
-    
-![png](./7-Regresion-Python_84_1.png)
-    
+    Entrenamiento_score :  0.7137100772862914
+    Prueba_score :  0.6575033081647761
 
 
 
@@ -1750,44 +1674,44 @@ compare_results()
 ```
 
     Regresion:  mpg ~ single_linear
-    Entrenamiento score 0.6940251922026459
-    Prueba score 0.6780272557552722
+    Entrenamiento score 0.6696115274238652
+    Prueba score 0.7704980985444312
     
     Regresion:  mpg ~ kitchen_sink_linear
-    Entrenamiento score 0.7143524190779553
-    Prueba score 0.6496852460273488
+    Entrenamiento score 0.7074657620419418
+    Prueba score 0.6989622365211952
     
     Regresion:  mpg ~ parsimonius_linear
-    Entrenamiento score 0.7069851597873933
-    Prueba score 0.7035037058069924
+    Entrenamiento score 0.7013230352668707
+    Prueba score 0.7232115758741458
     
     Regresion:  mpg ~ kitchen_sink_lasso
-    Entrenamiento score 0.7151538580963827
-    Prueba score 0.6762521302280093
+    Entrenamiento score 0.6943200981996365
+    Prueba score 0.7366916237596017
     
     Regresion:  mpg ~ kitchen_sink_ridge
-    Entrenamiento score 0.6896708807553231
-    Prueba score 0.6556435118377518
+    Entrenamiento score 0.6890878092067418
+    Prueba score 0.6560571888322049
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_ols
-    Entrenamiento score 0.7164509306550633
-    Prueba score 0.6549631422669479
+    Entrenamiento score 0.7286154402790895
+    Prueba score 0.6261044691205849
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_lasso
-    Entrenamiento score 0.7095244697290346
-    Prueba score 0.693312102583202
+    Entrenamiento score 0.7065392087832174
+    Prueba score 0.697481690838238
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_ridge
-    Entrenamiento score 0.7062365688088987
-    Prueba score 0.7064404958207979
+    Entrenamiento score 0.7197200945905666
+    Prueba score 0.6454151082422006
     
     Regresion:  mpg ~ kitchen_sink_elastic_net
-    Entrenamiento score 0.7143840512964182
-    Prueba score 0.6719883512351271
-    
+    Entrenamiento score 0.7137100772862914
+    Prueba score 0.6575033081647761
 
 
-## SVR
+
+### SVR
 
 For SVR regression with larger datasets this alternate implementations is preferred
 
@@ -1815,18 +1739,11 @@ result_dict['mpg ~ kitchen_sink_svr'] = build_model(svr_reg,
                                                     'horsepower',
                                                     'weight',
                                                     'acceleration'],
-                                                     automobile_df,
-                                                     show_plot_Y=True)
+                                                     automobile_df)
 ```
 
-    Entrenamiento_score :  0.6933523813332493
-    Prueba_score :  0.6864550093179962
-
-
-
-    
-![png](./7-Regresion-Python_89_1.png)
-    
+    Entrenamiento_score :  0.6948101242037901
+    Prueba_score :  0.7240248634465822
 
 
 
@@ -1835,48 +1752,48 @@ compare_results()
 ```
 
     Regresion:  mpg ~ single_linear
-    Entrenamiento score 0.6940251922026459
-    Prueba score 0.6780272557552722
+    Entrenamiento score 0.6696115274238652
+    Prueba score 0.7704980985444312
     
     Regresion:  mpg ~ kitchen_sink_linear
-    Entrenamiento score 0.7143524190779553
-    Prueba score 0.6496852460273488
+    Entrenamiento score 0.7074657620419418
+    Prueba score 0.6989622365211952
     
     Regresion:  mpg ~ parsimonius_linear
-    Entrenamiento score 0.7069851597873933
-    Prueba score 0.7035037058069924
+    Entrenamiento score 0.7013230352668707
+    Prueba score 0.7232115758741458
     
     Regresion:  mpg ~ kitchen_sink_lasso
-    Entrenamiento score 0.7151538580963827
-    Prueba score 0.6762521302280093
+    Entrenamiento score 0.6943200981996365
+    Prueba score 0.7366916237596017
     
     Regresion:  mpg ~ kitchen_sink_ridge
-    Entrenamiento score 0.6896708807553231
-    Prueba score 0.6556435118377518
+    Entrenamiento score 0.6890878092067418
+    Prueba score 0.6560571888322049
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_ols
-    Entrenamiento score 0.7164509306550633
-    Prueba score 0.6549631422669479
+    Entrenamiento score 0.7286154402790895
+    Prueba score 0.6261044691205849
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_lasso
-    Entrenamiento score 0.7095244697290346
-    Prueba score 0.693312102583202
+    Entrenamiento score 0.7065392087832174
+    Prueba score 0.697481690838238
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_ridge
-    Entrenamiento score 0.7062365688088987
-    Prueba score 0.7064404958207979
+    Entrenamiento score 0.7197200945905666
+    Prueba score 0.6454151082422006
     
     Regresion:  mpg ~ kitchen_sink_elastic_net
-    Entrenamiento score 0.7143840512964182
-    Prueba score 0.6719883512351271
+    Entrenamiento score 0.7137100772862914
+    Prueba score 0.6575033081647761
     
     Regresion:  mpg ~ kitchen_sink_svr
-    Entrenamiento score 0.6933523813332493
-    Prueba score 0.6864550093179962
-    
+    Entrenamiento score 0.6948101242037901
+    Prueba score 0.7240248634465822
 
 
-## KNR
+
+### KNR
 
 
 ```python
@@ -1896,18 +1813,11 @@ result_dict['mpg ~ kitchen_sink_kneighbors'] = build_model(kneighbors_reg,
                                                            'horsepower',
                                                            'weight',
                                                            'acceleration'],
-                                                           automobile_df,
-                                                           show_plot_Y=True)
+                                                           automobile_df)
 ```
 
-    Entrenamiento_score :  0.7486049876709735
-    Prueba_score :  0.7499122640106735
-
-
-
-    
-![png](./7-Regresion-Python_93_1.png)
-    
+    Entrenamiento_score :  0.7638870632761847
+    Prueba_score :  0.6855412306938089
 
 
 
@@ -1916,52 +1826,52 @@ compare_results()
 ```
 
     Regresion:  mpg ~ single_linear
-    Entrenamiento score 0.6940251922026459
-    Prueba score 0.6780272557552722
+    Entrenamiento score 0.6696115274238652
+    Prueba score 0.7704980985444312
     
     Regresion:  mpg ~ kitchen_sink_linear
-    Entrenamiento score 0.7143524190779553
-    Prueba score 0.6496852460273488
+    Entrenamiento score 0.7074657620419418
+    Prueba score 0.6989622365211952
     
     Regresion:  mpg ~ parsimonius_linear
-    Entrenamiento score 0.7069851597873933
-    Prueba score 0.7035037058069924
+    Entrenamiento score 0.7013230352668707
+    Prueba score 0.7232115758741458
     
     Regresion:  mpg ~ kitchen_sink_lasso
-    Entrenamiento score 0.7151538580963827
-    Prueba score 0.6762521302280093
+    Entrenamiento score 0.6943200981996365
+    Prueba score 0.7366916237596017
     
     Regresion:  mpg ~ kitchen_sink_ridge
-    Entrenamiento score 0.6896708807553231
-    Prueba score 0.6556435118377518
+    Entrenamiento score 0.6890878092067418
+    Prueba score 0.6560571888322049
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_ols
-    Entrenamiento score 0.7164509306550633
-    Prueba score 0.6549631422669479
+    Entrenamiento score 0.7286154402790895
+    Prueba score 0.6261044691205849
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_lasso
-    Entrenamiento score 0.7095244697290346
-    Prueba score 0.693312102583202
+    Entrenamiento score 0.7065392087832174
+    Prueba score 0.697481690838238
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_ridge
-    Entrenamiento score 0.7062365688088987
-    Prueba score 0.7064404958207979
+    Entrenamiento score 0.7197200945905666
+    Prueba score 0.6454151082422006
     
     Regresion:  mpg ~ kitchen_sink_elastic_net
-    Entrenamiento score 0.7143840512964182
-    Prueba score 0.6719883512351271
+    Entrenamiento score 0.7137100772862914
+    Prueba score 0.6575033081647761
     
     Regresion:  mpg ~ kitchen_sink_svr
-    Entrenamiento score 0.6933523813332493
-    Prueba score 0.6864550093179962
+    Entrenamiento score 0.6948101242037901
+    Prueba score 0.7240248634465822
     
     Regresion:  mpg ~ kitchen_sink_kneighbors
-    Entrenamiento score 0.7486049876709735
-    Prueba score 0.7499122640106735
-    
+    Entrenamiento score 0.7638870632761847
+    Prueba score 0.6855412306938089
 
 
-## SGD
+
+### SGD
 
 
 ```python
@@ -1991,18 +1901,11 @@ result_dict['mpg ~ kitchen_sink_sgd'] = build_model(sgd_reg,
                                                    'weight',
                                                    'acceleration'],
                                                     automobile_df,
-                                                    show_plot_Y=True,
                                                     preprocess_fn=apply_standard_scaler)
 ```
 
-    Entrenamiento_score :  0.7161070391196642
-    Prueba_score :  0.6613614209196004
-
-
-
-    
-![png](./7-Regresion-Python_98_1.png)
-    
+    Entrenamiento_score :  0.7210212471051309
+    Prueba_score :  0.6388005372824846
 
 
 
@@ -2011,56 +1914,56 @@ compare_results()
 ```
 
     Regresion:  mpg ~ single_linear
-    Entrenamiento score 0.6940251922026459
-    Prueba score 0.6780272557552722
+    Entrenamiento score 0.6696115274238652
+    Prueba score 0.7704980985444312
     
     Regresion:  mpg ~ kitchen_sink_linear
-    Entrenamiento score 0.7143524190779553
-    Prueba score 0.6496852460273488
+    Entrenamiento score 0.7074657620419418
+    Prueba score 0.6989622365211952
     
     Regresion:  mpg ~ parsimonius_linear
-    Entrenamiento score 0.7069851597873933
-    Prueba score 0.7035037058069924
+    Entrenamiento score 0.7013230352668707
+    Prueba score 0.7232115758741458
     
     Regresion:  mpg ~ kitchen_sink_lasso
-    Entrenamiento score 0.7151538580963827
-    Prueba score 0.6762521302280093
+    Entrenamiento score 0.6943200981996365
+    Prueba score 0.7366916237596017
     
     Regresion:  mpg ~ kitchen_sink_ridge
-    Entrenamiento score 0.6896708807553231
-    Prueba score 0.6556435118377518
+    Entrenamiento score 0.6890878092067418
+    Prueba score 0.6560571888322049
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_ols
-    Entrenamiento score 0.7164509306550633
-    Prueba score 0.6549631422669479
+    Entrenamiento score 0.7286154402790895
+    Prueba score 0.6261044691205849
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_lasso
-    Entrenamiento score 0.7095244697290346
-    Prueba score 0.693312102583202
+    Entrenamiento score 0.7065392087832174
+    Prueba score 0.697481690838238
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_ridge
-    Entrenamiento score 0.7062365688088987
-    Prueba score 0.7064404958207979
+    Entrenamiento score 0.7197200945905666
+    Prueba score 0.6454151082422006
     
     Regresion:  mpg ~ kitchen_sink_elastic_net
-    Entrenamiento score 0.7143840512964182
-    Prueba score 0.6719883512351271
+    Entrenamiento score 0.7137100772862914
+    Prueba score 0.6575033081647761
     
     Regresion:  mpg ~ kitchen_sink_svr
-    Entrenamiento score 0.6933523813332493
-    Prueba score 0.6864550093179962
+    Entrenamiento score 0.6948101242037901
+    Prueba score 0.7240248634465822
     
     Regresion:  mpg ~ kitchen_sink_kneighbors
-    Entrenamiento score 0.7486049876709735
-    Prueba score 0.7499122640106735
+    Entrenamiento score 0.7638870632761847
+    Prueba score 0.6855412306938089
     
     Regresion:  mpg ~ kitchen_sink_sgd
-    Entrenamiento score 0.7161070391196642
-    Prueba score 0.6613614209196004
-    
+    Entrenamiento score 0.7210212471051309
+    Prueba score 0.6388005372824846
 
 
-## Decision Tree
+
+### Decision Tree
 
 
 ```python
@@ -2080,18 +1983,11 @@ result_dict['mpg ~ kitchen_sink_decision_tree'] = build_model(decision_tree_reg,
                                                              'horsepower',
                                                              'weight',
                                                              'acceleration'],
-                                                              automobile_df,
-                                                              show_plot_Y=True)
+                                                              automobile_df)
 ```
 
-    Entrenamiento_score :  0.7309719034142717
-    Prueba_score :  0.7059004654965224
-
-
-
-    
-![png](./7-Regresion-Python_102_1.png)
-    
+    Entrenamiento_score :  0.7302512814978837
+    Prueba_score :  0.6695729153590095
 
 
 
@@ -2100,60 +1996,60 @@ compare_results()
 ```
 
     Regresion:  mpg ~ single_linear
-    Entrenamiento score 0.6940251922026459
-    Prueba score 0.6780272557552722
+    Entrenamiento score 0.6696115274238652
+    Prueba score 0.7704980985444312
     
     Regresion:  mpg ~ kitchen_sink_linear
-    Entrenamiento score 0.7143524190779553
-    Prueba score 0.6496852460273488
+    Entrenamiento score 0.7074657620419418
+    Prueba score 0.6989622365211952
     
     Regresion:  mpg ~ parsimonius_linear
-    Entrenamiento score 0.7069851597873933
-    Prueba score 0.7035037058069924
+    Entrenamiento score 0.7013230352668707
+    Prueba score 0.7232115758741458
     
     Regresion:  mpg ~ kitchen_sink_lasso
-    Entrenamiento score 0.7151538580963827
-    Prueba score 0.6762521302280093
+    Entrenamiento score 0.6943200981996365
+    Prueba score 0.7366916237596017
     
     Regresion:  mpg ~ kitchen_sink_ridge
-    Entrenamiento score 0.6896708807553231
-    Prueba score 0.6556435118377518
+    Entrenamiento score 0.6890878092067418
+    Prueba score 0.6560571888322049
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_ols
-    Entrenamiento score 0.7164509306550633
-    Prueba score 0.6549631422669479
+    Entrenamiento score 0.7286154402790895
+    Prueba score 0.6261044691205849
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_lasso
-    Entrenamiento score 0.7095244697290346
-    Prueba score 0.693312102583202
+    Entrenamiento score 0.7065392087832174
+    Prueba score 0.697481690838238
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_ridge
-    Entrenamiento score 0.7062365688088987
-    Prueba score 0.7064404958207979
+    Entrenamiento score 0.7197200945905666
+    Prueba score 0.6454151082422006
     
     Regresion:  mpg ~ kitchen_sink_elastic_net
-    Entrenamiento score 0.7143840512964182
-    Prueba score 0.6719883512351271
+    Entrenamiento score 0.7137100772862914
+    Prueba score 0.6575033081647761
     
     Regresion:  mpg ~ kitchen_sink_svr
-    Entrenamiento score 0.6933523813332493
-    Prueba score 0.6864550093179962
+    Entrenamiento score 0.6948101242037901
+    Prueba score 0.7240248634465822
     
     Regresion:  mpg ~ kitchen_sink_kneighbors
-    Entrenamiento score 0.7486049876709735
-    Prueba score 0.7499122640106735
+    Entrenamiento score 0.7638870632761847
+    Prueba score 0.6855412306938089
     
     Regresion:  mpg ~ kitchen_sink_sgd
-    Entrenamiento score 0.7161070391196642
-    Prueba score 0.6613614209196004
+    Entrenamiento score 0.7210212471051309
+    Prueba score 0.6388005372824846
     
     Regresion:  mpg ~ kitchen_sink_decision_tree
-    Entrenamiento score 0.7309719034142717
-    Prueba score 0.7059004654965224
-    
+    Entrenamiento score 0.7302512814978837
+    Prueba score 0.6695729153590095
 
 
-## Lars
+
+### Lars
 
 
 ```python
@@ -2173,18 +2069,11 @@ result_dict['mpg ~ kitchen_sink_lars'] = build_model(lars_reg,
                                                     'horsepower',
                                                     'weight',
                                                     'acceleration'],
-                                                     automobile_df,
-                                                     show_plot_Y=True)
+                                                     automobile_df)
 ```
 
-    Entrenamiento_score :  0.7097904166855645
-    Prueba_score :  0.6827026729724508
-
-
-
-    
-![png](./7-Regresion-Python_106_1.png)
-    
+    Entrenamiento_score :  0.7221519955627607
+    Prueba_score :  0.6442421991887889
 
 
 
@@ -2193,64 +2082,153 @@ compare_results()
 ```
 
     Regresion:  mpg ~ single_linear
-    Entrenamiento score 0.6940251922026459
-    Prueba score 0.6780272557552722
+    Entrenamiento score 0.6696115274238652
+    Prueba score 0.7704980985444312
     
     Regresion:  mpg ~ kitchen_sink_linear
-    Entrenamiento score 0.7143524190779553
-    Prueba score 0.6496852460273488
+    Entrenamiento score 0.7074657620419418
+    Prueba score 0.6989622365211952
     
     Regresion:  mpg ~ parsimonius_linear
-    Entrenamiento score 0.7069851597873933
-    Prueba score 0.7035037058069924
+    Entrenamiento score 0.7013230352668707
+    Prueba score 0.7232115758741458
     
     Regresion:  mpg ~ kitchen_sink_lasso
-    Entrenamiento score 0.7151538580963827
-    Prueba score 0.6762521302280093
+    Entrenamiento score 0.6943200981996365
+    Prueba score 0.7366916237596017
     
     Regresion:  mpg ~ kitchen_sink_ridge
-    Entrenamiento score 0.6896708807553231
-    Prueba score 0.6556435118377518
+    Entrenamiento score 0.6890878092067418
+    Prueba score 0.6560571888322049
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_ols
-    Entrenamiento score 0.7164509306550633
-    Prueba score 0.6549631422669479
+    Entrenamiento score 0.7286154402790895
+    Prueba score 0.6261044691205849
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_lasso
-    Entrenamiento score 0.7095244697290346
-    Prueba score 0.693312102583202
+    Entrenamiento score 0.7065392087832174
+    Prueba score 0.697481690838238
     
     Regresion:  mpg ~ kitchen_sink_elastic_net_ridge
-    Entrenamiento score 0.7062365688088987
-    Prueba score 0.7064404958207979
+    Entrenamiento score 0.7197200945905666
+    Prueba score 0.6454151082422006
     
     Regresion:  mpg ~ kitchen_sink_elastic_net
-    Entrenamiento score 0.7143840512964182
-    Prueba score 0.6719883512351271
+    Entrenamiento score 0.7137100772862914
+    Prueba score 0.6575033081647761
     
     Regresion:  mpg ~ kitchen_sink_svr
-    Entrenamiento score 0.6933523813332493
-    Prueba score 0.6864550093179962
+    Entrenamiento score 0.6948101242037901
+    Prueba score 0.7240248634465822
     
     Regresion:  mpg ~ kitchen_sink_kneighbors
-    Entrenamiento score 0.7486049876709735
-    Prueba score 0.7499122640106735
+    Entrenamiento score 0.7638870632761847
+    Prueba score 0.6855412306938089
     
     Regresion:  mpg ~ kitchen_sink_sgd
-    Entrenamiento score 0.7161070391196642
-    Prueba score 0.6613614209196004
+    Entrenamiento score 0.7210212471051309
+    Prueba score 0.6388005372824846
     
     Regresion:  mpg ~ kitchen_sink_decision_tree
-    Entrenamiento score 0.7309719034142717
-    Prueba score 0.7059004654965224
+    Entrenamiento score 0.7302512814978837
+    Prueba score 0.6695729153590095
     
     Regresion:  mpg ~ kitchen_sink_lars
-    Entrenamiento score 0.7097904166855645
-    Prueba score 0.6827026729724508
-    
+    Entrenamiento score 0.7221519955627607
+    Prueba score 0.6442421991887889
 
 
-# Hyper Parameter Tunning
+
+
+```python
+# Crear un diccionario solo con los resultados de prueba de cada modelo
+nombre_modelos = result_dict.keys()
+resultados_prueba = {} # crear diccionario vacio
+for nombre in nombre_modelos:
+    resultados_prueba[nombre] = result_dict[nombre]['Prueba_score']
+```
+
+
+```python
+plt.figure(figsize = (12,10)) # tamaño de la figura
+plt.barh(range(len(resultados_prueba)), list(resultados_prueba.values()), 
+        align='center', );
+plt.title("Resultados en el dataset de pruebas de cada modelo")
+plt.yticks(range(len(resultados_prueba)), list(resultados_prueba.keys()));
+```
+
+
+​    
+![png](./7-Regresion-Python_108_0.png)
+​    
+
+
+## Cross Validation - Seleccion de Modelos
+Analizar la varianza de los resultados para obtener los que tengan mejor resultado.
+
+
+```python
+# lista para almacenar cada uno los modelos seleccionados para el cross validation
+models = []
+
+# Alamcenando los modelos como una tupla (nombre, modelo)
+models.append(('kitchen_sink_linear',LinearRegression(normalize=True)))
+models.append(('kitchen_sink_lasso',Lasso(alpha=0.5)))
+models.append(('kitchen_sink_elastic_net',ElasticNet(alpha=1, l1_ratio=0.5,
+                                                     normalize = False, 
+                                                    max_iter= 100000, 
+                                                    warm_start= True)))
+models.append(('kitchen_sink_kneighbors',KNeighborsRegressor(n_neighbors=10)))
+models.append(('kitchen_sink_decision_tree',DecisionTreeRegressor(max_depth=2)))
+models.append(('kitchen_sink_svr',SVR(kernel='linear', epsilon=0.05, C=0.3)))
+```
+
+
+```python
+# Grabar los resultados de cada modelo
+from sklearn import model_selection
+
+#Semilla para obtener los mismos resultados de pruebas
+seed = 2
+results = []
+names = []
+scoring = 'r2'
+for name, model in models:
+    # Kfold cross validation for model selection
+    kfold = model_selection.KFold(n_splits=5, shuffle=True, random_state=seed)
+    #X train , y train
+    cv_results = model_selection.cross_val_score(model, x_train, y_train, cv=kfold, scoring=scoring)
+    results.append(cv_results)
+    names.append(name)
+    msg = f"({name}, {cv_results.mean()}, {cv_results.std()}"
+    print(msg)
+```
+
+    (kitchen_sink_linear, 0.6844234904934009, 0.03159374424744247
+    (kitchen_sink_lasso, 0.6844633664989738, 0.03171821519792585
+    (kitchen_sink_elastic_net, 0.6844703085848355, 0.03172143884528286
+    (kitchen_sink_kneighbors, 0.6608036231338688, 0.040735571400253065
+    (kitchen_sink_decision_tree, 0.6570680524867771, 0.03375219816362394
+    (kitchen_sink_svr, 0.6702154382576372, 0.03214642285149907
+
+
+
+```python
+plt.figure(figsize = (15,8)) 
+result_df = pd.DataFrame(results, index=names).T
+result_df.boxplot()
+plt.title("Resultados de Cross Validation");
+```
+
+
+​    
+![png](./7-Regresion-Python_112_0.png)
+​    
+
+
+## Hyper Parameter Tunning
+
+Optimizacion de hiperparametros, Se seleccionan los mejores modelos que tengan diferente formas de funcionamiento.
 
 
 ```python
@@ -2282,7 +2260,7 @@ automobile_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -2303,53 +2281,53 @@ automobile_df.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>17.0</td>
-      <td>8</td>
-      <td>305.0</td>
-      <td>130</td>
-      <td>3840</td>
-      <td>15.4</td>
-      <td>41</td>
+      <td>16.5</td>
+      <td>6</td>
+      <td>168.0</td>
+      <td>120</td>
+      <td>3820</td>
+      <td>16.7</td>
+      <td>45</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>30.0</td>
+      <td>25.0</td>
       <td>4</td>
-      <td>98.0</td>
-      <td>68</td>
-      <td>2155</td>
-      <td>16.5</td>
-      <td>42</td>
+      <td>116.0</td>
+      <td>81</td>
+      <td>2220</td>
+      <td>16.9</td>
+      <td>45</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>19.4</td>
-      <td>6</td>
-      <td>232.0</td>
-      <td>90</td>
-      <td>3210</td>
-      <td>17.2</td>
-      <td>42</td>
+      <td>16.0</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>150</td>
+      <td>4498</td>
+      <td>14.5</td>
+      <td>46</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>31.8</td>
-      <td>4</td>
-      <td>85.0</td>
-      <td>65</td>
-      <td>2020</td>
-      <td>19.2</td>
-      <td>41</td>
+      <td>12.0</td>
+      <td>8</td>
+      <td>429.0</td>
+      <td>198</td>
+      <td>4952</td>
+      <td>11.5</td>
+      <td>48</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>26.0</td>
+      <td>31.3</td>
       <td>4</td>
-      <td>108.0</td>
-      <td>93</td>
-      <td>2391</td>
-      <td>15.5</td>
-      <td>46</td>
+      <td>120.0</td>
+      <td>75</td>
+      <td>2542</td>
+      <td>17.5</td>
+      <td>41</td>
     </tr>
   </tbody>
 </table>
@@ -2366,7 +2344,7 @@ Y = automobile_df['mpg']
 x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
 ```
 
-## Lasso regression
+### Lasso regression
 
 
 ```python
@@ -2374,19 +2352,33 @@ parameters = {'alpha': [0.2, 0.4, 0.6, 0.7, 0.8, 0.9, 1.0]}
 
 grid_search = GridSearchCV(Lasso(), parameters, cv=3, return_train_score=True)
 grid_search.fit(x_train, y_train)
-
-grid_search.best_params_
 ```
 
 
 
 
-    {'alpha': 0.2}
+    GridSearchCV(cv=3, estimator=Lasso(),
+                 param_grid={'alpha': [0.2, 0.4, 0.6, 0.7, 0.8, 0.9, 1.0]},
+                 return_train_score=True)
 
+
+
+#### Resultados de la hiperparametrizacion
+
+
+```python
+print(f"Mejor resultado = {grid_search.best_score_}")
+print(f"Mejor parametros = {grid_search.best_params_}")
+```
+
+    Mejor resultado = 0.7021717010510476
+    Mejor parametros = {'alpha': 1.0}
 
 
 
 ```python
+# Para ver todos los resultados del cross validation
+# No es necesario, solo es informativo para ver como varia el modelo
 for i in range(len(parameters['alpha'])):
     print('Parametros: ', grid_search.cv_results_['params'][i])
 
@@ -2396,26 +2388,26 @@ for i in range(len(parameters['alpha'])):
 ```
 
     Parametros:  {'alpha': 0.2}
-    Promedio Score Prueba:  0.6798292939123337
-    Rank:  1
+    Promedio Score Prueba:  0.6969019568609475
+    Rank:  7
     Parametros:  {'alpha': 0.4}
-    Promedio Score Prueba:  0.6793066874613363
-    Rank:  2
+    Promedio Score Prueba:  0.698541427433439
+    Rank:  6
     Parametros:  {'alpha': 0.6}
-    Promedio Score Prueba:  0.6792520244406055
-    Rank:  3
+    Promedio Score Prueba:  0.699965209997786
+    Rank:  5
     Parametros:  {'alpha': 0.7}
-    Promedio Score Prueba:  0.6792212039982681
+    Promedio Score Prueba:  0.7005967051825271
     Rank:  4
     Parametros:  {'alpha': 0.8}
-    Promedio Score Prueba:  0.6791902701986242
-    Rank:  5
+    Promedio Score Prueba:  0.7011748241730046
+    Rank:  3
     Parametros:  {'alpha': 0.9}
-    Promedio Score Prueba:  0.6791585685202491
-    Rank:  6
+    Promedio Score Prueba:  0.7016999274085981
+    Rank:  2
     Parametros:  {'alpha': 1.0}
-    Promedio Score Prueba:  0.6791274140429867
-    Rank:  7
+    Promedio Score Prueba:  0.7021717010510476
+    Rank:  1
 
 
 
@@ -2431,11 +2423,11 @@ print('Entrenamiento score: ', lasso_model.score(x_train, y_train))
 print('Prueba score: ', r2_score(y_test, y_pred))
 ```
 
-    Entrenamiento score:  0.7039334256831417
-    Prueba score:  0.712881256878038
+    Entrenamiento score:  0.7182879921908456
+    Prueba score:  0.6653323457545108
 
 
-## KNeighbors regression
+### KNeighbors regression
 
 
 ```python
@@ -2443,52 +2435,25 @@ parameters = {'n_neighbors': [10, 12, 14, 18, 20, 25, 30, 35, 50]}
 
 grid_search = GridSearchCV(KNeighborsRegressor(), parameters, cv=3, return_train_score=True)
 grid_search.fit(x_train, y_train)
-
-grid_search.best_params_
 ```
 
 
 
 
-    {'n_neighbors': 20}
+    GridSearchCV(cv=3, estimator=KNeighborsRegressor(),
+                 param_grid={'n_neighbors': [10, 12, 14, 18, 20, 25, 30, 35, 50]},
+                 return_train_score=True)
 
 
 
 
 ```python
-for i in range(len(parameters['n_neighbors'])):
-    print('Parametros: ', grid_search.cv_results_['params'][i])
-    print('Promedio Score prueba: ', grid_search.cv_results_['mean_test_score'][i])
-    print('Rank: ', grid_search.cv_results_['rank_test_score'][i])
+print(f"Mejor resultado = {grid_search.best_score_}")
+print(f"Mejor parametros = {grid_search.best_params_}")
 ```
 
-    Parametros:  {'n_neighbors': 10}
-    Promedio Score prueba:  0.6731278997926874
-    Rank:  9
-    Parametros:  {'n_neighbors': 12}
-    Promedio Score prueba:  0.6743114600648372
-    Rank:  8
-    Parametros:  {'n_neighbors': 14}
-    Promedio Score prueba:  0.6818160912518643
-    Rank:  7
-    Parametros:  {'n_neighbors': 18}
-    Promedio Score prueba:  0.6926328790991523
-    Rank:  3
-    Parametros:  {'n_neighbors': 20}
-    Promedio Score prueba:  0.693608261494612
-    Rank:  1
-    Parametros:  {'n_neighbors': 25}
-    Promedio Score prueba:  0.6929003433058707
-    Rank:  2
-    Parametros:  {'n_neighbors': 30}
-    Promedio Score prueba:  0.6917246778395015
-    Rank:  4
-    Parametros:  {'n_neighbors': 35}
-    Promedio Score prueba:  0.6891030084152204
-    Rank:  5
-    Parametros:  {'n_neighbors': 50}
-    Promedio Score prueba:  0.68514355215919
-    Rank:  6
+    Mejor resultado = 0.7124428667389037
+    Mejor parametros = {'n_neighbors': 25}
 
 
 
@@ -2504,11 +2469,11 @@ print('Entrenamiento score: ', kneighbors_model.score(x_train, y_train))
 print('Prueba score: ', r2_score(y_test, y_pred))
 ```
 
-    Entrenamiento score:  0.7233999422504827
-    Prueba score:  0.7376145104222849
+    Entrenamiento score:  0.7425582447137113
+    Prueba score:  0.657177469793524
 
 
-## Decision Tree
+### Decision Tree
 
 
 ```python
@@ -2517,14 +2482,25 @@ parameters = {'max_depth':[1, 2, 3, 4, 5, 7, 8]}
 grid_search = GridSearchCV(DecisionTreeRegressor(), parameters, cv=3, return_train_score=True)
 grid_search.fit(x_train, y_train)
 
-grid_search.best_params_
 ```
 
 
 
 
-    {'max_depth': 3}
+    GridSearchCV(cv=3, estimator=DecisionTreeRegressor(),
+                 param_grid={'max_depth': [1, 2, 3, 4, 5, 7, 8]},
+                 return_train_score=True)
 
+
+
+
+```python
+print(f"Mejor resultado = {grid_search.best_score_}")
+print(f"Mejor parametros = {grid_search.best_params_}")
+```
+
+    Mejor resultado = 0.6827011911186145
+    Mejor parametros = {'max_depth': 2}
 
 
 
@@ -2540,11 +2516,11 @@ print('Entrenamiento score: ', decision_tree_model.score(x_train, y_train))
 print('Prueba score: ', r2_score(y_test, y_pred))
 ```
 
-    Entrenamiento score:  0.7721490521354658
-    Prueba score:  0.7344373548362138
+    Entrenamiento score:  0.7447696129290833
+    Prueba score:  0.6806583570617913
 
 
-## SVR
+### SVR
 
 
 ```python
@@ -2554,15 +2530,28 @@ parameters = {'epsilon': [0.05, 0.1, 0.2, 0.3],
 grid_search = GridSearchCV(SVR(kernel='linear'), parameters, cv=3, return_train_score=True)
 grid_search.fit(x_train, y_train)
 
-grid_search.best_params_
 ```
 
 
 
 
-    {'C': 0.3, 'epsilon': 0.05}
+    GridSearchCV(cv=3, estimator=SVR(kernel='linear'),
+                 param_grid={'C': [0.2, 0.3], 'epsilon': [0.05, 0.1, 0.2, 0.3]},
+                 return_train_score=True)
 
 
+
+
+```python
+print(f"Mejor resultado = {grid_search.best_score_}")
+print(f"Mejor parametros = {grid_search.best_params_}")
+```
+
+    Mejor resultado = 0.6899470090629146
+    Mejor parametros = {'C': 0.2, 'epsilon': 0.3}
+
+
+Como ejercicio academico se estima el resultado con los datos de test
 
 
 ```python
@@ -2579,11 +2568,19 @@ print('Entrenamiento score: ', svr_model.score(x_train, y_train))
 print('Prueba score: ', r2_score(y_test, y_pred))
 ```
 
-    Entrenamiento score:  0.6879838340458595
-    Prueba score:  0.6978720556081329
+    Entrenamiento score:  0.7106827209217679
+    Prueba score:  0.6134432209981653
 
 
-# Grabar el Modelo
+## Grabar el Modelo
+
+Se Selecciona el modelo que obtuvo mejores resultados en la hiperparametrizacion y sus resultados eran buenos con el dataset de prueba (test)
+
+
+```python
+# Entrenar el modelo con todos los datos disponibles
+kneighbors_model = KNeighborsRegressor(n_neighbors= 10 ).fit(X, Y)
+```
 
 
 ```python
@@ -2600,7 +2597,7 @@ dump(kneighbors_model, 'kneighbors_model-auto_mpg.joblib')
 
 
 
-# Usar el Modelo
+## Usar el Modelo
 
 
 ```python
@@ -2621,9 +2618,7 @@ modelo
 
 
 
-    KNeighborsRegressor(algorithm='auto', leaf_size=30, metric='minkowski',
-                        metric_params=None, n_jobs=None, n_neighbors=20, p=2,
-                        weights='uniform')
+    KNeighborsRegressor(n_neighbors=10)
 
 
 
@@ -2645,7 +2640,7 @@ datos.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -2666,53 +2661,53 @@ datos.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>17.0</td>
-      <td>8</td>
-      <td>305.0</td>
-      <td>130</td>
-      <td>3840</td>
-      <td>15.4</td>
-      <td>41</td>
+      <td>16.5</td>
+      <td>6</td>
+      <td>168.0</td>
+      <td>120</td>
+      <td>3820</td>
+      <td>16.7</td>
+      <td>45</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>30.0</td>
+      <td>25.0</td>
       <td>4</td>
-      <td>98.0</td>
-      <td>68</td>
-      <td>2155</td>
-      <td>16.5</td>
-      <td>42</td>
+      <td>116.0</td>
+      <td>81</td>
+      <td>2220</td>
+      <td>16.9</td>
+      <td>45</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>19.4</td>
-      <td>6</td>
-      <td>232.0</td>
-      <td>90</td>
-      <td>3210</td>
-      <td>17.2</td>
-      <td>42</td>
+      <td>16.0</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>150</td>
+      <td>4498</td>
+      <td>14.5</td>
+      <td>46</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>31.8</td>
-      <td>4</td>
-      <td>85.0</td>
-      <td>65</td>
-      <td>2020</td>
-      <td>19.2</td>
-      <td>41</td>
+      <td>12.0</td>
+      <td>8</td>
+      <td>429.0</td>
+      <td>198</td>
+      <td>4952</td>
+      <td>11.5</td>
+      <td>48</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>26.0</td>
+      <td>31.3</td>
       <td>4</td>
-      <td>108.0</td>
-      <td>93</td>
-      <td>2391</td>
-      <td>15.5</td>
-      <td>46</td>
+      <td>120.0</td>
+      <td>75</td>
+      <td>2542</td>
+      <td>17.5</td>
+      <td>41</td>
     </tr>
   </tbody>
 </table>
@@ -2739,7 +2734,7 @@ datos_prueba
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -2758,19 +2753,19 @@ datos_prueba
   <tbody>
     <tr>
       <th>2</th>
-      <td>6</td>
-      <td>232.0</td>
-      <td>90</td>
-      <td>3210</td>
-      <td>17.2</td>
+      <td>8</td>
+      <td>318.0</td>
+      <td>150</td>
+      <td>4498</td>
+      <td>14.5</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>4</td>
-      <td>85.0</td>
-      <td>65</td>
-      <td>2020</td>
-      <td>19.2</td>
+      <td>8</td>
+      <td>429.0</td>
+      <td>198</td>
+      <td>4952</td>
+      <td>11.5</td>
     </tr>
   </tbody>
 </table>
@@ -2780,23 +2775,17 @@ datos_prueba
 
 
 ```python
-# realizar predcion ccon el modelo
+# resultados de predicion con el modelo
 modelo.predict(datos_prueba)
 ```
 
 
 
 
-    array([19.57 , 34.105])
+    array([13.85, 12.  ])
 
-
-# Referencias
-https://scikit-learn.org/stable/supervised_learning.html#supervised-learning
-
-Cheatsheet scikitlearn 
-https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116
 
 
 **Phd. Jose R. Zapata**
 - [https://joserzapata.github.io/](https://joserzapata.github.io/)
-- https://twitter.com/joserzapata
+- joser.zapata@upb.edu.co
