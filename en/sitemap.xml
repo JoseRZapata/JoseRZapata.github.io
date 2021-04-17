@@ -12,28 +12,54 @@
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://joserzapata.github.io/courses/python-ciencia-datos/pandas/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://joserzapata.github.io/courses/python-ciencia-datos/visualizacion/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://joserzapata.github.io/courses/python-ciencia-datos/ml/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://joserzapata.github.io/courses/python-ciencia-datos/regresion/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://joserzapata.github.io/courses/python-ciencia-datos/clasificacion/</loc>
     <lastmod>2020-09-09T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://joserzapata.github.io/courses/python-ciencia-datos/clustering/</loc>
-    <lastmod>2020-09-09T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://joserzapata.github.io/authors/</loc>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/authors/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/authors/"
+                />
   </url><url>
     <loc>https://joserzapata.github.io/courses/</loc>
-    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://joserzapata.github.io/author/jose-r.-zapata/</loc>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/author/jose-r.-zapata/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/author/jose-r.-zapata/"
+                />
   </url><url>
     <loc>https://joserzapata.github.io/</loc>
-    <lastmod>2021-04-04T00:00:00+00:00</lastmod>
+    <lastmod>2021-04-17T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -69,19 +95,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/author/antonio-escamilla/"
-                />
-  </url><url>
-    <loc>https://joserzapata.github.io/authors/</loc>
-    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/authors/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/authors/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/tag/beat-tracking/</loc>
@@ -173,19 +186,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/tag/ismir/"
-                />
-  </url><url>
-    <loc>https://joserzapata.github.io/author/jose-r.-zapata/</loc>
-    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/author/jose-r.-zapata/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/author/jose-r.-zapata/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/author/juan-fernando-alzate-londono/</loc>
