@@ -8,7 +8,7 @@ icon_pack: fas
 
 # Page metadata.
 title: Clustering con Scikit Learn
-date: "2021-04-17T00:00:00Z"
+date: "2021-04-18T00:00:00Z"
 type: book  # Do not modify
 ---
 
@@ -35,7 +35,7 @@ import warnings
 warnings.filterwarnings("ignore")
 ```
 
-# Informacion de los datos
+## Informacion de los datos
 
 
 ```python
@@ -62,7 +62,7 @@ iris_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -146,7 +146,7 @@ iris_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -165,43 +165,43 @@ iris_df.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>6.5</td>
-      <td>2.8</td>
-      <td>4.6</td>
-      <td>1.5</td>
+      <td>6.3</td>
+      <td>2.3</td>
+      <td>4.4</td>
+      <td>1.3</td>
       <td>Iris-versicolor</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>6.8</td>
-      <td>3.2</td>
-      <td>5.9</td>
-      <td>2.3</td>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.5</td>
+      <td>1.8</td>
       <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>5.4</td>
-      <td>3.9</td>
-      <td>1.3</td>
-      <td>0.4</td>
+      <td>5.0</td>
+      <td>3.5</td>
+      <td>1.6</td>
+      <td>0.6</td>
       <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>1.7</td>
-      <td>Iris-versicolor</td>
+      <td>5.6</td>
+      <td>2.8</td>
+      <td>4.9</td>
+      <td>2.0</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>7.2</td>
-      <td>3.2</td>
-      <td>6.0</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
+      <td>6.2</td>
+      <td>2.9</td>
+      <td>4.3</td>
+      <td>1.3</td>
+      <td>Iris-versicolor</td>
     </tr>
   </tbody>
 </table>
@@ -238,7 +238,7 @@ iris_df[iris_df.isnull().any(axis=1)]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -278,7 +278,7 @@ iris_df.describe()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -368,7 +368,7 @@ iris_df['class'].unique()
 
 
 
-## Preprocesamiento de datos
+### Preprocesamiento de datos
 
 
 ```python
@@ -393,7 +393,7 @@ iris_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -412,43 +412,43 @@ iris_df.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>6.5</td>
-      <td>2.8</td>
-      <td>4.6</td>
-      <td>1.5</td>
+      <td>6.3</td>
+      <td>2.3</td>
+      <td>4.4</td>
+      <td>1.3</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>6.8</td>
-      <td>3.2</td>
-      <td>5.9</td>
-      <td>2.3</td>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.5</td>
+      <td>1.8</td>
       <td>2</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>5.4</td>
-      <td>3.9</td>
-      <td>1.3</td>
-      <td>0.4</td>
+      <td>5.0</td>
+      <td>3.5</td>
+      <td>1.6</td>
+      <td>0.6</td>
       <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>1.7</td>
-      <td>1</td>
+      <td>5.6</td>
+      <td>2.8</td>
+      <td>4.9</td>
+      <td>2.0</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>7.2</td>
-      <td>3.2</td>
-      <td>6.0</td>
-      <td>1.8</td>
-      <td>2</td>
+      <td>6.2</td>
+      <td>2.9</td>
+      <td>4.3</td>
+      <td>1.3</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -473,7 +473,7 @@ iris_df.describe()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -560,12 +560,12 @@ iris_df.describe()
 
 
 
-# Analisis Univariable
+## Analisis Univariable
 Se debe hacer un analisis de cada una de las variables y describir sus caracteristicas
 
-# Analisis Bivariable
+## Analisis Bivariable
 
-## Scatter plot
+### Scatter plot
 
 
 ```python
@@ -580,9 +580,9 @@ plt.show()
 ```
 
 
-    
-![png](./9-Clustering-Python_18_0.png)
-    
+​    
+![png](./9-Clustering-Python_17_0.png)
+​    
 
 
 
@@ -598,9 +598,9 @@ plt.show()
 ```
 
 
-    
-![png](./9-Clustering-Python_19_0.png)
-    
+​    
+![png](./9-Clustering-Python_18_0.png)
+​    
 
 
 
@@ -616,12 +616,12 @@ plt.show()
 ```
 
 
-    
-![png](./9-Clustering-Python_20_0.png)
-    
+​    
+![png](./9-Clustering-Python_19_0.png)
+​    
 
 
-# KMeans SIMPLE
+## KMeans SIMPLE
 
 
 ```python
@@ -642,7 +642,7 @@ iris_2D.sample(5)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -657,29 +657,29 @@ iris_2D.sample(5)
   </thead>
   <tbody>
     <tr>
-      <th>133</th>
+      <th>15</th>
+      <td>5.4</td>
+      <td>1.3</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>5.0</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>44</th>
       <td>6.4</td>
       <td>5.3</td>
     </tr>
     <tr>
-      <th>124</th>
-      <td>5.6</td>
-      <td>3.6</td>
-    </tr>
-    <tr>
-      <th>111</th>
-      <td>5.8</td>
+      <th>125</th>
+      <td>5.9</td>
       <td>5.1</td>
     </tr>
     <tr>
-      <th>75</th>
-      <td>4.7</td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>6.7</td>
-      <td>5.2</td>
+      <th>138</th>
+      <td>5.0</td>
+      <td>1.2</td>
     </tr>
   </tbody>
 </table>
@@ -717,13 +717,13 @@ kmeans_model_2D.labels_
 
 
 
-    array([2, 0, 1, 0, 0, 2, 0, 1, 2, 0, 2, 1, 1, 2, 1, 1, 0, 2, 1, 2, 2, 0,
-           2, 2, 2, 1, 0, 2, 1, 0, 1, 0, 1, 2, 2, 1, 0, 2, 1, 0, 2, 1, 0, 2,
-           0, 2, 1, 1, 2, 1, 1, 0, 0, 0, 2, 1, 2, 0, 1, 1, 1, 2, 2, 1, 2, 0,
-           2, 0, 1, 0, 2, 2, 1, 2, 2, 1, 0, 0, 1, 0, 1, 0, 2, 2, 0, 1, 2, 2,
-           1, 2, 0, 2, 1, 0, 1, 1, 1, 2, 2, 1, 0, 2, 2, 0, 2, 1, 0, 1, 2, 2,
-           1, 2, 1, 1, 1, 2, 0, 1, 2, 0, 1, 1, 1, 2, 2, 2, 2, 1, 0, 1, 2, 2,
-           2, 0, 0, 2, 2, 0, 2, 0, 1, 2, 1, 0, 1, 2, 0, 0, 1, 2], dtype=int32)
+    array([1, 2, 0, 1, 1, 1, 0, 2, 0, 0, 2, 1, 1, 2, 2, 0, 1, 2, 0, 0, 2, 1,
+           2, 1, 2, 0, 0, 2, 1, 2, 1, 1, 1, 2, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1,
+           2, 0, 2, 1, 1, 0, 0, 2, 2, 0, 0, 1, 1, 1, 0, 2, 1, 0, 1, 0, 1, 2,
+           1, 1, 2, 1, 1, 1, 2, 1, 0, 1, 1, 2, 1, 0, 2, 0, 0, 1, 2, 0, 1, 0,
+           0, 2, 2, 2, 1, 1, 2, 1, 1, 2, 0, 0, 0, 0, 1, 2, 1, 1, 1, 1, 0, 2,
+           0, 0, 0, 1, 2, 0, 1, 2, 0, 0, 1, 1, 2, 2, 2, 1, 0, 2, 0, 1, 0, 0,
+           1, 0, 2, 0, 1, 0, 0, 1, 0, 0, 2, 2, 1, 2, 2, 1, 1, 0], dtype=int32)
 
 
 
@@ -737,9 +737,9 @@ centroids_2D
 
 
 
-    array([[6.83902439, 5.67804878],
-           [5.00784314, 1.49411765],
-           [5.87413793, 4.39310345]])
+    array([[5.00784314, 1.49411765],
+           [5.87413793, 4.39310345],
+           [6.83902439, 5.67804878]])
 
 
 
@@ -754,9 +754,9 @@ for i in range(len(centroids_2D)):
 ```
 
 
-    
-![png](./9-Clustering-Python_28_0.png)
-    
+​    
+![png](./9-Clustering-Python_27_0.png)
+​    
 
 
 
@@ -783,8 +783,8 @@ print("Silhouette_score: ", metrics.silhouette_score(iris_2D, kmeans_model_2D.la
     Completeness_score:  0.7096993707802843
     v_measure_score:  0.706494157075837
     Adjusted_rand_score:  0.6988627672348092
-    Adjusted_mutual_info_score:  0.7028024531409133
-    Silhouette_score:  0.5890612473759281
+    Adjusted_mutual_info_score:  0.7028024531409135
+    Silhouette_score:  0.5890612473759282
 
 
 
@@ -803,9 +803,9 @@ for i in range(len(centroids_2D)):
 ```
 
 
-    
-![png](./9-Clustering-Python_31_0.png)
-    
+​    
+![png](./9-Clustering-Python_30_0.png)
+​    
 
 
 
@@ -827,7 +827,7 @@ iris_features.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -845,38 +845,38 @@ iris_features.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>6.5</td>
-      <td>2.8</td>
-      <td>4.6</td>
-      <td>1.5</td>
+      <td>6.3</td>
+      <td>2.3</td>
+      <td>4.4</td>
+      <td>1.3</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>6.8</td>
-      <td>3.2</td>
-      <td>5.9</td>
-      <td>2.3</td>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.5</td>
+      <td>1.8</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>5.4</td>
-      <td>3.9</td>
-      <td>1.3</td>
-      <td>0.4</td>
+      <td>5.0</td>
+      <td>3.5</td>
+      <td>1.6</td>
+      <td>0.6</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>1.7</td>
+      <td>5.6</td>
+      <td>2.8</td>
+      <td>4.9</td>
+      <td>2.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>7.2</td>
-      <td>3.2</td>
-      <td>6.0</td>
-      <td>1.8</td>
+      <td>6.2</td>
+      <td>2.9</td>
+      <td>4.3</td>
+      <td>1.3</td>
     </tr>
   </tbody>
 </table>
@@ -894,11 +894,11 @@ iris_labels.sample(5)
 
 
 
-    81     2
-    136    1
+    51     2
+    55     1
+    119    0
     86     1
-    19     1
-    61     1
+    13     1
     Name: class, dtype: int64
 
 
@@ -916,13 +916,13 @@ kmeans_model.labels_
 
 
 
-    array([2, 0, 1, 0, 0, 2, 0, 1, 2, 0, 2, 1, 1, 2, 1, 1, 0, 2, 1, 2, 2, 2,
-           2, 2, 2, 1, 0, 2, 1, 0, 1, 0, 1, 2, 2, 1, 0, 2, 1, 0, 2, 1, 0, 2,
-           0, 2, 1, 1, 2, 1, 1, 2, 2, 0, 2, 1, 2, 0, 1, 1, 1, 2, 2, 1, 2, 0,
-           2, 0, 1, 0, 2, 2, 1, 2, 2, 1, 0, 0, 1, 0, 1, 0, 2, 2, 0, 1, 2, 2,
-           1, 2, 0, 2, 1, 0, 1, 1, 1, 2, 2, 1, 0, 2, 2, 0, 2, 1, 0, 1, 2, 2,
-           1, 2, 1, 1, 1, 2, 0, 1, 2, 0, 2, 1, 1, 2, 2, 2, 2, 1, 0, 1, 2, 2,
-           2, 0, 0, 2, 2, 0, 2, 0, 1, 2, 1, 0, 1, 2, 0, 0, 1, 2], dtype=int32)
+    array([1, 2, 0, 1, 1, 1, 0, 2, 0, 0, 2, 1, 1, 2, 2, 0, 1, 2, 0, 0, 2, 1,
+           2, 1, 2, 0, 1, 1, 1, 2, 1, 1, 1, 2, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1,
+           2, 0, 2, 1, 1, 0, 0, 2, 2, 0, 0, 1, 1, 1, 0, 2, 1, 0, 1, 0, 1, 2,
+           1, 1, 2, 1, 1, 1, 2, 1, 0, 1, 1, 2, 1, 0, 2, 0, 0, 1, 2, 0, 1, 0,
+           0, 2, 2, 1, 1, 1, 2, 1, 1, 2, 0, 0, 0, 0, 1, 2, 1, 1, 1, 1, 0, 1,
+           0, 0, 0, 1, 2, 0, 1, 2, 0, 0, 1, 1, 2, 2, 2, 1, 0, 2, 0, 1, 0, 0,
+           1, 0, 2, 0, 1, 0, 0, 1, 0, 0, 2, 2, 1, 2, 2, 1, 1, 0], dtype=int32)
 
 
 
@@ -934,9 +934,9 @@ kmeans_model.cluster_centers_
 
 
 
-    array([[6.85      , 3.07368421, 5.74210526, 2.07105263],
-           [5.006     , 3.418     , 1.464     , 0.244     ],
-           [5.9016129 , 2.7483871 , 4.39354839, 1.43387097]])
+    array([[5.006     , 3.418     , 1.464     , 0.244     ],
+           [5.9016129 , 2.7483871 , 4.39354839, 1.43387097],
+           [6.85      , 3.07368421, 5.74210526, 2.07105263]])
 
 
 
@@ -954,11 +954,11 @@ print("Silhouette_score: ", metrics.silhouette_score(iris_features, kmeans_model
     Completeness_score:  0.7649861514489815
     v_measure_score:  0.7581756800057784
     Adjusted_rand_score:  0.7302382722834697
-    Adjusted_mutual_info_score:  0.7551191675800484
+    Adjusted_mutual_info_score:  0.7551191675800485
     Silhouette_score:  0.5525919445499757
 
 
-# Clustering con varios modelos
+## Clustering con varios modelos
 
 
 ```python
@@ -994,7 +994,7 @@ def build_model(clustering_model, data, labels):
             metrics.silhouette_score(data, model.labels_)))
 ```
 
-## Kmeans
+### Kmeans
 
 
 ```python
@@ -1014,7 +1014,7 @@ build_model(k_means, iris_features, iris_labels)
     0.751	0.765	0.758	0.730	0.755	0.553
 
 
-## Agglomerative
+### Agglomerative
 
 
 ```python
@@ -1034,7 +1034,7 @@ build_model(agglomerative_fn, iris_features, iris_labels)
     0.761	0.780	0.770	0.731	0.767	0.554
 
 
-## Dbscan
+### Dbscan
 
 
 ```python
@@ -1053,7 +1053,7 @@ build_model(dbscan_fn, iris_features, iris_labels)
     0.577	0.609	0.593	0.508	0.584	0.372
 
 
-## Mean Shift
+### Mean Shift
 
 
 ```python
@@ -1072,7 +1072,7 @@ build_model(mean_shift_fn, iris_features, iris_labels)
     0.760	0.772	0.766	0.744	0.763	0.551
 
 
-## Birch
+### Birch
 
 
 ```python
@@ -1088,10 +1088,10 @@ build_model(birch_fn, iris_features, iris_labels)
 
     homo	compl	v-meas	ARI	AMI	silhouette
     --------------------------------------------------
-    0.635	0.792	0.705	0.566	0.700	0.534
+    0.778	0.804	0.791	0.732	0.788	0.554
 
 
-## Affinity Propagation
+### Affinity Propagation
 
 
 ```python
@@ -1110,7 +1110,7 @@ build_model(affinity_propagation_fn, iris_features, iris_labels)
     0.851	0.492	0.623	0.437	0.612	0.349
 
 
-## Mini Batch Kmeans
+### Mini Batch Kmeans
 
 
 ```python
@@ -1126,10 +1126,10 @@ build_model(mini_batch_kmeans_fn, iris_features, iris_labels)
 
     homo	compl	v-meas	ARI	AMI	silhouette
     --------------------------------------------------
-    0.745	0.754	0.750	0.729	0.746	0.549
+    0.787	0.809	0.798	0.746	0.795	0.555
 
 
-# Hyperparameter Tuning (optimizacion de Hiperparametros)
+## Hyperparameter Tuning (optimizacion de Hiperparametros)
 El ejemplo se desarrollara con un dataset diferente con menos variables
 
 
@@ -1163,7 +1163,7 @@ drivers_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1243,7 +1243,7 @@ drivers_df[drivers_df.isnull().any(axis=1)]
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1281,7 +1281,7 @@ drivers_df.describe()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1355,7 +1355,7 @@ drivers_df.describe()
 drivers_features = drivers_df.drop('Driver_ID', axis=1)
 ```
 
-## KMeans clustering
+### KMeans clustering
 
 
 ```python
@@ -1404,10 +1404,10 @@ for g in parameter_grid:
     Parametro:  {'n_clusters': 2} Score:  0.8490223286225532
     Parametro:  {'n_clusters': 3} Score:  0.8231396834167266
     Parametro:  {'n_clusters': 4} Score:  0.5911323766293183
-    Parametro:  {'n_clusters': 5} Score:  0.5128161654454148
-    Parametro:  {'n_clusters': 10} Score:  0.41891069100637685
-    Parametro:  {'n_clusters': 20} Score:  0.3639487789194615
-    Parametro:  {'n_clusters': 30} Score:  0.3540375785241541
+    Parametro:  {'n_clusters': 5} Score:  0.5127476940598861
+    Parametro:  {'n_clusters': 10} Score:  0.4386111161388452
+    Parametro:  {'n_clusters': 20} Score:  0.36694291591807765
+    Parametro:  {'n_clusters': 30} Score:  0.3372412347052073
 
 
 
@@ -1436,12 +1436,12 @@ plt.show()
 ```
 
 
-    
-![png](./9-Clustering-Python_75_0.png)
-    
+​    
+![png](./9-Clustering-Python_74_0.png)
+​    
 
 
-## DBSCAN clustering
+### DBSCAN clustering
 
 
 ```python
@@ -1557,8 +1557,7 @@ model.fit(drivers_features)
 
 
 
-    DBSCAN(algorithm='auto', eps=20.0, leaf_size=30, metric='euclidean',
-           metric_params=None, min_samples=5, n_jobs=None, p=None)
+    DBSCAN(eps=20.0)
 
 
 
@@ -1638,7 +1637,7 @@ print('Puntos Ruido: ', n_noise)
     Puntos Ruido:  157
 
 
-## MeanShift clustering
+### MeanShift clustering
 
 https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/cluster/mean_shift_.py#L4
 
@@ -1671,12 +1670,9 @@ metrics.silhouette_score(drivers_features, model.labels_)
 
 
 
-# Referencias
-https://scikit-learn.org/stable/modules/clustering.html#clustering
-
+## Referencias
 Cheatsheet scikitlearn 
 https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116
 
 **Phd. Jose R. Zapata**
 - [https://joserzapata.github.io/](https://joserzapata.github.io/)
-- https://twitter.com/joserzapata
