@@ -342,7 +342,7 @@
     <meta property="twitter:image" content="https://joserzapata.github.io/media/icon_huef99ce4a8cdef83a01a57b9c8063a4d3_108982_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2020-09-09T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2020-04-18T00:00:00&#43;00:00" />
     
   
 
@@ -1035,39 +1035,55 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#eliminar-columnas-no-necesarias">Eliminar columnas no necesarias</a></li>
-    <li><a href="#tratamiento-de-datos-nulos">Tratamiento de datos nulos</a></li>
-    <li><a href="#descripcion-estadistica">Descripcion estadistica</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#scatter-plots">Scatter Plots</a></li>
-    <li><a href="#correlacion">Correlacion</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#regresion-logistica-para-clasificacion">Regresion Logistica para Clasificacion</a>
+    <li><a href="#informacion-de-los-datos">Informacion de los Datos</a></li>
+    <li><a href="#preparacion-de-datos">Preparacion de datos</a>
       <ul>
-        <li><a href="#matriz-de-confusion">Matriz de confusion</a></li>
-        <li><a href="#precision---recall">Precision - recall</a></li>
+        <li><a href="#eliminar-columnas-no-necesarias">Eliminar columnas no necesarias</a></li>
+        <li><a href="#tratamiento-de-datos-nulos">Tratamiento de datos nulos</a></li>
+        <li><a href="#descripcion-estadistica">Descripcion estadistica</a></li>
       </ul>
     </li>
-  </ul>
-
-  <ul>
-    <li><a href="#regresion-logistica">Regresion logistica</a></li>
-    <li><a href="#lineal-discriminant-analysis">Lineal Discriminant Analysis</a></li>
-    <li><a href="#quadratic-discriminant-analysis">Quadratic Discriminant Analysis</a></li>
-    <li><a href="#sgd">SGD</a></li>
-    <li><a href="#svc-lineal">SVC Lineal</a></li>
-    <li><a href="#radius-neighbors-classifier">Radius Neighbors Classifier</a></li>
-    <li><a href="#decision-tree-classifier">Decision Tree classifier</a></li>
-    <li><a href="#naive-bayes">Naive Bayes</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#decision-tree">Decision Tree</a></li>
-    <li><a href="#regresion-logistica-1">Regresion logistica</a></li>
+    <li><a href="#analisis-univariable">Analisis Univariable</a></li>
+    <li><a href="#analisis-bivariable">Analisis Bivariable</a>
+      <ul>
+        <li><a href="#scatter-plots">Scatter Plots</a></li>
+        <li><a href="#correlacion">Correlacion</a></li>
+      </ul>
+    </li>
+    <li><a href="#transformacion-de-variables">Transformacion de Variables</a></li>
+    <li><a href="#clasificacion-binaria">Clasificacion Binaria</a>
+      <ul>
+        <li><a href="#regresion-logistica-para-clasificacion">Regresion Logistica para Clasificacion</a></li>
+      </ul>
+    </li>
+    <li><a href="#clasificacion-con-multiples-modelos">Clasificacion con Multiples Modelos</a>
+      <ul>
+        <li><a href="#funciones-de-ayuda">Funciones de ayuda</a></li>
+        <li><a href="#regresion-logistica">Regresion logistica</a></li>
+        <li><a href="#lineal-discriminant-analysis">Lineal Discriminant Analysis</a></li>
+        <li><a href="#quadratic-discriminant-analysis">Quadratic Discriminant Analysis</a></li>
+        <li><a href="#sgd">SGD</a></li>
+        <li><a href="#svc-lineal">SVC Lineal</a></li>
+        <li><a href="#radius-neighbors-classifier">Radius Neighbors Classifier</a></li>
+        <li><a href="#decision-tree-classifier">Decision Tree classifier</a></li>
+        <li><a href="#naive-bayes">Naive Bayes</a></li>
+      </ul>
+    </li>
+    <li><a href="#cross-validation---seleccion-de-modelos">Cross Validation - Seleccion de Modelos</a></li>
+    <li><a href="#hyperparameter-tunning-optimizacion-de-hiperparametros">Hyperparameter tunning (Optimizacion de hiperparametros)</a>
+      <ul>
+        <li><a href="#decision-tree">Decision Tree</a></li>
+        <li><a href="#regresion-logistica-1">Regresion logistica</a></li>
+      </ul>
+    </li>
+    <li><a href="#final-evaluation-test">Final Evaluation Test</a>
+      <ul>
+        <li><a href="#decision-tree-1">Decision Tree</a></li>
+        <li><a href="#regresion-logistica-2">Regresion Logistica</a></li>
+      </ul>
+    </li>
+    <li><a href="#grabar-el-modelo">Grabar el Modelo</a></li>
+    <li><a href="#referencias">Referencias</a></li>
   </ul>
 </nav>
 
@@ -1093,7 +1109,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 </code></pre>
-<h1 id="informacion-de-los-datos">Informacion de los Datos</h1>
+<h2 id="informacion-de-los-datos">Informacion de los Datos</h2>
 <p>Titanic dataset</p>
 <p>Fuente: <a href="https://www.kaggle.com/francksylla/titanic-machine-learning-from-disaster">https://www.kaggle.com/francksylla/titanic-machine-learning-from-disaster</a></p>
 <pre><code class="language-python">titanic_df = pd.read_csv('datasets/titanic_train.csv')
@@ -1312,8 +1328,8 @@ Data columns (total 12 columns):
 dtypes: float64(2), int64(5), object(5)
 memory usage: 83.7+ KB
 </code></pre>
-<h1 id="preparacion-de-datos">Preparacion de datos</h1>
-<h2 id="eliminar-columnas-no-necesarias">Eliminar columnas no necesarias</h2>
+<h2 id="preparacion-de-datos">Preparacion de datos</h2>
+<h3 id="eliminar-columnas-no-necesarias">Eliminar columnas no necesarias</h3>
 <pre><code class="language-python">titanic_df.drop(['PassengerId', 'Name', 'Ticket', 'Cabin'], 'columns', inplace=True)
 
 titanic_df.head()
@@ -1423,7 +1439,7 @@ Data columns (total 8 columns):
 dtypes: float64(2), int64(4), object(2)
 memory usage: 55.8+ KB
 </code></pre>
-<h2 id="tratamiento-de-datos-nulos">Tratamiento de datos nulos</h2>
+<h3 id="tratamiento-de-datos-nulos">Tratamiento de datos nulos</h3>
 <pre><code class="language-python"># Contar el numero de datos nulos
 titanic_df[titanic_df.isnull().any(axis=1)].count()
 </code></pre>
@@ -1456,7 +1472,7 @@ Fare        0
 Embarked    0
 dtype: int64
 </code></pre>
-<h2 id="descripcion-estadistica">Descripcion estadistica</h2>
+<h3 id="descripcion-estadistica">Descripcion estadistica</h3>
 <pre><code class="language-python">titanic_df.describe()
 </code></pre>
 <div>
@@ -1650,10 +1666,10 @@ dtype: int64
   </tbody>
 </table>
 </div>
-<h1 id="analisis-univariable">Analisis Univariable</h1>
+<h2 id="analisis-univariable">Analisis Univariable</h2>
 <p>Se debe hacer un analisis de cada una de las variables y describir sus caracteristicas</p>
-<h1 id="analisis-bivariable">Analisis Bivariable</h1>
-<h2 id="scatter-plots">Scatter Plots</h2>
+<h2 id="analisis-bivariable">Analisis Bivariable</h2>
+<h3 id="scatter-plots">Scatter Plots</h3>
 <pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
 
 plt.scatter(titanic_df['Age'], titanic_df['Survived'])
@@ -1661,7 +1677,9 @@ plt.scatter(titanic_df['Age'], titanic_df['Survived'])
 plt.xlabel('Age')
 plt.ylabel('Survived');
 </code></pre>
-<p><img src="./8-Clasificacion-Python_21_0.png" alt="png"></p>
+<p>​ <br>
+<img src="./8-Clasificacion-Python_20_0.png" alt="png">
+​</p>
 <pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
 
 plt.scatter(titanic_df['Fare'], titanic_df['Survived'])
@@ -1669,8 +1687,10 @@ plt.scatter(titanic_df['Fare'], titanic_df['Survived'])
 plt.xlabel('Fare')
 plt.ylabel('Survived');
 </code></pre>
-<p><img src="./8-Clasificacion-Python_22_0.png" alt="png"></p>
-<h2 id="correlacion">Correlacion</h2>
+<p>​ <br>
+<img src="./8-Clasificacion-Python_21_0.png" alt="png">
+​</p>
+<h3 id="correlacion">Correlacion</h3>
 <pre><code class="language-python">pd.crosstab(titanic_df['Sex'], titanic_df['Survived'])
 </code></pre>
 <div>
@@ -1854,8 +1874,10 @@ titanic_data_corr
 
 sns.heatmap(titanic_data_corr, annot=True);
 </code></pre>
-<p><img src="./8-Clasificacion-Python_27_0.png" alt="png"></p>
-<h1 id="transformacion-de-variables">Transformacion de Variables</h1>
+<p>​ <br>
+<img src="./8-Clasificacion-Python_26_0.png" alt="png">
+​</p>
+<h2 id="transformacion-de-variables">Transformacion de Variables</h2>
 <pre><code class="language-python">from sklearn import preprocessing
 
 label_encoding = preprocessing.LabelEncoder()
@@ -2097,11 +2119,11 @@ titanic_df.head()
       <th>0</th>
       <td>1</td>
       <td>3</td>
-      <td>1</td>
-      <td>25.0</td>
-      <td>1</td>
       <td>0</td>
-      <td>7.7750</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7.9250</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -2111,49 +2133,49 @@ titanic_df.head()
       <td>0</td>
       <td>3</td>
       <td>1</td>
-      <td>27.0</td>
+      <td>21.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8.4333</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>14.4542</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>51.0</td>
+      <td>57.0</td>
       <td>0</td>
       <td>0</td>
-      <td>7.0542</td>
-      <td>0</td>
+      <td>12.3500</td>
       <td>0</td>
       <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>19.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.8958</td>
-      <td>0</td>
-      <td>0</td>
+      <td>25.0</td>
       <td>1</td>
+      <td>2</td>
+      <td>41.5792</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
+      <td>0</td>
       <td>2</td>
       <td>1</td>
-      <td>34.0</td>
+      <td>35.0</td>
       <td>0</td>
       <td>0</td>
-      <td>13.0000</td>
+      <td>10.5000</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -2163,7 +2185,7 @@ titanic_df.head()
 </div>
 <pre><code class="language-python">titanic_df.to_csv('datasets/titanic_processed.csv', index=False)
 </code></pre>
-<h1 id="clasificacion-binaria">Clasificacion Binaria</h1>
+<h2 id="clasificacion-binaria">Clasificacion Binaria</h2>
 <pre><code class="language-python">titanic_df = pd.read_csv('datasets/titanic_processed.csv')
 
 titanic_df.head()
@@ -2203,11 +2225,11 @@ titanic_df.head()
       <th>0</th>
       <td>1</td>
       <td>3</td>
-      <td>1</td>
-      <td>25.0</td>
-      <td>1</td>
       <td>0</td>
-      <td>7.7750</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7.9250</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -2217,49 +2239,49 @@ titanic_df.head()
       <td>0</td>
       <td>3</td>
       <td>1</td>
-      <td>27.0</td>
+      <td>21.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8.4333</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>14.4542</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>51.0</td>
+      <td>57.0</td>
       <td>0</td>
       <td>0</td>
-      <td>7.0542</td>
-      <td>0</td>
+      <td>12.3500</td>
       <td>0</td>
       <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>19.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.8958</td>
-      <td>0</td>
-      <td>0</td>
+      <td>25.0</td>
       <td>1</td>
+      <td>2</td>
+      <td>41.5792</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
+      <td>0</td>
       <td>2</td>
       <td>1</td>
-      <td>34.0</td>
+      <td>35.0</td>
       <td>0</td>
       <td>0</td>
-      <td>13.0000</td>
+      <td>10.5000</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -2286,7 +2308,7 @@ x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
 </code></pre>
 <pre><code>((143, 9), (143,))
 </code></pre>
-<h2 id="regresion-logistica-para-clasificacion">Regresion Logistica para Clasificacion</h2>
+<h3 id="regresion-logistica-para-clasificacion">Regresion Logistica para Clasificacion</h3>
 <p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html">https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html</a></p>
 <pre><code class="language-python">from sklearn.linear_model import LogisticRegression
 
@@ -2294,7 +2316,7 @@ logistic_model = LogisticRegression(penalty='l2', C=1.0, solver='liblinear').fit
 </code></pre>
 <pre><code class="language-python">y_pred = logistic_model.predict(x_test)
 </code></pre>
-<h3 id="matriz-de-confusion">Matriz de confusion</h3>
+<h4 id="matriz-de-confusion">Matriz de confusion</h4>
 <pre><code class="language-python">pred_results = pd.DataFrame({'y_test': y_test,
                              'y_pred': y_pred})
 </code></pre>
@@ -2324,29 +2346,29 @@ logistic_model = LogisticRegression(penalty='l2', C=1.0, solver='liblinear').fit
   </thead>
   <tbody>
     <tr>
-      <th>484</th>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>102</th>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>65</th>
+      <th>524</th>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>30</th>
+      <th>133</th>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>460</th>
       <td>1</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>38</th>
+      <th>110</th>
       <td>1</td>
-      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>639</th>
+      <td>0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -2385,18 +2407,18 @@ titanic_crosstab
   <tbody>
     <tr>
       <th>0</th>
-      <td>75</td>
-      <td>16</td>
+      <td>71</td>
+      <td>24</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>16</td>
-      <td>36</td>
+      <td>8</td>
+      <td>40</td>
     </tr>
   </tbody>
 </table>
 </div>
-<h3 id="precision---recall">Precision - recall</h3>
+<h4 id="precision---recall">Precision - recall</h4>
 <p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html</a>
 <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html">https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html</a></p>
 <pre><code class="language-python">from sklearn.metrics import accuracy_score
@@ -2412,8 +2434,8 @@ print(&quot;precision_score : &quot;, prec)
 print(&quot;recall_score : &quot;, recall)
 </code></pre>
 <pre><code>accuracy_score :  0.7762237762237763
-precision_score :  0.6923076923076923
-recall_score :  0.6923076923076923
+precision_score :  0.8333333333333334
+recall_score :  0.625
 </code></pre>
 <pre><code class="language-python">titanic_crosstab
 </code></pre>
@@ -2447,13 +2469,13 @@ recall_score :  0.6923076923076923
   <tbody>
     <tr>
       <th>0</th>
-      <td>75</td>
-      <td>16</td>
+      <td>71</td>
+      <td>24</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>16</td>
-      <td>36</td>
+      <td>8</td>
+      <td>40</td>
     </tr>
   </tbody>
 </table>
@@ -2473,15 +2495,15 @@ accuracy_score_verified
 
 precision_score_survived
 </code></pre>
-<pre><code>0.6923076923076923
+<pre><code>0.8333333333333334
 </code></pre>
 <pre><code class="language-python">recall_score_survived = TP / (TP + FN)
 
 recall_score_survived
 </code></pre>
-<pre><code>0.6923076923076923
+<pre><code>0.625
 </code></pre>
-<h1 id="clasificacion-con-multiples-modelos">Clasificacion con Multiples Modelos</h1>
+<h2 id="clasificacion-con-multiples-modelos">Clasificacion con Multiples Modelos</h2>
 <pre><code class="language-python">from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import precision_score
@@ -2535,11 +2557,11 @@ titanic_df.head()
       <th>0</th>
       <td>1</td>
       <td>3</td>
-      <td>1</td>
-      <td>25.0</td>
-      <td>1</td>
       <td>0</td>
-      <td>7.7750</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7.9250</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -2549,49 +2571,49 @@ titanic_df.head()
       <td>0</td>
       <td>3</td>
       <td>1</td>
-      <td>27.0</td>
+      <td>21.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8.4333</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>14.4542</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>51.0</td>
+      <td>57.0</td>
       <td>0</td>
       <td>0</td>
-      <td>7.0542</td>
-      <td>0</td>
+      <td>12.3500</td>
       <td>0</td>
       <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>19.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.8958</td>
-      <td>0</td>
-      <td>0</td>
+      <td>25.0</td>
       <td>1</td>
+      <td>2</td>
+      <td>41.5792</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
+      <td>0</td>
       <td>2</td>
       <td>1</td>
-      <td>34.0</td>
+      <td>35.0</td>
       <td>0</td>
       <td>0</td>
-      <td>13.0000</td>
+      <td>10.5000</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -2615,6 +2637,7 @@ FEATURES
 </code></pre>
 <pre><code class="language-python">result_dict = {}
 </code></pre>
+<h3 id="funciones-de-ayuda">Funciones de ayuda</h3>
 <pre><code class="language-python">def summarize_classification(y_test, y_pred):
     
     acc = accuracy_score(y_test, y_pred, normalize=True)
@@ -2673,7 +2696,7 @@ FEATURES
        
         print()
 </code></pre>
-<h2 id="regresion-logistica">Regresion logistica</h2>
+<h3 id="regresion-logistica">Regresion logistica</h3>
 <pre><code class="language-python">def logistic_fn(x_train, y_train):
     
     model = LogisticRegression(solver='liblinear')
@@ -2691,18 +2714,18 @@ compare_results()
 <pre><code>Classification:  survived ~ logistic
 
 Training data
-accuracy 0.8101933216168717
-precision 0.8020304568527918
-recall 0.6960352422907489
-accuracy_count 461
+accuracy 0.8137082601054482
+precision 0.7990196078431373
+recall 0.7149122807017544
+accuracy_count 463
 
 Test data
-accuracy 0.7692307692307693
-precision 0.7692307692307693
-recall 0.6557377049180327
-accuracy_count 110
+accuracy 0.7762237762237763
+precision 0.8043478260869565
+recall 0.6166666666666667
+accuracy_count 111
 </code></pre>
-<h2 id="lineal-discriminant-analysis">Lineal Discriminant Analysis</h2>
+<h3 id="lineal-discriminant-analysis">Lineal Discriminant Analysis</h3>
 <pre><code class="language-python">def linear_discriminant_fn(x_train, y_train, solver='svd'):
     
     model = LinearDiscriminantAnalysis(solver=solver)
@@ -2719,30 +2742,30 @@ compare_results()
 <pre><code>Classification:  survived ~ logistic
 
 Training data
-accuracy 0.8101933216168717
-precision 0.8020304568527918
-recall 0.6960352422907489
-accuracy_count 461
+accuracy 0.8137082601054482
+precision 0.7990196078431373
+recall 0.7149122807017544
+accuracy_count 463
 
 Test data
-accuracy 0.7692307692307693
-precision 0.7692307692307693
-recall 0.6557377049180327
-accuracy_count 110
+accuracy 0.7762237762237763
+precision 0.8043478260869565
+recall 0.6166666666666667
+accuracy_count 111
 
 Classification:  survived ~ linear_discriminant_analysis
 
 Training data
-accuracy 0.8014059753954306
-precision 0.7782805429864253
-recall 0.7288135593220338
-accuracy_count 456
+accuracy 0.8066783831282952
+precision 0.784037558685446
+recall 0.7229437229437229
+accuracy_count 459
 
 Test data
-accuracy 0.7482517482517482
-precision 0.6739130434782609
-recall 0.5961538461538461
-accuracy_count 107
+accuracy 0.7342657342657343
+precision 0.6792452830188679
+recall 0.631578947368421
+accuracy_count 105
 </code></pre>
 <pre><code class="language-python">result_dict['survived ~ linear_discriminant_analysis'] = build_model(linear_discriminant_fn,
                                                                      'Survived',
@@ -2753,32 +2776,32 @@ compare_results()
 <pre><code>Classification:  survived ~ logistic
 
 Training data
-accuracy 0.8101933216168717
-precision 0.8020304568527918
-recall 0.6960352422907489
-accuracy_count 461
+accuracy 0.8137082601054482
+precision 0.7990196078431373
+recall 0.7149122807017544
+accuracy_count 463
 
 Test data
-accuracy 0.7692307692307693
-precision 0.7692307692307693
-recall 0.6557377049180327
-accuracy_count 110
+accuracy 0.7762237762237763
+precision 0.8043478260869565
+recall 0.6166666666666667
+accuracy_count 111
 
 Classification:  survived ~ linear_discriminant_analysis
 
 Training data
-accuracy 0.8101933216168717
-precision 0.7887323943661971
-recall 0.7272727272727273
-accuracy_count 461
+accuracy 0.7996485061511424
+precision 0.7772727272727272
+recall 0.7245762711864406
+accuracy_count 455
 
 Test data
-accuracy 0.7622377622377622
-precision 0.7555555555555555
-recall 0.5964912280701754
-accuracy_count 109
+accuracy 0.7412587412587412
+precision 0.6415094339622641
+recall 0.6538461538461539
+accuracy_count 106
 </code></pre>
-<h2 id="quadratic-discriminant-analysis">Quadratic Discriminant Analysis</h2>
+<h3 id="quadratic-discriminant-analysis">Quadratic Discriminant Analysis</h3>
 <pre><code class="language-python">def quadratic_discriminant_fn(x_train, y_train):
     
     model = QuadraticDiscriminantAnalysis()
@@ -2796,46 +2819,46 @@ compare_results()
 <pre><code>Classification:  survived ~ logistic
 
 Training data
-accuracy 0.8101933216168717
-precision 0.8020304568527918
-recall 0.6960352422907489
-accuracy_count 461
+accuracy 0.8137082601054482
+precision 0.7990196078431373
+recall 0.7149122807017544
+accuracy_count 463
 
 Test data
-accuracy 0.7692307692307693
-precision 0.7692307692307693
-recall 0.6557377049180327
-accuracy_count 110
+accuracy 0.7762237762237763
+precision 0.8043478260869565
+recall 0.6166666666666667
+accuracy_count 111
 
 Classification:  survived ~ linear_discriminant_analysis
 
 Training data
-accuracy 0.8101933216168717
-precision 0.7887323943661971
-recall 0.7272727272727273
-accuracy_count 461
+accuracy 0.7996485061511424
+precision 0.7772727272727272
+recall 0.7245762711864406
+accuracy_count 455
 
 Test data
-accuracy 0.7622377622377622
-precision 0.7555555555555555
-recall 0.5964912280701754
-accuracy_count 109
+accuracy 0.7412587412587412
+precision 0.6415094339622641
+recall 0.6538461538461539
+accuracy_count 106
 
 Classification:  survived ~ quadratic_discriminant_analysis
 
 Training data
-accuracy 0.7943760984182777
-precision 0.7594339622641509
-recall 0.7092511013215859
-accuracy_count 452
+accuracy 0.8066783831282952
+precision 0.7752293577981652
+recall 0.7347826086956522
+accuracy_count 459
 
 Test data
-accuracy 0.8251748251748252
-precision 0.8103448275862069
-recall 0.7704918032786885
-accuracy_count 118
+accuracy 0.7622377622377622
+precision 0.7142857142857143
+recall 0.6896551724137931
+accuracy_count 109
 </code></pre>
-<h2 id="sgd">SGD</h2>
+<h3 id="sgd">SGD</h3>
 <pre><code class="language-python">def sgd_fn(x_train, y_train, max_iter=1000, tol=1e-3):
     
     model = SGDClassifier(max_iter=max_iter, tol=tol)
@@ -2853,60 +2876,60 @@ compare_results()
 <pre><code>Classification:  survived ~ logistic
 
 Training data
-accuracy 0.8101933216168717
-precision 0.8020304568527918
-recall 0.6960352422907489
-accuracy_count 461
+accuracy 0.8137082601054482
+precision 0.7990196078431373
+recall 0.7149122807017544
+accuracy_count 463
 
 Test data
-accuracy 0.7692307692307693
-precision 0.7692307692307693
-recall 0.6557377049180327
-accuracy_count 110
+accuracy 0.7762237762237763
+precision 0.8043478260869565
+recall 0.6166666666666667
+accuracy_count 111
 
 Classification:  survived ~ linear_discriminant_analysis
 
 Training data
-accuracy 0.8101933216168717
-precision 0.7887323943661971
-recall 0.7272727272727273
-accuracy_count 461
+accuracy 0.7996485061511424
+precision 0.7772727272727272
+recall 0.7245762711864406
+accuracy_count 455
 
 Test data
-accuracy 0.7622377622377622
-precision 0.7555555555555555
-recall 0.5964912280701754
-accuracy_count 109
+accuracy 0.7412587412587412
+precision 0.6415094339622641
+recall 0.6538461538461539
+accuracy_count 106
 
 Classification:  survived ~ quadratic_discriminant_analysis
 
 Training data
-accuracy 0.7943760984182777
-precision 0.7594339622641509
-recall 0.7092511013215859
-accuracy_count 452
+accuracy 0.8066783831282952
+precision 0.7752293577981652
+recall 0.7347826086956522
+accuracy_count 459
 
 Test data
-accuracy 0.8251748251748252
-precision 0.8103448275862069
-recall 0.7704918032786885
-accuracy_count 118
+accuracy 0.7622377622377622
+precision 0.7142857142857143
+recall 0.6896551724137931
+accuracy_count 109
 
 Classification:  survived ~ sgd
 
 Training data
-accuracy 0.7504393673110721
-precision 0.6554054054054054
-recall 0.8290598290598291
-accuracy_count 427
+accuracy 0.7715289982425307
+precision 0.6814814814814815
+recall 0.8070175438596491
+accuracy_count 439
 
 Test data
-accuracy 0.7272727272727273
-precision 0.6
-recall 0.8333333333333334
-accuracy_count 104
+accuracy 0.7342657342657343
+precision 0.6447368421052632
+recall 0.8166666666666667
+accuracy_count 105
 </code></pre>
-<h2 id="svc-lineal">SVC Lineal</h2>
+<h3 id="svc-lineal">SVC Lineal</h3>
 <p><a href="https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html">https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html</a></p>
 <ul>
 <li>SVC con kernel lineal</li>
@@ -2929,74 +2952,74 @@ compare_results()
 <pre><code>Classification:  survived ~ logistic
 
 Training data
-accuracy 0.8101933216168717
-precision 0.8020304568527918
-recall 0.6960352422907489
-accuracy_count 461
+accuracy 0.8137082601054482
+precision 0.7990196078431373
+recall 0.7149122807017544
+accuracy_count 463
 
 Test data
-accuracy 0.7692307692307693
-precision 0.7692307692307693
-recall 0.6557377049180327
-accuracy_count 110
+accuracy 0.7762237762237763
+precision 0.8043478260869565
+recall 0.6166666666666667
+accuracy_count 111
 
 Classification:  survived ~ linear_discriminant_analysis
 
 Training data
-accuracy 0.8101933216168717
-precision 0.7887323943661971
-recall 0.7272727272727273
-accuracy_count 461
+accuracy 0.7996485061511424
+precision 0.7772727272727272
+recall 0.7245762711864406
+accuracy_count 455
 
 Test data
-accuracy 0.7622377622377622
-precision 0.7555555555555555
-recall 0.5964912280701754
-accuracy_count 109
+accuracy 0.7412587412587412
+precision 0.6415094339622641
+recall 0.6538461538461539
+accuracy_count 106
 
 Classification:  survived ~ quadratic_discriminant_analysis
 
 Training data
-accuracy 0.7943760984182777
-precision 0.7594339622641509
-recall 0.7092511013215859
-accuracy_count 452
+accuracy 0.8066783831282952
+precision 0.7752293577981652
+recall 0.7347826086956522
+accuracy_count 459
 
 Test data
-accuracy 0.8251748251748252
-precision 0.8103448275862069
-recall 0.7704918032786885
-accuracy_count 118
+accuracy 0.7622377622377622
+precision 0.7142857142857143
+recall 0.6896551724137931
+accuracy_count 109
 
 Classification:  survived ~ sgd
 
 Training data
-accuracy 0.7504393673110721
-precision 0.6554054054054054
-recall 0.8290598290598291
-accuracy_count 427
+accuracy 0.7715289982425307
+precision 0.6814814814814815
+recall 0.8070175438596491
+accuracy_count 439
 
 Test data
-accuracy 0.7272727272727273
-precision 0.6
-recall 0.8333333333333334
-accuracy_count 104
+accuracy 0.7342657342657343
+precision 0.6447368421052632
+recall 0.8166666666666667
+accuracy_count 105
 
 Classification:  survived ~ linear_svc
 
 Training data
-accuracy 0.7961335676625659
-precision 0.7692307692307693
-recall 0.7017543859649122
-accuracy_count 453
+accuracy 0.7873462214411248
+precision 0.7568807339449541
+recall 0.7081545064377682
+accuracy_count 448
 
 Test data
-accuracy 0.7762237762237763
-precision 0.7333333333333333
-recall 0.7333333333333333
-accuracy_count 111
+accuracy 0.8041958041958042
+precision 0.7368421052631579
+recall 0.7636363636363637
+accuracy_count 115
 </code></pre>
-<h2 id="radius-neighbors-classifier">Radius Neighbors Classifier</h2>
+<h3 id="radius-neighbors-classifier">Radius Neighbors Classifier</h3>
 <pre><code class="language-python">def radius_neighbor_fn(x_train, y_train, radius=40.0):
 
     model = RadiusNeighborsClassifier(radius=radius)
@@ -3013,88 +3036,88 @@ compare_results()
 <pre><code>Classification:  survived ~ logistic
 
 Training data
-accuracy 0.8101933216168717
-precision 0.8020304568527918
-recall 0.6960352422907489
-accuracy_count 461
+accuracy 0.8137082601054482
+precision 0.7990196078431373
+recall 0.7149122807017544
+accuracy_count 463
 
 Test data
-accuracy 0.7692307692307693
-precision 0.7692307692307693
-recall 0.6557377049180327
-accuracy_count 110
+accuracy 0.7762237762237763
+precision 0.8043478260869565
+recall 0.6166666666666667
+accuracy_count 111
 
 Classification:  survived ~ linear_discriminant_analysis
 
 Training data
-accuracy 0.8101933216168717
-precision 0.7887323943661971
-recall 0.7272727272727273
-accuracy_count 461
+accuracy 0.7996485061511424
+precision 0.7772727272727272
+recall 0.7245762711864406
+accuracy_count 455
 
 Test data
-accuracy 0.7622377622377622
-precision 0.7555555555555555
-recall 0.5964912280701754
-accuracy_count 109
+accuracy 0.7412587412587412
+precision 0.6415094339622641
+recall 0.6538461538461539
+accuracy_count 106
 
 Classification:  survived ~ quadratic_discriminant_analysis
 
 Training data
-accuracy 0.7943760984182777
-precision 0.7594339622641509
-recall 0.7092511013215859
-accuracy_count 452
+accuracy 0.8066783831282952
+precision 0.7752293577981652
+recall 0.7347826086956522
+accuracy_count 459
 
 Test data
-accuracy 0.8251748251748252
-precision 0.8103448275862069
-recall 0.7704918032786885
-accuracy_count 118
+accuracy 0.7622377622377622
+precision 0.7142857142857143
+recall 0.6896551724137931
+accuracy_count 109
 
 Classification:  survived ~ sgd
 
 Training data
-accuracy 0.7504393673110721
-precision 0.6554054054054054
-recall 0.8290598290598291
-accuracy_count 427
+accuracy 0.7715289982425307
+precision 0.6814814814814815
+recall 0.8070175438596491
+accuracy_count 439
 
 Test data
-accuracy 0.7272727272727273
-precision 0.6
-recall 0.8333333333333334
-accuracy_count 104
+accuracy 0.7342657342657343
+precision 0.6447368421052632
+recall 0.8166666666666667
+accuracy_count 105
 
 Classification:  survived ~ linear_svc
 
 Training data
-accuracy 0.7961335676625659
-precision 0.7692307692307693
-recall 0.7017543859649122
-accuracy_count 453
+accuracy 0.7873462214411248
+precision 0.7568807339449541
+recall 0.7081545064377682
+accuracy_count 448
 
 Test data
-accuracy 0.7762237762237763
-precision 0.7333333333333333
-recall 0.7333333333333333
-accuracy_count 111
+accuracy 0.8041958041958042
+precision 0.7368421052631579
+recall 0.7636363636363637
+accuracy_count 115
 
 Classification:  survived ~ radius_neighbors
 
 Training data
-accuracy 0.671353251318102
-precision 0.7157894736842105
-recall 0.2982456140350877
-accuracy_count 382
+accuracy 0.6678383128295254
+precision 0.7244897959183674
+recall 0.30472103004291845
+accuracy_count 380
 
 Test data
-accuracy 0.6433566433566433
-precision 0.7142857142857143
-recall 0.25
-accuracy_count 92
+accuracy 0.6783216783216783
+precision 0.7368421052631579
+recall 0.2545454545454545
+accuracy_count 97
 </code></pre>
-<h2 id="decision-tree-classifier">Decision Tree classifier</h2>
+<h3 id="decision-tree-classifier">Decision Tree classifier</h3>
 <p>max_depth = None [ If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples ]</p>
 <p>max_features = None [None &ndash; max_features=n_features,
 auto &ndash; then max_features=sqrt(n_features),
@@ -3117,102 +3140,102 @@ compare_results()
 <pre><code>Classification:  survived ~ logistic
 
 Training data
-accuracy 0.8101933216168717
-precision 0.8020304568527918
-recall 0.6960352422907489
-accuracy_count 461
+accuracy 0.8137082601054482
+precision 0.7990196078431373
+recall 0.7149122807017544
+accuracy_count 463
 
 Test data
-accuracy 0.7692307692307693
-precision 0.7692307692307693
-recall 0.6557377049180327
-accuracy_count 110
+accuracy 0.7762237762237763
+precision 0.8043478260869565
+recall 0.6166666666666667
+accuracy_count 111
 
 Classification:  survived ~ linear_discriminant_analysis
 
 Training data
-accuracy 0.8101933216168717
-precision 0.7887323943661971
-recall 0.7272727272727273
-accuracy_count 461
+accuracy 0.7996485061511424
+precision 0.7772727272727272
+recall 0.7245762711864406
+accuracy_count 455
 
 Test data
-accuracy 0.7622377622377622
-precision 0.7555555555555555
-recall 0.5964912280701754
-accuracy_count 109
+accuracy 0.7412587412587412
+precision 0.6415094339622641
+recall 0.6538461538461539
+accuracy_count 106
 
 Classification:  survived ~ quadratic_discriminant_analysis
 
 Training data
-accuracy 0.7943760984182777
-precision 0.7594339622641509
-recall 0.7092511013215859
-accuracy_count 452
+accuracy 0.8066783831282952
+precision 0.7752293577981652
+recall 0.7347826086956522
+accuracy_count 459
 
 Test data
-accuracy 0.8251748251748252
-precision 0.8103448275862069
-recall 0.7704918032786885
-accuracy_count 118
+accuracy 0.7622377622377622
+precision 0.7142857142857143
+recall 0.6896551724137931
+accuracy_count 109
 
 Classification:  survived ~ sgd
 
 Training data
-accuracy 0.7504393673110721
-precision 0.6554054054054054
-recall 0.8290598290598291
-accuracy_count 427
+accuracy 0.7715289982425307
+precision 0.6814814814814815
+recall 0.8070175438596491
+accuracy_count 439
 
 Test data
-accuracy 0.7272727272727273
-precision 0.6
-recall 0.8333333333333334
-accuracy_count 104
+accuracy 0.7342657342657343
+precision 0.6447368421052632
+recall 0.8166666666666667
+accuracy_count 105
 
 Classification:  survived ~ linear_svc
 
 Training data
-accuracy 0.7961335676625659
-precision 0.7692307692307693
-recall 0.7017543859649122
-accuracy_count 453
+accuracy 0.7873462214411248
+precision 0.7568807339449541
+recall 0.7081545064377682
+accuracy_count 448
 
 Test data
-accuracy 0.7762237762237763
-precision 0.7333333333333333
-recall 0.7333333333333333
-accuracy_count 111
+accuracy 0.8041958041958042
+precision 0.7368421052631579
+recall 0.7636363636363637
+accuracy_count 115
 
 Classification:  survived ~ radius_neighbors
 
 Training data
-accuracy 0.671353251318102
-precision 0.7157894736842105
-recall 0.2982456140350877
-accuracy_count 382
+accuracy 0.6678383128295254
+precision 0.7244897959183674
+recall 0.30472103004291845
+accuracy_count 380
 
 Test data
-accuracy 0.6433566433566433
-precision 0.7142857142857143
-recall 0.25
-accuracy_count 92
+accuracy 0.6783216783216783
+precision 0.7368421052631579
+recall 0.2545454545454545
+accuracy_count 97
 
 Classification:  survived ~ decision_tree
 
 Training data
-accuracy 0.9894551845342706
+accuracy 0.9876977152899824
 precision 1.0
-recall 0.9737991266375546
-accuracy_count 563
+recall 0.9694323144104804
+accuracy_count 562
 
 Test data
-accuracy 0.6993006993006993
-precision 0.6538461538461539
-recall 0.576271186440678
-accuracy_count 100
+accuracy 0.7482517482517482
+precision 0.6825396825396826
+recall 0.7288135593220338
+accuracy_count 107
 </code></pre>
-<h2 id="naive-bayes">Naive Bayes</h2>
+<h3 id="naive-bayes">Naive Bayes</h3>
 <pre><code class="language-python">def naive_bayes_fn(x_train,y_train, priors=None):
     
     model = GaussianNB(priors=priors)
@@ -3230,116 +3253,158 @@ compare_results()
 <pre><code>Classification:  survived ~ logistic
 
 Training data
-accuracy 0.8101933216168717
-precision 0.8020304568527918
-recall 0.6960352422907489
-accuracy_count 461
+accuracy 0.8137082601054482
+precision 0.7990196078431373
+recall 0.7149122807017544
+accuracy_count 463
 
 Test data
-accuracy 0.7692307692307693
-precision 0.7692307692307693
-recall 0.6557377049180327
-accuracy_count 110
+accuracy 0.7762237762237763
+precision 0.8043478260869565
+recall 0.6166666666666667
+accuracy_count 111
 
 Classification:  survived ~ linear_discriminant_analysis
 
 Training data
-accuracy 0.8101933216168717
-precision 0.7887323943661971
-recall 0.7272727272727273
-accuracy_count 461
+accuracy 0.7996485061511424
+precision 0.7772727272727272
+recall 0.7245762711864406
+accuracy_count 455
 
 Test data
-accuracy 0.7622377622377622
-precision 0.7555555555555555
-recall 0.5964912280701754
-accuracy_count 109
+accuracy 0.7412587412587412
+precision 0.6415094339622641
+recall 0.6538461538461539
+accuracy_count 106
 
 Classification:  survived ~ quadratic_discriminant_analysis
 
 Training data
-accuracy 0.7943760984182777
-precision 0.7594339622641509
-recall 0.7092511013215859
-accuracy_count 452
+accuracy 0.8066783831282952
+precision 0.7752293577981652
+recall 0.7347826086956522
+accuracy_count 459
 
 Test data
-accuracy 0.8251748251748252
-precision 0.8103448275862069
-recall 0.7704918032786885
-accuracy_count 118
+accuracy 0.7622377622377622
+precision 0.7142857142857143
+recall 0.6896551724137931
+accuracy_count 109
 
 Classification:  survived ~ sgd
 
 Training data
-accuracy 0.7504393673110721
-precision 0.6554054054054054
-recall 0.8290598290598291
-accuracy_count 427
+accuracy 0.7715289982425307
+precision 0.6814814814814815
+recall 0.8070175438596491
+accuracy_count 439
 
 Test data
-accuracy 0.7272727272727273
-precision 0.6
-recall 0.8333333333333334
-accuracy_count 104
+accuracy 0.7342657342657343
+precision 0.6447368421052632
+recall 0.8166666666666667
+accuracy_count 105
 
 Classification:  survived ~ linear_svc
 
 Training data
-accuracy 0.7961335676625659
-precision 0.7692307692307693
-recall 0.7017543859649122
-accuracy_count 453
+accuracy 0.7873462214411248
+precision 0.7568807339449541
+recall 0.7081545064377682
+accuracy_count 448
 
 Test data
-accuracy 0.7762237762237763
-precision 0.7333333333333333
-recall 0.7333333333333333
-accuracy_count 111
+accuracy 0.8041958041958042
+precision 0.7368421052631579
+recall 0.7636363636363637
+accuracy_count 115
 
 Classification:  survived ~ radius_neighbors
 
 Training data
-accuracy 0.671353251318102
-precision 0.7157894736842105
-recall 0.2982456140350877
-accuracy_count 382
+accuracy 0.6678383128295254
+precision 0.7244897959183674
+recall 0.30472103004291845
+accuracy_count 380
 
 Test data
-accuracy 0.6433566433566433
-precision 0.7142857142857143
-recall 0.25
-accuracy_count 92
+accuracy 0.6783216783216783
+precision 0.7368421052631579
+recall 0.2545454545454545
+accuracy_count 97
 
 Classification:  survived ~ decision_tree
 
 Training data
-accuracy 0.9894551845342706
+accuracy 0.9876977152899824
 precision 1.0
-recall 0.9737991266375546
-accuracy_count 563
+recall 0.9694323144104804
+accuracy_count 562
 
 Test data
-accuracy 0.6993006993006993
-precision 0.6538461538461539
-recall 0.576271186440678
-accuracy_count 100
+accuracy 0.7482517482517482
+precision 0.6825396825396826
+recall 0.7288135593220338
+accuracy_count 107
 
 Classification:  survived ~ naive_bayes
 
 Training data
 accuracy 0.7644991212653779
-precision 0.7032520325203252
-recall 0.7393162393162394
+precision 0.6877637130801688
+recall 0.7309417040358744
 accuracy_count 435
 
 Test data
-accuracy 0.7202797202797203
-precision 0.6206896551724138
-recall 0.6666666666666666
-accuracy_count 103
+accuracy 0.7622377622377622
+precision 0.746031746031746
+recall 0.7230769230769231
+accuracy_count 109
 </code></pre>
-<h1 id="hyperparameter-tunning-optimizacion-de-hiperparametros">Hyperparameter tunning (Optimizacion de hiperparametros)</h1>
+<h2 id="cross-validation---seleccion-de-modelos">Cross Validation - Seleccion de Modelos</h2>
+<p>Analizar la varianza de los resultados para obtener los que tengan mejor resultado.</p>
+<pre><code class="language-python"># Grabar los resultados de cada modelo
+from sklearn import model_selection
+
+models = []
+
+#logistic Regression
+models.append(('Logistic', LogisticRegression(solver='liblinear')))
+
+# Decision Tree classifier
+models.append(('Decision Tree', DecisionTreeClassifier()))
+
+#
+models.append(('LDA', LinearDiscriminantAnalysis(solver= 'svd')))
+
+# evaluate each model in turn
+results = []
+names = []
+scoring = 'accuracy'
+for name, model in models:
+    # Kfol cross validation for model selection
+    kfold = model_selection.KFold(n_splits=10)
+    #X train , y train
+    cv_results = model_selection.cross_val_score(model, x_train, y_train, cv=kfold, scoring=scoring)
+    results.append(cv_results)
+    names.append(name)
+    msg = f&quot;({name}, {cv_results.mean()}, {cv_results.std()}&quot;
+    print(msg)
+</code></pre>
+<pre><code>(Logistic, 0.7996553884711779, 0.03052711377670607
+(Decision Tree, 0.7908521303258145, 0.05897038598057798
+(LDA, 0.7944235588972431, 0.0357488400750467
+</code></pre>
+<pre><code class="language-python">plt.figure(figsize = (15,8)) 
+result_df = pd.DataFrame(results, index=names).T
+result_df.boxplot()
+plt.title(&quot;Resultados de Cross Validation&quot;);
+</code></pre>
+<p>​ <br>
+<img src="./8-Clasificacion-Python_92_0.png" alt="png">
+​</p>
+<h2 id="hyperparameter-tunning-optimizacion-de-hiperparametros">Hyperparameter tunning (Optimizacion de hiperparametros)</h2>
 <pre><code class="language-python">titanic_df = pd.read_csv('datasets/titanic_processed.csv')
 
 titanic_df.head()
@@ -3379,11 +3444,11 @@ titanic_df.head()
       <th>0</th>
       <td>1</td>
       <td>3</td>
-      <td>1</td>
-      <td>25.0</td>
-      <td>1</td>
       <td>0</td>
-      <td>7.7750</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7.9250</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -3393,49 +3458,49 @@ titanic_df.head()
       <td>0</td>
       <td>3</td>
       <td>1</td>
-      <td>27.0</td>
+      <td>21.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8.4333</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>14.4542</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>51.0</td>
+      <td>57.0</td>
       <td>0</td>
       <td>0</td>
-      <td>7.0542</td>
-      <td>0</td>
+      <td>12.3500</td>
       <td>0</td>
       <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>19.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.8958</td>
-      <td>0</td>
-      <td>0</td>
+      <td>25.0</td>
       <td>1</td>
+      <td>2</td>
+      <td>41.5792</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
+      <td>0</td>
       <td>2</td>
       <td>1</td>
-      <td>34.0</td>
+      <td>35.0</td>
       <td>0</td>
       <td>0</td>
-      <td>13.0000</td>
+      <td>10.5000</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -3464,7 +3529,7 @@ x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.2)
     print(&quot;recall_score : &quot;, recall)
     print()
 </code></pre>
-<h2 id="decision-tree">Decision Tree</h2>
+<h3 id="decision-tree">Decision Tree</h3>
 <pre><code class="language-python">from sklearn.model_selection import GridSearchCV
 
 parameters = {'max_depth': [2, 4, 5, 7, 9, 10]}
@@ -3474,9 +3539,11 @@ grid_search.fit(x_train, y_train)
 
 grid_search.best_params_
 </code></pre>
-<pre><code>{'max_depth': 7}
+<pre><code>{'max_depth': 2}
 </code></pre>
-<pre><code class="language-python">for i in range(6):
+<pre><code class="language-python"># Para ver todos los resultados del cross validation
+# No es necesario, solo es informativo para ver como varia el modelo
+for i in range(6):
     print('Parameters: ', grid_search.cv_results_['params'][i])
 
     print('Mean Test Score: ', grid_search.cv_results_['mean_test_score'][i])
@@ -3484,23 +3551,23 @@ grid_search.best_params_
     print('Rank: ', grid_search.cv_results_['rank_test_score'][i])
 </code></pre>
 <pre><code>Parameters:  {'max_depth': 2}
-Mean Test Score:  0.797930010210712
-Rank:  2
-Parameters:  {'max_depth': 4}
-Mean Test Score:  0.7978371855564838
-Rank:  3
-Parameters:  {'max_depth': 5}
-Mean Test Score:  0.7855657662675206
-Rank:  4
-Parameters:  {'max_depth': 7}
-Mean Test Score:  0.8102014294996751
+Mean Test Score:  0.8065998329156224
 Rank:  1
+Parameters:  {'max_depth': 4}
+Mean Test Score:  0.8065998329156224
+Rank:  1
+Parameters:  {'max_depth': 5}
+Mean Test Score:  0.8031003434512206
+Rank:  3
+Parameters:  {'max_depth': 7}
+Mean Test Score:  0.7890466908010768
+Rank:  4
 Parameters:  {'max_depth': 9}
-Mean Test Score:  0.7768309663046504
-Rank:  5
-Parameters:  {'max_depth': 10}
-Mean Test Score:  0.7733036294439802
+Mean Test Score:  0.773266499582289
 Rank:  6
+Parameters:  {'max_depth': 10}
+Mean Test Score:  0.7750208855472014
+Rank:  5
 </code></pre>
 <pre><code class="language-python">decision_tree_model = DecisionTreeClassifier( \
     max_depth = grid_search.best_params_['max_depth']).fit(x_train, y_train)
@@ -3510,12 +3577,12 @@ Rank:  6
 <pre><code class="language-python">summarize_classification(y_test, y_pred)
 </code></pre>
 <pre><code>Test data count:  143
-accuracy_count :  112
-accuracy_score :  0.7832167832167832
-precision_score :  0.8604651162790697
-recall_score :  0.5967741935483871
+accuracy_count :  109
+accuracy_score :  0.7622377622377622
+precision_score :  0.9333333333333333
+recall_score :  0.4666666666666667
 </code></pre>
-<h2 id="regresion-logistica-1">Regresion logistica</h2>
+<h3 id="regresion-logistica-1">Regresion logistica</h3>
 <pre><code class="language-python">parameters = {'penalty': ['l1', 'l2'], 
               'C': [0.1, 0.4, 0.8, 1, 2, 5]}
 
@@ -3524,49 +3591,51 @@ grid_search.fit(x_train, y_train)
 
 grid_search.best_params_
 </code></pre>
-<pre><code>{'C': 2, 'penalty': 'l1'}
+<pre><code>{'C': 0.8, 'penalty': 'l1'}
 </code></pre>
-<pre><code class="language-python">for i in range(12):
+<pre><code class="language-python"># Para ver todos los resultados del cross validation
+# No es necesario, solo es informativo para ver como varia el modelo
+for i in range(12):
     print('Parameters: ', grid_search.cv_results_['params'][i])
     print('Mean Test Score: ', grid_search.cv_results_['mean_test_score'][i])
     print('Rank: ', grid_search.cv_results_['rank_test_score'][i])
 </code></pre>
 <pre><code>Parameters:  {'C': 0.1, 'penalty': 'l1'}
-Mean Test Score:  0.7803304557690524
+Mean Test Score:  0.7733036294439802
 Rank:  12
 Parameters:  {'C': 0.1, 'penalty': 'l2'}
-Mean Test Score:  0.780339738234475
-Rank:  11
+Mean Test Score:  0.7961384943841084
+Rank:  10
 Parameters:  {'C': 0.4, 'penalty': 'l1'}
-Mean Test Score:  0.7943562610229277
+Mean Test Score:  0.803183885640026
 Rank:  7
 Parameters:  {'C': 0.4, 'penalty': 'l2'}
-Mean Test Score:  0.7855843311983662
+Mean Test Score:  0.7961384943841084
 Rank:  10
 Parameters:  {'C': 0.8, 'penalty': 'l1'}
-Mean Test Score:  0.7978557504873294
-Rank:  4
-Parameters:  {'C': 0.8, 'penalty': 'l2'}
-Mean Test Score:  0.7961199294532628
-Rank:  6
-Parameters:  {'C': 1, 'penalty': 'l1'}
-Mean Test Score:  0.7978557504873294
-Rank:  4
-Parameters:  {'C': 1, 'penalty': 'l2'}
-Mean Test Score:  0.7996287013830874
-Rank:  3
-Parameters:  {'C': 2, 'penalty': 'l1'}
-Mean Test Score:  0.8048825768124014
+Mean Test Score:  0.8119558154645875
 Rank:  1
-Parameters:  {'C': 2, 'penalty': 'l2'}
-Mean Test Score:  0.7943376960920822
+Parameters:  {'C': 0.8, 'penalty': 'l2'}
+Mean Test Score:  0.801410934744268
 Rank:  8
-Parameters:  {'C': 5, 'penalty': 'l1'}
-Mean Test Score:  0.8031096259166435
+Parameters:  {'C': 1, 'penalty': 'l1'}
+Mean Test Score:  0.8102014294996751
 Rank:  2
+Parameters:  {'C': 1, 'penalty': 'l2'}
+Mean Test Score:  0.8049197066740926
+Rank:  5
+Parameters:  {'C': 2, 'penalty': 'l1'}
+Mean Test Score:  0.8049197066740926
+Rank:  5
+Parameters:  {'C': 2, 'penalty': 'l2'}
+Mean Test Score:  0.8101828645688295
+Rank:  3
+Parameters:  {'C': 5, 'penalty': 'l1'}
+Mean Test Score:  0.8066740926390049
+Rank:  4
 Parameters:  {'C': 5, 'penalty': 'l2'}
-Mean Test Score:  0.7943376960920822
-Rank:  8
+Mean Test Score:  0.79963798384851
+Rank:  9
 </code></pre>
 <pre><code class="language-python">logistic_model = LogisticRegression(solver='liblinear', \
     penalty=grid_search.best_params_['penalty'], C=grid_search.best_params_['C']). \
@@ -3577,12 +3646,64 @@ Rank:  8
 <pre><code class="language-python">summarize_classification(y_test, y_pred)
 </code></pre>
 <pre><code>Test data count:  143
-accuracy_count :  110
-accuracy_score :  0.7692307692307693
-precision_score :  0.7543859649122807
-recall_score :  0.6935483870967742
+accuracy_count :  113
+accuracy_score :  0.7902097902097902
+precision_score :  0.8125
+recall_score :  0.65
 </code></pre>
-<h1 id="grabar-el-modelo">Grabar el Modelo</h1>
+<h2 id="final-evaluation-test">Final Evaluation Test</h2>
+<pre><code class="language-python">
+from sklearn.metrics import plot_confusion_matrix
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import plot_precision_recall_curve
+</code></pre>
+<h3 id="decision-tree-1">Decision Tree</h3>
+<pre><code class="language-python">decision_tree_model = DecisionTreeClassifier( \
+    max_depth = 4).fit(x_train, y_train)
+</code></pre>
+<pre><code class="language-python">y_pred = decision_tree_model.predict(x_test)
+</code></pre>
+<pre><code class="language-python">print(classification_report(y_test, y_pred))
+</code></pre>
+<pre><code>              precision    recall  f1-score   support
+
+           0       0.76      0.92      0.83        83
+           1       0.84      0.60      0.70        60
+
+    accuracy                           0.78       143
+   macro avg       0.80      0.76      0.76       143
+weighted avg       0.79      0.78      0.78       143
+</code></pre>
+<pre><code class="language-python">plot_confusion_matrix(decision_tree_model, x_test, y_test,cmap=plt.cm.Blues);
+</code></pre>
+<p>​ <br>
+<img src="./8-Clasificacion-Python_115_0.png" alt="png">
+​</p>
+<h3 id="regresion-logistica-2">Regresion Logistica</h3>
+<pre><code class="language-python">logistic_model = LogisticRegression(solver='liblinear', \
+    penalty='l1', C=5). \
+    fit(x_train, y_train)
+</code></pre>
+<pre><code class="language-python">y_pred = logistic_model.predict(x_test)
+</code></pre>
+<pre><code class="language-python">print(classification_report(y_test, y_pred))
+</code></pre>
+<pre><code>              precision    recall  f1-score   support
+
+           0       0.77      0.89      0.83        83
+           1       0.81      0.63      0.71        60
+
+    accuracy                           0.78       143
+   macro avg       0.79      0.76      0.77       143
+weighted avg       0.79      0.78      0.78       143
+</code></pre>
+<pre><code class="language-python">plot_confusion_matrix(logistic_model, x_test, y_test,cmap=plt.cm.Blues);
+</code></pre>
+<p>​ <br>
+<img src="./8-Clasificacion-Python_120_0.png" alt="png">
+​</p>
+<h2 id="grabar-el-modelo">Grabar el Modelo</h2>
 <pre><code class="language-python">from joblib import dump, load # libreria de serializacion
 
 # grabar el modelo en un archivo
@@ -3590,14 +3711,26 @@ dump(logistic_model, 'logistic_model-titanic.joblib')
 </code></pre>
 <pre><code>['logistic_model-titanic.joblib']
 </code></pre>
-<h1 id="referencias">Referencias</h1>
-<p><a href="https://scikit-learn.org/stable/supervised_learning.html#supervised-learning">https://scikit-learn.org/stable/supervised_learning.html#supervised-learning</a></p>
+<pre><code class="language-python">from joblib import load
+
+mi_modelo = load('logistic_model-titanic.joblib')
+</code></pre>
+<pre><code class="language-python">mi_modelo.predict(x_test)
+</code></pre>
+<pre><code>array([1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1,
+       0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0,
+       0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0,
+       0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0,
+       0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1,
+       0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0])
+</code></pre>
+<h2 id="referencias">Referencias</h2>
 <p>Cheatsheet scikitlearn
 <a href="https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116">https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116</a></p>
 <p><strong>Phd. Jose R. Zapata</strong></p>
 <ul>
 <li><a href="https://joserzapata.github.io/" target="_blank" rel="noopener">https://joserzapata.github.io/</a></li>
-<li><a href="https://twitter.com/joserzapata">https://twitter.com/joserzapata</a></li>
 </ul>
 
           </div>
@@ -3620,7 +3753,7 @@ dump(logistic_model, 'logistic_model-titanic.joblib')
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Sep 9, 2020</p>
+          <p>Last updated on Apr 18, 2020</p>
 
           
 
