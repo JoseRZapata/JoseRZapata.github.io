@@ -342,7 +342,7 @@
     <meta property="twitter:image" content="https://joserzapata.github.io/media/icon_huef99ce4a8cdef83a01a57b9c8063a4d3_108982_512x512_fill_lanczos_center_2.png" /><meta property="og:locale" content="en-us" />
   
     
-      <meta property="og:updated_time" content="2021-04-17T00:00:00&#43;00:00" />
+      <meta property="og:updated_time" content="2021-04-18T00:00:00&#43;00:00" />
     
   
 
@@ -1035,27 +1035,37 @@
 
       <nav id="TableOfContents">
   <ul>
-    <li><a href="#preprocesamiento-de-datos">Preprocesamiento de datos</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#scatter-plot">Scatter plot</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#kmeans">Kmeans</a></li>
-    <li><a href="#agglomerative">Agglomerative</a></li>
-    <li><a href="#dbscan">Dbscan</a></li>
-    <li><a href="#mean-shift">Mean Shift</a></li>
-    <li><a href="#birch">Birch</a></li>
-    <li><a href="#affinity-propagation">Affinity Propagation</a></li>
-    <li><a href="#mini-batch-kmeans">Mini Batch Kmeans</a></li>
-  </ul>
-
-  <ul>
-    <li><a href="#kmeans-clustering">KMeans clustering</a></li>
-    <li><a href="#dbscan-clustering">DBSCAN clustering</a></li>
-    <li><a href="#meanshift-clustering">MeanShift clustering</a></li>
+    <li><a href="#informacion-de-los-datos">Informacion de los datos</a>
+      <ul>
+        <li><a href="#preprocesamiento-de-datos">Preprocesamiento de datos</a></li>
+      </ul>
+    </li>
+    <li><a href="#analisis-univariable">Analisis Univariable</a></li>
+    <li><a href="#analisis-bivariable">Analisis Bivariable</a>
+      <ul>
+        <li><a href="#scatter-plot">Scatter plot</a></li>
+      </ul>
+    </li>
+    <li><a href="#kmeans-simple">KMeans SIMPLE</a></li>
+    <li><a href="#clustering-con-varios-modelos">Clustering con varios modelos</a>
+      <ul>
+        <li><a href="#kmeans">Kmeans</a></li>
+        <li><a href="#agglomerative">Agglomerative</a></li>
+        <li><a href="#dbscan">Dbscan</a></li>
+        <li><a href="#mean-shift">Mean Shift</a></li>
+        <li><a href="#birch">Birch</a></li>
+        <li><a href="#affinity-propagation">Affinity Propagation</a></li>
+        <li><a href="#mini-batch-kmeans">Mini Batch Kmeans</a></li>
+      </ul>
+    </li>
+    <li><a href="#hyperparameter-tuning-optimizacion-de-hiperparametros">Hyperparameter Tuning (optimizacion de Hiperparametros)</a>
+      <ul>
+        <li><a href="#kmeans-clustering">KMeans clustering</a></li>
+        <li><a href="#dbscan-clustering">DBSCAN clustering</a></li>
+        <li><a href="#meanshift-clustering">MeanShift clustering</a></li>
+      </ul>
+    </li>
+    <li><a href="#referencias">Referencias</a></li>
   </ul>
 </nav>
 
@@ -1087,7 +1097,7 @@ from sklearn.cluster import KMeans
 import warnings
 warnings.filterwarnings(&quot;ignore&quot;)
 </code></pre>
-<h1 id="informacion-de-los-datos">Informacion de los datos</h1>
+<h2 id="informacion-de-los-datos">Informacion de los datos</h2>
 <pre><code class="language-python">iris_df = pd.read_csv('datasets/iris.csv', 
                       skiprows=1, 
                       names = ['sepal-length',
@@ -1200,43 +1210,43 @@ iris_df.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>6.5</td>
-      <td>2.8</td>
-      <td>4.6</td>
-      <td>1.5</td>
+      <td>6.3</td>
+      <td>2.3</td>
+      <td>4.4</td>
+      <td>1.3</td>
       <td>Iris-versicolor</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>6.8</td>
-      <td>3.2</td>
-      <td>5.9</td>
-      <td>2.3</td>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.5</td>
+      <td>1.8</td>
       <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>5.4</td>
-      <td>3.9</td>
-      <td>1.3</td>
-      <td>0.4</td>
+      <td>5.0</td>
+      <td>3.5</td>
+      <td>1.6</td>
+      <td>0.6</td>
       <td>Iris-setosa</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>1.7</td>
-      <td>Iris-versicolor</td>
+      <td>5.6</td>
+      <td>2.8</td>
+      <td>4.9</td>
+      <td>2.0</td>
+      <td>Iris-virginica</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>7.2</td>
-      <td>3.2</td>
-      <td>6.0</td>
-      <td>1.8</td>
-      <td>Iris-virginica</td>
+      <td>6.2</td>
+      <td>2.9</td>
+      <td>4.3</td>
+      <td>1.3</td>
+      <td>Iris-versicolor</td>
     </tr>
   </tbody>
 </table>
@@ -1366,7 +1376,7 @@ iris_df.head()
 </code></pre>
 <pre><code>array(['Iris-versicolor', 'Iris-virginica', 'Iris-setosa'], dtype=object)
 </code></pre>
-<h2 id="preprocesamiento-de-datos">Preprocesamiento de datos</h2>
+<h3 id="preprocesamiento-de-datos">Preprocesamiento de datos</h3>
 <pre><code class="language-python">from sklearn import preprocessing
 
 label_encoding = preprocessing.LabelEncoder()
@@ -1403,43 +1413,43 @@ iris_df.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>6.5</td>
-      <td>2.8</td>
-      <td>4.6</td>
-      <td>1.5</td>
+      <td>6.3</td>
+      <td>2.3</td>
+      <td>4.4</td>
+      <td>1.3</td>
       <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>6.8</td>
-      <td>3.2</td>
-      <td>5.9</td>
-      <td>2.3</td>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.5</td>
+      <td>1.8</td>
       <td>2</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>5.4</td>
-      <td>3.9</td>
-      <td>1.3</td>
-      <td>0.4</td>
+      <td>5.0</td>
+      <td>3.5</td>
+      <td>1.6</td>
+      <td>0.6</td>
       <td>0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>1.7</td>
-      <td>1</td>
+      <td>5.6</td>
+      <td>2.8</td>
+      <td>4.9</td>
+      <td>2.0</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>7.2</td>
-      <td>3.2</td>
-      <td>6.0</td>
-      <td>1.8</td>
-      <td>2</td>
+      <td>6.2</td>
+      <td>2.9</td>
+      <td>4.3</td>
+      <td>1.3</td>
+      <td>1</td>
     </tr>
   </tbody>
 </table>
@@ -1539,10 +1549,10 @@ iris_df.head()
   </tbody>
 </table>
 </div>
-<h1 id="analisis-univariable">Analisis Univariable</h1>
+<h2 id="analisis-univariable">Analisis Univariable</h2>
 <p>Se debe hacer un analisis de cada una de las variables y describir sus caracteristicas</p>
-<h1 id="analisis-bivariable">Analisis Bivariable</h1>
-<h2 id="scatter-plot">Scatter plot</h2>
+<h2 id="analisis-bivariable">Analisis Bivariable</h2>
+<h3 id="scatter-plot">Scatter plot</h3>
 <pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
 
 plt.scatter(iris_df['sepal-length'], iris_df['sepal-width'], s=250)
@@ -1552,7 +1562,9 @@ plt.ylabel('sepal-width')
 
 plt.show()
 </code></pre>
-<p><img src="./9-Clustering-Python_18_0.png" alt="png"></p>
+<p>​ <br>
+<img src="./9-Clustering-Python_17_0.png" alt="png">
+​</p>
 <pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
 
 plt.scatter(iris_df['petal-width'], iris_df['petal-length'], s=250)
@@ -1562,7 +1574,9 @@ plt.ylabel('petal-length')
 
 plt.show()
 </code></pre>
-<p><img src="./9-Clustering-Python_19_0.png" alt="png"></p>
+<p>​ <br>
+<img src="./9-Clustering-Python_18_0.png" alt="png">
+​</p>
 <pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
 
 plt.scatter(iris_df['sepal-length'], iris_df['petal-length'], s=250)
@@ -1572,8 +1586,10 @@ plt.ylabel('petal-length')
 
 plt.show()
 </code></pre>
-<p><img src="./9-Clustering-Python_20_0.png" alt="png"></p>
-<h1 id="kmeans-simple">KMeans SIMPLE</h1>
+<p>​ <br>
+<img src="./9-Clustering-Python_19_0.png" alt="png">
+​</p>
+<h2 id="kmeans-simple">KMeans SIMPLE</h2>
 <pre><code class="language-python">iris_2D = iris_df[['sepal-length', 'petal-length']]
 
 iris_2D.sample(5)
@@ -1602,29 +1618,29 @@ iris_2D.sample(5)
   </thead>
   <tbody>
     <tr>
-      <th>133</th>
+      <th>15</th>
+      <td>5.4</td>
+      <td>1.3</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>5.0</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>44</th>
       <td>6.4</td>
       <td>5.3</td>
     </tr>
     <tr>
-      <th>124</th>
-      <td>5.6</td>
-      <td>3.6</td>
-    </tr>
-    <tr>
-      <th>111</th>
-      <td>5.8</td>
+      <th>125</th>
+      <td>5.9</td>
       <td>5.1</td>
     </tr>
     <tr>
-      <th>75</th>
-      <td>4.7</td>
-      <td>1.3</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>6.7</td>
-      <td>5.2</td>
+      <th>138</th>
+      <td>5.0</td>
+      <td>1.2</td>
     </tr>
   </tbody>
 </table>
@@ -1639,21 +1655,21 @@ iris_2D.sample(5)
 </code></pre>
 <pre><code class="language-python">kmeans_model_2D.labels_
 </code></pre>
-<pre><code>array([2, 0, 1, 0, 0, 2, 0, 1, 2, 0, 2, 1, 1, 2, 1, 1, 0, 2, 1, 2, 2, 0,
-       2, 2, 2, 1, 0, 2, 1, 0, 1, 0, 1, 2, 2, 1, 0, 2, 1, 0, 2, 1, 0, 2,
-       0, 2, 1, 1, 2, 1, 1, 0, 0, 0, 2, 1, 2, 0, 1, 1, 1, 2, 2, 1, 2, 0,
-       2, 0, 1, 0, 2, 2, 1, 2, 2, 1, 0, 0, 1, 0, 1, 0, 2, 2, 0, 1, 2, 2,
-       1, 2, 0, 2, 1, 0, 1, 1, 1, 2, 2, 1, 0, 2, 2, 0, 2, 1, 0, 1, 2, 2,
-       1, 2, 1, 1, 1, 2, 0, 1, 2, 0, 1, 1, 1, 2, 2, 2, 2, 1, 0, 1, 2, 2,
-       2, 0, 0, 2, 2, 0, 2, 0, 1, 2, 1, 0, 1, 2, 0, 0, 1, 2], dtype=int32)
+<pre><code>array([1, 2, 0, 1, 1, 1, 0, 2, 0, 0, 2, 1, 1, 2, 2, 0, 1, 2, 0, 0, 2, 1,
+       2, 1, 2, 0, 0, 2, 1, 2, 1, 1, 1, 2, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1,
+       2, 0, 2, 1, 1, 0, 0, 2, 2, 0, 0, 1, 1, 1, 0, 2, 1, 0, 1, 0, 1, 2,
+       1, 1, 2, 1, 1, 1, 2, 1, 0, 1, 1, 2, 1, 0, 2, 0, 0, 1, 2, 0, 1, 0,
+       0, 2, 2, 2, 1, 1, 2, 1, 1, 2, 0, 0, 0, 0, 1, 2, 1, 1, 1, 1, 0, 2,
+       0, 0, 0, 1, 2, 0, 1, 2, 0, 0, 1, 1, 2, 2, 2, 1, 0, 2, 0, 1, 0, 0,
+       1, 0, 2, 0, 1, 0, 0, 1, 0, 0, 2, 2, 1, 2, 2, 1, 1, 0], dtype=int32)
 </code></pre>
 <pre><code class="language-python">centroids_2D = kmeans_model_2D.cluster_centers_
 
 centroids_2D
 </code></pre>
-<pre><code>array([[6.83902439, 5.67804878],
-       [5.00784314, 1.49411765],
-       [5.87413793, 4.39310345]])
+<pre><code>array([[5.00784314, 1.49411765],
+       [5.87413793, 4.39310345],
+       [6.83902439, 5.67804878]])
 </code></pre>
 <pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
 
@@ -1662,7 +1678,9 @@ plt.scatter(centroids_2D[:,0], centroids_2D[:,1], c='r', s=250, marker='s')
 for i in range(len(centroids_2D)):
     plt.annotate(i, (centroids_2D[i][0], centroids_2D[i][1]), fontsize=30)
 </code></pre>
-<p><img src="./9-Clustering-Python_28_0.png" alt="png"></p>
+<p>​ <br>
+<img src="./9-Clustering-Python_27_0.png" alt="png">
+​</p>
 <pre><code class="language-python">iris_labels = iris_df['class']
 </code></pre>
 <pre><code class="language-python">print(&quot;Homogeneity_score: &quot;, metrics.homogeneity_score(iris_labels, kmeans_model_2D.labels_))
@@ -1681,8 +1699,8 @@ print(&quot;Silhouette_score: &quot;, metrics.silhouette_score(iris_2D, kmeans_m
 Completeness_score:  0.7096993707802843
 v_measure_score:  0.706494157075837
 Adjusted_rand_score:  0.6988627672348092
-Adjusted_mutual_info_score:  0.7028024531409133
-Silhouette_score:  0.5890612473759281
+Adjusted_mutual_info_score:  0.7028024531409135
+Silhouette_score:  0.5890612473759282
 </code></pre>
 <pre><code class="language-python">colors = ['yellow','blue','green']
 
@@ -1696,7 +1714,9 @@ plt.scatter(centroids_2D[:,0], centroids_2D[:,1], c='r', s=250, marker='s')
 for i in range(len(centroids_2D)):
     plt.annotate( i, (centroids_2D[i][0], centroids_2D[i][1]), fontsize=30)
 </code></pre>
-<p><img src="./9-Clustering-Python_31_0.png" alt="png"></p>
+<p>​ <br>
+<img src="./9-Clustering-Python_30_0.png" alt="png">
+​</p>
 <pre><code class="language-python">iris_features = iris_df.drop('class', axis=1)
 
 iris_features.head()
@@ -1728,38 +1748,38 @@ iris_features.head()
   <tbody>
     <tr>
       <th>0</th>
-      <td>6.5</td>
-      <td>2.8</td>
-      <td>4.6</td>
-      <td>1.5</td>
+      <td>6.3</td>
+      <td>2.3</td>
+      <td>4.4</td>
+      <td>1.3</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>6.8</td>
-      <td>3.2</td>
-      <td>5.9</td>
-      <td>2.3</td>
+      <td>6.5</td>
+      <td>3.0</td>
+      <td>5.5</td>
+      <td>1.8</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>5.4</td>
-      <td>3.9</td>
-      <td>1.3</td>
-      <td>0.4</td>
+      <td>5.0</td>
+      <td>3.5</td>
+      <td>1.6</td>
+      <td>0.6</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>6.7</td>
-      <td>3.0</td>
-      <td>5.0</td>
-      <td>1.7</td>
+      <td>5.6</td>
+      <td>2.8</td>
+      <td>4.9</td>
+      <td>2.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>7.2</td>
-      <td>3.2</td>
-      <td>6.0</td>
-      <td>1.8</td>
+      <td>6.2</td>
+      <td>2.9</td>
+      <td>4.3</td>
+      <td>1.3</td>
     </tr>
   </tbody>
 </table>
@@ -1768,30 +1788,30 @@ iris_features.head()
 
 iris_labels.sample(5)
 </code></pre>
-<pre><code>81     2
-136    1
+<pre><code>51     2
+55     1
+119    0
 86     1
-19     1
-61     1
+13     1
 Name: class, dtype: int64
 </code></pre>
 <pre><code class="language-python">kmeans_model = KMeans(n_clusters=3).fit(iris_features)
 </code></pre>
 <pre><code class="language-python">kmeans_model.labels_
 </code></pre>
-<pre><code>array([2, 0, 1, 0, 0, 2, 0, 1, 2, 0, 2, 1, 1, 2, 1, 1, 0, 2, 1, 2, 2, 2,
-       2, 2, 2, 1, 0, 2, 1, 0, 1, 0, 1, 2, 2, 1, 0, 2, 1, 0, 2, 1, 0, 2,
-       0, 2, 1, 1, 2, 1, 1, 2, 2, 0, 2, 1, 2, 0, 1, 1, 1, 2, 2, 1, 2, 0,
-       2, 0, 1, 0, 2, 2, 1, 2, 2, 1, 0, 0, 1, 0, 1, 0, 2, 2, 0, 1, 2, 2,
-       1, 2, 0, 2, 1, 0, 1, 1, 1, 2, 2, 1, 0, 2, 2, 0, 2, 1, 0, 1, 2, 2,
-       1, 2, 1, 1, 1, 2, 0, 1, 2, 0, 2, 1, 1, 2, 2, 2, 2, 1, 0, 1, 2, 2,
-       2, 0, 0, 2, 2, 0, 2, 0, 1, 2, 1, 0, 1, 2, 0, 0, 1, 2], dtype=int32)
+<pre><code>array([1, 2, 0, 1, 1, 1, 0, 2, 0, 0, 2, 1, 1, 2, 2, 0, 1, 2, 0, 0, 2, 1,
+       2, 1, 2, 0, 1, 1, 1, 2, 1, 1, 1, 2, 0, 0, 1, 1, 0, 1, 0, 1, 0, 1,
+       2, 0, 2, 1, 1, 0, 0, 2, 2, 0, 0, 1, 1, 1, 0, 2, 1, 0, 1, 0, 1, 2,
+       1, 1, 2, 1, 1, 1, 2, 1, 0, 1, 1, 2, 1, 0, 2, 0, 0, 1, 2, 0, 1, 0,
+       0, 2, 2, 1, 1, 1, 2, 1, 1, 2, 0, 0, 0, 0, 1, 2, 1, 1, 1, 1, 0, 1,
+       0, 0, 0, 1, 2, 0, 1, 2, 0, 0, 1, 1, 2, 2, 2, 1, 0, 2, 0, 1, 0, 0,
+       1, 0, 2, 0, 1, 0, 0, 1, 0, 0, 2, 2, 1, 2, 2, 1, 1, 0], dtype=int32)
 </code></pre>
 <pre><code class="language-python">kmeans_model.cluster_centers_
 </code></pre>
-<pre><code>array([[6.85      , 3.07368421, 5.74210526, 2.07105263],
-       [5.006     , 3.418     , 1.464     , 0.244     ],
-       [5.9016129 , 2.7483871 , 4.39354839, 1.43387097]])
+<pre><code>array([[5.006     , 3.418     , 1.464     , 0.244     ],
+       [5.9016129 , 2.7483871 , 4.39354839, 1.43387097],
+       [6.85      , 3.07368421, 5.74210526, 2.07105263]])
 </code></pre>
 <pre><code class="language-python">print(&quot;Homogeneity_score: &quot;, metrics.homogeneity_score(iris_labels, kmeans_model.labels_))
 print(&quot;Completeness_score: &quot;, metrics.completeness_score(iris_labels, kmeans_model.labels_))
@@ -1804,10 +1824,10 @@ print(&quot;Silhouette_score: &quot;, metrics.silhouette_score(iris_features, km
 Completeness_score:  0.7649861514489815
 v_measure_score:  0.7581756800057784
 Adjusted_rand_score:  0.7302382722834697
-Adjusted_mutual_info_score:  0.7551191675800484
+Adjusted_mutual_info_score:  0.7551191675800485
 Silhouette_score:  0.5525919445499757
 </code></pre>
-<h1 id="clustering-con-varios-modelos">Clustering con varios modelos</h1>
+<h2 id="clustering-con-varios-modelos">Clustering con varios modelos</h2>
 <pre><code class="language-python">from sklearn import metrics
 
 from sklearn.cluster import KMeans
@@ -1836,7 +1856,7 @@ warnings.filterwarnings(&quot;ignore&quot;)
             metrics.adjusted_mutual_info_score(labels,  model.labels_),
             metrics.silhouette_score(data, model.labels_)))
 </code></pre>
-<h2 id="kmeans">Kmeans</h2>
+<h3 id="kmeans">Kmeans</h3>
 <pre><code class="language-python">def k_means(data, n_clusters=3, max_iter=1000):
     model = KMeans(n_clusters=n_clusters, max_iter=max_iter).fit(data)
     
@@ -1848,7 +1868,7 @@ warnings.filterwarnings(&quot;ignore&quot;)
 --------------------------------------------------
 0.751	0.765	0.758	0.730	0.755	0.553
 </code></pre>
-<h2 id="agglomerative">Agglomerative</h2>
+<h3 id="agglomerative">Agglomerative</h3>
 <pre><code class="language-python">def agglomerative_fn(data, n_clusters=3):
     model = AgglomerativeClustering(n_clusters = n_clusters).fit(data)
     
@@ -1860,7 +1880,7 @@ warnings.filterwarnings(&quot;ignore&quot;)
 --------------------------------------------------
 0.761	0.780	0.770	0.731	0.767	0.554
 </code></pre>
-<h2 id="dbscan">Dbscan</h2>
+<h3 id="dbscan">Dbscan</h3>
 <pre><code class="language-python">def dbscan_fn(data, eps=0.45, min_samples=4):
     model = DBSCAN(eps=eps, min_samples=min_samples).fit(data)
     return model
@@ -1871,7 +1891,7 @@ warnings.filterwarnings(&quot;ignore&quot;)
 --------------------------------------------------
 0.577	0.609	0.593	0.508	0.584	0.372
 </code></pre>
-<h2 id="mean-shift">Mean Shift</h2>
+<h3 id="mean-shift">Mean Shift</h3>
 <pre><code class="language-python">def mean_shift_fn(data, bandwidth=0.85):
     model = MeanShift(bandwidth=bandwidth).fit(data)
     return model
@@ -1882,7 +1902,7 @@ warnings.filterwarnings(&quot;ignore&quot;)
 --------------------------------------------------
 0.760	0.772	0.766	0.744	0.763	0.551
 </code></pre>
-<h2 id="birch">Birch</h2>
+<h3 id="birch">Birch</h3>
 <pre><code class="language-python">def birch_fn(data, n_clusters=3):
     model = Birch(n_clusters=n_clusters).fit(data)
     return model
@@ -1891,9 +1911,9 @@ warnings.filterwarnings(&quot;ignore&quot;)
 </code></pre>
 <pre><code>homo	compl	v-meas	ARI	AMI	silhouette
 --------------------------------------------------
-0.635	0.792	0.705	0.566	0.700	0.534
+0.778	0.804	0.791	0.732	0.788	0.554
 </code></pre>
-<h2 id="affinity-propagation">Affinity Propagation</h2>
+<h3 id="affinity-propagation">Affinity Propagation</h3>
 <pre><code class="language-python">def affinity_propagation_fn(data, damping=0.6, max_iter=1000):
     model = AffinityPropagation(damping=damping, max_iter=max_iter).fit(data)
     return model
@@ -1904,7 +1924,7 @@ warnings.filterwarnings(&quot;ignore&quot;)
 --------------------------------------------------
 0.851	0.492	0.623	0.437	0.612	0.349
 </code></pre>
-<h2 id="mini-batch-kmeans">Mini Batch Kmeans</h2>
+<h3 id="mini-batch-kmeans">Mini Batch Kmeans</h3>
 <pre><code class="language-python">def mini_batch_kmeans_fn(data, n_clusters=3, max_iter=1000):
     model = MiniBatchKMeans(n_clusters=n_clusters, max_iter=max_iter, batch_size=20).fit(data)
     return model
@@ -1913,9 +1933,9 @@ warnings.filterwarnings(&quot;ignore&quot;)
 </code></pre>
 <pre><code>homo	compl	v-meas	ARI	AMI	silhouette
 --------------------------------------------------
-0.745	0.754	0.750	0.729	0.746	0.549
+0.787	0.809	0.798	0.746	0.795	0.555
 </code></pre>
-<h1 id="hyperparameter-tuning-optimizacion-de-hiperparametros">Hyperparameter Tuning (optimizacion de Hiperparametros)</h1>
+<h2 id="hyperparameter-tuning-optimizacion-de-hiperparametros">Hyperparameter Tuning (optimizacion de Hiperparametros)</h2>
 <p>El ejemplo se desarrollara con un dataset diferente con menos variables</p>
 <pre><code class="language-python">from sklearn import metrics
 from sklearn.metrics import silhouette_score
@@ -2099,7 +2119,7 @@ drivers_df.head()
 </div>
 <pre><code class="language-python">drivers_features = drivers_df.drop('Driver_ID', axis=1)
 </code></pre>
-<h2 id="kmeans-clustering">KMeans clustering</h2>
+<h3 id="kmeans-clustering">KMeans clustering</h3>
 <pre><code class="language-python">parameters = {'n_clusters': [2, 3, 4, 5, 10, 20, 30]}
 
 parameter_grid = ParameterGrid(parameters)
@@ -2130,10 +2150,10 @@ model = KMeans()
 <pre><code>Parametro:  {'n_clusters': 2} Score:  0.8490223286225532
 Parametro:  {'n_clusters': 3} Score:  0.8231396834167266
 Parametro:  {'n_clusters': 4} Score:  0.5911323766293183
-Parametro:  {'n_clusters': 5} Score:  0.5128161654454148
-Parametro:  {'n_clusters': 10} Score:  0.41891069100637685
-Parametro:  {'n_clusters': 20} Score:  0.3639487789194615
-Parametro:  {'n_clusters': 30} Score:  0.3540375785241541
+Parametro:  {'n_clusters': 5} Score:  0.5127476940598861
+Parametro:  {'n_clusters': 10} Score:  0.4386111161388452
+Parametro:  {'n_clusters': 20} Score:  0.36694291591807765
+Parametro:  {'n_clusters': 30} Score:  0.3372412347052073
 </code></pre>
 <pre><code class="language-python">best_grid
 </code></pre>
@@ -2149,8 +2169,10 @@ plt.ylabel('Speeding_Feature')
 
 plt.show()
 </code></pre>
-<p><img src="./9-Clustering-Python_75_0.png" alt="png"></p>
-<h2 id="dbscan-clustering">DBSCAN clustering</h2>
+<p>​ <br>
+<img src="./9-Clustering-Python_74_0.png" alt="png">
+​</p>
+<h3 id="dbscan-clustering">DBSCAN clustering</h3>
 <pre><code class="language-python">parameters = {'eps': [0.9, 1.0, 5.0, 10.0, 12.0, 14.0, 20.0],
               'min_samples': [5, 7, 10, 12]}
 
@@ -2236,8 +2258,7 @@ Parametro:  {'eps': 20.0, 'min_samples': 12} Score:  0.8156567891999053
 <pre><code class="language-python">model.set_params(**best_grid)
 model.fit(drivers_features)
 </code></pre>
-<pre><code>DBSCAN(algorithm='auto', eps=20.0, leaf_size=30, metric='euclidean',
-       metric_params=None, min_samples=5, n_jobs=None, p=None)
+<pre><code>DBSCAN(eps=20.0)
 </code></pre>
 <pre><code class="language-python">len(model.labels_)
 </code></pre>
@@ -2283,7 +2304,7 @@ print('Puntos Ruido: ', n_noise)
 <pre><code>Numero de Clusters:  3
 Puntos Ruido:  157
 </code></pre>
-<h2 id="meanshift-clustering">MeanShift clustering</h2>
+<h3 id="meanshift-clustering">MeanShift clustering</h3>
 <p><a href="https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/cluster/mean_shift_.py#L4">https://github.com/scikit-learn/scikit-learn/blob/master/sklearn/cluster/mean_shift_.py#L4</a></p>
 <p><a href="https://stats.stackexchange.com/questions/86324/name-of-algorithm-or-paper-that-scikit-learn-cluster-estimate-bandwidth-func">https://stats.stackexchange.com/questions/86324/name-of-algorithm-or-paper-that-scikit-learn-cluster-estimate-bandwidth-func</a></p>
 <pre><code class="language-python">from sklearn.cluster import estimate_bandwidth
@@ -2297,14 +2318,12 @@ metrics.silhouette_score(drivers_features, model.labels_)
 </code></pre>
 <pre><code>0.8231396834167266
 </code></pre>
-<h1 id="referencias">Referencias</h1>
-<p><a href="https://scikit-learn.org/stable/modules/clustering.html#clustering">https://scikit-learn.org/stable/modules/clustering.html#clustering</a></p>
+<h2 id="referencias">Referencias</h2>
 <p>Cheatsheet scikitlearn
 <a href="https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116">https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116</a></p>
 <p><strong>Phd. Jose R. Zapata</strong></p>
 <ul>
 <li><a href="https://joserzapata.github.io/" target="_blank" rel="noopener">https://joserzapata.github.io/</a></li>
-<li><a href="https://twitter.com/joserzapata">https://twitter.com/joserzapata</a></li>
 </ul>
 
           </div>
@@ -2327,7 +2346,7 @@ metrics.silhouette_score(drivers_features, model.labels_)
         </div>
 
         <div class="body-footer">
-          <p>Last updated on Apr 17, 2021</p>
+          <p>Last updated on Apr 18, 2021</p>
 
           
 
