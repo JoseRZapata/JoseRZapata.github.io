@@ -8,7 +8,7 @@ icon_pack: fas
 
 # Page metadata.
 title: Clasificacion con Scikit Learn
-date: "2020-09-09T00:00:00Z"
+date: "2020-04-18T00:00:00Z"
 type: book  # Do not modify
 ---
 
@@ -26,7 +26,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 ```
 
-# Informacion de los Datos 
+## Informacion de los Datos 
 
 Titanic dataset
 
@@ -51,7 +51,7 @@ titanic_df.head(10)
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -269,8 +269,8 @@ titanic_df.info()
     memory usage: 83.7+ KB
 
 
-# Preparacion de datos
-## Eliminar columnas no necesarias
+## Preparacion de datos
+### Eliminar columnas no necesarias
 
 
 ```python
@@ -291,7 +291,7 @@ titanic_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -394,7 +394,7 @@ titanic_df.info()
     memory usage: 55.8+ KB
 
 
-## Tratamiento de datos nulos
+### Tratamiento de datos nulos
 
 
 ```python
@@ -455,7 +455,7 @@ titanic_df[titanic_df.isnull().any(axis=1)].count()
 
 
 
-## Descripcion estadistica
+### Descripcion estadistica
 
 
 ```python
@@ -474,7 +474,7 @@ titanic_df.describe()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -587,7 +587,7 @@ titanic_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -668,12 +668,12 @@ titanic_df.head()
 
 
 
-# Analisis Univariable
+## Analisis Univariable
 Se debe hacer un analisis de cada una de las variables y describir sus caracteristicas
 
-# Analisis Bivariable
+## Analisis Bivariable
 
-## Scatter Plots
+### Scatter Plots
 
 
 ```python
@@ -686,9 +686,9 @@ plt.ylabel('Survived');
 ```
 
 
-    
-![png](./8-Clasificacion-Python_21_0.png)
-    
+​    
+![png](./8-Clasificacion-Python_20_0.png)
+​    
 
 
 
@@ -702,12 +702,12 @@ plt.ylabel('Survived');
 ```
 
 
-    
-![png](./8-Clasificacion-Python_22_0.png)
-    
+​    
+![png](./8-Clasificacion-Python_21_0.png)
+​    
 
 
-## Correlacion
+### Correlacion
 
 
 ```python
@@ -726,7 +726,7 @@ pd.crosstab(titanic_df['Sex'], titanic_df['Survived'])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -778,7 +778,7 @@ pd.crosstab(titanic_df['Pclass'], titanic_df['Survived'])
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -837,7 +837,7 @@ titanic_data_corr
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -923,12 +923,12 @@ sns.heatmap(titanic_data_corr, annot=True);
 ```
 
 
-    
-![png](./8-Clasificacion-Python_27_0.png)
-    
+​    
+![png](./8-Clasificacion-Python_26_0.png)
+​    
 
 
-# Transformacion de Variables
+## Transformacion de Variables
 
 
 ```python
@@ -952,7 +952,7 @@ titanic_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1066,7 +1066,7 @@ titanic_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1178,7 +1178,7 @@ titanic_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1204,11 +1204,11 @@ titanic_df.head()
       <th>0</th>
       <td>1</td>
       <td>3</td>
-      <td>1</td>
-      <td>25.0</td>
-      <td>1</td>
       <td>0</td>
-      <td>7.7750</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7.9250</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -1218,49 +1218,49 @@ titanic_df.head()
       <td>0</td>
       <td>3</td>
       <td>1</td>
-      <td>27.0</td>
+      <td>21.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8.4333</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>14.4542</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>51.0</td>
+      <td>57.0</td>
       <td>0</td>
       <td>0</td>
-      <td>7.0542</td>
-      <td>0</td>
+      <td>12.3500</td>
       <td>0</td>
       <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>19.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.8958</td>
-      <td>0</td>
-      <td>0</td>
+      <td>25.0</td>
       <td>1</td>
+      <td>2</td>
+      <td>41.5792</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
+      <td>0</td>
       <td>2</td>
       <td>1</td>
-      <td>34.0</td>
+      <td>35.0</td>
       <td>0</td>
       <td>0</td>
-      <td>13.0000</td>
+      <td>10.5000</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -1276,7 +1276,7 @@ titanic_df.head()
 titanic_df.to_csv('datasets/titanic_processed.csv', index=False)
 ```
 
-# Clasificacion Binaria
+## Clasificacion Binaria
 
 
 ```python
@@ -1297,7 +1297,7 @@ titanic_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1323,11 +1323,11 @@ titanic_df.head()
       <th>0</th>
       <td>1</td>
       <td>3</td>
-      <td>1</td>
-      <td>25.0</td>
-      <td>1</td>
       <td>0</td>
-      <td>7.7750</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7.9250</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -1337,49 +1337,49 @@ titanic_df.head()
       <td>0</td>
       <td>3</td>
       <td>1</td>
-      <td>27.0</td>
+      <td>21.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8.4333</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>14.4542</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>51.0</td>
+      <td>57.0</td>
       <td>0</td>
       <td>0</td>
-      <td>7.0542</td>
-      <td>0</td>
+      <td>12.3500</td>
       <td>0</td>
       <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>19.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.8958</td>
-      <td>0</td>
-      <td>0</td>
+      <td>25.0</td>
       <td>1</td>
+      <td>2</td>
+      <td>41.5792</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
+      <td>0</td>
       <td>2</td>
       <td>1</td>
-      <td>34.0</td>
+      <td>35.0</td>
       <td>0</td>
       <td>0</td>
-      <td>13.0000</td>
+      <td>10.5000</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -1436,7 +1436,7 @@ x_test.shape, y_test.shape
 
 
 
-## Regresion Logistica para Clasificacion
+### Regresion Logistica para Clasificacion
 
 https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html
 
@@ -1452,7 +1452,7 @@ logistic_model = LogisticRegression(penalty='l2', C=1.0, solver='liblinear').fit
 y_pred = logistic_model.predict(x_test)
 ```
 
-### Matriz de confusion
+#### Matriz de confusion
 
 
 ```python
@@ -1477,7 +1477,7 @@ pred_results.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1492,29 +1492,29 @@ pred_results.head()
   </thead>
   <tbody>
     <tr>
-      <th>484</th>
-      <td>1</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>102</th>
-      <td>0</td>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>65</th>
+      <th>524</th>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>30</th>
+      <th>133</th>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>460</th>
       <td>1</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>38</th>
+      <th>110</th>
       <td>1</td>
-      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>639</th>
+      <td>0</td>
+      <td>0</td>
     </tr>
   </tbody>
 </table>
@@ -1541,7 +1541,7 @@ titanic_crosstab
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1562,13 +1562,13 @@ titanic_crosstab
   <tbody>
     <tr>
       <th>0</th>
-      <td>75</td>
-      <td>16</td>
+      <td>71</td>
+      <td>24</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>16</td>
-      <td>36</td>
+      <td>8</td>
+      <td>40</td>
     </tr>
   </tbody>
 </table>
@@ -1576,7 +1576,7 @@ titanic_crosstab
 
 
 
-### Precision - recall
+#### Precision - recall
 
 https://scikit-learn.org/stable/modules/generated/sklearn.metrics.precision_score.html
 https://scikit-learn.org/stable/modules/generated/sklearn.metrics.recall_score.html
@@ -1600,8 +1600,8 @@ print("recall_score : ", recall)
 ```
 
     accuracy_score :  0.7762237762237763
-    precision_score :  0.6923076923076923
-    recall_score :  0.6923076923076923
+    precision_score :  0.8333333333333334
+    recall_score :  0.625
 
 
 
@@ -1621,7 +1621,7 @@ titanic_crosstab
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1642,13 +1642,13 @@ titanic_crosstab
   <tbody>
     <tr>
       <th>0</th>
-      <td>75</td>
-      <td>16</td>
+      <td>71</td>
+      <td>24</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>16</td>
-      <td>36</td>
+      <td>8</td>
+      <td>40</td>
     </tr>
   </tbody>
 </table>
@@ -1688,7 +1688,7 @@ precision_score_survived
 
 
 
-    0.6923076923076923
+    0.8333333333333334
 
 
 
@@ -1702,11 +1702,11 @@ recall_score_survived
 
 
 
-    0.6923076923076923
+    0.625
 
 
 
-# Clasificacion con Multiples Modelos
+## Clasificacion con Multiples Modelos
 
 
 ```python
@@ -1744,7 +1744,7 @@ titanic_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -1770,11 +1770,11 @@ titanic_df.head()
       <th>0</th>
       <td>1</td>
       <td>3</td>
-      <td>1</td>
-      <td>25.0</td>
-      <td>1</td>
       <td>0</td>
-      <td>7.7750</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7.9250</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -1784,49 +1784,49 @@ titanic_df.head()
       <td>0</td>
       <td>3</td>
       <td>1</td>
-      <td>27.0</td>
+      <td>21.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8.4333</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>14.4542</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>51.0</td>
+      <td>57.0</td>
       <td>0</td>
       <td>0</td>
-      <td>7.0542</td>
-      <td>0</td>
+      <td>12.3500</td>
       <td>0</td>
       <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>19.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.8958</td>
-      <td>0</td>
-      <td>0</td>
+      <td>25.0</td>
       <td>1</td>
+      <td>2</td>
+      <td>41.5792</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
+      <td>0</td>
       <td>2</td>
       <td>1</td>
-      <td>34.0</td>
+      <td>35.0</td>
       <td>0</td>
       <td>0</td>
-      <td>13.0000</td>
+      <td>10.5000</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -1863,6 +1863,8 @@ FEATURES
 ```python
 result_dict = {}
 ```
+
+### Funciones de ayuda
 
 
 ```python
@@ -1931,7 +1933,7 @@ def compare_results():
         print()
 ```
 
-## Regresion logistica
+### Regresion logistica
 
 
 ```python
@@ -1956,20 +1958,20 @@ compare_results()
     Classification:  survived ~ logistic
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.8020304568527918
-    recall 0.6960352422907489
-    accuracy_count 461
+    accuracy 0.8137082601054482
+    precision 0.7990196078431373
+    recall 0.7149122807017544
+    accuracy_count 463
     
     Test data
-    accuracy 0.7692307692307693
-    precision 0.7692307692307693
-    recall 0.6557377049180327
-    accuracy_count 110
-    
+    accuracy 0.7762237762237763
+    precision 0.8043478260869565
+    recall 0.6166666666666667
+    accuracy_count 111
 
 
-## Lineal Discriminant Analysis
+
+### Lineal Discriminant Analysis
 
 
 ```python
@@ -1993,31 +1995,31 @@ compare_results()
     Classification:  survived ~ logistic
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.8020304568527918
-    recall 0.6960352422907489
-    accuracy_count 461
+    accuracy 0.8137082601054482
+    precision 0.7990196078431373
+    recall 0.7149122807017544
+    accuracy_count 463
     
     Test data
-    accuracy 0.7692307692307693
-    precision 0.7692307692307693
-    recall 0.6557377049180327
-    accuracy_count 110
+    accuracy 0.7762237762237763
+    precision 0.8043478260869565
+    recall 0.6166666666666667
+    accuracy_count 111
     
     Classification:  survived ~ linear_discriminant_analysis
     
     Training data
-    accuracy 0.8014059753954306
-    precision 0.7782805429864253
-    recall 0.7288135593220338
-    accuracy_count 456
+    accuracy 0.8066783831282952
+    precision 0.784037558685446
+    recall 0.7229437229437229
+    accuracy_count 459
     
     Test data
-    accuracy 0.7482517482517482
-    precision 0.6739130434782609
-    recall 0.5961538461538461
-    accuracy_count 107
-    
+    accuracy 0.7342657342657343
+    precision 0.6792452830188679
+    recall 0.631578947368421
+    accuracy_count 105
+
 
 
 
@@ -2032,34 +2034,34 @@ compare_results()
     Classification:  survived ~ logistic
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.8020304568527918
-    recall 0.6960352422907489
-    accuracy_count 461
+    accuracy 0.8137082601054482
+    precision 0.7990196078431373
+    recall 0.7149122807017544
+    accuracy_count 463
     
     Test data
-    accuracy 0.7692307692307693
-    precision 0.7692307692307693
-    recall 0.6557377049180327
-    accuracy_count 110
+    accuracy 0.7762237762237763
+    precision 0.8043478260869565
+    recall 0.6166666666666667
+    accuracy_count 111
     
     Classification:  survived ~ linear_discriminant_analysis
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.7887323943661971
-    recall 0.7272727272727273
-    accuracy_count 461
+    accuracy 0.7996485061511424
+    precision 0.7772727272727272
+    recall 0.7245762711864406
+    accuracy_count 455
     
     Test data
-    accuracy 0.7622377622377622
-    precision 0.7555555555555555
-    recall 0.5964912280701754
-    accuracy_count 109
-    
+    accuracy 0.7412587412587412
+    precision 0.6415094339622641
+    recall 0.6538461538461539
+    accuracy_count 106
 
 
-## Quadratic Discriminant Analysis
+
+### Quadratic Discriminant Analysis
 
 
 ```python
@@ -2084,48 +2086,48 @@ compare_results()
     Classification:  survived ~ logistic
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.8020304568527918
-    recall 0.6960352422907489
-    accuracy_count 461
+    accuracy 0.8137082601054482
+    precision 0.7990196078431373
+    recall 0.7149122807017544
+    accuracy_count 463
     
     Test data
-    accuracy 0.7692307692307693
-    precision 0.7692307692307693
-    recall 0.6557377049180327
-    accuracy_count 110
+    accuracy 0.7762237762237763
+    precision 0.8043478260869565
+    recall 0.6166666666666667
+    accuracy_count 111
     
     Classification:  survived ~ linear_discriminant_analysis
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.7887323943661971
-    recall 0.7272727272727273
-    accuracy_count 461
+    accuracy 0.7996485061511424
+    precision 0.7772727272727272
+    recall 0.7245762711864406
+    accuracy_count 455
     
     Test data
-    accuracy 0.7622377622377622
-    precision 0.7555555555555555
-    recall 0.5964912280701754
-    accuracy_count 109
+    accuracy 0.7412587412587412
+    precision 0.6415094339622641
+    recall 0.6538461538461539
+    accuracy_count 106
     
     Classification:  survived ~ quadratic_discriminant_analysis
     
     Training data
-    accuracy 0.7943760984182777
-    precision 0.7594339622641509
-    recall 0.7092511013215859
-    accuracy_count 452
+    accuracy 0.8066783831282952
+    precision 0.7752293577981652
+    recall 0.7347826086956522
+    accuracy_count 459
     
     Test data
-    accuracy 0.8251748251748252
-    precision 0.8103448275862069
-    recall 0.7704918032786885
-    accuracy_count 118
-    
+    accuracy 0.7622377622377622
+    precision 0.7142857142857143
+    recall 0.6896551724137931
+    accuracy_count 109
 
 
-## SGD
+
+### SGD
 
 
 ```python
@@ -2150,62 +2152,62 @@ compare_results()
     Classification:  survived ~ logistic
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.8020304568527918
-    recall 0.6960352422907489
-    accuracy_count 461
+    accuracy 0.8137082601054482
+    precision 0.7990196078431373
+    recall 0.7149122807017544
+    accuracy_count 463
     
     Test data
-    accuracy 0.7692307692307693
-    precision 0.7692307692307693
-    recall 0.6557377049180327
-    accuracy_count 110
+    accuracy 0.7762237762237763
+    precision 0.8043478260869565
+    recall 0.6166666666666667
+    accuracy_count 111
     
     Classification:  survived ~ linear_discriminant_analysis
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.7887323943661971
-    recall 0.7272727272727273
-    accuracy_count 461
+    accuracy 0.7996485061511424
+    precision 0.7772727272727272
+    recall 0.7245762711864406
+    accuracy_count 455
     
     Test data
-    accuracy 0.7622377622377622
-    precision 0.7555555555555555
-    recall 0.5964912280701754
-    accuracy_count 109
+    accuracy 0.7412587412587412
+    precision 0.6415094339622641
+    recall 0.6538461538461539
+    accuracy_count 106
     
     Classification:  survived ~ quadratic_discriminant_analysis
     
     Training data
-    accuracy 0.7943760984182777
-    precision 0.7594339622641509
-    recall 0.7092511013215859
-    accuracy_count 452
+    accuracy 0.8066783831282952
+    precision 0.7752293577981652
+    recall 0.7347826086956522
+    accuracy_count 459
     
     Test data
-    accuracy 0.8251748251748252
-    precision 0.8103448275862069
-    recall 0.7704918032786885
-    accuracy_count 118
+    accuracy 0.7622377622377622
+    precision 0.7142857142857143
+    recall 0.6896551724137931
+    accuracy_count 109
     
     Classification:  survived ~ sgd
     
     Training data
-    accuracy 0.7504393673110721
-    precision 0.6554054054054054
-    recall 0.8290598290598291
-    accuracy_count 427
+    accuracy 0.7715289982425307
+    precision 0.6814814814814815
+    recall 0.8070175438596491
+    accuracy_count 439
     
     Test data
-    accuracy 0.7272727272727273
-    precision 0.6
-    recall 0.8333333333333334
-    accuracy_count 104
-    
+    accuracy 0.7342657342657343
+    precision 0.6447368421052632
+    recall 0.8166666666666667
+    accuracy_count 105
 
 
-## SVC Lineal
+
+### SVC Lineal
 
 https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html
 
@@ -2235,76 +2237,76 @@ compare_results()
     Classification:  survived ~ logistic
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.8020304568527918
-    recall 0.6960352422907489
-    accuracy_count 461
+    accuracy 0.8137082601054482
+    precision 0.7990196078431373
+    recall 0.7149122807017544
+    accuracy_count 463
     
     Test data
-    accuracy 0.7692307692307693
-    precision 0.7692307692307693
-    recall 0.6557377049180327
-    accuracy_count 110
+    accuracy 0.7762237762237763
+    precision 0.8043478260869565
+    recall 0.6166666666666667
+    accuracy_count 111
     
     Classification:  survived ~ linear_discriminant_analysis
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.7887323943661971
-    recall 0.7272727272727273
-    accuracy_count 461
+    accuracy 0.7996485061511424
+    precision 0.7772727272727272
+    recall 0.7245762711864406
+    accuracy_count 455
     
     Test data
-    accuracy 0.7622377622377622
-    precision 0.7555555555555555
-    recall 0.5964912280701754
-    accuracy_count 109
+    accuracy 0.7412587412587412
+    precision 0.6415094339622641
+    recall 0.6538461538461539
+    accuracy_count 106
     
     Classification:  survived ~ quadratic_discriminant_analysis
     
     Training data
-    accuracy 0.7943760984182777
-    precision 0.7594339622641509
-    recall 0.7092511013215859
-    accuracy_count 452
+    accuracy 0.8066783831282952
+    precision 0.7752293577981652
+    recall 0.7347826086956522
+    accuracy_count 459
     
     Test data
-    accuracy 0.8251748251748252
-    precision 0.8103448275862069
-    recall 0.7704918032786885
-    accuracy_count 118
+    accuracy 0.7622377622377622
+    precision 0.7142857142857143
+    recall 0.6896551724137931
+    accuracy_count 109
     
     Classification:  survived ~ sgd
     
     Training data
-    accuracy 0.7504393673110721
-    precision 0.6554054054054054
-    recall 0.8290598290598291
-    accuracy_count 427
+    accuracy 0.7715289982425307
+    precision 0.6814814814814815
+    recall 0.8070175438596491
+    accuracy_count 439
     
     Test data
-    accuracy 0.7272727272727273
-    precision 0.6
-    recall 0.8333333333333334
-    accuracy_count 104
+    accuracy 0.7342657342657343
+    precision 0.6447368421052632
+    recall 0.8166666666666667
+    accuracy_count 105
     
     Classification:  survived ~ linear_svc
     
     Training data
-    accuracy 0.7961335676625659
-    precision 0.7692307692307693
-    recall 0.7017543859649122
-    accuracy_count 453
+    accuracy 0.7873462214411248
+    precision 0.7568807339449541
+    recall 0.7081545064377682
+    accuracy_count 448
     
     Test data
-    accuracy 0.7762237762237763
-    precision 0.7333333333333333
-    recall 0.7333333333333333
-    accuracy_count 111
-    
+    accuracy 0.8041958041958042
+    precision 0.7368421052631579
+    recall 0.7636363636363637
+    accuracy_count 115
 
 
-## Radius Neighbors Classifier
+
+### Radius Neighbors Classifier
 
 
 ```python
@@ -2328,90 +2330,90 @@ compare_results()
     Classification:  survived ~ logistic
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.8020304568527918
-    recall 0.6960352422907489
-    accuracy_count 461
+    accuracy 0.8137082601054482
+    precision 0.7990196078431373
+    recall 0.7149122807017544
+    accuracy_count 463
     
     Test data
-    accuracy 0.7692307692307693
-    precision 0.7692307692307693
-    recall 0.6557377049180327
-    accuracy_count 110
+    accuracy 0.7762237762237763
+    precision 0.8043478260869565
+    recall 0.6166666666666667
+    accuracy_count 111
     
     Classification:  survived ~ linear_discriminant_analysis
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.7887323943661971
-    recall 0.7272727272727273
-    accuracy_count 461
+    accuracy 0.7996485061511424
+    precision 0.7772727272727272
+    recall 0.7245762711864406
+    accuracy_count 455
     
     Test data
-    accuracy 0.7622377622377622
-    precision 0.7555555555555555
-    recall 0.5964912280701754
-    accuracy_count 109
+    accuracy 0.7412587412587412
+    precision 0.6415094339622641
+    recall 0.6538461538461539
+    accuracy_count 106
     
     Classification:  survived ~ quadratic_discriminant_analysis
     
     Training data
-    accuracy 0.7943760984182777
-    precision 0.7594339622641509
-    recall 0.7092511013215859
-    accuracy_count 452
+    accuracy 0.8066783831282952
+    precision 0.7752293577981652
+    recall 0.7347826086956522
+    accuracy_count 459
     
     Test data
-    accuracy 0.8251748251748252
-    precision 0.8103448275862069
-    recall 0.7704918032786885
-    accuracy_count 118
+    accuracy 0.7622377622377622
+    precision 0.7142857142857143
+    recall 0.6896551724137931
+    accuracy_count 109
     
     Classification:  survived ~ sgd
     
     Training data
-    accuracy 0.7504393673110721
-    precision 0.6554054054054054
-    recall 0.8290598290598291
-    accuracy_count 427
+    accuracy 0.7715289982425307
+    precision 0.6814814814814815
+    recall 0.8070175438596491
+    accuracy_count 439
     
     Test data
-    accuracy 0.7272727272727273
-    precision 0.6
-    recall 0.8333333333333334
-    accuracy_count 104
+    accuracy 0.7342657342657343
+    precision 0.6447368421052632
+    recall 0.8166666666666667
+    accuracy_count 105
     
     Classification:  survived ~ linear_svc
     
     Training data
-    accuracy 0.7961335676625659
-    precision 0.7692307692307693
-    recall 0.7017543859649122
-    accuracy_count 453
+    accuracy 0.7873462214411248
+    precision 0.7568807339449541
+    recall 0.7081545064377682
+    accuracy_count 448
     
     Test data
-    accuracy 0.7762237762237763
-    precision 0.7333333333333333
-    recall 0.7333333333333333
-    accuracy_count 111
+    accuracy 0.8041958041958042
+    precision 0.7368421052631579
+    recall 0.7636363636363637
+    accuracy_count 115
     
     Classification:  survived ~ radius_neighbors
     
     Training data
-    accuracy 0.671353251318102
-    precision 0.7157894736842105
-    recall 0.2982456140350877
-    accuracy_count 382
+    accuracy 0.6678383128295254
+    precision 0.7244897959183674
+    recall 0.30472103004291845
+    accuracy_count 380
     
     Test data
-    accuracy 0.6433566433566433
-    precision 0.7142857142857143
-    recall 0.25
-    accuracy_count 92
-    
+    accuracy 0.6783216783216783
+    precision 0.7368421052631579
+    recall 0.2545454545454545
+    accuracy_count 97
 
 
-## Decision Tree classifier
+
+### Decision Tree classifier
 
 max_depth = None [ If None, then nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples ]
 
@@ -2443,104 +2445,104 @@ compare_results()
     Classification:  survived ~ logistic
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.8020304568527918
-    recall 0.6960352422907489
-    accuracy_count 461
+    accuracy 0.8137082601054482
+    precision 0.7990196078431373
+    recall 0.7149122807017544
+    accuracy_count 463
     
     Test data
-    accuracy 0.7692307692307693
-    precision 0.7692307692307693
-    recall 0.6557377049180327
-    accuracy_count 110
+    accuracy 0.7762237762237763
+    precision 0.8043478260869565
+    recall 0.6166666666666667
+    accuracy_count 111
     
     Classification:  survived ~ linear_discriminant_analysis
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.7887323943661971
-    recall 0.7272727272727273
-    accuracy_count 461
+    accuracy 0.7996485061511424
+    precision 0.7772727272727272
+    recall 0.7245762711864406
+    accuracy_count 455
     
     Test data
-    accuracy 0.7622377622377622
-    precision 0.7555555555555555
-    recall 0.5964912280701754
-    accuracy_count 109
+    accuracy 0.7412587412587412
+    precision 0.6415094339622641
+    recall 0.6538461538461539
+    accuracy_count 106
     
     Classification:  survived ~ quadratic_discriminant_analysis
     
     Training data
-    accuracy 0.7943760984182777
-    precision 0.7594339622641509
-    recall 0.7092511013215859
-    accuracy_count 452
+    accuracy 0.8066783831282952
+    precision 0.7752293577981652
+    recall 0.7347826086956522
+    accuracy_count 459
     
     Test data
-    accuracy 0.8251748251748252
-    precision 0.8103448275862069
-    recall 0.7704918032786885
-    accuracy_count 118
+    accuracy 0.7622377622377622
+    precision 0.7142857142857143
+    recall 0.6896551724137931
+    accuracy_count 109
     
     Classification:  survived ~ sgd
     
     Training data
-    accuracy 0.7504393673110721
-    precision 0.6554054054054054
-    recall 0.8290598290598291
-    accuracy_count 427
+    accuracy 0.7715289982425307
+    precision 0.6814814814814815
+    recall 0.8070175438596491
+    accuracy_count 439
     
     Test data
-    accuracy 0.7272727272727273
-    precision 0.6
-    recall 0.8333333333333334
-    accuracy_count 104
+    accuracy 0.7342657342657343
+    precision 0.6447368421052632
+    recall 0.8166666666666667
+    accuracy_count 105
     
     Classification:  survived ~ linear_svc
     
     Training data
-    accuracy 0.7961335676625659
-    precision 0.7692307692307693
-    recall 0.7017543859649122
-    accuracy_count 453
+    accuracy 0.7873462214411248
+    precision 0.7568807339449541
+    recall 0.7081545064377682
+    accuracy_count 448
     
     Test data
-    accuracy 0.7762237762237763
-    precision 0.7333333333333333
-    recall 0.7333333333333333
-    accuracy_count 111
+    accuracy 0.8041958041958042
+    precision 0.7368421052631579
+    recall 0.7636363636363637
+    accuracy_count 115
     
     Classification:  survived ~ radius_neighbors
     
     Training data
-    accuracy 0.671353251318102
-    precision 0.7157894736842105
-    recall 0.2982456140350877
-    accuracy_count 382
+    accuracy 0.6678383128295254
+    precision 0.7244897959183674
+    recall 0.30472103004291845
+    accuracy_count 380
     
     Test data
-    accuracy 0.6433566433566433
-    precision 0.7142857142857143
-    recall 0.25
-    accuracy_count 92
+    accuracy 0.6783216783216783
+    precision 0.7368421052631579
+    recall 0.2545454545454545
+    accuracy_count 97
     
     Classification:  survived ~ decision_tree
     
     Training data
-    accuracy 0.9894551845342706
+    accuracy 0.9876977152899824
     precision 1.0
-    recall 0.9737991266375546
-    accuracy_count 563
+    recall 0.9694323144104804
+    accuracy_count 562
     
     Test data
-    accuracy 0.6993006993006993
-    precision 0.6538461538461539
-    recall 0.576271186440678
-    accuracy_count 100
-    
+    accuracy 0.7482517482517482
+    precision 0.6825396825396826
+    recall 0.7288135593220338
+    accuracy_count 107
 
 
-## Naive Bayes
+
+### Naive Bayes
 
 
 ```python
@@ -2565,118 +2567,171 @@ compare_results()
     Classification:  survived ~ logistic
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.8020304568527918
-    recall 0.6960352422907489
-    accuracy_count 461
+    accuracy 0.8137082601054482
+    precision 0.7990196078431373
+    recall 0.7149122807017544
+    accuracy_count 463
     
     Test data
-    accuracy 0.7692307692307693
-    precision 0.7692307692307693
-    recall 0.6557377049180327
-    accuracy_count 110
+    accuracy 0.7762237762237763
+    precision 0.8043478260869565
+    recall 0.6166666666666667
+    accuracy_count 111
     
     Classification:  survived ~ linear_discriminant_analysis
     
     Training data
-    accuracy 0.8101933216168717
-    precision 0.7887323943661971
-    recall 0.7272727272727273
-    accuracy_count 461
+    accuracy 0.7996485061511424
+    precision 0.7772727272727272
+    recall 0.7245762711864406
+    accuracy_count 455
     
     Test data
-    accuracy 0.7622377622377622
-    precision 0.7555555555555555
-    recall 0.5964912280701754
-    accuracy_count 109
+    accuracy 0.7412587412587412
+    precision 0.6415094339622641
+    recall 0.6538461538461539
+    accuracy_count 106
     
     Classification:  survived ~ quadratic_discriminant_analysis
     
     Training data
-    accuracy 0.7943760984182777
-    precision 0.7594339622641509
-    recall 0.7092511013215859
-    accuracy_count 452
+    accuracy 0.8066783831282952
+    precision 0.7752293577981652
+    recall 0.7347826086956522
+    accuracy_count 459
     
     Test data
-    accuracy 0.8251748251748252
-    precision 0.8103448275862069
-    recall 0.7704918032786885
-    accuracy_count 118
+    accuracy 0.7622377622377622
+    precision 0.7142857142857143
+    recall 0.6896551724137931
+    accuracy_count 109
     
     Classification:  survived ~ sgd
     
     Training data
-    accuracy 0.7504393673110721
-    precision 0.6554054054054054
-    recall 0.8290598290598291
-    accuracy_count 427
+    accuracy 0.7715289982425307
+    precision 0.6814814814814815
+    recall 0.8070175438596491
+    accuracy_count 439
     
     Test data
-    accuracy 0.7272727272727273
-    precision 0.6
-    recall 0.8333333333333334
-    accuracy_count 104
+    accuracy 0.7342657342657343
+    precision 0.6447368421052632
+    recall 0.8166666666666667
+    accuracy_count 105
     
     Classification:  survived ~ linear_svc
     
     Training data
-    accuracy 0.7961335676625659
-    precision 0.7692307692307693
-    recall 0.7017543859649122
-    accuracy_count 453
+    accuracy 0.7873462214411248
+    precision 0.7568807339449541
+    recall 0.7081545064377682
+    accuracy_count 448
     
     Test data
-    accuracy 0.7762237762237763
-    precision 0.7333333333333333
-    recall 0.7333333333333333
-    accuracy_count 111
+    accuracy 0.8041958041958042
+    precision 0.7368421052631579
+    recall 0.7636363636363637
+    accuracy_count 115
     
     Classification:  survived ~ radius_neighbors
     
     Training data
-    accuracy 0.671353251318102
-    precision 0.7157894736842105
-    recall 0.2982456140350877
-    accuracy_count 382
+    accuracy 0.6678383128295254
+    precision 0.7244897959183674
+    recall 0.30472103004291845
+    accuracy_count 380
     
     Test data
-    accuracy 0.6433566433566433
-    precision 0.7142857142857143
-    recall 0.25
-    accuracy_count 92
+    accuracy 0.6783216783216783
+    precision 0.7368421052631579
+    recall 0.2545454545454545
+    accuracy_count 97
     
     Classification:  survived ~ decision_tree
     
     Training data
-    accuracy 0.9894551845342706
+    accuracy 0.9876977152899824
     precision 1.0
-    recall 0.9737991266375546
-    accuracy_count 563
+    recall 0.9694323144104804
+    accuracy_count 562
     
     Test data
-    accuracy 0.6993006993006993
-    precision 0.6538461538461539
-    recall 0.576271186440678
-    accuracy_count 100
+    accuracy 0.7482517482517482
+    precision 0.6825396825396826
+    recall 0.7288135593220338
+    accuracy_count 107
     
     Classification:  survived ~ naive_bayes
     
     Training data
     accuracy 0.7644991212653779
-    precision 0.7032520325203252
-    recall 0.7393162393162394
+    precision 0.6877637130801688
+    recall 0.7309417040358744
     accuracy_count 435
     
     Test data
-    accuracy 0.7202797202797203
-    precision 0.6206896551724138
-    recall 0.6666666666666666
-    accuracy_count 103
-    
+    accuracy 0.7622377622377622
+    precision 0.746031746031746
+    recall 0.7230769230769231
+    accuracy_count 109
 
 
-# Hyperparameter tunning (Optimizacion de hiperparametros)
+
+## Cross Validation - Seleccion de Modelos
+Analizar la varianza de los resultados para obtener los que tengan mejor resultado.
+
+
+```python
+# Grabar los resultados de cada modelo
+from sklearn import model_selection
+
+models = []
+
+#logistic Regression
+models.append(('Logistic', LogisticRegression(solver='liblinear')))
+
+# Decision Tree classifier
+models.append(('Decision Tree', DecisionTreeClassifier()))
+
+#
+models.append(('LDA', LinearDiscriminantAnalysis(solver= 'svd')))
+
+# evaluate each model in turn
+results = []
+names = []
+scoring = 'accuracy'
+for name, model in models:
+    # Kfol cross validation for model selection
+    kfold = model_selection.KFold(n_splits=10)
+    #X train , y train
+    cv_results = model_selection.cross_val_score(model, x_train, y_train, cv=kfold, scoring=scoring)
+    results.append(cv_results)
+    names.append(name)
+    msg = f"({name}, {cv_results.mean()}, {cv_results.std()}"
+    print(msg)
+```
+
+    (Logistic, 0.7996553884711779, 0.03052711377670607
+    (Decision Tree, 0.7908521303258145, 0.05897038598057798
+    (LDA, 0.7944235588972431, 0.0357488400750467
+
+
+
+```python
+plt.figure(figsize = (15,8)) 
+result_df = pd.DataFrame(results, index=names).T
+result_df.boxplot()
+plt.title("Resultados de Cross Validation");
+```
+
+
+​    
+![png](./8-Clasificacion-Python_92_0.png)
+​    
+
+
+## Hyperparameter tunning (Optimizacion de hiperparametros)
 
 
 ```python
@@ -2697,7 +2752,7 @@ titanic_df.head()
     .dataframe tbody tr th {
         vertical-align: top;
     }
-
+    
     .dataframe thead th {
         text-align: right;
     }
@@ -2723,11 +2778,11 @@ titanic_df.head()
       <th>0</th>
       <td>1</td>
       <td>3</td>
-      <td>1</td>
-      <td>25.0</td>
-      <td>1</td>
       <td>0</td>
-      <td>7.7750</td>
+      <td>26.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>7.9250</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -2737,49 +2792,49 @@ titanic_df.head()
       <td>0</td>
       <td>3</td>
       <td>1</td>
-      <td>27.0</td>
+      <td>21.0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>8.4333</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>14.4542</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
     </tr>
     <tr>
       <th>2</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>51.0</td>
+      <td>57.0</td>
       <td>0</td>
       <td>0</td>
-      <td>7.0542</td>
-      <td>0</td>
+      <td>12.3500</td>
       <td>0</td>
       <td>1</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>3</th>
       <td>0</td>
-      <td>3</td>
+      <td>2</td>
       <td>1</td>
-      <td>19.0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>7.8958</td>
-      <td>0</td>
-      <td>0</td>
+      <td>25.0</td>
       <td>1</td>
+      <td>2</td>
+      <td>41.5792</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1</td>
+      <td>0</td>
       <td>2</td>
       <td>1</td>
-      <td>34.0</td>
+      <td>35.0</td>
       <td>0</td>
       <td>0</td>
-      <td>13.0000</td>
+      <td>10.5000</td>
       <td>0</td>
       <td>0</td>
       <td>1</td>
@@ -2817,7 +2872,7 @@ def summarize_classification(y_test, y_pred):
     print()
 ```
 
-## Decision Tree
+### Decision Tree
 
 
 ```python
@@ -2834,12 +2889,14 @@ grid_search.best_params_
 
 
 
-    {'max_depth': 7}
+    {'max_depth': 2}
 
 
 
 
 ```python
+# Para ver todos los resultados del cross validation
+# No es necesario, solo es informativo para ver como varia el modelo
 for i in range(6):
     print('Parameters: ', grid_search.cv_results_['params'][i])
 
@@ -2849,23 +2906,23 @@ for i in range(6):
 ```
 
     Parameters:  {'max_depth': 2}
-    Mean Test Score:  0.797930010210712
-    Rank:  2
-    Parameters:  {'max_depth': 4}
-    Mean Test Score:  0.7978371855564838
-    Rank:  3
-    Parameters:  {'max_depth': 5}
-    Mean Test Score:  0.7855657662675206
-    Rank:  4
-    Parameters:  {'max_depth': 7}
-    Mean Test Score:  0.8102014294996751
+    Mean Test Score:  0.8065998329156224
     Rank:  1
+    Parameters:  {'max_depth': 4}
+    Mean Test Score:  0.8065998329156224
+    Rank:  1
+    Parameters:  {'max_depth': 5}
+    Mean Test Score:  0.8031003434512206
+    Rank:  3
+    Parameters:  {'max_depth': 7}
+    Mean Test Score:  0.7890466908010768
+    Rank:  4
     Parameters:  {'max_depth': 9}
-    Mean Test Score:  0.7768309663046504
-    Rank:  5
-    Parameters:  {'max_depth': 10}
-    Mean Test Score:  0.7733036294439802
+    Mean Test Score:  0.773266499582289
     Rank:  6
+    Parameters:  {'max_depth': 10}
+    Mean Test Score:  0.7750208855472014
+    Rank:  5
 
 
 
@@ -2885,14 +2942,14 @@ summarize_classification(y_test, y_pred)
 ```
 
     Test data count:  143
-    accuracy_count :  112
-    accuracy_score :  0.7832167832167832
-    precision_score :  0.8604651162790697
-    recall_score :  0.5967741935483871
-    
+    accuracy_count :  109
+    accuracy_score :  0.7622377622377622
+    precision_score :  0.9333333333333333
+    recall_score :  0.4666666666666667
 
 
-## Regresion logistica
+
+### Regresion logistica
 
 
 ```python
@@ -2908,12 +2965,14 @@ grid_search.best_params_
 
 
 
-    {'C': 2, 'penalty': 'l1'}
+    {'C': 0.8, 'penalty': 'l1'}
 
 
 
 
 ```python
+# Para ver todos los resultados del cross validation
+# No es necesario, solo es informativo para ver como varia el modelo
 for i in range(12):
     print('Parameters: ', grid_search.cv_results_['params'][i])
     print('Mean Test Score: ', grid_search.cv_results_['mean_test_score'][i])
@@ -2921,41 +2980,41 @@ for i in range(12):
 ```
 
     Parameters:  {'C': 0.1, 'penalty': 'l1'}
-    Mean Test Score:  0.7803304557690524
+    Mean Test Score:  0.7733036294439802
     Rank:  12
     Parameters:  {'C': 0.1, 'penalty': 'l2'}
-    Mean Test Score:  0.780339738234475
-    Rank:  11
+    Mean Test Score:  0.7961384943841084
+    Rank:  10
     Parameters:  {'C': 0.4, 'penalty': 'l1'}
-    Mean Test Score:  0.7943562610229277
+    Mean Test Score:  0.803183885640026
     Rank:  7
     Parameters:  {'C': 0.4, 'penalty': 'l2'}
-    Mean Test Score:  0.7855843311983662
+    Mean Test Score:  0.7961384943841084
     Rank:  10
     Parameters:  {'C': 0.8, 'penalty': 'l1'}
-    Mean Test Score:  0.7978557504873294
-    Rank:  4
-    Parameters:  {'C': 0.8, 'penalty': 'l2'}
-    Mean Test Score:  0.7961199294532628
-    Rank:  6
-    Parameters:  {'C': 1, 'penalty': 'l1'}
-    Mean Test Score:  0.7978557504873294
-    Rank:  4
-    Parameters:  {'C': 1, 'penalty': 'l2'}
-    Mean Test Score:  0.7996287013830874
-    Rank:  3
-    Parameters:  {'C': 2, 'penalty': 'l1'}
-    Mean Test Score:  0.8048825768124014
+    Mean Test Score:  0.8119558154645875
     Rank:  1
-    Parameters:  {'C': 2, 'penalty': 'l2'}
-    Mean Test Score:  0.7943376960920822
+    Parameters:  {'C': 0.8, 'penalty': 'l2'}
+    Mean Test Score:  0.801410934744268
     Rank:  8
-    Parameters:  {'C': 5, 'penalty': 'l1'}
-    Mean Test Score:  0.8031096259166435
+    Parameters:  {'C': 1, 'penalty': 'l1'}
+    Mean Test Score:  0.8102014294996751
     Rank:  2
+    Parameters:  {'C': 1, 'penalty': 'l2'}
+    Mean Test Score:  0.8049197066740926
+    Rank:  5
+    Parameters:  {'C': 2, 'penalty': 'l1'}
+    Mean Test Score:  0.8049197066740926
+    Rank:  5
+    Parameters:  {'C': 2, 'penalty': 'l2'}
+    Mean Test Score:  0.8101828645688295
+    Rank:  3
+    Parameters:  {'C': 5, 'penalty': 'l1'}
+    Mean Test Score:  0.8066740926390049
+    Rank:  4
     Parameters:  {'C': 5, 'penalty': 'l2'}
-    Mean Test Score:  0.7943376960920822
-    Rank:  8
+    Mean Test Score:  0.79963798384851
+    Rank:  9
 
 
 
@@ -2976,14 +3035,106 @@ summarize_classification(y_test, y_pred)
 ```
 
     Test data count:  143
-    accuracy_count :  110
-    accuracy_score :  0.7692307692307693
-    precision_score :  0.7543859649122807
-    recall_score :  0.6935483870967742
+    accuracy_count :  113
+    accuracy_score :  0.7902097902097902
+    precision_score :  0.8125
+    recall_score :  0.65
+
+
+
+## Final Evaluation Test
+
+
+```python
+
+from sklearn.metrics import plot_confusion_matrix
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import plot_precision_recall_curve
+```
+
+### Decision Tree
+
+
+```python
+decision_tree_model = DecisionTreeClassifier( \
+    max_depth = 4).fit(x_train, y_train)
+```
+
+
+```python
+y_pred = decision_tree_model.predict(x_test)
+```
+
+
+```python
+print(classification_report(y_test, y_pred))
+```
+
+                  precision    recall  f1-score   support
     
+               0       0.76      0.92      0.83        83
+               1       0.84      0.60      0.70        60
+    
+        accuracy                           0.78       143
+       macro avg       0.80      0.76      0.76       143
+    weighted avg       0.79      0.78      0.78       143
 
 
-# Grabar el Modelo
+
+
+```python
+plot_confusion_matrix(decision_tree_model, x_test, y_test,cmap=plt.cm.Blues);
+```
+
+
+​    
+![png](./8-Clasificacion-Python_115_0.png)
+​    
+
+
+### Regresion Logistica
+
+
+```python
+logistic_model = LogisticRegression(solver='liblinear', \
+    penalty='l1', C=5). \
+    fit(x_train, y_train)
+```
+
+
+```python
+y_pred = logistic_model.predict(x_test)
+```
+
+
+```python
+print(classification_report(y_test, y_pred))
+```
+
+                  precision    recall  f1-score   support
+    
+               0       0.77      0.89      0.83        83
+               1       0.81      0.63      0.71        60
+    
+        accuracy                           0.78       143
+       macro avg       0.79      0.76      0.77       143
+    weighted avg       0.79      0.78      0.78       143
+
+
+
+
+```python
+plot_confusion_matrix(logistic_model, x_test, y_test,cmap=plt.cm.Blues);
+```
+
+
+​    
+![png](./8-Clasificacion-Python_120_0.png)
+​    
+
+
+## Grabar el Modelo
 
 
 ```python
@@ -3000,13 +3151,34 @@ dump(logistic_model, 'logistic_model-titanic.joblib')
 
 
 
-# Referencias
-https://scikit-learn.org/stable/supervised_learning.html#supervised-learning
 
+```python
+from joblib import load
+
+mi_modelo = load('logistic_model-titanic.joblib')
+```
+
+
+```python
+mi_modelo.predict(x_test)
+```
+
+
+
+
+    array([1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 1, 0, 0, 1,
+           0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 1, 1, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0,
+           0, 1, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 1, 0,
+           0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0,
+           0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 0,
+           0, 1, 0, 0, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 0, 0, 1, 1, 1,
+           0, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0])
+
+
+
+## Referencias
 Cheatsheet scikitlearn 
 https://datacamp-community-prod.s3.amazonaws.com/5433fa18-9f43-44cc-b228-74672efcd116
 
 **Phd. Jose R. Zapata**
 - [https://joserzapata.github.io/](https://joserzapata.github.io/)
-- https://twitter.com/joserzapata
-
