@@ -61,6 +61,9 @@ social:
 - icon: orcid
   icon_pack: ai
   link: 'https://orcid.org/0000-0003-1484-5816'
+- icon: youtube
+  icon_pack: fab
+  link: 'https://www.youtube.com/channel/UCHmG2Mrqs6zEhhfRLaTa9Pg'  
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/jose-ricardo-zapata-gonzalez/
