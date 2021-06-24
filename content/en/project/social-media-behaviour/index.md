@@ -7,7 +7,7 @@ summary: "Research Project that combines exclusive Facebook data (Condor Dataset
 This project in founded by the Social Media and Democracy Research Grants from the Social Science Research Council and access to Facebook data via Social Science One.
 "
 authors: ["joserzapata"]
-tags: ["Data-Science","Python"]
+tags: ["Coordinated-link-sharing-behaviour","Data-Science","Python"]
 categories: []
 date: 2020-02-14T17:09:59-05:00
 
@@ -42,3 +42,11 @@ url_video: ""
 #   Otherwise, set `slides = ""`.
 slides: ""
 ---
+This Research Project combines [exclusive Facebook data ](https://socialscience.one/blog/unprecedented-facebook-urls-dataset-now-available-research-through-social-science-one)(Condor Dataset, [Crowdtangle](https://www.crowdtangle.com/), [Ad Library](https://www.facebook.com/ads/library/api)) and public data to quantitatively (Coordinated link sharing behaviour analysis) and qualitatively (Content Analysis) analyze the Social Media behavior to determine if there is [coordinated inauthentic behavior](https://about.fb.com/news/tag/coordinated-inauthentic-behavior/). We use TeleSUR’s English language media operations and its partners as a study case.
+
+This project in founded by [the Social Media and Democracy Research Grants](https://www.ssrc.org/fellowships/view/social-media-and-democracy-research-grants/) from [the Social Science Research Council](https://www.ssrc.org/) and access to Facebook data via [Social Science One](https://socialscience.one/).
+
+[the Social Media and Democracy Research Grants](https://www.ssrc.org/fellowships/view/social-media-and-democracy-research-grants/) support research that examines the impact of social media and related digital technologies on democracy and elections.
+
+[https://upb-ss1.github.io/](https://upb-ss1.github.io/)
+
