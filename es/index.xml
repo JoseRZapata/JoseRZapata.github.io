@@ -5,12 +5,20 @@
     <link>https://joserzapata.github.io/es/</link>
       <atom:link href="https://joserzapata.github.io/es/index.xml" rel="self" type="application/rss+xml" />
     <description>Jose Ricardo Zapata</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><copyright>© 2021</copyright><lastBuildDate>Mon, 28 Sep 2020 10:57:42 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>es</language><copyright>© 2021</copyright><lastBuildDate>Wed, 14 Oct 2020 10:11:07 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/media/icon_huef99ce4a8cdef83a01a57b9c8063a4d3_108982_512x512_fill_lanczos_center_2.png</url>
       <title>Jose Ricardo Zapata</title>
       <link>https://joserzapata.github.io/es/</link>
     </image>
+    
+    <item>
+      <title>Noticias Falsas: ¿Por qué son incontrolables? Podcast HumanaMente Ep.9</title>
+      <link>https://joserzapata.github.io/es/event/humanamente/</link>
+      <pubDate>Wed, 14 Oct 2020 10:11:07 -0500</pubDate>
+      <guid>https://joserzapata.github.io/es/event/humanamente/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Sesquialtera in the Colombian Bambuco: Perception and Estimation of Beat and Meter</title>
@@ -1063,7 +1071,11 @@ only showing top 20 rows
       <link>https://joserzapata.github.io/es/project/social-media-behaviour/</link>
       <pubDate>Fri, 14 Feb 2020 17:09:59 -0500</pubDate>
       <guid>https://joserzapata.github.io/es/project/social-media-behaviour/</guid>
-      <description></description>
+      <description>&lt;p&gt;This Research Project combines &lt;a href=&#34;https://socialscience.one/blog/unprecedented-facebook-urls-dataset-now-available-research-through-social-science-one&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;exclusive Facebook data &lt;/a&gt;(Condor Dataset, &lt;a href=&#34;https://www.crowdtangle.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Crowdtangle&lt;/a&gt;, &lt;a href=&#34;https://www.facebook.com/ads/library/api&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Ad Library&lt;/a&gt;) and public data to quantitatively (Coordinated link sharing behaviour analysis) and qualitatively (Content Analysis) analyze the Social Media behavior to determine if there is &lt;a href=&#34;https://about.fb.com/news/tag/coordinated-inauthentic-behavior/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;coordinated inauthentic behavior&lt;/a&gt;. We use TeleSUR’s English language media operations and its partners as a study case.&lt;/p&gt;
+&lt;p&gt;This project in founded by &lt;a href=&#34;https://www.ssrc.org/fellowships/view/social-media-and-democracy-research-grants/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the Social Media and Democracy Research Grants&lt;/a&gt; from &lt;a href=&#34;https://www.ssrc.org/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the Social Science Research Council&lt;/a&gt; and access to Facebook data via &lt;a href=&#34;https://socialscience.one/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Social Science One&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.ssrc.org/fellowships/view/social-media-and-democracy-research-grants/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the Social Media and Democracy Research Grants&lt;/a&gt; support research that examines the impact of social media and related digital technologies on democracy and elections.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://upb-ss1.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://upb-ss1.github.io/&lt;/a&gt;&lt;/p&gt;
+</description>
     </item>
     
     <item>

@@ -5,12 +5,20 @@
     <link>https://joserzapata.github.io/event/</link>
       <atom:link href="https://joserzapata.github.io/event/index.xml" rel="self" type="application/rss+xml" />
     <description>Talks</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Fri, 07 Feb 2020 12:35:00 -0500</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021</copyright><lastBuildDate>Wed, 14 Oct 2020 10:11:07 -0500</lastBuildDate>
     <image>
       <url>https://joserzapata.github.io/media/icon_huef99ce4a8cdef83a01a57b9c8063a4d3_108982_512x512_fill_lanczos_center_2.png</url>
       <title>Talks</title>
       <link>https://joserzapata.github.io/event/</link>
     </image>
+    
+    <item>
+      <title>Noticias Falsas: ¿Por qué son incontrolables? Podcast HumanaMente Ep.9</title>
+      <link>https://joserzapata.github.io/event/humanamente/</link>
+      <pubDate>Wed, 14 Oct 2020 10:11:07 -0500</pubDate>
+      <guid>https://joserzapata.github.io/event/humanamente/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Comprensión de la música con Python, una mirada desde la Física y la Matemática</title>

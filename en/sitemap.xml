@@ -71,6 +71,58 @@
                 href="https://joserzapata.github.io/author/jose-r.-zapata/"
                 />
   </url><url>
+    <loc>https://joserzapata.github.io/tag/coordinated-link-sharing-behaviour/</loc>
+    <lastmod>2020-10-14T10:11:07-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tag/coordinated-link-sharing-behaviour/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tag/coordinated-link-sharing-behaviour/"
+                />
+  </url><url>
+    <loc>https://joserzapata.github.io/event/humanamente/</loc>
+    <lastmod>2020-10-14T10:11:07-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/event/humanamente/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/event/humanamente/"
+                />
+  </url><url>
+    <loc>https://joserzapata.github.io/tags/</loc>
+    <lastmod>2020-10-14T10:11:07-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://joserzapata.github.io/event/</loc>
+    <lastmod>2020-10-14T10:11:07-05:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://joserzapata.github.io/es/event/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joserzapata.github.io/event/"
+                />
+  </url><url>
     <loc>https://joserzapata.github.io/publication-type/1/</loc>
     <lastmod>2020-09-28T10:57:42-05:00</lastmod>
     <xhtml:link
@@ -279,19 +331,6 @@
                 href="https://joserzapata.github.io/publication/ismir2020/"
                 />
   </url><url>
-    <loc>https://joserzapata.github.io/tags/</loc>
-    <lastmod>2020-09-28T10:57:42-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/tags/"
-                />
-  </url><url>
     <loc>https://joserzapata.github.io/categories/</loc>
     <lastmod>2020-05-29T17:03:57-05:00</lastmod>
     <xhtml:link
@@ -472,19 +511,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joserzapata.github.io/tag/music/"
-                />
-  </url><url>
-    <loc>https://joserzapata.github.io/event/</loc>
-    <lastmod>2020-02-07T12:35:00-05:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://joserzapata.github.io/es/event/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joserzapata.github.io/event/"
                 />
   </url><url>
     <loc>https://joserzapata.github.io/tag/waves/</loc>
