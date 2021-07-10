@@ -7,7 +7,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.3.0 for Hugo" />
   
 
   
@@ -43,6 +43,8 @@
 
 
 
+
+
   
 
 
@@ -68,10 +70,17 @@
   
     
     
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous" media="print" onload="this.media='all'">
 
+    
+    
+    
+    
+      
+      
+    
     
     
 
@@ -99,6 +108,14 @@
     
 
     
+    
+      
+      
+
+      
+      
+
+      
     
       
       
@@ -247,7 +264,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.98dcc3bd98f20f708752b6d3d8cd160e.css" />
+  <link rel="stylesheet" href="/css/wowchemy.fb386eee79d81cc936feb67a46cc713a.css" />
 
   
 
@@ -372,7 +389,8 @@
   
   
   
-  <script src="/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js"></script>
+  
+  <script src="/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js"></script>
 
   
 
@@ -441,7 +459,7 @@
 
     
     <button type="button" class="navbar-toggler" data-toggle="collapse"
-            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
     <span><i class="fas fa-bars"></i></span>
     </button>
     
@@ -1678,7 +1696,27 @@ plt.xlabel('Age')
 plt.ylabel('Survived');
 </code></pre>
 <p>​ <br>
-<img src="./8-Clasificacion-Python_20_0.png" alt="png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./8-Clasificacion-Python_20_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
 ​</p>
 <pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
 
@@ -1688,7 +1726,27 @@ plt.xlabel('Fare')
 plt.ylabel('Survived');
 </code></pre>
 <p>​ <br>
-<img src="./8-Clasificacion-Python_21_0.png" alt="png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./8-Clasificacion-Python_21_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
 ​</p>
 <h3 id="correlacion">Correlacion</h3>
 <pre><code class="language-python">pd.crosstab(titanic_df['Sex'], titanic_df['Survived'])
@@ -1875,7 +1933,27 @@ titanic_data_corr
 sns.heatmap(titanic_data_corr, annot=True);
 </code></pre>
 <p>​ <br>
-<img src="./8-Clasificacion-Python_26_0.png" alt="png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./8-Clasificacion-Python_26_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
 ​</p>
 <h2 id="transformacion-de-variables">Transformacion de Variables</h2>
 <pre><code class="language-python">from sklearn import preprocessing
@@ -3402,7 +3480,27 @@ result_df.boxplot()
 plt.title(&quot;Resultados de Cross Validation&quot;);
 </code></pre>
 <p>​ <br>
-<img src="./8-Clasificacion-Python_92_0.png" alt="png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./8-Clasificacion-Python_92_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
 ​</p>
 <h2 id="hyperparameter-tunning-optimizacion-de-hiperparametros">Hyperparameter tunning (Optimizacion de hiperparametros)</h2>
 <pre><code class="language-python">titanic_df = pd.read_csv('datasets/titanic_processed.csv')
@@ -3678,7 +3776,27 @@ weighted avg       0.79      0.78      0.78       143
 <pre><code class="language-python">plot_confusion_matrix(decision_tree_model, x_test, y_test,cmap=plt.cm.Blues);
 </code></pre>
 <p>​ <br>
-<img src="./8-Clasificacion-Python_115_0.png" alt="png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./8-Clasificacion-Python_115_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
 ​</p>
 <h3 id="regresion-logistica-2">Regresion Logistica</h3>
 <pre><code class="language-python">logistic_model = LogisticRegression(solver='liblinear', \
@@ -3701,7 +3819,27 @@ weighted avg       0.79      0.78      0.78       143
 <pre><code class="language-python">plot_confusion_matrix(logistic_model, x_test, y_test,cmap=plt.cm.Blues);
 </code></pre>
 <p>​ <br>
-<img src="./8-Clasificacion-Python_120_0.png" alt="png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./8-Clasificacion-Python_120_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
 ​</p>
 <h2 id="grabar-el-modelo">Grabar el Modelo</h2>
 <pre><code class="language-python">from joblib import dump, load # libreria de serializacion
@@ -3782,11 +3920,17 @@ mi_modelo = load('logistic_model-titanic.joblib')
 
   
 
+
+
   
 
+  
+
+  
   <p class="powered-by">
     © 2021
   </p>
+  
 
   
   
@@ -3872,9 +4016,10 @@ mi_modelo = load('logistic_model-titanic.joblib')
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/shell.min.js" crossorigin="anonymous"></script>
         
       
 
@@ -3949,7 +4094,7 @@ mi_modelo = load('logistic_model-titanic.joblib')
       
     
     
-    <script src="/en/js/wowchemy.min.b61a8f62b6e5c0cd322c8158c5b5dfb6.js"></script>
+    <script src="/en/js/wowchemy.min.d68ecd57c0ec1f1f61d65fd568f1c3a0.js"></script>
 
     
 

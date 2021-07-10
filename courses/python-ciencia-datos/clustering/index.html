@@ -7,7 +7,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.3.0 for Hugo" />
   
 
   
@@ -43,6 +43,8 @@
 
 
 
+
+
   
 
 
@@ -68,10 +70,17 @@
   
     
     
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous" media="print" onload="this.media='all'">
 
+    
+    
+    
+    
+      
+      
+    
     
     
 
@@ -99,6 +108,14 @@
     
 
     
+    
+      
+      
+
+      
+      
+
+      
     
       
       
@@ -247,7 +264,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.98dcc3bd98f20f708752b6d3d8cd160e.css" />
+  <link rel="stylesheet" href="/css/wowchemy.fb386eee79d81cc936feb67a46cc713a.css" />
 
   
 
@@ -372,7 +389,8 @@
   
   
   
-  <script src="/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js"></script>
+  
+  <script src="/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js"></script>
 
   
 
@@ -441,7 +459,7 @@
 
     
     <button type="button" class="navbar-toggler" data-toggle="collapse"
-            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
     <span><i class="fas fa-bars"></i></span>
     </button>
     
@@ -1563,7 +1581,27 @@ plt.ylabel('sepal-width')
 plt.show()
 </code></pre>
 <p>​ <br>
-<img src="./9-Clustering-Python_17_0.png" alt="png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./9-Clustering-Python_17_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
 ​</p>
 <pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
 
@@ -1575,7 +1613,27 @@ plt.ylabel('petal-length')
 plt.show()
 </code></pre>
 <p>​ <br>
-<img src="./9-Clustering-Python_18_0.png" alt="png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./9-Clustering-Python_18_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
 ​</p>
 <pre><code class="language-python">fig, ax = plt.subplots(figsize=(12, 8))
 
@@ -1587,7 +1645,27 @@ plt.ylabel('petal-length')
 plt.show()
 </code></pre>
 <p>​ <br>
-<img src="./9-Clustering-Python_19_0.png" alt="png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./9-Clustering-Python_19_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
 ​</p>
 <h2 id="kmeans-simple">KMeans SIMPLE</h2>
 <pre><code class="language-python">iris_2D = iris_df[['sepal-length', 'petal-length']]
@@ -1679,7 +1757,27 @@ for i in range(len(centroids_2D)):
     plt.annotate(i, (centroids_2D[i][0], centroids_2D[i][1]), fontsize=30)
 </code></pre>
 <p>​ <br>
-<img src="./9-Clustering-Python_27_0.png" alt="png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./9-Clustering-Python_27_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
 ​</p>
 <pre><code class="language-python">iris_labels = iris_df['class']
 </code></pre>
@@ -1715,7 +1813,27 @@ for i in range(len(centroids_2D)):
     plt.annotate( i, (centroids_2D[i][0], centroids_2D[i][1]), fontsize=30)
 </code></pre>
 <p>​ <br>
-<img src="./9-Clustering-Python_30_0.png" alt="png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./9-Clustering-Python_30_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
 ​</p>
 <pre><code class="language-python">iris_features = iris_df.drop('class', axis=1)
 
@@ -2170,7 +2288,27 @@ plt.ylabel('Speeding_Feature')
 plt.show()
 </code></pre>
 <p>​ <br>
-<img src="./9-Clustering-Python_74_0.png" alt="png">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./9-Clustering-Python_74_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+
 ​</p>
 <h3 id="dbscan-clustering">DBSCAN clustering</h3>
 <pre><code class="language-python">parameters = {'eps': [0.9, 1.0, 5.0, 10.0, 12.0, 14.0, 20.0],
@@ -2375,11 +2513,17 @@ metrics.silhouette_score(drivers_features, model.labels_)
 
   
 
+
+
   
 
+  
+
+  
   <p class="powered-by">
     © 2021
   </p>
+  
 
   
   
@@ -2465,9 +2609,10 @@ metrics.silhouette_score(drivers_features, model.labels_)
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/shell.min.js" crossorigin="anonymous"></script>
         
       
 
@@ -2542,7 +2687,7 @@ metrics.silhouette_score(drivers_features, model.labels_)
       
     
     
-    <script src="/en/js/wowchemy.min.b61a8f62b6e5c0cd322c8158c5b5dfb6.js"></script>
+    <script src="/en/js/wowchemy.min.d68ecd57c0ec1f1f61d65fd568f1c3a0.js"></script>
 
     
 

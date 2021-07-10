@@ -7,7 +7,7 @@
   
   
   
-    <meta name="generator" content="Wowchemy 5.1.0 for Hugo" />
+    <meta name="generator" content="Wowchemy 5.3.0 for Hugo" />
   
 
   
@@ -43,6 +43,8 @@
 
 
 
+
+
   
 
 
@@ -68,10 +70,17 @@
   
     
     
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous" media="print" onload="this.media='all'">
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin="anonymous" media="print" onload="this.media='all'">
 
+    
+    
+    
+    
+      
+      
+    
     
     
 
@@ -99,6 +108,14 @@
     
 
     
+    
+      
+      
+
+      
+      
+
+      
     
       
       
@@ -247,7 +264,7 @@
   
   
   
-  <link rel="stylesheet" href="/css/wowchemy.98dcc3bd98f20f708752b6d3d8cd160e.css" />
+  <link rel="stylesheet" href="/css/wowchemy.fb386eee79d81cc936feb67a46cc713a.css" />
 
   
 
@@ -372,7 +389,8 @@
   
   
   
-  <script src="/js/wowchemy-init.min.226a9011996d125bf3fe4a5f22353a49.js"></script>
+  
+  <script src="/js/wowchemy-init.min.8988fb2a4bba758785868cfcb5244555.js"></script>
 
   
 
@@ -441,7 +459,7 @@
 
     
     <button type="button" class="navbar-toggler" data-toggle="collapse"
-            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+            data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false" aria-label="Toggle navigation">
     <span><i class="fas fa-bars"></i></span>
     </button>
     
@@ -1547,7 +1565,27 @@ sns.lmplot(x=&quot;x&quot;, y=&quot;y&quot;, col=&quot;dataset&quot;, hue=&quot;
                col_wrap=2, ci=None, palette=&quot;muted&quot;, height=4,
                scatter_kws={&quot;s&quot;: 50, &quot;alpha&quot;: 1});
 </code></pre>
-<p><img src="./4-Visualizacion_10_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_10_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <p>Calculo de los valores de la regresion lineal</p>
 <pre><code class="language-python">fits = [np.polyfit(g['x'], g['y'], 1) for _, g in anscombe.groupby('dataset')]
 </code></pre>
@@ -1646,19 +1684,79 @@ plt.plot(x, y) # se grafica una linea de color azul
 plt.show() # Mostrar la grafica luego de que ya se definio todos los elementos
 # plt.show() no es necesario en jupyter notebook
 </code></pre>
-<p><img src="./4-Visualizacion_27_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_27_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="titulo">Titulo</h3>
 <pre><code class="language-python">plt.plot(x, y) # se grafica una linea de color azul
 plt.title('Titulo de la grafica'); # definir el titulo de la grafica
 </code></pre>
-<p><img src="./4-Visualizacion_29_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_29_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="nombres-de-los-ejes">Nombres de los ejes</h3>
 <pre><code class="language-python">plt.plot(x, y) # se grafica una linea de color azul
 plt.xlabel('Nombre del eje X') # definir el nombre del eje X
 plt.ylabel('Nombre del eje Y') # definir el nombre del eje Y
 plt.title('Titulo de la grafica'); # definir el titulo de la grafica
 </code></pre>
-<p><img src="./4-Visualizacion_31_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_31_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="legend">Legend</h3>
 <p>Puede usar el argumento de palabra clave <strong>label = &ldquo;texto de etiqueta&rdquo;</strong> cuando se agreguen gráficas u otros objetos a la figura, y luego usar el método <strong>legend</strong> sin argumentos para agregar la leyenda a la figura:</p>
 <pre><code class="language-python">plt.plot(x, y, label=&quot;x vs y&quot;) # se grafica una linea de color azul
@@ -1669,7 +1767,27 @@ plt.ylabel('Nombre del eje Y') # definir el nombre del eje Y
 plt.title('Titulo de la grafica') # definir el titulo de la grafica
 plt.legend(); # agregar el legend al plot
 </code></pre>
-<p><img src="./4-Visualizacion_33_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_33_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <p>¡Observe cómo la leyenda se superpone con parte de la grafica!</p>
 <p>EL Metodo <strong>legend</strong> toma un argumento opcional de palabra clave <strong>loc</strong> que puede usarse para especificar en qué parte de la figura debe dibujarse la leyenda. Los valores permitidos de <strong>loc</strong> son códigos numéricos para los diversos lugares donde se puede dibujar la leyenda. Consulte la <a href="http://matplotlib.org/users/legend_guide.html#legend-location" target="_blank" rel="noopener">página de documentación</a> para obtener detalles.</p>
 <h3 id="cuadricula-grid-">Cuadricula (Grid )</h3>
@@ -1683,7 +1801,27 @@ plt.legend() # agregar el legend al plot
 
 plt.grid(True) # poner grid en la grafica
 </code></pre>
-<p><img src="./4-Visualizacion_36_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_36_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="tamaño-de-la-figura-y-dpi">Tamaño de la Figura y DPI</h3>
 <p>Matplotlib permite especificar la relación de aspecto, el DPI y el tamaño de la figura cuando se crea el objeto Figure. Puede usar los argumentos de las palabras clave <code>figsize</code> y<code> dpi</code>. No es necesario poner las dos.</p>
 <ul>
@@ -1702,7 +1840,27 @@ plt.title('Titulo de la grafica'); # definir el titulo de la grafica
 # agrego ; al final del ultimo comando para solo mostrar la grafica
 # plt.show() no es necesario en jupyter notebook
 </code></pre>
-<p><img src="./4-Visualizacion_38_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_38_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="parametros-de-las-lineas-colores-ancho-y-tipos">Parametros de las lineas: colores, ancho y tipos</h3>
 <p>Matplotlib le brinda <em>muchas</em> opciones para personalizar colores, anchos de línea y tipos de línea.</p>
 <p>Existe la sintaxis básica que se puede consultar en:</p>
@@ -1713,7 +1871,27 @@ plt.title('Titulo de la grafica'); # definir el titulo de la grafica
 plt.plot(x, x**2, 'b.-') # linea azul con puntos
 plt.plot(x, x**3, 'g--'); # Linea verde discontinua
 </code></pre>
-<p><img src="./4-Visualizacion_42_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_42_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h4 id="colores-usando-el-parametro--color">Colores usando el parametro  <code>color</code></h4>
 <p>También podemos definir colores por sus nombres o códigos hexadecimales RGB y, opcionalmente, proporcionar un valor alpha utilizando los argumentos de palabras clave <code>color</code> y<code> alpha</code>. Alpha indica opacidad.</p>
 <pre><code class="language-python">plt.plot(x, x, color=&quot;red&quot;) # Medio transparente
@@ -1722,7 +1900,27 @@ plt.plot(x, x+2, color=&quot;#8B008B&quot;)        # RGB hex code
 plt.plot(x, x+3, color=&quot;#F08C08&quot;);       # RGB hex code 
 plt.grid(True) # poner grid en la grafica
 </code></pre>
-<p><img src="./4-Visualizacion_45_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_45_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h4 id="estilos-de-lineas-y-marcadores">Estilos de Lineas y marcadores</h4>
 <p>Para cambiar el ancho de línea, podemos usar el argumento de la palabra clave <code>linewidth</code> o<code> lw</code>. El estilo de línea se puede seleccionar usando los argumentos de palabras clave <code>linestyle</code> o<code> ls</code>:</p>
 <pre><code class="language-python">plt.subplots(figsize=(12,6))
@@ -1754,7 +1952,27 @@ plt.plot(x, x+15, color=&quot;purple&quot;, lw=1, ls='-', marker='o', markersize
 plt.plot(x, x+16, color=&quot;purple&quot;, lw=1, ls='-', marker='s', markersize=8, 
         markerfacecolor=&quot;yellow&quot;, markeredgewidth=3, markeredgecolor=&quot;green&quot;);
 </code></pre>
-<p><img src="./4-Visualizacion_48_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_48_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <p>Para mas informacion:
 <a href="https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.plot.html">https://matplotlib.org/2.1.1/api/_as_gen/matplotlib.pyplot.plot.html</a></p>
 <h3 id="subplots">Subplots</h3>
@@ -1766,7 +1984,27 @@ plt.subplot(1,2,2) # subplot fila=1 Col=2, grafica=2
 plt.plot(y, x, 'g*-'); # para no mostrar info de la funcion
 plt.tight_layout() # para que no se superpongan las graficas
 </code></pre>
-<p><img src="./4-Visualizacion_51_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_51_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h4 id="multiples-subplots">Multiples subplots</h4>
 <p>Crear subplot de diferentes tamaños se puede lograr con el metodo <code>.subplot2grid()</code>
 Mas informacion en el link: <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot2grid.html">https://matplotlib.org/api/_as_gen/matplotlib.pyplot.subplot2grid.html</a></p>
@@ -1777,7 +2015,27 @@ plt.subplot2grid((3,3), (2,0))
 plt.subplot2grid((3,3), (2,1))
 plt.tight_layout() # para que no se superpongan las graficas
 </code></pre>
-<p><img src="./4-Visualizacion_53_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_53_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="rango-del-plot">Rango del Plot</h3>
 <p>Podemos configurar los rangos de los ejes usando los métodos <code>ylim</code> y<code> xlim</code> en el objeto del eje, o <code>axis('tight')</code> para obtener automáticamente rangos de ejes &ldquo;tightly fitted&rdquo;:</p>
 <pre><code class="language-python">plt.figure(figsize=(12, 4))
@@ -1799,7 +2057,27 @@ plt.title(&quot;ejes de rango personalizados&quot;);
 
 plt.tight_layout() # para que no se superpongan las graficas
 </code></pre>
-<p><img src="./4-Visualizacion_56_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_56_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h4 id="escala-logaritmica">Escala Logaritmica</h4>
 <pre><code class="language-python">plt.figure(figsize=(10,4))
       
@@ -1814,7 +2092,27 @@ plt.title(&quot;Escala Logaritmica(y)&quot;);
 
 plt.tight_layout() # para que no se superpongan las graficas
 </code></pre>
-<p><img src="./4-Visualizacion_58_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_58_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="anotaciones-de-texto">Anotaciones de texto</h3>
 <p>Anotar texto en figuras matplotlib se puede hacer usando la función <code>text</code>. Es compatible con el formato LaTeX al igual que los textos y títulos de la etiqueta del eje:</p>
 <pre><code class="language-python"># Datos para graficar
@@ -1828,7 +2126,27 @@ plt.text(0.15, 0.2, r&quot;$y=x^2$&quot;, fontsize=20, color=&quot;blue&quot;)
 #Anotacion 2
 plt.text(0.65, 0.1, r&quot;$y=x^3$&quot;, fontsize=20, color=&quot;green&quot;);
 </code></pre>
-<p><img src="./4-Visualizacion_60_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_60_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <hr>
 <h2 id="matplotlib-método-orientado-a-objetos">Matplotlib Método orientado a objetos</h2>
 <p>Lo demostrado hasta el momento es la forma basica de usar <code>Matplotlib</code>,
@@ -1848,7 +2166,27 @@ for ax in axes:
     ax.set_title('title')
 plt.tight_layout() # para que no se superpongan las graficas
 </code></pre>
-<p><img src="./4-Visualizacion_62_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_62_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <hr>
 <h2 id="tipos-especiales-de-plots">Tipos Especiales de Plots</h2>
 <p>Hay muchas Graficas especializadas que podemos crear, como barras, histogramas, diagramas de dispersión y mucho más. La mayoría de este tipo de tramas lo crearemos usando seaborn, una biblioteca de gráficos estadísticos para Python. Pero aquí hay algunos ejemplos de este tipo de graficos</p>
@@ -1863,7 +2201,27 @@ plt.scatter(x, y)
 plt.title(&quot;Scatter plot Simple&quot;);
 plt.show() # En jupyter notebook no es necesario este comando
 </code></pre>
-<p><img src="./4-Visualizacion_65_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_65_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <p>Con las graficas de scatter o dispersion se pueden representar mas de 2 variables en una misma grafica, en el siguiente ejemplo se realizara la comparacion de <code>x vs y</code> el color de los puntos se representara con otra variable y el tamaño de los puntos sera otra variable</p>
 <pre><code class="language-python"># se creara otra variable que se representara con colores
 colors = np.random.rand(N) # usar colores aleatorios
@@ -1874,7 +2232,27 @@ area = np.pi * (15 * np.random.rand(N))**2  # 0 to 15 point radio
 plt.scatter(x, y, s=area, c=colors, alpha=0.5) # el atributo alpha es para la transparencia
 plt.title(&quot;Scatter plot de representacion de 4 variables&quot;);
 </code></pre>
-<p><img src="./4-Visualizacion_67_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_67_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="histograma">Histograma</h3>
 <p>Un histograma es una representación gráfica de una variable en forma de barras, donde la superficie de cada barra es proporcional a la frecuencia de los valores representados. Sirven para obtener una &ldquo;primera vista&rdquo; general, o panorama, de la distribución de la población, o de la muestra, respecto a una característica, cuantitativa y continua</p>
 <pre><code class="language-python"># crear datos aleatorios
@@ -1884,7 +2262,27 @@ data = sample(range(1, 1000), 100)
 plt.hist(data,bins = 10) # bins el numero de divisiones del histograma
 plt.title(&quot;Histograma&quot;);
 </code></pre>
-<p><img src="./4-Visualizacion_69_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_69_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="boxplot">Boxplot</h3>
 <p>Informacion sobre el boxplot -&gt;  <a href="https://es.wikipedia.org/wiki/Diagrama_de_caja">https://es.wikipedia.org/wiki/Diagrama_de_caja</a></p>
 <ul>
@@ -1893,8 +2291,48 @@ plt.title(&quot;Histograma&quot;);
 <li>Tercer cuartil (Q3) como la mediana de la segunda mitad de valores.</li>
 </ul>
 <p>La diferencia entre el tercer cuartil y el primero se conoce como rango intercuartíl</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Boxplot_vs_PDF.svg/598px-Boxplot_vs_PDF.svg.png" alt="Boxplot vs PDF"></p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Boxplot.svg/457px-Boxplot.svg.png" alt="Box-plot"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Boxplot_vs_PDF.svg/598px-Boxplot_vs_PDF.svg.png" alt="Boxplot vs PDF" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Boxplot.svg/457px-Boxplot.svg.png" alt="Box-plot" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python">#crear datos aleatorios
 data = [np.random.normal(0, std, 100) for std in range(1, 4)]
 
@@ -1902,7 +2340,27 @@ data = [np.random.normal(0, std, 100) for std in range(1, 4)]
 plt.boxplot(data,vert=True,patch_artist=True);
 plt.title(&quot;Boxplot&quot;);
 </code></pre>
-<p><img src="./4-Visualizacion_71_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_71_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h4 id="diagramas-de-violin">Diagramas de Violin</h4>
 <p>Permiten ver como es la distribucion de los datos</p>
 <pre><code class="language-python">all_data = [np.random.normal(0, std, 100) for std in range(6, 10)]
@@ -1911,7 +2369,27 @@ plt.title(&quot;Boxplot&quot;);
 plt.violinplot(all_data, showmeans=False, showmedians=True)
 plt.title('violin plot');
 </code></pre>
-<p><img src="./4-Visualizacion_73_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_73_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h4 id="diagramas-de-violin-vs-boxplot">Diagramas de Violin vs Boxplot</h4>
 <p>Se grafiara usando programacino orientada a objetos con Matplolib la comparacion entre las graficas de violin y las de boxplot</p>
 <pre><code class="language-python">fig, axes = plt.subplots(nrows=1, ncols=2, figsize=(12, 4))
@@ -1943,7 +2421,27 @@ plt.setp(axes, xticks=[y+1 for y in range(len(all_data))],
 fig.suptitle(&quot;Violin vs Boxplot&quot;,fontsize = 14) # titulo general de la grafica
 plt.show()
 </code></pre>
-<p><img src="./4-Visualizacion_75_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_75_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="diagramas-de-torta">Diagramas de torta</h3>
 <p>No usarlos, los humanos no somos buenos discriminando angulos</p>
 <pre><code class="language-python">labels = 'Caballos', 'Cerdos', 'Perros', 'Vacas'
@@ -1956,7 +2454,27 @@ plt.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
 plt.axis('equal')  #La relación de aspecto igual garantiza que el círculo sea homogeneo
 plt.show()
 </code></pre>
-<p><img src="./4-Visualizacion_77_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_77_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="diagramas-de-error">Diagramas de error</h3>
 <pre><code class="language-python"># generacion de datos aleatorios
 x = np.arange(0.1, 4, 0.5)
@@ -1968,7 +2486,27 @@ plt.title(&quot;Diagrama de error&quot;)
 plt.grid()
 plt.show()
 </code></pre>
-<p><img src="./4-Visualizacion_79_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_79_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <hr>
 <h2 id="guardando--las-figuras">Guardando  las figuras</h2>
 <p>Matplotlib puede generar resultados de alta calidad en varios formatos, incluidos PNG, JPG, EPS, SVG, PGF y PDF.
@@ -2133,7 +2671,27 @@ df2.head()
 <p><strong>Antes de usasr <code>plt.style.use()</code> las graficas se ven así:</strong></p>
 <pre><code class="language-python">df1['acceleration'].hist();
 </code></pre>
-<p><img src="./4-Visualizacion_91_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_91_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <p>Usar el estilo ggplot</p>
 <pre><code class="language-python">import matplotlib.pyplot as plt
 plt.style.use('ggplot')
@@ -2141,24 +2699,124 @@ plt.style.use('ggplot')
 <p>Ahora las graficas se ven asi:</p>
 <pre><code class="language-python">df1['acceleration'].hist();
 </code></pre>
-<p><img src="./4-Visualizacion_95_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_95_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python">plt.style.use('bmh')
 df1['acceleration'].hist();
 </code></pre>
-<p><img src="./4-Visualizacion_96_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_96_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python">plt.style.use('dark_background')
 df1['acceleration'].hist();
 </code></pre>
-<p><img src="./4-Visualizacion_97_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_97_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python">plt.style.use('fivethirtyeight')
 df1['acceleration'].hist();
 </code></pre>
-<p><img src="./4-Visualizacion_98_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_98_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># El estilo por defecto es
 plt.style.use('classic')
 df1['acceleration'].hist();
 </code></pre>
-<p><img src="./4-Visualizacion_99_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_99_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Seguire usando el estilo ggplot para ver los tipos de grafica de pandas
 plt.style.use('ggplot')
 </code></pre>
@@ -2184,7 +2842,27 @@ plt.style.use('ggplot')
 
 df2.plot.area(alpha=0.4);
 </code></pre>
-<p><img src="./4-Visualizacion_103_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_103_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="barplots">Barplots</h3>
 <pre><code class="language-python"># Visualizacion de datos
 df2.head()
@@ -2247,10 +2925,50 @@ df2.head()
 # Solo se graficaran algunos datos
 df2.iloc[2:8].plot.bar();
 </code></pre>
-<p><img src="./4-Visualizacion_106_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_106_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python">df2.iloc[2:8].plot.bar(stacked=True);
 </code></pre>
-<p><img src="./4-Visualizacion_107_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_107_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="histogramas">Histogramas</h3>
 <pre><code class="language-python">df1.head()
 </code></pre>
@@ -2334,53 +3052,273 @@ df2.iloc[2:8].plot.bar();
 </table>
 <pre><code class="language-python">df1['acceleration'].plot.hist(bins=50);
 </code></pre>
-<p><img src="./4-Visualizacion_110_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_110_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="lineas">Lineas</h3>
 <pre><code class="language-python"># eje y = valores de la acceleracion
 # eje x = valores del index
 # atributo lw es el grosor de la linea
 df1.plot.line(y='acceleration',figsize=(12,3),lw=1);
 </code></pre>
-<p><img src="./4-Visualizacion_112_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_112_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="scatter-plots">Scatter Plots</h3>
 <pre><code class="language-python">df1.plot.scatter(x='acceleration',y='mpg');
 </code></pre>
-<p><img src="./4-Visualizacion_114_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_114_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <p>Se puede usar <code>c</code> para indicar el color de los valores de otra columna
 Con cmap se indica el mapa de colores que se usaran.
 Para ver los colormaps existente: <a href="http://matplotlib.org/users/colormaps.html">http://matplotlib.org/users/colormaps.html</a></p>
 <pre><code class="language-python">df1.plot.scatter(x='acceleration',y='mpg',c='model_year',cmap='coolwarm');
 </code></pre>
-<p><img src="./4-Visualizacion_116_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_116_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <p>O se puede usar <code>s</code> para indicar el tamaño de los puntos. El parametro <code>s</code> debe ser un arreglo, no solo el nombre de una columna:</p>
 <pre><code class="language-python">df1.plot.scatter(x='acceleration',y='mpg',s=df1['horsepower']*2);
 </code></pre>
-<p><img src="./4-Visualizacion_118_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_118_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="boxplots">BoxPlots</h3>
 <pre><code class="language-python">df2.plot.box(); # Tambien se puede poner by= argumento para groupby
 </code></pre>
-<p><img src="./4-Visualizacion_120_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_120_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="diagrama-de-torta">Diagrama de Torta</h3>
 <pre><code class="language-python">serie = pd.Series(3 * np.random.rand(4), index=['a', 'b', 'c', 'd'], name='series')
 serie.plot.pie(figsize=(6, 6));
 </code></pre>
-<p><img src="./4-Visualizacion_122_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_122_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="hexagonal">Hexagonal</h3>
 <p>Util para datos de 2 variables, alternativa al scatterplot:</p>
 <pre><code class="language-python">df1.plot.hexbin(x='acceleration',y='mpg',gridsize=25,cmap='Oranges');
 </code></pre>
-<p><img src="./4-Visualizacion_124_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_124_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="kernel-density-estimation-plotkde">Kernel Density Estimation Plot(KDE)</h3>
 <pre><code class="language-python">df1['weight'].plot.kde();
 </code></pre>
-<p><img src="./4-Visualizacion_126_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_126_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python">df2.plot.density();
 </code></pre>
-<p><img src="./4-Visualizacion_127_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_127_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="scatter-matrix">Scatter Matrix</h3>
 <pre><code class="language-python">pd.plotting.scatter_matrix(df2, figsize=(8, 8));
 </code></pre>
-<p><img src="./4-Visualizacion_129_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_129_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="parametros-de-las-graficas">Parametros de las graficas</h3>
 <p>Graficar con Pandas es un método de hacer graficas mucho más fácil de usar que matplotlib, equilibra la facilidad de uso con control sobre la figura. Muchas de las llamadas a gráficos también aceptan argumentos adicionales de matplotlib plt.</p>
 <pre><code class="language-python">df2.plot.density() # grafico de densidad con pandas
@@ -2389,13 +3327,53 @@ plt.title('Grafica de densidad de varias variables')
 plt.grid(False)
 plt.xticks([]);# Para eliminar los numeros del eje
 </code></pre>
-<p><img src="./4-Visualizacion_131_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_131_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># La misma grafica pero adicionando los parametros en los argumentos
 df2.plot.density(title='Grafica de densidad de varias variables',
                  grid=False,
                 xticks = []);
 </code></pre>
-<p><img src="./4-Visualizacion_132_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_132_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h2 id="plotly-libreria-de-visualizacion-interactiva">PLOTLY: Libreria de Visualizacion Interactiva</h2>
 <p>Plotly es una libreria de graficos interactivos de código abierto que admite más de 40 tipos de gráficos únicos que cubren una amplia gama de casos de uso estadísticos, financieros, geográficos, científicos y tridimensionales.</p>
 <p>Ademas de ser interactivo y obtener los valores en cada punto de la gráfica, <strong>se pueden mezclar datos numéricos y categóricos.</strong></p>
@@ -2581,7 +3559,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-413687592" class="chart"></div>
+<div id="chart-324715986" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2591,7 +3569,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./01.json", function(chart) {
-        Plotly.plot('chart-413687592', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-324715986', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2601,7 +3579,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-367859412" class="chart"></div>
+<div id="chart-935842671" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2611,7 +3589,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./02.json", function(chart) {
-        Plotly.plot('chart-367859412', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-935842671', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2620,7 +3598,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-129853746" class="chart"></div>
+<div id="chart-624913857" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2630,7 +3608,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./03.json", function(chart) {
-        Plotly.plot('chart-129853746', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-624913857', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2640,7 +3618,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-842537196" class="chart"></div>
+<div id="chart-329681754" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2650,7 +3628,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./04.json", function(chart) {
-        Plotly.plot('chart-842537196', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-329681754', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2659,7 +3637,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-692185473" class="chart"></div>
+<div id="chart-325781946" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2669,7 +3647,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./05.json", function(chart) {
-        Plotly.plot('chart-692185473', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-325781946', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2680,7 +3658,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-423761859" class="chart"></div>
+<div id="chart-273956481" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2690,7 +3668,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./06.json", function(chart) {
-        Plotly.plot('chart-423761859', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-273956481', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2700,7 +3678,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-817465923" class="chart"></div>
+<div id="chart-837519462" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2710,7 +3688,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./07.json", function(chart) {
-        Plotly.plot('chart-817465923', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-837519462', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2720,7 +3698,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-694135782" class="chart"></div>
+<div id="chart-687425139" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2730,7 +3708,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./08.json", function(chart) {
-        Plotly.plot('chart-694135782', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-687425139', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2740,7 +3718,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-758643291" class="chart"></div>
+<div id="chart-537984612" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2750,7 +3728,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./09.json", function(chart) {
-        Plotly.plot('chart-758643291', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-537984612', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2759,7 +3737,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-746523891" class="chart"></div>
+<div id="chart-765219348" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2769,7 +3747,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./10.json", function(chart) {
-        Plotly.plot('chart-746523891', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-765219348', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2781,7 +3759,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-347612895" class="chart"></div>
+<div id="chart-483195762" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2791,7 +3769,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./11.json", function(chart) {
-        Plotly.plot('chart-347612895', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-483195762', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2801,7 +3779,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-618492375" class="chart"></div>
+<div id="chart-628953417" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2811,7 +3789,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./12.json", function(chart) {
-        Plotly.plot('chart-618492375', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-628953417', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2820,7 +3798,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-256179438" class="chart"></div>
+<div id="chart-294375816" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2830,7 +3808,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./13.json", function(chart) {
-        Plotly.plot('chart-256179438', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-294375816', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2840,7 +3818,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-954283761" class="chart"></div>
+<div id="chart-371295648" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2850,7 +3828,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./14.json", function(chart) {
-        Plotly.plot('chart-954283761', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-371295648', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2860,7 +3838,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-278546193" class="chart"></div>
+<div id="chart-258197436" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2870,7 +3848,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./15.json", function(chart) {
-        Plotly.plot('chart-278546193', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-258197436', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2880,7 +3858,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-917842563" class="chart"></div>
+<div id="chart-123549678" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2890,7 +3868,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./16.json", function(chart) {
-        Plotly.plot('chart-917842563', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-123549678', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2900,7 +3878,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-532914867" class="chart"></div>
+<div id="chart-451867932" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2910,7 +3888,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./17.json", function(chart) {
-        Plotly.plot('chart-532914867', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-451867932', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2920,7 +3898,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-214875639" class="chart"></div>
+<div id="chart-861745932" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2930,7 +3908,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./18.json", function(chart) {
-        Plotly.plot('chart-214875639', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-861745932', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2940,7 +3918,7 @@ dtype: object
 </code></pre>
 
 
-<div id="chart-753164289" class="chart"></div>
+<div id="chart-392768451" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2950,7 +3928,7 @@ dtype: object
       clearInterval( a );
 
       Plotly.d3.json("./19.json", function(chart) {
-        Plotly.plot('chart-753164289', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-392768451', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2963,7 +3941,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-925816734" class="chart"></div>
+<div id="chart-325876941" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2973,7 +3951,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./20.json", function(chart) {
-        Plotly.plot('chart-925816734', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-325876941', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -2982,7 +3960,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-726935184" class="chart"></div>
+<div id="chart-723164859" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -2992,7 +3970,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./21.json", function(chart) {
-        Plotly.plot('chart-726935184', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-723164859', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3001,7 +3979,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-832194576" class="chart"></div>
+<div id="chart-231698475" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3011,7 +3989,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./22.json", function(chart) {
-        Plotly.plot('chart-832194576', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-231698475', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3021,7 +3999,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-743856192" class="chart"></div>
+<div id="chart-261549783" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3031,7 +4009,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./23.json", function(chart) {
-        Plotly.plot('chart-743856192', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-261549783', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3041,7 +4019,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-593671428" class="chart"></div>
+<div id="chart-365794281" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3051,7 +4029,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./24.json", function(chart) {
-        Plotly.plot('chart-593671428', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-365794281', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3061,7 +4039,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-473529816" class="chart"></div>
+<div id="chart-983546712" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3071,7 +4049,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./25.json", function(chart) {
-        Plotly.plot('chart-473529816', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-983546712', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3080,7 +4058,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-931864275" class="chart"></div>
+<div id="chart-127498563" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3090,7 +4068,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./26.json", function(chart) {
-        Plotly.plot('chart-931864275', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-127498563', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3099,7 +4077,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
 </code></pre>
 
 
-<div id="chart-938462571" class="chart"></div>
+<div id="chart-284671395" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3109,7 +4087,7 @@ gapminder2007 = gapminder.query(&quot;year==2007&quot;)
       clearInterval( a );
 
       Plotly.d3.json("./27.json", function(chart) {
-        Plotly.plot('chart-938462571', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-284671395', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3227,7 +4205,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-961583472" class="chart"></div>
+<div id="chart-735681294" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3237,7 +4215,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./28.json", function(chart) {
-        Plotly.plot('chart-961583472', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-735681294', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3250,7 +4228,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-385627194" class="chart"></div>
+<div id="chart-253146897" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3260,7 +4238,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./29.json", function(chart) {
-        Plotly.plot('chart-385627194', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-253146897', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3274,7 +4252,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-213956874" class="chart"></div>
+<div id="chart-514389672" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3284,7 +4262,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./30.json", function(chart) {
-        Plotly.plot('chart-213956874', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-514389672', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3297,7 +4275,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-915832746" class="chart"></div>
+<div id="chart-476598123" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3307,7 +4285,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./31.json", function(chart) {
-        Plotly.plot('chart-915832746', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-476598123', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3316,7 +4294,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-413952786" class="chart"></div>
+<div id="chart-734185269" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3326,7 +4304,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./32.json", function(chart) {
-        Plotly.plot('chart-413952786', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-734185269', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3336,7 +4314,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-684391725" class="chart"></div>
+<div id="chart-382956471" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3346,7 +4324,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./33.json", function(chart) {
-        Plotly.plot('chart-684391725', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-382956471', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3356,7 +4334,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-612489375" class="chart"></div>
+<div id="chart-186472593" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3366,7 +4344,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./34.json", function(chart) {
-        Plotly.plot('chart-612489375', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-186472593', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3378,7 +4356,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-326497185" class="chart"></div>
+<div id="chart-526473189" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3388,7 +4366,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./35.json", function(chart) {
-        Plotly.plot('chart-326497185', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-526473189', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3399,7 +4377,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-914856732" class="chart"></div>
+<div id="chart-821746359" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3409,7 +4387,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./36.json", function(chart) {
-        Plotly.plot('chart-914856732', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-821746359', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3421,7 +4399,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
 </code></pre>
 
 
-<div id="chart-572368941" class="chart"></div>
+<div id="chart-286475913" class="chart"></div>
 <script>
   (function() {
     let a = setInterval( function() {
@@ -3431,7 +4409,7 @@ transposed_corr = correlation[::-1] # es necesario transponer la matriz
       clearInterval( a );
 
       Plotly.d3.json("./37.json", function(chart) {
-        Plotly.plot('chart-572368941', chart.data, chart.layout, {responsive: true});
+        Plotly.plot('chart-286475913', chart.data, chart.layout, {responsive: true});
       });
     }, 500 );
   })();
@@ -3600,11 +4578,51 @@ dtype: object
 <p>El distplot muestra la distribución de un conjunto univariante de observaciones.</p>
 <pre><code class="language-python">sns.distplot(tips['total_bill']);
 </code></pre>
-<p><img src="./4-Visualizacion_206_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_206_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <p>Si se quiere eliminar la grafica kde y solo tener el histograma entonces:</p>
 <pre><code class="language-python">sns.distplot(tips['total_bill'],kde=False,bins=30);
 </code></pre>
-<p><img src="./4-Visualizacion_208_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_208_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="jointplot">jointplot</h3>
 <p>jointplot() le permite básicamente emparejar dos distplots para datos bivariados. Con su elección de  que parámetro <strong>kind</strong> va comparar:</p>
 <ul>
@@ -3617,27 +4635,127 @@ dtype: object
 <pre><code class="language-python"># Histogramas y scatter plot
 sns.jointplot(x='total_bill',y='tip',data=tips,kind='scatter');
 </code></pre>
-<p><img src="./4-Visualizacion_210_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_210_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Histogramas  y hexagonal
 sns.jointplot(x='total_bill',y='tip',data=tips,kind='hex');
 </code></pre>
-<p><img src="./4-Visualizacion_211_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_211_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python">#Hystogramas con kde y scatter plot
 sns.jointplot(x='total_bill',y='tip',data=tips,kind='reg');
 </code></pre>
-<p><img src="./4-Visualizacion_212_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_212_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="pairplot">pairplot</h3>
 <p>pairplot grafica relaciones por pares en un dataframe completo (para las columnas numéricas) y soporta un argumento de tono de color(Hue) (para columnas categóricas).</p>
 <pre><code class="language-python">#diagonal histogramas los demas son scatter plots
 sns.pairplot(tips); # datos numericos
 </code></pre>
-<p><img src="./4-Visualizacion_214_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_214_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Datos categoricos
 
 # Diagonal KDE y los otros plots son scatter
 sns.pairplot(tips,hue='sex',palette='coolwarm'); # cambio de colormap
 </code></pre>
-<p><img src="./4-Visualizacion_215_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_215_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="kdeplot">kdeplot</h3>
 <p>kdeplots son <a href="http://en.wikipedia.org/wiki/Kernel_density_estimation#Practical_estimation_of_the_bandwidth" target="_blank" rel="noopener">Gráficos de Estimación de Densidad del Núcleo</a>.</p>
 <pre><code class="language-python"># Variable 'total bill'
@@ -3645,13 +4763,53 @@ sns.kdeplot(tips['total_bill']) #plot kde
 </code></pre>
 <pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f47c6f3c860&gt;
 </code></pre>
-<p><img src="./4-Visualizacion_217_1.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_217_1.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python">#Variable 'tip'
 sns.kdeplot(tips['tip'])
 </code></pre>
 <pre><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7f47c6964908&gt;
 </code></pre>
-<p><img src="./4-Visualizacion_218_1.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_218_1.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h2 id="plots-para-datos-categoricos">Plots para datos categoricos</h2>
 <ul>
 <li>boxplot</li>
@@ -3668,72 +4826,392 @@ sns.kdeplot(tips['tip'])
 <p>Es un gráfico general que le permite agregar los datos categóricos basados en alguna función, el valor predeterminado es la media:</p>
 <pre><code class="language-python">sns.barplot(x='sex',y='total_bill',data=tips);
 </code></pre>
-<p><img src="./4-Visualizacion_222_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_222_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <p>Puede cambiar el objeto estimador a su propia función, que convierte un vector a escalar:</p>
 <pre><code class="language-python">import numpy as np
 sns.barplot(x='sex',y='total_bill',data=tips,estimator=np.std); # la desviacion estandar como estimador
 </code></pre>
-<p><img src="./4-Visualizacion_224_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_224_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="countplot">countplot</h3>
 <p>Esto es esencialmente lo mismo que Barplot, excepto que el estimador está contando explícitamente el número de ocurrencias. Por eso solo pasamos el valor de x:</p>
 <pre><code class="language-python">sns.countplot(x='sex',data=tips);
 </code></pre>
-<p><img src="./4-Visualizacion_226_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_226_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="boxplot-2">boxplot</h3>
 <p>los boxplots (diagrama de caja) y violin plots se utilizan para mostrar la distribución de datos categóricos. Un diagrama de caja (boxplots o gráfico de caja y bigotes) muestra la distribución de datos cuantitativos de una manera que facilita las comparaciones entre variables o entre niveles de una variable categórica. El cuadro muestra los cuartiles del conjunto de datos, mientras que los bigotes se extienden para mostrar el resto de la distribución, a excepción de los puntos que se determinan como &ldquo;valores atípicos&rdquo; utilizando un método que es una función del rango intercuartílico.</p>
 <pre><code class="language-python">sns.boxplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, data=tips,palette='rainbow');
 </code></pre>
-<p><img src="./4-Visualizacion_228_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_228_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># se pueden graficar de forma horizontal
 sns.boxplot(data=tips,palette='rainbow',orient='h');
 </code></pre>
-<p><img src="./4-Visualizacion_229_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_229_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># cambiar el color y ver varias variables (hue)
 sns.boxplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, hue=&quot;smoker&quot;,data=tips, palette=&quot;coolwarm&quot;);
 </code></pre>
-<p><img src="./4-Visualizacion_230_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_230_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="violinplot">violinplot</h3>
 <p>Un plot de violín juega un papel similar a un box and whisker plot (diagrama de cajas y bigotes). Muestra la distribución de datos cuantitativos a través de varios niveles de una (o más) variables categóricas de modo que esas distribuciones se puedan comparar. A diferencia de un diagrama de caja, en el que todos los componentes de la gráfica corresponden a los puntos de datos reales, la gráfica del violín presenta una estimación de la densidad del núcleo de la distribución subyacente.</p>
 <pre><code class="language-python">sns.violinplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, data=tips,palette='rainbow');
 </code></pre>
-<p><img src="./4-Visualizacion_232_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_232_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Varias Variables
 sns.violinplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, data=tips,hue='sex',palette='Set1');
 </code></pre>
-<p><img src="./4-Visualizacion_233_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_233_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Varias variables
 sns.violinplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, data=tips,hue='sex',split=True,palette='Set1');
 </code></pre>
-<p><img src="./4-Visualizacion_234_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_234_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="stripplot-1">stripplot</h3>
 <p>El stripplot dibujará un diagrama de dispersión donde una variable es categórica. Un stripplot se puede dibujar por sí mismo, pero también es un buen complemento de una casilla o trama de violín en los casos en que desea mostrar todas las observaciones junto con alguna representación de la distribución subyacente.</p>
 <pre><code class="language-python">sns.stripplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, data=tips);
 </code></pre>
-<p><img src="./4-Visualizacion_236_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_236_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python">sns.stripplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, data=tips,jitter=True);
 </code></pre>
-<p><img src="./4-Visualizacion_237_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_237_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Varias variables
 sns.stripplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, data=tips,jitter=True,hue='sex',palette='Set1');
 </code></pre>
-<p><img src="./4-Visualizacion_238_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_238_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Varias Variables
 sns.stripplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, data=tips,jitter=True,hue='sex',palette='Set1',dodge=True);
 </code></pre>
-<p><img src="./4-Visualizacion_239_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_239_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="swarmplot">swarmplot</h3>
 <p>El swarmplot es similar a stripplot(), pero los puntos se ajustan (solo a lo largo del eje categórico) para que no se superpongan. Esto proporciona una mejor representación de la distribución de los valores, aunque no se ajusta a un gran número de observaciones (tanto en términos de la capacidad de mostrar todos los puntos como en términos del cálculo necesario para organizarlos).</p>
 <pre><code class="language-python">sns.swarmplot(x=&quot;day&quot;, y=&quot;total_bill&quot;, data=tips);
 </code></pre>
-<p><img src="./4-Visualizacion_241_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_241_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python">sns.swarmplot(x=&quot;day&quot;, y=&quot;total_bill&quot;,hue='sex',data=tips, palette=&quot;Set1&quot;, dodge=True);
 </code></pre>
-<p><img src="./4-Visualizacion_242_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_242_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="combininando-plots-categoricos">Combininando Plots Categoricos</h3>
 <pre><code class="language-python">sns.violinplot(x=&quot;tip&quot;, y=&quot;day&quot;, data=tips,palette='rainbow')
 sns.swarmplot(x=&quot;tip&quot;, y=&quot;day&quot;, data=tips,color='black',size=3);
 </code></pre>
-<p><img src="./4-Visualizacion_244_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_244_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h2 id="graficas-de-matrices">Graficas de Matrices</h2>
 <p>Los Plot de matriz permiten graficar los datos como matrices codificadas por colores y también se pueden usar para indicar clústeres dentro de los datos, algunos de los mas usados son el heatmap y el clustermap de seaborn:</p>
 <pre><code class="language-python">flights = sns.load_dataset('flights') # carga de datos
@@ -3958,11 +5436,51 @@ tips.corr()
 <pre><code class="language-python"># Heatmap de la matriz de correlacion
 sns.heatmap(tips.corr());
 </code></pre>
-<p><img src="./4-Visualizacion_253_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_253_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Cambiando el mapa de colres y agregando las anotaciones a la grafica
 sns.heatmap(tips.corr(),cmap='coolwarm',annot=True);
 </code></pre>
-<p><img src="./4-Visualizacion_254_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_254_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <p>O para los datos de vuelos:</p>
 <pre><code class="language-python"># Definir una pivot table
 flights.pivot_table(values='passengers',index='month',columns='year')
@@ -4187,23 +5705,103 @@ flights.pivot_table(values='passengers',index='month',columns='year')
 pvflights = flights.pivot_table(values='passengers',index='month',columns='year')
 sns.heatmap(pvflights);
 </code></pre>
-<p><img src="./4-Visualizacion_257_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_257_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Cambiando los parametros del colormap y el ancho y color de las lineas d division
 sns.heatmap(pvflights,cmap='magma',linecolor='white',linewidths=1);
 </code></pre>
-<p><img src="./4-Visualizacion_258_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_258_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="clustermap">clustermap</h3>
 <p>El mapa de clúster utiliza la agrupación jerárquica para producir una versión agrupada del mapa de calor. Por ejemplo:</p>
 <pre><code class="language-python"># Grafica Clustermap de la tabla pivot de los vuelos
 sns.clustermap(pvflights);
 </code></pre>
-<p><img src="./4-Visualizacion_260_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_260_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <p>Observe ahora cómo los años y meses ya no están en orden, en su lugar se agrupan por similitud en el valor (recuento de pasajeros). Eso significa que podemos comenzar a inferir cosas de esta trama, como agosto y julio siendo similares (tiene sentido, ya que ambos son meses de viaje de verano)</p>
 <pre><code class="language-python"># Más opciones para obtener la información un poco más clara como la normalización
 # Cambiar el colormap
 sns.clustermap(pvflights,cmap='coolwarm',standard_scale=1);
 </code></pre>
-<p><img src="./4-Visualizacion_262_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_262_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h2 id="grids">Grids</h2>
 <p>Las grids son tipos generales de plots que le permiten mapear tipos de plots en filas y columnas de una cuadrícula, esto le ayuda a crear plots similares separadas por características.</p>
 <pre><code class="language-python"># Importar librerias
@@ -4274,31 +5872,131 @@ import matplotlib.pyplot as plt
 <pre><code class="language-python"># solo el Grid
 sns.PairGrid(iris);
 </code></pre>
-<p><img src="./4-Visualizacion_268_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_268_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Ahora se mapea el grid
 g = sns.PairGrid(iris)
 g.map(plt.scatter);
 </code></pre>
-<p><img src="./4-Visualizacion_269_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_269_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Mapear a arriba, abajo y diagonal
 g = sns.PairGrid(iris) # crear una cuadricula
 g.map_diag(plt.hist) #Histogramas en la diagonal
 g.map_upper(plt.scatter) # Scatter plots en la parte superior
 g.map_lower(sns.kdeplot); # Plots de densidad kde en la parte inferior
 </code></pre>
-<p><img src="./4-Visualizacion_270_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_270_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="pairplot-1">pairplot</h3>
 <p>pairplot es una versión más simple de PairGrid (se usa con bastante frecuencia)</p>
 <pre><code class="language-python"># La diagonal es un histograma
 # las otras graficas son scatter plots
 sns.pairplot(iris);
 </code></pre>
-<p><img src="./4-Visualizacion_272_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_272_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># la diagonal son kde de los datos categoricos
 # las otars graficas son scatter plots
 sns.pairplot(iris,hue='species',palette='rainbow');
 </code></pre>
-<p><img src="./4-Visualizacion_273_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_273_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="facet-grid">Facet Grid</h3>
 <p>FacetGrid es la forma general de crear grids de plots basados en dos caracteristica:</p>
 <pre><code class="language-python">tips = sns.load_dataset('tips')
@@ -4374,29 +6072,129 @@ sns.pairplot(iris,hue='species',palette='rainbow');
 <pre><code class="language-python"># Solo el Grid
 g = sns.FacetGrid(tips, col=&quot;time&quot;, row=&quot;smoker&quot;);
 </code></pre>
-<p><img src="./4-Visualizacion_277_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_277_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># histogramas entre las dos variables
 g = sns.FacetGrid(tips, col=&quot;time&quot;,  row=&quot;smoker&quot;)
 g = g.map(plt.hist, &quot;total_bill&quot;)
 </code></pre>
-<p><img src="./4-Visualizacion_278_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_278_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Scatterplots
 g = sns.FacetGrid(tips, col=&quot;time&quot;,  row=&quot;smoker&quot;,hue='sex')
 # Observe como los argumentos vienen despues de llamar a plt.scatter
 g = g.map(plt.scatter, &quot;total_bill&quot;, &quot;tip&quot;).add_legend()
 </code></pre>
-<p><img src="./4-Visualizacion_279_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_279_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="jointgrid">JointGrid</h3>
 <p>JointGrid es la version general de jointplot()</p>
 <pre><code class="language-python"># Solo el grid
 g = sns.JointGrid(x=&quot;total_bill&quot;, y=&quot;tip&quot;, data=tips)
 </code></pre>
-<p><img src="./4-Visualizacion_281_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_281_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Grafica de regresion y histograma con kde
 g = sns.JointGrid(x=&quot;total_bill&quot;, y=&quot;tip&quot;, data=tips)
 g = g.plot(sns.regplot, sns.distplot)
 </code></pre>
-<p><img src="./4-Visualizacion_282_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_282_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h2 id="plots-de-regresion">Plots de Regresion</h2>
 <p>Seaborn tiene muchas capacidades integradas para trazados de regresión, <strong>lmplot</strong> le permite visualizar modelos lineales, pero también le permite dividir los gráficos en función de las características, así como también colorear el tono (hue) en función de las características.</p>
 <pre><code class="language-python">#Importar librerias
@@ -4477,15 +6275,75 @@ import seaborn as sns
 <pre><code class="language-python">#scatter plot mas la regresion lineal
 sns.lmplot(x='total_bill',y='tip',data=tips);
 </code></pre>
-<p><img src="./4-Visualizacion_288_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_288_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python">#scatter plot mas la regresion lineal basado en el genero
 sns.lmplot(x='total_bill',y='tip',data=tips,hue='sex');
 </code></pre>
-<p><img src="./4-Visualizacion_289_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_289_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># Cambio de paleta de colores
 sns.lmplot(x='total_bill',y='tip',data=tips,hue='sex',palette='coolwarm');
 </code></pre>
-<p><img src="./4-Visualizacion_290_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_290_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="usando-marcadores">Usando Marcadores</h3>
 <p>Los argumentos kwargs lmplot  pasan a <strong>regplto</strong> que es una forma más general de lmplot(). regplot tiene un parámetro scatter_kws que se pasa a plt.scatter y puede modificar los parametros.</p>
 <p>Mire siempre la documentacion <a href="http://matplotlib.org/api/markers_api.html">http://matplotlib.org/api/markers_api.html</a></p>
@@ -4493,26 +6351,126 @@ sns.lmplot(x='total_bill',y='tip',data=tips,hue='sex',palette='coolwarm');
 sns.lmplot(x='total_bill',y='tip',data=tips,hue='sex',palette='coolwarm',
            markers=['o','v'],scatter_kws={'s':100});
 </code></pre>
-<p><img src="./4-Visualizacion_292_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_292_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="usando-un-grid">Usando un Grid</h3>
 <p>Podemos agregar una separación más variable a través de columnas y filas con el uso de un grid. Simplemente indícandolo en los argumentos col o row:</p>
 <pre><code class="language-python">sns.lmplot(x='total_bill',y='tip',data=tips,col='sex'); #hace una division por el genero
 </code></pre>
-<p><img src="./4-Visualizacion_294_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_294_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># division por el genero y por tiempo de almuerzo o cena
 sns.lmplot(x=&quot;total_bill&quot;, y=&quot;tip&quot;, row=&quot;sex&quot;, col=&quot;time&quot;,data=tips);
 </code></pre>
-<p><img src="./4-Visualizacion_295_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_295_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <pre><code class="language-python"># informacion del genero en HUE
 sns.lmplot(x='total_bill',y='tip',data=tips,col='day',hue='sex',palette='coolwarm');
 </code></pre>
-<p><img src="./4-Visualizacion_296_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_296_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h3 id="aspecto-y-tamaño">Aspecto y Tamaño</h3>
 <p>Las figuras de Seaborn se les puede ajustar su tamaño y relación de aspecto con los parámetros <strong>height</strong> y <strong>aspect</strong>:</p>
 <pre><code class="language-python">sns.lmplot(x='total_bill',y='tip',data=tips,col='day',hue='sex',palette='coolwarm',
           aspect=0.6,height=8);
 </code></pre>
-<p><img src="./4-Visualizacion_298_0.png" alt="png"></p>
+<p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<figure  >
+  <div class="d-flex justify-content-center">
+    <div class="w-100" ><img src="./4-Visualizacion_298_0.png" alt="png" loading="lazy" data-zoomable /></div>
+  </div></figure>
+</p>
 <h2 id="referencias">Referencias</h2>
 <ul>
 <li><a href="http://www.matplotlib.org">http://www.matplotlib.org</a></li>
@@ -4581,11 +6539,17 @@ sns.lmplot(x='total_bill',y='tip',data=tips,col='day',hue='sex',palette='coolwar
 
   
 
+
+
   
 
+  
+
+  
   <p class="powered-by">
     © 2021
   </p>
+  
 
   
   
@@ -4671,9 +6635,10 @@ sns.lmplot(x='total_bill',y='tip',data=tips,col='day',hue='sex',palette='coolwar
         
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js" integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin="anonymous"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js"></script>
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/shell.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/python.min.js" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/shell.min.js" crossorigin="anonymous"></script>
         
       
 
@@ -4750,7 +6715,7 @@ sns.lmplot(x='total_bill',y='tip',data=tips,col='day',hue='sex',palette='coolwar
       
     
     
-    <script src="/en/js/wowchemy.min.b61a8f62b6e5c0cd322c8158c5b5dfb6.js"></script>
+    <script src="/en/js/wowchemy.min.d68ecd57c0ec1f1f61d65fd568f1c3a0.js"></script>
 
     
 
