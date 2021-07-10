@@ -1,5 +1,6 @@
 github.com/wowchemy/wowchemy-hugo-modules v4.8.0+incompatible h1:bWdYezLML3TZq5H0Rot4Urwl6HBl1uok5xIDOTqcWC8=
 github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic v0.0.0-20201001144923-e58ee0ffc576/go.mod h1:TU3QDPUdBSQnvDP5QVCwjAkBIdVMS/bKFA8jr3eI5AY=
+github.com/wowchemy/wowchemy-hugo-modules/v5 v5.3.0/go.mod h1:akNBhhT0UAOXSREplKkLe2wyHeo51qm6f+vqNkQkcmE=
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201001144923-e58ee0ffc576 h1:r97j+QgxENainAzooKFwaHePl7UBBtZ4RFh6+Ks2x3U=
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201001144923-e58ee0ffc576/go.mod h1:H22qfH9qj3FWwsk7+bAZpmT24yRGNQURah2/IRwjbn8=
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201113213807-9ee65a120fe8 h1:8kEOyQzH8x2FI/FSSdOS6N+a/3DvCXB2WaSR04EBHiY=
@@ -12,3 +13,9 @@ github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms v0.0.0-20210324194200-fda
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms v0.0.0-20210324194200-fda9f39d872e/go.mod h1:AKpYbqUVlj0VYsc7Jsxe1o8Ko2yV31A5ZPdfpACcXJw=
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms v0.0.0-20210525210730-89d079bcf055 h1:e/IE1WGzItQDeAX0o9cRdpLf9835ZbX5ttl/7f7nwTs=
 github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms v0.0.0-20210525210730-89d079bcf055/go.mod h1:AKpYbqUVlj0VYsc7Jsxe1o8Ko2yV31A5ZPdfpACcXJw=
+github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms/v5 v5.0.0-20210629192904-559885af86b7/go.mod h1:Sp/AKo+2HAPi/IPHp1MEdKPmee+mzO5+efUBUPLPqPE=
+github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms/v5 v5.0.0-20210709232023-42d1cf0063b9 h1:6o2uUvZrt4/ICb/aAG7WRg8xn9dYHqKcns2k/scnqLs=
+github.com/wowchemy/wowchemy-hugo-modules/wowchemy-cms/v5 v5.0.0-20210709232023-42d1cf0063b9/go.mod h1:Sp/AKo+2HAPi/IPHp1MEdKPmee+mzO5+efUBUPLPqPE=
+github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5 v5.0.0-20210629192904-559885af86b7/go.mod h1:2iL9rdrUYyJXX2BeHKfK+QbqZlubCsaR60nQ87NRQTY=
+github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5 v5.0.0-20210709232023-42d1cf0063b9 h1:e3yWRSD9Sb/szOw/8GrmMEDqU0FmXY3GKQA5GUitAnI=
+github.com/wowchemy/wowchemy-hugo-modules/wowchemy/v5 v5.0.0-20210709232023-42d1cf0063b9/go.mod h1:2iL9rdrUYyJXX2BeHKfK+QbqZlubCsaR60nQ87NRQTY=
